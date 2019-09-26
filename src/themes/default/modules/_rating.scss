@@ -1,0 +1,40 @@
+//****************************** Rating *******************************/
+@import '../globals/site';
+
+$margin: 0 $relativeMini !default;
+$whiteSpace: nowrap !default;
+$verticalAlign: baseline !default;
+
+$iconCursor: pointer !default;
+$iconWidth: 1.25em !default;
+$iconHeight: auto !default;
+$iconTransition:
+  opacity $defaultDuration $defaultEasing,
+  background $defaultDuration $defaultEasing,
+  text-shadow $defaultDuration $defaultEasing,
+  color $defaultDuration $defaultEasing
+ !default;
+
+
+//------------------- Types --------------------*/
+
+// Standard */
+$inactiveBackground: transparent !default;
+$inactiveColor: rgba(0, 0, 0, 0.15) !default;
+
+$selectedBackground: $inactiveBackground !default;
+$selectedColor: $textColor !default;
+
+$activeBackground: $inactiveBackground !default;
+$activeColor: $darkTextColor !default;
+
+$shadowWidth: 1px !default;
+
+//------------------- States --------------------*/
+
+$interactiveActiveIconOpacity: 1 !default;
+$interactiveSelectedIconOpacity: 1 !default;
+
+//------------------- Variations --------------------*/
+
+$massive: 2rem !default;

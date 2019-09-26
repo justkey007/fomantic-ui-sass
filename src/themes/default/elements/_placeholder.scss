@@ -1,0 +1,57 @@
+@import '../globals/site';
+
+// Variations */
+$placeholderFullLineOutdent: 0 !default;
+$placeholderVeryLongLineOutdent: 10% !default;
+$placeholderLongLineOutdent: 35% !default;
+$placeholderMediumLineOutdent: 50% !default;
+$placeholderShortLineOutdent: 65% !default;
+$placeholderVeryShortLineOutdent: 80% !default;
+
+$placeholderMaxWidth: 30rem !default;
+
+// Key Content Sizing */
+$placeholderLineMargin: $relative12px !default;
+$placeholderHeaderLineHeight: $relative9px !default;
+$placeholderLineHeight: $relative7px !default;
+$placeholderParagraphLineHeight: $placeholderLineHeight !default;
+
+$placeholderSpacing: $relative20px !default;
+
+// Interval between consecutive placeholders */
+$placeholderAnimationInterval: 0.15s !default;
+
+// Repeated Placeholder */
+$consecutivePlaceholderSpacing: 2rem !default;
+
+// Image */
+$placeholderImageHeight: 100px !default;
+
+// Header Image */
+$placeholderImageWidth: 3em !default;
+$placeholderImageTextIndent: $_10px !default;
+
+// Paragraph */
+$placeholderHeaderLineOneOutdent: 20% !default;
+$placeholderHeaderLineTwoOutdent: 60% !default;
+
+$placeholderLineOneOutdent: $placeholderFullLineOutdent !default;
+$placeholderLineTwoOutdent: $placeholderMediumLineOutdent !default;
+$placeholderLineThreeOutdent: $placeholderVeryLongLineOutdent !default;
+$placeholderLineFourOutdent: $placeholderLongLineOutdent !default;
+$placeholderLineFiveOutdent: $placeholderShortLineOutdent !default;
+
+
+// Glow Gradient */
+$placeholderLoadingAnimationDuration: 2s !default;
+$placeholderLoadingGradientWidth: 1200px !default;
+$placeholderLoadingGradient: linear-gradient(to right,
+  rgba(0, 0, 0, 0.08) 0,
+  rgba(0, 0, 0, 0.15) 15%,
+  rgba(0, 0, 0, 0.08) 30%
+) !default;
+$placeholderInvertedLoadingGradient: linear-gradient(to right,
+  rgba(255, 255, 255, 0.08) 0,
+  rgba(255, 255, 255, 0.14) 15%,
+  rgba(255, 255, 255, 0.08) 30%
+) !default;

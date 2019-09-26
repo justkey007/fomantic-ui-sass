@@ -1,0 +1,266 @@
+//****************************** Message *******************************/
+@import '../globals/site';
+
+//------------------- Elements --------------------*/
+
+$verticalMargin: 1em !default;
+$verticalPadding: 1em !default;
+$horizontalPadding: 1.5em !default;
+$padding: $verticalPadding $horizontalPadding !default;
+$background: #F8F8F9 !default;
+$lineHeightOffset: (($lineHeight - 1em) / 2) !default;
+
+$borderRadius: $defaultBorderRadius !default;
+$borderWidth: 1px !default;
+$borderShadow: 0 0 0 $borderWidth $strongBorderColor inset !default;
+$shadowShadow: 0 0 0 0 rgba(0, 0, 0, 0) !default;
+$boxShadow:
+  $borderShadow,
+  $shadowShadow
+ !default;
+
+$transition:
+  opacity $defaultDuration $defaultEasing,
+  color $defaultDuration $defaultEasing,
+  background $defaultDuration $defaultEasing,
+  box-shadow $defaultDuration $defaultEasing
+ !default;
+
+// Header */
+$headerFontSize: $relativeLarge !default;
+$headerFontWeight: $bold !default;
+$headerDisplay: block !default;
+$headerDistance: 0 !default;
+$headerMargin: -$headerLineHeightOffset 0 $headerDistance 0 !default;
+$headerParagraphDistance: 0.25em !default;
+
+// Paragraph */
+$messageTextOpacity: 0.85 !default;
+$messageParagraphMargin: 0.75em !default;
+
+// List */
+$listOpacity: 0.85 !default;
+$listStylePosition: inside !default;
+$listMargin: 0.5em !default;
+$listItemIndent: 1em !default;
+$listItemMargin: 0.3em !default;
+
+// Icon */
+$iconDistance: 0.6em !default;
+
+// Close Icon */
+$closeTopDistance: $verticalPadding - $lineHeightOffset !default;
+$closeRightDistance: 0.5em !default;
+$closeOpacity: 0.7 !default;
+$closeTransition: opacity $defaultDuration $defaultEasing !default;
+
+
+//-------------------  Types --------------------*/
+
+// Icon Message */
+$iconSize: 3em !default;
+$iconOpacity: 0.8 !default;
+$iconContentDistance: 0 !default;
+$iconVerticalAlign: middle !default;
+
+// Attached */
+$attachedXOffset: -1px !default;
+$attachedYOffset: -1px !default;
+$attachedBoxShadow: 0 0 0 $borderWidth $borderColor inset !default;
+$attachedBottomBoxShadow:
+  $attachedBoxShadow,
+  $subtleShadow
+ !default;
+
+// Floating */
+$floatingBoxShadow:
+  $borderShadow,
+  $floatingShadow
+ !default;
+
+// Colors */
+$redBoxShadow:
+  0 0 0 $borderWidth $redBorderColor inset,
+  $shadowShadow
+ !default;
+$redBoxFloatingShadow:
+  0 0 0 $borderWidth $redBorderColor inset,
+  $floatingShadow
+ !default;
+$orangeBoxShadow:
+  0 0 0 $borderWidth $orangeBorderColor inset,
+  $shadowShadow
+ !default;
+$orangeBoxFloatingShadow:
+  0 0 0 $borderWidth $orangeBorderColor inset,
+  $floatingShadow
+ !default;
+$yellowBoxShadow:
+  0 0 0 $borderWidth $yellowBorderColor inset,
+  $shadowShadow
+ !default;
+$yellowBoxFloatingShadow:
+   0 0 0 $borderWidth $yellowBorderColor inset,
+   $floatingShadow
+ !default;
+$oliveBoxShadow:
+  0 0 0 $borderWidth $oliveBorderColor inset,
+  $shadowShadow
+ !default;
+$oliveBoxFloatingShadow:
+  0 0 0 $borderWidth $oliveBorderColor inset,
+  $floatingShadow
+ !default;
+$greenBoxShadow:
+  0 0 0 $borderWidth $greenBorderColor inset,
+  $shadowShadow
+ !default;
+$greenBoxFloatingShadow:
+  0 0 0 $borderWidth $greenBorderColor inset,
+  $floatingShadow
+ !default;
+$tealBoxShadow:
+  0 0 0 $borderWidth $tealBorderColor inset,
+  $shadowShadow
+ !default;
+$tealBoxFloatingShadow:
+  0 0 0 $borderWidth $tealBorderColor inset,
+  $floatingShadow
+ !default;
+$blueBoxShadow:
+  0 0 0 $borderWidth $blueBorderColor inset,
+  $shadowShadow
+ !default;
+$blueBoxFloatingShadow:
+  0 0 0 $borderWidth $blueBorderColor inset,
+  $floatingShadow
+ !default;
+$violetBoxShadow:
+  0 0 0 $borderWidth $violetBorderColor inset,
+  $shadowShadow
+ !default;
+$violetBoxFloatingShadow:
+  0 0 0 $borderWidth $violetBorderColor inset,
+  $floatingShadow
+ !default;
+$purpleBoxShadow:
+  0 0 0 $borderWidth $purpleBorderColor inset,
+  $shadowShadow
+ !default;
+$purpleBoxFloatingShadow:
+  0 0 0 $borderWidth $purpleBorderColor inset,
+  $floatingShadow
+ !default;
+$pinkBoxShadow:
+  0 0 0 $borderWidth $pinkBorderColor inset,
+  $shadowShadow
+ !default;
+$pinkBoxFloatingShadow:
+  0 0 0 $borderWidth $pinkBorderColor inset,
+  $floatingShadow
+ !default;
+$brownBoxShadow:
+  0 0 0 $borderWidth $brownBorderColor inset,
+  $shadowShadow
+ !default;
+$brownBoxFloatingShadow:
+  0 0 0 $borderWidth $brownBorderColor inset,
+  $floatingShadow
+ !default;
+
+// Warning / Positive / Negative / Info */
+$positiveBoxShadow:
+  0 0 0 $borderWidth $positiveBorderColor inset,
+  $shadowShadow
+ !default;
+$positiveBoxFloatingShadow:
+  0 0 0 $borderWidth $positiveBorderColor inset,
+  $floatingShadow
+ !default;
+$negativeBoxShadow:
+  0 0 0 $borderWidth $negativeBorderColor inset,
+  $shadowShadow
+ !default;
+$negativeBoxFloatingShadow:
+  0 0 0 $borderWidth $negativeBorderColor inset,
+  $floatingShadow
+ !default;
+$infoBoxShadow:
+  0 0 0 $borderWidth $infoBorderColor inset,
+  $shadowShadow
+ !default;
+$infoBoxFloatingShadow:
+  0 0 0 $borderWidth $infoBorderColor inset,
+  $floatingShadow
+ !default;
+$warningBoxShadow:
+  0 0 0 $borderWidth $warningBorderColor inset,
+  $shadowShadow
+ !default;
+$warningBoxFloatingShadow:
+  0 0 0 $borderWidth $warningBorderColor inset,
+  $floatingShadow
+ !default;
+$errorBoxShadow:
+  0 0 0 $borderWidth $errorBorderColor inset,
+  $shadowShadow
+ !default;
+$errorBoxFloatingShadow:
+  0 0 0 $borderWidth $errorBorderColor inset,
+  $floatingShadow
+ !default;
+$successBoxShadow:
+  0 0 0 $borderWidth $successBorderColor inset,
+  $shadowShadow
+ !default;
+$successBoxFloatingShadow:
+  0 0 0 $borderWidth $successBorderColor inset,
+  $floatingShadow
+ !default;
+
+ //-------------- Types ---------------*/
+
+ $consequences: (
+  positive: (
+    background     : $positiveBackgroundColor,
+    header         : $positiveHeaderColor,
+    boxShadow      : $positiveBoxShadow,
+    boxFloatShadow : $positiveBoxFloatingShadow,
+    text           : $positiveTextColor,
+  ),
+  negative: (
+    background     : $negativeBackgroundColor,
+    header         : $negativeHeaderColor,
+    boxShadow      : $negativeBoxShadow,
+    boxFloatShadow : $negativeBoxFloatingShadow,
+    text           : $negativeTextColor,
+  ),
+  info: (
+    background     : $infoBackgroundColor,
+    header         : $infoHeaderColor,
+    boxShadow      : $infoBoxShadow,
+    boxFloatShadow : $infoBoxFloatingShadow,
+    text           : $infoTextColor,
+  ),
+  warning: (
+    background     : $warningBackgroundColor,
+    header         : $warningHeaderColor,
+    boxShadow      : $warningBoxShadow,
+    boxFloatShadow : $warningBoxFloatingShadow,
+    text           : $warningTextColor,
+  ),
+  error: (
+    background     : $errorBackgroundColor,
+    header         : $errorHeaderColor,
+    boxShadow      : $errorBoxShadow,
+    boxFloatShadow : $errorBoxFloatingShadow,
+    text           : $errorTextColor,
+  ),
+  success: (
+    background     : $successBackgroundColor,
+    header         : $successHeaderColor,
+    boxShadow      : $successBoxShadow,
+    boxFloatShadow : $successBoxFloatingShadow,
+    text           : $successTextColor,
+  )
+)

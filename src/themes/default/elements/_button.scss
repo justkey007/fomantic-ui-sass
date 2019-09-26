@@ -1,0 +1,375 @@
+//******************************  Button *******************************/
+@import '../globals/site';
+
+//------------------- Element --------------------*/
+
+// Button */
+$verticalMargin: 0 !default;
+$horizontalMargin: 0.25em !default;
+$backgroundColor: #E0E1E2 !default;
+$backgroundImage: none !default;
+$background: $backgroundColor $backgroundImage !default;
+$lineHeight: 1em !default;
+
+// Button defaults to using same height as input globally */
+$verticalPadding: $inputVerticalPadding !default;
+$horizontalPadding: 1.5em !default;
+
+// Text */
+$textTransform: none !default;
+$tapColor: transparent !default;
+$fontFamily: $pageFont !default;
+$fontWeight: $bold !default;
+$textColor: rgba(0, 0, 0, 0.6) !default;
+$textShadow: none !default;
+$invertedTextShadow: $textShadow !default;
+$borderRadius: $defaultBorderRadius !default;
+$verticalAlign: baseline !default;
+
+// Internal Shadow */
+$shadowDistance: 0 !default;
+$shadowOffset: ($shadowDistance / 2) !default;
+$shadowBoxShadow: 0 -$shadowDistance 0 0 $borderColor inset !default;
+
+// Box Shadow */
+$borderBoxShadowColor: transparent !default;
+$borderBoxShadowWidth: 1px !default;
+$borderBoxShadow: 0 0 0 $borderBoxShadowWidth $borderBoxShadowColor inset !default;
+$boxShadow:
+  $borderBoxShadow,
+  $shadowBoxShadow
+ !default;
+
+// Icon */
+$iconHeight: auto !default;
+$iconOpacity: 0.8 !default;
+$iconDistance: $relative6px !default;
+$iconColor: '' !default;
+$iconTransition: opacity $defaultDuration $defaultEasing !default;
+$iconVerticalAlign: '' !default;
+
+$iconMargin: 0 $iconDistance 0 -($iconDistance / 2) !default;
+$rightIconMargin: 0 -($iconDistance / 2) 0 $iconDistance !default;
+
+// Loader */
+$invertedLoaderFillColor: rgba(0, 0, 0, 0.15) !default;
+
+$transition:
+  opacity $defaultDuration $defaultEasing,
+  background-color $defaultDuration $defaultEasing,
+  color $defaultDuration $defaultEasing,
+  box-shadow $defaultDuration $defaultEasing,
+  background $defaultDuration $defaultEasing
+ !default;
+
+$willChange: auto !default;
+
+//-------------------  Group --------------------*/
+$groupBoxShadow: none !default;
+$groupButtonBoxShadow: $boxShadow !default;
+$verticalBoxShadow: none !default;
+$groupButtonOffset: 0 0 0 0 !default;
+$verticalGroupOffset: 0 0 0 0 !default;
+
+//-------------------  States --------------------*/
+
+// Hovered */
+$hoverBackgroundColor: #CACBCD !default;
+$hoverBackgroundImage: $backgroundImage !default;
+$hoverBoxShadow: $boxShadow !default;
+$hoverColor: $hoveredTextColor !default;
+$iconHoverOpacity: 0.85 !default;
+
+// Focused */
+$focusBackgroundColor: $hoverBackgroundColor !default;
+$focusBackgroundImage: none !default;
+$focusBoxShadow: '' !default;
+$focusColor: $hoveredTextColor !default;
+$iconFocusOpacity: 0.85 !default;
+
+// Disabled */
+$disabledBackgroundImage: none !default;
+$disabledBoxShadow: none !default;
+
+// Pressed Down */
+$downBackgroundColor: #BABBBC !default;
+$downBackgroundImage: '' !default;
+$downPressedShadow: none !default;
+$downBoxShadow:
+  $borderBoxShadow,
+  $downPressedShadow
+ !default;
+$downColor: $pressedTextColor !default;
+
+// Active */
+$activeBackgroundColor: #C0C1C2 !default;
+$activeBackgroundImage: none !default;
+$activeColor: $selectedTextColor !default;
+$activeBoxShadow: $borderBoxShadow !default;
+
+// Active + Hovered */
+$activeHoverBackgroundColor: $activeBackgroundColor !default;
+$activeHoverBackgroundImage: none !default;
+$activeHoverColor: $activeColor !default;
+$activeHoverBoxShadow: $activeBoxShadow !default;
+
+// Loading */
+$loadingOpacity: 1 !default;
+$loadingPointerEvents: auto !default;
+$loadingTransition:
+  all 0s linear,
+  opacity $defaultDuration $defaultEasing
+ !default;
+
+//-------------------  Types --------------------*/
+// Or */
+$orText: 'or' !default;
+
+$orGap: 0.3em !default;
+$orHeight: ($verticalPadding * 2) !default;
+$orZIndex: 3 !default;
+
+$orCircleDistanceToEdge: $verticalPadding !default;
+$orCircleSize: ($orHeight - $orCircleDistanceToEdge) !default;
+$orLineHeight: ($orCircleSize) !default;
+$orBoxShadow: $borderBoxShadow !default;
+
+$orVerticalOffset: -($orCircleSize / 2) !default;
+$orHorizontalOffset: -($orCircleSize / 2) !default;
+
+$orBackgroundColor: $white !default;
+$orTextShadow: $invertedTextShadow !default;
+$orTextStyle: $normal !default;
+$orTextWeight: $bold !default;
+$orTextColor: $lightTextColor !default;
+
+
+$orSpacerHeight: $verticalPadding !default;
+$orSpacerColor: transparent !default;
+
+// Icon */
+$iconButtonOpacity: 0.9 !default;
+
+// Labeled */
+$labeledLabelFontSize: $medium !default;
+$labeledLabelAlign: center !default;
+$labeledLabelPadding: '' !default;
+$labeledLabelFontSize: $relativeMedium !default;
+$labeledLabelBorderColor: $borderColor !default;
+$labeledLabelBorderOffset: -$borderBoxShadowWidth !default;
+$labeledTagLabelSize: 1.85em !default; // hypotenuse of triangle */
+$labeledIconMargin: 0 !default;
+
+// Labeled Icon */
+$labeledIconWidth: 1em + ($verticalPadding * 2) !default;
+$labeledIconBackgroundColor: rgba(0, 0, 0, 0.05) !default;
+$labeledIconPadding: ($horizontalPadding + $labeledIconWidth - 0.8) !default;
+$labeledIconBorder: transparent !default;
+$labeledIconColor: '' !default;
+
+$labeledIconLeftShadow: -1px 0 0 0 $labeledIconBorder inset !default;
+$labeledIconRightShadow: 1px 0 0 0 $labeledIconBorder inset !default;
+
+
+// Inverted */
+$invertedBorderSize: 2px !default;
+$invertedTextColor: $white !default;
+$invertedTextHoverColor: $hoverColor !default;
+$invertedGroupButtonOffset: 0 0 0 -($invertedBorderSize) !default;
+$invertedVerticalGroupButtonOffset: 0 0 -($invertedBorderSize) 0 !default;
+
+// Basic */
+$basicBorderRadius: $borderRadius !default;
+$basicBorderSize: 1px !default;
+$basicTextColor: $textColor !default;
+$basicColoredBorderSize: 1px !default;
+
+$basicBackground: transparent none !default;
+$basicFontWeight: $normal !default;
+$basicBorder: 1px solid $borderColor !default;
+$basicBoxShadow: 0 0 0 $basicBorderSize $borderColor inset !default;
+$basicLoadingColor: $offWhite !default;
+$basicTextTransform: none !default;
+
+// Basic Hover */
+$basicHoverBackground: #FFFFFF !default;
+$basicHoverTextColor: $hoveredTextColor !default;
+$basicHoverBoxShadow:
+  0 0 0 $basicBorderSize $selectedBorderColor inset,
+  0 0 0 0 $borderColor inset
+ !default;
+// Basic Focus */
+$basicFocusBackground: $basicHoverBackground !default;
+$basicFocusTextColor: $basicHoverTextColor !default;
+$basicFocusBoxShadow: $basicHoverBoxShadow !default;
+
+// Basic Down */
+$basicDownBackground: #F8F8F8 !default;
+$basicDownTextColor: $pressedTextColor !default;
+$basicDownBoxShadow:
+  0 0 0 $basicBorderSize rgba(0, 0, 0, 0.15) inset,
+  0 1px 4px 0 $borderColor inset
+ !default;
+// Basic Active */
+$basicActiveBackground: $transparentBlack !default;
+$basicActiveBoxShadow: '' !default;
+$basicActiveTextColor: $selectedTextColor !default;
+
+// Basic Inverted */
+$basicInvertedBackground: transparent !default;
+$basicInvertedFocusBackground: transparent !default;
+$basicInvertedDownBackground: $transparentWhite !default;
+$basicInvertedActiveBackground: $transparentWhite !default;
+
+$basicInvertedBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 0.5) inset !default;
+$basicInvertedHoverBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 1) inset !default;
+$basicInvertedFocusBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 1) inset !default;
+$basicInvertedDownBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 0.9) inset !default;
+$basicInvertedActiveBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 0.7) inset !default;
+
+$basicInvertedColor: $darkWhite !default;
+$basicInvertedHoverColor: $darkWhiteHover !default;
+$basicInvertedDownColor: $darkWhiteActive !default;
+$basicInvertedActiveColor: $invertedTextColor !default;
+
+
+// Basic Group */
+$basicGroupBorder: $basicBorderSize solid $borderColor !default;
+$basicGroupBoxShadow: none !default;
+
+//------------- Tertiary -------------*/
+$tertiaryLinePadding: 0.5em !default;
+$tertiaryLineHeight: 0.2em !default;
+$tertiaryTextColor: $textColor !default;
+$tertiaryLineColor: lighten($tertiaryTextColor, 20%) !default;
+$tertiaryWithUnderline: false !default;
+$tertiaryWithOverline: false !default;
+$tertiaryBackgroundColor: none !default;
+
+// Tertiary Hover */
+$tertiaryHoverColor: lighten(fade-in($tertiaryTextColor, 1), 20%) !default;
+$tertiaryHoverLineColor: lighten($tertiaryHoverColor, 20%) !default;
+$tertiaryHoverWithUnderline: true !default;
+$tertiaryHoverWithOverline: false !default;
+$tertiaryHoverBackgroundColor: none !default;
+
+// Tertiary Focus */
+$tertiaryFocusColor: lighten(fade-in($tertiaryTextColor, 1), 20%) !default;
+$tertiaryFocusLineColor: lighten($tertiaryHoverColor, 20%) !default;
+$tertiaryFocusWithUnderline: true !default;
+$tertiaryFocusWithOverline: false !default;
+$tertiaryFocusBackgroundColor: none !default;
+
+// Tertiary Active */
+$tertiaryActiveColor: lighten($tertiaryHoverColor, 20%) !default;
+$tertiaryActiveLineColor: lighten($tertiaryActiveColor, 20%) !default;
+$tertiaryActiveWithUnderline: true !default;
+$tertiaryActiveWithOverline: false !default;
+$tertiaryActiveBackgroundColor: none !default;
+
+//-------------------  Variations --------------------*/
+
+// Colors */
+$coloredBackgroundImage: none !default;
+$coloredBoxShadow: $shadowBoxShadow !default;
+
+// Colored */
+$brownTextColor: $invertedTextColor !default;
+$brownTextShadow: $invertedTextShadow !default;
+$redTextColor: $invertedTextColor !default;
+$redTextShadow: $invertedTextShadow !default;
+$orangeTextColor: $invertedTextColor !default;
+$orangeTextShadow: $invertedTextShadow !default;
+$greenTextColor: $invertedTextColor !default;
+$greenTextShadow: $invertedTextShadow !default;
+$blueTextColor: $invertedTextColor !default;
+$blueTextShadow: $invertedTextShadow !default;
+$violetTextColor: $invertedTextColor !default;
+$violetTextShadow: $invertedTextShadow !default;
+$purpleTextColor: $invertedTextColor !default;
+$purpleTextShadow: $invertedTextShadow !default;
+$pinkTextColor: $invertedTextColor !default;
+$pinkTextShadow: $invertedTextShadow !default;
+$blackTextColor: $invertedTextColor !default;
+$blackTextShadow: $invertedTextShadow !default;
+$oliveTextColor: $invertedTextColor !default;
+$oliveTextShadow: $invertedTextShadow !default;
+$yellowTextColor: $invertedTextColor !default;
+$yellowTextShadow: $invertedTextShadow !default;
+$tealTextColor: $invertedTextColor !default;
+$tealTextShadow: $invertedTextShadow !default;
+$greyTextColor: $invertedTextColor !default;
+$greyTextShadow: $invertedTextShadow !default;
+
+// Inverted */
+$lightBrownTextColor: $invertedTextColor !default;
+$lightBrownTextShadow: $invertedTextShadow !default;
+$lightRedTextColor: $invertedTextColor !default;
+$lightRedTextShadow: $invertedTextShadow !default;
+$lightOrangeTextColor: $invertedTextColor !default;
+$lightOrangeTextShadow: $invertedTextShadow !default;
+$lightGreenTextColor: $invertedTextColor !default;
+$lightGreenTextShadow: $invertedTextShadow !default;
+$lightBlueTextColor: $invertedTextColor !default;
+$lightBlueTextShadow: $invertedTextShadow !default;
+$lightVioletTextColor: $invertedTextColor !default;
+$lightVioletTextShadow: $invertedTextShadow !default;
+$lightPurpleTextColor: $invertedTextColor !default;
+$lightPurpleTextShadow: $invertedTextShadow !default;
+$lightPinkTextColor: $invertedTextColor !default;
+$lightPinkTextShadow: $invertedTextShadow !default;
+$lightBlackTextColor: $invertedTextColor !default;
+$lightBlackTextShadow: $invertedTextShadow !default;
+$lightOliveTextColor: $textColor !default;
+$lightOliveTextShadow: $textShadow !default;
+$lightYellowTextColor: $textColor !default;
+$lightYellowTextShadow: $textShadow !default;
+$lightTealTextColor: $textColor !default;
+$lightTealTextShadow: $textShadow !default;
+$lightGreyTextColor: $textColor !default;
+$lightGreyTextShadow: $textShadow !default;
+
+
+// Ordinality */
+$primaryBackgroundImage: $coloredBackgroundImage !default;
+$primaryTextColor: $invertedTextColor !default;
+$lightPrimaryTextColor: $invertedTextColor !default;
+$primaryTextShadow: $invertedTextShadow !default;
+$primaryBoxShadow: $coloredBoxShadow !default;
+
+$secondaryBackgroundImage: $coloredBackgroundImage !default;
+$secondaryTextColor: $invertedTextColor !default;
+$secondaryTextShadow: $invertedTextShadow !default;
+$lightSecondaryTextColor: $invertedTextColor !default;
+$secondaryBoxShadow: $coloredBoxShadow !default;
+
+$positiveBackgroundImage: $coloredBackgroundImage !default;
+$positiveTextColor: $invertedTextColor !default;
+$positiveTextShadow: $invertedTextShadow !default;
+$positiveBoxShadow: $coloredBoxShadow !default;
+
+$negativeBackgroundImage: $coloredBackgroundImage !default;
+$negativeTextColor: $invertedTextColor !default;
+$negativeTextShadow: $invertedTextShadow !default;
+$negativeBoxShadow: $coloredBoxShadow !default;
+
+// Compact */
+$compactVerticalPadding: ($verticalPadding * 0.75) !default;
+$compactHorizontalPadding: ($horizontalPadding * 0.75) !default;
+
+// Attached */
+$attachedOffset: -1px !default;
+$attachedBoxShadow: 0 0 0 1px $borderColor !default;
+$attachedHorizontalPadding: 0.75em !default;
+$attachedZIndex: auto !default;
+
+// Floated */
+$floatedMargin: 0.25em !default;
+
+// Animated */
+$animatedVerticalAlign: middle !default;
+$animatedZIndex: 1 !default;
+$animationDuration: 0.3s !default;
+$animationEasing: ease !default;
+$fadeScaleHigh: 1.5 !default;
+$fadeScaleLow: 0.75 !default;

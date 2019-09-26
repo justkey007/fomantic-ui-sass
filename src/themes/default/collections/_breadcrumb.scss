@@ -1,0 +1,31 @@
+//****************************** Breadcrumb *******************************
+
+@import '../globals/site';
+
+$verticalMargin: 0 !default;
+$display: inline-block !default;
+$verticalAlign: middle !default;
+
+$dividerSpacing: $_3px !default;
+$dividerOpacity: 0.7 !default;
+$dividerColor: $lightTextColor !default;
+
+$dividerSize: $relativeSmall !default;
+$dividerVerticalAlign: baseline !default;
+
+$iconDividerSize: $relativeTiny !default;
+$iconDividerVerticalAlign: baseline !default;
+
+$sectionMargin: 0 !default;
+$sectionPadding: 0 !default;
+
+// Coupling */
+$segmentPadding: $relativeMini $relativeMedium !default;
+
+// Inverted */
+$invertedColor: $midWhite !default;
+$invertedActiveColor: $white !default;
+$invertedDividerColor: $invertedLightTextColor !default;
+
+//-------------------States--------------------*/
+$activeFontWeight: $bold !default;

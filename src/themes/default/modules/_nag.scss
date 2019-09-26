@@ -1,0 +1,63 @@
+//****************************** Nag *******************************/
+@import '../globals/site';
+
+//-------------- Collection ---------------*/
+
+$position: relative !default;
+$width: 100% !default;
+$zIndex: 999 !default;
+$margin: 0 !default;
+
+$background: #555555 !default;
+$opacity: 0.95 !default;
+$minHeight: 0 !default;
+$padding: 0.75em 1em !default;
+$lineHeight: 1em !default;
+$boxShadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !default;
+
+$fontSize: 1rem !default;
+$textAlign: center !default;
+$color: $textColor !default;
+
+$transition: 0.2s background ease !default;
+
+
+//-------------- Elements ---------------*/
+
+// Title */
+$titleColor: $white !default;
+$titleMargin: 0 0.5em !default;
+
+$closeSize: 1em !default;
+$closeMargin: (-$closeSize / 2) 0 0 !default;
+$closeTop: 50% !default;
+$closeRight: 1em !default;
+$closeColor: $white !default;
+$closeTransition: opacity 0.2s ease !default;
+$closeOpacity: 0.4 !default;
+
+
+//-------------- States ---------------*/
+
+// Hover */
+$nagHoverBackground: $background !default;
+$nagHoverOpacity: 1 !default;
+
+$closeHoverOpacity: 1 !default;
+
+//-------------- Variations ---------------*/
+
+// Top / Bottom */
+$top: 0 !default;
+$bottom: 0 !default;
+$borderRadius: $defaultBorderRadius !default;
+$topBorderRadius: 0 0 $borderRadius $borderRadius !default;
+$bottomBorderRadius: $borderRadius $borderRadius 0 0 !default;
+
+// Inverted */
+$invertedBackground: $darkWhite !default;
+
+//-------------- Plural ---------------*/
+
+$groupedBorderRadius: 0 !default;
+

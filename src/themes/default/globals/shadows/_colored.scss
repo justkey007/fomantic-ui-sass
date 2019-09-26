@@ -1,0 +1,52 @@
+@import '../colors/all';
+
+$textShadow: none !default;
+$invertedTextShadow: $textShadow !default;
+
+$primaryRibbonShadow: darken($primaryColor, 10) !default;
+$secondaryRibbonShadow: darken($secondaryColor, 10) !default;
+$redRibbonShadow: darken($red, 10) !default;
+$orangeRibbonShadow: darken($orange, 10) !default;
+$yellowRibbonShadow: darken($yellow, 10) !default;
+$oliveRibbonShadow: darken($olive, 10) !default;
+$greenRibbonShadow: darken($green, 10) !default;
+$tealRibbonShadow: darken($teal, 10) !default;
+$blueRibbonShadow: darken($blue, 10) !default;
+$violetRibbonShadow: darken($violet, 10) !default;
+$purpleRibbonShadow: darken($purple, 10) !default;
+$pinkRibbonShadow: darken($pink, 10) !default;
+$brownRibbonShadow: darken($brown, 10) !default;
+$greyRibbonShadow: darken($grey, 10) !default;
+$blackRibbonShadow: darken($black, 10) !default;
+
+$primaryInvertedRibbonShadow: darken($lightPrimaryColor, 10) !default;
+$secondaryInvertedRibbonShadow: darken($lightSecondaryColor, 10) !default;
+$redInvertedRibbonShadow: darken($lightRed, 10) !default;
+$orangeInvertedRibbonShadow: darken($lightOrange, 10) !default;
+$yellowInvertedRibbonShadow: darken($lightYellow, 10) !default;
+$oliveInvertedRibbonShadow: darken($lightOlive, 10) !default;
+$greenInvertedRibbonShadow: darken($lightGreen, 10) !default;
+$tealInvertedRibbonShadow: darken($lightTeal, 10) !default;
+$blueInvertedRibbonShadow: darken($lightBlue, 10) !default;
+$violetInvertedRibbonShadow: darken($lightViolet, 10) !default;
+$purpleInvertedRibbonShadow: darken($lightPurple, 10) !default;
+$pinkInvertedRibbonShadow: darken($lightPink, 10) !default;
+$brownInvertedRibbonShadow: darken($lightBrown, 10) !default;
+$greyInvertedRibbonShadow: lighten($lightGrey, 5) !default;
+$blackInvertedRibbonShadow: lighten($lightBlack, 5) !default;
+
+$primaryTextShadow: $invertedTextShadow !default;
+$secondaryTextShadow: $invertedTextShadow !default;
+$redTextShadow: $invertedTextShadow !default;
+$orangeTextShadow: $invertedTextShadow !default;
+$yellowTextShadow: $invertedTextShadow !default;
+$oliveTextShadow: $invertedTextShadow !default;
+$greenTextShadow: $invertedTextShadow !default;
+$tealTextShadow: $invertedTextShadow !default;
+$blueTextShadow: $invertedTextShadow !default;
+$violetTextShadow: $invertedTextShadow !default;
+$purpleTextShadow: $invertedTextShadow !default;
+$pinkTextShadow: $invertedTextShadow !default;
+$brownTextShadow: $invertedTextShadow !default;
+$greyTextShadow: $invertedTextShadow !default;
+$blackTextShadow: $invertedTextShadow !default;

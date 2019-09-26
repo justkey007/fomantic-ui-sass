@@ -1,0 +1,57 @@
+@import '../colors/all';
+
+$primaryColorFocus        : saturate(darken($primaryColor, 8), 20) !default;
+$secondaryColorFocus      : saturate(lighten($secondaryColor, 8), 20) !default;
+$lightPrimaryColorFocus   : saturate(darken($lightPrimaryColor, 8), 20) !default;
+$lightSecondaryColorFocus : saturate(lighten($lightSecondaryColor, 8), 20) !default;
+
+$redFocus                 : saturate(darken($red, 8), 20) !default;
+$orangeFocus              : saturate(darken($orange, 8), 20) !default;
+$yellowFocus              : saturate(darken($yellow, 8), 20) !default;
+$oliveFocus               : saturate(darken($olive, 8), 20) !default;
+$greenFocus               : saturate(darken($green, 8), 20) !default;
+$tealFocus                : saturate(darken($teal, 8), 20) !default;
+$blueFocus                : saturate(darken($blue, 8), 20) !default;
+$violetFocus              : saturate(darken($violet, 8), 20) !default;
+$purpleFocus              : saturate(darken($purple, 8), 20) !default;
+$pinkFocus                : saturate(darken($pink, 8), 20) !default;
+$brownFocus               : saturate(darken($brown, 8), 20) !default;
+
+$lightRedFocus            : saturate(darken($lightRed, 8), 20) !default;
+$lightOrangeFocus         : saturate(darken($lightOrange, 8), 20) !default;
+$lightYellowFocus         : saturate(darken($lightYellow, 8), 20) !default;
+$lightOliveFocus          : saturate(darken($lightOlive, 8), 20) !default;
+$lightGreenFocus          : saturate(darken($lightGreen, 8), 20) !default;
+$lightTealFocus           : saturate(darken($lightTeal, 8), 20) !default;
+$lightBlueFocus           : saturate(darken($lightBlue, 8), 20) !default;
+$lightVioletFocus         : saturate(darken($lightViolet, 8), 20) !default;
+$lightPurpleFocus         : saturate(darken($lightPurple, 8), 20) !default;
+$lightPinkFocus           : saturate(darken($lightPink, 8), 20) !default;
+$lightBrownFocus          : saturate(darken($lightBrown, 8), 20) !default;
+$lightGreyFocus           : saturate(darken($lightGrey, 8), 20) !default;
+$lightBlackFocus          : saturate(darken($fullBlack, 8), 20) !default;
+
+//---  Brand   ---*/
+$facebookFocusColor       : saturate(darken($facebookColor, 8), 20) !default;
+$twitterFocusColor        : saturate(darken($twitterColor, 8), 20) !default;
+$googlePlusFocusColor     : saturate(darken($googlePlusColor, 8), 20) !default;
+$linkedInFocusColor       : saturate(darken($linkedInColor, 8), 20) !default;
+$youtubeFocusColor        : saturate(darken($youtubeColor, 8), 20) !default;
+$instagramFocusColor      : saturate(darken($instagramColor, 8), 20) !default;
+$pinterestFocusColor      : saturate(darken($pinterestColor, 8), 20) !default;
+$vkFocusColor             : saturate(darken($vkColor, 8), 20) !default;
+$telegramFocusColor       : saturate(darken($telegramColor, 8), 20) !default;
+$whatsAppFocusColor       : saturate(darken($whatsAppColor, 8), 20) !default;
+
+//---  Dark Tones  ---*/
+$fullBlackFocus           : lighten($fullBlack, 8) !default;
+$blackFocus               : lighten($black, 8) !default;
+$greyFocus                : lighten($grey, 8) !default;
+
+//---  Light Tones  ---*/
+$whiteFocus               : darken($white, 8) !default;
+$offWhiteFocus            : darken($offWhite, 8) !default;
+$darkWhiteFocus           : darken($darkWhite, 8) !default;
+
+$positiveColorFocus       : saturate(darken($positiveColor, 8), 20) !default;
+$negativeColorFocus       : saturate(darken($negativeColor, 8), 20) !default;

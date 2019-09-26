@@ -1,0 +1,58 @@
+@import '../colors/all';
+
+$primaryColorDown        : darken($primaryColor, 10) !default;
+$secondaryColorDown      : lighten($secondaryColor, 10) !default;
+$lightPrimaryColorDown   : darken($lightPrimaryColor, 10) !default;
+$lightSecondaryColorDown : lighten($lightSecondaryColor, 10) !default;
+
+$redDown                 : darken($red, 10) !default;
+$orangeDown              : darken($orange, 10) !default;
+$yellowDown              : darken($yellow, 10) !default;
+$oliveDown               : darken($olive, 10) !default;
+$greenDown               : darken($green, 10) !default;
+$tealDown                : darken($teal, 10) !default;
+$blueDown                : darken($blue, 10) !default;
+$violetDown              : darken($violet, 10) !default;
+$purpleDown              : darken($purple, 10) !default;
+$pinkDown                : darken($pink, 10) !default;
+$brownDown               : darken($brown, 10) !default;
+
+$lightRedDown            : darken($lightRed, 10) !default;
+$lightOrangeDown         : darken($lightOrange, 10) !default;
+$lightYellowDown         : darken($lightYellow, 10) !default;
+$lightOliveDown          : darken($lightOlive, 10) !default;
+$lightGreenDown          : darken($lightGreen, 10) !default;
+$lightTealDown           : darken($lightTeal, 10) !default;
+$lightBlueDown           : darken($lightBlue, 10) !default;
+$lightVioletDown         : darken($lightViolet, 10) !default;
+$lightPurpleDown         : darken($lightPurple, 10) !default;
+$lightPinkDown           : darken($lightPink, 10) !default;
+$lightBrownDown          : darken($lightBrown, 10) !default;
+$lightGreyDown           : darken($lightGrey, 10) !default;
+$lightBlackDown          : darken($fullBlack, 10) !default;
+
+//---  Emotive  ---*/
+$positiveColorDown       : darken($positiveColor, 10) !default;
+$negativeColorDown       : darken($negativeColor, 10) !default;
+
+//---  Brand   ---*/
+$facebookDownColor       : darken($facebookColor, 10) !default;
+$twitterDownColor        : darken($twitterColor, 10) !default;
+$googlePlusDownColor     : darken($googlePlusColor, 10) !default;
+$linkedInDownColor       : darken($linkedInColor, 10) !default;
+$youtubeDownColor        : darken($youtubeColor, 10) !default;
+$instagramDownColor      : darken($instagramColor, 10) !default;
+$pinterestDownColor      : darken($pinterestColor, 10) !default;
+$vkDownColor             : darken($vkColor, 10) !default;
+$telegramDownColor       : darken($telegramColor, 10) !default;
+$whatsAppDownColor       : darken($whatsAppColor, 10) !default;
+
+//---  Dark Tones  ---*/
+$fullBlackDown           : lighten($fullBlack, 10) !default;
+$blackDown               : lighten($black, 10) !default;
+$greyDown                : lighten($grey, 10) !default;
+
+//---  Light Tones  ---*/
+$whiteDown               : darken($white, 10) !default;
+$offWhiteDown            : darken($offWhite, 10) !default;
+$darkWhiteDown           : darken($darkWhite, 10) !default;

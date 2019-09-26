@@ -1,0 +1,9 @@
+//****************************** Transition *******************************/
+@import '../globals/site';
+
+$transitionDefaultEasing: $defaultEasing !default;
+$transitionDefaultFill: both !default;
+$transitionDefaultDuration: 300ms !default;
+
+$use3DAcceleration: translateZ(0) !default;
+$backfaceVisibility: hidden !default;

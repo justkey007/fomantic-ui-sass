@@ -1,0 +1,124 @@
+//****************************** Step *******************************/
+@import '../globals/site';
+//------------------ Group --------------------*/
+
+$stepMargin: 1em 0 !default;
+$stepsBorderRadius: $defaultBorderRadius !default;
+$stepsBackground: '' !default;
+$stepsBoxShadow: none !default;
+$stepsBorder: 1px solid $borderColor !default;
+
+//------------------ Element --------------------*/
+
+$verticalMargin: 0 !default;
+$horizontalMargin: 0 !default;
+
+$arrowSize: $relativeLarge !default;
+$verticalPadding: $relativeLarge !default;
+$horizontalPadding: 2em !default;
+
+$transition:
+  background-color $defaultDuration $defaultEasing,
+  opacity $defaultDuration $defaultEasing,
+  color $defaultDuration $defaultEasing,
+  box-shadow $defaultDuration $defaultEasing
+ !default;
+$lineHeight: $relativeLarge !default;
+$alignItems: center !default;
+$justifyContent: center !default;
+$backgroundColor: $white !default;
+$background: $backgroundColor !default;
+$borderRadius: 0 !default;
+$borderWidth: 1px !default;
+$boxShadow: none !default;
+$border: none !default;
+$divider: $borderWidth solid $borderColor !default;
+
+// Icon */
+$iconDistance: 1rem !default;
+$iconSize: 2.5em !default;
+$iconAlign: middle !default;
+
+// Title */
+$titleFontFamily: $headerFont !default;
+$titleFontWeight: $bold !default;
+$titleFontSize: $relativeLarge !default;
+$titleColor: $darkTextColor !default;
+
+// Description */
+$descriptionDistance: 0.25em !default;
+$descriptionFontSize: $relativeSmall !default;
+$descriptionFontWeight: $normal !default;
+$descriptionColor: $textColor !default;
+
+
+// Arrow */
+$arrowBackgroundColor: $backgroundColor !default;
+$arrowTopOffset: 50% !default;
+$arrowRightOffset: 0 !default;
+$arrowBorderWidth: 0 $borderWidth $borderWidth 0 !default;
+
+$arrowDisplay: block !default;
+$lastArrowDisplay: none !default;
+
+$activeArrowDisplay: block !default;
+$activeLastArrowDisplay: none !default;
+
+// Mobile */
+$mobileIconDistance: $iconDistance !default;
+
+//------------------- Types --------------------*/
+
+// Vertical */
+$verticalDivider: $divider !default;
+$verticalArrowTopOffset: 50% !default;
+$verticalArrowRightOffset: 0 !default;
+$verticalArrowBorderWidth: 0 $borderWidth $borderWidth 0 !default;
+
+$verticalArrowDisplay: none !default;
+$verticalLastArrowDisplay: $verticalArrowDisplay !default;
+
+$verticalActiveArrowDisplay: block !default;
+$verticalActiveLastArrowDisplay: block !default;
+
+//------------------- Variations --------------------*/
+
+$attachedHorizontalOffset: -$borderWidth !default;
+$attachedVerticalOffset: 0 !default;
+$attachedWidth: calc(100% + #{-$attachedHorizontalOffset * 2}) !default;
+
+$orderedFontFamily: inherit !default;
+$orderedFontWeight: $bold !default;
+
+//------------------- States --------------------*/
+
+// Completed */
+$completedColor: $positiveColor !default;
+
+// Hover */
+$hoverBackground: $offWhite !default;
+$hoverColor: $hoveredTextColor !default;
+
+// Down */
+$downBackground: $darkWhite !default;
+$downColor: $pressedTextColor !default;
+
+// Active */
+$activeBackground: $darkWhite !default;
+$activeColor: $linkColor !default;
+$activeIconColor: $darkTextColor !default;
+
+// Active + Hover */
+$activeHoverBackground: $lightGrey !default;
+$activeHoverColor: $textColor !default;
+
+
+// Disabled */
+$disabledBackground: $background !default;
+$disabledColor: $disabledTextColor !default;
+
+// Inverted */
+$invertedActiveBackground: #333333 !default;
+$invertedActiveHoverBackground: #444444 !default;
+$invertedHoverBackground: #3F3F3F !default;
+$invertedDisabledBackground: #222222 !default;

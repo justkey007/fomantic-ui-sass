@@ -1,0 +1,30 @@
+@import '../colors/all';
+@import '../texts/all';
+
+$borderColor          : rgba(34, 36, 38, 0.15) !default;
+
+$primaryBorderColor   : $primaryColor !default;
+$secondaryBorderColor : $secondaryColor !default;
+$redBorderColor       : $redTextColor !default;
+$orangeBorderColor    : $orangeTextColor !default;
+$yellowBorderColor    : $yellowTextColor !default;
+$oliveBorderColor     : $oliveTextColor !default;
+$greenBorderColor     : $greenTextColor !default;
+$tealBorderColor      : $tealTextColor !default;
+$blueBorderColor      : $blueTextColor !default;
+$violetBorderColor    : $violetTextColor !default;
+$purpleBorderColor    : $purpleTextColor !default;
+$pinkBorderColor      : $pinkTextColor !default;
+$brownBorderColor     : $brownTextColor !default;
+$greyBorderColor      : $greyTextColor !default;
+$blackBorderColor     : $blackTextColor !default;
+$whiteBorderColor     : rgba(255, 255, 255, 0.1) !default;
+
+$strongBorderColor         : rgba(34, 36, 38, 0.22) !default;
+$strongSelectedBorderColor : rgba(34, 36, 38, 0.5) !default;
+$internalBorderColor       : rgba(34, 36, 38, 0.1) !default;
+
+$solidInternalBorderColor  : #FAFAFA !default;
+$solidBorderColor          : #D4D4D5 !default;
+$solidSelectedBorderColor  : #BCBDBD !default;
+$solidWhiteBorderColor     : #555555 !default;

@@ -1,0 +1,233 @@
+//****************************** Card *******************************/
+@import '../globals/site';
+
+//------------------- View --------------------*/
+
+// Shadow */
+$shadowDistance: 1px !default;
+$shadowBoxShadow: 0 $shadowDistance 3px 0 $solidBorderColor !default;
+
+// Card */
+$fontFamily: $pageFont !default;
+$display: flex !default;
+$background: $white !default;
+$borderRadius: $defaultBorderRadius !default;
+$margin: 1em 0 !default;
+$minHeight: 0 !default;
+$padding: 0 !default;
+$width: 290px !default;
+$borderWidth: 1px !default;
+$borderShadow: 0 0 0 $borderWidth $solidBorderColor !default;
+$boxShadow:
+  $shadowBoxShadow,
+  $borderShadow
+ !default;
+$border: none !default;
+$zIndex: '' !default;
+$transition:
+  box-shadow $defaultDuration $defaultEasing,
+  transform $defaultDuration $defaultEasing
+ !default;
+
+// Card Group */
+$horizontalSpacing: 1em !default;
+$rowSpacing: 1.75em !default;
+
+$groupMargin: -($rowSpacing / 2) -($horizontalSpacing / 2) !default;
+$groupDisplay: flex !default;
+
+$groupCardFloat: none !default;
+$groupCardDisplay: flex !default;
+$groupCardMargin: ($rowSpacing / 2) ($horizontalSpacing / 2) !default;
+
+// Consecutive Cards */
+$consecutiveGroupDistance: ($rowSpacing / 2) !default;
+
+//------------------- Content --------------------*/
+
+// Image */
+$imageBackground: $transparentBlack !default;
+$imagePadding: 0 !default;
+$imageBorder: none !default;
+$imageBoxShadow: none !default;
+$imageBorder: none !default;
+
+// Content */
+$contentDivider: $borderWidth solid $internalBorderColor !default;
+$contentMargin: 0 !default;
+$contentBackground: none !default;
+$contentPadding: 1em 1em !default;
+$contentFontSize: 1em !default;
+$contentBorderRadius: 0 !default;
+$contentBoxShadow: none !default;
+$contentBorder: none !default;
+
+
+// Header */
+$headerMargin: '' !default;
+$headerFontWeight: $bold !default;
+$headerFontSize: $relativeBig !default;
+$headerLineHeightOffset: -($lineHeight - 1em) / 2 !default;
+$headerColor: $darkTextColor !default;
+
+// Metadata */
+$metaFontSize: $relativeMedium !default;
+$metaSpacing: 0.3em !default;
+$metaColor: $lightTextColor !default;
+
+// Icons */
+$actionOpacity: 0.75 !default;
+$actionHoverOpacity: 1 !default;
+$actionTransition: color $defaultDuration $defaultEasing !default;
+
+$starColor: #FFB70A !default;
+$starActiveColor: #FFE623 !default;
+
+$likeColor: #FF2733 !default;
+$likeActiveColor: #FF2733 !default;
+
+// Links */
+$contentLinkColor: '' !default;
+$contentLinkHoverColor: '' !default;
+$contentLinkTransition: color $defaultDuration $defaultEasing !default;
+
+$headerLinkColor: $headerColor !default;
+$headerLinkHoverColor: $linkHoverColor !default;
+
+$metaLinkColor: $lightTextColor !default;
+$metaLinkHoverColor: $textColor !default;
+
+// Description */
+$descriptionDistance: 0.5em !default;
+$descriptionColor: rgba(0, 0, 0, 0.68) !default;
+
+// Content Image */
+$contentImageWidth: '' !default;
+$contentImageVerticalAlign: middle !default;
+
+// Avatar Image */
+$avatarSize: 2em !default;
+$avatarBorderRadius: $circularRadius !default;
+
+// Paragraph */
+$paragraphDistance: 0.5em !default;
+
+// Dimmer */
+$dimmerZIndex: 10 !default;
+$dimmerColor: '' !default;
+
+// Additional Content */
+$extraDivider: 1px solid rgba(0, 0, 0, 0.05) !default;
+$extraBackground: none !default;
+$extraPosition: static !default;
+$extraWidth: auto !default;
+$extraTop: 0 !default;
+$extraLeft: 0 !default;
+$extraMargin: 0 0 !default;
+$extraPadding: 0.75em 1em !default;
+$extraBoxShadow: none !default;
+$extraColor: $lightTextColor !default;
+$extraTransition: color $defaultDuration $defaultEasing !default;
+
+// Extra Links */
+$extraLinkColor: $unselectedTextColor !default;
+$extraLinkHoverColor: $linkHoverColor !default;
+
+// Buttons */
+$buttonMargin: 0 -$borderWidth !default;
+$buttonWidth: calc(100% + #{$borderWidth * 2}) !default;
+
+//-------------------  Variations --------------------*/
+
+// Link */
+$linkHoverBackground: $white !default;
+$linkHoverBorder: $border !default;
+$linkHoverZIndex: 5 !default;
+$linkHoverRaiseDistance: 3px !default;
+$linkHoverTransform: translateY(-$linkHoverRaiseDistance) !default;
+
+$shadowHoverBoxShadow: 0 $shadowDistance $linkHoverRaiseDistance 0 $solidSelectedBorderColor !default;
+$linkHoverBoxShadow:
+  $shadowHoverBoxShadow,
+  $borderShadow
+ !default;
+
+// Horizontal */
+$horizontalMinWidth: 400px !default;
+$horizontalWidth: 400px !default;
+$horizontalImageWidth: 150px !default;
+
+// Raised */
+$raisedShadow:
+  $borderShadow,
+  $floatingShadow
+ !default;
+$raisedShadowHover:
+  $borderShadow,
+  $floatingShadowHover
+ !default;
+
+// Card Count */
+$wideCardSpacing: 1em !default;
+$cardSpacing: 0.75em !default;
+$smallCardSpacing: 0.5em !default;
+
+$oneCardSpacing: 0 !default;
+$twoCardSpacing: $wideCardSpacing !default;
+$threeCardSpacing: $wideCardSpacing !default;
+$fourCardSpacing: $cardSpacing !default;
+$fiveCardSpacing: $cardSpacing !default;
+$sixCardSpacing: $cardSpacing !default;
+$sevenCardSpacing: $smallCardSpacing !default;
+$eightCardSpacing: $smallCardSpacing !default;
+$nineCardSpacing: $smallCardSpacing !default;
+$tenCardSpacing: $smallCardSpacing !default;
+
+$oneCard: $oneColumn !default;
+$oneCardOffset: 0 !default;
+$twoCard: calc(#{$twoColumn} - #{$twoCardSpacing * 2}) !default;
+$twoCardOffset: -$twoCardSpacing !default;
+$threeCard: calc(#{$threeColumn} - #{$threeCardSpacing * 2}) !default;
+$threeCardOffset: -$threeCardSpacing !default;
+$fourCard: calc(#{$fourColumn} - #{$fourCardSpacing * 2}) !default;
+$fourCardOffset: -$fourCardSpacing !default;
+$fiveCard: calc(#{$fiveColumn} - #{$fiveCardSpacing * 2}) !default;
+$fiveCardOffset: -$fiveCardSpacing !default;
+$sixCard: calc(#{$sixColumn} - #{$sixCardSpacing * 2}) !default;
+$sixCardOffset: -$sixCardSpacing !default;
+$sevenCard: calc(#{$sevenColumn} - #{$sevenCardSpacing * 2}) !default;
+$sevenCardOffset: -$sevenCardSpacing !default;
+$eightCard: calc(#{$eightColumn} - #{$sevenCardSpacing * 2}) !default;
+$eightCardOffset: -$sevenCardSpacing !default;
+$nineCard: calc(#{$nineColumn} - #{$nineCardSpacing * 2}) !default;
+$nineCardOffset: -$nineCardSpacing !default;
+$tenCard: calc(#{$tenColumn} - #{$tenCardSpacing * 2}) !default;
+$tenCardOffset: -$tenCardSpacing !default;
+
+// Stackable */
+$stackableRowSpacing: 1em !default;
+$stackableCardSpacing: 1em !default;
+$stackableMargin: calc(#{$oneColumn} - #{$stackableCardSpacing * 2}) !default;
+
+// Sizes */
+$medium: 1em !default;
+
+// Colored */
+$coloredShadowDistance: 2px !default;
+
+// Inverted */
+$invertedBackground: $black !default;
+$invertedContentDivider: $borderWidth solid rgba(255, 255, 255, 0.15) !default;
+$invertedHeaderColor: $invertedTextColor !default;
+$invertedDescriptionColor: $invertedMutedTextColor !default;
+$invertedMetaColor: $invertedLightTextColor !default;
+$invertedMetaLinkColor: $invertedLightTextColor !default;
+$invertedMetaLinkHoverColor: $invertedHoveredTextColor !default;
+$invertedExtraColor: $invertedLightTextColor !default;
+$invertedExtraLinkColor: $invertedUnselectedTextColor !default;
+$invertedExtraDivider: 1px solid rgba(255, 255, 255, 0.15) !default;
+$invertedLinkHoverBackground: $black !default;
+$invertedBoxShadow:
+  0 $shadowDistance 3px 0 $solidWhiteBorderColor,
+  0 0 0 $borderWidth $solidWhiteBorderColor
+ !default;

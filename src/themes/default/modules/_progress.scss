@@ -1,0 +1,117 @@
+//******************************  Progress *******************************/
+@import '../globals/site';
+
+//------------------- Element -------------------*/
+
+// Label */
+$labelWidth: 100% !default;
+$labelHeight: 1.5em !default;
+$labelSize: 1em !default;
+$labelPosition: absolute !default;
+$labelTop: 100% !default;
+$labelLeft: 0 !default;
+$labelRight: auto !default;
+$labelBottom: auto !default;
+$labelOffset: ($labelHeight - 1.3em) !default;
+$labelColor: $textColor !default;
+$labelTextShadow: none !default;
+$labelFontWeight: $bold !default;
+$labelTextAlign: center !default;
+$labelTransition: color 0.4s $defaultEasing !default;
+
+$verticalSpacing: 1em !default;
+$margin: $verticalSpacing 0 ($labelHeight + $verticalSpacing) !default;
+$firstMargin: 0 0 ($labelHeight + $verticalSpacing) !default;
+$lastMargin: 0 0 ($labelHeight) !default;
+
+$background: $strongTransparentBlack !default;
+$border: none !default;
+$boxShadow: none !default;
+$padding: 0 !default;
+$borderRadius: $defaultBorderRadius !default;
+
+// Bar */
+$barPosition: relative !default;
+$barHeight: 1.75em !default;
+$barBackground: #888888 !default;
+$barBorderRadius: $borderRadius !default;
+$barTransitionEasing: $defaultEasing !default;
+$barTransitionDuration: $defaultDuration !default;
+$barTransition:
+  width $barTransitionDuration $barTransitionEasing,
+  background-color $barTransitionDuration $barTransitionEasing
+ !default;
+$barInitialWidth: 0 !default;
+$barMinWidth: 2em !default;
+
+// Progress Bar Label */
+$progressWidth: auto !default;
+$progressSize: $relativeSmall !default;
+$progressPosition: absolute !default;
+$progressTop: 50% !default;
+$progressRight: 0.5em !default;
+$progressLeft: auto !default;
+$progressBottom: auto !default;
+$progressOffset: -0.5em !default;
+$progressColor: $invertedLightTextColor !default;
+$progressTextShadow: none !default;
+$progressFontWeight: $bold !default;
+$progressTextAlign: left !default;
+
+//------------------- Types --------------------*/
+
+$indicatingFirstColor: #D95C5C !default;
+$indicatingSecondColor: #EFBC72 !default;
+$indicatingThirdColor: #E6BB48 !default;
+$indicatingFourthColor: #DDC928 !default;
+$indicatingFifthColor: #B4D95C !default;
+$indicatingSixthColor: #66DA81 !default;
+
+$indicatingFirstLabelColor: $textColor !default;
+$indicatingSecondLabelColor: $textColor !default;
+$indicatingThirdLabelColor: $textColor !default;
+$indicatingFourthLabelColor: $textColor !default;
+$indicatingFifthLabelColor: $textColor !default;
+$indicatingSixthLabelColor: $textColor !default;
+
+$invertedIndicatingFirstLabelColor: $invertedTextColor !default;
+$invertedIndicatingSecondLabelColor: $invertedTextColor !default;
+$invertedIndicatingThirdLabelColor: $invertedTextColor !default;
+$invertedIndicatingFourthLabelColor: $invertedTextColor !default;
+$invertedIndicatingFifthLabelColor: $invertedTextColor !default;
+$invertedIndicatingSixthLabelColor: $invertedTextColor !default;
+
+//------------------- States --------------------*/
+
+// Active */
+$activePulseColor: $white !default;
+$activePulseMaxOpacity: 0.3 !default;
+$activePulseDuration: 2s !default;
+$activeMinWidth: $barMinWidth !default;
+
+
+//------------------- Variations --------------------*/
+
+// Attached */
+$attachedBackground: transparent !default;
+$attachedHeight: 0.2rem !default;
+$attachedBorderRadius: $borderRadius !default;
+
+// Inverted */
+$invertedBackground: $transparentWhite !default;
+$invertedBorder: none !default;
+$invertedBarBackground: $barBackground !default;
+$invertedProgressColor: $black !default;
+$invertedLabelColor: $white !default;
+
+// Sizing */
+$tinyBarHeight: 0.5em !default;
+$smallBarHeight: 1em !default;
+$largeBarHeight: 2.5em !default;
+$bigBarHeight: 3.5em !default;
+
+// Indeterminate */
+$indeterminatePulseColor: $white !default;
+$indeterminatePulseDuration: $activePulseDuration !default;
+$indeterminatePulseDurationSlow: 4s !default;
+$indeterminatePulseDurationFast: 1s !default;

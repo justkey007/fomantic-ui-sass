@@ -1,0 +1,85 @@
+//*************************** Grid *******************************/
+@import '../globals/site';
+
+$minWidth: 320px !default;
+
+$gutterWidth: 2rem !default;
+$rowSpacing: 2rem !default;
+
+$tableWidth: calc(100% + #{$gutterWidth}) !default;
+$columnMaxImageWidth: 100% !default;
+
+$consecutiveGridDistance: ($rowSpacing / 2) !default;
+
+///****************************** Variations *******************************/
+
+//-------------- Relaxed ---------------*/
+
+$relaxedGutterWidth: 3rem !default;
+$veryRelaxedGutterWidth: 5rem !default;
+
+//-------------- Divided ---------------*/
+
+$dividedBorder: -1px 0 0 0 $borderColor !default;
+$verticallyDividedBorder: 0 -1px 0 0 $borderColor !default;
+
+$dividedInvertedBorder: -1px 0 0 0 $whiteBorderColor !default;
+$verticallyDividedInvertedBorder: 0 -1px 0 0 $whiteBorderColor !default;
+
+//-------------- Celled ---------------*/
+$celledMargin: 1em 0 !default;
+$celledWidth: 1px !default;
+$celledBorderColor: $solidBorderColor !default;
+
+$celledPadding: 1em !default;
+$celledRelaxedPadding: 1.5em !default;
+$celledVeryRelaxedPadding: 2em !default;
+
+$celledGridDivider: 0 0 0 $celledWidth $celledBorderColor !default;
+$celledRowDivider: 0 (-$celledWidth) 0 0 $celledBorderColor !default;
+$celledColumnDivider: (-$celledWidth) 0 0 0 $celledBorderColor !default;
+
+
+//-------------- Stackable ---------------*/
+$stackableRowSpacing: $rowSpacing !default;
+$stackableGutter: $gutterWidth !default;
+$stackableMobileBorder: 1px solid $borderColor !default;
+$stackableInvertedMobileBorder: 1px solid $whiteBorderColor !default;
+
+//-------------- Compact ---------------*/
+$compactGutterWidth: $gutterWidth / 2 !default;
+$compactRowSpacing: $rowSpacing / 2 !default;
+$compactCelledRelaxedPadding: $celledRelaxedPadding / 2 !default;
+$compactCelledVeryRelaxedPadding: $celledVeryRelaxedPadding / 2 !default;
+
+//------------------ Very Compact ------------------*/
+$veryCompactGutterWidth: $compactGutterWidth / 2 !default;
+$veryCompactRowSpacing: $compactRowSpacing / 2 !default;
+$veryCompactCelledRelaxedPadding: $compactCelledRelaxedPadding / 2 !default;
+$veryCompactCelledVeryRelaxedPadding: $compactCelledVeryRelaxedPadding / 2 !default;
+
+
+//****************************** Legacy *******************************/
+
+//-------------- Page ---------------*/
+
+// Legacy (DO NOT USE) */
+$mobileWidth: auto !default;
+$mobileMargin: 0 !default;
+$mobileGutter: 0 !default;
+
+$tabletWidth: auto !default;
+$tabletMargin: 0 !default;
+$tabletGutter: 2em !default;
+
+$computerWidth: auto !default;
+$computerMargin: 0 !default;
+$computerGutter: 3% !default;
+
+$largeMonitorWidth: auto !default;
+$largeMonitorMargin: 0 !default;
+$largeMonitorGutter: 15% !default;
+
+$widescreenMonitorWidth: auto !default;
+$widescreenMargin: 0 !default;
+$widescreenMonitorGutter: 23% !default;

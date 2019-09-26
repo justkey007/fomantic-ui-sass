@@ -1,0 +1,156 @@
+//******************************  Search *******************************/
+@import '../globals/site';
+
+// Search Prompt */
+$promptBackground: $inputBackground !default;
+$promptVerticalPadding: $inputVerticalPadding !default;
+$promptHorizontalPadding: $inputHorizontalPadding !default;
+$promptLineHeight: $inputLineHeight !default;
+$promptFontSize: $relativeMedium !default;
+$promptPadding: ($promptVerticalPadding + ((1em - $promptLineHeight) / 2)) $promptHorizontalPadding !default;
+$promptBorder: 1px solid $borderColor !default;
+$promptBorderRadius: $circularRadius !default;
+$promptColor: $textColor !default;
+$promptTransition:
+  background-color $defaultDuration $defaultEasing,
+  color $defaultDuration $defaultEasing,
+  box-shadow $defaultDuration $defaultEasing,
+  border-color $defaultDuration $defaultEasing
+ !default;
+$promptBoxShadow: 0 0 0 0 transparent inset !default;
+
+// Mobile */
+$mobileMaxWidth: calc(100vw - 2rem) !default;
+
+// Result Box */
+$resultsWidth: 18em !default;
+$resultsBackground: #FFFFFF !default;
+$resultsDistance: 0.5em !default;
+$resultsBorderRadius: $defaultBorderRadius !default;
+$resultsBorder: 1px solid $solidBorderColor !default;
+$resultsBoxShadow: $floatingShadow !default;
+
+// Result */
+$resultFontSize: 1em !default;
+$resultVerticalPadding: $relativeTiny !default;
+$resultHorizontalPadding: $relativeLarge !default;
+$resultPadding: $resultVerticalPadding $resultHorizontalPadding !default;
+$resultTextColor: $textColor !default;
+$resultLineHeight: 1.33 !default;
+$resultDivider: 1px solid $internalBorderColor !default;
+$resultLastDivider: none !default;
+
+// Result Image */
+$resultImageFloat: right !default;
+$resultImageBackground: none !default;
+$resultImageWidth: 5em !default;
+$resultImageHeight: 3em !default;
+$resultImageBorderRadius: 0.25em !default;
+$resultImageMargin: 0 6em 0 0 !default;
+
+// Result Content */
+$resultTitleFont: $headerFont !default;
+$resultTitleMargin: -$headerLineHeightOffset 0 0 !default;
+$resultTitleFontWeight: $bold !default;
+$resultTitleFontSize: $relativeMedium !default;
+$resultTitleColor: $darkTextColor !default;
+
+// Description */
+$resultDescriptionFontSize: $relativeSmall !default;
+$resultDescriptionDistance: 0 !default;
+$resultDescriptionColor: $lightTextColor !default;
+
+// Price */
+$resultPriceFloat: right !default;
+$resultPriceColor: $green !default;
+
+// Special Message */
+$messageVerticalPadding: 1em !default;
+$messageHorizontalPadding: 1em !default;
+$messageHeaderFontSize: $medium !default;
+$messageHeaderFontWeight: $bold !default;
+$messageHeaderColor: $textColor !default;
+$messageDescriptionDistance: 0.25rem !default;
+$messageDescriptionFontSize: 1em !default;
+$messageDescriptionColor: $textColor !default;
+
+// All Results Link */
+$actionBorder: none !default;
+$actionBackground: $darkWhite !default;
+$actionPadding: $relativeSmall $relativeMedium !default;
+$actionColor: $textColor !default;
+$actionFontWeight: $bold !default;
+$actionAlign: center !default;
+
+
+//******************************  States *******************************/
+
+// Focus */
+$promptFocusBackground: $promptBackground !default;
+$promptFocusBorderColor: $selectedBorderColor !default;
+$promptFocusColor: $selectedTextColor !default;
+
+// Hover */
+$resultHoverBackground: $offWhite !default;
+$actionHoverBackground: #E0E0E0 !default;
+
+// Loading */
+$invertedLoaderFillColor: rgba(0, 0, 0, 0.15) !default;
+
+// Active Category */
+$categoryActiveBackground: $darkWhite !default;
+$categoryNameActiveColor: $textColor !default;
+
+// Active Result */
+$resultActiveBorderLeft: $internalBorderColor !default;
+$resultActiveBackground: $darkWhite !default;
+$resultActiveBoxShadow: none !default;
+$resultActiveTitleColor: $darkTextColor !default;
+$resultActiveDescriptionColor: $darkTextColor !default;
+$resultsZIndex: 998 !default;
+
+
+//******************************  Types *******************************/
+
+// Selection */
+$selectionPromptBorderRadius: $defaultBorderRadius !default;
+
+$selectionCloseTop: 0 !default;
+$selectionCloseTransition:
+  color $defaultDuration $defaultEasing,
+  opacity $defaultDuration $defaultEasing
+ !default;
+$selectionCloseRight: 0 !default;
+$selectionCloseIconOpacity: 0.8 !default;
+$selectionCloseIconColor: '' !default;
+$selectionCloseIconHoverOpacity: 1 !default;
+$selectionCloseIconHoverColor: $red !default;
+
+$selectionCloseIconInputRight: 1.85714em !default;
+
+// Category */
+$categoryBackground: $darkWhite !default;
+$categoryBoxShadow: none !default;
+$categoryDivider: 1px solid $internalBorderColor !default;
+$categoryTransition:
+  background $defaultDuration $defaultEasing,
+  border-color $defaultDuration $defaultEasing
+ !default;
+
+$categoryResultsWidth: 28em !default;
+
+$categoryResultBackground: $white !default;
+$categoryResultLeftBorder: 1px solid $borderColor !default;
+$categoryResultDivider: $resultDivider !default;
+$categoryResultLastDivider: none !default;
+$categoryResultPadding: $resultPadding !default;
+$categoryResultTransition: $categoryTransition !default;
+
+$categoryNameWidth: 100px !default;
+$categoryNameBackground: transparent !default;
+$categoryNameFont: $pageFont !default;
+$categoryNameFontSize: 1em !default;
+$categoryNameWhitespace: nowrap !default;
+$categoryNamePadding: 0.4em 1em !default;
+$categoryNameFontWeight: $bold !default;
+$categoryNameColor: $lightTextColor !default;

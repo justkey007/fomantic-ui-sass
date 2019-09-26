@@ -1,0 +1,11 @@
+$positiveTextColor       : #2C662D !default;
+$successTextColor       : $positiveTextColor !default;
+
+$negativeTextColor       : #9F3A38 !default;
+$errorTextColor          : $negativeTextColor !default;
+
+$infoTextColor          : #276F86 !default;
+$warningTextColor       : #573A08 !default;
+
+$disabledTextColor: rgba(40, 40, 40, 0.3) !default;
+$invertedDisabledTextColor: rgba(225, 225, 225, 0.3) !default;

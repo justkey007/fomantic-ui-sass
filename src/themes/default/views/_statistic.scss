@@ -1,0 +1,94 @@
+//****************************** Statistic *******************************/
+@import '../globals/site';
+
+//------------------- View --------------------*/
+
+$verticalMargin: 1em !default;
+$margin: $verticalMargin 0 !default;
+$textAlign: center !default;
+$maxWidth: none !default;
+
+// Group */
+$horizontalSpacing: 1.5em !default;
+$rowSpacing: 1em !default;
+$groupMargin: $verticalMargin -$horizontalSpacing -$rowSpacing !default;
+
+// Group Element */
+$elementMargin: 0 $horizontalSpacing $rowSpacing !default;
+$elementMaxWidth: $maxWidth !default;
+
+//------------------- Content --------------------*/
+
+// Value */
+$valueFont: $pageFont !default;
+$valueFontWeight: $normal !default;
+$valueLineHeight: 1em !default;
+$valueColor: $black !default;
+$valueTextTransform: uppercase !default;
+
+// Label */
+$labelSize: $relativeMedium !default;
+$topLabelDistance: 0 !default;
+$bottomLabelDistance: 0 !default;
+$labelFont: $headerFont !default;
+$labelFontWeight: $bold !default;
+$labelColor: $textColor !default;
+$labelLineHeight: $relativeLarge !default;
+$labelTextTransform: uppercase !default;
+
+// Text */
+$textValueLineHeight: 1em !default;
+$textValueMinHeight: 2em !default;
+$textValueFontWeight: $bold !default;
+
+// Label Image */
+$imageHeight: 3rem !default;
+$imageVerticalAlign: baseline !default;
+
+//------------------- Types --------------------*/
+
+$horizontalGroupElementMargin: 1em 0 !default;
+$horizontalLabelDistance: 0.75em !default;
+
+//------------------- Variations --------------------*/
+
+// Floated */
+$leftFloatedMargin: 0 2em 1em 0 !default;
+$rightFloatedMargin: 0 0 1em 2em !default;
+
+// Inverted */
+$invertedValueColor: $white !default;
+$invertedLabelColor: $invertedTextColor !default;
+
+// Item Width */
+$itemGroupMargin: 0 0 -$rowSpacing !default;
+$itemMargin: 0 0 $rowSpacing !default;
+
+// Stackable */
+$stackableRowSpacing: 2rem !default;
+$stackableGutter: 2rem !default;
+
+// Size */
+$miniTextValueSize: 1rem !default;
+$miniValueSize: 1.5rem !default;
+$miniHorizontalValueSize: 1.5rem !default;
+
+$tinyTextValueSize: 1rem !default;
+$tinyValueSize: 2rem !default;
+$tinyHorizontalValueSize: 2rem !default;
+
+$smallTextValueSize: 1rem !default;
+$smallValueSize: 3rem !default;
+$smallHorizontalValueSize: 2rem !default;
+
+$textValueSize: 2rem !default;
+$valueSize: 4rem !default;
+$horizontalValueSize: 3rem !default;
+
+$largeTextValueSize: 2.5rem !default;
+$largeValueSize: 5rem !default;
+$largeHorizontalValueSize: 4rem !default;
+
+$hugeTextValueSize: 2.5rem !default;
+$hugeValueSize: 6rem !default;
+$hugeHorizontalValueSize: 5rem !default;

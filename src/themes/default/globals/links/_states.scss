@@ -1,0 +1,5 @@
+@import './main';
+@import './colored';
+
+$linkHoverColor      : darken(saturate($linkColor, 20), 15);
+$linkHoverUnderline  : $linkUnderline;

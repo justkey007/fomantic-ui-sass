@@ -1,0 +1,47 @@
+//****************************** Video *******************************/
+@import '../globals/site';
+
+//------------------- Element --------------------*/
+
+// Simple */
+$background: $lightGrey !default;
+$transitionDuration: 0.5s !default;
+$transitionEasing: $defaultEasing !default;
+
+// Placeholder */
+$placeholderUnderlay: $background !default;
+
+// Placeholder Overlayed Background */
+$placeholderBackground: radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3)) !default;
+@debug $placeholderBackground;
+$placeholderBackgroundOpacity: 0.5 !default;
+$placeholderBackgroundTransition: opacity $transitionDuration $transitionEasing !default;
+
+// Icon */
+$iconBackground: $veryStrongTransparentBlack !default;
+$iconSize: 6rem !default;
+$iconTransition:
+  opacity $transitionDuration $transitionEasing,
+  color $transitionDuration $transitionEasing
+ !default;
+$iconColor: $white !default;
+$iconShadow:
+  0 2px 10px rgba(34, 36, 38, 0.2)
+ !default;
+$iconZIndex: 10 !default;
+
+//------------------- States --------------------*/
+
+// Hover */
+$hoverPlaceholderBackground: $placeholderBackground !default;
+$hoverPlaceholderBackgroundOpacity: 1 !default;
+$hoverIconColor: $white !default;
+
+
+//------------------- Variations --------------------*/
+
+// Aspect Ratios */
+$squareRatio: (1/1) * 100% !default;
+$widescreenRatio: (9/16) * 100% !default;
+$ultraWidescreenRatio: (9/21) * 100% !default;
+$standardRatio: (3/4) * 100% !default;

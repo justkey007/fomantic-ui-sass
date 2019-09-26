@@ -1,0 +1,49 @@
+@import '../../themes/default/elements/text';
+
+/*******************************
+             Text
+*******************************/
+
+@each $key, $value in $colors {
+  $c: map-get($value, color);
+  $l: map-get($value, light);
+
+  span.ui.#{$key + ""}.text {
+    color: $c;
+  }
+  span.ui.inverted.#{$key + ""}.text {
+    color: $l;
+  }
+}
+
+span.ui.disabled.text {
+  opacity: $disabledOpacity;
+}
+
+/* Sizes */
+span.ui.mini.text {
+  font-size: $mini;
+}
+span.ui.tiny.text {
+  font-size: $tiny;
+}
+span.ui.small.text {
+  font-size: $small;
+}
+span.ui.medium.text {
+  font-size: $medium;
+}
+span.ui.large.text {
+  font-size: $large;
+}
+span.ui.big.text {
+  font-size: $big;
+}
+span.ui.huge.text {
+  font-size: $huge;
+}
+span.ui.massive.text {
+  font-size: $massive;
+}
+
+

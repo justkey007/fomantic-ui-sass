@@ -1,0 +1,146 @@
+//******************************  Header *******************************/
+@import '../globals/site';
+//------------------ Element --------------------*/
+
+$textTransform: none !default;
+$fontFamily: $headerFont !default;
+$fontWeight: $headerFontWeight !default;
+$lineHeight: $headerLineHeight !default;
+$lineHeightOffset: $headerLineHeightOffset !default;
+
+$topMargin: $headerTopMargin !default;
+$bottomMargin: $headerBottomMargin !default;
+$margin: $topMargin 0 $bottomMargin !default;
+
+$firstMargin: -$lineHeightOffset !default;
+$lastMargin: 0 !default;
+$horizontalPadding: 0 !default;
+$verticalPadding: 0 !default;
+
+// Sub Heading */
+$subHeadingDistance: $_2px !default;
+$subHeadingFontSize: $relativeTiny !default;
+$subHeadingFontWeight: $bold !default;
+$subHeadingTextTransform: uppercase !default;
+$subHeadingColor: '' !default;
+
+$smallSubHeadingSize: $relativeMini !default;
+$largeSubHeadingSize: $relativeSmall !default;
+$hugeSubHeadingSize: $relativeMedium !default;
+
+// Sub Header */
+$subHeaderMargin: 0 !default;
+$subHeaderLineHeight: 1.2em !default;
+$subHeaderColor: $mutedTextColor !default;
+
+// Icon */
+$iconOpacity: 1 !default;
+$iconSize: 1.5em !default;
+$iconOffset: 0 !default;
+$iconMargin: 0.75rem !default;
+$iconAlignment: middle !default;
+
+// Image */
+$imageWidth: 2.5em !default;
+$imageHeight: auto !default;
+$imageOffset: $lineHeightOffset !default;
+$imageMargin: $iconMargin !default;
+$imageAlignment: middle !default;
+
+// Label */
+$labelSize: '' !default;
+$labelDistance: 0.5rem !default;
+$labelVerticalAlign: middle !default;
+
+// Content */
+$contentAlignment: top !default;
+$contentIconAlignment: middle !default;
+$contentImageAlignment: middle !default;
+
+// Paragraph after Header */
+$nextParagraphDistance: 0 !default;
+
+//------------------- Variations --------------------*/
+
+// Sizing */
+$hugeFontSize   : join-value-to-unit($h1, em) !default;
+$largeFontSize  : join-value-to-unit($h2, em) !default;
+$mediumFontSize : join-value-to-unit($h3, em) !default;
+$smallFontSize  : join-value-to-unit($h4, em) !default;
+$tinyFontSize   : join-value-to-unit($h5, em) !default;
+
+// Sub Header */
+$h1SubHeaderFontSize: $large !default;
+$h2SubHeaderFontSize: $large !default;
+$h3SubHeaderFontSize: $medium !default;
+$h4SubHeaderFontSize: $medium !default;
+$h5SubHeaderFontSize: $small !default;
+
+$hugeSubHeaderFontSize  : $h1SubHeaderFontSize !default;
+$largeSubHeaderFontSize : $h2SubHeaderFontSize !default;
+$subHeaderFontSize      : $h3SubHeaderFontSize !default;
+$smallSubHeaderFontSize : $h4SubHeaderFontSize !default;
+$tinySubHeaderFontSize  : $h5SubHeaderFontSize !default;
+
+// Icon Header */
+$iconHeaderSize: 3em !default;
+$iconHeaderOpacity: 1 !default;
+$iconHeaderMargin: 0.5rem !default;
+$circularHeaderIconSize: 2em !default;
+$squareHeaderIconSize: 2em !default;
+$cornerIconHeaderSize: calc($iconHeaderSize * 0.45) !default;
+
+// No Line Height Offset */
+$iconHeaderTopMargin: 2rem !default;
+$iconHeaderBottomMargin: $bottomMargin !default;
+$iconHeaderFirstMargin: 0 !default;
+
+// Divided */
+$dividedBorderWidth: 1px !default;
+$dividedBorder: $dividedBorderWidth solid $borderColor !default;
+$dividedColoredBorderWidth: 2px !default;
+
+$dividedBorderPadding: $_3px !default;
+$dividedSubHeaderPadding: $_3px !default;
+$dividedIconPadding: 0 !default;
+
+// Block */
+$blockBackground: $darkWhite !default;
+$blockBoxShadow: none !default;
+$blockBorderWidth: 1px !default;
+$blockBorder: $blockBorderWidth solid $solidBorderColor !default;
+$blockHorizontalPadding: $medium !default;
+$blockVerticalPadding: $mini !default;
+$blockBorderRadius: $defaultBorderRadius !default;
+
+$tinyBlock: $tiny !default;
+$smallBlock: $small !default;
+$mediumBlock: $medium !default;
+$largeBlock: $large !default;
+$hugeBlock: $huge !default;
+
+// Attached */
+$attachedOffset: -1px !default;
+$attachedBoxShadow: none !default;
+$attachedBorder: 1px solid $solidBorderColor !default;
+$attachedVerticalPadding: $blockVerticalPadding !default;
+$attachedHorizontalPadding: $blockHorizontalPadding !default;
+$attachedBackground: $white !default;
+$attachedBorderRadius: $blockBorderRadius !default;
+
+$tinyAttachedSize: $relativeTiny !default;
+$smallAttachedSize: $relativeSmall !default;
+$mediumAttachedSize: $relativeMedium !default;
+$largeAttachedSize: $relativeLarge !default;
+$bigAttachedSize: $relativeBig !default;
+$hugeAttachedSize: $relativeHuge !default;
+
+// Inverted */
+$invertedColor: $white !default;
+$invertedSubHeaderColor: $invertedMutedTextColor !default;
+$invertedDividedBorderColor: $whiteBorderColor !default;
+$invertedBlockBackground: $lightBlack $subtleGradient !default;
+$invertedAttachedBackground: $black !default;
+
+// Floated */
+$floatedMargin: 0.5em !default;

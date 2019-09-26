@@ -1,0 +1,44 @@
+//******************************  Toast *******************************/
+@import '../globals/site';
+
+// Container */
+$toastContainerDistance: $relative12px !default;
+
+// Toast */
+$toastWidth: 300px !default;
+$toastBorderRadius: $defaultBorderRadius !default;
+$toastPadding: $inputPadding !default;
+$toastMarginBottom: 6px !default;
+$toastMargin: 0 0 $toastMarginBottom !default;
+$toastTextColor: $invertedTextColor !default;
+$toastInvertedTextColor: $textColor !default;
+
+// on Hover */
+$toastOpacityOnHover: 1 !default;
+$toastCursorOnHover: pointer !default;
+
+// Color variations */
+$toastInfoColor: $infoColor !default;
+$toastWarningColor: $warningColor !default;
+$toastErrorColor: $errorColor !default;
+$toastSuccessColor: $successColor !default;
+
+// Icon */
+$toastIconContentPadding: 3em !default;
+$toastIconVerticalAlign: middle !default;
+$toastIconFontSize: 1.5em !default;
+
+// Content */
+$toastContentVerticalAlign: middle !default;
+
+// Progressbar Colors */
+$toastInfoProgressColor: darken($toastInfoColor,15) !default;
+$toastWarningProgressColor: darken($toastWarningColor,15) !default;
+$toastErrorProgressColor: darken($toastErrorColor,15) !default;
+$toastSuccessProgressColor: darken($toastSuccessColor,15) !default;
+
+// Close Icon */
+$toastCloseTopDistance: 0.3em !default;
+$toastCloseRightDistance: 0.3em !default;
+$toastCloseOpacity: 0.7 !default;
+$toastCloseTransition: opacity $defaultDuration $defaultEasing !default;

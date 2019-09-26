@@ -1,0 +1,28 @@
+//****************************** Rail *******************************/
+@import '../globals/site';
+//------------------- Element --------------------*/
+
+$width: 300px !default;
+$height: 100% !default;
+
+$distance: 4rem !default;
+$splitDistance: ($distance / 2) !default;
+
+//------------------- Variations --------------------*/
+
+// Close */
+$closeDistance: 2em !default;
+$veryCloseDistance: 1em !default;
+
+$splitCloseDistance: ($closeDistance / 2) !default;
+$splitVeryCloseDistance: ($veryCloseDistance / 2) !default;
+
+$closeWidth: calc(#{$width} + #{$splitCloseDistance}) !default;
+$veryCloseWidth: calc(#{$width} + #{$splitVeryCloseDistance}) !default;
+
+// Dividing */
+$dividingBorder: 1px solid $borderColor !default;
+$dividingDistance: 5rem !default;
+$splitDividingDistance: ($dividingDistance / 2) !default;
+$dividingWidth: calc(#{$width} + #{$splitDividingDistance}) !default;
+

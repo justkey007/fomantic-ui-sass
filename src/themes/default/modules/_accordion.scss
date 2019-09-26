@@ -1,0 +1,93 @@
+//****************************** Accordion *******************************/
+@import '../globals/site';
+
+$boxShadow: none !default;
+
+// Title */
+$titleFont: $headerFont !default;
+$titlePadding: 0.5em 0 !default;
+$titleFontSize: 1em !default;
+$titleColor: $textColor !default;
+
+// Icon */
+$iconOpacity: 1 !default;
+$iconFontSize: 1em !default;
+$iconFloat: none !default;
+$iconWidth: 1.25em !default;
+$iconHeight: 1em !default;
+$iconDisplay: inline-block !default;
+$iconMargin: 0 0.25rem 0 0 !default;
+$iconPadding: 0 !default;
+$iconTransition:
+  transform $defaultDuration $defaultEasing,
+  opacity $defaultDuration $defaultEasing
+ !default;
+$iconVerticalAlign: baseline !default;
+$iconTransform: none !default;
+
+// Child Accordion */
+$childAccordionMargin: 1em 0 0 !default;
+$childAccordionPadding: 0 !default;
+
+// Content */
+$contentMargin: '' !default;
+$contentPadding: 0.5em 0 1em !default;
+
+//------------------- Coupling --------------------*/
+
+$menuTitlePadding: 0 !default;
+$menuIconFloat: right !default;
+$menuIconMargin: $lineHeightOffset 0 0 1em !default;
+$menuIconTransform: rotate(180deg) !default;
+
+
+//------------------- States --------------------*/
+
+$activeIconTransform: rotate(90deg) !default;
+
+//------------------- Variations --------------------*/
+
+// Styled */
+$styledWidth: 600px !default;
+$styledBackground: $white !default;
+$styledBorderRadius: $defaultBorderRadius !default;
+$styledBoxShadow:
+  $subtleShadow,
+  0 0 0 1px $borderColor
+ !default;
+
+// Content */
+$styledContentMargin: 0 !default;
+$styledContentPadding: 0.5em 1em 1.5em !default;
+
+// Child Content */
+$styledChildContentMargin: 0 !default;
+$styledChildContentPadding: $styledContentPadding !default;
+
+// Styled Title */
+$styledTitleMargin: 0 !default;
+$styledTitlePadding: 0.75em 1em !default;
+$styledTitleFontWeight: $bold !default;
+$styledTitleColor: $unselectedTextColor !default;
+$styledTitleTransition: background-color $defaultDuration $defaultEasing !default;
+$styledTitleBorder: 1px solid $borderColor !default;
+$styledTitleTransition:
+  background $defaultDuration $defaultEasing,
+  color $defaultDuration $defaultEasing
+ !default;
+
+// Styled Title States */
+$styledTitleHoverBackground: transparent !default;
+$styledTitleHoverColor: $textColor !default;
+$styledActiveTitleBackground: transparent !default;
+$styledActiveTitleColor: $selectedTextColor !default;
+
+// Styled Child Title States */
+$styledHoverChildTitleBackground: $styledTitleHoverBackground !default;
+$styledHoverChildTitleColor: $styledTitleHoverColor !default;
+$styledActiveChildTitleBackground: $styledActiveTitleBackground !default;
+$styledActiveChildTitleColor: $styledActiveTitleColor !default;
+
+// Inverted */
+$invertedTitleColor: $invertedTextColor !default;
+

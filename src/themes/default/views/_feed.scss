@@ -1,0 +1,132 @@
+//****************************** Feed *******************************/
+@import '../globals/site';
+
+//-------------------  Feed --------------------*/
+
+$margin: 1em 0 !default;
+
+//------------------- Elements --------------------*/
+
+// Event */
+$eventWidth: 100% !default;
+$eventPadding: $_3px 0 !default;
+$eventMargin: 0 !default;
+$eventBackground: none !default;
+$eventDivider: none !default;
+
+// Event Label */
+$labelWidth: 2.5em !default;
+$labelHeight: auto !default;
+$labelAlignSelf: stretch !default;
+$labelTextAlign: left !default;
+
+// Icon Label */
+$iconLabelOpacity: 1 !default;
+$iconLabelWidth: 100% !default;
+$iconLabelSize: 1.5em !default;
+$iconLabelPadding: 0.25em !default;
+$iconLabelBackground: none !default;
+$iconLabelBorderRadius: none !default;
+$iconLabelBorder: none !default;
+$iconLabelColor: rgba(0, 0, 0, 0.6) !default;
+
+// Image Label */
+$imageLabelWidth: 100% !default;
+$imageLabelHeight: auto !default;
+$imageLabelBorderRadius: $circularRadius !default;
+
+// Content w/ Label */
+$labeledContentMargin: 0.5em 0 $relative5px $relativeLarge !default;
+$lastLabeledContentPadding: 0 !default;
+
+// Content */
+$contentAlignSelf: stretch !default;
+$contentTextAlign: left !default;
+$contentWordWrap: break-word !default;
+
+// Date */
+$dateMargin: -0.5rem 0 0 !default;
+$datePadding: 0 !default;
+$dateColor: $lightTextColor !default;
+$dateFontSize: $relativeMedium !default;
+$dateFontWeight: $normal !default;
+$dateFontStyle: $normal !default;
+
+// Summary */
+$summaryMargin: 0 !default;
+$summaryFontSize: $relativeMedium !default;
+$summaryFontWeight: $bold !default;
+$summaryColor: $textColor !default;
+
+// Summary Image */
+$summaryImageWidth: auto !default;
+$summaryImageHeight: 10em !default;
+$summaryImageMargin: -0.25em 0.25em 0 0 !default;
+$summaryImageVerticalAlign: middle !default;
+$summaryImageBorderRadius: 0.25em !default;
+
+// Summary Date */
+$summaryDateDisplay: inline-block !default;
+$summaryDateFloat: none !default;
+$summaryDateMargin: 0 0 0 0.5em !default;
+$summaryDatePadding: 0 !default;
+$summaryDateFontSize: $relativeTiny !default;
+$summaryDateFontWeight: $dateFontWeight !default;
+$summaryDateFontStyle: $dateFontStyle !default;
+$summaryDateColor: $dateColor !default;
+
+// User */
+$userFontWeight: $bold !default;
+$userDistance: 0 !default;
+$userImageWidth: $summaryImageWidth !default;
+$userImageHeight: $summaryImageHeight !default;
+$userImageMargin: $summaryImageMargin !default;
+$userImageVerticalAlign: $summaryImageVerticalAlign !default;
+
+// Extra Summary Data */
+$extraMargin: 0.5em 0 0 !default;
+$extraBackground: none !default;
+$extraPadding: 0 !default;
+$extraColor: $textColor !default;
+
+// Extra Images */
+$extraImageMargin: 0 0.25em 0 0 !default;
+$extraImageWidth: 6em !default;
+
+// Extra Text */
+$extraTextPadding: 0 !default;
+$extraTextPointer: none !default;
+$extraTextFontSize: $relativeMedium !default;
+$extraTextLineHeight: $lineHeight !default;
+$extraTextMaxWidth: 500px !default;
+
+// Metadata Group */
+$metadataDisplay: inline-block !default;
+$metadataFontSize: $relativeTiny !default;
+$metadataMargin: 0.5em 0 0 !default;
+$metadataBackground: none !default;
+$metadataBorder: none !default;
+$metadataBorderRadius: 0 !default;
+$metadataBoxShadow: none !default;
+$metadataPadding: 0 !default;
+$metadataColor: rgba(0, 0, 0, 0.6) !default;
+
+$metadataElementSpacing: 0.75em !default;
+
+// Like */
+$likeColor: '' !default;
+$likeHoverColor: #FF2733 !default;
+$likeActiveColor: #EF404A !default;
+$likeTransition: 0.2s color ease !default;
+
+// Metadata Divider */
+$metadataDivider: '' !default;
+$metadataDividerColor: rgba(0, 0, 0, 0.2) !default;
+$metadataDividerOffset: -1em !default;
+
+$metadataActionCursor: pointer !default;
+$metadataActionOpacity: 1 !default;
+$metadataActionColor: rgba(0, 0, 0, 0.5) !default;
+$metadataActionTransition: color $defaultDuration $defaultEasing !default;
+
+$metadataActionHoverColor: $selectedTextColor !default;

@@ -1,0 +1,90 @@
+//****************************** Comments *******************************/
+@import '../globals/site';
+
+//------------------- View --------------------*/
+
+$maxWidth: 650px !default;
+$margin: 1.5em 0 !default;
+
+//------------------- Elements -------------------*/
+
+// Comment */
+$commentBackground: none !default;
+$commentMargin: 0.5em 0 0 !default;
+$commentPadding: 0.5em 0 0 !default;
+$commentDivider: none !default;
+$commentBorder: none !default;
+$commentLineHeight: 1.2 !default;
+$firstCommentMargin: 0 !default;
+$firstCommentPadding: 0 !default;
+
+// Nested Comment */
+$nestedCommentsMargin: 0 0 0.5em 0.5em !default;
+$nestedCommentsPadding: 1em 0 1em 1em !default;
+
+$nestedCommentDivider: none !default;
+$nestedCommentBorder: none !default;
+$nestedCommentBackground: none !default;
+
+// Avatar */
+$avatarDisplay: block !default;
+$avatarFloat: left !default;
+$avatarWidth: 2.5em !default;
+$avatarHeight: auto !default;
+$avatarSpacing: 1em !default;
+$avatarMargin: ($commentLineHeight - 1em) 0 0 !default;
+$avatarBorderRadius: 0.25rem !default;
+
+// Content */
+$contentMargin: $avatarWidth + $avatarSpacing !default;
+
+// Author */
+$authorFontSize: 1em !default;
+$authorColor: $textColor !default;
+$authorHoverColor: $linkHoverColor !default;
+$authorFontWeight: $bold !default;
+
+// Metadata */
+$metadataDisplay: inline-block !default;
+$metadataFontSize: 0.875em !default;
+$metadataSpacing: 0.5em !default;
+$metadataContentSpacing: 0.5em !default;
+$metadataColor: $lightTextColor !default;
+
+// Text */
+$textFontSize: 1em !default;
+$textMargin: 0.25em 0 0.5em !default;
+$textWordWrap: break-word !default;
+$textLineHeight: 1.3 !default;
+
+// Actions */
+$actionFontSize: 0.875em !default;
+$actionContentDistance: 0.75em !default;
+$actionLinkColor: $unselectedTextColor !default;
+$actionLinkHoverColor: $hoveredTextColor !default;
+
+// Reply */
+$replyDistance: 1em !default;
+$replyHeight: 12em !default;
+$replyFontSize: 1em !default;
+
+$commentReplyDistance: $replyDistance !default;
+
+//------------------- Variations -------------------*/
+
+// Threaded */
+$threadedCommentMargin: -1.5em 0 -1em  ($avatarWidth / 2) !default;
+$threadedCommentPadding: 3em 0 2em 2.25em !default;
+$threadedCommentBoxShadow: -1px 0 0 $borderColor !default;
+
+
+// Minimal */
+$minimalActionPosition: absolute !default;
+$minimalActionTop: 0 !default;
+$minimalActionRight: 0 !default;
+$minimalActionLeft: auto !default;
+
+$minimalTransitionDelay: 0.1s !default;
+$minimalEasing: $defaultEasing !default;
+$minimalDuration: 0.2s !default;
+$minimalTransition: opacity $minimalDuration $minimalEasing !default;

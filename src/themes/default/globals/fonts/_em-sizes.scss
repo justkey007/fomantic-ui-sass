@@ -1,0 +1,32 @@
+@import '../../../../functions/all';
+@import './main';
+@import './sizes';
+
+$mini            : join-value-to-unit( round($miniSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$tiny            : join-value-to-unit( round($tinySize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$small           : join-value-to-unit( round($smallSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$medium          : join-value-to-unit( round($mediumSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$large           : join-value-to-unit( round($largeSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$big             : join-value-to-unit( round($bigSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$huge            : join-value-to-unit( round($hugeSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$massive         : join-value-to-unit( round($massiveSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+
+// em */
+$relativeMini    : join-value-to-unit( round($miniSize * strip-unit($emSize)) / strip-unit($emSize), em) !default;
+$relativeTiny    : join-value-to-unit( round($tinySize * strip-unit($emSize)) / strip-unit($emSize), em) !default;
+$relativeSmall   : join-value-to-unit( round($smallSize * strip-unit($emSize)) / strip-unit($emSize), em) !default;
+$relativeMedium  : join-value-to-unit( round($mediumSize * strip-unit($emSize)) / strip-unit($emSize), em) !default;
+$relativeLarge   : join-value-to-unit( round($largeSize * strip-unit($emSize)) / strip-unit($emSize), em) !default;
+$relativeBig     : join-value-to-unit( round($bigSize * strip-unit($emSize)) / strip-unit($emSize), em) !default;
+$relativeHuge    : join-value-to-unit( round($hugeSize * strip-unit($emSize)) / strip-unit($emSize), em) !default;
+$relativeMassive : join-value-to-unit( round($massiveSize * strip-unit($emSize)) / strip-unit($emSize), em) !default;
+
+// rem */
+$absoluteMini    : join-value-to-unit( round($miniSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$absoluteTiny    : join-value-to-unit( round($tinySize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$absoluteSmall   : join-value-to-unit( round($smallSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$absoluteMedium  : join-value-to-unit( round($mediumSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$absoluteLarge   : join-value-to-unit( round($largeSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$absoluteBig     : join-value-to-unit( round($bigSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$absoluteHuge    : join-value-to-unit( round($hugeSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;
+$absoluteMassive : join-value-to-unit( round($massiveSize * strip-unit($emSize)) / strip-unit($emSize), rem) !default;

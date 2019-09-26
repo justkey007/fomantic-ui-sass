@@ -1,0 +1,73 @@
+//****************************** Slider Variables *******************************/
+@import '../globals/site';
+
+//------------------- Element --------------------*/
+
+$height        : 1.5em !default;
+$hoverPointer  : auto !default;
+$padding       : 1em .5em !default;
+
+// Track */
+$trackHeight        : .4em !default;
+$trackPositionTop   : ($height / 2) - ($trackHeight / 2) !default;
+$background         : #ccc !default;
+$trackBorderRadius  : 4px !default;
+$trackColor         : $transparentBlack !default;
+
+// Track Fill */
+$trackFillHeight             : $trackHeight !default;
+$trackFillColor              : $black !default;
+$trackFillColorFocus         : $blackHover !default;
+$invertedTrackFillColor      : $lightBlack !default;
+$invertedTrackFillColorFocus : $lightBlackHover !default;
+$trackFillBorderRadius       : $trackBorderRadius !default;
+
+// Thumb */
+$thumbHeight              : $height !default;
+$thumbBorderRadius        : 100% !default;
+$thumbBackground          : $white $subtleGradient !default;
+$thumbShadow              : $subtleShadow, 0 0 0 1px $borderColor inset !default;
+$thumbTransitionDuration  : 0.3s !default;
+$thumbTransition          : background $thumbTransitionDuration $defaultEasing !default;
+
+// Thumb Hover */
+$thumbHoverPointer    : pointer !default;
+$thumbHoverBackground : $whiteHover $subtleGradient !default;
+
+//------------------- States --------------------*/
+
+// Disabled */
+$disabledOpactiy        : .5 !default;
+$disabledTrackFillColor : $background !default;
+
+//------------------- Variations --------------------*/
+
+// Vertical */
+$verticalPadding : .5em 1em !default;
+
+// Labeled */
+$labelHeight  : $height !default;
+$labelWidth   : 1px !default;
+$labelColor   : $background !default;
+
+// Hover */
+$hoverVarOpacity                 : 0 !default;
+$hoverVarHoverOpacity            : 1 !default;
+$hoverOpacityTransitionDuration  : 0.2s !default;
+$hoverOpacityTransition          : opacity $hoverOpacityTransitionDuration linear !default;
+
+// Sizing */
+$smallHeight            : 1em !default;
+$smallLabelHeight       : $smallHeight !default;
+$smallTrackHeight       : 0.3em !default;
+$trackPositionTopSmall  : ($smallHeight / 2) - ($smallTrackHeight / 2) !default;
+
+$largeHeight            : 2em !default;
+$largeLabelHeight       : $largeHeight !default;
+$largeTrackHeight       : 0.5em !default;
+$trackPositionTopLarge  : ($largeHeight / 2) - ($largeTrackHeight / 2) !default;
+
+$bigHeight              : 2.5em !default;
+$bigLabelHeight         : $bigHeight !default;
+$bigTrackHeight         : 0.6em !default;
+$trackPositionTopBig    : ($bigHeight / 2) - ($bigTrackHeight / 2) !default;

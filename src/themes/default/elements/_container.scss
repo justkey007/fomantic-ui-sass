@@ -1,0 +1,52 @@
+//****************************** Container *******************************/
+@import '../globals/site';
+//------------------ Element --------------------*/
+
+// Minimum Gutter is used to determine  the maximum container width for a given device */
+
+$maxWidth: 100% !default;
+
+// Devices */
+$mobileMinimumGutter: 0 !default;
+$mobileWidth: auto !default;
+$mobileGutter: 1em !default;
+
+$tabletMinimumGutter: ($emSize  * 1) !default;
+$tabletWidth: $tabletBreakpoint - ($tabletMinimumGutter * 2) - $scrollbarWidth !default;
+$tabletGutter: auto !default;
+
+$computerMinimumGutter: ($emSize  * 1.5) !default;
+$computerWidth: $computerBreakpoint - ($computerMinimumGutter * 2) - $scrollbarWidth !default;
+$computerGutter: auto !default;
+
+$largeMonitorMinimumGutter: ($emSize  * 2) !default;
+$largeMonitorWidth: $largeMonitorBreakpoint - ($largeMonitorMinimumGutter * 2) - $scrollbarWidth !default;
+$largeMonitorGutter: auto !default;
+
+// Coupling (Add Negative Margin to container size) */
+$gridGutterWidth: 2rem !default;
+$relaxedGridGutterWidth: 3rem !default;
+$veryRelaxedGridGutterWidth: 5rem !default;
+
+$mobileGridWidth: $mobileWidth !default;
+$tabletGridWidth: calc(#{$tabletWidth} + #{$gridGutterWidth}) !default;
+$computerGridWidth: calc(#{$computerWidth} + #{$gridGutterWidth}) !default;
+$largeMonitorGridWidth: calc(#{$largeMonitorWidth} + #{$gridGutterWidth}) !default;
+
+$mobileRelaxedGridWidth: $mobileWidth !default;
+$tabletRelaxedGridWidth: calc(#{$tabletWidth} + #{$relaxedGridGutterWidth}) !default;
+$computerRelaxedGridWidth: calc(#{$computerWidth} + #{$relaxedGridGutterWidth}) !default;
+$largeMonitorRelaxedGridWidth: calc(#{$largeMonitorWidth} + #{$relaxedGridGutterWidth}) !default;
+
+$mobileVeryRelaxedGridWidth: $mobileWidth !default;
+$tabletVeryRelaxedGridWidth: calc(#{$tabletWidth} + #{$veryRelaxedGridGutterWidth}) !default;
+$computerVeryRelaxedGridWidth: calc(#{$computerWidth} + #{$veryRelaxedGridGutterWidth}) !default;
+$largeMonitorVeryRelaxedGridWidth: calc(#{$largeMonitorWidth} + #{$veryRelaxedGridGutterWidth}) !default;
+
+//------------------- Types --------------------*/
+
+// Text */
+$textWidth: 700px !default;
+$textFontFamily: $pageFont !default;
+$textLineHeight: 1.5 !default;
+$textSize: $large !default;

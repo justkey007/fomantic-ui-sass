@@ -1,0 +1,18 @@
+@import '../colors/all';
+@import './neutral';
+
+$lightPrimaryTextColor   : $invertedTextColor !default;
+$lightSecondaryTextColor : $invertedTextColor !default;
+$lightRedTextColor       : $lightRed !default;
+$lightOrangeTextColor    : $lightOrange !default;
+$lightYellowTextColor    : #B58105 !default; // Yellow text is difficult to read
+$lightOliveTextColor     : #8ABC1E !default; // Olive is difficult to read
+$lightGreenTextColor     : #1EBC30 !default; // Green is difficult to read
+$lightTealTextColor      : #10A3A3 !default; // Teal text is difficult to read
+$lightBlueTextColor      : $lightBlue !default;
+$lightVioletTextColor    : $lightViolet !default;
+$lightPurpleTextColor    : $lightPurple !default;
+$lightPinkTextColor      : $lightPink !default;
+$lightBrownTextColor     : $lightBrown !default;
+$lightGreyTextColor      : $lightGrey !default;
+$lightBlackTextColor     : $lightBlack !default;

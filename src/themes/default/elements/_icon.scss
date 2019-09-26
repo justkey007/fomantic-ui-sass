@@ -1,0 +1,88 @@
+//****************************** Icon *******************************/
+@import '../globals/site';
+//-------------- Font Files ---------------*/
+
+// Solid Icons */
+$fontName: 'icons' !default;
+$src:
+  url("${fontPath}/${fontName}.eot?#iefix") format('embedded-opentype'),
+  url("${fontPath}/${fontName}.woff2") format('woff2'),
+  url("${fontPath}/${fontName}.woff") format('woff'),
+  url("${fontPath}/${fontName}.ttf") format('truetype'),
+  url("${fontPath}/${fontName}.svg#icons") format('svg')
+ !default;
+$fallbackSRC: url("${fontPath}/${fontName}.eot") !default;
+
+// Outline Icons */
+$importOutlineIcons: true !default;
+$outlineFontName: 'outline-icons' !default;
+$outlineSrc:
+  url("${fontPath}/${outlineFontName}.eot?#iefix") format('embedded-opentype'),
+  url("${fontPath}/${outlineFontName}.woff2") format('woff2'),
+  url("${fontPath}/${outlineFontName}.woff") format('woff'),
+  url("${fontPath}/${outlineFontName}.ttf") format('truetype'),
+  url("${fontPath}/${outlineFontName}.svg#icons") format('svg')
+ !default;
+$outlineFallbackSRC: url("${fontPath}/${outlineFontName}.eot") !default;
+
+
+
+// Brand Icons */
+$importBrandIcons: true !default;
+$brandFontName: 'brand-icons' !default;
+$brandSrc:
+  url("${fontPath}/${brandFontName}.eot?#iefix") format('embedded-opentype'),
+  url("${fontPath}/${brandFontName}.woff2") format('woff2'),
+  url("${fontPath}/${brandFontName}.woff") format('woff'),
+  url("${fontPath}/${brandFontName}.ttf") format('truetype'),
+  url("${fontPath}/${brandFontName}.svg#icons") format('svg')
+ !default;
+$brandFallbackSRC: url("${fontPath}/${brandFontName}.eot") !default;
+
+
+//-------------- Definition ---------------*/
+
+// Icon Variables */
+$opacity: 1 !default;
+$width: $iconWidth !default;
+$height: 1em !default;
+$distanceFromText: 0.25rem !default;
+
+
+// Variations */
+$linkOpacity: 0.8 !default;
+$linkDuration: 0.3s !default;
+$loadingDuration: 2s !default;
+
+$circularSize: 2em !default;
+$circularPadding: 0.5em 0 !default;
+$circularShadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset !default;
+
+$borderedSize: 2em !default;
+$borderedVerticalPadding: (($borderedSize - $height) / 2) !default;
+$borderedHorizontalPadding: 0 !default;
+$borderedShadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset !default;
+
+$cornerIconSize: 0.45em !default;
+$cornerIconStroke: 1px !default;
+$cornerIconShadow:
+  -$cornerIconStroke -$cornerIconStroke 0 $white,
+   $cornerIconStroke -$cornerIconStroke 0 $white,
+  -$cornerIconStroke  $cornerIconStroke 0 $white,
+   $cornerIconStroke  $cornerIconStroke 0 $white
+ !default;
+$cornerIconInvertedShadow:
+  -$cornerIconStroke -$cornerIconStroke 0 $black,
+   $cornerIconStroke -$cornerIconStroke 0 $black,
+  -$cornerIconStroke  $cornerIconStroke 0 $black,
+   $cornerIconStroke  $cornerIconStroke 0 $black
+ !default;
+
+$mini: 0.4em !default;
+$tiny: 0.5em !default;
+$small: 0.75em !default;
+$medium: 1em !default;
+$large: 1.5em !default;
+$big: 2em !default;
+$huge: 4em !default;
+$massive: 8em !default;

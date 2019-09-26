@@ -1,0 +1,191 @@
+//****************************** Checkbox *******************************/
+@import '../globals/site';
+
+$checkboxSize: 17px !default;
+$checkboxColor: $textColor !default;
+$checkboxLineHeight: $checkboxSize !default;
+
+
+// Label */
+$labelDistance: 1.85714em !default; // 26px $ 14/em */
+
+// Checkbox */
+$checkboxBackground: $white !default;
+$checkboxBorder: 1px solid $solidBorderColor !default;
+$checkboxBorderRadius: $_3px !default;
+$checkboxTransition:
+  border $defaultDuration $defaultEasing,
+  opacity $defaultDuration $defaultEasing,
+  transform $defaultDuration $defaultEasing,
+  box-shadow $defaultDuration $defaultEasing
+ !default;
+
+// Checkmark */
+$checkboxCheckFontSize: 14px !default;
+$checkboxCheckTop: 0 !default;
+$checkboxCheckLeft: 0 !default;
+$checkboxCheckSize: $checkboxSize !default;
+
+// Label */
+$labelFontSize: $relativeMedium !default;
+$labelColor: $textColor !default;
+$labelTransition: color $defaultDuration $defaultEasing !default;
+
+//------------------- States --------------------*/
+
+// Hover */
+$checkboxHoverBackground: $checkboxBackground !default;
+$checkboxHoverBorderColor: $selectedBorderColor !default;
+$labelHoverColor: $hoveredTextColor !default;
+
+// Pressed */
+$checkboxPressedBackground: $offWhite !default;
+$checkboxPressedBorderColor: $selectedBorderColor !default;
+$checkboxPressedColor: $selectedTextColor !default;
+$labelPressedColor: $selectedTextColor !default;
+
+// Focus */
+$checkboxFocusBackground: $white !default;
+$checkboxFocusBorderColor: $focusedFormMutedBorderColor !default;
+$checkboxFocusCheckColor: $selectedTextColor !default;
+$labelFocusColor: $selectedTextColor !default;
+
+// Active */
+$labelActiveColor: $selectedTextColor !default;
+$checkboxActiveBackground: $white !default;
+$checkboxActiveBorderColor: $selectedBorderColor !default;
+$checkboxActiveCheckColor: $selectedTextColor !default;
+$checkboxActiveCheckOpacity: 1 !default;
+
+// Active Focus */
+$checkboxActiveFocusBackground: $white !default;
+$checkboxActiveFocusBorderColor: $checkboxFocusBorderColor !default;
+$checkboxActiveFocusCheckColor: $selectedTextColor !default;
+
+// Indeterminate */
+$checkboxIndeterminateBackground: $checkboxActiveBackground !default;
+$checkboxIndeterminateBorderColor: $checkboxActiveBorderColor !default;
+$checkboxIndeterminateCheckOpacity: 1 !default;
+$checkboxIndeterminateCheckColor: $checkboxActiveCheckColor !default;
+
+// Disabled */
+$disabledCheckboxOpacity: 0.5 !default;
+$disabledCheckboxLabelColor: rgba(0, 0, 0, 1) !default;
+
+//------------------- Types --------------------*/
+
+// Radio */
+// Uses px to avoid rounding issues with circles */
+
+$radioSize: 15px !default;
+$radioTop: 1px !default;
+$radioLeft: 0 !default;
+$radioLabelDistance: $labelDistance !default;
+
+$bulletTop: 1px !default;
+$bulletLeft: 0 !default;
+$bulletScale: (7 / 15) !default; // 7px as unitless value from radio size */
+$bulletColor: $textColor !default;
+$bulletRadius: $circularRadius !default;
+
+$radioFocusBackground: $checkboxFocusBackground !default;
+$radioFocusBulletColor: $checkboxFocusCheckColor !default;
+
+$radioActiveBackground: $checkboxActiveBackground !default;
+$radioActiveBulletColor: $checkboxActiveCheckColor !default;
+
+$radioActiveFocusBackground: $checkboxActiveFocusBackground !default;
+$radioActiveFocusBulletColor: $checkboxActiveFocusCheckColor !default;
+
+// Slider & Toggle Handle */
+$handleBackground: $white $subtleGradient !default;
+$handleBoxShadow:
+  $subtleShadow,
+  0 0 0 1px $borderColor inset
+ !default;
+
+// Slider */
+$sliderHandleSize: 1.5rem !default;
+$sliderLineWidth: 3.5rem !default;
+$sliderTransitionDuration: 0.3s !default;
+
+$sliderHandleOffset: (1rem - $sliderHandleSize) / 2 !default;
+$sliderHandleTransition: left $sliderTransitionDuration $defaultEasing !default;
+
+$sliderWidth: $sliderLineWidth !default;
+$sliderHeight: ($sliderHandleSize + $sliderHandleOffset) !default;
+
+$sliderLineHeight: $_3px !default;
+$sliderLineVerticalOffset: 0.4rem !default;
+$sliderLineColor: $transparentBlack !default;
+$sliderLineRadius: $circularRadius !default;
+$sliderLineTransition: background $sliderTransitionDuration $defaultEasing !default;
+
+$sliderTravelDistance: $sliderLineWidth - $sliderHandleSize !default;
+
+$sliderLabelDistance: $sliderLineWidth + 1rem !default;
+$sliderOffLabelColor: $unselectedTextColor !default;
+
+$sliderLabelLineHeight: 1rem !default;
+
+// Slider States */
+$sliderHoverLaneBackground: $veryStrongTransparentBlack !default;
+$sliderHoverLabelColor: $hoveredTextColor !default;
+
+$sliderOnLineColor: $lightBlack !default;
+$sliderOnLabelColor: $selectedTextColor !default;
+
+$sliderOnFocusLineColor: $lightBlackFocus !default;
+$sliderOnFocusLabelColor: $sliderOnLabelColor !default;
+
+
+
+// Toggle */
+$toggleLaneWidth: 3.5rem !default;
+$toggleHandleSize: 1.5rem !default;
+$toggleTransitionDuration: 0.2s !default;
+
+$toggleWidth: $toggleLaneWidth !default;
+$toggleHeight: $toggleHandleSize !default;
+
+$toggleHandleRadius: $circularRadius !default;
+$toggleHandleOffset: 0 !default;
+$toggleHandleTransition:
+  background $sliderTransitionDuration $defaultEasing,
+  left $sliderTransitionDuration $defaultEasing
+ !default;
+
+$toggleLaneBackground: $transparentBlack !default;
+$toggleLaneHeight: $toggleHandleSize !default;
+$toggleLaneBoxShadow: none !default;
+$toggleLaneVerticalOffset: 0 !default;
+$toggleOffOffset: -0.05rem !default;
+$toggleOnOffset: ($toggleLaneWidth - $toggleHandleSize) + 0.15rem !default;
+$toggleCenterOffset: $toggleOnOffset / 2 !default;
+$toggleCenterLaneBackground: $veryStrongTransparentBlack !default;
+
+$toggleLabelDistance: $toggleLaneWidth + 1rem !default;
+$toggleLabelLineHeight: 1.5rem !default;
+$toggleLabelOffset: 0.15em !default;
+
+
+$toggleFocusColor: $veryStrongTransparentBlack !default;
+$toggleHoverColor: $toggleFocusColor !default;
+
+$toggleOffLabelColor: $checkboxColor !default;
+$toggleOffHandleBoxShadow: $handleBoxShadow !default;
+
+$toggleOnLabelColor: $selectedTextColor !default;
+$toggleOnLaneColor: $primaryColor !default;
+
+$toggleOnHandleBoxShadow: $handleBoxShadow !default;
+
+$toggleOnFocusLaneColor: $primaryColorFocus !default;
+$toggleOnFocusLabelColor: $toggleOnLabelColor !default;
+
+
+
+//------------------- Variations --------------------*/
+
+// Inverted */
+$checkboxInvertedHoverBackground: $black !default;

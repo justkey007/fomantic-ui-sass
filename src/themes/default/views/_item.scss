@@ -1,0 +1,171 @@
+//****************************** Item *******************************/
+@import '../globals/site';
+
+//------------------- View --------------------*/
+
+// Group */
+$groupMargin: 1.5em 0 !default;
+
+// Item */
+$display: flex !default;
+$background: transparent !default;
+$borderRadius: 0 !default;
+$minHeight: 0 !default;
+$padding: 0 !default;
+$width: 100% !default;
+$boxShadow: none !default;
+$border: none !default;
+$zIndex: '' !default;
+$transition: box-shadow $defaultDuration $defaultEasing !default;
+
+// Responsive */
+$itemSpacing: 1em !default;
+$imageWidth: 175px !default;
+$contentImageDistance: 1.5em !default;
+
+$tabletItemSpacing: 1em !default;
+$tabletImageWidth: 150px !default;
+$tabletContentImageDistance: 1em !default;
+
+$mobileItemSpacing: 2em !default;
+$mobileImageWidth: auto !default;
+$mobileImageMaxHeight: 250px !default;
+$mobileContentImageDistance: 1.5em !default;
+
+
+//------------------- Content --------------------*/
+
+// Image */
+$imageDisplay: block !default;
+$imageFloat: none !default;
+$imageMaxHeight: '' !default;
+$imageVerticalAlign: start !default;
+$imageMargin: 0 !default;
+$imagePadding: 0 !default;
+$imageBorder: none !default;
+$imageBorderRadius: 0.125rem !default;
+$imageBoxShadow: none !default;
+$imageBorder: none !default;
+
+// Content */
+$contentDisplay: block !default;
+$contentVerticalAlign: start !default;
+
+$contentWidth: auto !default;
+$contentOffset: 0 !default;
+$contentBackground: none !default;
+$contentMargin: 0 !default;
+$contentPadding: 0 !default;
+$contentFontSize: 1em !default;
+$contentBorder: none !default;
+$contentBorderRadius: 0 !default;
+$contentBoxShadow: none !default;
+$contentColor: $textColor !default;
+
+// Header */
+$headerMargin: -$lineHeightOffset 0 0 !default;
+$headerFontWeight: $bold !default;
+$headerFontSize: $relativeBig !default;
+$headerColor: $darkTextColor !default;
+
+// Metadata */
+$metaMargin: 0.5em 0 0.5em !default;
+$metaFontSize: 1em !default;
+$metaLineHeight: 1em !default;
+$metaSpacing: 0.3em !default;
+$metaColor: rgba(0, 0, 0, 0.6) !default;
+
+// Icons */
+$actionOpacity: 0.75 !default;
+$actionHoverOpacity: 1 !default;
+$actionTransition: color $defaultDuration $defaultEasing !default;
+
+// Actions */
+$favoriteColor: #FFB70A !default;
+$favoriteActiveColor: #FFE623 !default;
+$likeColor: #FF2733 !default;
+$likeActiveColor: #FF2733 !default;
+
+// Links */
+$headerLinkColor: $headerColor !default;
+$headerLinkHoverColor: $linkHoverColor !default;
+$metaLinkColor: $lightTextColor !default;
+$metaLinkHoverColor: $textColor !default;
+$contentLinkColor: '' !default;
+$contentLinkHoverColor: '' !default;
+$contentLinkTransition: color $defaultDuration $defaultEasing !default;
+
+
+// Description */
+$descriptionDistance: 0.6em !default;
+$descriptionMaxWidth: auto !default;
+$descriptionFontSize: 1em !default;
+$descriptionLineHeight: $lineHeight !default;
+$descriptionColor: $textColor !default;
+
+// Content Image */
+$contentImageWidth: '' !default;
+$contentImageVerticalAlign: center !default;
+
+// Avatar Image */
+$avatarSize: $contentImageWidth !default;
+$avatarBorderRadius: $circularRadius !default;
+
+// Paragraph */
+$paragraphDistance: 0.5em !default;
+
+// Additional Content */
+$extraDivider: none !default;
+$extraHorizontalSpacing: 0.5rem !default;
+$extraRowSpacing: 0.5rem !default;
+
+$extraBackground: none !default;
+$extraDisplay: block !default;
+$extraPosition: relative !default;
+$extraMargin: (1rem - $extraRowSpacing) 0 0 !default;
+$extraTop: 0 !default;
+$extraLeft: 0 !default;
+$extraWidth: 100% !default;
+$extraPadding: 0 0 0 !default;
+$extraBoxShadow: none !default;
+$extraColor: $lightTextColor !default;
+$extraTransition: color $defaultDuration $defaultEasing !default;
+
+//------------------- Variations --------------------*/
+
+// Relaxed */
+$relaxedItemSpacing: 1.5em !default;
+$veryRelaxedItemSpacing: 2em !default;
+
+// Divided */
+$dividedBorder: 1px solid $borderColor !default;
+$dividedMargin: 0 !default;
+$dividedPadding: 1em 0 !default;
+
+$dividedFirstLastMargin: 0 !default;
+$dividedFirstLastPadding: 0 !default;
+
+
+// Unstackable */
+$unstackableMobileImageWidth: 125px !default;
+
+// Inverted */
+$invertedBackground: $background !default;
+$invertedContentBackground: $contentBackground !default;
+$invertedExtraBackground: $extraBackground !default;
+$invertedHeaderColor: $invertedTextColor !default;
+$invertedHeaderLinkColor: $invertedHeaderColor !default;
+$invertedHeaderLinkHoverColor: $invertedHoveredTextColor !default;
+$invertedMetaLinkColor: $invertedLightTextColor !default;
+$invertedMetaLinkHoverColor: $invertedTextColor !default;
+$invertedContentColor: $invertedTextColor !default;
+$invertedContentLinkColor: lighten(saturate($linkColor, 30), 25) !default;
+$invertedContentLinkHoverColor: $linkColor !default;
+$invertedExtraColor: $invertedLightTextColor !default;
+$invertedDescriptionColor: $invertedTextColor !default;
+$invertedMetaColor: rgba(255, 255, 255, 0.8) !default;
+$invertedLikeColor: lighten($likeColor,10) !default;
+$invertedLikeActiveColor: lighten($likeActiveColor,10) !default;
+$invertedFavoriteColor: lighten($favoriteColor,10) !default;
+$invertedFavoriteActiveColor: lighten($favoriteActiveColor,10) !default;
+$invertedDividedBorder: 1px solid $whiteBorderColor !default;

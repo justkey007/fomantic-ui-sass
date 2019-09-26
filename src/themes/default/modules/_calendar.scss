@@ -1,0 +1,17 @@
+//****************************** Calendar *******************************/
+@import '../globals/site';
+
+$focusBoxShadow: inset 0 0 0 1px $focusedFormBorderColor !default;
+$focusInvertedBoxShadow: inset 0 0 0 1px $focusedFormBorderColor !default;
+
+$todayFontWeight: bold !default;
+
+$rangeBackground: $transparentBlack !default;
+$rangeTextColor: $selectedTextColor !default;
+$rangeBoxShadow: none !default;
+$rangeInvertedBackground: $transparentWhite !default;
+$rangeInvertedTextColor: $invertedSelectedTextColor !default;
+$rangeInvertedBoxShadow: none !default;
+
+$adjacentTextColor: $mutedTextColor !default;
+$adjacentBackground: $subtleTransparentBlack !default;

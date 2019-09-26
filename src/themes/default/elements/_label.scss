@@ -1,0 +1,247 @@
+//****************************** Label *******************************/
+@import '../globals/site';
+//------------------ Element --------------------*/
+
+$verticalAlign: baseline !default;
+$verticalMargin: 0 !default;
+$horizontalMargin: $relative2px !default;
+$backgroundColor: #E8E8E8 !default;
+$color: $mutedTextColor !default;
+$backgroundImage: none !default;
+$verticalPadding: 0.5833em !default; // medium is not $emSize custom value required */
+$horizontalPadding: 0.833em !default;
+$borderRadius: $absoluteBorderRadius !default;
+$textTransform: none !default;
+$fontWeight: $bold !default;
+$borderWidth: 1px !default;
+$border: 0 solid transparent !default;
+
+$lineHeightOffset: -($verticalPadding / 2) !default;
+
+$labelTransitionDuration: $defaultDuration !default;
+$labelTransitionEasing: $defaultEasing !default;
+$transition: background $labelTransitionDuration $labelTransitionEasing !default;
+
+// Group */
+$groupVerticalMargin: 0.5em !default;
+$groupHorizontalMargin: 0.5em !default;
+
+//------------------- Parts --------------------*/
+
+// Link */
+$linkOpacity: 0.5 !default;
+$linkTransition: $labelTransitionDuration opacity $labelTransitionEasing !default;
+
+// Icon */
+$iconDistance: 0.75em !default;
+
+// Image */
+$imageHeight: (1em + $verticalPadding * 2) !default;
+
+// Detail */
+$detailFontWeight: $bold !default;
+$detailOpacity: 0.8 !default;
+$detailIconDistance: 0.25em !default;
+$detailMargin: 1em !default;
+
+// Delete */
+$deleteOpacity: $linkOpacity !default;
+$deleteSize: $relativeSmall !default;
+$deleteMargin: 0.5em !default;
+$deleteTransition: background $labelTransitionDuration $labelTransitionEasing !default;
+
+//------------------- Types --------------------*/
+
+// Image Label */
+$imageLabelBackground: $backgroundColor !default;
+$imageLabelVerticalPadding: $verticalPadding !default;
+$imageLabelHorizontalPadding: $horizontalPadding !default;
+$imageLabelTextDistance: 0.5em !default;
+$imageLabelDetailDistance: $imageLabelTextDistance !default;
+$imageLabelBorderRadius: $borderRadius !default;
+$imageLabelBoxShadow: none !default;
+$imageLabelPadding: $imageLabelVerticalPadding $imageLabelHorizontalPadding $imageLabelVerticalPadding $imageLabelTextDistance !default;
+
+$imageLabelImageMargin: -$verticalPadding $imageLabelTextDistance -$verticalPadding -$imageLabelTextDistance !default;
+$imageLabelImageBorderRadius: $imageLabelBorderRadius 0 0 $imageLabelBorderRadius !default;
+$imageLabelImageHeight: $imageHeight !default;
+
+$imageLabelDetailBackground: $strongTransparentBlack !default;
+$imageLabelDetailPadding: $imageLabelVerticalPadding $imageLabelHorizontalPadding !default;
+$imageLabelDetailMargin: -$imageLabelVerticalPadding -$imageLabelHorizontalPadding -$imageLabelVerticalPadding $imageLabelDetailDistance !default;
+
+//------------------- States --------------------*/
+
+// Hover */
+$labelHoverBackgroundColor: #E0E0E0 !default;
+$labelHoverBackgroundImage: none !default;
+$labelHoverTextColor: $hoveredTextColor !default;
+
+// Active */
+$labelActiveBackgroundColor: #D0D0D0 !default;
+$labelActiveBackgroundImage: none !default;
+$labelActiveTextColor: $selectedTextColor !default;
+
+// Active Hover */
+$labelActiveHoverBackgroundColor: #C8C8C8 !default;
+$labelActiveHoverBackgroundImage: none !default;
+$labelActiveHoverTextColor: $selectedTextColor !default;
+
+
+//------------------- Variations --------------------*/
+
+// Basic */
+$basicBackground: none $white !default;
+$basicBorderWidth: 1px !default;
+$basicBorderWidthOffset: -$basicBorderWidth !default;
+$basicBorderFullWidthOffset: calc(100% + #{$basicBorderWidth}) !default;
+$basicBorder: $basicBorderWidth solid $borderColor !default;
+$basicColor: $textColor !default;
+$basicBoxShadow: none !default;
+
+$basicHoverBackground: $basicBackground !default;
+$basicHoverColor: $linkHoverColor !default;
+$basicHoverBorder: $basicBorder !default;
+$basicHoverBoxShadow: $basicBoxShadow !default;
+
+// Tag */
+$tagCircleColor: $white !default;
+$tagCircleSize: 0.5em !default;
+$tagHorizontalPadding: 1.5em !default;
+$tagCircleBoxShadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3) !default;
+$basicTagCircleBoxShadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.8) !default;
+$tagTriangleRightOffset: 100% !default;
+$tagTriangleTopOffset: 50% !default;
+$tagTriangleSize: 1.56em !default;
+$tagTriangleBackgroundImage: none !default;
+$tagTransition: none !default; // Avoids error with background: inherit !default; on animation */
+
+// Ribbon */
+$ribbonTriangleSize: 1.2em !default;
+$basicRibbonTriangleSize: calc(#{$ribbonTriangleSize} - #{$basicBorderWidth}) !default;
+$basicRibbonTriangleSizeOffset: calc(1rem + #{$ribbonTriangleSize} - #{$basicBorderWidth}) !default;
+$ribbonShadowColor: rgba(0, 0, 0, 0.15) !default;
+
+$ribbonMargin: 1rem !default;
+$ribbonOffset: calc(#{-$ribbonMargin} - #{$ribbonTriangleSize}) !default;
+$basicRibbonOffset: calc(#{$verticalPadding} - #{$basicBorderWidth}) !default;
+$ribbonDistance: calc(#{$ribbonMargin} + #{$ribbonTriangleSize}) !default;
+$rightRibbonOffset: calc(100% + #{$ribbonMargin} + #{$ribbonTriangleSize}) !default;
+
+$ribbonImageTopDistance: 1rem !default;
+$ribbonImageMargin: -0.05rem !default; // Rounding Offset on Triangle */
+$ribbonImageOffset: calc(#{-$ribbonImageMargin} - #{$ribbonTriangleSize}) !default;
+$rightRibbonImageOffset: calc(100% + #{$ribbonImageMargin} + #{$ribbonTriangleSize}) !default;
+
+$ribbonTableMargin: $relativeMedium !default; // Rounding Offset on Triangle */
+$ribbonTableOffset: calc(#{-$ribbonTableMargin} - #{$ribbonTriangleSize}) !default;
+$rightRibbonTableOffset: calc(100% + #{$ribbonTableMargin} + #{$ribbonTriangleSize}) !default;
+
+// Inverted */
+$invertedBackgroundColor: darken($backgroundColor,20) !default;
+$invertedBackground: $black !default;
+$invertedBoxShadowSize: 2px !default;
+$invertedBorderSize: 1px !default;
+
+$basicInvertedBorderColor: rgba(255, 255, 255, 0.5) !default;
+
+// Colors */
+$redTextColor: $white !default;
+$orangeTextColor: $white !default;
+$yellowTextColor: $white !default;
+$oliveTextColor: $white !default;
+$greenTextColor: $white !default;
+$tealTextColor: $white !default;
+$blueTextColor: $white !default;
+$violetTextColor: $white !default;
+$purpleTextColor: $white !default;
+$pinkTextColor: $white !default;
+$brownTextColor: $white !default;
+$greyTextColor: $white !default;
+$blackTextColor: $white !default;
+
+$redHoverTextColor: $white !default;
+$orangeHoverTextColor: $white !default;
+$yellowHoverTextColor: $white !default;
+$oliveHoverTextColor: $white !default;
+$greenHoverTextColor: $white !default;
+$tealHoverTextColor: $white !default;
+$blueHoverTextColor: $white !default;
+$violetHoverTextColor: $white !default;
+$purpleHoverTextColor: $white !default;
+$pinkHoverTextColor: $white !default;
+$brownHoverTextColor: $white !default;
+$greyHoverTextColor: $white !default;
+$blackHoverTextColor: $white !default;
+
+$primaryHoverTextColor: $white !default;
+$secondaryHoverTextColor: $white !default;
+
+$primaryTextColor: $invertedTextColor !default;
+$secondaryTextColor: $invertedTextColor !default;
+
+// Attached */
+$attachedSegmentPadding: 2rem !default;
+$attachedVerticalPadding: 0.75em !default;
+$attachedHorizontalPadding: 1em !default;
+
+$attachedCornerBorderRadius: $_3px !default;
+$attachedBorderRadius: $borderRadius !default;
+
+// Corner */
+$cornerSizeRatio: 1 !default;
+$cornerTransition: color $labelTransitionDuration $labelTransitionEasing !default;
+$cornerTriangleSize: 4em !default;
+$cornerTriangleTransition: border-color $labelTransitionDuration $labelTransitionEasing !default;
+$cornerTriangleZIndex: 1 !default;
+
+$cornerIconSize: $relativeLarge !default;
+$cornerIconTopOffset: $relative9px !default;
+$cornerIconLeftOffset: $relative8px !default;
+$cornerIconRightOffset: $relative8px !default;
+
+// Corner Text */
+$cornerTextWidth: 3em !default;
+$cornerTextWeight: $bold !default;
+$cornerTextSize: 1em !default;
+
+// Horizontal */
+$horizontalLabelMinWidth: 3em !default;
+$horizontalLabelMargin: 0.5em !default;
+$horizontalLabelVerticalPadding: 0.4em !default;
+
+// Circular Padding */
+$circularPadding: 0.5em !default;
+$circularMinSize: 2em !default;
+$emptyCircleSize: 0.5em !default;
+
+// Pointing */
+$pointingBorderColor: inherit !default;
+$pointingBorderWidth: $borderWidth !default;
+$pointingVerticalDistance: 1em !default;
+$pointingTriangleSize: 0.6666em !default;
+$pointingHorizontalDistance: $pointingTriangleSize !default;
+
+$pointingTriangleTransition: none !default; // Avoids error with background: inherit !default; on animation */
+$pointingTriangleZIndex: 2 !default;
+
+// Basic Pointing */
+$basicPointingTriangleOffset: -$pointingBorderWidth !default;
+
+// Floating */
+$floatingTopOffset: -1em !default;
+$floatingBottomOffset: $floatingTopOffset !default;
+$floatingAlignOffset: 1.2em !default;
+$floatingZIndex: 100 !default;
+
+//------------------- Group --------------------*/
+
+// Sizing */
+$mini    : $_9px !default;
+$tiny    : $_10px !default;
+$small   : $_11px !default;
+$medium  : $_12px !default;
+$large   : $absoluteMedium !default;
+$big     : $absoluteBig !default;
+$huge    : $absoluteHuge !default;
+$massive : $absoluteMassive !default;

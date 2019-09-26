@@ -1,0 +1,199 @@
+//****************************** Modal *******************************/
+@import '../globals/site';
+
+$background: white !default;
+$border: none !default;
+$zIndex: 1001 !default;
+$borderRadius: $defaultBorderRadius !default;
+$transformOrigin: 50% 25% !default;
+$boxShadow:
+  0px 0px 0px 0 rgba(0,0,0,.2),
+  0px 0px 1px 0px rgba(0,0,0,.2)
+ !default;
+
+// Close Icon */
+$closeOpacity: 0.8 !default;
+$closeSize: 1.25em !default;
+$closeColor: $white !default;
+
+$closeHitbox: 2.25rem !default;
+$closeDistance: 0.25rem !default;
+$closeHitBoxOffset: ($closeHitbox - 1rem) / 2 !default;
+$closePadding: $closeHitBoxOffset 0 0 0 !default;
+$closeTop: -($closeDistance + $closeHitbox) !default;
+$closeRight: -($closeDistance + $closeHitbox) !default;
+
+// Header */
+$headerMargin: 0em !default;
+$headerVerticalPadding: 1.25rem !default;
+$headerHorizontalPadding: 1.5rem !default;
+$headerPadding: $headerVerticalPadding $headerHorizontalPadding !default;
+$headerBoxShadow: none !default;
+$headerFontWeight: bold !default;
+$headerFontFamily: $headerFont !default;
+$headerBorder: 1px solid $borderColor !default;
+$headerHeight: 40px !default;
+
+$headerBackground: $primaryColor !default;
+$headerFontSize: 1em !default;
+$headerColor: $white !default;
+
+// Content */
+$contentFontSize: 1em !default;
+$contentPadding: 1.5rem !default;
+$contentLineHeight: 1.4 !default;
+$contentBackground: #FFFFFF !default;
+
+// Image / Description */
+$imageWidth: '' !default;
+$imageIconSize: 8rem !default;
+$imageVerticalAlign: start !default;
+
+$descriptionDistance: 2em !default;
+$descriptionMinWidth: '' !default;
+$descriptionWidth: auto !default;
+$descriptionVerticalAlign: start !default;
+
+// Modal Actions */
+$actionBorder: 1px solid $borderColor !default;
+$actionBackground: $offWhite !default;
+$actionPadding: 1rem 1rem !default;
+$actionAlign: right !default;
+
+$buttonDistance: 0.75em !default;
+
+// Inner Close Position (Tablet/Mobile) */
+$innerCloseTop: (strip-unit($headerVerticalPadding - $closeHitBoxOffset) + ($lineHeight - 1em)) !default;
+$innerCloseRight: 1rem !default;
+$innerCloseColor: $textColor !default;
+
+// Mobile Positions */
+$mobileHeaderPadding: 0.75rem 1rem !default;
+$mobileContentPadding: 1rem !default;
+$mobileImagePadding: 0 0 1rem !default;
+$mobileDescriptionPadding: 1rem 0  !default;
+$mobileButtonDistance: 1rem !default;
+$mobileActionPadding: 1rem 1rem (1rem - $mobileButtonDistance) !default;
+$mobileImageIconSize: 5rem !default;
+$mobileCloseTop: 0.5rem !default;
+$mobileCloseRight: 0.5rem !default;
+
+// Responsive Widths */
+$mobileWidth: 95% !default;
+$tabletWidth: 88% !default;
+$computerWidth: 850px !default;
+$largeMonitorWidth: 900px !default;
+$widescreenMonitorWidth: 950px !default;
+
+$mobileMargin: 0 0 0 0 !default;
+$tabletMargin: 0 0 0 0 !default;
+$computerMargin: 0 0 0 0 !default;
+$largeMonitorMargin: 0 0 0 0 !default;
+$widescreenMonitorMargin: 0 0 0 0 !default;
+
+$fullScreenWidth: 95% !default;
+$fullScreenOffset: (100% - $fullScreenWidth) / 2 !default;
+$fullScreenMargin: 1em auto !default;
+
+// Coupling */
+$invertedBoxShadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2) !default;
+
+//------------------- States --------------------*/
+
+$loadingZIndex: -1 !default;
+
+//------------------  Types -------------------*/
+
+// Basic */
+$basicModalHeaderColor: $white !default;
+$basicModalColor: $white !default;
+$basicModalCloseTop: 1rem !default;
+$basicModalCloseRight: 1.5rem !default;
+$basicInnerCloseColor: $white !default;
+
+$basicInvertedModalColor: $textColor !default;
+$basicInvertedModalHeaderColor: $darkTextColor !default;
+
+// Aligned */
+$topAlignedMargin: 5vh !default;
+$mobileTopAlignedMargin: 1rem !default;
+$bottomAlignedMargin: $topAlignedMargin !default;
+$mobileBottomAlignedMargin: $mobileTopAlignedMargin !default;
+
+// Scrolling Margin */
+$scrollingMargin: 1rem !default;
+$mobileScrollingMargin: $mobileTopAlignedMargin !default;
+
+// Scrolling Content */
+$scrollingContentMaxHeight: calc(80vh - 10rem) !default;
+
+//------------------ Variations --------------------*/
+
+// Size Widths */
+$miniRatio: 0.4 !default;
+$tinyRatio: 0.6 !default;
+$smallRatio: 0.8 !default;
+$largeRatio: 1.2 !default;
+
+// Derived Responsive Sizes */
+$miniHeaderSize: 12px !default;
+$miniMobileWidth: $mobileWidth !default;
+$miniTabletWidth: ($tabletWidth * $miniRatio) !default;
+$miniComputerWidth: ($computerWidth * $miniRatio) !default;
+$miniLargeMonitorWidth: ($largeMonitorWidth * $miniRatio) !default;
+$miniWidescreenMonitorWidth: ($widescreenMonitorWidth * $miniRatio) !default;
+
+$miniMobileMargin: 0 0 0 0 !default;
+$miniTabletMargin: 0 0 0 0 !default;
+$miniComputerMargin: 0 0 0 0 !default;
+$miniLargeMonitorMargin: 0 0 0 0 !default;
+$miniWidescreenMonitorMargin: 0 0 0 0 !default;
+
+$tinyHeaderSize: 1.3em !default;
+$tinyMobileWidth: $mobileWidth !default;
+$tinyTabletWidth: ($tabletWidth * $tinyRatio) !default;
+$tinyComputerWidth: ($computerWidth * $tinyRatio) !default;
+$tinyLargeMonitorWidth: ($largeMonitorWidth * $tinyRatio) !default;
+$tinyWidescreenMonitorWidth: ($widescreenMonitorWidth * $tinyRatio) !default;
+
+$tinyMobileMargin: 0 0 0 0 !default;
+$tinyTabletMargin: 0 0 0 0 !default;
+$tinyComputerMargin: 0 0 0 0 !default;
+$tinyLargeMonitorMargin: 0 0 0 0 !default;
+$tinyWidescreenMonitorMargin: 0 0 0 0 !default;
+
+$smallHeaderSize: 1.3em !default;
+$smallMobileWidth: $mobileWidth !default;
+$smallTabletWidth: ($tabletWidth * $smallRatio) !default;
+$smallComputerWidth: ($computerWidth * $smallRatio) !default;
+$smallLargeMonitorWidth: ($largeMonitorWidth * $smallRatio) !default;
+$smallWidescreenMonitorWidth: ($widescreenMonitorWidth * $smallRatio) !default;
+
+$smallMobileMargin: 0 0 0 0 !default;
+$smallTabletMargin: 0 0 0 0 !default;
+$smallComputerMargin: 0 0 0 0 !default;
+$smallLargeMonitorMargin: 0 0 0 0 !default;
+$smallWidescreenMonitorMargin: 0 0 0 0 !default;
+
+$largeHeaderSize: 1.6em !default;
+$largeMobileWidth: $mobileWidth !default;
+$largeTabletWidth: $tabletWidth !default;
+$largeComputerWidth: ($computerWidth * $largeRatio) !default;
+$largeLargeMonitorWidth: ($largeMonitorWidth * $largeRatio) !default;
+$largeWidescreenMonitorWidth: ($widescreenMonitorWidth * $largeRatio) !default;
+
+$largeMobileMargin: 0 0 0 0 !default;
+$largeTabletMargin: 0 0 0 0 !default;
+$largeComputerMargin: 0 0 0 0 !default;
+$largeLargeMonitorMargin: 0 0 0 0 !default;
+$largeWidescreenMonitorMargin: 0 0 0 0 !default;
+
+//------------------- Inverted -------------------*/
+$invertedBackground: rgba(0,0,0,.9) !default;
+$invertedCloseColor: $white !default;
+$invertedHeaderColor: $white !default;
+$invertedHeaderBackgroundColor: $darkTextColor !default;
+$invertedActionBackground: #191A1B !default;
+$invertedActionBorder: 1px solid rgba(34, 36, 38, 0.85) !default;
+$invertedActionColor: $white !default;
+$invertedDimmerCloseColor: rgba(0,0,0,.85) !default;

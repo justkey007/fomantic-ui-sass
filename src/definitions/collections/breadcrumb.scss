@@ -1,0 +1,100 @@
+@import "../../themes/default/collections/breadcrumb";
+
+/******************************
+           Breadcrumb
+*******************************/
+
+.ui.breadcrumb {
+  line-height: $lineHeight;
+  display: $display;
+  margin: $verticalMargin 0;
+  vertical-align: $verticalAlign;
+  font-size: $medium;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  // Loose Coupling */
+  &.segment {
+    display: inline-block;
+    padding: $segmentPadding;
+  }
+
+  .ui.breadcrumb:last-child {
+    margin-bottom: 0;
+  }
+
+  // Divider */
+  .divider {
+    display: inline-block;
+    opacity: $dividerOpacity;
+    margin: 0 $dividerSpacing 0;
+
+    font-size: $dividerSize;
+    color: $dividerColor;
+    vertical-align: $dividerVerticalAlign;
+  }
+
+  // Link */
+  a {
+    color: $linkColor;
+    &:hover {
+      color: $linkHoverColor;
+    }
+    // Section */
+    &.section {
+      cursor: pointer;
+    }
+  }
+
+  // Icon Divider */
+  .icon.divider {
+    font-size: $iconDividerSize;
+    vertical-align: $iconDividerVerticalAlign;
+  }
+
+  .section {
+    display: inline-block;
+    margin: $sectionMargin;
+    padding: $sectionPadding;
+    &.active {
+      font-weight: $activeFontWeight;
+    }
+  }
+
+  // Inverted */
+  &.inverted {
+    color: $invertedColor;
+    & > .active.section {
+      color: $invertedActiveColor;
+    }
+    & > .divider {
+      color: $invertedDividerColor;
+    }
+  }
+
+  //****************************** Variations *******************************/
+  &.mini {
+    font-size: $mini;
+  }
+  &.tiny {
+    font-size: $tiny;
+  }
+  &.small {
+    font-size: $small;
+  }
+
+  &.large {
+    font-size: $large;
+  }
+  &.big {
+    font-size: $big;
+  }
+  &.huge {
+    font-size: $huge;
+  }
+  &.massive {
+    font-size: $massive;
+  }
+}

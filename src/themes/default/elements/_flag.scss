@@ -1,0 +1,9 @@
+//****************************** Flag *******************************/
+@import '../globals/site';
+
+//------------------- Element --------------------*/
+$spritePath: "#{$imagePath}/flags.png" !default;
+$width: 16px !default;
+$height: 11px !default;
+$verticalAlign: baseline !default;
+$margin: 0.5em !default;

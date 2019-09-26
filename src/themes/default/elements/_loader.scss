@@ -1,0 +1,56 @@
+//****************************** Loader *******************************/
+@import '../globals/site';
+
+//------------------ Standard --------------------*/
+
+$loaderTopOffset: 50% !default;
+$loaderLeftOffset: 50% !default;
+
+$shapeBorderColor: $loaderLineColor !default;
+$invertedShapeBorderColor: $invertedLoaderLineColor !default;
+
+//------------------  Types --------------------*/
+
+// Text */
+$textDistance: $relativeMini !default;
+$loaderTextColor: $textColor !default;
+$invertedLoaderTextColor: $invertedTextColor !default;
+
+
+//-------------------  States --------------------*/
+
+$indeterminateDirection: reverse !default;
+$indeterminateSpeed: (2 * $loaderSpeed) !default;
+
+//------------------- Variations -------------------*/
+
+$inlineVerticalAlign: middle !default;
+$inlineMargin: 0 !default;
+
+// Exact Sizes (Avoids Rounding Errors) */
+$mini    : $_14px !default;
+$tiny    : $_16px !default;
+$small   : $_24px !default;
+$medium  : $_32px !default;
+$large   : $_48px !default;
+$big     : $_52px !default;
+$huge    : $_58px !default;
+$massive : $_64px !default;
+
+$miniOffset: 0 0 0 -($mini / 2) !default;
+$tinyOffset: 0 0 0 -($tiny / 2) !default;
+$smallOffset: 0 0 0 -($small / 2) !default;
+$mediumOffset: 0 0 0 -($medium / 2) !default;
+$largeOffset: 0 0 0 -($large / 2) !default;
+$bigOffset: 0 0 0 -($big / 2) !default;
+$hugeOffset: 0 0 0 -($huge / 2) !default;
+$massiveOffset: 0 0 0 -($massive / 2) !default;
+
+$tinyFontSize: $relativeTiny !default;
+$miniFontSize: $relativeMini !default;
+$smallFontSize: $relativeSmall !default;
+$mediumFontSize: $relativeMedium !default;
+$largeFontSize: $relativeLarge !default;
+$bigFontSize: $relativeBig !default;
+$hugeFontSize: $relativeHuge !default;
+$massiveFontSize: $relativeMassive !default;

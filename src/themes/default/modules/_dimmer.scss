@@ -1,0 +1,61 @@
+//****************************** Dimmer *******************************/
+@import '../globals/site';
+
+$dimmablePosition: relative !default;
+$dimmerPosition: absolute !default;
+
+$backgroundColor: rgba(0, 0, 0 , 0.85) !default;
+$lineHeight: 1 !default;
+$perspective: 2000px !default;
+$padding: 1em !default;
+
+$duration: 0.5s !default;
+$transition:
+  background-color $duration linear
+ !default;
+$zIndex: 1000 !default;
+$textAlign: center !default;
+$verticalAlign: middle !default;
+$textColor: $white !default;
+$overflow: hidden !default;
+
+$blurredStartFilter: initial !default;
+$blurredEndFilter: e("blur(5px) grayscale(0.7)") !default;
+$blurredTransition: 800ms filter $defaultEasing !default;
+
+$blurredBackgroundColor: rgba(0, 0, 0, 0.6) !default;
+$blurredInvertedBackgroundColor: rgba(255, 255, 255, 0.6) !default;
+
+// Hidden (Default) */
+$hiddenOpacity: 0 !default;
+
+// Visible */
+$visibleOpacity: 1 !default;
+
+//------------------- Types --------------------*/
+
+// Page Dimmer*/
+$transformStyle: '' !default;
+$pageDimmerPosition: fixed !default;
+
+
+//------------------- Variations --------------------*/
+
+// Inverted */
+$invertedBackgroundColor: rgba(255, 255, 255, 0.85) !default;
+$invertedTextColor: $fullBlack !default;
+
+// Simple */
+$simpleZIndex: 1 !default;
+$simpleStartBackgroundColor: rgba(0, 0, 0, 0) !default;
+$simpleEndBackgroundColor: $backgroundColor !default;
+$simpleInvertedStartBackgroundColor: rgba(255, 255, 255, 0) !default;
+$simpleInvertedEndBackgroundColor: $invertedBackgroundColor !default;
+
+// Intensity */
+$veryLightBackgroundColor: rgba(0,0,0,.25) !default;
+$lightBackgroundColor: rgba(0,0,0,.45) !default;
+$mediumBackgroundColor: rgba(0,0,0,.65) !default;
+$veryLightInvertedBackgroundColor: rgba(255,255,255,.25) !default;
+$lightInvertedBackgroundColor: rgba(255,255,255,.45) !default;
+$mediumInvertedBackgroundColor: rgba(255,255,255,.65) !default;

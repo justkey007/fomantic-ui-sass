@@ -1,0 +1,11 @@
+@import '../../../../functions/all';
+@import './main';
+
+$miniSize        : (11 / strip-unit($emSize)) !default;
+$tinySize        : (12 / strip-unit($emSize)) !default;
+$smallSize       : (13 / strip-unit($emSize)) !default;
+$mediumSize      : (14 / strip-unit($emSize)) !default;
+$largeSize       : (16 / strip-unit($emSize)) !default;
+$bigSize         : (18 / strip-unit($emSize)) !default;
+$hugeSize        : (20 / strip-unit($emSize)) !default;
+$massiveSize     : (24 / strip-unit($emSize)) !default;

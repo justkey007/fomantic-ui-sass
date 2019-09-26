@@ -1,0 +1,21 @@
+@import './main';
+
+// Positive or success */
+$positiveColor           : $green !default;
+$positiveBackgroundColor : #FCFFF5 !default;
+$successBackgroundColor : $positiveBackgroundColor !default;
+$successColor           : $positiveColor !default;
+
+// Negative or error*/
+$negativeColor           : $red !default;
+$negativeBackgroundColor : #FFF6F6 !default;
+$errorBackgroundColor    : $negativeBackgroundColor !default;
+$errorColor              : $negativeColor !default;
+
+// Info */
+$infoColor              : #31CCEC !default;
+$infoBackgroundColor    : #F8FFFF !default;
+
+// Warning */
+$warningColor           : #F2C037 !default;
+$warningBackgroundColor : #FFFAF3 !default;

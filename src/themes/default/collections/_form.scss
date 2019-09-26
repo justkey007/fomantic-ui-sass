@@ -1,0 +1,189 @@
+//****************************** Form *******************************
+@import '../globals/site';
+
+// Form */
+$gutterWidth: 1em !default;
+$rowDistance: 1em !default;
+
+// Text */
+$paragraphMargin: $rowDistance 0 !default;
+
+// Field */
+$fieldMargin: 0 0 $rowDistance !default;
+
+// Fields */
+$fieldsMargin: 0 -($gutterWidth / 2) $rowDistance !default;
+
+// Form Label */
+$labelDistance: $_4px !default;
+$labelMargin: 0 0 $labelDistance 0 !default;
+$labelFontSize: $relativeSmall !default;
+$labelFontWeight: $bold !default;
+$labelTextTransform: none !default;
+$labelColor: $textColor !default;
+
+// Input */
+$inputFont: $pageFont !default;
+$inputWidth: 100% !default;
+$inputFontSize: 1em !default;
+$inputPadding: ($inputVerticalPadding + ((1em - $inputLineHeight) / 2)) $inputHorizontalPadding !default;
+$inputBorder: 1px solid $borderColor !default;
+$inputBorderRadius: $absoluteBorderRadius !default;
+$inputColor: $textColor !default;
+$inputTransition:
+  color $defaultDuration $defaultEasing,
+  border-color $defaultDuration $defaultEasing
+ !default;
+$inputBoxShadow: 0 0 0 0 transparent inset !default;
+
+// Select */
+$selectBackground: $white !default;
+$selectBorderRadius: $inputBorderRadius !default;
+$selectBorder: $inputBorder !default;
+$selectPadding: 0.62em $inputHorizontalPadding !default;
+$selectBoxShadow: $inputBoxShadow !default;
+$selectTransition: $inputTransition !default;
+$selectColor: $inputColor !default;
+
+// Text Area */
+$textAreaPadding: $inputVerticalPadding $inputHorizontalPadding !default;
+$textAreaHeight: 12em !default;
+$textAreaResize: vertical !default;
+$textAreaLineHeight: 1.2857 !default;
+$textAreaMinHeight: 8em !default;
+$textAreaMaxHeight: 24em !default;
+$textAreaBackground: $inputBackground !default;
+$textAreaBorder: $inputBorder !default;
+$textAreaFontSize: $inputFontSize !default;
+$textAreaTransition: $inputTransition !default;
+
+// Checkbox */
+$checkboxVerticalAlign: top !default;
+$checkboxLabelFontSize: 1em !default;
+$checkboxLabelTextTransform: $labelTextTransform !default;
+$checkboxFieldTopMargin: 1.2em !default;
+$checkboxToggleFieldTopMargin: 1em !default;
+$checkboxSliderFieldTopMargin: 1.4em !default;
+
+// Errored Input */
+$formErrorColor: $negativeTextColor !default;
+$formErrorBorder: $negativeBorderColor !default;
+$formErrorBackground: $negativeBackgroundColor !default;
+$transparentFormErrorColor: $formErrorColor !default;
+$transparentFormErrorBackground: $formErrorBackground !default;
+$transparentPadding: $inputPadding !default;
+
+// Inline Validation Prompt */
+$promptBackground: $white !default;
+$promptBorderColor: $formErrorBorder !default;
+$promptBorder: 1px solid $promptBorderColor !default;
+$promptTextColor: $formErrorColor !default;
+$inlinePromptMargin: -0.25em 0 -0.5em 0.5em !default;
+$inlinePromptBorderWidth: 1px !default;
+
+//------------------ States --------------------*/
+
+// Focus */
+$inputFocusPointerSize: 0 !default;
+
+// Input Focus */
+$inputFocusBackground: $inputBackground !default;
+$inputFocusBorderColor: $focusedFormBorderColor !default;
+$inputFocusColor: $selectedTextColor !default;
+$inputFocusBoxShadow: $inputFocusPointerSize 0 0 0 $selectedBorderColor inset !default;
+$inputFocusBorderRadius: $inputBorderRadius !default;
+
+// Text Area Focus */
+$textAreaFocusBackground: $inputFocusBackground !default;
+$textAreaFocusBorderColor: $inputFocusBorderColor !default;
+$textAreaFocusColor: $inputFocusColor !default;
+$textAreaFocusBoxShadow: $inputFocusBoxShadow !default;
+$textAreaFocusBorderRadius: $inputFocusBorderRadius !default;
+
+// Disabled */
+$disabledLabelOpacity: $disabledOpacity !default;
+
+// AutoFill */
+$inputAutoFillBackground: #FFFFF0 !default;
+$inputAutoFillBorder: #E5DFA1 !default;
+$inputAutoFillFocusBackground: $inputAutoFillBackground !default;
+$inputAutoFillFocusBorder: #D5C315 !default;
+$inputAutoFillErrorBackground: #FFFAF0 !default;
+$inputAutoFillErrorBorder: #E0B4B4 !default;
+
+
+// Input Error */
+$inputErrorBorderRadius: '' !default;
+$inputErrorBoxShadow: none !default;
+
+// Dropdown Error */
+$dropdownErrorHoverBackground: #FBE7E7 !default;
+$dropdownErrorSelectedBackground: $dropdownErrorHoverBackground !default;
+$dropdownErrorActiveBackground: #FDCFCF !default;
+$dropdownErrorLabelBackground: #EACBCB !default;
+$dropdownErrorLabelColor: $errorTextColor !default;
+
+// Focused Error */
+$inputErrorFocusBackground: $negativeBackgroundColor !default;
+$inputErrorFocusColor: $negativeTextColor !default;
+$inputErrorFocusBorder: $negativeBorderColor !default;
+$inputErrorFocusBoxShadow: none !default;
+
+// Placeholder Error */
+$inputErrorPlaceholderColor: lighten($formErrorColor, 40) !default;
+$inputErrorPlaceholderFocusColor: lighten($formErrorColor, 30) !default;
+
+// Loading Dimmer */
+$loaderDimmerColor: rgba(255, 255, 255, 0.8) !default;
+$loaderInvertedDimmerColor: rgba(0, 0, 0 , 0.85) !default;
+$loaderDimmerZIndex: 100 !default;
+
+// Loading Spinner */
+$loaderSize: 3em !default;
+$loaderLineZIndex: 101 !default;
+
+//------------------ Types --------------------*/
+
+// Required */
+$requiredContent: '*' !default;
+$requiredColor: $negativeColor !default;
+$requiredVerticalOffset: -0.2em !default;
+$requiredDistance: 0.2em !default;
+$requiredMargin: $requiredVerticalOffset 0 0 $requiredDistance !default;
+
+// Inverted */
+$invertedInputBackground: $inputBackground !default;
+$invertedInputBorderColor: $whiteBorderColor !default;
+$invertedInputBoxShadow: $inputBoxShadow !default;
+$invertedInputColor: $inputColor !default;
+$invertedLabelColor: $invertedTextColor !default;
+$invertedInputBoxShadow: none !default;
+
+//------------------- Variations --------------------*/
+
+// Grouped Fields */
+$groupedMargin: $fieldMargin !default;
+$groupedFieldMargin: 0.5em 0 !default;
+
+$groupedLabelDistance: $labelDistance !default;
+$groupedLabelColor: $labelColor !default;
+$groupedLabelMargin: $labelMargin !default;
+$groupedLabelFontSize: $labelFontSize !default;
+$groupedLabelFontWeight: $labelFontWeight !default;
+$groupedLabelTextTransform: $labelTextTransform !default;
+
+
+// Inline */
+$inlineInputSize: $relativeMedium !default;
+
+$inlineLabelDistance: $relativeTiny !default;
+$inlineLabelColor: $labelColor !default;
+$inlineLabelFontSize: $labelFontSize !default;
+$inlineLabelFontWeight: $labelFontWeight !default;
+$inlineLabelTextTransform: $labelTextTransform !default;
+
+$groupedInlineLabelMargin: 0.035714em 1em 0 0 !default;
+
+//------------------ Groups --------------------*/
+
+$inlineFieldsMargin: 0 1em 0 0 !default;

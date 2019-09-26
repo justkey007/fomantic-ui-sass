@@ -1,0 +1,60 @@
+@import '../colors/all';
+
+$primaryColorHover        : saturate(darken($primaryColor, 5), 10) !default;
+$secondaryColorHover      : saturate(lighten($secondaryColor, 5), 10) !default;
+$lightPrimaryColorHover   : saturate(darken($lightPrimaryColor, 10), 10) !default;
+$lightSecondaryColorHover : saturate(lighten($lightSecondaryColor, 10), 10) !default;
+
+$redHover                 : saturate(darken($red, 5), 10) !default;
+$orangeHover              : saturate(darken($orange, 5), 10) !default;
+$yellowHover              : saturate(darken($yellow, 5), 10) !default;
+$oliveHover               : saturate(darken($olive, 5), 10) !default;
+$greenHover               : saturate(darken($green, 5), 10) !default;
+$tealHover                : saturate(darken($teal, 5), 10) !default;
+$blueHover                : saturate(darken($blue, 5), 10) !default;
+$violetHover              : saturate(darken($violet, 5), 10) !default;
+$purpleHover              : saturate(darken($purple, 5), 10) !default;
+$pinkHover                : saturate(darken($pink, 5), 10) !default;
+$brownHover               : saturate(darken($brown, 5), 10) !default;
+$greyHover                : saturate(darken($grey, 5), 10) !default;
+$blackHover               : saturate(darken($black, 5), 10) !default;
+
+$lightRedHover            : saturate(darken($lightRed, 10), 10) !default;
+$lightOrangeHover         : saturate(darken($lightOrange, 10), 10) !default;
+$lightYellowHover         : saturate(darken($lightYellow, 10), 10) !default;
+$lightOliveHover          : saturate(darken($lightOlive, 10), 10) !default;
+$lightGreenHover          : saturate(darken($lightGreen, 10), 10) !default;
+$lightTealHover           : saturate(darken($lightTeal, 10), 10) !default;
+$lightBlueHover           : saturate(darken($lightBlue, 10), 10) !default;
+$lightVioletHover         : saturate(darken($lightViolet, 10), 10) !default;
+$lightPurpleHover         : saturate(darken($lightPurple, 10), 10) !default;
+$lightPinkHover           : saturate(darken($lightPink, 10), 10) !default;
+$lightBrownHover          : saturate(darken($lightBrown, 10), 10) !default;
+$lightGreyHover           : saturate(darken($lightGrey, 10), 10) !default;
+$lightBlackHover          : saturate(darken($fullBlack, 10), 10) !default;
+
+//---  Emotive  ---*/
+$positiveColorHover       : saturate(darken($positiveColor, 5), 10) !default;
+$negativeColorHover       : saturate(darken($negativeColor, 5), 10) !default;
+
+//---  Brand   ---*/
+$facebookHoverColor       : saturate(darken($facebookColor, 5), 10) !default;
+$twitterHoverColor        : saturate(darken($twitterColor, 5), 10) !default;
+$googlePlusHoverColor     : saturate(darken($googlePlusColor, 5), 10) !default;
+$linkedInHoverColor       : saturate(darken($linkedInColor, 5), 10) !default;
+$youtubeHoverColor        : saturate(darken($youtubeColor, 5), 10) !default;
+$instagramHoverColor      : saturate(darken($instagramColor, 5), 10) !default;
+$pinterestHoverColor      : saturate(darken($pinterestColor, 5), 10) !default;
+$vkHoverColor             : saturate(darken($vkColor, 5), 10) !default;
+$telegramHoverColor       : saturate(darken($telegramColor, 5), 10) !default;
+$whatsAppHoverColor       : saturate(darken($whatsAppColor, 5), 10) !default;
+
+//---  Dark Tones  ---*/
+$fullBlackHover           : lighten($fullBlack, 5) !default;
+$blackHover               : lighten($black, 5) !default;
+$greyHover                : lighten($grey, 5) !default;
+
+//---  Light Tones  ---*/
+$whiteHover               : darken($white, 5) !default;
+$offWhiteHover            : darken($offWhite, 5) !default;
+$darkWhiteHover           : darken($darkWhite, 5) !default;

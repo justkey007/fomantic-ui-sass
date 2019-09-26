@@ -1,0 +1,56 @@
+$primaryColorActive        : saturate(darken($primaryColor, 5), 15) !default;
+$secondaryColorActive      : saturate(lighten($secondaryColor, 5), 15) !default;
+$lightPrimaryColorActive   : saturate(darken($lightPrimaryColor, 5), 15) !default;
+$lightSecondaryColorActive : saturate(lighten($lightSecondaryColor, 5), 15) !default;
+
+$redActive                 : saturate(darken($red, 5), 15) !default;
+$orangeActive              : saturate(darken($orange, 5), 15) !default;
+$yellowActive              : saturate(darken($yellow, 5), 15) !default;
+$oliveActive               : saturate(darken($olive, 5), 15) !default;
+$greenActive               : saturate(darken($green, 5), 15) !default;
+$tealActive                : saturate(darken($teal, 5), 15) !default;
+$blueActive                : saturate(darken($blue, 5), 15) !default;
+$violetActive              : saturate(darken($violet, 5), 15) !default;
+$purpleActive              : saturate(darken($purple, 5), 15) !default;
+$pinkActive                : saturate(darken($pink, 5), 15) !default;
+$brownActive               : saturate(darken($brown, 5), 15) !default;
+
+$lightRedActive            : saturate(darken($lightRed, 5), 15) !default;
+$lightOrangeActive         : saturate(darken($lightOrange, 5), 15) !default;
+$lightYellowActive         : saturate(darken($lightYellow, 5), 15) !default;
+$lightOliveActive          : saturate(darken($lightOlive, 5), 15) !default;
+$lightGreenActive          : saturate(darken($lightGreen, 5), 15) !default;
+$lightTealActive           : saturate(darken($lightTeal, 5), 15) !default;
+$lightBlueActive           : saturate(darken($lightBlue, 5), 15) !default;
+$lightVioletActive         : saturate(darken($lightViolet, 5), 15) !default;
+$lightPurpleActive         : saturate(darken($lightPurple, 5), 15) !default;
+$lightPinkActive           : saturate(darken($lightPink, 5), 15) !default;
+$lightBrownActive          : saturate(darken($lightBrown, 5), 15) !default;
+$lightGreyActive           : saturate(darken($lightGrey, 5), 15) !default;
+$lightBlackActive          : saturate(darken($fullBlack, 5), 15) !default;
+
+//---  Emotive  ---*/
+$positiveColorActive       : saturate(darken($positiveColor, 5), 15) !default;
+$negativeColorActive       : saturate(darken($negativeColor, 5), 15) !default;
+
+//---  Brand   ---*/
+$facebookActiveColor       : saturate(darken($facebookColor, 5), 15) !default;
+$twitterActiveColor        : saturate(darken($twitterColor, 5), 15) !default;
+$googlePlusActiveColor     : saturate(darken($googlePlusColor, 5), 15) !default;
+$linkedInActiveColor       : saturate(darken($linkedInColor, 5), 15) !default;
+$youtubeActiveColor        : saturate(darken($youtubeColor, 5), 15) !default;
+$instagramActiveColor      : saturate(darken($instagramColor, 5), 15) !default;
+$pinterestActiveColor      : saturate(darken($pinterestColor, 5), 15) !default;
+$vkActiveColor             : saturate(darken($vkColor, 5), 15) !default;
+$telegramActiveColor       : saturate(darken($telegramColor, 5), 15) !default;
+$whatsAppActiveColor       : saturate(darken($whatsAppColor, 5), 15) !default;
+
+//---  Dark Tones  ---*/
+$fullBlackActive           : darken($fullBlack, 5) !default;
+$blackActive               : darken($black, 5) !default;
+$greyActive                : darken($grey, 5) !default;
+
+//---  Light Tones  ---*/
+$whiteActive               : darken($white, 5) !default;
+$offWhiteActive            : darken($offWhite, 5) !default;
+$darkWhiteActive           : darken($darkWhite, 5) !default;

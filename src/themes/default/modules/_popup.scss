@@ -1,0 +1,124 @@
+//****************************** Popup *******************************/
+@import '../globals/site';
+
+//------------------ Element --------------------*/
+
+$zIndex: 1900 !default;
+$background: $white !default;
+
+$maxWidth: 250px !default;
+$borderColor: $solidBorderColor !default;
+$borderWidth: 1px !default;
+$boxShadow: $floatingShadow !default;
+$color: $textColor !default;
+
+$verticalPadding: 0.833em !default;
+$horizontalPadding: 1em !default;
+$fontWeight: $normal !default;
+$fontStyle: $normal !default;
+$borderRadius: $defaultBorderRadius !default;
+
+//------------------- Parts --------------------*/
+
+// Placement */
+$arrowSize: $relative10px !default;
+$arrowWidth: 1em !default;
+$arrowDistanceFromEdge: 1em !default;
+$boxArrowOffset: 0 !default;
+$popupDistanceAway: $arrowSize !default;
+
+
+// Header */
+$headerFontFamily: $headerFont !default;
+$headerFontWeight: $bold !default;
+$headerFontSize: $relativeLarge !default;
+$headerDistance: $relative7px !default;
+$headerLineHeight: 1.2 !default;
+
+// Content Border */
+$border: $borderWidth solid $borderColor !default;
+
+// Arrow */
+$arrowBackground: $background !default;
+$arrowZIndex: 1901 !default;
+$arrowJitter: 0.05em !default;
+$arrowOffset: -($arrowSize / 2) + $arrowJitter !default;
+
+$arrowStroke: $borderWidth !default;
+$arrowColor: darken($borderColor, 10) !default;
+
+// Arrow color by position */
+$arrowTopBackground: $arrowBackground !default;
+$arrowCenterBackground: $arrowBackground !default;
+$arrowBottomBackground: $arrowBackground !default;
+
+$arrowBoxShadow: $arrowStroke $arrowStroke 0 0 $arrowColor !default;
+$leftArrowBoxShadow: $arrowStroke -$arrowStroke 0 0 $arrowColor !default;
+$rightArrowBoxShadow: -$arrowStroke $arrowStroke 0 0 $arrowColor !default;
+$bottomArrowBoxShadow: -$arrowStroke -$arrowStroke 0 0 $arrowColor !default;
+
+//------------------- Types --------------------*/
+
+// Tooltip */
+$tooltipBackground: $background !default;
+$tooltipBorderRadius: $borderRadius !default;
+$tooltipPadding: $verticalPadding $horizontalPadding !default;
+$tooltipFontWeight: $fontWeight !default;
+$tooltipFontStyle: $fontStyle !default;
+$tooltipColor: $color !default;
+$tooltipBorder: $border !default;
+$tooltipBoxShadow: $boxShadow !default;
+$tooltipMaxWidth: none !default;
+$tooltipFontSize: $medium !default;
+$tooltipLineHeight: $lineHeight !default;
+$tooltipDistanceAway: $relative7px !default;
+$tooltipZIndex: 1900 !default;
+$tooltipDuration: $defaultDuration !default;
+$tooltipEasing: $defaultEasing !default;
+
+// Arrow */
+$tooltipArrowVerticalOffset: -$_2px !default;
+$tooltipArrowHorizontalOffset: -$_1px !default;
+$tooltipArrowBoxShadow: $arrowBoxShadow !default;
+$tooltipArrowBackground: $arrowBackground !default;
+$tooltipArrowTopBackground: $arrowTopBackground !default;
+$tooltipArrowCenterBackground: $arrowCenterBackground !default;
+$tooltipArrowBottomBackground: $arrowBottomBackground !default;
+
+//-------------------  Coupling -------------------*/
+
+// Grid Inside Popup */
+$nestedGridMargin: -0.7rem -0.875rem !default; // (padding * $medium) */
+$nestedGridWidth: calc(100% + 1.75rem) !default;
+
+//------------------- States --------------------*/
+
+$loadingZIndex: -1 !default;
+
+//------------------- Variations --------------------*/
+
+// Wide */
+$wideWidth: 350px !default;
+$veryWideWidth: 550px !default;
+
+// Inverted */
+$invertedBackground: $black !default;
+$invertedColor: $white !default;
+$invertedBorder: none !default;
+$invertedBoxShadow: none !default;
+
+$invertedHeaderBackground: none !default;
+$invertedHeaderColor: $white !default;
+$invertedArrowColor: $invertedBackground !default;
+
+// Arrow color by position */
+$invertedArrowTopBackground: $invertedBackground !default;
+$invertedArrowCenterBackground: $invertedBackground !default;
+$invertedArrowBottomBackground: $invertedBackground !default;
+
+$tooltipInvertedBackground: $invertedBackground !default;
+$tooltipInvertedColor: $invertedColor !default;
+$tooltipInvertedBorder: $invertedBorder !default;
+$tooltipInvertedBoxShadow: $invertedBoxShadow !default;
+$tooltipInvertedHeaderBackground: $invertedHeaderBackground !default;
+$tooltipInvertedHeaderColor: $invertedHeaderColor !default;

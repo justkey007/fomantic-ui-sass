@@ -1,0 +1,343 @@
+@import '../../themes/default/collections/message';
+
+/*******************************
+            Message
+*******************************/
+
+.ui.message {
+  position: relative;
+  min-height: 1em;
+  margin: $verticalMargin 0;
+  background: $background;
+  padding: $padding;
+  line-height: $lineHeight;
+  color: $textColor;
+  transition: $transition;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+}
+
+.ui.message:first-child {
+  margin-top: 0;
+}
+.ui.message:last-child {
+  margin-bottom: 0;
+}
+
+
+/*--------------
+     Content
+---------------*/
+
+/* Header */
+.ui.message .header {
+  display: $headerDisplay;
+  font-family: $headerFont;
+  font-weight: $headerFontWeight;
+  margin: $headerMargin;
+}
+
+/* Default font size */
+.ui.message .header:not(.ui) {
+  font-size: $headerFontSize;
+}
+
+/* Paragraph */
+.ui.message p {
+  opacity: $messageTextOpacity;
+  margin: $messageParagraphMargin 0;
+}
+.ui.message p:first-child {
+  margin-top: 0;
+}
+.ui.message p:last-child {
+  margin-bottom: 0;
+}
+.ui.message .header + p {
+  margin-top: $headerParagraphDistance;
+}
+
+/* List */
+.ui.message .list:not(.ui) {
+  text-align: left;
+  padding: 0;
+  opacity: $listOpacity;
+  list-style-position: $listStylePosition;
+  margin: $listMargin 0 0;
+}
+.ui.message .list:not(.ui):first-child {
+  margin-top: 0;
+}
+.ui.message .list:not(.ui):last-child {
+  margin-bottom: 0;
+}
+.ui.message .list:not(.ui) li {
+  position: relative;
+  list-style-type: none;
+  margin: 0 0 $listItemMargin $listItemIndent;
+  padding: 0;
+}
+.ui.message .list:not(.ui) li:before {
+  position: absolute;
+  content: '•';
+  left: -1em;
+  height: 100%;
+  vertical-align: baseline;
+}
+.ui.message .list:not(.ui) li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Icon */
+.ui.message > .icon {
+  margin-right: $iconDistance;
+}
+
+/* Close Icon */
+.ui.message > .close.icon {
+  cursor: pointer;
+  position: absolute;
+  margin: 0;
+  top: $closeTopDistance;
+  right: $closeRightDistance;
+  opacity: $closeOpacity;
+  transition: $closeTransition;
+}
+.ui.message > .close.icon:hover {
+  opacity: 1;
+}
+
+/* First / Last Element */
+.ui.message > :first-child {
+  margin-top: 0;
+}
+.ui.message > :last-child {
+  margin-bottom: 0;
+}
+
+/*******************************
+            Coupling
+*******************************/
+
+.ui.dropdown .menu > .message {
+  margin: 0 -$borderWidth;
+}
+
+/*******************************
+            States
+*******************************/
+
+/*--------------
+    Visible
+---------------*/
+
+.ui.visible.visible.visible.visible.message {
+  display: block;
+}
+
+.ui.icon.visible.visible.visible.visible.message {
+  display: flex;
+}
+
+/*--------------
+     Hidden
+---------------*/
+
+.ui.hidden.hidden.hidden.hidden.message {
+  display: none;
+}
+
+
+/*******************************
+            Variations
+*******************************/
+
+/*--------------
+    Compact
+---------------*/
+
+.ui.compact.message {
+  display: inline-block;
+}
+.ui.compact.icon.message {
+  display: inline-flex;
+  width: auto;
+}
+
+
+/*--------------
+    Attached
+---------------*/
+
+.ui.attached.message {
+  margin-bottom: $attachedYOffset;
+  border-radius: $borderRadius $borderRadius 0 0;
+  box-shadow: $attachedBoxShadow;
+  margin-left: $attachedXOffset;
+  margin-right: $attachedXOffset;
+}
+.ui.attached + .ui.attached.message:not(.top):not(.bottom) {
+  margin-top: $attachedYOffset;
+  border-radius: 0;
+}
+.ui.bottom.attached.message {
+  margin-top: $attachedYOffset;
+  border-radius: 0 0 $borderRadius $borderRadius;
+  box-shadow: $attachedBottomBoxShadow;
+}
+.ui.bottom.attached.message:not(:last-child) {
+  margin-bottom: $verticalMargin;
+}
+.ui.attached.icon.message {
+  width: auto;
+}
+
+
+/*--------------
+      Icon
+---------------*/
+
+.ui.icon.message {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.ui.icon.message > .icon:not(.close) {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  line-height: 1;
+  // vertical-align: $iconVerticalAlign;
+  font-size: $iconSize;
+  opacity: $iconOpacity;
+}
+.ui.icon.message > .content {
+  display: block;
+  flex: 1 1 auto;
+  // vertical-align: $iconVerticalAlign;
+}
+
+
+.ui.icon.message .icon:not(.close) + .content {
+  padding-left: $iconContentDistance;
+}
+.ui.icon.message .circular.icon {
+  width: 1em;
+}
+
+/*--------------
+    Floating
+---------------*/
+
+.ui.floating.message {
+  box-shadow: $floatingBoxShadow;
+}
+
+
+/*--------------
+     Colors
+---------------*/
+
+@each $key, $value in $consequences {
+  $bg: map-get($value, "background");
+  $hd: map-get($value, "header");
+  $bs: map-get($value, "boxShadow");
+  $bfs: map-get($value, "boxFloatShadow");
+  $t: map-get($value, "text");
+
+  .ui.#{$key + ""}.message {
+    background-color: $bg;
+    color: $t;
+  }
+
+  .ui.#{$key + ""}.message,
+  .ui.attached.#{$key + ""}.message {
+    box-shadow: $bs;
+  }
+
+  .ui.floating.#{$key + ""}.message {
+      box-shadow: $bfs;
+  }
+
+  .ui.#{$key + ""}.message .header {
+    color: $hd;
+  }
+}
+
+@each $key, $value in $consequences {
+  $bg: map-get($value, "background");
+  $hd: map-get($value, "header");
+  $bs: map-get($value, "boxShadow");
+  $bfs: map-get($value, "boxFloatShadow");
+  $t: map-get($value, "text");
+  $isVeryDark: map-get($value, "isVeryDark");
+
+  .ui.#{$key + ""}.message {
+    @if not ($isVeryDark) {
+      background-color: $bg;
+      color: $t;
+    }
+    @if ($isVeryDark) {
+      background-color: $black;
+      color: $invertedTextColor;
+    }
+  }
+
+  .ui.#{$key + ""}.message,
+  .ui.attached.#{$key + ""}.message {
+    @if not ($isVeryDark) {
+      box-shadow: $bs;
+    }
+  }
+
+  .ui.floating.#{$key + ""}.message {
+    @if not ($isVeryDark) {
+      box-shadow: $bfs;
+    }
+  }
+
+  .ui.#{$key + ""}.message .header {
+    @if not ($isVeryDark) {
+      color: $hd;
+    }
+    @if ($isVeryDark) {
+      color: $invertedTextColor;
+    }
+  }
+}
+
+
+.ui.inverted.message {
+  background-color: $black;
+  color: $invertedTextColor;
+}
+
+/*--------------
+     Sizes
+---------------*/
+
+.ui.mini.message {
+  font-size: $relativeMini;
+}
+.ui.tiny.message {
+  font-size: $relativeTiny;
+}
+.ui.small.message {
+  font-size: $relativeSmall;
+}
+.ui.message {
+  font-size: $relativeMedium;
+}
+.ui.large.message {
+  font-size: $relativeLarge;
+}
+.ui.big.message {
+  font-size: $relativeBig;
+}
+.ui.huge.message {
+  font-size: $relativeHuge;
+}
+.ui.massive.message {
+  font-size: $relativeMassive;
+}

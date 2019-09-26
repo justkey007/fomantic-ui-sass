@@ -1,0 +1,219 @@
+//****************************** List *******************************/
+@import '../globals/site';
+//------------------- View --------------------*/
+
+// List */
+$listStyleType: none !default;
+$listStylePosition: outside !default;
+$margin: 1em 0 !default;
+$verticalPadding: 0 !default;
+$horizontalPadding: 0 !default;
+
+// List Item */
+$itemVerticalPadding: $relative3px !default;
+$itemHorizontalPadding: 0 !default;
+$itemPadding: $itemVerticalPadding $itemHorizontalPadding !default;
+$itemLineHeight: $relativeLarge !default;
+
+// Sub List */
+$childListPadding: 0.75em 0 0.25em 0.5em !default;
+$childListIndent: 1em !default;
+
+// Sub List Item */
+$childItemVerticalPadding: $relative2px !default;
+$childItemHorizontalPadding: 0 !default;
+$childItemPadding: $childItemVerticalPadding $childItemHorizontalPadding !default;
+$childItemLineHeight: inherit !default;
+
+//-------------------  Elements --------------------*/
+
+// Icon */
+$iconDistance: $relative4px !default;
+$iconOffset: 0 !default;
+$iconTransition: color $defaultDuration $defaultEasing !default;
+$iconVerticalAlign: top !default;
+$iconContentVerticalAlign: top !default;
+
+// Image */
+$imageDistance: 0.5em !default;
+$imageAlign: top !default;
+
+// Content */
+$contentDistance: 0.5em !default;
+$contentLineHeight: $itemLineHeight !default;
+$contentLineHeightOffset: ($contentLineHeight - 1em) / 2 !default;
+$contentVerticalAlign: top !default;
+$contentColor: $textColor !default;
+
+// Header */
+$itemHeaderFontFamily: $headerFont !default;
+$itemHeaderFontWeight: $bold !default;
+$itemHeaderColor: $textColor !default;
+
+// Description */
+$itemDescriptionColor: rgba(0, 0, 0, 0.7) !default;
+
+// Link */
+$itemLinkColor: $linkColor !default;
+$itemLinkHoverColor: $linkHoverColor !default;
+
+// Header Link */
+$itemHeaderLinkColor: $itemLinkColor !default;
+$itemHeaderLinkHoverColor: $itemLinkHoverColor !default;
+
+// Linked Icon */
+$itemLinkIconColor: $lightTextColor !default;
+$itemLinkIconHoverColor: $textColor !default;
+$invertedIconLinkColor: $invertedLightTextColor !default;
+
+//------------------- States --------------------*/
+
+$disabledColor: $disabledTextColor !default;
+$invertedDisabledColor: $invertedDisabledTextColor !default;
+
+//-------------------  Variations --------------------*/
+
+// Float */
+$floatDistance: 1em !default;
+$leftFloatMargin: 0 $floatDistance 0 0 !default;
+$rightFloatMargin: 0 0 0 $floatDistance !default;
+
+// Horizontal */
+$horizontalSpacing: 1em !default;
+$horizontalIconDistance: 0.25em !default;
+$horizontalVerticalAlign: middle !default;
+
+// Inverted */
+$invertedListIconColor: $invertedLightTextColor !default;
+$invertedHeaderColor: $invertedTextColor !default;
+$invertedDescriptionColor: $invertedLightTextColor !default;
+$invertedItemLinkColor: $invertedTextColor !default;
+$invertedItemLinkHoverColor: $linkHoverColor !default;
+$invertedContentColor: $invertedLightTextColor !default;
+
+// Link List */
+$linkListItemColor: $unselectedTextColor !default;
+$linkListItemHoverColor: $hoveredTextColor !default;
+$linkListItemDownColor: $pressedTextColor !default;
+$linkListItemActiveColor: $selectedTextColor !default;
+$linkListTransition:
+  $defaultDuration color $defaultEasing
+ !default;
+
+// Inverted Link List */
+$invertedLinkListItemColor: $invertedUnselectedTextColor !default;
+$invertedLinkListItemHoverColor: $invertedHoveredTextColor !default;
+$invertedLinkListItemDownColor: $invertedPressedTextColor !default;
+$invertedLinkListItemActiveColor: $invertedSelectedTextColor !default;
+
+// Selection List */
+$selectionListItemMargin: 0 !default;
+$selectionListItemBorderRadius: 0.5em !default;
+$selectionListItemVerticalPadding: 0.5em !default;
+$selectionListItemHorizontalPadding: 0.5em !default;
+$selectionListTransition:
+  $defaultDuration color $defaultEasing,
+  $defaultDuration padding-left $defaultEasing,
+  $defaultDuration background-color $defaultEasing
+ !default;
+
+// Selection List States */
+$selectionListBackground: transparent !default;
+$selectionListColor: $unselectedTextColor !default;
+$selectionListHoverBackground: $subtleTransparentBlack !default;
+$selectionListHoverColor: $hoveredTextColor !default;
+$selectionListDownBackground: $transparentBlack !default;
+$selectionListDownColor: $pressedTextColor !default;
+$selectionListActiveBackground: $transparentBlack !default;
+$selectionListActiveColor: $selectedTextColor !default;
+
+// Inverted Selection List */
+$invertedSelectionListBackground: transparent !default;
+$invertedSelectionListColor: $invertedUnselectedTextColor !default;
+$invertedSelectionListHoverBackground: $subtleTransparentWhite !default;
+$invertedSelectionListHoverColor: $invertedHoveredTextColor !default;
+$invertedSelectionListDownBackground: $transparentWhite !default;
+$invertedSelectionListDownColor: $invertedPressedTextColor !default;
+$invertedSelectionListActiveBackground: $transparentWhite !default;
+$invertedSelectionListActiveColor: $invertedSelectedTextColor !default;
+
+// Animated List */
+$animatedDuration: 0.25s !default;
+$animatedDelay: 0.1s !default;
+$animatedListTransition:
+  $animatedDuration color $defaultEasing $animatedDelay,
+  $animatedDuration padding-left $defaultEasing $animatedDelay,
+  $animatedDuration background-color $defaultEasing $animatedDelay
+ !default;
+$animatedListIndent: 1em !default;
+
+// Bulleted */
+$bulletDistance: 1.25rem !default;
+$bulletOffset: -$bulletDistance !default;
+
+$bulletOpacity: 1 !default;
+$bulletCharacter: '•' !default;
+$bulletColor: inherit !default;
+$bulletLinkColor: $textColor !default;
+$bulletVerticalAlign: top !default;
+$bulletChildDistance: $bulletDistance !default;
+
+// Horizontal Bullets */
+$horizontalBulletColor: $textColor !default;
+$horizontalBulletSpacing: strip-unit($bulletDistance) + 0.5em !default;
+
+// Ordered List */
+$orderedCountName: ordered !default;
+$orderedCountSeparator: "." !default;
+$orderedCountSuffix: "." !default;
+$orderedCountContent: counters($orderedCountName, $orderedCountSeparator) " " !default;
+$orderedCountContentSuffixed: counters($orderedCountName, $orderedCountSeparator) $orderedCountSuffix !default;
+$orderedCountColor: $textColor !default;
+$orderedCountDistance: 1.25rem !default;
+$orderedCountOpacity: 0.8 !default;
+$orderedCountTextAlign: right !default;
+$orderedCountVerticalAlign: middle !default;
+
+$orderedChildCountDistance: 1em !default;
+$orderedChildCountOffset: -2em !default;
+
+$orderedInvertedCountColor: $invertedLightTextColor !default;
+
+// Horizontal Ordered */
+$horizontalOrderedCountDistance: 0.5em !default;
+
+// Divided */
+$dividedBorderWidth: 1px !default;
+$dividedBorder: $dividedBorderWidth solid $borderColor !default;
+$dividedInvertedBorderColor: $whiteBorderColor !default;
+$dividedChildListBorder: none !default;
+$dividedChildItemBorder: none !default;
+
+// Divided Horizontal */
+$horizontalDividedSpacing: ($horizontalSpacing / 2) !default;
+$horizontalDividedLineHeight: 0.6 !default;
+
+// Divided */
+$celledBorderWidth: 1px !default;
+$celledBorder: $celledBorderWidth solid $borderColor !default;
+$celledInvertedBorder: $whiteBorderColor !default;
+$celledHorizontalPadding: 0.5em !default;
+$celledChildListBorder: none !default;
+$celledChildItemBorder: none !default;
+
+// Divided Horizontal */
+$horizontalCelledSpacing: ($horizontalSpacing / 2) !default;
+$horizontalCelledLineHeight: 0.6 !default;
+
+// Relaxed */
+$relaxedItemVerticalPadding: $relative6px !default;
+$relaxedChildItemVerticalPadding: $relative3px !default;
+$relaxedHeaderMargin: 0.25rem !default;
+$relaxedHorizontalPadding: 1rem !default;
+
+// Very Relaxed */
+$veryRelaxedItemVerticalPadding: $relative12px !default;
+$veryRelaxedChildItemVerticalPadding: $relative4px !default;
+$veryRelaxedHeaderMargin: 0.5rem !default;
+$veryRelaxedHorizontalPadding: 1.5rem !default;
+

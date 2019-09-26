@@ -1,0 +1,40 @@
+//****************************** Sidebar *******************************/
+@import '../globals/site';
+
+//------------------- Content --------------------*/
+
+// Animation */
+$perspective: 1500px !default;
+$duration: 500ms !default;
+$easing: $defaultEasing !default;
+
+// Dimmer */
+$dimmerColor: rgba(0, 0, 0, 0.4) !default;
+$dimmerTransition: opacity $duration !default;
+
+// Color below page */
+$canvasBackground: $lightBlack !default;
+
+// Shadow */
+$boxShadow: 0 0 20px $borderColor !default;
+$horizontalBoxShadow: $boxShadow !default;
+$verticalBoxShadow: $boxShadow !default;
+
+// Layering */
+$bottomLayer: 1 !default;
+$middleLayer: 2 !default;
+$fixedLayer: 101 !default;
+$topLayer: 102 !default;
+$dimmerLayer: 1000 !default;
+
+//------------------- Variations --------------------*/
+
+// Width */
+$veryThinWidth: 60px !default;
+$thinWidth: 150px !default;
+$width: 260px !default;
+$wideWidth: 350px !default;
+$veryWideWidth: 475px !default;
+
+// Height */
+$height: 36px !default;

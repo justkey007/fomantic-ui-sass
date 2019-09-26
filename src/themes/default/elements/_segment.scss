@@ -1,0 +1,140 @@
+//******************************  Segment *******************************/
+@import '../globals/site';
+//------------------- Element --------------------*/
+
+$background: $white !default;
+$borderWidth: 1px !default;
+$border: $borderWidth solid $borderColor !default;
+
+$boxShadow: $subtleShadow !default;
+$verticalPadding: 1em !default;
+$horizontalPadding: 1em !default;
+$padding: $verticalPadding $horizontalPadding !default;
+
+$verticalMargin: 1rem !default;
+$horizontalMargin: 0 !default;
+$margin: $verticalMargin $horizontalMargin !default;
+$borderRadius: $defaultBorderRadius !default;
+
+//------------------- Group --------------------*/
+
+$groupedMargin: $margin !default;
+$groupedBorder: $border !default;
+$groupedBoxShadow: $boxShadow !default;
+$groupedBorderRadius: $borderRadius !default;
+
+$nestedGroupMargin: $verticalMargin $verticalMargin !default;
+
+$groupedSegmentBorder: none !default;
+$groupedSegmentDivider: $border !default;
+$groupedSegmentMargin: 0 !default;
+$groupedSegmentWidth: auto !default;
+$groupedSegmentBoxShadow: none !default;
+
+//------------------- Coupling --------------------*/
+
+// Page Grid Segment */
+$pageGridMargin: (2 * $verticalPadding) !default;
+
+//******************************  Types *******************************/
+
+// Placeholder */
+$placeholderBackground: $offWhite !default;
+$placeholderPadding: $padding !default;
+$placeholderBorderColor: $borderColor !default;
+$placeholderBoxShadow: 0 2px 25px 0 rgba(34, 36, 38, 0.05) inset !default;
+$placeholderMinHeight: 18rem !default;
+$placeholderContentMaxWidth: 15rem !default;
+$placeholderContentInlineButtonMargin: 0 $_5px 0 0 !default;
+
+
+// Piled */
+$piledZIndex: auto !default;
+$piledMargin: 3em !default;
+$piledBoxShadow: '' !default;
+$piledDegrees: 1.2deg !default;
+$piledBorder: $border !default;
+
+// Circular */
+$circularPadding: 2em !default;
+
+// Stacked */
+$stackedHeight: 6px !default;
+$stackedPageBackground: $subtleTransparentBlack !default;
+$stackedPadding: $verticalPadding + (0.4em) !default;
+$tallStackedPadding: $verticalPadding + (0.8em) !default;
+
+//******************************  States *******************************/
+
+// Loading Dimmer */
+$loaderDimmerColor: rgba(255, 255, 255, 0.8) !default;
+$loaderInvertedDimmerColor: rgba(0, 0, 0 , 0.85) !default;
+$loaderDimmerZIndex: 100 !default;
+
+// Loading Spinner */
+$loaderSize: 3em !default;
+$loaderLineZIndex: 101 !default;
+
+
+//******************************  Variations *******************************/
+
+// Raised */
+$raisedBoxShadow: $floatingShadow !default;
+
+// Padded */
+$paddedSegmentPadding: 1.5em !default;
+$veryPaddedSegmentPadding: 3em !default;
+
+// Attached */
+$attachedTopOffset: 0 !default;
+$attachedBottomOffset: 0 !default;
+$attachedHorizontalOffset: -$borderWidth !default;
+$attachedWidth: calc(100% + #{-$attachedHorizontalOffset * 2}) !default;
+$attachedBoxShadow: none !default;
+$attachedBorder: $borderWidth solid $solidBorderColor !default;
+$attachedBottomBoxShadow:
+  $boxShadow,
+  $attachedBoxShadow
+ !default;
+
+// Inverted */
+$invertedBackground: $black !default;
+
+// Floated */
+$floatedDistance: 1em !default;
+
+// Basic */
+$basicBackground: none transparent !default;
+$basicBorder: none !default;
+$basicBoxShadow: none !default;
+$basicBorderRadius: 0 !default;
+
+// Colors */
+$coloredBorderSize: 2px !default;
+
+// Ordinality */
+$secondaryBackground: $darkWhite !default;
+$secondaryColor: $mutedTextColor !default;
+
+$tertiaryBackground:  $midWhite !default;
+$tertiaryColor: $mutedTextColor !default;
+
+$secondaryInvertedLightness: 0.2 !default;
+$secondaryInvertedBackground:
+  lighten($black, ($secondaryInvertedLightness * 100))
+  linear-gradient(
+    rgba(255, 255, 255, $secondaryInvertedLightness) 0,
+    rgba(255, 255, 255, $secondaryInvertedLightness) 100%
+  )
+ !default;
+$secondaryInvertedColor: $invertedMutedTextColor !default;
+
+$tertiaryInvertedLightness: 0.35 !default;
+$tertiaryInvertedBackground:
+  lighten($black, ($tertiaryInvertedLightness * 100))
+  linear-gradient(
+    rgba(255, 255, 255, $tertiaryInvertedLightness) 0,
+    rgba(255, 255, 255, $tertiaryInvertedLightness) 100%
+  )
+ !default;
+$tertiaryInvertedColor: $invertedMutedTextColor !default;

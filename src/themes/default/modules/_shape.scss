@@ -1,0 +1,37 @@
+//****************************** Shape *******************************/
+@import '../globals/site';
+
+$display: inline-block !default;
+
+// Animating */
+$perspective: 2000px !default;
+
+$duration: 0.6s !default;
+$easing: ease-in-out !default;
+
+$hiddenSideOpacity: 0.6 !default;
+$animatingZIndex: 100 !default;
+
+$transition:
+  transform $duration $easing,
+  left $duration $easing,
+  width $duration $easing,
+  height $duration $easing
+ !default;
+$sideTransition: opacity $duration $easing !default;
+$backfaceVisibility: hidden !default;
+
+// Side */
+$sideMargin: 0 !default;
+
+//-------------- Types ---------------*/
+
+// Cube */
+$cubeSize: 15em !default;
+$cubeBackground: #E6E6E6 !default;
+$cubePadding: 2em !default;
+$cubeTextColor: $textColor !default;
+$cubeBoxShadow: 0 0 2px rgba(0, 0, 0, 0.3) !default;
+
+$cubeTextAlign: center !default;
+$cubeFontSize: 2em !default;

@@ -1,0 +1,465 @@
+//****************************** Dropdown *******************************/
+@import '../globals/site';
+
+//------------------- Element --------------------*/
+
+$transition: box-shadow $defaultDuration $defaultEasing,
+   width $defaultDuration $defaultEasing !default;
+$borderRadius: $defaultBorderRadius !default;
+
+$raisedShadow: 0 1px 3px 0 $borderColor !default;
+
+//------------------ Content --------------------*/
+
+// Icon */
+$dropdownIconSize: $relative12px !default;
+$dropdownIconMargin: 0 0 0 1em !default;
+
+// Current Text */
+$textTransition: none !default;
+
+// Menu */
+$menuBackground: #ffffff !default;
+$menuMargin: 0 !default;
+$menuPadding: 0 0 !default;
+$menuTop: 100% !default;
+$menuTextAlign: left !default;
+
+$menuBorderWidth: 1px !default;
+$menuBorderColor: $borderColor !default;
+$menuBorder: $menuBorderWidth solid $menuBorderColor !default;
+$menuBoxShadow: $raisedShadow !default;
+$menuBorderRadius: $borderRadius !default;
+$menuTransition: opacity $defaultDuration $defaultEasing !default;
+$menuMinWidth: calc(100% + #{$menuBorderWidth * 2}) !default;
+$menuZIndex: 11 !default;
+
+// Text */
+$textLineHeight: 1em !default;
+$textLineHeightOffset: ($textLineHeight - 1em) !default;
+$textCursorSpacing: 1px !default;
+
+// Menu Item */
+$itemFontSize: $medium !default;
+$itemTextAlign: left !default;
+$itemBorder: none !default;
+$itemHeight: auto !default;
+$itemDivider: none !default;
+$itemColor: $textColor !default;
+$itemVerticalPadding: $mini !default;
+$itemHorizontalPadding: $large !default;
+$itemPadding: $itemVerticalPadding $itemHorizontalPadding !default;
+$itemFontWeight: $normal !default;
+$itemLineHeight: 1em !default;
+$itemLineHeightOffset: ($itemLineHeight - 1em) !default;
+$itemTextTransform: none !default;
+$itemBoxShadow: none !default;
+
+// Sub Menu */
+$subMenuTop: 0 !default;
+$subMenuLeft: 100% !default;
+$subMenuRight: auto !default;
+$subMenuDistanceAway: -0.5em !default;
+$subMenuMargin: 0 0 0 $subMenuDistanceAway !default;
+$subMenuBorderRadius: $borderRadius !default;
+$subMenuZIndex: 21 !default;
+
+// Menu Header */
+$menuHeaderColor: $darkTextColor !default;
+$menuHeaderFontSize: $relative11px !default;
+$menuHeaderFontWeight: $bold !default;
+$menuHeaderTextTransform: uppercase !default;
+$menuHeaderMargin: 1rem 0 0.75rem !default;
+$menuHeaderPadding: 0 $itemHorizontalPadding !default;
+
+// Menu Divider */
+$menuDividerMargin: 0.5em 0 !default;
+$menuDividerColor: $internalBorderColor !default;
+$menuDividerSize: 1px !default;
+$menuDividerBorder: $menuDividerSize solid $menuDividerColor !default;
+
+// Menu Input */
+$menuInputMargin: $large $mini !default;
+$menuInputMinWidth: 10rem !default;
+$menuInputVerticalPadding: 0.5em !default;
+$menuInputHorizontalPadding: $inputHorizontalPadding !default;
+$menuInputPadding: $menuInputVerticalPadding $menuInputHorizontalPadding !default;
+
+// Menu Image */
+$menuImageMaxHeight: 2em !default;
+$menuImageVerticalMargin: -($menuImageMaxHeight - 1em) / 2 !default;
+
+// Item Sub-Element */
+$itemElementFloat: none !default;
+$itemElementDistance: $mini !default;
+
+// Sub-Menu Dropdown Icon */
+$itemDropdownIconDistance: 1em !default;
+$itemDropdownIconFloat: right !default;
+$itemDropdownIconMargin: $itemLineHeightOffset 0 0 $itemDropdownIconDistance !default;
+
+// Description */
+$itemDescriptionFloat: right !default;
+$itemDescriptionMargin: 0 0 0 1em !default;
+$itemDescriptionColor: $lightTextColor !default;
+
+// Floated Content */
+$floatedDistance: 1em !default;
+
+//------------------- Types --------------------*/
+
+//------------ Selection --------------*/
+$selectionMinWidth: 14em !default;
+$selectionVerticalPadding: $inputVerticalPadding !default;
+$selectionHorizontalPadding: $inputHorizontalPadding !default;
+$selectionBorderEmWidth: $relative1px !default;
+$selectionMinHeight: $inputLineHeight + ($selectionVerticalPadding * 2) -
+   $selectionBorderEmWidth !default;
+$selectionBackground: $inputBackground !default;
+$selectionDisplay: inline-flex !default;
+$selectionIconDistance: $inputHorizontalPadding + ($glyphWidth * 2) !default;
+$selectionZIndex: 10 !default;
+$selectionItemDivider: 1px solid $solidInternalBorderColor !default;
+
+//----- Multiple */
+$multipleSelectionRightPadding: $selectionIconDistance !default;
+
+// <select> */
+$selectBorder: 1px solid $borderColor !default;
+$selectPadding: 0.5em !default;
+$selectVisibility: visible !default;
+$selectHeight: 38px !default;
+
+$selectionTextColor: $textColor !default;
+
+$selectionTextUnderlayIconOpacity: $disabledOpacity !default;
+$selectionTextUnderlayColor: $inputPlaceholderFocusColor !default;
+
+$selectionBoxShadow: none !default;
+$selectionBorderColor: $borderColor !default;
+$selectionBorder: 1px solid $selectionBorderColor !default;
+$selectionBorderRadius: $borderRadius !default;
+
+$selectionIconOpacity: 0.8 !default;
+$selectionIconZIndex: 3 !default;
+$selectionIconHitbox: $selectionVerticalPadding !default;
+$selectionIconMargin: -$selectionIconHitbox !default;
+$selectionIconPadding: $selectionIconHitbox / $dropdownIconSize !default;
+$selectionIconTransition: opacity $defaultDuration $defaultEasing !default;
+
+$selectionMenuBorderRadius: 0 0 $borderRadius $borderRadius !default;
+$selectionMenuBoxShadow: $raisedShadow !default;
+$selectionMenuItemBoxShadow: none !default;
+
+$selectionItemHorizontalPadding: $itemHorizontalPadding !default;
+$selectionItemVerticalPadding: $itemVerticalPadding !default;
+$selectionItemPadding: $selectionItemVerticalPadding
+   $selectionItemHorizontalPadding !default;
+
+$selectionTransition: $transition !default;
+$selectionMenuTransition: $menuTransition !default;
+
+$selectionMessagePadding: $selectionItemPadding !default;
+
+
+// Message */
+$messagePadding: $selectionItemPadding !default;
+$messageFontWeight: $normal !default;
+$messageColor: $unselectedTextColor !default;
+
+// Responsive */
+$selectionMobileMaxItems: 3 !default;
+$selectionTabletMaxItems: 4 !default;
+$selectionComputerMaxItems: 6 !default;
+$selectionWidescreenMaxItems: 8 !default;
+
+// Derived */
+$selectedBorderEMWidth: 0.1em !default; // 1px / em size */
+$selectionItemHeight: (strip-unit($selectionItemVerticalPadding) * 2) + $itemLineHeight +
+   $selectedBorderEMWidth !default;
+$selectionComputerMaxMenuHeight: (
+   $selectionItemHeight * $selectionComputerMaxItems
+) !default;
+$selectionMobileMaxMenuHeight: $selectionComputerMaxMenuHeight !default; // ($selectionItemHeight * $selectionMobileMaxItems) */
+$selectionTabletMaxMenuHeight: (
+   $selectionItemHeight * $selectionTabletMaxItems
+) !default;
+$selectionWidescreenMaxMenuHeight: (
+   $selectionItemHeight * $selectionWidescreenMaxItems
+) !default;
+
+// Hover */
+$selectionHoverBorderColor: $selectedBorderColor !default;
+$selectionHoverBoxShadow: none !default;
+
+// Focus */
+$selectionFocusBorderColor: $focusedFormMutedBorderColor !default;
+$selectionFocusBoxShadow: none !default;
+$selectionFocusMenuBoxShadow: $raisedShadow !default;
+
+// Visible */
+$selectionVisibleTextFontWeight: $normal !default;
+$selectionVisibleTextColor: $hoveredTextColor !default;
+
+$selectionVisibleBorderColor: $focusedFormMutedBorderColor !default;
+$selectionVisibleBoxShadow: $raisedShadow !default;
+$selectionVisibleMenuBoxShadow: $raisedShadow !default;
+
+// Visible Hover */
+$selectionActiveHoverBorderColor: $focusedFormMutedBorderColor !default;
+$selectionActiveHoverBoxShadow: $selectionVisibleBoxShadow !default;
+$selectionActiveHoverMenuBoxShadow: $selectionVisibleMenuBoxShadow !default;
+
+$selectionVisibleConnectingBorder: 0 !default;
+$selectionVisibleIconOpacity: '' !default;
+
+//-------------- Search --------------*/
+
+$searchMinWidth: '' !default;
+
+// Search Selection */
+$searchSelectionLineHeight: $inputLineHeight !default;
+$searchSelectionLineHeightOffset: (
+   ($searchSelectionLineHeight - 1em) / 2
+) !default;
+$searchSelectionVerticalPadding: (
+   $selectionVerticalPadding - $searchSelectionLineHeightOffset
+) !default;
+$searchSelectionHorizontalPadding: $selectionHorizontalPadding !default;
+$searchSelectionInputPadding: $searchSelectionVerticalPadding
+   $selectionIconDistance $searchSelectionVerticalPadding
+   $searchSelectionHorizontalPadding !default;
+
+$searchMobileMaxMenuHeight: $selectionMobileMaxMenuHeight !default;
+$searchTabletMaxMenuHeight: $selectionTabletMaxMenuHeight !default;
+$searchComputerMaxMenuHeight: $selectionComputerMaxMenuHeight !default;
+$searchWidescreenMaxMenuHeight: $selectionWidescreenMaxMenuHeight !default;
+
+//-------------- Multiple --------------*/
+// Split Actual Padding Between Child and Parent (allows for label spacing) */
+$multipleSelectionVerticalPadding: (
+   $searchSelectionVerticalPadding * (1/3)
+) !default;
+$multipleSelectionLeftPadding: $relative5px !default;
+$multipleSelectionPadding: $multipleSelectionVerticalPadding
+   $multipleSelectionRightPadding $multipleSelectionVerticalPadding
+   $multipleSelectionLeftPadding !default;
+
+//------- Selection */
+$selectionPadding: $multipleSelectionPadding !default;
+
+// Inline */
+$inlineIconMargin: 0 $relative3px 0 $relative3px !default;
+$inlineTextColor: inherit !default;
+$inlineTextFontWeight: $bold !default;
+$inlineMenuDistance: $relative3px !default;
+$inlineMenuBorderRadius: $borderRadius !default;
+
+// Child Elements */
+$multipleSelectionChildVerticalMargin: (
+   $searchSelectionVerticalPadding * (2/3)
+) !default;
+$multipleSelectionChildLeftMargin: (
+   $inputHorizontalPadding - $multipleSelectionLeftPadding
+) !default;
+$multipleSelectionChildMargin: $multipleSelectionChildVerticalMargin 0
+   $multipleSelectionChildVerticalMargin $multipleSelectionChildLeftMargin !default;
+$multipleSelectionChildLineHeight: $relative17px !default;
+$multipleSelectionSearchStartWidth: ($glyphWidth * 2) !default;
+
+// Dropdown Icon */
+$multipleSelectionDropdownIconMargin: '' !default;
+$multipleSelectionDropdownIconPadding: '' !default;
+
+$multipleSelectionSearchAfterLabelDistance: $relative2px !default;
+
+// Selection Label */
+$labelSize: $relativeMedium !default;
+$labelHorizontalMargin: $_4px !default;
+$labelVerticalMargin: $_2px !default;
+$labelMargin: $labelVerticalMargin $labelHorizontalMargin $labelVerticalMargin 0 !default;
+$labelBorderWidth: 1px !default;
+$labelBoxShadow: 0 0 0 $labelBorderWidth $borderColor inset !default;
+
+$labelVerticalPadding: $relative5px !default;
+$labelHorizontalPadding: $relativeMini !default;
+$labelPadding: $labelVerticalPadding $labelHorizontalPadding !default;
+
+//------------------- States --------------------*/
+
+// Hovered */
+$hoveredItemBackground: $transparentBlack !default;
+$hoveredItemColor: $selectedTextColor !default;
+$hoveredZIndex: $menuZIndex + 2 !default;
+
+// Default Text */
+$defaultTextColor: $inputPlaceholderColor !default;
+$defaultTextFocusColor: $inputPlaceholderFocusColor !default;
+
+// Loading */
+$loadingZIndex: -1 !default;
+
+// Active Menu Item */
+$activeItemZIndex: $menuZIndex + 1 !default;
+$activeItemBackground: transparent !default;
+$activeItemBoxShadow: none !default;
+$activeItemFontWeight: $bold !default;
+$activeItemColor: $selectedTextColor !default;
+
+// Selected */
+$selectedBackground: $subtleTransparentBlack !default;
+$selectedBackground02: $subtleTransparentBlack02 !default;
+$selectedColor: $selectedTextColor !default;
+
+// Error */
+$errorLabelBackground: #eacbcb !default;
+$errorLabelColor: $errorTextColor !default;
+
+$errorItemTextColor: $errorTextColor !default;
+$errorItemHoverBackground: #fff2f2 !default;
+$errorItemActiveBackground: #fdcfcf !default;
+
+// Clearable */
+$clearableIconOpacity: 0.8 !default;
+$clearableIconActiveOpacity: 1 !default;
+
+//------------------- Variations --------------------*/
+
+// Scrolling */
+$scrollingMenuWidth: 100% !default;
+$scrollingMenuItemBorder: none !default;
+$scrollingMenuRightItemPadding: calc(
+   #{$itemHorizontalPadding} + #{$scrollbarWidth}
+) !default;
+
+$scrollingMobileMaxItems: 4 !default;
+$scrollingTabletMaxItems: 6 !default;
+$scrollingComputerMaxItems: 8 !default;
+$scrollingWidescreenMaxItems: 12 !default;
+
+$scrollingBorderEMWidth: 0 !default; // 0 / em size */
+$scrollingItemHeight: (strip-unit($itemVerticalPadding) * 2) + $itemLineHeight +
+   $scrollingBorderEMWidth !default;
+$scrollingMobileMaxMenuHeight: (
+   $scrollingItemHeight * $scrollingMobileMaxItems
+) !default;
+$scrollingTabletMaxMenuHeight: (
+   $scrollingItemHeight * $scrollingTabletMaxItems
+) !default;
+$scrollingComputerMaxMenuHeight: (
+   $scrollingItemHeight * $scrollingComputerMaxItems
+) !default;
+$scrollingWidescreenMaxMenuHeight: (
+   $scrollingItemHeight * $selectionWidescreenMaxItems
+) !default;
+
+// Upward */
+$upwardSelectionVisibleBorderRadius: $selectionVisibleConnectingBorder
+   $selectionVisibleConnectingBorder $borderRadius $borderRadius !default;
+$upwardMenuBoxShadow: 0 0 3px 0 rgba(0, 0, 0, 0.08) !default;
+$upwardSelectionMenuBoxShadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.08) !default;
+$upwardMenuBorderRadius: $borderRadius $borderRadius 0 0 !default;
+$upwardSelectionHoverBoxShadow: 0 0 2px 0 rgba(0, 0, 0, 0.05) !default;
+$upwardSelectionVisibleBoxShadow: 0 0 3px 0 rgba(0, 0, 0, 0.08) !default;
+$upwardSelectionActiveHoverBoxShadow: 0 0 3px 0 rgba(0, 0, 0, 0.05) !default;
+$upwardSelectionActiveHoverMenuBoxShadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.08) !default;
+
+// Flyout Direction */
+$leftMenuDropdownIconFloat: left !default;
+$leftMenuDropdownIconMargin: $itemLineHeightOffset 0 0 0 !default;
+
+// Left */
+$leftSubMenuBorderRadius: $borderRadius !default;
+$leftSubMenuMargin: 0 $subMenuDistanceAway 0 0 !default;
+
+// Simple */
+$simpleTransitionDuration: $defaultDuration !default;
+$simpleTransition: opacity $simpleTransitionDuration $defaultEasing !default;
+
+// Floating */
+$floatingMenuDistance: 0.5em !default;
+$floatingMenuBoxShadow: $floatingShadow !default;
+$floatingMenuBorderRadius: $borderRadius !default;
+
+// Pointing */
+$pointingArrowSize: $relative7px !default;
+$pointingArrowOffset: -($pointingArrowSize / 2) !default;
+$pointingArrowDistanceFromEdge: 1em !default;
+
+$pointingArrowBackground: $white !default;
+$pointingArrowZIndex: 2 !default;
+$pointingArrowBoxShadow: -$menuBorderWidth -$menuBorderWidth 0 0 $menuBorderColor !default;
+
+$pointingMenuDistance: $mini !default;
+$pointingMenuBorderRadius: $borderRadius !default;
+
+// Pointing Upward */
+$pointingUpwardMenuBorderRadius: $borderRadius !default;
+$pointingUpwardArrowBoxShadow: $menuBorderWidth $menuBorderWidth 0 0
+   $menuBorderColor !default;
+
+//-------------- Inverted ---------------*/
+
+// General rules and basic dropdowns */
+$invertedMenuBackground: $black !default;
+$invertedMenuColor: $invertedMutedTextColor !default;
+$invertedMenuBorderColor: $strongTransparentWhite !default;
+$invertedMenuBorder: 1px solid $invertedMenuBorderColor !default;
+$invertedMenuBoxShadow: none !default;
+
+$invertedPointingArrowBackground: $black !default;
+$invertedPointingArrowBoxShadow: -$menuBorderWidth -$menuBorderWidth 0 0 $invertedMenuBorderColor !default;
+
+$invertedHoveredItemBackground: $transparentWhite !default;
+$invertedHoveredItemColor: $invertedMenuColor !default;
+
+$invertedActiveItemBackground: transparent !default;
+$invertedActiveItemColor: $invertedMenuColor !default;
+$invertedActiveItemBoxShadow: none !default;
+
+$invertedSelectedBackground: $strongTransparentWhite !default;
+$invertedSelectedColor: $invertedMenuColor !default;
+
+$invertedMenuHeaderColor: $white !default;
+$invertedItemDescriptionColor: $invertedUnselectedTextColor !default;
+
+$invertedMenuDividerBorder: $menuDividerSize solid $strongTransparentWhite !default;
+
+// Selection */
+$invertedSelectionBorderColor: $strongTransparentWhite !default;
+$invertedSelectionBorder: 1px solid $invertedSelectionBorderColor !default;
+$invertedSelectionBackground: $black !default;
+$invertedSelectionTextColor: $invertedMenuColor !default;
+$invertedSelectionInputTextColor: $white !default;
+
+$invertedSelectionHoverBorderColor: rgba(255, 255, 255, 0.25) !default;
+$invertedSelectionHoverBoxShadow: none !default;
+
+$invertedDefaultTextColor: $invertedUnselectedTextColor !default;
+$invertedDefaultTextFocusColor: $invertedLightTextColor !default;
+
+$invertedSelectionVisibleTextColor: $invertedTextColor !default;
+
+$invertedSelectionTextUnderlayIconOpacity: 0.45 !default;
+$invertedSelectionTextUnderlayColor: $invertedLightTextColor !default;
+
+$invertedSelectionItemDivider: 1px solid #242526 !default;
+$invertedSelectionVisibleBorderColor: $strongTransparentWhite !default;
+
+$invertedMessageColor: $invertedUnselectedTextColor !default;
+
+$invertedInputHighlightBackground: rgba(255, 255, 255, 0.25) !default;
+$invertedInputHighlightColor: $invertedMutedTextColor !default;
+
+// Multiple */
+$invertedLabelBackgroundColor: rgba(255, 255, 255, 0.7) !default;
+$invertedLabelBackgroundImage: none !default;
+$invertedLabelColor: rgba(0, 0, 0, 1) !default;
+$invertedLabelBoxShadow: 0 0 0 $labelBorderWidth rgba(255, 255, 255, 0) inset !default;
+
+$invertedLabelHoverBackgroundColor: rgba(255, 255, 255, 0.9) !default;
+$invertedLabelHoverBackgroundImage: none !default;
+$invertedLabelHoverTextColor: $invertedLabelColor !default;
+
+$invertedLabelIconOpacity: 0.6 !default;
+$invertedLabelIconHoverOpacity: 0.8 !default;
