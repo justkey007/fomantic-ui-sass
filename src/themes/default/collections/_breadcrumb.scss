@@ -1,31 +1,31 @@
 //****************************** Breadcrumb *******************************
 
-@import '../globals/site';
+@import "../globals/variables";
 
-$verticalMargin: 0 !default;
-$display: inline-block !default;
-$verticalAlign: middle !default;
+$breadcrumb-vertical-margin: 0 !default;
+$breadcrumb-display: inline-block !default;
+$breadcrumb-vertical-align: middle !default;
 
-$dividerSpacing: $_3px !default;
-$dividerOpacity: 0.7 !default;
-$dividerColor: $lightTextColor !default;
+$breadcrumb-divider-spacing: $_3px !default;
+$breadcrumb-divider-opacity: 0.7 !default;
+$breadcrumb-divider-color: $light-text-color !default;
 
-$dividerSize: $relativeSmall !default;
-$dividerVerticalAlign: baseline !default;
+$breadcrumb-divider-size: $relative-small !default;
+$breadcrumb-divider-vertical-align: baseline !default;
 
-$iconDividerSize: $relativeTiny !default;
-$iconDividerVerticalAlign: baseline !default;
+$breadcrumb-icon-divider-size: $relative-tiny !default;
+$breadcrumb-icon-divider-vertical-align: baseline !default;
 
-$sectionMargin: 0 !default;
-$sectionPadding: 0 !default;
+$breadcrumb-section-margin: 0 !default;
+$breadcrumb-section-padding: 0 !default;
 
 // Coupling */
-$segmentPadding: $relativeMini $relativeMedium !default;
+$breadcrumb-segment-padding: $relative-mini $relative-medium !default;
 
 // Inverted */
-$invertedColor: $midWhite !default;
-$invertedActiveColor: $white !default;
-$invertedDividerColor: $invertedLightTextColor !default;
+$breadcrumb-inverted-color: $mid-white !default;
+$breadcrumb-inverted-active-color: $white !default;
+$breadcrumb-inverted-divider-color: $inverted-light-text-color !default;
 
 //-------------------States--------------------*/
-$activeFontWeight: $bold !default;
+$breadcrumb-active-font-weight: $bold !default;

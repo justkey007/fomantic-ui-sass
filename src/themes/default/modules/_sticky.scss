@@ -1,6 +1,6 @@
 //******************************  Sticky *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
-$transitionDuration: $defaultDuration !default;
-$transition: none !default;
-$zIndex: 800 !default;
+$sticky-transition-duration: $default-duration !default;
+$sticky-transition: none !default;
+$sticky-z-index: 800 !default;

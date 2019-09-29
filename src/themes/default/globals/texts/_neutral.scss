@@ -1,18 +1,18 @@
-$darkTextColor               : rgba(0, 0, 0, 0.85) !default;
-$mutedTextColor              : rgba(0, 0, 0, 0.6) !default;
-$lightTextColor              : rgba(0, 0, 0, 0.4) !default;
+$dark-text-color: rgba(0, 0, 0, 0.85) !default;
+$muted-text-color: rgba(0, 0, 0, 0.6) !default;
+$light-text-color: rgba(0, 0, 0, 0.4) !default;
 
-$unselectedTextColor         : rgba(0, 0, 0, 0.4) !default;
-$hoveredTextColor            : rgba(0, 0, 0, 0.8) !default;
-$pressedTextColor            : rgba(0, 0, 0, 0.9) !default;
-$selectedTextColor           : rgba(0, 0, 0, 0.95) !default;
-$disabledTextColor           : rgba(0, 0, 0, 0.2) !default;
+$unselected-text-color: rgba(0, 0, 0, 0.4) !default;
+$hovered-text-color: rgba(0, 0, 0, 0.8) !default;
+$pressed-text-color: rgba(0, 0, 0, 0.9) !default;
+$selected-text-color: rgba(0, 0, 0, 0.95) !default;
+$disabled-text-color: rgba(0, 0, 0, 0.2) !default;
 
-$invertedTextColor           : rgba(255, 255, 255, 0.9) !default;
-$invertedMutedTextColor      : rgba(255, 255, 255, 0.8) !default;
-$invertedLightTextColor      : rgba(255, 255, 255, 0.7) !default;
-$invertedUnselectedTextColor : rgba(255, 255, 255, 0.5) !default;
-$invertedHoveredTextColor    : rgba(255, 255, 255, 1) !default;
-$invertedPressedTextColor    : rgba(255, 255, 255, 1) !default;
-$invertedSelectedTextColor   : rgba(255, 255, 255, 1) !default;
-$invertedDisabledTextColor   : rgba(255, 255, 255, 0.2) !default;
+$inverted-text-color: rgba(255, 255, 255, 0.9) !default;
+$inverted-muted-text-color: rgba(255, 255, 255, 0.8) !default;
+$inverted-light-text-color: rgba(255, 255, 255, 0.7) !default;
+$inverted-unselected-text-color: rgba(255, 255, 255, 0.5) !default;
+$inverted-hovered-text-color: rgba(255, 255, 255, 1) !default;
+$inverted-pressed-text-color: rgba(255, 255, 255, 1) !default;
+$inverted-selected-text-color: rgba(255, 255, 255, 1) !default;
+$inverted-disabled-text-color: rgba(255, 255, 255, 0.2) !default;

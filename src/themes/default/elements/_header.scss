@@ -1,146 +1,146 @@
 //******************************  Header *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 //------------------ Element --------------------*/
 
-$textTransform: none !default;
-$fontFamily: $headerFont !default;
-$fontWeight: $headerFontWeight !default;
-$lineHeight: $headerLineHeight !default;
-$lineHeightOffset: $headerLineHeightOffset !default;
+$header-text-transform: none !default;
+$header-font-family: $header-font !default;
+$header-font-weight: $header-font-weight !default;
+$header-line-height: $header-line-height !default;
+$header-line-height-offset: $header-line-height-offset !default;
 
-$topMargin: $headerTopMargin !default;
-$bottomMargin: $headerBottomMargin !default;
-$margin: $topMargin 0 $bottomMargin !default;
+$header-top-margin: $header-top-margin !default;
+$header-bottom-margin: $header-bottom-margin !default;
+$header-margin: $header-top-margin 0 $header-bottom-margin !default;
 
-$firstMargin: -$lineHeightOffset !default;
-$lastMargin: 0 !default;
-$horizontalPadding: 0 !default;
-$verticalPadding: 0 !default;
+$header-first-margin: -$header-line-height-offset !default;
+$header-last-margin: 0 !default;
+$header-horizontal-padding: 0 !default;
+$header-vertical-padding: 0 !default;
 
 // Sub Heading */
-$subHeadingDistance: $_2px !default;
-$subHeadingFontSize: $relativeTiny !default;
-$subHeadingFontWeight: $bold !default;
-$subHeadingTextTransform: uppercase !default;
-$subHeadingColor: '' !default;
+$header-sub-heading-distance: $_2px !default;
+$header-sub-heading-font-size: $relative-tiny !default;
+$header-sub-heading-font-weight: $bold !default;
+$header-sub-heading-text-transform: uppercase !default;
+$header-sub-heading-color: "" !default;
 
-$smallSubHeadingSize: $relativeMini !default;
-$largeSubHeadingSize: $relativeSmall !default;
-$hugeSubHeadingSize: $relativeMedium !default;
+$header-small-sub-heading-size: $relative-mini !default;
+$header-large-sub-heading-size: $relative-small !default;
+$header-huge-sub-heading-size: $relative-medium !default;
 
 // Sub Header */
-$subHeaderMargin: 0 !default;
-$subHeaderLineHeight: 1.2em !default;
-$subHeaderColor: $mutedTextColor !default;
+$header-sub-margin: 0 !default;
+$header-sub-line-height: 1.2em !default;
+$header-sub-color: $muted-text-color !default;
 
 // Icon */
-$iconOpacity: 1 !default;
-$iconSize: 1.5em !default;
-$iconOffset: 0 !default;
-$iconMargin: 0.75rem !default;
-$iconAlignment: middle !default;
+$header-icon-opacity: 1 !default;
+$header-icon-size: 1.5em !default;
+$header-icon-offset: 0 !default;
+$header-icon-margin: 0.75rem !default;
+$header-icon-alignment: middle !default;
 
 // Image */
-$imageWidth: 2.5em !default;
-$imageHeight: auto !default;
-$imageOffset: $lineHeightOffset !default;
-$imageMargin: $iconMargin !default;
-$imageAlignment: middle !default;
+$header-image-width: 2.5em !default;
+$header-image-height: auto !default;
+$header-image-offset: $header-line-height-offset !default;
+$header-image-margin: $header-icon-margin !default;
+$header-image-alignment: middle !default;
 
 // Label */
-$labelSize: '' !default;
-$labelDistance: 0.5rem !default;
-$labelVerticalAlign: middle !default;
+$header-label-size: "" !default;
+$header-label-distance: 0.5rem !default;
+$header-label-vertical-align: middle !default;
 
 // Content */
-$contentAlignment: top !default;
-$contentIconAlignment: middle !default;
-$contentImageAlignment: middle !default;
+$header-content-alignment: top !default;
+$header-content-icon-alignment: middle !default;
+$header-content-image-alignment: middle !default;
 
 // Paragraph after Header */
-$nextParagraphDistance: 0 !default;
+$header-next-paragraph-distance: 0 !default;
 
 //------------------- Variations --------------------*/
 
 // Sizing */
-$hugeFontSize   : join-value-to-unit($h1, em) !default;
-$largeFontSize  : join-value-to-unit($h2, em) !default;
-$mediumFontSize : join-value-to-unit($h3, em) !default;
-$smallFontSize  : join-value-to-unit($h4, em) !default;
-$tinyFontSize   : join-value-to-unit($h5, em) !default;
+$header-huge-font-size: join-value-to-unit($h1, em) !default;
+$header-large-font-size: join-value-to-unit($h2, em) !default;
+$header-medium-font-size: join-value-to-unit($h3, em) !default;
+$header-small-font-size: join-value-to-unit($h4, em) !default;
+$header-tiny-font-size: join-value-to-unit($h5, em) !default;
 
 // Sub Header */
-$h1SubHeaderFontSize: $large !default;
-$h2SubHeaderFontSize: $large !default;
-$h3SubHeaderFontSize: $medium !default;
-$h4SubHeaderFontSize: $medium !default;
-$h5SubHeaderFontSize: $small !default;
+$header-h1-sub-font-size: $large !default;
+$header-h2-sub-font-size: $large !default;
+$header-h3-sub-font-size: $medium !default;
+$header-h4-sub-font-size: $medium !default;
+$header-h5-sub-font-size: $small !default;
 
-$hugeSubHeaderFontSize  : $h1SubHeaderFontSize !default;
-$largeSubHeaderFontSize : $h2SubHeaderFontSize !default;
-$subHeaderFontSize      : $h3SubHeaderFontSize !default;
-$smallSubHeaderFontSize : $h4SubHeaderFontSize !default;
-$tinySubHeaderFontSize  : $h5SubHeaderFontSize !default;
+$header-huge-sub-font-size: $header-h1-sub-font-size !default;
+$header-large-sub-font-size: $header-h2-sub-font-size !default;
+$header-sub-font-size: $header-h3-sub-font-size !default;
+$header-small-sub-font-size: $header-h4-sub-font-size !default;
+$header-tiny-sub-font-size: $header-h5-sub-font-size !default;
 
 // Icon Header */
-$iconHeaderSize: 3em !default;
-$iconHeaderOpacity: 1 !default;
-$iconHeaderMargin: 0.5rem !default;
-$circularHeaderIconSize: 2em !default;
-$squareHeaderIconSize: 2em !default;
-$cornerIconHeaderSize: calc($iconHeaderSize * 0.45) !default;
+$header-iconed-icon-size: 3em !default;
+$header-iconed-icon-opacity: 1 !default;
+$header-iconed-icon-margin: 0.5rem !default;
+$header-circular-icon-size: 2em !default;
+$header-square-icon-size: 2em !default;
+$header-corner-icon-size: calc(#{$header-iconed-icon-size} * 0.45) !default;
 
 // No Line Height Offset */
-$iconHeaderTopMargin: 2rem !default;
-$iconHeaderBottomMargin: $bottomMargin !default;
-$iconHeaderFirstMargin: 0 !default;
+$header-icon-top-margin: 2rem !default;
+$header-icon-bottom-margin: $header-bottom-margin !default;
+$header-icon-first-margin: 0 !default;
 
 // Divided */
-$dividedBorderWidth: 1px !default;
-$dividedBorder: $dividedBorderWidth solid $borderColor !default;
-$dividedColoredBorderWidth: 2px !default;
+$header-divided-border-width: 1px !default;
+$header-divided-border: $header-divided-border-width solid $border-color !default;
+$header-divided-colored-border-width: 2px !default;
 
-$dividedBorderPadding: $_3px !default;
-$dividedSubHeaderPadding: $_3px !default;
-$dividedIconPadding: 0 !default;
+$header-divided-border-padding: $_3px !default;
+$header-divided-sub-padding: $_3px !default;
+$header-divided-icon-padding: 0 !default;
 
 // Block */
-$blockBackground: $darkWhite !default;
-$blockBoxShadow: none !default;
-$blockBorderWidth: 1px !default;
-$blockBorder: $blockBorderWidth solid $solidBorderColor !default;
-$blockHorizontalPadding: $medium !default;
-$blockVerticalPadding: $mini !default;
-$blockBorderRadius: $defaultBorderRadius !default;
+$header-block-background: $dark-white !default;
+$header-block-box-shadow: none !default;
+$header-block-border-width: 1px !default;
+$header-block-border: $header-block-border-width solid $solid-border-color !default;
+$header-block-horizontal-padding: $medium !default;
+$header-block-vertical-padding: $mini !default;
+$header-block-border-radius: $default-border-radius !default;
 
-$tinyBlock: $tiny !default;
-$smallBlock: $small !default;
-$mediumBlock: $medium !default;
-$largeBlock: $large !default;
-$hugeBlock: $huge !default;
+$header-tiny-block: $tiny !default;
+$header-small-block: $small !default;
+$header-medium-block: $medium !default;
+$header-large-block: $large !default;
+$header-huge-block: $huge !default;
 
 // Attached */
-$attachedOffset: -1px !default;
-$attachedBoxShadow: none !default;
-$attachedBorder: 1px solid $solidBorderColor !default;
-$attachedVerticalPadding: $blockVerticalPadding !default;
-$attachedHorizontalPadding: $blockHorizontalPadding !default;
-$attachedBackground: $white !default;
-$attachedBorderRadius: $blockBorderRadius !default;
+$header-attached-offset: -1px !default;
+$header-attached-box-shadow: none !default;
+$header-attached-border: 1px solid $solid-border-color !default;
+$header-attached-vertical-padding: $header-block-vertical-padding !default;
+$header-attached-horizontal-padding: $header-block-horizontal-padding !default;
+$header-attached-background: $white !default;
+$header-attached-border-radius: $header-block-border-radius !default;
 
-$tinyAttachedSize: $relativeTiny !default;
-$smallAttachedSize: $relativeSmall !default;
-$mediumAttachedSize: $relativeMedium !default;
-$largeAttachedSize: $relativeLarge !default;
-$bigAttachedSize: $relativeBig !default;
-$hugeAttachedSize: $relativeHuge !default;
+$header-tiny-attached-size: $relative-tiny !default;
+$header-small-attached-size: $relative-small !default;
+$header-medium-attached-size: $relative-medium !default;
+$header-large-attached-size: $relative-large !default;
+$header-big-attached-size: $relative-big !default;
+$header-huge-attached-size: $relative-huge !default;
 
 // Inverted */
-$invertedColor: $white !default;
-$invertedSubHeaderColor: $invertedMutedTextColor !default;
-$invertedDividedBorderColor: $whiteBorderColor !default;
-$invertedBlockBackground: $lightBlack $subtleGradient !default;
-$invertedAttachedBackground: $black !default;
+$header-inverted-color: $white !default;
+$header-inverted-sub-color: $inverted-muted-text-color !default;
+$header-inverted-divided-border-color: $white-border-color !default;
+$header-inverted-block-background: $light-black $subtle-gradient !default;
+$header-inverted-attached-background: $black !default;
 
 // Floated */
-$floatedMargin: 0.5em !default;
+$header-floated-margin: 0.5em !default;

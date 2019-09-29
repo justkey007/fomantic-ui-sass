@@ -1,4 +1,4 @@
-@import '../../themes/default/elements/container';
+@import "../../themes/default/elements/container";
 
 /*******************************
             Container
@@ -6,79 +6,81 @@
 
 /* All Sizes */
 .ui.container {
-  display: block;
-  max-width: $maxWidth !important;
+  &:not(.grid) {
+    display: block;
+  }
+  max-width: $container-max-width !important;
 }
 
 /* Mobile */
-@media only screen and (max-width: $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.container {
-    width: $mobileWidth !important;
-    margin-left: $mobileGutter !important;
-    margin-right: $mobileGutter !important;
+    width: $container-mobile-width !important;
+    margin-left: $container-mobile-gutter !important;
+    margin-right: $container-mobile-gutter !important;
   }
   .ui.grid.container {
-    width: $mobileGridWidth !important;
+    width: $container-mobile-grid-width !important;
   }
   .ui.relaxed.grid.container {
-    width: $mobileRelaxedGridWidth !important;
+    width: $container-mobile-relaxed-grid-width !important;
   }
   .ui.very.relaxed.grid.container {
-    width: $mobileVeryRelaxedGridWidth !important;
+    width: $container-mobile-very-relaxed-grid-width !important;
   }
 }
 
 /* Tablet */
-@media only screen and (min-width: $tabletBreakpoint) and (max-width: $largestTabletScreen) {
+@media only screen and (min-width: $tablet-breakpoint) and (max-width: $largest-tablet-screen) {
   .ui.container {
-    width: $tabletWidth;
-    margin-left: $tabletGutter !important;
-    margin-right: $tabletGutter !important;
+    width: $container-tablet-width;
+    margin-left: $container-tablet-gutter !important;
+    margin-right: $container-tablet-gutter !important;
   }
   .ui.grid.container {
-    width: $tabletGridWidth !important;
+    width: $container-tablet-grid-width !important;
   }
   .ui.relaxed.grid.container {
-    width: $tabletRelaxedGridWidth !important;
+    width: $container-tablet-relaxed-grid-width !important;
   }
   .ui.very.relaxed.grid.container {
-    width: $tabletVeryRelaxedGridWidth !important;
+    width: $container-tablet-very-relaxed-grid-width !important;
   }
 }
 
 /* Small Monitor */
-@media only screen and (min-width: $computerBreakpoint) and (max-width: $largestSmallMonitor) {
+@media only screen and (min-width: $computer-breakpoint) and (max-width: $largest-small-monitor) {
   .ui.container {
-    width: $computerWidth;
-    margin-left: $computerGutter !important;
-    margin-right: $computerGutter !important;
+    width: $container-computer-width;
+    margin-left: $container-computer-gutter !important;
+    margin-right: $container-computer-gutter !important;
   }
   .ui.grid.container {
-    width: $computerGridWidth !important;
+    width: $container-computer-grid-width !important;
   }
   .ui.relaxed.grid.container {
-    width: $computerRelaxedGridWidth !important;
+    width: $container-computer-relaxed-grid-width !important;
   }
   .ui.very.relaxed.grid.container {
-    width: $computerVeryRelaxedGridWidth !important;
+    width: $container-computer-very-relaxed-grid-width !important;
   }
 }
 
 /* Large Monitor */
-@media only screen and (min-width: $largeMonitorBreakpoint) {
+@media only screen and (min-width: $large-monitor-breakpoint) {
   .ui.container {
-    width: $largeMonitorWidth;
-    margin-left: $largeMonitorGutter !important;
-    margin-right: $largeMonitorGutter !important;
+    width: $container-large-monitor-width;
+    margin-left: $container-large-monitor-gutter !important;
+    margin-right: $container-large-monitor-gutter !important;
   }
   .ui.grid.container {
-    width: $largeMonitorGridWidth !important;
+    width: $container-large-monitor-grid-width !important;
   }
   .ui.relaxed.grid.container {
-    width: $largeMonitorRelaxedGridWidth !important;
+    width: $container-large-monitor-relaxed-grid-width !important;
   }
   .ui.very.relaxed.grid.container {
-    width: $largeMonitorVeryRelaxedGridWidth !important;
+    width: $container-large-monitor-very-relaxed-grid-width !important;
   }
 }
 
@@ -86,20 +88,18 @@
              Types
 *******************************/
 
-
 /* Text Container */
 .ui.text.container {
-  font-family: $textFontFamily;
-  max-width: $textWidth !important;
-  line-height: $textLineHeight;
-  font-size: $textSize;
+  font-family: $container-text-font-family;
+  max-width: $container-text-width !important;
+  line-height: $container-text-line-height;
+  font-size: $container-text-size;
 }
 
 /* Fluid */
 .ui.fluid.container {
   width: 100%;
 }
-
 
 /*******************************
            Variations

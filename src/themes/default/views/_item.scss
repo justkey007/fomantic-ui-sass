@@ -1,171 +1,174 @@
 //****************************** Item *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- View --------------------*/
 
 // Group */
-$groupMargin: 1.5em 0 !default;
+$item-group-margin: 1.5em 0 !default;
 
 // Item */
-$display: flex !default;
-$background: transparent !default;
-$borderRadius: 0 !default;
-$minHeight: 0 !default;
-$padding: 0 !default;
-$width: 100% !default;
-$boxShadow: none !default;
-$border: none !default;
-$zIndex: '' !default;
-$transition: box-shadow $defaultDuration $defaultEasing !default;
+$item-display: flex !default;
+$item-background: transparent !default;
+$item-border-radius: 0 !default;
+$item-min-height: 0 !default;
+$item-padding: 0 !default;
+$item-width: 100% !default;
+$item-box-shadow: none !default;
+$item-border: none !default;
+$item-z-index: "" !default;
+$item-transition: box-shadow $default-duration $default-easing !default;
 
 // Responsive */
-$itemSpacing: 1em !default;
-$imageWidth: 175px !default;
-$contentImageDistance: 1.5em !default;
+$item-spacing: 1em !default;
+$item-image-width: 175px !default;
+$item-content-image-distance: 1.5em !default;
 
-$tabletItemSpacing: 1em !default;
-$tabletImageWidth: 150px !default;
-$tabletContentImageDistance: 1em !default;
+$item-tablet-spacing: 1em !default;
+$item-tablet-image-width: 150px !default;
+$item-tablet-content-image-distance: 1em !default;
 
-$mobileItemSpacing: 2em !default;
-$mobileImageWidth: auto !default;
-$mobileImageMaxHeight: 250px !default;
-$mobileContentImageDistance: 1.5em !default;
-
+$item-mobile-spacing: 2em !default;
+$item-mobile-image-width: auto !default;
+$item-mobile-image-max-height: 250px !default;
+$item-mobile-content-image-distance: 1.5em !default;
 
 //------------------- Content --------------------*/
 
 // Image */
-$imageDisplay: block !default;
-$imageFloat: none !default;
-$imageMaxHeight: '' !default;
-$imageVerticalAlign: start !default;
-$imageMargin: 0 !default;
-$imagePadding: 0 !default;
-$imageBorder: none !default;
-$imageBorderRadius: 0.125rem !default;
-$imageBoxShadow: none !default;
-$imageBorder: none !default;
+$item-image-display: block !default;
+$item-image-float: none !default;
+$item-image-max-height: "" !default;
+$item-image-vertical-align: start !default;
+$item-image-margin: 0 !default;
+$item-image-padding: 0 !default;
+$item-image-border: none !default;
+$item-image-border-radius: 0.125rem !default;
+$item-image-box-shadow: none !default;
+$item-image-border: none !default;
 
 // Content */
-$contentDisplay: block !default;
-$contentVerticalAlign: start !default;
+$item-content-display: block !default;
+$item-content-vertical-align: start !default;
 
-$contentWidth: auto !default;
-$contentOffset: 0 !default;
-$contentBackground: none !default;
-$contentMargin: 0 !default;
-$contentPadding: 0 !default;
-$contentFontSize: 1em !default;
-$contentBorder: none !default;
-$contentBorderRadius: 0 !default;
-$contentBoxShadow: none !default;
-$contentColor: $textColor !default;
+$item-content-width: auto !default;
+$item-content-offset: 0 !default;
+$item-content-background: none !default;
+$item-content-margin: 0 !default;
+$item-content-padding: 0 !default;
+$item-content-font-size: 1em !default;
+$item-content-border: none !default;
+$item-content-border-radius: 0 !default;
+$item-content-box-shadow: none !default;
+$item-content-color: $text-color !default;
 
 // Header */
-$headerMargin: -$lineHeightOffset 0 0 !default;
-$headerFontWeight: $bold !default;
-$headerFontSize: $relativeBig !default;
-$headerColor: $darkTextColor !default;
+$item-header-margin: -$line-height-offset 0 0 !default;
+$item-header-font-weight: $bold !default;
+$item-header-font-size: $relative-big !default;
+$item-header-color: $dark-text-color !default;
 
 // Metadata */
-$metaMargin: 0.5em 0 0.5em !default;
-$metaFontSize: 1em !default;
-$metaLineHeight: 1em !default;
-$metaSpacing: 0.3em !default;
-$metaColor: rgba(0, 0, 0, 0.6) !default;
+$item-meta-margin: 0.5em 0 0.5em !default;
+$item-meta-font-size: 1em !default;
+$item-meta-line-height: 1em !default;
+$item-meta-spacing: 0.3em !default;
+$item-meta-color: rgba(0, 0, 0, 0.6) !default;
 
 // Icons */
-$actionOpacity: 0.75 !default;
-$actionHoverOpacity: 1 !default;
-$actionTransition: color $defaultDuration $defaultEasing !default;
+$item-action-opacity: 0.75 !default;
+$item-action-hover-opacity: 1 !default;
+$item-action-transition: color $default-duration $default-easing !default;
 
 // Actions */
-$favoriteColor: #FFB70A !default;
-$favoriteActiveColor: #FFE623 !default;
-$likeColor: #FF2733 !default;
-$likeActiveColor: #FF2733 !default;
+$item-favorite-color: #ffb70a !default;
+$item-favorite-active-color: #ffe623 !default;
+$item-like-color: #ff2733 !default;
+$item-like-active-color: #ff2733 !default;
 
 // Links */
-$headerLinkColor: $headerColor !default;
-$headerLinkHoverColor: $linkHoverColor !default;
-$metaLinkColor: $lightTextColor !default;
-$metaLinkHoverColor: $textColor !default;
-$contentLinkColor: '' !default;
-$contentLinkHoverColor: '' !default;
-$contentLinkTransition: color $defaultDuration $defaultEasing !default;
-
+$item-header-link-color: $item-header-color !default;
+$item-header-link-hover-color: $link-hover-color !default;
+$item-meta-link-color: $light-text-color !default;
+$item-meta-link-hover-color: $text-color !default;
+$item-content-link-color: "" !default;
+$item-content-link-hover-color: "" !default;
+$item-content-link-transition: color $default-duration $default-easing !default;
 
 // Description */
-$descriptionDistance: 0.6em !default;
-$descriptionMaxWidth: auto !default;
-$descriptionFontSize: 1em !default;
-$descriptionLineHeight: $lineHeight !default;
-$descriptionColor: $textColor !default;
+$item-description-distance: 0.6em !default;
+$item-description-max-width: auto !default;
+$item-description-font-size: 1em !default;
+$item-description-line-height: $line-height !default;
+$item-description-color: $text-color !default;
 
 // Content Image */
-$contentImageWidth: '' !default;
-$contentImageVerticalAlign: center !default;
+$item-content-image-width: "" !default;
+$item-content-image-vertical-align: center !default;
 
 // Avatar Image */
-$avatarSize: $contentImageWidth !default;
-$avatarBorderRadius: $circularRadius !default;
+$item-avatar-size: $item-content-image-width !default;
+$item-avatar-border-radius: $circular-radius !default;
 
 // Paragraph */
-$paragraphDistance: 0.5em !default;
+$item-paragraph-distance: 0.5em !default;
 
 // Additional Content */
-$extraDivider: none !default;
-$extraHorizontalSpacing: 0.5rem !default;
-$extraRowSpacing: 0.5rem !default;
+$item-extra-divider: none !default;
+$item-extra-horizontal-spacing: 0.5rem !default;
+$item-extra-row-spacing: 0.5rem !default;
 
-$extraBackground: none !default;
-$extraDisplay: block !default;
-$extraPosition: relative !default;
-$extraMargin: (1rem - $extraRowSpacing) 0 0 !default;
-$extraTop: 0 !default;
-$extraLeft: 0 !default;
-$extraWidth: 100% !default;
-$extraPadding: 0 0 0 !default;
-$extraBoxShadow: none !default;
-$extraColor: $lightTextColor !default;
-$extraTransition: color $defaultDuration $defaultEasing !default;
+$item-extra-background: none !default;
+$item-extra-display: block !default;
+$item-extra-position: relative !default;
+$item-extra-margin: (1rem - $item-extra-row-spacing) 0 0 !default;
+$item-extra-top: 0 !default;
+$item-extra-left: 0 !default;
+$item-extra-width: 100% !default;
+$item-extra-padding: 0 0 0 !default;
+$item-extra-box-shadow: none !default;
+$item-extra-color: $light-text-color !default;
+$item-extra-transition: color $default-duration $default-easing !default;
 
 //------------------- Variations --------------------*/
 
 // Relaxed */
-$relaxedItemSpacing: 1.5em !default;
-$veryRelaxedItemSpacing: 2em !default;
+$item-relaxed-spacing: 1.5em !default;
+$item-very-relaxed-spacing: 2em !default;
 
 // Divided */
-$dividedBorder: 1px solid $borderColor !default;
-$dividedMargin: 0 !default;
-$dividedPadding: 1em 0 !default;
+$item-divided-border: 1px solid $border-color !default;
+$item-divided-margin: 0 !default;
+$item-divided-padding: 1em 0 !default;
 
-$dividedFirstLastMargin: 0 !default;
-$dividedFirstLastPadding: 0 !default;
-
+$item-divided-first-last-margin: 0 !default;
+$item-divided-first-last-padding: 0 !default;
 
 // Unstackable */
-$unstackableMobileImageWidth: 125px !default;
+$item-unstackable-mobile-image-width: 125px !default;
 
 // Inverted */
-$invertedBackground: $background !default;
-$invertedContentBackground: $contentBackground !default;
-$invertedExtraBackground: $extraBackground !default;
-$invertedHeaderColor: $invertedTextColor !default;
-$invertedHeaderLinkColor: $invertedHeaderColor !default;
-$invertedHeaderLinkHoverColor: $invertedHoveredTextColor !default;
-$invertedMetaLinkColor: $invertedLightTextColor !default;
-$invertedMetaLinkHoverColor: $invertedTextColor !default;
-$invertedContentColor: $invertedTextColor !default;
-$invertedContentLinkColor: lighten(saturate($linkColor, 30), 25) !default;
-$invertedContentLinkHoverColor: $linkColor !default;
-$invertedExtraColor: $invertedLightTextColor !default;
-$invertedDescriptionColor: $invertedTextColor !default;
-$invertedMetaColor: rgba(255, 255, 255, 0.8) !default;
-$invertedLikeColor: lighten($likeColor,10) !default;
-$invertedLikeActiveColor: lighten($likeActiveColor,10) !default;
-$invertedFavoriteColor: lighten($favoriteColor,10) !default;
-$invertedFavoriteActiveColor: lighten($favoriteActiveColor,10) !default;
-$invertedDividedBorder: 1px solid $whiteBorderColor !default;
+$item-inverted-background: $item-background !default;
+$item-inverted-content-background: $item-content-background !default;
+$item-inverted-extra-background: $item-extra-background !default;
+$item-inverted-header-color: $inverted-text-color !default;
+$item-inverted-header-link-color: $item-inverted-header-color !default;
+$item-inverted-header-link-hover-color: $inverted-hovered-text-color !default;
+$item-inverted-meta-link-color: $inverted-light-text-color !default;
+$item-inverted-meta-link-hover-color: $inverted-text-color !default;
+$item-inverted-content-color: $inverted-text-color !default;
+$item-inverted-content-link-color: lighten(
+  saturate($link-color, 30),
+  25
+) !default;
+$item-inverted-content-link-hover-color: $link-color !default;
+$item-inverted-extra-color: $inverted-light-text-color !default;
+$item-inverted-description-color: $inverted-text-color !default;
+$item-inverted-meta-color: rgba(255, 255, 255, 0.8) !default;
+$item-inverted-like-color: lighten($item-like-color, 10) !default;
+$item-inverted-like-active-color: lighten($item-like-active-color, 10) !default;
+$item-inverted-favorite-color: lighten($item-favorite-color, 10) !default;
+$item-inverted-favorite-active-color: lighten(
+  $item-favorite-active-color,
+  10
+) !default;
+$item-inverted-divided-border: 1px solid $white-border-color !default;

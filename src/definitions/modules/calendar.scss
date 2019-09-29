@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/calendar';
-
+@import "../../themes/default/modules/calendar";
 
 /*******************************
             Popup
@@ -108,12 +107,12 @@
 .ui.calendar .ui.table tr .disabled {
   pointer-events: auto;
   cursor: default;
-  color: $disabledTextColor;
+  color: $disabled-text-color;
 }
 
 .ui.calendar .ui.table tr .adjacent:not(.disabled) {
-  color: $adjacentTextColor;
-  background: $adjacentBackground;
+  color: $calendar-adjacent-text-color;
+  background: $calendar-adjacent-background;
 }
 
 /*--------------
@@ -121,31 +120,40 @@
 ---------------*/
 
 .ui.calendar .ui.table tr td.today {
-  font-weight: $todayFontWeight;
+  font-weight: $calendar-today-font-weight;
 }
 
 .ui.calendar .ui.table tr td.range {
-  background: $rangeBackground;
-  color: $rangeTextColor;
-  box-shadow: $rangeBoxShadow;
+  background: $calendar-range-background;
+  color: $calendar-range-text-color;
+  box-shadow: $calendar-range-box-shadow;
 }
 
 .ui.calendar .ui.table.inverted tr td.range {
-  background: $rangeInvertedBackground;
-  color: $rangeInvertedTextColor;
-  box-shadow: $rangeInvertedBoxShadow;
+  background: $calendar-range-inverted-background;
+  color: $calendar-range-inverted-text-color;
+  box-shadow: $calendar-range-inverted-box-shadow;
 }
 
 .ui.calendar:not(.disabled) .calendar:focus .ui.table tbody tr td.focus,
 .ui.calendar:not(.disabled) .calendar.active .ui.table tbody tr td.focus {
-  box-shadow: $focusBoxShadow;
+  box-shadow: $calendar-focus-box-shadow;
 }
 
-.ui.calendar:not(.disabled) .calendar:focus .ui.table.inverted tbody tr td.focus,
-.ui.calendar:not(.disabled) .calendar.active .ui.table.inverted tbody tr td.focus {
-  box-shadow: $focusInvertedBoxShadow;
+.ui.calendar:not(.disabled)
+  .calendar:focus
+  .ui.table.inverted
+  tbody
+  tr
+  td.focus,
+.ui.calendar:not(.disabled)
+  .calendar.active
+  .ui.table.inverted
+  tbody
+  tr
+  td.focus {
+  box-shadow: $calendar-focus-inverted-box-shadow;
 }
-
 
 /*******************************
             States
@@ -156,13 +164,10 @@
 ---------------------*/
 
 .ui.disabled.calendar {
-  opacity: $disabledOpacity;
+  opacity: $disabled-opacity;
 }
 
 .ui.disabled.calendar > .input,
 .ui.disabled.calendar .ui.table tr .link {
   pointer-events: none;
 }
-
-
-

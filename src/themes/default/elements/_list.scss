@@ -1,219 +1,222 @@
 //****************************** List *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 //------------------- View --------------------*/
 
 // List */
-$listStyleType: none !default;
-$listStylePosition: outside !default;
-$margin: 1em 0 !default;
-$verticalPadding: 0 !default;
-$horizontalPadding: 0 !default;
+$list-style-type: none !default;
+$list-style-position: outside !default;
+$list-margin: 1em 0 !default;
+$list-vertical-padding: 0 !default;
+$list-horizontal-padding: 0 !default;
 
 // List Item */
-$itemVerticalPadding: $relative3px !default;
-$itemHorizontalPadding: 0 !default;
-$itemPadding: $itemVerticalPadding $itemHorizontalPadding !default;
-$itemLineHeight: $relativeLarge !default;
+$list-item-vertical-padding: $relative3px !default;
+$list-item-horizontal-padding: 0 !default;
+$list-item-padding: $list-item-vertical-padding $list-item-horizontal-padding !default;
+$list-item-line-height: $relative-large !default;
 
 // Sub List */
-$childListPadding: 0.75em 0 0.25em 0.5em !default;
-$childListIndent: 1em !default;
+$list-child-padding: 0.75em 0 0.25em 0.5em !default;
+$list-child-indent: 1em !default;
 
 // Sub List Item */
-$childItemVerticalPadding: $relative2px !default;
-$childItemHorizontalPadding: 0 !default;
-$childItemPadding: $childItemVerticalPadding $childItemHorizontalPadding !default;
-$childItemLineHeight: inherit !default;
+$list-child-item-vertical-padding: $relative2px !default;
+$list-child-item-horizontal-padding: 0 !default;
+$list-child-item-padding: $list-child-item-vertical-padding
+  $list-child-item-horizontal-padding !default;
+$list-child-item-line-height: inherit !default;
 
 //-------------------  Elements --------------------*/
 
 // Icon */
-$iconDistance: $relative4px !default;
-$iconOffset: 0 !default;
-$iconTransition: color $defaultDuration $defaultEasing !default;
-$iconVerticalAlign: top !default;
-$iconContentVerticalAlign: top !default;
+$list-icon-distance: $relative4px !default;
+$list-icon-offset: 0 !default;
+$list-icon-transition: color $default-duration $default-easing !default;
+$list-icon-vertical-align: top !default;
+$list-icon-content-vertical-align: top !default;
 
 // Image */
-$imageDistance: 0.5em !default;
-$imageAlign: top !default;
+$list-image-distance: 0.5em !default;
+$list-image-align: top !default;
 
 // Content */
-$contentDistance: 0.5em !default;
-$contentLineHeight: $itemLineHeight !default;
-$contentLineHeightOffset: ($contentLineHeight - 1em) / 2 !default;
-$contentVerticalAlign: top !default;
-$contentColor: $textColor !default;
+$list-content-distance: 0.5em !default;
+$list-content-line-height: $list-item-line-height !default;
+$list-content-line-height-offset: ($list-content-line-height - 1em) / 2 !default;
+$list-content-vertical-align: top !default;
+$list-content-color: $text-color !default;
 
 // Header */
-$itemHeaderFontFamily: $headerFont !default;
-$itemHeaderFontWeight: $bold !default;
-$itemHeaderColor: $textColor !default;
+$list-item-header-font-family: $header-font !default;
+$list-item-header-font-weight: $bold !default;
+$list-item-header-color: $text-color !default;
 
 // Description */
-$itemDescriptionColor: rgba(0, 0, 0, 0.7) !default;
+$list-item-description-color: rgba(0, 0, 0, 0.7) !default;
 
 // Link */
-$itemLinkColor: $linkColor !default;
-$itemLinkHoverColor: $linkHoverColor !default;
+$list-item-link-color: $link-color !default;
+$list-item-link-hover-color: $link-hover-color !default;
 
 // Header Link */
-$itemHeaderLinkColor: $itemLinkColor !default;
-$itemHeaderLinkHoverColor: $itemLinkHoverColor !default;
+$list-item-header-link-color: $list-item-link-color !default;
+$list-item-header-link-hover-color: $list-item-link-hover-color !default;
 
 // Linked Icon */
-$itemLinkIconColor: $lightTextColor !default;
-$itemLinkIconHoverColor: $textColor !default;
-$invertedIconLinkColor: $invertedLightTextColor !default;
+$list-item-link-icon-color: $light-text-color !default;
+$list-item-link-icon-hover-color: $text-color !default;
+$list-inverted-icon-link-color: $inverted-light-text-color !default;
 
 //------------------- States --------------------*/
 
-$disabledColor: $disabledTextColor !default;
-$invertedDisabledColor: $invertedDisabledTextColor !default;
+$list-disabled-color: $disabled-text-color !default;
+$list-inverted-disabled-color: $inverted-disabled-text-color !default;
 
 //-------------------  Variations --------------------*/
 
 // Float */
-$floatDistance: 1em !default;
-$leftFloatMargin: 0 $floatDistance 0 0 !default;
-$rightFloatMargin: 0 0 0 $floatDistance !default;
+$list-float-distance: 1em !default;
+$list-left-float-margin: 0 $list-float-distance 0 0 !default;
+$list-right-float-margin: 0 0 0 $list-float-distance !default;
 
 // Horizontal */
-$horizontalSpacing: 1em !default;
-$horizontalIconDistance: 0.25em !default;
-$horizontalVerticalAlign: middle !default;
+$list-horizontal-spacing: 1em !default;
+$list-horizontal-icon-distance: 0.25em !default;
+$list-horizontal-vertical-align: middle !default;
 
 // Inverted */
-$invertedListIconColor: $invertedLightTextColor !default;
-$invertedHeaderColor: $invertedTextColor !default;
-$invertedDescriptionColor: $invertedLightTextColor !default;
-$invertedItemLinkColor: $invertedTextColor !default;
-$invertedItemLinkHoverColor: $linkHoverColor !default;
-$invertedContentColor: $invertedLightTextColor !default;
+$list-inverted-icon-color: $inverted-light-text-color !default;
+$list-inverted-header-color: $inverted-text-color !default;
+$list-inverted-description-color: $inverted-light-text-color !default;
+$list-inverted-item-link-color: $inverted-text-color !default;
+$list-inverted-item-link-hover-color: $link-hover-color !default;
+$list-inverted-content-color: $inverted-light-text-color !default;
 
 // Link List */
-$linkListItemColor: $unselectedTextColor !default;
-$linkListItemHoverColor: $hoveredTextColor !default;
-$linkListItemDownColor: $pressedTextColor !default;
-$linkListItemActiveColor: $selectedTextColor !default;
-$linkListTransition:
-  $defaultDuration color $defaultEasing
- !default;
+$list-link-item-color: $unselected-text-color !default;
+$list-link-item-hover-color: $hovered-text-color !default;
+$list-link-item-down-color: $pressed-text-color !default;
+$list-link-item-active-color: $selected-text-color !default;
+$list-link-transition: $default-duration color $default-easing !default;
 
 // Inverted Link List */
-$invertedLinkListItemColor: $invertedUnselectedTextColor !default;
-$invertedLinkListItemHoverColor: $invertedHoveredTextColor !default;
-$invertedLinkListItemDownColor: $invertedPressedTextColor !default;
-$invertedLinkListItemActiveColor: $invertedSelectedTextColor !default;
+$list-inverted-link-item-color: $inverted-unselected-text-color !default;
+$list-inverted-link-item-hover-color: $inverted-hovered-text-color !default;
+$list-inverted-link-item-down-color: $inverted-pressed-text-color !default;
+$list-inverted-link-item-active-color: $inverted-selected-text-color !default;
 
 // Selection List */
-$selectionListItemMargin: 0 !default;
-$selectionListItemBorderRadius: 0.5em !default;
-$selectionListItemVerticalPadding: 0.5em !default;
-$selectionListItemHorizontalPadding: 0.5em !default;
-$selectionListTransition:
-  $defaultDuration color $defaultEasing,
-  $defaultDuration padding-left $defaultEasing,
-  $defaultDuration background-color $defaultEasing
- !default;
+$list-selection-item-margin: 0 !default;
+$list-selection-item-border-radius: 0.5em !default;
+$list-selection-item-vertical-padding: 0.5em !default;
+$list-selection-item-horizontal-padding: 0.5em !default;
+$list-selection-transition: $default-duration color $default-easing,
+  $default-duration padding-left $default-easing,
+  $default-duration background-color $default-easing !default;
 
 // Selection List States */
-$selectionListBackground: transparent !default;
-$selectionListColor: $unselectedTextColor !default;
-$selectionListHoverBackground: $subtleTransparentBlack !default;
-$selectionListHoverColor: $hoveredTextColor !default;
-$selectionListDownBackground: $transparentBlack !default;
-$selectionListDownColor: $pressedTextColor !default;
-$selectionListActiveBackground: $transparentBlack !default;
-$selectionListActiveColor: $selectedTextColor !default;
+$list-selection-background: transparent !default;
+$list-selection-color: $unselected-text-color !default;
+$list-selection-hover-background: $subtle-transparent-black !default;
+$list-selection-hover-color: $hovered-text-color !default;
+$list-selection-down-background: $transparent-black !default;
+$list-selection-down-color: $pressed-text-color !default;
+$list-selection-active-background: $transparent-black !default;
+$list-selection-active-color: $selected-text-color !default;
 
 // Inverted Selection List */
-$invertedSelectionListBackground: transparent !default;
-$invertedSelectionListColor: $invertedUnselectedTextColor !default;
-$invertedSelectionListHoverBackground: $subtleTransparentWhite !default;
-$invertedSelectionListHoverColor: $invertedHoveredTextColor !default;
-$invertedSelectionListDownBackground: $transparentWhite !default;
-$invertedSelectionListDownColor: $invertedPressedTextColor !default;
-$invertedSelectionListActiveBackground: $transparentWhite !default;
-$invertedSelectionListActiveColor: $invertedSelectedTextColor !default;
+$list-inverted-selection-background: transparent !default;
+$list-inverted-selection-color: $inverted-unselected-text-color !default;
+$list-inverted-selection-hover-background: $subtle-transparent-white !default;
+$list-inverted-selection-hover-color: $inverted-hovered-text-color !default;
+$list-inverted-selection-down-background: $transparent-white !default;
+$list-inverted-selection-down-color: $inverted-pressed-text-color !default;
+$list-inverted-selection-active-background: $transparent-white !default;
+$list-inverted-selection-active-color: $inverted-selected-text-color !default;
 
 // Animated List */
-$animatedDuration: 0.25s !default;
-$animatedDelay: 0.1s !default;
-$animatedListTransition:
-  $animatedDuration color $defaultEasing $animatedDelay,
-  $animatedDuration padding-left $defaultEasing $animatedDelay,
-  $animatedDuration background-color $defaultEasing $animatedDelay
- !default;
-$animatedListIndent: 1em !default;
+$list-animated-duration: 0.25s !default;
+$list-animated-delay: 0.1s !default;
+$list-animated-transition: $list-animated-duration color $default-easing
+    $list-animated-delay,
+  $list-animated-duration padding-left $default-easing $list-animated-delay,
+  $list-animated-duration background-color $default-easing $list-animated-delay !default;
+$list-animated-indent: 1em !default;
 
 // Bulleted */
-$bulletDistance: 1.25rem !default;
-$bulletOffset: -$bulletDistance !default;
+$list-bullet-distance: 1.25rem !default;
+$list-bullet-offset: -$list-bullet-distance !default;
 
-$bulletOpacity: 1 !default;
-$bulletCharacter: '•' !default;
-$bulletColor: inherit !default;
-$bulletLinkColor: $textColor !default;
-$bulletVerticalAlign: top !default;
-$bulletChildDistance: $bulletDistance !default;
+$list-bullet-opacity: 1 !default;
+$list-bullet-character: "•" !default;
+$list-bullet-color: inherit !default;
+$list-bullet-link-color: $text-color !default;
+$list-bullet-vertical-align: top !default;
+$list-bullet-child-distance: $list-bullet-distance !default;
 
 // Horizontal Bullets */
-$horizontalBulletColor: $textColor !default;
-$horizontalBulletSpacing: strip-unit($bulletDistance) + 0.5em !default;
+$list-horizontal-bullet-color: $text-color !default;
+$list-horizontal-bullet-spacing: strip-unit($list-bullet-distance) + 0.5em !default;
 
 // Ordered List */
-$orderedCountName: ordered !default;
-$orderedCountSeparator: "." !default;
-$orderedCountSuffix: "." !default;
-$orderedCountContent: counters($orderedCountName, $orderedCountSeparator) " " !default;
-$orderedCountContentSuffixed: counters($orderedCountName, $orderedCountSeparator) $orderedCountSuffix !default;
-$orderedCountColor: $textColor !default;
-$orderedCountDistance: 1.25rem !default;
-$orderedCountOpacity: 0.8 !default;
-$orderedCountTextAlign: right !default;
-$orderedCountVerticalAlign: middle !default;
+$list-ordered-count-name: ordered !default;
+$list-ordered-count-separator: "." !default;
+$list-ordered-count-suffix: "." !default;
+$list-ordered-count-content: counters(
+    $list-ordered-count-name,
+    $list-ordered-count-separator
+  )
+  " " !default;
+$list-ordered-count-content-suffixed: counters(
+    $list-ordered-count-name,
+    $list-ordered-count-separator
+  )
+  $list-ordered-count-suffix !default;
+$list-ordered-count-color: $text-color !default;
+$list-ordered-count-distance: 1.25rem !default;
+$list-ordered-count-opacity: 0.8 !default;
+$list-ordered-count-text-align: right !default;
+$list-ordered-count-vertical-align: middle !default;
 
-$orderedChildCountDistance: 1em !default;
-$orderedChildCountOffset: -2em !default;
+$list-ordered-child-count-distance: 1em !default;
+$list-ordered-child-count-offset: -2em !default;
 
-$orderedInvertedCountColor: $invertedLightTextColor !default;
+$list-ordered-inverted-count-color: $inverted-light-text-color !default;
 
 // Horizontal Ordered */
-$horizontalOrderedCountDistance: 0.5em !default;
+$list-horizontal-ordered-count-distance: 0.5em !default;
 
 // Divided */
-$dividedBorderWidth: 1px !default;
-$dividedBorder: $dividedBorderWidth solid $borderColor !default;
-$dividedInvertedBorderColor: $whiteBorderColor !default;
-$dividedChildListBorder: none !default;
-$dividedChildItemBorder: none !default;
+$list-divided-border-width: 1px !default;
+$list-divided-border: $list-divided-border-width solid $border-color !default;
+$list-divided-inverted-border-color: $white-border-color !default;
+$list-divided-child-border: none !default;
+$list-divided-child-item-border: none !default;
 
 // Divided Horizontal */
-$horizontalDividedSpacing: ($horizontalSpacing / 2) !default;
-$horizontalDividedLineHeight: 0.6 !default;
+$list-horizontal-divided-spacing: ($list-horizontal-spacing / 2) !default;
+$list-horizontal-divided-line-height: 0.6 !default;
 
 // Divided */
-$celledBorderWidth: 1px !default;
-$celledBorder: $celledBorderWidth solid $borderColor !default;
-$celledInvertedBorder: $whiteBorderColor !default;
-$celledHorizontalPadding: 0.5em !default;
-$celledChildListBorder: none !default;
-$celledChildItemBorder: none !default;
+$list-celled-border-width: 1px !default;
+$list-celled-border: $list-celled-border-width solid $border-color !default;
+$list-celled-inverted-border: $white-border-color !default;
+$list-celled-horizontal-padding: 0.5em !default;
+$list-celled-child-border: none !default;
+$list-celled-child-item-border: none !default;
 
 // Divided Horizontal */
-$horizontalCelledSpacing: ($horizontalSpacing / 2) !default;
-$horizontalCelledLineHeight: 0.6 !default;
+$list-horizontal-celled-spacing: ($list-horizontal-spacing / 2) !default;
+$list-horizontal-celled-line-height: 0.6 !default;
 
 // Relaxed */
-$relaxedItemVerticalPadding: $relative6px !default;
-$relaxedChildItemVerticalPadding: $relative3px !default;
-$relaxedHeaderMargin: 0.25rem !default;
-$relaxedHorizontalPadding: 1rem !default;
+$list-relaxed-item-vertical-padding: $relative6px !default;
+$list-relaxed-child-item-vertical-padding: $relative3px !default;
+$list-relaxed-header-margin: 0.25rem !default;
+$list-relaxed-horizontal-padding: 1rem !default;
 
 // Very Relaxed */
-$veryRelaxedItemVerticalPadding: $relative12px !default;
-$veryRelaxedChildItemVerticalPadding: $relative4px !default;
-$veryRelaxedHeaderMargin: 0.5rem !default;
-$veryRelaxedHorizontalPadding: 1.5rem !default;
-
+$list-very-relaxed-item-vertical-padding: $relative12px !default;
+$list-very-relaxed-child-item-vertical-padding: $relative4px !default;
+$list-very-relaxed-header-margin: 0.5rem !default;
+$list-very-relaxed-horizontal-padding: 1.5rem !default;

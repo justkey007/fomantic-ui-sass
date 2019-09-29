@@ -1,6 +1,5 @@
-@import './size';
+@import "./size";
 
-$loaderLineWidth: 0.2em !default;
-$loaderOffset : -($loaderSize / 2) !default;
-$loaderMargin : $loaderOffset 0 0 $loaderOffset !default;
-
+$loader-line-width: 0.2em !default;
+$loader-offset: (-$loader-size / 2) !default;
+$loader-margin: $loader-offset 0 0 $loader-offset !default;

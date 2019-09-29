@@ -1,21 +1,21 @@
-@import './main';
+@import "./main";
 
 // Positive or success */
-$positiveColor           : $green !default;
-$positiveBackgroundColor : #FCFFF5 !default;
-$successBackgroundColor : $positiveBackgroundColor !default;
-$successColor           : $positiveColor !default;
+$positive-color: $green !default;
+$positive-background-color: #fcfff5 !default;
+$success-background-color: $positive-background-color !default;
+$success-color: $positive-color !default;
 
 // Negative or error*/
-$negativeColor           : $red !default;
-$negativeBackgroundColor : #FFF6F6 !default;
-$errorBackgroundColor    : $negativeBackgroundColor !default;
-$errorColor              : $negativeColor !default;
+$negative-color: $red !default;
+$negative-background-color: #fff6f6 !default;
+$error-background-color: $negative-background-color !default;
+$error-color: $negative-color !default;
 
 // Info */
-$infoColor              : #31CCEC !default;
-$infoBackgroundColor    : #F8FFFF !default;
+$info-color: #31ccec !default;
+$info-background-color: #f8ffff !default;
 
 // Warning */
-$warningColor           : #F2C037 !default;
-$warningBackgroundColor : #FFFAF3 !default;
+$warning-color: #f2c037 !default;
+$warning-background-color: #fffaf3 !default;

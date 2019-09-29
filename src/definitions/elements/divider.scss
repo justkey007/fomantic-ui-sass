@@ -1,19 +1,19 @@
-@import '../../themes/default/elements/divider';
+@import "../../themes/default/elements/divider";
 
 /*******************************
             Divider
 *******************************/
 
 .ui.divider {
-  margin: $margin;
+  margin: $divider-margin;
 
   line-height: 1;
   height: 0;
 
-  font-weight: $fontWeight;
-  text-transform: $textTransform;
-  letter-spacing: $letterSpacing;
-  color: $color;
+  font-weight: $divider-font-weight;
+  text-transform: $divider-text-transform;
+  letter-spacing: $divider-letter-spacing;
+  color: $divider-color;
 
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -24,8 +24,8 @@
 ---------------*/
 
 .ui.divider:not(.vertical):not(.horizontal) {
-  border-top: $shadowWidth solid $shadowColor;
-  border-bottom: $highlightWidth solid $highlightColor;
+  border-top: $divider-shadow-width solid $divider-shadow-color;
+  border-bottom: $divider-highlight-width solid $divider-highlight-color;
 }
 
 /*--------------
@@ -47,14 +47,14 @@
   white-space: nowrap;
 
   height: auto;
-  margin: $horizontalMargin;
+  margin: $divider-horizontal-margin;
   line-height: 1;
   text-align: center;
 }
 
 .ui.horizontal.divider:before,
 .ui.horizontal.divider:after {
-  content: '';
+  content: "";
   display: table-cell;
   position: relative;
   top: 50%;
@@ -63,10 +63,10 @@
 }
 
 .ui.horizontal.divider:before {
-  background-position: right $horizontalDividerMargin top 50%;
+  background-position: right $divider-in-horizontal-position-margin top 50%;
 }
 .ui.horizontal.divider:after {
-  background-position: left $horizontalDividerMargin top 50%;
+  background-position: left $divider-in-horizontal-position-margin top 50%;
 }
 
 /*--------------
@@ -93,14 +93,14 @@
 .ui.vertical.divider:after {
   position: absolute;
   left: 50%;
-  content: '';
+  content: "";
   z-index: 3;
 
-  border-left: $shadowWidth solid $shadowColor;
-  border-right: $highlightWidth solid $highlightColor;
+  border-left: $divider-shadow-width solid $divider-shadow-color;
+  border-right: $divider-highlight-width solid $divider-highlight-color;
 
   width: 0;
-  height: $verticalDividerHeight;
+  height: $divider-vertical-height;
 }
 
 .ui.vertical.divider:before {
@@ -112,14 +112,13 @@
 }
 
 /* Inside grid */
-@media only screen and (max-width : $largestMobileScreen) {
-
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.stackable.grid .ui.vertical.divider,
   .ui.grid .stackable.row .ui.vertical.divider {
     display: table;
     white-space: nowrap;
     height: auto;
-    margin: $horizontalMargin;
+    margin: $divider-horizontal-margin;
     overflow: hidden;
     line-height: 1;
     text-align: center;
@@ -136,7 +135,7 @@
     left: 0;
     border-left: none;
     border-right: none;
-    content: '';
+    content: "";
     display: table-cell;
     position: relative;
     top: 50%;
@@ -146,11 +145,11 @@
 
   .ui.stackable.grid .ui.vertical.divider:before,
   .ui.grid .stackable.row .ui.vertical.divider:before {
-    background-position: right $horizontalDividerMargin top 50%;
+    background-position: right $divider-in-horizontal-position-margin top 50%;
   }
   .ui.stackable.grid .ui.vertical.divider:after,
   .ui.grid .stackable.row .ui.vertical.divider:after {
-    background-position: left $horizontalDividerMargin top 50%;
+    background-position: left $divider-in-horizontal-position-margin top 50%;
   }
 }
 
@@ -159,8 +158,8 @@
 ---------------*/
 
 .ui.divider > .icon {
-  margin: $dividerIconMargin;
-  font-size: $dividerIconSize;
+  margin: $divider-icon-margin;
+  font-size: $divider-icon-size;
   height: 1em;
   vertical-align: middle;
 }
@@ -208,15 +207,15 @@
 .ui.divider.inverted,
 .ui.vertical.inverted.divider,
 .ui.horizontal.inverted.divider {
-  color: $invertedTextColor;
+  color: $divider-inverted-text-color;
 }
 .ui.divider.inverted,
 .ui.divider.inverted:after,
 .ui.divider.inverted:before {
-  border-top-color: $invertedShadowColor !important;
-  border-left-color: $invertedShadowColor !important;
-  border-bottom-color: $invertedHighlightColor !important;
-  border-right-color: $invertedHighlightColor !important;
+  border-top-color: $divider-inverted-shadow-color !important;
+  border-left-color: $divider-inverted-shadow-color !important;
+  border-bottom-color: $divider-inverted-highlight-color !important;
+  border-right-color: $divider-inverted-highlight-color !important;
 }
 
 /*--------------
@@ -240,8 +239,8 @@
 ---------------*/
 
 .ui.section.divider {
-  margin-top: $sectionMargin;
-  margin-bottom: $sectionMargin;
+  margin-top: $divider-section-margin;
+  margin-bottom: $divider-section-margin;
 }
 
 /*--------------
@@ -249,5 +248,7 @@
 ---------------*/
 
 .ui.divider {
-  font-size: $medium;
+  font-size: $divider-medium;
 }
+
+@import '../../themes/default/elements/divider.style';

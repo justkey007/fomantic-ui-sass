@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/modal';
-
+@import "../../themes/default/modules/modal";
 
 /*******************************
              Modal
@@ -7,15 +6,15 @@
 
 .ui.modal {
   display: none;
-  z-index: $zIndex;
+  z-index: $modal-z-index;
   text-align: left;
 
-  background: $background;
-  border: $border;
-  box-shadow: $boxShadow;
-  transform-origin: $transformOrigin;
+  background: $modal-background;
+  border: $modal-border;
+  box-shadow: $modal-box-shadow;
+  transform-origin: $modal-transform-origin;
 
-  border-radius: $borderRadius + .104rem;
+  border-radius: $modal-border-radius + 0.104rem;
   user-select: text;
   flex: 0 0 auto;
 }
@@ -32,13 +31,13 @@
 .ui.modal:not(.overlay) > .icon:first-child + *,
 .ui.modal:not(.overlay) > .dimmer:first-child + *:not(.icon),
 .ui.modal:not(.overlay) > .dimmer:first-child + .icon + * {
-  border-top-left-radius: $borderRadius;
-  border-top-right-radius: $borderRadius;
+  border-top-left-radius: $modal-border-radius;
+  border-top-right-radius: $modal-border-radius;
 }
 
 .ui.modal:not(.overlay) > :last-child {
-  border-bottom-left-radius: $borderRadius;
-  border-bottom-right-radius: $borderRadius;
+  border-bottom-left-radius: $modal-border-radius;
+  border-bottom-right-radius: $modal-border-radius;
 }
 
 /*******************************
@@ -52,19 +51,19 @@
 .ui.modal > .header {
   background-color: transparent;
   color: #1d2129;
-  border-bottom: $headerBorder;
+  border-bottom: $modal-header-border;
 
-  font-family: $headerFontFamily;
-  margin: $headerMargin;
-  padding: $headerPadding;
-  box-shadow: $headerBoxShadow;
+  font-family: $modal-header-font-family;
+  margin: $modal-header-margin;
+  padding: $modal-header-padding;
+  box-shadow: $modal-header-box-shadow;
   user-select: none;
   display: flex;
   align-items: center;
-  font-weight: $headerFontWeight;
-  font-size: $headerFontSize;
+  font-weight: $modal-header-font-weight;
+  font-size: $modal-header-font-size;
 
-  height: $headerHeight;
+  height: $modal-header-height;
 
   .title {
     text-overflow: ellipsis;
@@ -89,8 +88,8 @@
 }
 
 .ui.modal > .header.primary {
-  background: $headerBackground;
-  color: $headerColor;
+  background: $modal-header-background;
+  color: $modal-header-color;
 }
 
 .controls > .icon:hover {
@@ -104,10 +103,10 @@
   display: block;
   overflow: auto;
   width: 100%;
-  font-size: $contentFontSize;
-  line-height: $contentLineHeight;
-  padding: $contentPadding;
-  background: $contentBackground;
+  font-size: $modal-content-font-size;
+  line-height: $modal-content-line-height;
+  padding: $modal-content-padding;
+  background: $modal-content-background;
 }
 .ui.modal > .image.content {
   display: flex;
@@ -118,8 +117,8 @@
 .ui.modal > .content > .image {
   display: block;
   flex: 0 1 auto;
-  width: $imageWidth;
-  align-self: $imageVerticalAlign;
+  width: $modal-image-width;
+  align-self: $modal-image-vertical-align;
   max-width: 100%;
 }
 .ui.modal > [class*="top aligned"] {
@@ -137,15 +136,15 @@
   display: block;
   flex: 1 0 auto;
   min-width: 0;
-  align-self: $descriptionVerticalAlign;
+  align-self: $modal-description-vertical-align;
 }
 
 .ui.modal > .content > .icon + .description,
 .ui.modal > .content > .image + .description {
   flex: 0 1 auto;
-  min-width: $descriptionMinWidth;
-  width: $descriptionWidth;
-  padding-left: $descriptionDistance;
+  min-width: $modal-description-min-width;
+  width: $modal-description-width;
+  padding-left: $modal-description-distance;
 }
 
 /*rtl:ignore*/
@@ -154,7 +153,7 @@
   opacity: 1;
   width: auto;
   line-height: 1;
-  font-size: $imageIconSize;
+  font-size: $modal-image-icon-size;
 }
 
 /*--------------
@@ -162,9 +161,9 @@
 ---------------*/
 
 .ui.modal > .footer {
-  background: $actionBackground;
-  padding: $actionPadding;
-  border-top: $actionBorder;
+  background: $modal-action-background;
+  padding: $modal-action-padding;
+  border-top: $modal-action-border;
 }
 
 /*-------------------
@@ -172,46 +171,45 @@
 --------------------*/
 
 /* Modal Width */
-@media only screen and (max-width : $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.modal:not(.fullscreen) {
-    width: calc($mobileWidth - 1px);
-    margin: $mobileMargin;
+    width: calc(#{$modal-mobile-width} - 1px);
+    margin: $modal-mobile-margin;
   }
 }
-@media only screen and (min-width : $tabletBreakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
   .ui.modal:not(.fullscreen) {
-    width: calc($tabletWidth - 1px);
-    margin: $tabletMargin;
+    width: calc(#{$modal-tablet-width} - 1px);
+    margin: $modal-tablet-margin;
   }
 }
-@media only screen and (min-width : $computerBreakpoint) {
+@media only screen and (min-width: $computer-breakpoint) {
   .ui.modal:not(.fullscreen) {
-    width: $computerWidth;
-    margin: $computerMargin;
+    width: $modal-computer-width;
+    margin: $modal-computer-margin;
   }
 }
-@media only screen and (min-width : $largeMonitorBreakpoint) {
+@media only screen and (min-width: $large-monitor-breakpoint) {
   .ui.modal:not(.fullscreen) {
-    width: $largeMonitorWidth;
-    margin: $largeMonitorMargin;
+    width: $modal-large-monitor-width;
+    margin: $modal-large-monitor-margin;
   }
 }
-@media only screen and (min-width : $widescreenMonitorBreakpoint) {
+@media only screen and (min-width: $widescreen-monitor-breakpoint) {
   .ui.modal:not(.fullscreen) {
-    width: $widescreenMonitorWidth;
-    margin: $widescreenMonitorMargin;
+    width: $modal-widescreen-monitor-width;
+    margin: $modal-widescreen-monitor-margin;
   }
 }
 
 /* Mobile */
-@media only screen and (max-width : $largestMobileScreen) {
-
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.modal > .header {
-    padding: $mobileHeaderPadding !important;
+    padding: $modal-mobile-header-padding !important;
   }
   .ui.modal > .content {
     display: block;
-    padding: $mobileContentPadding !important;
+    padding: $modal-mobile-content-padding !important;
   }
 
   /*rtl:ignore*/
@@ -223,10 +221,10 @@
     max-width: 100%;
     margin: 0 auto !important;
     text-align: center;
-    padding: $mobileImagePadding !important;
+    padding: $modal-mobile-image-padding !important;
   }
   .ui.modal > .content > .image > i.icon {
-    font-size: $mobileImageIconSize;
+    font-size: $modal-mobile-image-icon-size;
     text-align: center;
   }
 
@@ -235,13 +233,13 @@
     display: block;
     width: 100% !important;
     margin: 0 !important;
-    padding: $mobileDescriptionPadding !important;
+    padding: $modal-mobile-description-padding !important;
     box-shadow: none;
   }
 
   /* Let Buttons Stack */
   .ui.modal > .version {
-    padding: $mobileActionPadding !important;
+    padding: $modal-mobile-action-padding !important;
   }
 }
 
@@ -250,7 +248,7 @@
 ---------------*/
 
 .ui.inverted.dimmer > .ui.modal {
-  box-shadow: $invertedBoxShadow;
+  box-shadow: $modal-inverted-box-shadow;
 }
 
 /*******************************
@@ -262,7 +260,7 @@
   border: none;
   border-radius: 0;
   box-shadow: none !important;
-  color: $basicModalColor;
+  color: $modal-basic-color;
 }
 .ui.basic.modal > .header,
 .ui.basic.modal > .content,
@@ -270,19 +268,19 @@
   background-color: transparent;
 }
 .ui.basic.modal > .header {
-  color: $basicModalHeaderColor;
+  color: $modal-basic-header-color;
 }
 .ui.basic.modal > .close {
-  top: $basicModalCloseTop;
-  right: $basicModalCloseRight;
-  color: $basicInnerCloseColor;
+  top: $modal-basic-close-top;
+  right: $modal-basic-close-right;
+  color: $modal-basic-inner-close-color;
 }
 
 .ui.inverted.dimmer > .basic.modal {
-  color: $basicInvertedModalColor;
+  color: $modal-basic-inverted-color;
 }
 .ui.inverted.dimmer > .ui.basic.modal > .header {
-  color: $basicInvertedModalHeaderColor;
+  color: $modal-basic-inverted-header-color;
 }
 /* Resort to margin positioning if legacy */
 .ui.legacy.legacy.modal,
@@ -301,7 +299,7 @@
 }
 
 .ui.legacy.overlay.fullscreen.modal {
-  margin-top: -$scrollingMargin !important;
+  margin-top: -$modal-scrolling-margin !important;
 }
 
 /*******************************
@@ -311,7 +309,7 @@
 .ui.loading.modal {
   display: block;
   visibility: hidden;
-  z-index: $loadingZIndex;
+  z-index: $modal-loading-z-index;
 }
 
 .ui.active.modal {
@@ -327,21 +325,20 @@
 ---------------*/
 
 .ui.top.aligned.modal {
-  top: $topAlignedMargin;
+  top: $modal-top-aligned-margin;
 }
 .ui.bottom.aligned.modal {
-  bottom: $bottomAlignedMargin;
+  bottom: $modal-bottom-aligned-margin;
 }
 
-@media only screen and (max-width : $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.top.aligned.modal {
-    top: $mobileTopAlignedMargin;
+    top: $modal-mobile-top-aligned-margin;
   }
   .ui.bottom.aligned.modal {
-    bottom: $mobileBottomAlignedMargin;
+    bottom: $modal-mobile-bottom-aligned-margin;
   }
 }
-
 
 /*--------------
     Scrolling
@@ -360,7 +357,7 @@
   -webkit-overflow-scrolling: touch;
 }
 .modals.dimmer .ui.scrolling.modal:not(.fullscreen) {
-  margin: $scrollingMargin auto;
+  margin: $modal-scrolling-margin auto;
 }
 
 /* Undetached Scrolling */
@@ -374,12 +371,12 @@
 .scrolling.undetached.dimmable .ui.scrolling.modal:not(.fullscreen) {
   position: absolute;
   left: 50%;
-  margin-top: $scrollingMargin !important;
+  margin-top: $modal-scrolling-margin !important;
 }
 
 /* Scrolling Content */
 .ui.modal > .scrolling.content {
-  max-height: $scrollingContentMaxHeight;
+  max-height: $modal-scrolling-content-max-height;
   overflow: auto;
 }
 
@@ -388,9 +385,9 @@
 ---------------*/
 
 .ui.fullscreen.modal {
-  width: $fullScreenWidth;
-  left: $fullScreenOffset;
-  margin: $fullScreenMargin;
+  width: $modal-full-screen-width;
+  left: $modal-full-screen-offset;
+  margin: $modal-full-screen-margin;
 }
 .ui.overlay.fullscreen.modal {
   width: 100%;
@@ -400,15 +397,15 @@
   border-radius: 0;
 }
 .ui.fullscreen.modal > .header {
-  padding-right: $closeHitbox;
+  padding-right: $modal-close-hitbox;
 }
 .ui.fullscreen.modal > .close {
-  top: $innerCloseTop;
-  right: $innerCloseRight;
-  color: $innerCloseColor;
+  top: $modal-inner-close-top;
+  right: $modal-inner-close-right;
+  color: $modal-inner-close-color;
 }
 .ui.basic.fullscreen.modal > .close {
-  color: $basicInnerCloseColor;
+  color: $modal-basic-inner-close-color;
 }
 /*--------------
       Size
@@ -420,147 +417,147 @@
 
 /* Mini */
 .ui.mini.modal > .header:not(.ui) {
-  font-size: $miniHeaderSize;
+  font-size: $modal-mini-header-size;
 }
 
 /* Mini Modal Width */
-@media only screen and (max-width : $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.mini.modal {
-    width: $miniMobileWidth;
-    margin: $miniMobileMargin;
+    width: $modal-mini-mobile-width;
+    margin: $modal-mini-mobile-margin;
   }
 }
-@media only screen and (min-width : $tabletBreakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
   .ui.mini.modal {
-    width: $miniTabletWidth;
-    margin: $miniTabletMargin;
+    width: $modal-mini-tablet-width;
+    margin: $modal-mini-tablet-margin;
   }
 }
-@media only screen and (min-width : $computerBreakpoint) {
+@media only screen and (min-width: $computer-breakpoint) {
   .ui.mini.modal {
-    width: $miniComputerWidth;
-    margin: $miniComputerMargin;
+    width: $modal-mini-computer-width;
+    margin: $modal-mini-computer-margin;
   }
 }
-@media only screen and (min-width : $largeMonitorBreakpoint) {
+@media only screen and (min-width: $large-monitor-breakpoint) {
   .ui.mini.modal {
-    width: $miniLargeMonitorWidth;
-    margin: $miniLargeMonitorMargin;
+    width: $modal-mini-large-monitor-width;
+    margin: $modal-mini-large-monitor-margin;
   }
 }
-@media only screen and (min-width : $widescreenMonitorBreakpoint) {
+@media only screen and (min-width: $widescreen-monitor-breakpoint) {
   .ui.mini.modal {
-    width: $miniWidescreenMonitorWidth;
-    margin: $miniWidescreenMonitorMargin;
+    width: $modal-mini-widescreen-monitor-width;
+    margin: $modal-mini-widescreen-monitor-margin;
   }
 }
 
 /* Tiny */
 .ui.tiny.modal > .header:not(.ui) {
-  font-size: $tinyHeaderSize;
+  font-size: $modal-tiny-header-size;
 }
 
 /* Tiny Modal Width */
-@media only screen and (max-width : $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.tiny.modal {
-    width: $tinyMobileWidth;
-    margin: $tinyMobileMargin;
+    width: $modal-tiny-mobile-width;
+    margin: $modal-tiny-mobile-margin;
   }
 }
-@media only screen and (min-width : $tabletBreakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
   .ui.tiny.modal {
-    width: $tinyTabletWidth;
-    margin: $tinyTabletMargin;
+    width: $modal-tiny-tablet-width;
+    margin: $modal-tiny-tablet-margin;
   }
 }
-@media only screen and (min-width : $computerBreakpoint) {
+@media only screen and (min-width: $computer-breakpoint) {
   .ui.tiny.modal {
-    width: $tinyComputerWidth;
-    margin: $tinyComputerMargin;
+    width: $modal-tiny-computer-width;
+    margin: $modal-tiny-computer-margin;
   }
 }
-@media only screen and (min-width : $largeMonitorBreakpoint) {
+@media only screen and (min-width: $large-monitor-breakpoint) {
   .ui.tiny.modal {
-    width: $tinyLargeMonitorWidth;
-    margin: $tinyLargeMonitorMargin;
+    width: $modal-tiny-large-monitor-width;
+    margin: $modal-tiny-large-monitor-margin;
   }
 }
-@media only screen and (min-width : $widescreenMonitorBreakpoint) {
+@media only screen and (min-width: $widescreen-monitor-breakpoint) {
   .ui.tiny.modal {
-    width: $tinyWidescreenMonitorWidth;
-    margin: $tinyWidescreenMonitorMargin;
+    width: $modal-tiny-widescreen-monitor-width;
+    margin: $modal-tiny-widescreen-monitor-margin;
   }
 }
 
 /* Small */
 .ui.small.modal > .header:not(.ui) {
-  font-size: $smallHeaderSize;
+  font-size: $modal-small-header-size;
 }
 
 /* Small Modal Width */
-@media only screen and (max-width : $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.small.modal {
-    width: $smallMobileWidth;
-    margin: $smallMobileMargin;
+    width: $modal-small-mobile-width;
+    margin: $modal-small-mobile-margin;
   }
 }
-@media only screen and (min-width : $tabletBreakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
   .ui.small.modal {
-    width: $smallTabletWidth;
-    margin: $smallTabletMargin;
+    width: $modal-small-tablet-width;
+    margin: $modal-small-tablet-margin;
   }
 }
-@media only screen and (min-width : $computerBreakpoint) {
+@media only screen and (min-width: $computer-breakpoint) {
   .ui.small.modal {
-    width: $smallComputerWidth;
-    margin: $smallComputerMargin;
+    width: $modal-small-computer-width;
+    margin: $modal-small-computer-margin;
   }
 }
-@media only screen and (min-width : $largeMonitorBreakpoint) {
+@media only screen and (min-width: $large-monitor-breakpoint) {
   .ui.small.modal {
-    width: $smallLargeMonitorWidth;
-    margin: $smallLargeMonitorMargin;
+    width: $modal-small-large-monitor-width;
+    margin: $modal-small-large-monitor-margin;
   }
 }
-@media only screen and (min-width : $widescreenMonitorBreakpoint) {
+@media only screen and (min-width: $widescreen-monitor-breakpoint) {
   .ui.small.modal {
-    width: $smallWidescreenMonitorWidth;
-    margin: $smallWidescreenMonitorMargin;
+    width: $modal-small-widescreen-monitor-width;
+    margin: $modal-small-widescreen-monitor-margin;
   }
 }
 
 /* Large Modal Width */
 .ui.large.modal > .header {
-  font-size: $largeHeaderSize;
+  font-size: $modal-large-header-size;
 }
-@media only screen and (max-width : $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.large.modal {
-    width: $largeMobileWidth;
-    margin: $largeMobileMargin;
+    width: $modal-large-mobile-width;
+    margin: $modal-large-mobile-margin;
   }
 }
-@media only screen and (min-width : $tabletBreakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
   .ui.large.modal {
-    width: $largeTabletWidth;
-    margin: $largeTabletMargin;
+    width: $modal-large-tablet-width;
+    margin: $modal-large-tablet-margin;
   }
 }
-@media only screen and (min-width : $computerBreakpoint) {
+@media only screen and (min-width: $computer-breakpoint) {
   .ui.large.modal {
-    width: $largeComputerWidth;
-    margin: $largeComputerMargin;
+    width: $modal-large-computer-width;
+    margin: $modal-large-computer-margin;
   }
 }
-@media only screen and (min-width : $largeMonitorBreakpoint) {
+@media only screen and (min-width: $large-monitor-breakpoint) {
   .ui.large.modal {
-    width: $largeLargeMonitorWidth;
-    margin: $largeLargeMonitorMargin;
+    width: $modal-large-large-monitor-width;
+    margin: $modal-large-large-monitor-margin;
   }
 }
-@media only screen and (min-width : $widescreenMonitorBreakpoint) {
+@media only screen and (min-width: $widescreen-monitor-breakpoint) {
   .ui.large.modal {
-    width: $largeWidescreenMonitorWidth;
-    margin: $largeWidescreenMonitorMargin;
+    width: $modal-large-widescreen-monitor-width;
+    margin: $modal-large-widescreen-monitor-margin;
   }
 }
 
@@ -569,37 +566,31 @@
 *******************************/
 
 .ui.inverted.modal {
-  background: $invertedBackground;
+  background: $modal-inverted-background;
 }
 
 .ui.inverted.modal > .header,
 .ui.inverted.modal > .content {
-  background: $invertedBackground;
-  color: $invertedHeaderColor;
+  background: $modal-inverted-background;
+  color: $modal-inverted-header-color;
 }
 
 .ui.inverted.modal > .footer {
-  background: $invertedActionBackground;
-  border-top: $invertedActionBorder;
-  color: $invertedActionColor;
+  background: $modal-inverted-action-background;
+  border-top: $modal-inverted-action-border;
+  color: $modal-inverted-action-color;
 }
 
 .ui.inverted.dimmer > .modal > .close {
-  color: $invertedDimmerCloseColor;
+  color: $modal-inverted-dimmer-close-color;
 }
 
-
-@media only screen and (max-width: $largestTabletScreen) {
+@media only screen and (max-width: $largest-tablet-screen) {
   .ui.dimmer .inverted.modal > .close {
-    color: $invertedCloseColor;
+    color: $modal-inverted-close-color;
   }
 }
 
 .ui.inverted.fullscreen.modal > .close {
-  color: $invertedCloseColor;
+  color: $modal-inverted-close-color;
 }
-
-
-
-
-

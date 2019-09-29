@@ -1,49 +1,48 @@
-@import '../../themes/default/modules/toast';
-
+@import "../../themes/default/modules/toast";
 
 /*******************************
         Toast container
 *******************************/
 
 .ui.toast-container {
-    position: fixed;
-    z-index: 9999;
+  position: fixed;
+  z-index: 9999;
 }
 
 .ui.top.right.toast-container {
-    top: $toastContainerDistance;
-    right: $toastContainerDistance;
-    margin-left: $toastContainerDistance;
+  top: $toast-container-distance;
+  right: $toast-container-distance;
+  margin-left: $toast-container-distance;
 }
 
 .ui.top.left.toast-container {
-    top: $toastContainerDistance;
-    left: $toastContainerDistance;
-    margin-right: $toastContainerDistance;
+  top: $toast-container-distance;
+  left: $toast-container-distance;
+  margin-right: $toast-container-distance;
 }
 
 .ui.top.center.toast-container {
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: $toastContainerDistance;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: $toast-container-distance;
 }
 
 .ui.bottom.right.toast-container {
-    bottom: $toastContainerDistance;
-    right: $toastContainerDistance;
-    margin-left: $toastContainerDistance;
+  bottom: $toast-container-distance;
+  right: $toast-container-distance;
+  margin-left: $toast-container-distance;
 }
 
 .ui.bottom.left.toast-container {
-    bottom: $toastContainerDistance;
-    left: $toastContainerDistance;
-    margin-right: $toastContainerDistance;
+  bottom: $toast-container-distance;
+  left: $toast-container-distance;
+  margin-right: $toast-container-distance;
 }
 
 .ui.bottom.center.toast-container {
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: $toastContainerDistance;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: $toast-container-distance;
 }
 
 /*******************************
@@ -51,88 +50,86 @@
 *******************************/
 
 .toast {
-    display: block;
-    border-radius: $defaultBorderRadius;
-    padding: $toastPadding;
-    margin: $toastMargin;
-    color: $toastTextColor;
+  display: block;
+  border-radius: $default-border-radius;
+  padding: $toast-padding;
+  margin: $toast-margin;
+  color: $toast-text-color;
 }
 
 .floating.toast,
 .hoverfloating.toast:hover {
-  box-shadow: $floatingShadow;
+  box-shadow: $floating-shadow;
 }
 
 .hoverfloating.message:hover {
-  box-shadow: 0 0 0 1px inset, $floatingShadow;
+  box-shadow: 0 0 0 1px inset, $floating-shadow;
 }
 
 .center.toast-container .toast-box,
 .right.toast-container .toast-box {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .center.toast-container .toast-box {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .visible.toast-box,
 .animating.toast-box,
 .toast-box {
-    display: table !important;
+  display: table !important;
 }
-
 
 .toast-container .compact {
   display: block;
-  width: $toastWidth;
+  width: $toast-width;
 }
 
 .toast-container .message,
 .toast:hover {
-    opacity: $toastOpacityOnHover;
-    cursor: $toastCursorOnHover;
+  opacity: $toast-opacity-on-hover;
+  cursor: $toast-cursor-on-hover;
 }
 
-
 .icon.toast .content {
-  padding-left: $toastIconContentPadding;
+  padding-left: $toast-icon-content-padding;
 }
 
 .toast > .content > .header {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .info.toast {
-    background-color: $toastInfoColor;
+  background-color: $toast-info-color;
 }
 
 .warning.toast {
-    background-color: $toastWarningColor;
+  background-color: $toast-warning-color;
 }
 
 .success.toast {
-    background-color: $toastSuccessColor;
+  background-color: $toast-success-color;
 }
 
 .error.toast {
-    background-color: $toastErrorColor;
+  background-color: $toast-error-color;
 }
 
 .toast-box .info.attached.progress .bar {
-    background: $toastInfoProgressColor !important;
+  background: $toast-info-progress-color !important;
 }
 
 .toast-box .warning.attached.progress .bar {
-    background: $toastWarningProgressColor !important;
+  background: $toast-warning-progress-color !important;
 }
 
 .toast-box .success.attached.progress .bar {
-    background: $toastSuccessProgressColor !important;
+  background: $toast-success-progress-color !important;
 }
 
 .toast-box .error.attached.progress .bar {
-    background: $toastErrorProgressColor !important;
+  background: $toast-error-progress-color !important;
 }
 
 /*--------------
@@ -153,7 +150,7 @@
 }
 
 .inverted.toast {
-  color: $toastInvertedTextColor;
+  color: $toast-inverted-text-color;
 }
 
 /*--------------
@@ -161,17 +158,15 @@
 ---------------*/
 
 .icon.toast > .icon:not(.close) {
-    display: inline-block;
-    vertical-align: $toastIconVerticalAlign;
-    font-size: $toastIconFontSize;
-    position: absolute;
+  display: inline-block;
+  vertical-align: $toast-icon-vertical-align;
+  font-size: $toast-icon-font-size;
+  position: absolute;
 }
 
-
-
 .icon.toast > .content {
-    display: inline-block;
-    vertical-align: $toastContentVerticalAlign;
+  display: inline-block;
+  vertical-align: $toast-content-vertical-align;
 }
 
 /*---------------
@@ -179,33 +174,33 @@
  ----------------*/
 
 .toast-box .attached.progress .bar {
-    min-width: 0;
+  min-width: 0;
 }
 
 .toast-box .active.progress .bar:after {
-  animation: progress-active 2s $defaultEasing infinite !important;
+  animation: progress-active 2s $default-easing infinite !important;
 }
 
 .toast-box {
-    margin-bottom: $toastMarginBottom;
+  margin-bottom: $toast-margin-bottom;
 }
 
 .toast-box .toast,
 .toast-box .message {
-    margin-top: 0;
-    margin-bottom: 0;
-    position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
 }
-.toast-box .attached.progress{
-    z-index:1;
+.toast-box .attached.progress {
+  z-index: 1;
 }
 
 .toast-box .bottom.attached.progress {
-  margin: -3px 0 $toastMarginBottom;
+  margin: -3px 0 $toast-margin-bottom;
 }
 
 .toast-box .top.attached.progress {
-  margin: $toastMarginBottom 0 -3px;
+  margin: $toast-margin-bottom 0 -3px;
 }
 
 /* --------
@@ -213,19 +208,18 @@
  -----------*/
 
 .toast-box .message > .close.icon {
-  top: $toastCloseTopDistance;
-  right: $toastCloseRightDistance;
+  top: $toast-close-top-distance;
+  right: $toast-close-right-distance;
 }
 
-
-.toast-box .toast>.close.icon {
+.toast-box .toast > .close.icon {
   cursor: pointer;
   position: absolute;
   margin: 0;
-  top: $toastCloseTopDistance;
-  right: $toastCloseRightDistance;
-  opacity: $toastCloseOpacity;
-  transition: $toastCloseTransition;
+  top: $toast-close-top-distance;
+  right: $toast-close-right-distance;
+  opacity: $toast-close-opacity;
+  transition: $toast-close-transition;
 }
 
 .toast-box .toast > .close.icon:hover {

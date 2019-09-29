@@ -1,5 +1,4 @@
-@import '../../themes/default/elements/segment';
-
+@import "../../themes/default/elements/segment";
 
 /*******************************
             Segment
@@ -7,12 +6,12 @@
 
 .ui.segment {
   position: relative;
-  background: $background;
-  // box-shadow: $boxShadow;
-  margin: $margin;
-  padding: $padding;
-  border-radius: $borderRadius;
-  border: $border;
+  background: $segment-background;
+  // box-shadow: $segment-box-shadow;
+  margin: $segment-margin;
+  padding: $segment-padding;
+  border-radius: $segment-border-radius;
+  border: $segment-border;
 }
 
 .ui.segment:first-child {
@@ -32,7 +31,7 @@
   border-radius: 0;
   box-shadow: none;
   border: none;
-  border-bottom: $borderWidth solid $borderColor;
+  border-bottom: $segment-border-width solid $border-color;
 }
 .ui.vertical.segment:last-child {
   border-bottom: none;
@@ -49,19 +48,19 @@
 }
 
 /* Label */
-.ui[class*='bottom attached'].segment > [class*='top attached'].label {
+.ui[class*="bottom attached"].segment > [class*="top attached"].label {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.ui[class*='top attached'].segment > [class*='bottom attached'].label {
+.ui[class*="top attached"].segment > [class*="bottom attached"].label {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.ui.attached.segment:not(.top):not(.bottom) > [class*='top attached'].label {
+.ui.attached.segment:not(.top):not(.bottom) > [class*="top attached"].label {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.ui.attached.segment:not(.top):not(.bottom) > [class*='bottom attached'].label {
+.ui.attached.segment:not(.top):not(.bottom) > [class*="bottom attached"].label {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -70,27 +69,27 @@
 .ui.page.grid.segment,
 .ui.grid > .row > .ui.segment.column,
 .ui.grid > .ui.segment.column {
-  padding-top: $pageGridMargin;
-  padding-bottom: $pageGridMargin;
+  padding-top: $segment-page-grid-margin;
+  padding-bottom: $segment-page-grid-margin;
 }
 .ui.grid.segment {
-  margin: $margin;
-  border-radius: $borderRadius;
+  margin: $segment-margin;
+  border-radius: $segment-border-radius;
 }
 
 /* Table */
 .ui.basic.table.segment {
-  background: $background;
-  border: $border;
-  box-shadow: $boxShadow;
+  background: $segment-background;
+  border: $segment-border;
+  box-shadow: $segment-box-shadow;
 }
-.ui[class*='very basic'].table.segment {
-  padding: $padding;
+.ui[class*="very basic"].table.segment {
+  padding: $segment-padding;
 }
 
 /* Tab */
 .ui.segment.tab:last-child {
-  margin-bottom: $verticalMargin;
+  margin-bottom: $segment-vertical-margin;
 }
 
 /*******************************
@@ -109,11 +108,11 @@
   max-width: initial;
   animation: none;
   overflow: visible;
-  padding: $placeholderPadding;
-  min-height: $placeholderMinHeight;
-  background: $placeholderBackground;
-  border-color: $placeholderBorderColor;
-  box-shadow: $placeholderBoxShadow;
+  padding: $segment-placeholder-padding;
+  min-height: $segment-placeholder-min-height;
+  background: $segment-placeholder-background;
+  border-color: $segment-placeholder-border-color;
+  box-shadow: $segment-placeholder-box-shadow;
 }
 
 .ui.placeholder.segment .button,
@@ -124,7 +123,7 @@
 .ui.placeholder.segment textarea,
 .ui.placeholder.segment > .ui.input,
 .ui.placeholder.segment .button {
-  max-width: $placeholderContentMaxWidth;
+  max-width: $segment-placeholder-content-max-width;
   margin-left: auto;
   margin-right: auto;
 }
@@ -132,7 +131,7 @@
 .ui.placeholder.segment .column .field,
 .ui.placeholder.segment .column textarea,
 .ui.placeholder.segment .column > .ui.input {
-  max-width: $placeholderContentMaxWidth;
+  max-width: $segment-placeholder-content-max-width;
   margin-left: auto;
   margin-right: auto;
 }
@@ -143,7 +142,7 @@
 .ui.placeholder.segment > .inline > .button {
   display: inline-block;
   width: auto;
-  margin: $placeholderContentInlineButtonMargin;
+  margin: $segment-placeholder-content-inline-button-margin;
 }
 .ui.placeholder.segment > .inline > .button:last-child {
   margin-right: 0;
@@ -155,9 +154,9 @@
 
 .ui.piled.segments,
 .ui.piled.segment {
-  margin: $piledMargin 0;
-  box-shadow: $piledBoxShadow;
-  z-index: $piledZIndex;
+  margin: $segment-piled-margin 0;
+  box-shadow: $segment-piled-box-shadow;
+  z-index: $segment-piled-z-index;
 }
 .ui.piled.segment:first-child {
   margin-top: 0;
@@ -171,41 +170,41 @@
 .ui.piled.segment:before {
   background-color: $white;
   visibility: visible;
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   left: 0;
   position: absolute;
   width: 100%;
-  border: $piledBorder;
-  box-shadow: $piledBoxShadow;
+  border: $segment-piled-border;
+  box-shadow: $segment-piled-box-shadow;
 }
 .ui.piled.segments:before,
 .ui.piled.segment:before {
-  transform: rotate(-$piledDegrees);
+  transform: rotate(-$segment-piled-degrees);
   top: 0;
   z-index: -2;
 }
 .ui.piled.segments:after,
 .ui.piled.segment:after {
-  transform: rotate($piledDegrees);
+  transform: rotate($segment-piled-degrees);
   top: 0;
   z-index: -1;
 }
 
 /* Piled Attached */
-.ui[class*='top attached'].piled.segment {
-  margin-top: $piledMargin;
+.ui[class*="top attached"].piled.segment {
+  margin-top: $segment-piled-margin;
   margin-bottom: 0;
 }
-.ui.piled.segment[class*='top attached']:first-child {
+.ui.piled.segment[class*="top attached"]:first-child {
   margin-top: 0;
 }
-.ui.piled.segment[class*='bottom attached'] {
+.ui.piled.segment[class*="bottom attached"] {
   margin-top: 0;
-  margin-bottom: $piledMargin;
+  margin-bottom: $segment-piled-margin;
 }
-.ui.piled.segment[class*='bottom attached']:last-child {
+.ui.piled.segment[class*="bottom attached"]:last-child {
   margin-bottom: 0;
 }
 
@@ -214,22 +213,22 @@
 --------------------*/
 
 .ui.stacked.segment {
-  padding-bottom: $stackedPadding;
+  padding-bottom: $segment-stacked-padding;
 }
 .ui.stacked.segments:before,
 .ui.stacked.segments:after,
 .ui.stacked.segment:before,
 .ui.stacked.segment:after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -($stackedHeight / 2);
+  bottom: (-$segment-stacked-height / 2);
   left: 0;
 
-  border-top: 1px solid $borderColor;
-  background: $stackedPageBackground;
+  border-top: 1px solid $border-color;
+  background: $segment-stacked-page-background;
 
   width: 100%;
-  height: $stackedHeight;
+  height: $segment-stacked-height;
   visibility: visible;
 }
 .ui.stacked.segments:before,
@@ -249,8 +248,8 @@
 .ui.stacked.inverted.segments:after,
 .ui.stacked.inverted.segment:before,
 .ui.stacked.inverted.segment:after {
-  background-color: $subtleTransparentBlack;
-  border-top: 1px solid $selectedBorderColor;
+  background-color: $subtle-transparent-black;
+  border-top: 1px solid $selected-border-color;
 }
 
 /*-------------------
@@ -258,16 +257,16 @@
 --------------------*/
 
 .ui.padded.segment {
-  padding: $paddedSegmentPadding;
+  padding: $segment-padded-padding;
 }
 
-.ui[class*='very padded'].segment {
-  padding: $veryPaddedSegmentPadding;
+.ui[class*="very padded"].segment {
+  padding: $segment-very-padded-padding;
 }
 
 /* Padded vertical */
 .ui.padded.segment.vertical.segment,
-.ui[class*='very padded'].vertical.segment {
+.ui[class*="very padded"].vertical.segment {
   padding-left: 0;
   padding-right: 0;
 }
@@ -296,7 +295,7 @@
 
 .ui.circular.segment {
   display: table-cell;
-  padding: $circularPadding;
+  padding: $segment-circular-padding;
   text-align: center;
   vertical-align: middle;
   border-radius: 500em;
@@ -308,7 +307,7 @@
 
 .ui.raised.raised.segments,
 .ui.raised.raised.segment {
-  box-shadow: $raisedBoxShadow;
+  box-shadow: $segment-raised-box-shadow;
 }
 
 /*******************************
@@ -319,10 +318,10 @@
 .ui.segments {
   flex-direction: column;
   position: relative;
-  margin: $groupedMargin;
-  border: $groupedBorder;
-  // box-shadow: $groupedBoxShadow;
-  border-radius: $groupedBorderRadius;
+  margin: $segment-grouped-super-margin;
+  border: $segment-grouped-super-border;
+  // box-shadow: $segment-grouped-super-box-shadow;
+  border-radius: $segment-grouped-border-radius;
 }
 .ui.segments:first-child {
   margin-top: 0;
@@ -336,41 +335,41 @@
   top: 0;
   bottom: 0;
   border-radius: 0;
-  margin: $groupedSegmentMargin;
-  width: $groupedSegmentWidth;
-  box-shadow: $groupedSegmentBoxShadow;
-  border: $groupedSegmentBorder;
-  border-top: $groupedSegmentDivider;
+  margin: $segment-grouped-margin;
+  width: $segment-grouped-width;
+  box-shadow: $segment-grouped-box-shadow;
+  border: $segment-grouped-border;
+  border-top: $segment-grouped-divider;
 }
 
 .ui.segments:not(.horizontal) > .segment:first-child {
-  top: $attachedTopOffset;
+  top: $segment-attached-top-offset;
   bottom: 0;
   border-top: none;
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: $borderRadius $borderRadius 0 0;
+  border-radius: $segment-border-radius $segment-border-radius 0 0;
 }
 
 /* Bottom */
 .ui.segments:not(.horizontal) > .segment:last-child {
-  top: $attachedBottomOffset;
+  top: $segment-attached-bottom-offset;
   bottom: 0;
   margin-top: 0;
   margin-bottom: 0;
-  box-shadow: $attachedBottomBoxShadow;
-  border-radius: 0 0 $borderRadius $borderRadius;
+  box-shadow: $segment-attached-bottom-box-shadow;
+  border-radius: 0 0 $segment-border-radius $segment-border-radius;
 }
 
 /* Only */
 .ui.segments:not(.horizontal) > .segment:only-child {
-  border-radius: $borderRadius;
+  border-radius: $segment-border-radius;
 }
 
 /* Nested Group */
 .ui.segments > .ui.segments {
-  border-top: $groupedSegmentDivider;
-  margin: $nestedGroupMargin;
+  border-top: $segment-grouped-divider;
+  margin: $segment-nested-group-margin;
 }
 .ui.segments > .segments:first-child {
   border-top: none;
@@ -385,10 +384,10 @@
   flex-direction: row;
   background-color: transparent;
   padding: 0;
-  box-shadow: $boxShadow;
-  margin: $margin;
-  border-radius: $borderRadius;
-  border: $border;
+  box-shadow: $segment-box-shadow;
+  margin: $segment-margin;
+  border-radius: $segment-border-radius;
+  border: $segment-border;
 }
 .ui.stackable.horizontal.segments {
   flex-wrap: wrap;
@@ -401,7 +400,7 @@
   border-radius: 0;
   border: none;
   box-shadow: none;
-  border-top: $groupedSegmentDivider;
+  border-top: $segment-grouped-divider;
 }
 
 /* Horizontal Segment */
@@ -415,7 +414,7 @@
   border-radius: 0;
   border: none;
   box-shadow: none;
-  border-left: $borderWidth solid $borderColor;
+  border-left: $segment-border-width solid $border-color;
 }
 
 /* Border Fixes */
@@ -435,8 +434,8 @@
 ---------------*/
 
 .ui.disabled.segment {
-  opacity: $disabledOpacity;
-  color: $disabledTextColor;
+  opacity: $disabled-opacity;
+  color: $disabled-text-color;
 }
 
 /*--------------
@@ -452,32 +451,32 @@
 }
 .ui.loading.segment:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
-  background: $loaderDimmerColor;
+  background: $segment-loader-dimmer-color;
   width: 100%;
   height: 100%;
-  border-radius: $borderRadius;
-  z-index: $loaderDimmerZIndex;
+  border-radius: $segment-border-radius;
+  z-index: $segment-loader-dimmer-z-index;
 }
 .ui.loading.segment:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
 
-  margin: $loaderMargin;
-  width: $loaderSize;
-  height: $loaderSize;
+  margin: $loader-margin;
+  width: $segment-loader-size;
+  height: $segment-loader-size;
 
-  animation: loader $loaderSpeed infinite linear;
-  border: $loaderLineWidth solid $loaderLineColor;
-  border-radius: $circularRadius;
+  animation: loader $loader-speed infinite linear;
+  border: $loader-line-width solid $loader-line-color;
+  border-radius: $circular-radius;
 
   box-shadow: 0 0 0 1px transparent;
   visibility: visible;
-  z-index: $loaderLineZIndex;
+  z-index: $segment-loader-line-z-index;
 }
 
 /*******************************
@@ -491,10 +490,10 @@
 .ui.basic.segment,
 .ui.segments .ui.basic.segment,
 .ui.basic.segments {
-  background: $basicBackground;
-  box-shadow: $basicBoxShadow;
-  border: $basicBorder;
-  border-radius: $basicBorderRadius;
+  background: $segment-basic-background;
+  box-shadow: $segment-basic-box-shadow;
+  border: $segment-basic-border;
+  border-radius: $segment-basic-border-radius;
 }
 
 /*-------------------
@@ -502,7 +501,7 @@
 --------------------*/
 
 .ui.clearing.segment:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -513,9 +512,9 @@
 
 @each $key, $value in $colors {
   $c: map-get($value, color);
-  @if not ($key == primary) and not ($key == secondary) {
+  @if not($key == primary) and not ($key == secondary) {
     .ui.#{$key + ""}.segment.segment.segment.segment.segment:not(.inverted) {
-      border-top: $coloredBorderSize solid $c;
+      border-top: $segment-colored-border-size solid $c;
     }
     .ui.inverted.#{$key + ""}.segment.segment.segment.segment.segment {
       background-color: $c;
@@ -531,10 +530,10 @@
 .ui[class*="left aligned"].segment {
   text-align: left;
 }
-.ui[class*='right aligned'].segment {
+.ui[class*="right aligned"].segment {
   text-align: right;
 }
-.ui[class*='center aligned'].segment {
+.ui[class*="center aligned"].segment {
   text-align: center;
 }
 
@@ -543,13 +542,13 @@
 --------------------*/
 
 .ui.floated.segment,
-.ui[class*='left floated'].segment {
+.ui[class*="left floated"].segment {
   float: left;
-  margin-right: $floatedDistance;
+  margin-right: $segment-floated-distance;
 }
-.ui[class*='right floated'].segment {
+.ui[class*="right floated"].segment {
   float: right;
-  margin-left: $floatedDistance;
+  margin-left: $segment-floated-distance;
 }
 
 /*-------------------
@@ -562,29 +561,29 @@
 }
 .ui.inverted.segment,
 .ui.primary.inverted.segment {
-  background: $invertedBackground;
-  color: $invertedTextColor;
+  background: $segment-inverted-background;
+  color: $inverted-text-color;
 }
 
 /* Nested */
 .ui.inverted.segment .segment {
-  color: $textColor;
+  color: $text-color;
 }
 .ui.inverted.segment .inverted.segment {
-  color: $invertedTextColor;
+  color: $inverted-text-color;
 }
 
 /* Attached */
 .ui.inverted.attached.segment {
-  border-color: $solidWhiteBorderColor;
+  border-color: $solid-white-border-color;
 }
 
 /* Loading */
 .ui.inverted.loading.segment {
-  color: $invertedLoaderLineColor;
+  color: $inverted-loader-line-color;
 }
 .ui.inverted.loading.segment:before {
-  background: $loaderInvertedDimmerColor;
+  background: $segment-loader-inverted-dimmer-color;
 }
 
 /*-------------------
@@ -593,22 +592,22 @@
 
 /* Secondary */
 .ui.secondary.segment {
-  background: $secondaryBackground;
-  color: $secondaryColor;
+  background: $segment-secondary-background;
+  color: $segment-secondary-color;
 }
 .ui.secondary.inverted.segment {
-  background: $secondaryInvertedBackground;
-  color: $secondaryInvertedColor;
+  background: $segment-secondary-inverted-background;
+  color: $segment-secondary-inverted-color;
 }
 
 /* Tertiary */
 .ui.tertiary.segment {
-  background: $tertiaryBackground;
-  color: $tertiaryColor;
+  background: $segment-tertiary-background;
+  color: $segment-tertiary-color;
 }
 .ui.tertiary.inverted.segment {
-  background: $tertiaryInvertedBackground;
-  color: $tertiaryInvertedColor;
+  background: $segment-tertiary-inverted-background;
+  color: $segment-tertiary-inverted-color;
 }
 
 /*-------------------
@@ -620,39 +619,39 @@
   top: 0;
   bottom: 0;
   border-radius: 0;
-  margin: 0 $attachedHorizontalOffset;
-  width: $attachedWidth;
-  max-width: $attachedWidth;
-  box-shadow: $attachedBoxShadow;
-  border: $attachedBorder;
+  margin: 0 $segment-attached-horizontal-offset;
+  width: $segment-attached-width;
+  max-width: $segment-attached-width;
+  box-shadow: $segment-attached-box-shadow;
+  border: $segment-attached-border;
 }
 .ui.attached:not(.message) + .ui.attached.segment:not(.top) {
   border-top: none;
 }
 
 /* Top */
-.ui[class*='top attached'].segment {
+.ui[class*="top attached"].segment {
   bottom: 0;
   margin-bottom: 0;
-  top: $attachedTopOffset;
-  margin-top: $verticalMargin;
-  border-radius: $borderRadius $borderRadius 0 0;
+  top: $segment-attached-top-offset;
+  margin-top: $segment-vertical-margin;
+  border-radius: $segment-border-radius $segment-border-radius 0 0;
 }
-.ui.segment[class*='top attached']:first-child {
+.ui.segment[class*="top attached"]:first-child {
   margin-top: 0;
 }
 
 /* Bottom */
-.ui.segment[class*='bottom attached'] {
+.ui.segment[class*="bottom attached"] {
   bottom: 0;
   margin-top: 0;
-  top: $attachedBottomOffset;
-  margin-bottom: $verticalMargin;
-  box-shadow: $attachedBottomBoxShadow;
-  border-radius: 0 0 $borderRadius $borderRadius;
+  top: $segment-attached-bottom-offset;
+  margin-bottom: $segment-vertical-margin;
+  box-shadow: $segment-attached-bottom-box-shadow;
+  border-radius: 0 0 $segment-border-radius $segment-border-radius;
 }
-.ui.segment[class*='bottom attached']:last-child {
-  margin-bottom: $verticalMargin;
+.ui.segment[class*="bottom attached"]:last-child {
+  margin-bottom: $segment-vertical-margin;
 }
 
 /*--------------
@@ -704,5 +703,3 @@
 .ui.massive.segment {
   font-size: $massive;
 }
-
-

@@ -1,469 +1,464 @@
 //****************************** Menu *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Collection --------------------*/
 
+// Resize large sizes */
+$menu-mini: $_11px !default;
+$menu-tiny: $_12px !default;
+$menu-small: $_13px !default;
+$menu-large: $_15px !default;
+$menu-big: $_16px !default;
+$menu-huge: $_17px !default;
+$menu-massive: $_18px !default;
+
+// Sizes */
+$menu-mini-width: 9rem !default;
+$menu-tiny-width: 11rem !default;
+$menu-small-width: 13rem !default;
+$menu-medium-width: 15rem !default;
+$menu-large-width: 18rem !default;
+$menu-big-width: 20rem !default;
+$menu-huge-width: 22rem !default;
+$menu-massive-width: 25rem !default;
+
 // Menu Item */
-$itemVerticalPadding: $relativeSmall !default;
-$itemHorizontalPadding: $relativeLarge !default;
-$itemTextTransform: none !default;
-$itemTransition:
-  background $defaultDuration $defaultEasing,
-  box-shadow $defaultDuration $defaultEasing,
-  color $defaultDuration $defaultEasing
- !default;
-$itemFontWeight: $normal !default;
-$itemTextColor: $textColor !default;
-$itemElementDistance: $mini !default;
+$menu-item-vertical-padding: $relative-small !default;
+$menu-item-horizontal-padding: $relative-large !default;
+$menu-item-text-transform: none !default;
+$menu-item-transition: background $default-duration $default-easing,
+  box-shadow $default-duration $default-easing,
+  color $default-duration $default-easing !default;
+$menu-item-font-weight: $normal !default;
+$menu-item-text-color: $text-color !default;
+$menu-item-element-distance: $menu-mini !default;
 
 // Menu */
-$verticalMargin: $medium !default;
-$horizontalMargin: 0 !default;
-$margin: $verticalMargin $horizontalMargin !default;
-$background: #FFFFFF !default;
-$fontFamily: $pageFont !default;
-$itemBackground: none !default;
-$fontWeight: $normal !default;
-$borderWidth: 1px !default;
-$border: $borderWidth solid $borderColor !default;
-$boxShadow: $subtleShadow !default;
-$borderRadius: $defaultBorderRadius !default;
-$minHeight: ($itemVerticalPadding * 2) + 1em !default;
+$menu-vertical-margin: $medium !default;
+$menu-horizontal-margin: 0 !default;
+$menu-margin: $menu-vertical-margin $menu-horizontal-margin !default;
+$menu-background: #ffffff !default;
+$menu-font-family: $page-font !default;
+$menu-item-background: none !default;
+$menu-font-weight: $normal !default;
+$menu-border-width: 1px !default;
+$menu-border: $menu-border-width solid $border-color !default;
+$menu-box-shadow: $subtle-shadow !default;
+$menu-border-radius: $default-border-radius !default;
+$menu-min-height: ($menu-item-vertical-padding * 2) + 1em !default;
 
 // Divider */
-$dividerSize: 1px !default;
-$dividerBackground: $internalBorderColor !default;
+$menu-divider-size: 1px !default;
+$menu-divider-background: $internal-border-color !default;
 
 // Sub Menu */
-$subMenuDistance: 0.5em !default;
-$subMenuMargin: $subMenuDistance -$itemHorizontalPadding 0 !default;
-$subMenuFontSize: $relativeTiny !default;
-$subMenuTextColor: rgba(0, 0, 0, 0.5) !default;
+$menu-sub-distance: 0.5em !default;
+$menu-sub-margin: $menu-sub-distance -$menu-item-horizontal-padding 0 !default;
+$menu-sub-font-size: $relative-tiny !default;
+$menu-sub-text-color: rgba(0, 0, 0, 0.5) !default;
 
-$subMenuIndent: 0 !default;
-$subMenuHorizontalPadding: ($itemHorizontalPadding / $tinySize) + $subMenuIndent !default;
-$subMenuVerticalPadding: 0.5em !default;
+$menu-sub-indent: 0 !default;
+$menu-sub-horizontal-padding: ($menu-item-horizontal-padding / $tiny-size) +
+  $menu-sub-indent !default;
+$menu-sub-vertical-padding: 0.5em !default;
 
 // Text Item */
-$textLineHeight: 1.3 !default;
+$menu-text-line-height: 1.3 !default;
 
 //-------------- Elements ---------------*/
 
 // Icon */
-$iconFloat: none !default;
-$iconMargin: 0 $relative5px 0 0 !default;
-$iconOpacity: 0.9 !default;
+$menu-icon-float: none !default;
+$menu-icon-margin: 0 $relative5px 0 0 !default;
+$menu-icon-opacity: 0.9 !default;
 
 // Dropdown Icon */
-$dropdownIconFloat: right !default;
-$dropdownIconDistance: 1em !default;
+$menu-dropdown-icon-float: right !default;
+$menu-dropdown-icon-distance: 1em !default;
 
 // Header */
-$headerBackground: '' !default;
-$headerWeight: $bold !default;
-$headerTextTransform: $normal !default;
+$menu-header-background: "" !default;
+$menu-header-weight: $bold !default;
+$menu-header-text-transform: $normal !default;
 
 // Vertical Icon */
-$verticalIconFloat: right !default;
-$verticalIconMargin: 0 0 0 0.5em !default;
+$menu-vertical-icon-float: right !default;
+$menu-vertical-icon-margin: 0 0 0 0.5em !default;
 
 // Vertical Header */
-$verticalHeaderMargin: 0 0 0.5em !default;
-$verticalHeaderFontSize: $relativeMedium !default;
-$verticalHeaderFontWeight: $bold !default;
+$menu-vertical-header-margin: 0 0 0.5em !default;
+$menu-vertical-header-font-size: $relative-medium !default;
+$menu-vertical-header-font-weight: $bold !default;
 
 // Pointing Arrow */
-$arrowSize: $relative8px !default;
-$arrowBorderWidth: 1px !default;
-$arrowBorder: $arrowBorderWidth solid $solidBorderColor !default;
-$arrowTransition: background $defaultDuration $defaultEasing !default;
-$arrowZIndex: 2 !default;
+$menu-arrow-size: $relative8px !default;
+$menu-arrow-border-width: 1px !default;
+$menu-arrow-border: $menu-arrow-border-width solid $solid-border-color !default;
+$menu-arrow-transition: background $default-duration $default-easing !default;
+$menu-arrow-z-index: 2 !default;
 
-$arrowHoverColor: #F2F2F2 !default;
-$arrowActiveColor: $arrowHoverColor !default;
-$arrowActiveHoverColor: $arrowActiveColor !default;
+$menu-arrow-hover-color: #f2f2f2 !default;
+$menu-arrow-active-color: $menu-arrow-hover-color !default;
+$menu-arrow-active-hover-color: $menu-arrow-active-color !default;
 
-$arrowVerticalHoverColor: $arrowHoverColor !default;
-$arrowVerticalActiveColor: $arrowActiveColor !default;
-$arrowVerticalSubMenuColor: $white !default;
+$menu-arrow-vertical-hover-color: $menu-arrow-hover-color !default;
+$menu-arrow-vertical-active-color: $menu-arrow-active-color !default;
+$menu-arrow-vertical-sub-color: $white !default;
 
 //-------------- Couplings ---------------*/
 
 // Button */
-$buttonSize: $relativeMedium !default;
-$buttonOffset: 0 !default;
-$buttonMargin: -0.5em 0 !default;
-$buttonVerticalPadding: $relativeMini !default;
+$menu-button-size: $relative-medium !default;
+$menu-button-offset: 0 !default;
+$menu-button-margin: -0.5em 0 !default;
+$menu-button-vertical-padding: $relative-mini !default;
 
 // Input */
-$inputSize: $relativeMedium !default;
-$inputVerticalMargin: -0.5em !default;
-$inputOffset: 0 !default;
-$inputVerticalPadding: $relative8px !default;
+$menu-input-size: $relative-medium !default;
+$menu-input-vertical-margin: -0.5em !default;
+$menu-input-offset: 0 !default;
+$menu-input-vertical-padding: $relative8px !default;
 
 // Image */
-$imageMargin: -0.3em 0 !default;
-$imageWidth: 2.5em !default;
-$verticalImageWidth: auto !default;
+$menu-image-margin: -0.3em 0 !default;
+$menu-image-width: 2.5em !default;
+$menu-vertical-image-width: auto !default;
 
 // Label */
-$labelOffset: -0.15em !default;
-$labelBackground: #999999 !default;
-$labelTextColor: $white !default;
+$menu-label-offset: -0.15em !default;
+$menu-label-background: #999999 !default;
+$menu-label-text-color: $white !default;
 
-$labelTextMargin: 1em !default;
-$labelVerticalPadding: 0.3em !default;
-$circularLabelVerticalPadding: 0.5em !default; // has to be equal to $circularPadding from label.less */
-$labelHorizontalPadding: $relativeMini !default;
+$menu-label-text-margin: 1em !default;
+$menu-label-vertical-padding: 0.3em !default;
+$menu-circular-label-vertical-padding: 0.5em !default; // has to be equal to $circularPadding from label.less */
+$menu-label-horizontal-padding: $relative-mini !default;
 
-$labelAndIconFloat: none !default;
-$labelAndIconMargin: 0 0.5em 0 0 !default;
+$menu-label-and-icon-float: none !default;
+$menu-label-and-icon-margin: 0 0.5em 0 0 !default;
 
 // Image Label */
-$imageLabelTextDistance: 0.8em !default;
-$imageLabelVerticalPadding: 0.2833em !default; // Calculates as: $verticalLabel (from label.less) - $labelVerticalPadding (from here) */
-$imageLabelHeight: (1em + $imageLabelVerticalPadding * 2) !default;  // Logic adopted from label.less */
-$imageLabelImageMargin: -$imageLabelVerticalPadding $imageLabelTextDistance -$imageLabelVerticalPadding -$imageLabelTextDistance !default;
+$menu-image-label-text-distance: 0.8em !default;
+$menu-image-label-vertical-padding: 0.2833em !default; // Calculates as: $verticalLabel (from label.less) - $menu-label-vertical-padding (from here) */
+$menu-image-label-height: (
+  1em + $menu-image-label-vertical-padding * 2
+) !default; // Logic adopted from label.less */
+$menu-image-label-image-margin: -$menu-image-label-vertical-padding
+  $menu-image-label-text-distance -$menu-image-label-vertical-padding -$menu-image-label-text-distance !default;
 
 // Dropdown in Menu */
-$dropdownMenuBoxShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08) !default;
+$menu-dropdown-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08) !default;
 
-$dropdownBackground: #FFFFFF !default;
-$dropdownMenuDistance: 0 !default;
-$dropdownMenuBorderRadius: $borderRadius !default;
+$menu-dropdown-background: #ffffff !default;
+$menu-dropdown-distance: 0 !default;
+$menu-dropdown-border-radius: $menu-border-radius !default;
 
-$dropdownItemFontSize: $relativeMedium !default;
-$dropdownItemPadding: $relativeMini $relativeLarge !default;
-$dropdownItemBackground: transparent !default;
-$dropdownItemColor: $textColor !default;
-$dropdownItemTextTransform: none !default;
-$dropdownItemFontWeight: $normal !default;
-$dropdownItemBoxShadow: none !default;
-$dropdownItemTransition: none !default;
+$menu-dropdown-item-font-size: $relative-medium !default;
+$menu-dropdown-item-padding: $relative-mini $relative-large !default;
+$menu-dropdown-item-background: transparent !default;
+$menu-dropdown-item-color: $text-color !default;
+$menu-dropdown-item-text-transform: none !default;
+$menu-dropdown-item-font-weight: $normal !default;
+$menu-dropdown-item-box-shadow: none !default;
+$menu-dropdown-item-transition: none !default;
 
-$dropdownItemIconFloat: none !default;
-$dropdownItemIconFontSize: $relativeMedium !default;
-$dropdownItemIconMargin: 0 0.75em 0 0 !default;
+$menu-dropdown-item-icon-float: none !default;
+$menu-dropdown-item-icon-font-size: $relative-medium !default;
+$menu-dropdown-item-icon-margin: 0 0.75em 0 0 !default;
 
-$dropdownHoveredItemBackground: $transparentBlack !default;
-$dropdownHoveredItemColor: $selectedTextColor !default;
+$menu-dropdown-hovered-item-background: $transparent-black !default;
+$menu-dropdown-hovered-item-color: $selected-text-color !default;
 
 // Dropdown Variations */
-$dropdownVerticalMenuBoxShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08) !default;
-$secondaryDropdownMenuDistance: $relative5px !default;
-$pointingDropdownMenuDistance: 0.75em !default;
-$invertedSelectionDropdownColor: $invertedTextColor !default;
+$menu-dropdown-vertical-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08) !default;
+$menu-secondary-dropdown-distance: $relative5px !default;
+$menu-pointing-dropdown-distance: 0.75em !default;
+$menu-inverted-selection-dropdown-color: $inverted-text-color !default;
 
 //-------------- States ---------------*/
 
 // Hovered Item */
-$hoverItemBackground: $subtleTransparentBlack !default;
-$hoverItemTextColor: $selectedTextColor !default;
+$menu-hover-item-background: $subtle-transparent-black !default;
+$menu-hover-item-text-color: $selected-text-color !default;
 
 // Pressed Item */
-$pressedItemBackground: $subtleTransparentBlack !default;
-$pressedItemTextColor: $hoverItemTextColor !default;
-
+$menu-pressed-item-background: $subtle-transparent-black !default;
+$menu-pressed-item-text-color: $menu-hover-item-text-color !default;
 
 // Active Item */
-$activeItemBackground: $transparentBlack !default;
-$activeItemTextColor: $selectedTextColor !default;
-$activeItemFontWeight: $normal !default;
-$activeIconOpacity: 1 !default;
-$activeItemBoxShadow: none !default;
+$menu-active-item-background: $transparent-black !default;
+$menu-active-item-text-color: $selected-text-color !default;
+$menu-active-item-font-weight: $normal !default;
+$menu-active-icon-opacity: 1 !default;
+$menu-active-item-box-shadow: none !default;
 
 // Active Hovered Item */
-$activeHoverItemBackground: $transparentBlack !default;
-$activeHoverItemColor: $selectedTextColor !default;
+$menu-active-hover-item-background: $transparent-black !default;
+$menu-active-hover-item-color: $selected-text-color !default;
 
 // Selected Dropdown */
-$dropdownSelectedItemBackground: $transparentBlack !default;
-$dropdownSelectedItemColor: $selectedTextColor !default;
+$menu-dropdown-selected-item-background: $transparent-black !default;
+$menu-dropdown-selected-item-color: $selected-text-color !default;
 
 // Active Dropdown */
-$dropdownActiveItemBackground: $subtleTransparentBlack !default;
-$dropdownActiveItemColor: $selectedTextColor !default;
-$dropdownActiveItemFontWeight: $bold !default;
+$menu-dropdown-active-item-background: $subtle-transparent-black !default;
+$menu-dropdown-active-item-color: $selected-text-color !default;
+$menu-dropdown-active-item-font-weight: $bold !default;
 
 // Active Sub Menu */
-$subMenuActiveBackground: transparent !default;
-$subMenuActiveTextColor: $activeItemTextColor !default;
-$subMenuActiveFontWeight: $bold !default;
-
+$menu-sub-active-background: transparent !default;
+$menu-sub-active-text-color: $menu-active-item-text-color !default;
+$menu-sub-active-font-weight: $bold !default;
 
 //-------------- Types ---------------*/
 
 // Vertical */
-$verticalBoxShadow: $boxShadow !default;
-$verticalPointerWidth: 2px !default;
-$verticalBackground: #FFFFFF !default;
-$verticalItemBackground: none !default;
-$verticalDividerBackground: $dividerBackground !default;
+$menu-vertical-box-shadow: $menu-box-shadow !default;
+$menu-vertical-pointer-width: 2px !default;
+$menu-vertical-background: #ffffff !default;
+$menu-vertical-item-background: none !default;
+$menu-vertical-divider-background: $menu-divider-background !default;
 
-$verticalActiveBoxShadow: none !default;
-
+$menu-vertical-active-box-shadow: none !default;
 
 // Secondary */
-$secondaryBackground: none !default;
-$secondaryItemSpacing: $relative5px !default;
-$secondaryMargin: 0 - $secondaryItemSpacing !default;
-$secondaryItemBackground: none !default;
-$secondaryItemMargin: 0 $secondaryItemSpacing !default;
-$secondaryItemVerticalPadding: $relativeMini !default;
-$secondaryItemHorizontalPadding: $relativeSmall !default;
-$secondaryItemPadding: $relativeMini $relativeSmall !default;
-$secondaryItemBorderRadius: $defaultBorderRadius !default;
-$secondaryItemTransition: color $defaultDuration $defaultEasing !default;
-$secondaryItemColor: $unselectedTextColor !default;
+$menu-secondary-background: none !default;
+$menu-secondary-item-spacing: $relative5px !default;
+$menu-secondary-margin: 0 - $menu-secondary-item-spacing !default;
+$menu-secondary-item-background: none !default;
+$menu-secondary-item-margin: 0 $menu-secondary-item-spacing !default;
+$menu-secondary-item-vertical-padding: $relative-mini !default;
+$menu-secondary-item-horizontal-padding: $relative-small !default;
+$menu-secondary-item-padding: $relative-mini $relative-small !default;
+$menu-secondary-item-border-radius: $default-border-radius !default;
+$menu-secondary-item-transition: color $default-duration $default-easing !default;
+$menu-secondary-item-color: $unselected-text-color !default;
 
-$secondaryHoverItemBackground: $transparentBlack !default;
-$secondaryHoverItemColor: $selectedTextColor !default;
+$menu-secondary-hover-item-background: $transparent-black !default;
+$menu-secondary-hover-item-color: $selected-text-color !default;
 
-$secondaryActiveItemBackground: $transparentBlack !default;
-$secondaryActiveItemColor: $selectedTextColor !default;
-$secondaryActiveHoverItemBackground: $transparentBlack !default;
-$secondaryActiveHoverItemColor: $selectedTextColor !default;
+$menu-secondary-active-item-background: $transparent-black !default;
+$menu-secondary-active-item-color: $selected-text-color !default;
+$menu-secondary-active-hover-item-background: $transparent-black !default;
+$menu-secondary-active-hover-item-color: $selected-text-color !default;
 
-$secondaryActiveHoveredItemBackground: $transparentBlack !default;
-$secondaryActiveHoveredItemColor: $selectedTextColor !default;
+$menu-secondary-active-hovered-item-background: $transparent-black !default;
+$menu-secondary-active-hovered-item-color: $selected-text-color !default;
 
-$secondaryHeaderBackground: none transparent !default;
-$secondaryHeaderBorder: none !default;
+$menu-secondary-header-background: none transparent !default;
+$menu-secondary-header-border: none !default;
 
-$secondaryItemVerticalSpacing: $secondaryItemSpacing !default;
-$secondaryVerticalItemMargin: 0 0 $secondaryItemVerticalSpacing !default;
-$secondaryVerticalItemBorderRadius: $defaultBorderRadius !default;
+$menu-secondary-item-vertical-spacing: $menu-secondary-item-spacing !default;
+$menu-secondary-vertical-item-margin: 0 0 $menu-secondary-item-vertical-spacing !default;
+$menu-secondary-vertical-item-border-radius: $default-border-radius !default;
 
-$secondaryMenuSubMenuMargin: 0 -$secondaryItemHorizontalPadding !default;
-$secondaryMenuSubMenuItemMargin: 0 !default;
-$secondarySubMenuHorizontalPadding: ($itemHorizontalPadding / $tinySize) + $subMenuIndent !default;
-$secondaryMenuSubMenuItemPadding: $relative7px $secondarySubMenuHorizontalPadding !default;
+$menu-secondary-sub-menu-margin: 0 (-$menu-secondary-item-horizontal-padding) !default;
+$menu-secondary-sub-menu-item-margin: 0 !default;
+$menu-secondary-sub-horizontal-padding: (
+    $menu-item-horizontal-padding / $tiny-size
+  ) + $menu-sub-indent !default;
+$menu-secondary-sub-menu-item-padding: $relative7px
+  $menu-secondary-sub-horizontal-padding !default;
 
 // Pointing */
-$secondaryPointingBorderWidth: 2px !default;
-$secondaryPointingBorderColor: $borderColor !default;
-$secondaryPointingItemVerticalPadding: $relativeTiny !default;
-$secondaryPointingItemHorizontalPadding: $relativeLarge !default;
+$menu-secondary-pointing-border-width: 2px !default;
+$menu-secondary-pointing-border-color: $border-color !default;
+$menu-secondary-pointing-item-vertical-padding: $relative-tiny !default;
+$menu-secondary-pointing-item-horizontal-padding: $relative-large !default;
 
-$secondaryPointingHoverTextColor: $textColor !default;
+$menu-secondary-pointing-hover-text-color: $text-color !default;
 
-$secondaryPointingActiveBorderColor: $black !default;
-$secondaryPointingActiveTextColor: $selectedTextColor !default;
-$secondaryPointingActiveFontWeight: $bold !default;
+$menu-secondary-pointing-active-border-color: $black !default;
+$menu-secondary-pointing-active-text-color: $selected-text-color !default;
+$menu-secondary-pointing-active-font-weight: $bold !default;
 
-$secondaryPointingActiveDropdownBorderColor: transparent !default;
+$menu-secondary-pointing-active-dropdown-border-color: transparent !default;
 
-$secondaryPointingActiveHoverBorderColor: $secondaryPointingActiveBorderColor !default;
-$secondaryPointingActiveHoverTextColor: $secondaryPointingActiveTextColor !default;
+$menu-secondary-pointing-active-hover-border-color: $menu-secondary-pointing-active-border-color !default;
+$menu-secondary-pointing-active-hover-text-color: $menu-secondary-pointing-active-text-color !default;
 
-$secondaryPointingHeaderColor: $darkTextColor !default;
-$secondaryVerticalPointingItemMargin: 0 -$secondaryPointingBorderWidth 0 0 !default;
-
+$menu-secondary-pointing-header-color: $dark-text-color !default;
+$menu-secondary-vertical-pointing-item-margin: 0 (-$menu-secondary-pointing-border-width)
+  0 0 !default;
 
 // Inverted Secondary */
-$secondaryInvertedColor: $invertedLightTextColor !default;
+$menu-secondary-inverted-color: $inverted-light-text-color !default;
 
-$secondaryInvertedHoverBackground: $transparentWhite !default;
-$secondaryInvertedHoverColor: $invertedSelectedTextColor !default;
+$menu-secondary-inverted-hover-background: $transparent-white !default;
+$menu-secondary-inverted-hover-color: $inverted-selected-text-color !default;
 
-$secondaryInvertedActiveBackground: $strongTransparentWhite !default;
-$secondaryInvertedActiveColor: $invertedSelectedTextColor !default;
+$menu-secondary-inverted-active-background: $strong-transparent-white !default;
+$menu-secondary-inverted-active-color: $inverted-selected-text-color !default;
 
 // Inverted Pointing */
-$secondaryPointingInvertedBorderColor: $whiteBorderColor !default;
-$secondaryPointingInvertedItemTextColor: $invertedTextColor !default;
-$secondaryPointingInvertedItemHeaderColor: $white !default;
-$secondaryPointingInvertedItemHoverTextColor: $selectedTextColor !default;
-$secondaryPointingInvertedActiveBorderColor: $white !default;
-$secondaryPointingInvertedActiveColor: $invertedSelectedTextColor !default;
-
+$menu-secondary-pointing-inverted-border-color: $white-border-color !default;
+$menu-secondary-pointing-inverted-item-text-color: $inverted-text-color !default;
+$menu-secondary-pointing-inverted-item-header-color: $white !default;
+$menu-secondary-pointing-inverted-item-hover-text-color: $selected-text-color !default;
+$menu-secondary-pointing-inverted-active-border-color: $white !default;
+$menu-secondary-pointing-inverted-active-color: $inverted-selected-text-color !default;
 
 // Tiered */
-$tieredActiveItemBackground: #FCFCFC !default;
-$tieredActiveMenuBackground: #FCFCFC !default;
+$menu-tiered-active-item-background: #fcfcfc !default;
+$menu-tiered-active-background: #fcfcfc !default;
 
-$tieredSubMenuTextTransform: $normal !default;
-$tieredSubMenuFontWeight: $normal !default;
+$menu-tiered-sub-text-transform: $normal !default;
+$menu-tiered-sub-font-weight: $normal !default;
 
-$tieredSubMenuColor: $lightTextColor !default;
+$menu-tiered-sub-color: $light-text-color !default;
 
-$tieredSubMenuHoverBackground: none transparent !default;
-$tieredSubMenuHoverColor: $hoveredTextColor !default;
+$menu-tiered-sub-hover-background: none transparent !default;
+$menu-tiered-sub-hover-color: $hovered-text-color !default;
 
-$tieredSubMenuActiveBackground: none transparent !default;
-$tieredSubMenuActiveColor: $selectedTextColor !default;
+$menu-tiered-sub-active-background: none transparent !default;
+$menu-tiered-sub-active-color: $selected-text-color !default;
 
-$tieredInvertedSubMenuBackground: rgba(0, 0, 0, 0.2) !default;
-
+$menu-tiered-inverted-sub-background: rgba(0, 0, 0, 0.2) !default;
 
 // Icon */
-$iconMenuTextAlign: center !default;
-$iconMenuItemColor: $black !default;
-$iconMenuInvertedItemColor: $white !default;
-
+$menu-icon-text-align: center !default;
+$menu-icon-item-color: $black !default;
+$menu-icon-inverted-item-color: $white !default;
 
 // Tabular */
-$tabularBorderColor: $solidBorderColor !default;
-$tabularBackgroundColor: transparent !default;
-$tabularBackground: none $tabularBackgroundColor !default;
-$tabularBorderWidth: 1px !default;
-$tabularOppositeBorderWidth: $tabularBorderWidth + 1px !default;
-$tabularVerticalPadding: $itemVerticalPadding !default;
-$tabularHorizontalPadding: $relativeHuge !default;
-$tabularBorderRadius: $defaultBorderRadius !default;
-$tabularTextColor: $itemTextColor !default;
+$menu-tabular-border-color: $solid-border-color !default;
+$menu-tabular-background-color: transparent !default;
+$menu-tabular-background: none $menu-tabular-background-color !default;
+$menu-tabular-border-width: 1px !default;
+$menu-tabular-opposite-border-width: $menu-tabular-border-width + 1px !default;
+$menu-tabular-vertical-padding: $menu-item-vertical-padding !default;
+$menu-tabular-horizontal-padding: $relative-huge !default;
+$menu-tabular-border-radius: $default-border-radius !default;
+$menu-tabular-text-color: $menu-item-text-color !default;
 
-$tabularHoveredTextColor: $hoveredTextColor !default;
+$menu-tabular-hovered-text-color: $hovered-text-color !default;
 
-$tabularVerticalBackground: none $tabularBackgroundColor !default;
+$menu-tabular-vertical-background: none $menu-tabular-background-color !default;
 
-$tabularFluidOffset: 1px !default;
-$tabularFluidWidth: calc(100% + #{$tabularFluidOffset * 2}) !default;
+$menu-tabular-fluid-offset: 1px !default;
+$menu-tabular-fluid-width: calc(
+  100% + #{$menu-tabular-fluid-offset * 2}
+) !default;
 
-$tabularActiveBackground: none $white !default;
-$tabularActiveColor: $selectedTextColor !default;
-$tabularActiveBoxShadow: none !default;
-$tabularActiveWeight: $bold !default;
-
-
+$menu-tabular-active-background: none $white !default;
+$menu-tabular-active-color: $selected-text-color !default;
+$menu-tabular-active-box-shadow: none !default;
+$menu-tabular-active-weight: $bold !default;
 
 // Pagination */
-$paginationMinWidth: 3em !default;
-$paginationActiveBackground: $transparentBlack !default;
-$paginationActiveTextColor: $selectedTextColor !default;
+$menu-pagination-min-width: 3em !default;
+$menu-pagination-active-background: $transparent-black !default;
+$menu-pagination-active-text-color: $selected-text-color !default;
 
 // Labeled Icon */
-$labeledIconItemHorizontalPadding: $relativeMassive !default;
-$labeledIconSize: $relativeMassive !default;
-$labeledIconMinWidth: 5em !default;
-$labeledIconTextMargin: 0.5rem !default;
-
+$menu-labeled-icon-item-horizontal-padding: $relative-massive !default;
+$menu-labeled-icon-size: $relative-massive !default;
+$menu-labeled-icon-min-width: 5em !default;
+$menu-labeled-icon-text-margin: 0.5rem !default;
 
 // Text */
-$textMenuItemSpacing: $relative7px !default;
-$textMenuMargin: $relativeMedium -($textMenuItemSpacing) !default;
-$textMenuItemColor: $mutedTextColor !default;
-$textMenuItemFontWeight: $normal !default;
-$textMenuItemMargin: 0 0 !default;
-$textMenuItemPadding: $relative5px $textMenuItemSpacing !default;
-$textMenuItemTransition: opacity $defaultDuration $defaultEasing !default;
+$menu-text-item-spacing: $relative7px !default;
+$menu-text-margin: $relative-medium (-$menu-text-item-spacing) !default;
+$menu-text-item-color: $muted-text-color !default;
+$menu-text-item-font-weight: $normal !default;
+$menu-text-item-margin: 0 0 !default;
+$menu-text-item-padding: $relative5px $menu-text-item-spacing !default;
+$menu-text-item-transition: opacity $default-duration $default-easing !default;
 
-$textMenuSubMenuMargin: 0 !default;
-$textMenuSubMenuItemMargin: 0 !default;
-$textMenuSubMenuItemPadding: $relative7px 0 !default;
+$menu-text-sub-menu-margin: 0 !default;
+$menu-text-sub-menu-item-margin: 0 !default;
+$menu-text-sub-menu-item-padding: $relative7px 0 !default;
 
-$textMenuActiveItemFontWeight: $normal !default;
-$textMenuActiveItemColor: $selectedTextColor !default;
+$menu-text-active-item-font-weight: $normal !default;
+$menu-text-active-item-color: $selected-text-color !default;
 
-$textMenuHeaderSize: $relativeSmall !default;
-$textMenuHeaderColor: $darkTextColor !default;
-$textMenuHeaderFontWeight: $bold !default;
-$textMenuHeaderTextTransform: uppercase !default;
+$menu-text-header-size: $relative-small !default;
+$menu-text-header-color: $dark-text-color !default;
+$menu-text-header-font-weight: $bold !default;
+$menu-text-header-text-transform: uppercase !default;
 
-$textVerticalMenuMargin: $relativeMedium 0 !default;
-$textVerticalMenuHeaderMargin: $relative8px 0 $relative10px !default;
-$textVerticalMenuItemMargin: $relative8px 0 !default;
+$menu-text-vertical-margin: $relative-medium 0 !default;
+$menu-text-vertical-header-margin: $relative8px 0 $relative10px !default;
+$menu-text-vertical-item-margin: $relative8px 0 !default;
 
-$textVerticalMenuIconFloat: none !default;
-$textVerticalMenuIconMargin: $iconMargin !default;
-
+$menu-text-vertical-icon-float: none !default;
+$menu-text-vertical-icon-margin: $menu-icon-margin !default;
 
 //-------------- Variations ---------------*/
 
 // Inverted */
-$invertedBackground: $black !default;
-$invertedBoxShadow: none !default;
-$invertedBorder: 0 solid transparent !default;
-$invertedHeaderBackground: transparent !default;
+$menu-inverted-background: $black !default;
+$menu-inverted-box-shadow: none !default;
+$menu-inverted-border: 0 solid transparent !default;
+$menu-inverted-header-background: transparent !default;
 
-$invertedItemBackground: transparent !default;
-$invertedItemTextColor: $invertedTextColor !default;
+$menu-inverted-item-background: transparent !default;
+$menu-inverted-item-text-color: $inverted-text-color !default;
 
 // Inverted Sub Menu */
-$invertedSubMenuBackground: transparent !default;
-$invertedSubMenuColor: $invertedUnselectedTextColor !default;
+$menu-inverted-sub-background: transparent !default;
+$menu-inverted-sub-color: $inverted-unselected-text-color !default;
 
 // Inverted Hover */
-$invertedHoverBackground: $transparentWhite !default;
-$invertedHoverColor: $invertedSelectedTextColor !default;
+$menu-inverted-hover-background: $transparent-white !default;
+$menu-inverted-hover-color: $inverted-selected-text-color !default;
 
-$invertedSubMenuHoverBackground: transparent !default;
-$invertedSubMenuHoverColor: $invertedSelectedTextColor !default;
+$menu-inverted-sub-hover-background: transparent !default;
+$menu-inverted-sub-hover-color: $inverted-selected-text-color !default;
 
 // Pressed */
-$invertedMenuPressedBackground: $transparentWhite !default;
-$invertedMenuPressedColor: $invertedSelectedTextColor !default;
+$menu-inverted-pressed-background: $transparent-white !default;
+$menu-inverted-pressed-color: $inverted-selected-text-color !default;
 
 // Inverted Active */
-$invertedActiveBackground: $strongTransparentWhite !default;
-$invertedActiveColor: $invertedSelectedTextColor !default;
-$invertedArrowActiveColor: #3D3E3F !default;
+$menu-inverted-active-background: $strong-transparent-white !default;
+$menu-inverted-active-color: $inverted-selected-text-color !default;
+$menu-inverted-arrow-active-color: #3d3e3f !default;
 
 // Inverted Active Hover  */
-$invertedActiveHoverBackground: $invertedActiveBackground !default;
-$invertedActiveHoverColor: $white !default;
-$invertedArrowActiveHoverColor: $invertedArrowActiveColor !default;
+$menu-inverted-active-hover-background: $menu-inverted-active-background !default;
+$menu-inverted-active-hover-color: $white !default;
+$menu-inverted-arrow-active-hover-color: $menu-inverted-arrow-active-color !default;
 
-$invertedSubMenuActiveBackground: transparent !default;
-$invertedSubMenuActiveColor: $white !default;
+$menu-inverted-sub-active-background: transparent !default;
+$menu-inverted-sub-active-color: $white !default;
 
 // Inverted Menu Divider */
-$invertedDividerBackground: rgba(255, 255, 255, 0.08) !default;
-$invertedVerticalDividerBackground: $invertedDividerBackground !default;
+$menu-inverted-divider-background: rgba(255, 255, 255, 0.08) !default;
+$menu-inverted-vertical-divider-background: $menu-inverted-divider-background !default;
 
 // Inverted Colored */
-$invertedColoredDividerBackground: $dividerBackground !default;
-$invertedColoredActiveBackground: $strongTransparentBlack !default;
+$menu-inverted-colored-divider-background: $menu-divider-background !default;
+$menu-inverted-colored-active-background: $strong-transparent-black !default;
 
 // Fixed */
-$fixedPrecedingGridMargin: 2.75rem !default;
+$menu-fixed-preceding-grid-margin: 2.75rem !default;
 
 // Floated */
-$floatedDistance: 0.5rem !default;
+$menu-floated-distance: 0.5rem !default;
 
 // Attached */
-$attachedTopOffset: 0 !default;
-$attachedBottomOffset: 0 !default;
-$attachedHorizontalOffset: -$borderWidth !default;
-$attachedWidth: calc(100% + #{-$attachedHorizontalOffset * 2}) !default;
-$attachedBoxShadow: none !default;
-$attachedBorder: $borderWidth solid $solidBorderColor !default;
-$attachedBottomBoxShadow:
-  $boxShadow,
-  $attachedBoxShadow
- !default;
-
-// Resize large sizes */
-$mini: $_11px !default;
-$tiny: $_12px !default;
-$small: $_13px !default;
-$large: $_15px !default;
-$big: $_16px !default;
-$huge: $_17px !default;
-$massive: $_18px !default;
-
-// Sizes */
-$miniWidth: 9rem !default;
-$tinyWidth: 11rem !default;
-$smallWidth: 13rem !default;
-$mediumWidth: 15rem !default;
-$largeWidth: 18rem !default;
-$bigWidth: 20rem !default;
-$hugeWidth: 22rem !default;
-$massiveWidth: 25rem !default;
-
+$menu-attached-top-offset: 0 !default;
+$menu-attached-bottom-offset: 0 !default;
+$menu-attached-horizontal-offset: -$menu-border-width !default;
+$menu-attached-width: calc(
+  100% + #{-$menu-attached-horizontal-offset * 2}
+) !default;
+$menu-attached-box-shadow: none !default;
+$menu-attached-border: $menu-border-width solid $solid-border-color !default;
+$menu-attached-bottom-box-shadow: $menu-box-shadow, $menu-attached-box-shadow !default;
 
 //------------------- Inverted dropdowns --------------------*/
-$invertedDropdownBackground: $black !default;
-$invertedDropdownMenuBoxShadow: none !default;
+$menu-inverted-dropdown-background: $black !default;
+$menu-inverted-dropdown-box-shadow: none !default;
 
-$invertedDropdownItemColor: $invertedMutedTextColor !default;
+$menu-inverted-dropdown-item-color: $inverted-muted-text-color !default;
 
-$invertedDropdownHoveredItemBackground: $transparentWhite !default;
-$invertedDropdownHoveredItemColor: $invertedDropdownItemColor !default;
+$menu-inverted-dropdown-hovered-item-background: $transparent-white !default;
+$menu-inverted-dropdown-hovered-item-color: $menu-inverted-dropdown-item-color !default;
 
-$invertedDropdownActiveItemBackground: transparent !default;
-$invertedDropdownActiveItemColor: $invertedDropdownItemColor !default;
+$menu-inverted-dropdown-active-item-background: transparent !default;
+$menu-inverted-dropdown-active-item-color: $menu-inverted-dropdown-item-color !default;
 
-$invertedDropdownSelectedItemBackground: $strongTransparentWhite !default;
-$invertedDropdownSelectedItemColor: $invertedDropdownItemColor !default;
+$menu-inverted-dropdown-selected-item-background: $strong-transparent-white !default;
+$menu-inverted-dropdown-selected-item-color: $menu-inverted-dropdown-item-color !default;

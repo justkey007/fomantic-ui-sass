@@ -1,73 +1,78 @@
 //****************************** Slider Variables *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Element --------------------*/
 
-$height        : 1.5em !default;
-$hoverPointer  : auto !default;
-$padding       : 1em .5em !default;
+$slider-height: 1.5em !default;
+$slider-hover-pointer: auto !default;
+$slider-padding: 1em 0.5em !default;
 
 // Track */
-$trackHeight        : .4em !default;
-$trackPositionTop   : ($height / 2) - ($trackHeight / 2) !default;
-$background         : #ccc !default;
-$trackBorderRadius  : 4px !default;
-$trackColor         : $transparentBlack !default;
+$slider-track-height: 0.4em !default;
+$slider-track-position-top: ($slider-height / 2) - ($slider-track-height / 2) !default;
+$slider-background: #ccc !default;
+$slider-track-border-radius: 4px !default;
+$slider-track-color: $transparent-black !default;
 
 // Track Fill */
-$trackFillHeight             : $trackHeight !default;
-$trackFillColor              : $black !default;
-$trackFillColorFocus         : $blackHover !default;
-$invertedTrackFillColor      : $lightBlack !default;
-$invertedTrackFillColorFocus : $lightBlackHover !default;
-$trackFillBorderRadius       : $trackBorderRadius !default;
+$slider-track-fill-height: $slider-track-height !default;
+$slider-track-fill-color: $black !default;
+$slider-track-fill-color-focus: $black-hover !default;
+$slider-inverted-track-fill-color: $light-black !default;
+$slider-inverted-track-fill-color-focus: $light-black-hover !default;
+$slider-track-fill-border-radius: $slider-track-border-radius !default;
 
 // Thumb */
-$thumbHeight              : $height !default;
-$thumbBorderRadius        : 100% !default;
-$thumbBackground          : $white $subtleGradient !default;
-$thumbShadow              : $subtleShadow, 0 0 0 1px $borderColor inset !default;
-$thumbTransitionDuration  : 0.3s !default;
-$thumbTransition          : background $thumbTransitionDuration $defaultEasing !default;
+$slider-thumb-height: $slider-height !default;
+$slider-thumb-border-radius: 100% !default;
+$slider-thumb-background: $white $subtle-gradient !default;
+$slider-thumb-shadow: $subtle-shadow, 0 0 0 1px $border-color inset !default;
+$slider-thumb-transition-duration: 0.3s !default;
+$slider-thumb-transition: background $slider-thumb-transition-duration
+  $default-easing !default;
 
 // Thumb Hover */
-$thumbHoverPointer    : pointer !default;
-$thumbHoverBackground : $whiteHover $subtleGradient !default;
+$slider-thumb-hover-pointer: pointer !default;
+$slider-thumb-hover-background: $white-hover $subtle-gradient !default;
 
 //------------------- States --------------------*/
 
 // Disabled */
-$disabledOpactiy        : .5 !default;
-$disabledTrackFillColor : $background !default;
+$slider-disabled-opactiy: 0.5 !default;
+$slider-disabled-track-fill-color: $slider-background !default;
 
 //------------------- Variations --------------------*/
 
 // Vertical */
-$verticalPadding : .5em 1em !default;
+$slider-vertical-padding: 0.5em 1em !default;
 
 // Labeled */
-$labelHeight  : $height !default;
-$labelWidth   : 1px !default;
-$labelColor   : $background !default;
+$slider-label-height: $slider-height !default;
+$slider-label-width: 1px !default;
+$slider-label-color: $slider-background !default;
 
 // Hover */
-$hoverVarOpacity                 : 0 !default;
-$hoverVarHoverOpacity            : 1 !default;
-$hoverOpacityTransitionDuration  : 0.2s !default;
-$hoverOpacityTransition          : opacity $hoverOpacityTransitionDuration linear !default;
+$slider-hover-var-opacity: 0 !default;
+$slider-hover-var-hover-opacity: 1 !default;
+$slider-hover-opacity-transition-duration: 0.2s !default;
+$slider-hover-opacity-transition: opacity
+  $slider-hover-opacity-transition-duration linear !default;
 
 // Sizing */
-$smallHeight            : 1em !default;
-$smallLabelHeight       : $smallHeight !default;
-$smallTrackHeight       : 0.3em !default;
-$trackPositionTopSmall  : ($smallHeight / 2) - ($smallTrackHeight / 2) !default;
+$slider-small-height: 1em !default;
+$slider-small-label-height: $slider-small-height !default;
+$slider-small-track-height: 0.3em !default;
+$slider-track-position-top-small: ($slider-small-height / 2) -
+  ($slider-small-track-height / 2) !default;
 
-$largeHeight            : 2em !default;
-$largeLabelHeight       : $largeHeight !default;
-$largeTrackHeight       : 0.5em !default;
-$trackPositionTopLarge  : ($largeHeight / 2) - ($largeTrackHeight / 2) !default;
+$slider-large-height: 2em !default;
+$slider-large-label-height: $slider-large-height !default;
+$slider-large-track-height: 0.5em !default;
+$slider-track-position-top-large: ($slider-large-height / 2) -
+  ($slider-large-track-height / 2) !default;
 
-$bigHeight              : 2.5em !default;
-$bigLabelHeight         : $bigHeight !default;
-$bigTrackHeight         : 0.6em !default;
-$trackPositionTopBig    : ($bigHeight / 2) - ($bigTrackHeight / 2) !default;
+$slider-big-height: 2.5em !default;
+$slider-big-label-height: $slider-big-height !default;
+$slider-big-track-height: 0.6em !default;
+$slider-track-position-top-big: ($slider-big-height / 2) -
+  ($slider-big-track-height / 2) !default;

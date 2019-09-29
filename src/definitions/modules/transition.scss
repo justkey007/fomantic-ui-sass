@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/transition';
-
+@import "../../themes/default/modules/transition";
 
 /*******************************
           Transitions
@@ -7,19 +6,18 @@
 
 .transition {
   animation-iteration-count: 1;
-  animation-duration: $transitionDefaultDuration;
-  animation-timing-function: $transitionDefaultEasing;
-  animation-fill-mode: $transitionDefaultFill;
+  animation-duration: $transition-default-duration;
+  animation-timing-function: $transition-default-easing;
+  animation-fill-mode: $transition-default-fill;
 }
 
 /*******************************
             States
 *******************************/
 
-
 /* Animating */
 .animating.transition {
-  backface-visibility: $backfaceVisibility;
+  backface-visibility: $transition-backface-visibility;
   visibility: visible !important;
 }
 
@@ -40,8 +38,8 @@
 .visible.transition {
   display: block !important;
   visibility: visible !important;
-/*  backface-visibility: $backfaceVisibility;
-  transform: $use3DAcceleration;*/
+  /*  backface-visibility: $transition-backface-visibility;
+  transform: $transition-use3-d-acceleration;*/
 }
 
 /* Disabled */
@@ -57,5 +55,4 @@
   animation-iteration-count: infinite;
 }
 
-
-
+@import "../../themes/default/modules/transition.style";

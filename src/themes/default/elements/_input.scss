@@ -1,93 +1,93 @@
 //****************************** Input *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 //------------------- Element --------------------*/
 
-$inputFont: $pageFont !default;
-$verticalPadding: $inputVerticalPadding !default;
-$horizontalPadding: $inputHorizontalPadding !default;
+$input-font: $page-font !default;
+$input-vertical-padding: $input-vertical-padding !default;
+$input-horizontal-padding: $input-horizontal-padding !default;
 
-$lineHeight: $inputLineHeight !default;
-$lineHeightOffset: (($lineHeight - 1em) / 2) !default;
+$input-line-height: $input-line-height !default;
+$input-line-height-offset: (($input-line-height - 1em) / 2) !default;
 
-$padding: ($verticalPadding - $lineHeightOffset) $horizontalPadding !default;
+$input-padding: ($input-vertical-padding - $input-line-height-offset)
+  $input-horizontal-padding !default;
 
-$textAlign: left !default;
-$background: $inputBackground !default;
-$borderWidth: 1px !default;
-$border: $borderWidth solid $borderColor !default;
-$boxShadow: none !default;
+$input-text-align: left !default;
+$input-background: $input-background !default;
+$input-border-width: 1px !default;
+$input-border: $input-border-width solid $border-color !default;
+$input-box-shadow: none !default;
 
-$borderRadius: $defaultBorderRadius !default;
-$transition:
-  box-shadow $defaultDuration $defaultEasing,
-  border-color $defaultDuration $defaultEasing
- !default;
+$input-border-radius: $default-border-radius !default;
+$input-transition: box-shadow $default-duration $default-easing,
+  border-color $default-duration $default-easing !default;
 
 //------------------- Types --------------------*/
 
 // Icon Input */
-$iconWidth: ($verticalPadding * 2) + $glyphWidth !default;
-$iconOpacity: 0.5 !default;
-$iconFocusOpacity: 1 !default;
-$iconOffset: -0.5em !default;
+$input-icon-width: ($input-vertical-padding * 2) + $glyph-width !default;
+$input-icon-opacity: 0.5 !default;
+$input-icon-focus-opacity: 1 !default;
+$input-icon-offset: -0.5em !default;
 
-$iconDistance: 0 !default;
-$iconMargin: $iconWidth + $iconDistance !default;
-$iconTransition: opacity 0.3s $defaultEasing !default;
+$input-icon-distance: 0 !default;
+$input-icon-margin: $input-icon-width + $input-icon-distance !default;
+$input-icon-transition: opacity 0.3s $default-easing !default;
 
-$transparentIconWidth: $glyphWidth !default;
-$transparentIconMargin: 2em !default;
+$input-transparent-icon-width: $glyph-width !default;
+$input-transparent-icon-margin: 2em !default;
 
-$textareaIconHeight: 3em !default;
+$input-textarea-icon-height: 3em !default;
 
 // Circular Icon Input */
-$circularIconVerticalOffset: 0.35em !default;
-$circularIconHorizontalOffset: 0.5em !default;
+$input-circular-icon-vertical-offset: 0.35em !default;
+$input-circular-icon-horizontal-offset: 0.5em !default;
 
 // Labeled Input */
-$labelCornerTop: $borderWidth !default;
-$labelCornerRight: $borderWidth !default;
-$labelCornerSize: $relative9px !default;
-$labelSize: 1em !default;
-$labelVerticalPadding: ($verticalPadding - $lineHeightOffset) !default;
+$input-label-corner-top: $input-border-width !default;
+$input-label-corner-right: $input-border-width !default;
+$input-label-corner-size: $relative9px !default;
+$input-label-size: 1em !default;
+$input-label-vertical-padding: (
+  $input-vertical-padding - $input-line-height-offset
+) !default;
 
-$labeledMargin: 2.5em !default;
-$labeledIconInputMargin: 3.25em !default;
-$labeledIconMargin: 1.25em !default;
+$input-labeled-margin: 2.5em !default;
+$input-labeled-icon-itself-margin: 3.25em !default;
+$input-labeled-icon-margin: 1.25em !default;
 
 //-------------------  States -------------------*/
 
 // Placeholder */
-$placeholderColor: $inputPlaceholderColor !default;
-$placeholderFocusColor: $inputPlaceholderFocusColor !default;
+$input-placeholder-color: $input-placeholder-color !default;
+$input-placeholder-focus-color: $input-placeholder-focus-color !default;
 
 // Down */
-$downBorderColor: rgba(0, 0, 0, 0.3) !default;
-$downBackground: #FAFAFA !default;
-$downColor: $textColor !default;
-$downBoxShadow: none !default;
+$input-down-border-color: rgba(0, 0, 0, 0.3) !default;
+$input-down-background: #fafafa !default;
+$input-down-color: $text-color !default;
+$input-down-box-shadow: none !default;
 
 // Focus */
-$focusBorderColor: $focusedFormBorderColor !default;
-$focusBackground: $background !default;
-$focusColor: $hoveredTextColor !default;
-$focusBoxShadow: none !default;
+$input-focus-border-color: $focused-form-border-color !default;
+$input-focus-background: $input-background !default;
+$input-focus-color: $hovered-text-color !default;
+$input-focus-box-shadow: none !default;
 
 // Error */
-$errorBackground: $negativeBackgroundColor !default;
-$errorColor: $negativeTextColor !default;
-$errorBorder: $negativeBorderColor !default;
-$errorBoxShadow: none !default;
+$input-error-background: $negative-background-color !default;
+$input-error-color: $negative-text-color !default;
+$input-error-border: $negative-border-color !default;
+$input-error-box-shadow: none !default;
 
-$placeholderErrorColor: lighten($errorColor, 40) !default;
-$placeholderErrorFocusColor: lighten($errorColor, 30) !default;
+$input-placeholder-error-color: lighten($input-error-color, 40) !default;
+$input-placeholder-error-focus-color: lighten($input-error-color, 30) !default;
 
 // Loader */
-$invertedLoaderFillColor: rgba(0, 0, 0, 0.15) !default;
+$input-inverted-loader-fill-color: rgba(0, 0, 0, 0.15) !default;
 
 //------------------- Variations --------------------*/
 
 // Inverted */
-$transparentInvertedPlaceholderColor: $invertedUnselectedTextColor !default;
-$transparentInvertedColor: $white !default;
-
+$input-transparent-inverted-placeholder-color: $inverted-unselected-text-color !default;
+$input-transparent-inverted-color: $white !default;

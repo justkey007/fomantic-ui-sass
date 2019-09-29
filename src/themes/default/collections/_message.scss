@@ -1,266 +1,213 @@
 //****************************** Message *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Elements --------------------*/
 
-$verticalMargin: 1em !default;
-$verticalPadding: 1em !default;
-$horizontalPadding: 1.5em !default;
-$padding: $verticalPadding $horizontalPadding !default;
-$background: #F8F8F9 !default;
-$lineHeightOffset: (($lineHeight - 1em) / 2) !default;
+$message-vertical-margin: 1em !default;
+$message-vertical-padding: 1em !default;
+$message-horizontal-padding: 1.5em !default;
+$message-padding: $message-vertical-padding $message-horizontal-padding !default;
+$message-background: #f8f8f9 !default;
+$message-line-height-offset: (($line-height - 1em) / 2) !default;
 
-$borderRadius: $defaultBorderRadius !default;
-$borderWidth: 1px !default;
-$borderShadow: 0 0 0 $borderWidth $strongBorderColor inset !default;
-$shadowShadow: 0 0 0 0 rgba(0, 0, 0, 0) !default;
-$boxShadow:
-  $borderShadow,
-  $shadowShadow
- !default;
+$message-border-radius: $default-border-radius !default;
+$message-border-width: 1px !default;
+$message-border-shadow: 0 0 0 $message-border-width $strong-border-color inset !default;
+$message-shadow-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !default;
+$message-box-shadow: $message-border-shadow, $message-shadow-shadow !default;
 
-$transition:
-  opacity $defaultDuration $defaultEasing,
-  color $defaultDuration $defaultEasing,
-  background $defaultDuration $defaultEasing,
-  box-shadow $defaultDuration $defaultEasing
- !default;
+$message-transition: opacity $default-duration $default-easing,
+  color $default-duration $default-easing,
+  background $default-duration $default-easing,
+  box-shadow $default-duration $default-easing !default;
 
 // Header */
-$headerFontSize: $relativeLarge !default;
-$headerFontWeight: $bold !default;
-$headerDisplay: block !default;
-$headerDistance: 0 !default;
-$headerMargin: -$headerLineHeightOffset 0 $headerDistance 0 !default;
-$headerParagraphDistance: 0.25em !default;
+$message-header-font-size: $relative-large !default;
+$message-header-font-weight: $bold !default;
+$message-header-display: block !default;
+$message-header-distance: 0 !default;
+$message-header-margin: -$header-line-height-offset 0 $message-header-distance 0 !default;
+$message-header-paragraph-distance: 0.25em !default;
 
 // Paragraph */
-$messageTextOpacity: 0.85 !default;
-$messageParagraphMargin: 0.75em !default;
+$message-text-opacity: 0.85 !default;
+$message-paragraph-margin: 0.75em !default;
 
 // List */
-$listOpacity: 0.85 !default;
-$listStylePosition: inside !default;
-$listMargin: 0.5em !default;
-$listItemIndent: 1em !default;
-$listItemMargin: 0.3em !default;
+$message-list-opacity: 0.85 !default;
+$message-list-style-position: inside !default;
+$message-list-margin: 0.5em !default;
+$message-list-item-indent: 1em !default;
+$message-list-item-margin: 0.3em !default;
 
 // Icon */
-$iconDistance: 0.6em !default;
+$message-icon-distance: 0.6em !default;
 
 // Close Icon */
-$closeTopDistance: $verticalPadding - $lineHeightOffset !default;
-$closeRightDistance: 0.5em !default;
-$closeOpacity: 0.7 !default;
-$closeTransition: opacity $defaultDuration $defaultEasing !default;
-
+$message-close-top-distance: $message-vertical-padding -
+  $message-line-height-offset !default;
+$message-close-right-distance: 0.5em !default;
+$message-close-opacity: 0.7 !default;
+$message-close-transition: opacity $default-duration $default-easing !default;
 
 //-------------------  Types --------------------*/
 
 // Icon Message */
-$iconSize: 3em !default;
-$iconOpacity: 0.8 !default;
-$iconContentDistance: 0 !default;
-$iconVerticalAlign: middle !default;
+$message-icon-size: 3em !default;
+$message-icon-opacity: 0.8 !default;
+$message-icon-content-distance: 0 !default;
+$message-icon-vertical-align: middle !default;
 
 // Attached */
-$attachedXOffset: -1px !default;
-$attachedYOffset: -1px !default;
-$attachedBoxShadow: 0 0 0 $borderWidth $borderColor inset !default;
-$attachedBottomBoxShadow:
-  $attachedBoxShadow,
-  $subtleShadow
- !default;
+$message-attached-x-offset: -1px !default;
+$message-attached-y-offset: -1px !default;
+$message-attached-box-shadow: 0 0 0 $message-border-width $border-color inset !default;
+$message-attached-bottom-box-shadow: $message-attached-box-shadow,
+  $subtle-shadow !default;
 
 // Floating */
-$floatingBoxShadow:
-  $borderShadow,
-  $floatingShadow
- !default;
+$message-floating-box-shadow: $message-border-shadow, $floating-shadow !default;
 
 // Colors */
-$redBoxShadow:
-  0 0 0 $borderWidth $redBorderColor inset,
-  $shadowShadow
- !default;
-$redBoxFloatingShadow:
-  0 0 0 $borderWidth $redBorderColor inset,
-  $floatingShadow
- !default;
-$orangeBoxShadow:
-  0 0 0 $borderWidth $orangeBorderColor inset,
-  $shadowShadow
- !default;
-$orangeBoxFloatingShadow:
-  0 0 0 $borderWidth $orangeBorderColor inset,
-  $floatingShadow
- !default;
-$yellowBoxShadow:
-  0 0 0 $borderWidth $yellowBorderColor inset,
-  $shadowShadow
- !default;
-$yellowBoxFloatingShadow:
-   0 0 0 $borderWidth $yellowBorderColor inset,
-   $floatingShadow
- !default;
-$oliveBoxShadow:
-  0 0 0 $borderWidth $oliveBorderColor inset,
-  $shadowShadow
- !default;
-$oliveBoxFloatingShadow:
-  0 0 0 $borderWidth $oliveBorderColor inset,
-  $floatingShadow
- !default;
-$greenBoxShadow:
-  0 0 0 $borderWidth $greenBorderColor inset,
-  $shadowShadow
- !default;
-$greenBoxFloatingShadow:
-  0 0 0 $borderWidth $greenBorderColor inset,
-  $floatingShadow
- !default;
-$tealBoxShadow:
-  0 0 0 $borderWidth $tealBorderColor inset,
-  $shadowShadow
- !default;
-$tealBoxFloatingShadow:
-  0 0 0 $borderWidth $tealBorderColor inset,
-  $floatingShadow
- !default;
-$blueBoxShadow:
-  0 0 0 $borderWidth $blueBorderColor inset,
-  $shadowShadow
- !default;
-$blueBoxFloatingShadow:
-  0 0 0 $borderWidth $blueBorderColor inset,
-  $floatingShadow
- !default;
-$violetBoxShadow:
-  0 0 0 $borderWidth $violetBorderColor inset,
-  $shadowShadow
- !default;
-$violetBoxFloatingShadow:
-  0 0 0 $borderWidth $violetBorderColor inset,
-  $floatingShadow
- !default;
-$purpleBoxShadow:
-  0 0 0 $borderWidth $purpleBorderColor inset,
-  $shadowShadow
- !default;
-$purpleBoxFloatingShadow:
-  0 0 0 $borderWidth $purpleBorderColor inset,
-  $floatingShadow
- !default;
-$pinkBoxShadow:
-  0 0 0 $borderWidth $pinkBorderColor inset,
-  $shadowShadow
- !default;
-$pinkBoxFloatingShadow:
-  0 0 0 $borderWidth $pinkBorderColor inset,
-  $floatingShadow
- !default;
-$brownBoxShadow:
-  0 0 0 $borderWidth $brownBorderColor inset,
-  $shadowShadow
- !default;
-$brownBoxFloatingShadow:
-  0 0 0 $borderWidth $brownBorderColor inset,
-  $floatingShadow
- !default;
+$message-red-box-shadow: 0 0 0 $message-border-width $red-border-color inset,
+  $message-shadow-shadow !default;
+$message-red-box-floating-shadow: 0 0 0 $message-border-width $red-border-color
+    inset,
+  $floating-shadow !default;
+$message-orange-box-shadow: 0 0 0 $message-border-width $orange-border-color
+    inset,
+  $message-shadow-shadow !default;
+$message-orange-box-floating-shadow: 0 0 0 $message-border-width
+    $orange-border-color inset,
+  $floating-shadow !default;
+$message-yellow-box-shadow: 0 0 0 $message-border-width $yellow-border-color
+    inset,
+  $message-shadow-shadow !default;
+$message-yellow-box-floating-shadow: 0 0 0 $message-border-width
+    $yellow-border-color inset,
+  $floating-shadow !default;
+$message-olive-box-shadow: 0 0 0 $message-border-width $olive-border-color inset,
+  $message-shadow-shadow !default;
+$message-olive-box-floating-shadow: 0 0 0 $message-border-width
+    $olive-border-color inset,
+  $floating-shadow !default;
+$message-green-box-shadow: 0 0 0 $message-border-width $green-border-color inset,
+  $message-shadow-shadow !default;
+$message-green-box-floating-shadow: 0 0 0 $message-border-width
+    $green-border-color inset,
+  $floating-shadow !default;
+$message-teal-box-shadow: 0 0 0 $message-border-width $teal-border-color inset,
+  $message-shadow-shadow !default;
+$message-teal-box-floating-shadow: 0 0 0 $message-border-width
+    $teal-border-color inset,
+  $floating-shadow !default;
+$message-blue-box-shadow: 0 0 0 $message-border-width $blue-border-color inset,
+  $message-shadow-shadow !default;
+$message-blue-box-floating-shadow: 0 0 0 $message-border-width
+    $blue-border-color inset,
+  $floating-shadow !default;
+$message-violet-box-shadow: 0 0 0 $message-border-width $violet-border-color
+    inset,
+  $message-shadow-shadow !default;
+$message-violet-box-floating-shadow: 0 0 0 $message-border-width
+    $violet-border-color inset,
+  $floating-shadow !default;
+$message-purple-box-shadow: 0 0 0 $message-border-width $purple-border-color
+    inset,
+  $message-shadow-shadow !default;
+$message-purple-box-floating-shadow: 0 0 0 $message-border-width
+    $purple-border-color inset,
+  $floating-shadow !default;
+$message-pink-box-shadow: 0 0 0 $message-border-width $pink-border-color inset,
+  $message-shadow-shadow !default;
+$message-pink-box-floating-shadow: 0 0 0 $message-border-width
+    $pink-border-color inset,
+  $floating-shadow !default;
+$message-brown-box-shadow: 0 0 0 $message-border-width $brown-border-color inset,
+  $message-shadow-shadow !default;
+$message-brown-box-floating-shadow: 0 0 0 $message-border-width
+    $brown-border-color inset,
+  $floating-shadow !default;
 
 // Warning / Positive / Negative / Info */
-$positiveBoxShadow:
-  0 0 0 $borderWidth $positiveBorderColor inset,
-  $shadowShadow
- !default;
-$positiveBoxFloatingShadow:
-  0 0 0 $borderWidth $positiveBorderColor inset,
-  $floatingShadow
- !default;
-$negativeBoxShadow:
-  0 0 0 $borderWidth $negativeBorderColor inset,
-  $shadowShadow
- !default;
-$negativeBoxFloatingShadow:
-  0 0 0 $borderWidth $negativeBorderColor inset,
-  $floatingShadow
- !default;
-$infoBoxShadow:
-  0 0 0 $borderWidth $infoBorderColor inset,
-  $shadowShadow
- !default;
-$infoBoxFloatingShadow:
-  0 0 0 $borderWidth $infoBorderColor inset,
-  $floatingShadow
- !default;
-$warningBoxShadow:
-  0 0 0 $borderWidth $warningBorderColor inset,
-  $shadowShadow
- !default;
-$warningBoxFloatingShadow:
-  0 0 0 $borderWidth $warningBorderColor inset,
-  $floatingShadow
- !default;
-$errorBoxShadow:
-  0 0 0 $borderWidth $errorBorderColor inset,
-  $shadowShadow
- !default;
-$errorBoxFloatingShadow:
-  0 0 0 $borderWidth $errorBorderColor inset,
-  $floatingShadow
- !default;
-$successBoxShadow:
-  0 0 0 $borderWidth $successBorderColor inset,
-  $shadowShadow
- !default;
-$successBoxFloatingShadow:
-  0 0 0 $borderWidth $successBorderColor inset,
-  $floatingShadow
- !default;
+$message-positive-box-shadow: 0 0 0 $message-border-width $positive-border-color
+    inset,
+  $message-shadow-shadow !default;
+$message-positive-box-floating-shadow: 0 0 0 $message-border-width
+    $positive-border-color inset,
+  $floating-shadow !default;
+$message-negative-box-shadow: 0 0 0 $message-border-width $negative-border-color
+    inset,
+  $message-shadow-shadow !default;
+$message-negative-box-floating-shadow: 0 0 0 $message-border-width
+    $negative-border-color inset,
+  $floating-shadow !default;
+$message-info-box-shadow: 0 0 0 $message-border-width $info-border-color inset,
+  $message-shadow-shadow !default;
+$message-info-box-floating-shadow: 0 0 0 $message-border-width
+    $info-border-color inset,
+  $floating-shadow !default;
+$message-warning-box-shadow: 0 0 0 $message-border-width $warning-border-color
+    inset,
+  $message-shadow-shadow !default;
+$message-warning-box-floating-shadow: 0 0 0 $message-border-width
+    $warning-border-color inset,
+  $floating-shadow !default;
+$message-error-box-shadow: 0 0 0 $message-border-width $error-border-color inset,
+  $message-shadow-shadow !default;
+$message-error-box-floating-shadow: 0 0 0 $message-border-width
+    $error-border-color inset,
+  $floating-shadow !default;
+$message-success-box-shadow: 0 0 0 $message-border-width $success-border-color
+    inset,
+  $message-shadow-shadow !default;
+$message-success-box-floating-shadow: 0 0 0 $message-border-width
+    $success-border-color inset,
+  $floating-shadow !default;
 
- //-------------- Types ---------------*/
+//-------------- Types ---------------*/
 
- $consequences: (
+$message-consequences: (
   positive: (
-    background     : $positiveBackgroundColor,
-    header         : $positiveHeaderColor,
-    boxShadow      : $positiveBoxShadow,
-    boxFloatShadow : $positiveBoxFloatingShadow,
-    text           : $positiveTextColor,
+    background: $positive-background-color,
+    header: $positive-header-color,
+    boxShadow: $message-positive-box-shadow,
+    boxFloatShadow: $message-positive-box-floating-shadow,
+    text: $positive-text-color
   ),
   negative: (
-    background     : $negativeBackgroundColor,
-    header         : $negativeHeaderColor,
-    boxShadow      : $negativeBoxShadow,
-    boxFloatShadow : $negativeBoxFloatingShadow,
-    text           : $negativeTextColor,
+    background: $negative-background-color,
+    header: $negative-header-color,
+    boxShadow: $message-negative-box-shadow,
+    boxFloatShadow: $message-negative-box-floating-shadow,
+    text: $negative-text-color
   ),
   info: (
-    background     : $infoBackgroundColor,
-    header         : $infoHeaderColor,
-    boxShadow      : $infoBoxShadow,
-    boxFloatShadow : $infoBoxFloatingShadow,
-    text           : $infoTextColor,
+    background: $info-background-color,
+    header: $info-header-color,
+    boxShadow: $message-info-box-shadow,
+    boxFloatShadow: $message-info-box-floating-shadow,
+    text: $info-text-color
   ),
   warning: (
-    background     : $warningBackgroundColor,
-    header         : $warningHeaderColor,
-    boxShadow      : $warningBoxShadow,
-    boxFloatShadow : $warningBoxFloatingShadow,
-    text           : $warningTextColor,
+    background: $warning-background-color,
+    header: $warning-header-color,
+    boxShadow: $message-warning-box-shadow,
+    boxFloatShadow: $message-warning-box-floating-shadow,
+    text: $warning-text-color
   ),
   error: (
-    background     : $errorBackgroundColor,
-    header         : $errorHeaderColor,
-    boxShadow      : $errorBoxShadow,
-    boxFloatShadow : $errorBoxFloatingShadow,
-    text           : $errorTextColor,
+    background: $error-background-color,
+    header: $error-header-color,
+    boxShadow: $message-error-box-shadow,
+    boxFloatShadow: $message-error-box-floating-shadow,
+    text: $error-text-color
   ),
   success: (
-    background     : $successBackgroundColor,
-    header         : $successHeaderColor,
-    boxShadow      : $successBoxShadow,
-    boxFloatShadow : $successBoxFloatingShadow,
-    text           : $successTextColor,
+    background: $success-background-color,
+    header: $success-header-color,
+    boxShadow: $message-success-box-shadow,
+    boxFloatShadow: $message-success-box-floating-shadow,
+    text: $success-text-color
   )
-)
+);

@@ -1,11 +1,10 @@
-@import '../../themes/default/elements/reveal';
-
+@import "../../themes/default/elements/reveal";
 
 /*******************************
             Reveal
 *******************************/
 
-.ui.reveal  {
+.ui.reveal {
   display: inherit;
   position: relative !important;
   font-size: 0 !important;
@@ -15,25 +14,23 @@
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
-  z-index: $topZIndex !important;
-  transition: $transition;
+  z-index: $reveal-top-z-index !important;
+  transition: $reveal-transition;
 }
 .ui.reveal > .hidden.content {
   position: relative !important;
-  z-index: $bottomZIndex !important;
+  z-index: $reveal-bottom-z-index !important;
 }
 
 /* Make sure hovered element is on top of other reveal */
 .ui.active.reveal .visible.content,
 .ui.reveal:hover .visible.content {
-  z-index: $activeZIndex !important;
+  z-index: $reveal-active-z-index !important;
 }
-
 
 /*******************************
               Types
 *******************************/
-
 
 /*--------------
       Slide
@@ -52,7 +49,7 @@
   float: left;
 
   margin: 0;
-  transition: $slideTransition;
+  transition: $reveal-slide-transition;
 }
 
 .ui.slide.reveal > .visible.content {
@@ -112,7 +109,6 @@
   transform: translateY(0%) !important;
 }
 
-
 /*--------------
       Fade
 ---------------*/
@@ -124,7 +120,6 @@
 .ui.fade.reveal:hover > .visible.content {
   opacity: 0;
 }
-
 
 /*--------------
       Move
@@ -142,7 +137,7 @@
   white-space: normal;
 
   margin: 0;
-  transition: $moveTransition;
+  transition: $reveal-move-transition;
 }
 
 .ui.move.reveal > .visible.content {
@@ -170,14 +165,12 @@
   transform: translateY(100%) !important;
 }
 
-
-
 /*--------------
      Rotate
 ---------------*/
 
 .ui.rotate.reveal > .visible.content {
-  transition-duration: $transitionDuration;
+  transition-duration: $reveal-transition-duration;
   transform: rotate(0deg);
 }
 
@@ -189,7 +182,7 @@
 .ui.rotate.reveal:hover > .visible.content,
 .ui.rotate.right.active.reveal > .visible.content,
 .ui.rotate.right.reveal:hover > .visible.content {
-  transform: rotate($rotateDegrees);
+  transform: rotate($reveal-rotate-degrees);
 }
 
 .ui.rotate.left.reveal > .visible.content {
@@ -197,7 +190,7 @@
 }
 .ui.rotate.left.active.reveal > .visible.content,
 .ui.rotate.left.reveal:hover > .visible.content {
-  transform: rotate(-$rotateDegrees);
+  transform: rotate(-$reveal-rotate-degrees);
 }
 
 /*******************************
@@ -218,13 +211,12 @@
   display: none !important;
 }
 
-
 /*******************************
            Coupling
 *******************************/
 
 .ui.reveal > .ui.ribbon.label {
-  z-index: $overlayZIndex;
+  z-index: $reveal-overlay-z-index;
 }
 
 /*******************************
@@ -247,7 +239,6 @@
   transition-delay: 0s !important;
 }
 
-
 /*--------------
      Sizing
 ---------------*/
@@ -255,5 +246,3 @@
 .ui.reveal > .content {
   font-size: $medium !important;
 }
-
-

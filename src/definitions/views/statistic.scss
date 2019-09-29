@@ -1,0 +1,430 @@
+@import "../../themes/default/views/statistic";
+
+/*******************************
+           Statistic
+*******************************/
+
+/* Standalone */
+.ui.statistic {
+  display: inline-flex;
+  flex-direction: column;
+  margin: $statistic-margin;
+  max-width: $statistic-max-width;
+}
+
+.ui.statistic + .ui.statistic {
+  margin: 0 0 0 $statistic-horizontal-spacing;
+}
+
+.ui.statistic:first-child {
+  margin-top: 0;
+}
+.ui.statistic:last-child {
+  margin-bottom: 0;
+}
+
+/*******************************
+            Group
+*******************************/
+
+/* Grouped */
+.ui.statistics {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.ui.statistics > .statistic {
+  display: inline-flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  margin: $statistic-element-margin;
+  max-width: $statistic-element-max-width;
+}
+.ui.statistics {
+  display: flex;
+  margin: $statistic-group-margin;
+}
+
+/* Clearing */
+.ui.statistics:after {
+  display: block;
+  content: " ";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.ui.statistics:first-child {
+  margin-top: 0;
+}
+
+/*******************************
+            Content
+*******************************/
+
+/*--------------
+      Value
+---------------*/
+
+.ui.statistics .statistic > .value,
+.ui.statistic > .value {
+  font-family: $statistic-value-font;
+  font-size: $statistic-value-size;
+  font-weight: $statistic-value-font-weight;
+  line-height: $statistic-value-line-height;
+  color: $statistic-value-color;
+  text-transform: $statistic-value-text-transform;
+  text-align: $statistic-text-align;
+}
+
+/*--------------
+     Label
+---------------*/
+
+.ui.statistics .statistic > .label,
+.ui.statistic > .label {
+  font-family: $statistic-label-font;
+  font-size: $statistic-label-size;
+  font-weight: $statistic-label-font-weight;
+  color: $statistic-label-color;
+  text-transform: $statistic-label-text-transform;
+  text-align: $statistic-text-align;
+}
+
+/* Top Label */
+.ui.statistics .statistic > .label ~ .value,
+.ui.statistic > .label ~ .value {
+  margin-top: $statistic-top-label-distance;
+}
+
+/* Bottom Label */
+.ui.statistics .statistic > .value ~ .label,
+.ui.statistic > .value ~ .label {
+  margin-top: $statistic-bottom-label-distance;
+}
+
+/*******************************
+             Types
+*******************************/
+
+/*--------------
+   Icon Value
+---------------*/
+
+.ui.statistics .statistic > .value .icon,
+.ui.statistic > .value .icon {
+  opacity: 1;
+  width: auto;
+  margin: 0;
+}
+
+/*--------------
+   Text Value
+---------------*/
+
+.ui.statistics .statistic > .text.value,
+.ui.statistic > .text.value {
+  line-height: $statistic-text-value-line-height;
+  min-height: $statistic-text-value-min-height;
+  font-weight: $statistic-text-value-font-weight;
+  text-align: center;
+}
+.ui.statistics .statistic > .text.value + .label,
+.ui.statistic > .text.value + .label {
+  text-align: center;
+}
+
+/*--------------
+   Image Value
+---------------*/
+
+.ui.statistics .statistic > .value img,
+.ui.statistic > .value img {
+  max-height: $statistic-image-height;
+  vertical-align: $statistic-image-vertical-align;
+}
+
+/*******************************
+            Variations
+*******************************/
+
+/*--------------
+      Count
+---------------*/
+
+.ui.ten.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.ten.statistics .statistic {
+  min-width: $ten-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.nine.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.nine.statistics .statistic {
+  min-width: $nine-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.eight.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.eight.statistics .statistic {
+  min-width: $eight-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.seven.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.seven.statistics .statistic {
+  min-width: $seven-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.six.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.six.statistics .statistic {
+  min-width: $six-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.five.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.five.statistics .statistic {
+  min-width: $five-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.four.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.four.statistics .statistic {
+  min-width: $four-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.three.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.three.statistics .statistic {
+  min-width: $three-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.two.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.two.statistics .statistic {
+  min-width: $two-column;
+  margin: $statistic-item-margin;
+}
+
+.ui.one.statistics {
+  margin: $statistic-item-group-margin;
+}
+.ui.one.statistics .statistic {
+  min-width: $one-column;
+  margin: $statistic-item-margin;
+}
+
+/*--------------
+   Horizontal
+---------------*/
+
+.ui.horizontal.statistic {
+  flex-direction: row;
+  align-items: center;
+}
+.ui.horizontal.statistics {
+  flex-direction: column;
+  margin: 0;
+  max-width: none;
+}
+.ui.horizontal.statistics .statistic {
+  flex-direction: row;
+  align-items: center;
+  max-width: none;
+  margin: $statistic-horizontal-group-element-margin;
+}
+
+.ui.horizontal.statistic > .text.value,
+.ui.horizontal.statistics > .statistic > .text.value {
+  min-height: 0 !important;
+}
+.ui.horizontal.statistics .statistic > .value .icon,
+.ui.horizontal.statistic > .value .icon {
+  width: $icon-width;
+}
+
+.ui.horizontal.statistics .statistic > .value,
+.ui.horizontal.statistic > .value {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ui.horizontal.statistics .statistic > .label,
+.ui.horizontal.statistic > .label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 $statistic-horizontal-label-distance;
+}
+
+/*--------------
+    Inverted
+---------------*/
+
+.ui.inverted.statistics .statistic > .value,
+.ui.inverted.statistic .value {
+  color: $statistic-inverted-value-color;
+}
+.ui.inverted.statistics .statistic > .label,
+.ui.inverted.statistic .label {
+  color: $statistic-inverted-label-color;
+}
+
+/*--------------
+     Colors
+---------------*/
+
+@each $key, $value in $colors {
+  $c: map-get($value, color);
+  $l: map-get($value, light);
+
+  .ui.#{$key + ""}.statistics .statistic > .value,
+  .ui.statistics .#{$key + ""}.statistic > .value,
+  .ui.#{$key + ""}.statistic > .value {
+    color: $c;
+  }
+  .ui.inverted.#{$key + ""}.statistics .statistic > .value,
+  .ui.statistics .inverted.#{$key + ""}.statistic > .value,
+  .ui.inverted.#{$key + ""}.statistic > .value {
+    color: $l;
+  }
+}
+
+/*--------------
+    Floated
+---------------*/
+
+.ui[class*="left floated"].statistic {
+  float: left;
+  margin: $statistic-left-floated-margin;
+}
+.ui[class*="right floated"].statistic {
+  float: right;
+  margin: $statistic-right-floated-margin;
+}
+.ui.floated.statistic:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------
+    Stackable
+---------------*/
+
+@media only screen and (max-width: $largest-mobile-screen) {
+  .ui.stackable.statistics {
+    width: auto;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .ui.stackable.statistics > .statistic {
+    width: 100% !important;
+    margin: 0 0 !important;
+    padding: ($statistic-stackable-row-spacing / 2)
+      ($statistic-stackable-gutter / 2) !important;
+  }
+}
+
+/*--------------
+     Sizes
+---------------*/
+
+/* Mini */
+.ui.mini.statistics .statistic > .value,
+.ui.mini.statistic > .value {
+  font-size: $statistic-mini-value-size !important;
+}
+.ui.mini.horizontal.statistics .statistic > .value,
+.ui.mini.horizontal.statistic > .value {
+  font-size: $statistic-mini-horizontal-value-size !important;
+}
+.ui.mini.statistics .statistic > .text.value,
+.ui.mini.statistic > .text.value {
+  font-size: $statistic-mini-text-value-size !important;
+}
+
+/* Tiny */
+.ui.tiny.statistics .statistic > .value,
+.ui.tiny.statistic > .value {
+  font-size: $statistic-tiny-value-size !important;
+}
+.ui.tiny.horizontal.statistics .statistic > .value,
+.ui.tiny.horizontal.statistic > .value {
+  font-size: $statistic-tiny-horizontal-value-size !important;
+}
+.ui.tiny.statistics .statistic > .text.value,
+.ui.tiny.statistic > .text.value {
+  font-size: $statistic-tiny-text-value-size !important;
+}
+
+/* Small */
+.ui.small.statistics .statistic > .value,
+.ui.small.statistic > .value {
+  font-size: $statistic-small-value-size !important;
+}
+.ui.small.horizontal.statistics .statistic > .value,
+.ui.small.horizontal.statistic > .value {
+  font-size: $statistic-small-horizontal-value-size !important;
+}
+.ui.small.statistics .statistic > .text.value,
+.ui.small.statistic > .text.value {
+  font-size: $statistic-small-text-value-size !important;
+}
+
+/* Medium */
+.ui.statistics .statistic > .value,
+.ui.statistic > .value {
+  font-size: $statistic-value-size !important;
+}
+.ui.horizontal.statistics .statistic > .value,
+.ui.horizontal.statistic > .value {
+  font-size: $statistic-horizontal-value-size !important;
+}
+.ui.statistics .statistic > .text.value,
+.ui.statistic > .text.value {
+  font-size: $statistic-text-value-size !important;
+}
+
+/* Large */
+.ui.large.statistics .statistic > .value,
+.ui.large.statistic > .value {
+  font-size: $statistic-large-value-size !important;
+}
+.ui.large.horizontal.statistics .statistic > .value,
+.ui.large.horizontal.statistic > .value {
+  font-size: $statistic-large-horizontal-value-size !important;
+}
+.ui.large.statistics .statistic > .text.value,
+.ui.large.statistic > .text.value {
+  font-size: $statistic-large-text-value-size !important;
+}
+
+/* Huge */
+.ui.huge.statistics .statistic > .value,
+.ui.huge.statistic > .value {
+  font-size: $statistic-huge-value-size !important;
+}
+.ui.huge.horizontal.statistics .statistic > .value,
+.ui.huge.horizontal.statistic > .value {
+  font-size: $statistic-huge-horizontal-value-size !important;
+}
+.ui.huge.statistics .statistic > .text.value,
+.ui.huge.statistic > .text.value {
+  font-size: $statistic-huge-text-value-size !important;
+}

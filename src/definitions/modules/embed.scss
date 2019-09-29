@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/embed';
-
+@import "../../themes/default/modules/embed";
 
 /*******************************
             Embed
@@ -10,8 +9,8 @@
   max-width: 100%;
   height: 0;
   overflow: hidden;
-  background: $background;
-  padding-bottom: $widescreenRatio;
+  background: $embed-background;
+  padding-bottom: $embed-widescreen-ratio;
 }
 
 /*-----------------
@@ -51,7 +50,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: $placeholderBackground;
+  background-color: $embed-placeholder-background;
 }
 
 /*--------------
@@ -74,10 +73,10 @@
   width: 100%;
   height: 100%;
   z-index: 3;
-  content: '';
-  background: $placeholderBackground;
-  opacity: $placeholderBackgroundOpacity;
-  transition: $placeholderBackgroundTransition;
+  content: "";
+  background: $embed-placeholder-background;
+  opacity: $embed-placeholder-background-opacity;
+  transition: $embed-placeholder-background-transition;
 }
 .ui.embed > .icon:before {
   position: absolute;
@@ -85,11 +84,11 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 
-  color: $iconColor;
-  font-size: $iconSize;
-  text-shadow: $iconShadow;
-  transition: $iconTransition;
-  z-index: $iconZIndex;
+  color: $embed-icon-color;
+  font-size: $embed-icon-size;
+  text-shadow: $embed-icon-shadow;
+  transition: $embed-icon-transition;
+  z-index: $embed-icon-z-index;
 }
 
 /*******************************
@@ -101,11 +100,11 @@
 ---------------*/
 
 .ui.embed .icon:hover:after {
-  background: $hoverPlaceholderBackground;
-  opacity: $hoverPlaceholderBackgroundOpacity;
+  background: $embed-hover-placeholder-background;
+  opacity: $embed-hover-placeholder-background-opacity;
 }
 .ui.embed .icon:hover:before {
-  color: $hoverIconColor;
+  color: $embed-hover-icon-color;
 }
 
 /*--------------
@@ -120,25 +119,19 @@
   display: block;
 }
 
-
-
-
 /*******************************
           Variations
 *******************************/
 
 .ui.square.embed {
-  padding-bottom: $squareRatio;
+  padding-bottom: $embed-square-ratio;
 }
 .ui[class*="4:3"].embed {
-  padding-bottom: $standardRatio;
+  padding-bottom: $embed-standard-ratio;
 }
 .ui[class*="16:9"].embed {
-  padding-bottom: $widescreenRatio;
+  padding-bottom: $embed-widescreen-ratio;
 }
 .ui[class*="21:9"].embed {
-  padding-bottom: $ultraWidescreenRatio;
+  padding-bottom: $embed-ultra-widescreen-ratio;
 }
-
-
-

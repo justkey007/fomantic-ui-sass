@@ -6,18 +6,18 @@
 
 .ui.menu {
   display: flex;
-  margin: $margin;
-  font-family: $fontFamily;
-  background: $background;
-  font-weight: $fontWeight;
-  border: $border;
-  // box-shadow: $boxShadow;
-  border-radius: $borderRadius;
-  min-height: $minHeight;
+  margin: $menu-margin;
+  font-family: $menu-font-family;
+  background: $menu-background;
+  font-weight: $menu-font-weight;
+  border: $menu-border;
+  // box-shadow: $menu-box-shadow;
+  border-radius: $menu-border-radius;
+  min-height: $menu-min-height;
 }
 
 .ui.menu:after {
-  content: '';
+  content: "";
   display: block;
   height: 0;
   clear: both;
@@ -61,28 +61,28 @@
   flex: 0 0 auto;
   user-select: none;
 
-  background: $itemBackground;
-  padding: $itemVerticalPadding $itemHorizontalPadding;
-  text-transform: $itemTextTransform;
-  color: $itemTextColor;
-  font-weight: $itemFontWeight;
-  transition: $itemTransition;
+  background: $menu-item-background;
+  padding: $menu-item-vertical-padding $menu-item-horizontal-padding;
+  text-transform: $menu-item-text-transform;
+  color: $menu-item-text-color;
+  font-weight: $menu-item-font-weight;
+  transition: $menu-item-transition;
 }
 
 .ui.menu > .item:first-child {
-  border-radius: $borderRadius 0 0 $borderRadius;
+  border-radius: $menu-border-radius 0 0 $menu-border-radius;
 }
 
 /* Border */
 .ui.menu .item:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   right: 0;
   height: 100%;
 
-  width: $dividerSize;
-  background: $dividerBackground;
+  width: $menu-divider-size;
+  background: $menu-divider-background;
 }
 
 /*--------------
@@ -93,7 +93,7 @@
 .ui.menu .item > a:not(.ui),
 .ui.menu .item > p:only-child {
   user-select: text;
-  line-height: $textLineHeight;
+  line-height: $menu-text-line-height;
 }
 .ui.menu .item > p:first-child {
   margin-top: 0;
@@ -107,9 +107,9 @@
 ---------------*/
 
 .ui.menu .item > i.icon {
-  opacity: $iconOpacity;
-  float: $iconFloat;
-  margin: $iconMargin;
+  opacity: $menu-icon-opacity;
+  float: $menu-icon-float;
+  margin: $menu-icon-margin;
 }
 
 /*--------------
@@ -118,11 +118,11 @@
 
 .ui.menu:not(.vertical) .item > .button {
   position: relative;
-  top: $buttonOffset;
-  margin: $buttonMargin;
-  padding-bottom: $buttonVerticalPadding;
-  padding-top: $buttonVerticalPadding;
-  font-size: $buttonSize;
+  top: $menu-button-offset;
+  margin: $menu-button-margin;
+  padding-bottom: $menu-button-vertical-padding;
+  padding-top: $menu-button-vertical-padding;
+  font-size: $menu-button-size;
 }
 
 /*----------------
@@ -131,7 +131,7 @@
 
 .ui.menu > .grid,
 .ui.menu > .container {
-  display: flex;
+  display: flex !important;
   align-items: inherit;
   flex-direction: inherit;
 }
@@ -145,13 +145,13 @@
 }
 .ui.menu:not(.vertical) .item > .input {
   position: relative;
-  top: $inputOffset;
-  margin: $inputVerticalMargin 0;
+  top: $menu-input-offset;
+  margin: $menu-input-vertical-margin 0;
 }
 .ui.menu .item > .input input {
-  font-size: $inputSize;
-  padding-top: $inputVerticalPadding;
-  padding-bottom: $inputVerticalPadding;
+  font-size: $menu-input-size;
+  padding-top: $menu-input-vertical-padding;
+  padding-bottom: $menu-input-vertical-padding;
 }
 
 /*--------------
@@ -161,15 +161,15 @@
 .ui.menu .header.item,
 .ui.vertical.menu .header.item {
   margin: 0;
-  background: $headerBackground;
-  text-transform: $headerTextTransform;
-  font-weight: $headerWeight;
+  background: $menu-header-background;
+  text-transform: $menu-header-text-transform;
+  font-weight: $menu-header-weight;
 }
 
 .ui.vertical.menu .item > .header:not(.ui) {
-  margin: $verticalHeaderMargin;
-  font-size: $verticalHeaderFontSize;
-  font-weight: $verticalHeaderFontWeight;
+  margin: $menu-vertical-header-margin;
+  font-size: $menu-vertical-header-font-size;
+  font-weight: $menu-vertical-header-font-weight;
 }
 
 /*--------------
@@ -179,32 +179,32 @@
 /* Dropdown Icon */
 .ui.menu .item > i.dropdown.icon {
   padding: 0;
-  float: $dropdownIconFloat;
-  margin: 0 0 0 $dropdownIconDistance;
+  float: $menu-dropdown-icon-float;
+  margin: 0 0 0 $menu-dropdown-icon-distance;
 }
 
 /* Secondary */
 .ui.secondary.menu .dropdown.item > .menu,
 .ui.text.menu .dropdown.item > .menu {
-  border-radius: $dropdownMenuBorderRadius;
-  margin-top: $secondaryDropdownMenuDistance;
+  border-radius: $menu-dropdown-border-radius;
+  margin-top: $menu-secondary-dropdown-distance;
 }
 
 /* Pointing */
 .ui.menu .pointing.dropdown.item .menu {
-  margin-top: $pointingDropdownMenuDistance;
+  margin-top: $menu-pointing-dropdown-distance;
 }
 
 /* Inverted */
 .ui.inverted.menu .search.dropdown.item > .search,
 .ui.inverted.menu .search.dropdown.item > .text {
-  color: $invertedSelectionDropdownColor;
+  color: $menu-inverted-selection-dropdown-color;
 }
 
 /* Vertical */
 .ui.vertical.menu .dropdown.item > .icon {
   float: right;
-  content: '\f0da';
+  content: "\f0da";
   margin-left: 1em;
 }
 .ui.vertical.menu .dropdown.item .menu {
@@ -212,10 +212,10 @@
   /* IE needs 0, all others support max-content to show dropdown icon inline, so keep both settings! */
   min-width: 0;
   min-width: max-content;
-  margin: 0 0 0 $dropdownMenuDistance;
-  box-shadow: $dropdownVerticalMenuBoxShadow;
-  border-radius: 0 $dropdownMenuBorderRadius $dropdownMenuBorderRadius
-    $dropdownMenuBorderRadius;
+  margin: 0 0 0 $menu-dropdown-distance;
+  box-shadow: $menu-dropdown-vertical-box-shadow;
+  border-radius: 0 $menu-dropdown-border-radius $menu-dropdown-border-radius
+    $menu-dropdown-border-radius;
 }
 .ui.vertical.menu .dropdown.item.upward .menu {
   bottom: 0;
@@ -241,27 +241,27 @@
 ---------------*/
 
 .ui.menu .item > .label:not(.floating) {
-  margin-left: $labelTextMargin;
-  padding: $labelVerticalPadding $labelHorizontalPadding;
+  margin-left: $menu-label-text-margin;
+  padding: $menu-label-vertical-padding $menu-label-horizontal-padding;
 }
 .ui.vertical.menu .item > .label {
   margin-left: auto; /*$*/
   float: right;
   text-align: center;
-  margin-top: $labelOffset;
-  margin-bottom: $labelOffset;
-  padding: $labelVerticalPadding $labelHorizontalPadding;
+  margin-top: $menu-label-offset;
+  margin-bottom: $menu-label-offset;
+  padding: $menu-label-vertical-padding $menu-label-horizontal-padding;
 }
 .ui.menu .item > .floating.label {
-  padding: $labelVerticalPadding $labelHorizontalPadding;
+  padding: $menu-label-vertical-padding $menu-label-horizontal-padding;
 }
 .ui.menu .item > .label {
-  background: $labelBackground;
-  color: $labelTextColor;
+  background: $menu-label-background;
+  color: $menu-label-text-color;
 }
 .ui.menu .item > .image.label img {
-  margin: $imageLabelImageMargin;
-  height: $imageLabelHeight;
+  margin: $menu-image-label-image-margin;
+  height: $menu-image-label-height;
 }
 /*--------------
      Images
@@ -270,13 +270,13 @@
 .ui.menu .item > img:not(.ui) {
   display: inline-block;
   vertical-align: middle;
-  margin: $imageMargin;
-  width: $imageWidth;
+  margin: $menu-image-margin;
+  width: $menu-image-width;
 }
 .ui.vertical.menu .item > img:not(.ui):only-child {
   display: block;
   max-width: 100%;
-  width: $verticalImageWidth;
+  width: $menu-vertical-image-width;
 }
 
 /*******************************
@@ -310,18 +310,18 @@
     Container
 ---------------*/
 
-@media only screen and (max-width: $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.menu > .ui.container {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 }
-@media only screen and (min-width: $tabletBreakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) {
   .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless)
     > .container
     > .item:not(.right):not(.borderless):first-child {
-    border-left: $dividerSize solid $dividerBackground;
+    border-left: $menu-divider-size solid $menu-divider-background;
   }
   .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless)
     > .container
@@ -330,7 +330,7 @@
     > .container
     > .right.menu
     > .item:not(.borderless):last-child {
-    border-right: $dividerSize solid $dividerBackground;
+    border-right: $menu-divider-size solid $menu-divider-background;
   }
 }
 
@@ -347,8 +347,8 @@
 .ui.menu .link.item:hover,
 .ui.menu a.item:hover {
   cursor: pointer;
-  background: $hoverItemBackground;
-  color: $hoverItemTextColor;
+  background: $menu-hover-item-background;
+  color: $menu-hover-item-text-color;
 }
 
 /*--------------
@@ -358,8 +358,8 @@
 .ui.link.menu .item:active,
 .ui.menu .link.item:active,
 .ui.menu a.item:active {
-  background: $pressedItemBackground;
-  color: $pressedItemTextColor;
+  background: $menu-pressed-item-background;
+  color: $menu-pressed-item-text-color;
 }
 
 /*--------------
@@ -367,13 +367,13 @@
 ---------------*/
 
 .ui.menu .active.item {
-  background: $activeItemBackground;
-  color: $activeItemTextColor;
-  font-weight: $activeItemFontWeight;
-  box-shadow: $activeItemBoxShadow;
+  background: $menu-active-item-background;
+  color: $menu-active-item-text-color;
+  font-weight: $menu-active-item-font-weight;
+  box-shadow: $menu-active-item-box-shadow;
 }
 .ui.menu .active.item > i.icon {
-  opacity: $activeIconOpacity;
+  opacity: $menu-active-icon-opacity;
 }
 
 /*--------------
@@ -382,18 +382,18 @@
 
 .ui.menu .active.item:hover,
 .ui.vertical.menu .active.item:hover {
-  background-color: $activeHoverItemBackground;
-  color: $activeHoverItemColor;
+  background-color: $menu-active-hover-item-background;
+  color: $menu-active-hover-item-color;
 }
 
 /*--------------
      Disabled
 ---------------*/
 
-.ui.ui.menu .item.disabled {
+.ui.menu .item.disabled {
   cursor: default;
   background-color: transparent;
-  color: $disabledTextColor;
+  color: $disabled-text-color;
   pointer-events: none;
 }
 
@@ -450,14 +450,14 @@ Floated Menu / Item
 
 .ui.vertical.menu {
   display: block;
-  background: $verticalBackground;
-  box-shadow: $verticalBoxShadow;
+  background: $menu-vertical-background;
+  box-shadow: $menu-vertical-box-shadow;
 }
 
 /*--- Item ---*/
 .ui.vertical.menu .item {
   display: block;
-  background: $verticalItemBackground;
+  background: $menu-vertical-item-background;
   border-top: none;
   border-right: none;
 }
@@ -467,33 +467,33 @@ Floated Menu / Item
   text-overflow: ellipsis;
 }
 .ui.vertical.menu > .item:first-child {
-  border-radius: $borderRadius $borderRadius 0 0;
+  border-radius: $menu-border-radius $menu-border-radius 0 0;
 }
 .ui.vertical.menu > .item:last-child {
-  border-radius: 0 0 $borderRadius $borderRadius;
+  border-radius: 0 0 $menu-border-radius $menu-border-radius;
 }
 
 /*--- Icon ---*/
 .ui.vertical.menu .item > i.icon,
 .ui.vertical.menu .item > i.icons {
-  width: $iconWidth;
-  float: $verticalIconFloat;
-  margin: $verticalIconMargin;
+  width: $icon-width;
+  float: $menu-vertical-icon-float;
+  margin: $menu-vertical-icon-margin;
 }
 .ui.vertical.menu .item > .label + i.icon {
-  float: $labelAndIconFloat;
-  margin: $labelAndIconMargin;
+  float: $menu-label-and-icon-float;
+  margin: $menu-label-and-icon-margin;
 }
 
 /*--- Border ---*/
 .ui.vertical.menu .item:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
-  height: $dividerSize;
-  background: $verticalDividerBackground;
+  height: $menu-divider-size;
+  background: $menu-vertical-divider-background;
 }
 
 .ui.vertical.menu .item:first-child:before {
@@ -502,7 +502,7 @@ Floated Menu / Item
 
 /*--- Sub Menu ---*/
 .ui.vertical.menu .item > .menu {
-  margin: $subMenuMargin;
+  margin: $menu-sub-margin;
 }
 .ui.vertical.menu .menu .item {
   /*$*/
@@ -510,13 +510,13 @@ Floated Menu / Item
   align-items: center;
 
   background: none;
-  padding: $subMenuVerticalPadding $subMenuHorizontalPadding;
-  font-size: $subMenuFontSize;
-  color: $subMenuTextColor;
+  padding: $menu-sub-vertical-padding $menu-sub-horizontal-padding;
+  font-size: $menu-sub-font-size;
+  color: $menu-sub-text-color;
 }
 .ui.vertical.menu .item .menu a.item:hover,
 .ui.vertical.menu .item .menu .link.item:hover {
-  color: $darkTextColor;
+  color: $dark-text-color;
 }
 .ui.vertical.menu .menu .item:before {
   display: none;
@@ -524,26 +524,26 @@ Floated Menu / Item
 
 /* Vertical Active */
 .ui.vertical.menu .active.item {
-  background: $activeItemBackground;
+  background: $menu-active-item-background;
   border-radius: 0;
-  box-shadow: $verticalActiveBoxShadow;
+  box-shadow: $menu-vertical-active-box-shadow;
 }
 .ui.vertical.menu > .active.item:first-child {
-  border-radius: $borderRadius $borderRadius 0 0;
+  border-radius: $menu-border-radius $menu-border-radius 0 0;
 }
 .ui.vertical.menu > .active.item:last-child {
-  border-radius: 0 0 $borderRadius $borderRadius;
+  border-radius: 0 0 $menu-border-radius $menu-border-radius;
 }
 .ui.vertical.menu > .active.item:only-child {
-  border-radius: $borderRadius;
+  border-radius: $menu-border-radius;
 }
 .ui.vertical.menu .active.item .menu .active.item {
   border-left: none;
 }
 .ui.vertical.menu .item .menu .active.item {
-  background-color: $subMenuActiveBackground;
-  font-weight: $subMenuActiveFontWeight;
-  color: $subMenuActiveTextColor;
+  background-color: $menu-sub-active-background;
+  font-weight: $menu-sub-active-font-weight;
+  color: $menu-sub-active-text-color;
 }
 
 /*--------------
@@ -554,21 +554,21 @@ Floated Menu / Item
   border-radius: 0;
   box-shadow: none !important;
   border: none;
-  background: $tabularBackground;
-  border-bottom: $tabularBorderWidth solid $tabularBorderColor;
+  background: $menu-tabular-background;
+  border-bottom: $menu-tabular-border-width solid $menu-tabular-border-color;
 }
 .ui.tabular.fluid.menu {
-  width: $tabularFluidWidth !important;
+  width: $menu-tabular-fluid-width !important;
 }
 .ui.tabular.menu .item {
   background: transparent;
   border-bottom: none;
 
-  border-left: $tabularBorderWidth solid transparent;
-  border-right: $tabularBorderWidth solid transparent;
-  border-top: $tabularOppositeBorderWidth solid transparent;
-  padding: $tabularVerticalPadding $tabularHorizontalPadding;
-  color: $tabularTextColor;
+  border-left: $menu-tabular-border-width solid transparent;
+  border-right: $menu-tabular-border-width solid transparent;
+  border-top: $menu-tabular-opposite-border-width solid transparent;
+  padding: $menu-tabular-vertical-padding $menu-tabular-horizontal-padding;
+  color: $menu-tabular-text-color;
 }
 .ui.tabular.menu .item:before {
   display: none;
@@ -577,19 +577,19 @@ Floated Menu / Item
 /* Hover */
 .ui.tabular.menu .item:hover {
   background-color: transparent;
-  color: $tabularHoveredTextColor;
+  color: $menu-tabular-hovered-text-color;
 }
 
 /* Active */
 .ui.tabular.menu .active.item {
-  background: $tabularActiveBackground;
-  color: $tabularActiveColor;
-  border-top-width: $tabularBorderWidth;
-  border-color: $tabularBorderColor;
-  font-weight: $tabularActiveWeight;
-  margin-bottom: -$tabularBorderWidth;
-  box-shadow: $tabularActiveBoxShadow;
-  border-radius: $tabularBorderRadius $tabularBorderRadius 0 0 !important;
+  background: $menu-tabular-active-background;
+  color: $menu-tabular-active-color;
+  border-top-width: $menu-tabular-border-width;
+  border-color: $menu-tabular-border-color;
+  font-weight: $menu-tabular-active-weight;
+  margin-bottom: -$menu-tabular-border-width;
+  box-shadow: $menu-tabular-active-box-shadow;
+  border-radius: $menu-tabular-border-radius $menu-tabular-border-radius 0 0 !important;
 }
 
 /* Coupling with segment for attachment */
@@ -603,86 +603,86 @@ Floated Menu / Item
 }
 .top.attached.segment + .ui.bottom.tabular.menu {
   position: relative;
-  width: $tabularFluidWidth;
-  left: -$tabularFluidOffset;
+  width: $menu-tabular-fluid-width;
+  left: -$menu-tabular-fluid-offset;
 }
 
 /* Bottom Vertical Tabular */
 .ui.bottom.tabular.menu {
-  background: $tabularBackground;
+  background: $menu-tabular-background;
   border-radius: 0;
   box-shadow: none !important;
   border-bottom: none;
-  border-top: $tabularBorderWidth solid $tabularBorderColor;
+  border-top: $menu-tabular-border-width solid $menu-tabular-border-color;
 }
 .ui.bottom.tabular.menu .item {
   background: none;
-  border-left: $tabularBorderWidth solid transparent;
-  border-right: $tabularBorderWidth solid transparent;
-  border-bottom: $tabularBorderWidth solid transparent;
+  border-left: $menu-tabular-border-width solid transparent;
+  border-right: $menu-tabular-border-width solid transparent;
+  border-bottom: $menu-tabular-border-width solid transparent;
   border-top: none;
 }
 .ui.bottom.tabular.menu .active.item {
-  background: $tabularActiveBackground;
-  color: $tabularActiveColor;
-  border-color: $tabularBorderColor;
-  margin: -$tabularBorderWidth 0 0 0;
-  border-radius: 0 0 $tabularBorderRadius $tabularBorderRadius !important;
+  background: $menu-tabular-active-background;
+  color: $menu-tabular-active-color;
+  border-color: $menu-tabular-border-color;
+  margin: -$menu-tabular-border-width 0 0 0;
+  border-radius: 0 0 $menu-tabular-border-radius $menu-tabular-border-radius !important;
 }
 
 /* Vertical Tabular (Left) */
 .ui.vertical.tabular.menu {
-  background: $tabularVerticalBackground;
+  background: $menu-tabular-vertical-background;
   border-radius: 0;
   box-shadow: none !important;
   border-bottom: none;
-  border-right: $tabularBorderWidth solid $tabularBorderColor;
+  border-right: $menu-tabular-border-width solid $menu-tabular-border-color;
 }
 .ui.vertical.tabular.menu .item {
   background: none;
-  border-left: $tabularBorderWidth solid transparent;
-  border-bottom: $tabularBorderWidth solid transparent;
-  border-top: $tabularBorderWidth solid transparent;
+  border-left: $menu-tabular-border-width solid transparent;
+  border-bottom: $menu-tabular-border-width solid transparent;
+  border-top: $menu-tabular-border-width solid transparent;
   border-right: none;
 }
 .ui.vertical.tabular.menu .active.item {
-  background: $tabularActiveBackground;
-  color: $tabularActiveColor;
-  border-color: $tabularBorderColor;
-  margin: 0 -$tabularBorderWidth 0 0;
-  border-radius: $tabularBorderRadius 0 0 $tabularBorderRadius !important;
+  background: $menu-tabular-active-background;
+  color: $menu-tabular-active-color;
+  border-color: $menu-tabular-border-color;
+  margin: 0 (-$menu-tabular-border-width) 0 0;
+  border-radius: $menu-tabular-border-radius 0 0 $menu-tabular-border-radius !important;
 }
 
 /* Vertical Right Tabular */
 .ui.vertical.right.tabular.menu {
-  background: $tabularVerticalBackground;
+  background: $menu-tabular-vertical-background;
   border-radius: 0;
   box-shadow: none !important;
   border-bottom: none;
   border-right: none;
-  border-left: $tabularBorderWidth solid $tabularBorderColor;
+  border-left: $menu-tabular-border-width solid $menu-tabular-border-color;
 }
 .ui.vertical.right.tabular.menu .item {
   background: none;
-  border-right: $tabularBorderWidth solid transparent;
-  border-bottom: $tabularBorderWidth solid transparent;
-  border-top: $tabularBorderWidth solid transparent;
+  border-right: $menu-tabular-border-width solid transparent;
+  border-bottom: $menu-tabular-border-width solid transparent;
+  border-top: $menu-tabular-border-width solid transparent;
   border-left: none;
 }
 .ui.vertical.right.tabular.menu .active.item {
-  background: $tabularActiveBackground;
-  color: $tabularActiveColor;
-  border-color: $tabularBorderColor;
-  margin: 0 0 0 -$tabularBorderWidth;
-  border-radius: 0 $tabularBorderRadius $tabularBorderRadius 0 !important;
+  background: $menu-tabular-active-background;
+  color: $menu-tabular-active-color;
+  border-color: $menu-tabular-border-color;
+  margin: 0 0 0 (-$menu-tabular-border-width);
+  border-radius: 0 $menu-tabular-border-radius $menu-tabular-border-radius 0 !important;
 }
 
 /* Dropdown */
 .ui.tabular.menu .active.dropdown.item {
   margin-bottom: 0;
-  border-left: $tabularBorderWidth solid transparent;
-  border-right: $tabularBorderWidth solid transparent;
-  border-top: $tabularOppositeBorderWidth solid transparent;
+  border-left: $menu-tabular-border-width solid transparent;
+  border-right: $menu-tabular-border-width solid transparent;
+  border-top: $menu-tabular-opposite-border-width solid transparent;
   border-bottom: none;
 }
 
@@ -696,17 +696,17 @@ Floated Menu / Item
   vertical-align: middle;
 }
 .ui.pagination.menu .item:last-child {
-  border-radius: 0 $borderRadius $borderRadius 0;
+  border-radius: 0 $menu-border-radius $menu-border-radius 0;
 }
 .ui.compact.menu .item:last-child {
-  border-radius: 0 $borderRadius $borderRadius 0;
+  border-radius: 0 $menu-border-radius $menu-border-radius 0;
 }
 .ui.pagination.menu .item:last-child:before {
   display: none;
 }
 
 .ui.pagination.menu .item {
-  min-width: $paginationMinWidth;
+  min-width: $menu-pagination-min-width;
   text-align: center;
 }
 .ui.pagination.menu .icon.item i.icon {
@@ -716,9 +716,9 @@ Floated Menu / Item
 /* Active */
 .ui.pagination.menu .active.item {
   border-top: none;
-  padding-top: $itemVerticalPadding;
-  background-color: $paginationActiveBackground;
-  color: $paginationActiveTextColor;
+  padding-top: $menu-item-vertical-padding;
+  background-color: $menu-pagination-active-background;
+  color: $menu-pagination-active-text-color;
   box-shadow: none;
 }
 
@@ -727,9 +727,9 @@ Floated Menu / Item
 ---------------*/
 
 .ui.secondary.menu {
-  background: $secondaryBackground;
-  margin-left: -$secondaryItemSpacing;
-  margin-right: -$secondaryItemSpacing;
+  background: $menu-secondary-background;
+  margin-left: -$menu-secondary-item-spacing;
+  margin-right: -$menu-secondary-item-spacing;
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -740,11 +740,11 @@ Floated Menu / Item
   align-self: center;
   box-shadow: none;
   border: none;
-  padding: $secondaryItemPadding;
-  margin: $secondaryItemMargin;
-  background: $secondaryItemBackground;
-  transition: $secondaryItemTransition;
-  border-radius: $secondaryItemBorderRadius;
+  padding: $menu-secondary-item-padding;
+  margin: $menu-secondary-item-margin;
+  background: $menu-secondary-item-background;
+  transition: $menu-secondary-item-transition;
+  border-radius: $menu-secondary-item-border-radius;
 }
 
 /* No Divider */
@@ -755,8 +755,8 @@ Floated Menu / Item
 /* Header */
 .ui.secondary.menu .header.item {
   border-radius: 0;
-  border-right: $secondaryHeaderBorder;
-  background: $secondaryHeaderBackground;
+  border-right: $menu-secondary-header-border;
+  background: $menu-secondary-header-background;
 }
 
 /* Image */
@@ -768,39 +768,39 @@ Floated Menu / Item
 .ui.secondary.menu .dropdown.item:hover,
 .ui.secondary.menu .link.item:hover,
 .ui.secondary.menu a.item:hover {
-  background: $secondaryHoverItemBackground;
-  color: $secondaryHoverItemColor;
+  background: $menu-secondary-hover-item-background;
+  color: $menu-secondary-hover-item-color;
 }
 
 /* Active */
 .ui.secondary.menu .active.item {
   box-shadow: none;
-  background: $secondaryActiveItemBackground;
-  color: $secondaryActiveItemColor;
-  border-radius: $secondaryItemBorderRadius;
+  background: $menu-secondary-active-item-background;
+  color: $menu-secondary-active-item-color;
+  border-radius: $menu-secondary-item-border-radius;
 }
 
 /* Active Hover */
 .ui.secondary.menu .active.item:hover {
   box-shadow: none;
-  background: $secondaryActiveHoverItemBackground;
-  color: $secondaryActiveHoverItemColor;
+  background: $menu-secondary-active-hover-item-background;
+  color: $menu-secondary-active-hover-item-color;
 }
 
 /* Inverted */
 .ui.secondary.inverted.menu .link.item:not(.disabled),
 .ui.secondary.inverted.menu a.item:not(.disabled) {
-  color: $secondaryInvertedColor;
+  color: $menu-secondary-inverted-color;
 }
 .ui.secondary.inverted.menu .dropdown.item:hover,
 .ui.secondary.inverted.menu .link.item:hover,
 .ui.secondary.inverted.menu a.item:hover {
-  background: $secondaryInvertedHoverBackground;
-  color: $secondaryInvertedHoverColor;
+  background: $menu-secondary-inverted-hover-background;
+  color: $menu-secondary-inverted-hover-color;
 }
 .ui.secondary.inverted.menu .active.item {
-  background: $secondaryInvertedActiveBackground;
-  color: $secondaryInvertedActiveColor;
+  background: $menu-secondary-inverted-active-background;
+  color: $menu-secondary-inverted-active-color;
 }
 
 /* Fix item margins */
@@ -817,11 +817,11 @@ Floated Menu / Item
 
 /* Sub Menu */
 .ui.vertical.secondary.menu .item:not(.dropdown) > .menu {
-  margin: $secondaryMenuSubMenuMargin;
+  margin: $menu-secondary-sub-menu-margin;
 }
 .ui.vertical.secondary.menu .item:not(.dropdown) > .menu > .item {
-  margin: $secondaryMenuSubMenuItemMargin;
-  padding: $secondaryMenuSubMenuItemPadding;
+  margin: $menu-secondary-sub-menu-item-margin;
+  padding: $menu-secondary-sub-menu-item-padding;
 }
 
 /*---------------------
@@ -830,8 +830,8 @@ Floated Menu / Item
 
 .ui.secondary.vertical.menu > .item {
   border: none;
-  margin: $secondaryVerticalItemMargin;
-  border-radius: $secondaryVerticalItemBorderRadius !important;
+  margin: $menu-secondary-vertical-item-margin;
+  border-radius: $menu-secondary-vertical-item-border-radius !important;
 }
 .ui.secondary.vertical.menu > .header.item {
   border-radius: 0;
@@ -854,8 +854,8 @@ Floated Menu / Item
 .ui.secondary.pointing.menu {
   margin-left: 0;
   margin-right: 0;
-  border-bottom: $secondaryPointingBorderWidth solid
-    $secondaryPointingBorderColor;
+  border-bottom: $menu-secondary-pointing-border-width solid
+    $menu-secondary-pointing-border-color;
 }
 
 .ui.secondary.pointing.menu .item {
@@ -864,28 +864,28 @@ Floated Menu / Item
   border-radius: 0;
   align-self: flex-end;
 
-  margin: 0 0 -$secondaryPointingBorderWidth;
-  padding: $secondaryPointingItemVerticalPadding
-    $secondaryPointingItemHorizontalPadding;
-  border-bottom-width: $secondaryPointingBorderWidth;
-  transition: $secondaryItemTransition;
+  margin: 0 0 (-$menu-secondary-pointing-border-width);
+  padding: $menu-secondary-pointing-item-vertical-padding
+    $menu-secondary-pointing-item-horizontal-padding;
+  border-bottom-width: $menu-secondary-pointing-border-width;
+  transition: $menu-secondary-item-transition;
 }
 .ui.secondary.pointing.menu .ui.dropdown .menu .item {
   border-bottom-width: 0;
 }
 
 .ui.secondary.pointing.menu .item > .label:not(.floating) {
-  margin-top: -$labelVerticalPadding;
-  margin-bottom: -$labelVerticalPadding;
+  margin-top: -$menu-label-vertical-padding;
+  margin-bottom: -$menu-label-vertical-padding;
 }
 .ui.secondary.pointing.menu .item > .circular.label {
-  margin-top: -$circularLabelVerticalPadding;
-  margin-bottom: -$circularLabelVerticalPadding;
+  margin-top: -$menu-circular-label-vertical-padding;
+  margin-bottom: -$menu-circular-label-vertical-padding;
 }
 
 /* Item Types */
 .ui.secondary.pointing.menu .header.item {
-  color: $secondaryPointingHeaderColor !important;
+  color: $menu-secondary-pointing-header-color !important;
 }
 .ui.secondary.pointing.menu .text.item {
   box-shadow: none !important;
@@ -899,7 +899,7 @@ Floated Menu / Item
 .ui.secondary.pointing.menu .link.item:hover,
 .ui.secondary.pointing.menu a.item:hover {
   background-color: transparent;
-  color: $secondaryPointingHoverTextColor;
+  color: $menu-secondary-pointing-hover-text-color;
 }
 
 /* Pressed */
@@ -907,72 +907,72 @@ Floated Menu / Item
 .ui.secondary.pointing.menu .link.item:active,
 .ui.secondary.pointing.menu a.item:active {
   background-color: transparent;
-  border-color: $secondaryPointingBorderColor;
+  border-color: $menu-secondary-pointing-border-color;
 }
 
 /* Active */
 .ui.secondary.pointing.menu .active.item {
   background-color: transparent;
   box-shadow: none;
-  border-color: $secondaryPointingActiveBorderColor;
-  font-weight: $secondaryPointingActiveFontWeight;
-  color: $secondaryPointingActiveTextColor;
+  border-color: $menu-secondary-pointing-active-border-color;
+  font-weight: $menu-secondary-pointing-active-font-weight;
+  color: $menu-secondary-pointing-active-text-color;
 }
 
 /* Active Hover */
 .ui.secondary.pointing.menu .active.item:hover {
-  border-color: $secondaryPointingActiveHoverBorderColor;
-  color: $secondaryPointingActiveHoverTextColor;
+  border-color: $menu-secondary-pointing-active-hover-border-color;
+  color: $menu-secondary-pointing-active-hover-text-color;
 }
 
 /* Active Dropdown */
 .ui.secondary.pointing.menu .active.dropdown.item {
-  border-color: $secondaryPointingActiveDropdownBorderColor;
+  border-color: $menu-secondary-pointing-active-dropdown-border-color;
 }
 
 /* Vertical Pointing */
 .ui.secondary.vertical.pointing.menu {
   border-bottom-width: 0;
-  border-right-width: $secondaryPointingBorderWidth;
+  border-right-width: $menu-secondary-pointing-border-width;
   border-right-style: solid;
-  border-right-color: $secondaryPointingBorderColor;
+  border-right-color: $menu-secondary-pointing-border-color;
 }
 .ui.secondary.vertical.pointing.menu .item {
   border-bottom: none;
   border-right-style: solid;
   border-right-color: transparent;
   border-radius: 0 !important;
-  margin: $secondaryVerticalPointingItemMargin;
-  border-right-width: $secondaryPointingBorderWidth;
+  margin: $menu-secondary-vertical-pointing-item-margin;
+  border-right-width: $menu-secondary-pointing-border-width;
 }
 
 /* Vertical Active */
 .ui.secondary.vertical.pointing.menu .active.item {
-  border-color: $secondaryPointingActiveBorderColor;
+  border-color: $menu-secondary-pointing-active-border-color;
 }
 
 /* Inverted */
 .ui.secondary.inverted.pointing.menu {
-  border-color: $secondaryPointingInvertedBorderColor;
+  border-color: $menu-secondary-pointing-inverted-border-color;
 }
 
 .ui.secondary.inverted.pointing.menu .item:not(.disabled) {
-  color: $secondaryPointingInvertedItemTextColor;
+  color: $menu-secondary-pointing-inverted-item-text-color;
 }
 .ui.secondary.inverted.pointing.menu .header.item {
-  color: $secondaryPointingInvertedItemHeaderColor !important;
+  color: $menu-secondary-pointing-inverted-item-header-color !important;
 }
 
 /* Hover */
 .ui.secondary.inverted.pointing.menu .link.item:hover,
 .ui.secondary.inverted.pointing.menu a.item:hover {
-  color: $secondaryPointingInvertedItemHoverTextColor;
+  color: $menu-secondary-pointing-inverted-item-hover-text-color;
 }
 
 /* Active */
 .ui.secondary.inverted.pointing.menu .active.item {
-  border-color: $secondaryPointingInvertedActiveBorderColor;
-  color: $secondaryPointingInvertedActiveColor;
+  border-color: $menu-secondary-pointing-inverted-active-border-color;
+  color: $menu-secondary-pointing-inverted-active-color;
 }
 
 /*--------------
@@ -985,17 +985,17 @@ Floated Menu / Item
   box-shadow: none;
   border: none;
 
-  margin: $textMenuMargin;
+  margin: $menu-text-margin;
 }
 .ui.text.menu .item {
   border-radius: 0;
   box-shadow: none;
   align-self: center;
-  margin: $textMenuItemMargin;
-  padding: $textMenuItemPadding;
-  font-weight: $textMenuItemFontWeight;
-  color: $textMenuItemColor;
-  transition: $textMenuItemTransition;
+  margin: $menu-text-item-margin;
+  padding: $menu-text-item-padding;
+  font-weight: $menu-text-item-font-weight;
+  color: $menu-text-item-color;
+  transition: $menu-text-item-transition;
 }
 
 /* Border */
@@ -1008,10 +1008,10 @@ Floated Menu / Item
 .ui.text.menu .header.item {
   background-color: transparent;
   opacity: 1;
-  color: $textMenuHeaderColor;
-  font-size: $textMenuHeaderSize;
-  text-transform: $textMenuHeaderTextTransform;
-  font-weight: $textMenuHeaderFontWeight;
+  color: $menu-text-header-color;
+  font-size: $menu-text-header-size;
+  text-transform: $menu-text-header-text-transform;
+  font-weight: $menu-text-header-font-weight;
 }
 
 /* Image */
@@ -1026,7 +1026,7 @@ Floated Menu / Item
 
 /*--- vertical text ---*/
 .ui.vertical.text.menu {
-  margin: $textVerticalMenuMargin;
+  margin: $menu-text-vertical-margin;
 }
 .ui.vertical.text.menu:first-child {
   margin-top: 0;
@@ -1035,25 +1035,25 @@ Floated Menu / Item
   margin-bottom: 0;
 }
 .ui.vertical.text.menu .item {
-  margin: $textVerticalMenuItemMargin;
+  margin: $menu-text-vertical-item-margin;
   padding-left: 0;
   padding-right: 0;
 }
 .ui.vertical.text.menu .item > i.icon {
-  float: $textVerticalMenuIconFloat;
-  margin: $iconMargin;
+  float: $menu-text-vertical-icon-float;
+  margin: $menu-icon-margin;
 }
 .ui.vertical.text.menu .header.item {
-  margin: $textVerticalMenuHeaderMargin;
+  margin: $menu-text-vertical-header-margin;
 }
 
 /* Vertical Sub Menu */
 .ui.vertical.text.menu .item:not(.dropdown) > .menu {
-  margin: $textMenuSubMenuMargin;
+  margin: $menu-text-sub-menu-margin;
 }
 .ui.vertical.text.menu .item:not(.dropdown) > .menu > .item {
-  margin: $textMenuSubMenuItemMargin;
-  padding: $textMenuSubMenuItemPadding;
+  margin: $menu-text-sub-menu-item-margin;
+  padding: $menu-text-sub-menu-item-padding;
 }
 
 /*--- hover ---*/
@@ -1067,8 +1067,8 @@ Floated Menu / Item
   background-color: transparent;
   border: none;
   box-shadow: none;
-  font-weight: $textMenuActiveItemFontWeight;
-  color: $textMenuActiveItemColor;
+  font-weight: $menu-text-active-item-font-weight;
+  color: $menu-text-active-item-color;
 }
 
 /*--- active hover ---*/
@@ -1111,8 +1111,8 @@ Floated Menu / Item
 /* Item */
 .ui.icon.menu .item {
   height: auto;
-  text-align: $iconMenuTextAlign;
-  color: $iconMenuItemColor;
+  text-align: $menu-icon-text-align;
+  color: $menu-icon-item-color;
 }
 
 /* Icon */
@@ -1142,7 +1142,7 @@ Floated Menu / Item
 
 /* Inverted */
 .ui.inverted.icon.menu .item {
-  color: $iconMenuInvertedItemColor;
+  color: $menu-icon-inverted-item-color;
 }
 
 /*--------------
@@ -1156,7 +1156,7 @@ Floated Menu / Item
 
 /* Item */
 .ui.labeled.icon.menu .item {
-  min-width: $labeledIconMinWidth;
+  min-width: $menu-labeled-icon-min-width;
   flex-direction: column;
 }
 
@@ -1164,8 +1164,8 @@ Floated Menu / Item
 .ui.labeled.icon.menu > .item > .icon:not(.dropdown) {
   height: 1em;
   display: block;
-  font-size: $labeledIconSize !important;
-  margin: 0 auto $labeledIconTextMargin !important;
+  font-size: $menu-labeled-icon-size !important;
+  margin: 0 auto $menu-labeled-icon-text-margin !important;
 }
 
 /* Fluid */
@@ -1181,7 +1181,7 @@ Floated Menu / Item
     Stackable
 ---------------*/
 
-@media only screen and (max-width: $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.stackable.menu {
     flex-direction: column;
   }
@@ -1190,13 +1190,13 @@ Floated Menu / Item
   }
   .ui.stackable.menu .item:before {
     position: absolute;
-    content: '';
+    content: "";
     top: auto;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: $dividerSize;
-    background: $verticalDividerBackground;
+    height: $menu-divider-size;
+    background: $menu-vertical-divider-background;
   }
 
   .ui.stackable.menu .left.menu,
@@ -1237,45 +1237,45 @@ Floated Menu / Item
 ---------------*/
 
 .ui.inverted.menu {
-  border: $invertedBorder;
-  background: $invertedBackground;
-  box-shadow: $invertedBoxShadow;
+  border: $menu-inverted-border;
+  background: $menu-inverted-background;
+  box-shadow: $menu-inverted-box-shadow;
 }
 
 /* Menu Item */
 .ui.inverted.menu .item,
 .ui.inverted.menu .item > a:not(.ui) {
-  background: $invertedItemBackground;
-  color: $invertedItemTextColor;
+  background: $menu-inverted-item-background;
+  color: $menu-inverted-item-text-color;
 }
 .ui.inverted.menu .item.menu {
-  background: $invertedSubMenuBackground;
+  background: $menu-inverted-sub-background;
 }
 
 /*--- Border ---*/
 .ui.inverted.menu .item:before {
-  background: $invertedDividerBackground;
+  background: $menu-inverted-divider-background;
 }
 .ui.vertical.inverted.menu .item:before {
-  background: $invertedVerticalDividerBackground;
+  background: $menu-inverted-vertical-divider-background;
 }
 
 /* Sub Menu */
 .ui.vertical.inverted.menu .menu .item,
 .ui.vertical.inverted.menu .menu .item a:not(.ui) {
-  color: $invertedSubMenuColor;
+  color: $menu-inverted-sub-color;
 }
 
 /* Header */
 .ui.inverted.menu .header.item {
   margin: 0;
-  background: $invertedHeaderBackground;
+  background: $menu-inverted-header-background;
   box-shadow: none;
 }
 
 /* Disabled */
-.ui.ui.inverted.menu .item.disabled {
-  color: $invertedDisabledTextColor;
+.ui.inverted.menu .item.disabled {
+  color: $inverted-disabled-text-color;
 }
 
 /*--- Hover ---*/
@@ -1283,33 +1283,33 @@ Floated Menu / Item
 .ui.inverted.menu .dropdown.item:hover,
 .ui.inverted.menu .link.item:hover,
 .ui.inverted.menu a.item:hover {
-  background: $invertedHoverBackground;
-  color: $invertedHoverColor;
+  background: $menu-inverted-hover-background;
+  color: $menu-inverted-hover-color;
 }
 .ui.vertical.inverted.menu .item .menu a.item:hover,
 .ui.vertical.inverted.menu .item .menu .link.item:hover {
-  background: $invertedSubMenuBackground;
-  color: $invertedSubMenuHoverColor;
+  background: $menu-inverted-sub-background;
+  color: $menu-inverted-sub-hover-color;
 }
 
 /*--- Pressed ---*/
 .ui.inverted.menu a.item:active,
 .ui.inverted.menu .link.item:active {
-  background: $invertedMenuPressedBackground;
-  color: $invertedMenuPressedColor;
+  background: $menu-inverted-pressed-background;
+  color: $menu-inverted-pressed-color;
 }
 
 /*--- Active ---*/
 .ui.inverted.menu .active.item {
-  background: $invertedActiveBackground;
-  color: $invertedActiveColor !important;
+  background: $menu-inverted-active-background;
+  color: $menu-inverted-active-color !important;
 }
 .ui.inverted.vertical.menu .item .menu .active.item {
-  background: $invertedSubMenuActiveBackground;
-  color: $invertedSubMenuActiveColor;
+  background: $menu-inverted-sub-active-background;
+  color: $menu-inverted-sub-active-color;
 }
 .ui.inverted.pointing.menu .active.item:after {
-  background: $invertedArrowActiveColor;
+  background: $menu-inverted-arrow-active-color;
   margin: 0 !important;
   box-shadow: none !important;
   border: none !important;
@@ -1317,11 +1317,11 @@ Floated Menu / Item
 
 /*--- Active Hover ---*/
 .ui.inverted.menu .active.item:hover {
-  background: $invertedActiveHoverBackground;
-  color: $invertedActiveHoverColor !important;
+  background: $menu-inverted-active-hover-background;
+  color: $menu-inverted-active-hover-color !important;
 }
 .ui.inverted.pointing.menu .active.item:hover:after {
-  background: $invertedArrowActiveHoverColor;
+  background: $menu-inverted-arrow-active-hover-color;
 }
 
 /*--------------
@@ -1330,7 +1330,7 @@ Floated Menu / Item
 
 .ui.floated.menu {
   float: left;
-  margin: 0 $floatedDistance 0 0;
+  margin: 0 $menu-floated-distance 0 0;
 }
 .ui.floated.menu .item:last-child:before {
   display: none;
@@ -1338,7 +1338,7 @@ Floated Menu / Item
 
 .ui.right.floated.menu {
   float: right;
-  margin: 0 0 0 $floatedDistance;
+  margin: 0 0 0 $menu-floated-distance;
 }
 
 /*--------------
@@ -1351,13 +1351,12 @@ Floated Menu / Item
     background-color: map-get($value, "color");
   }
   .ui.inverted.#{$key + ""}.menu .item:before {
-    background-color: $invertedColoredDividerBackground;
+    background-color: $menu-inverted-colored-divider-background;
   }
   .ui.inverted.#{$key + ""}.menu .active.item {
-    background-color: $invertedColoredActiveBackground;
+    background-color: $menu-inverted-colored-active-background;
   }
 }
-
 
 /*--------------
      Fitted
@@ -1371,14 +1370,14 @@ Floated Menu / Item
 .ui.horizontally.fitted.menu .item,
 .ui.horizontally.fitted.menu .item .menu .item,
 .ui.menu .horizontally.fitted.item {
-  padding-top: $itemVerticalPadding;
-  padding-bottom: $itemVerticalPadding;
+  padding-top: $menu-item-vertical-padding;
+  padding-bottom: $menu-item-vertical-padding;
 }
 .ui.vertically.fitted.menu .item,
 .ui.vertically.fitted.menu .item .menu .item,
 .ui.menu .vertically.fitted.item {
-  padding-left: $itemHorizontalPadding;
-  padding-right: $itemHorizontalPadding;
+  padding-left: $menu-item-horizontal-padding;
+  padding-right: $menu-item-horizontal-padding;
 }
 
 /*--------------
@@ -1406,7 +1405,7 @@ Floated Menu / Item
   display: inline-block;
 }
 .ui.compact.menu:not(.secondary) .item:last-child {
-  border-radius: 0 $borderRadius $borderRadius 0;
+  border-radius: 0 $menu-border-radius $menu-border-radius 0;
 }
 .ui.compact.menu .item:last-child:before {
   display: none;
@@ -1442,7 +1441,7 @@ Floated Menu / Item
   justify-content: center;
 }
 .ui.attached.item.menu:not(.tabular) {
-  margin: 0 $attachedHorizontalOffset !important;
+  margin: 0 $menu-attached-horizontal-offset !important;
 }
 
 .ui.item.menu .item:last-child:before {
@@ -1500,18 +1499,18 @@ Floated Menu / Item
 }
 
 .ui.fixed.menu,
-.ui[class*='top fixed'].menu {
+.ui[class*="top fixed"].menu {
   top: 0;
   left: 0;
   right: auto;
   bottom: auto;
 }
-.ui[class*='top fixed'].menu {
+.ui[class*="top fixed"].menu {
   border-top: none;
   border-left: none;
   border-right: none;
 }
-.ui[class*='right fixed'].menu {
+.ui[class*="right fixed"].menu {
   border-top: none;
   border-bottom: none;
   border-right: none;
@@ -1522,7 +1521,7 @@ Floated Menu / Item
   width: auto;
   height: 100%;
 }
-.ui[class*='bottom fixed'].menu {
+.ui[class*="bottom fixed"].menu {
   border-bottom: none;
   border-left: none;
   border-right: none;
@@ -1531,7 +1530,7 @@ Floated Menu / Item
   top: auto;
   right: auto;
 }
-.ui[class*='left fixed'].menu {
+.ui[class*="left fixed"].menu {
   border-top: none;
   border-bottom: none;
   border-left: none;
@@ -1545,7 +1544,7 @@ Floated Menu / Item
 
 /* Coupling with Grid */
 .ui.fixed.menu + .ui.grid {
-  padding-top: $fixedPrecedingGridMargin;
+  padding-top: $menu-fixed-preceding-grid-margin;
 }
 
 /*-------------------
@@ -1555,22 +1554,22 @@ Floated Menu / Item
 .ui.pointing.menu .item:after {
   visibility: hidden;
   position: absolute;
-  content: '';
+  content: "";
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
   background: none;
 
-  margin: ($arrowBorderWidth / 2) 0 0;
-  width: $arrowSize;
-  height: $arrowSize;
+  margin: ($menu-arrow-border-width / 2) 0 0;
+  width: $menu-arrow-size;
+  height: $menu-arrow-size;
 
   border: none;
-  border-bottom: $arrowBorder;
-  border-right: $arrowBorder;
+  border-bottom: $menu-arrow-border;
+  border-right: $menu-arrow-border;
 
-  z-index: $arrowZIndex;
-  transition: $arrowTransition;
+  z-index: $menu-arrow-z-index;
+  transition: $menu-arrow-transition;
 }
 .ui.vertical.pointing.menu .item:after {
   position: absolute;
@@ -1580,11 +1579,11 @@ Floated Menu / Item
   left: auto;
 
   transform: translateX(50%) translateY(-50%) rotate(45deg);
-  margin: 0 - ($arrowBorderWidth / 2) 0 0;
+  margin: 0 (-$menu-arrow-border-width / 2) 0 0;
 
   border: none;
-  border-top: $arrowBorder;
-  border-right: $arrowBorder;
+  border-top: $menu-arrow-border;
+  border-right: $menu-arrow-border;
 }
 .ui.pointing.menu .ui.dropdown .menu .item:after,
 .ui.vertical.pointing.menu .ui.dropdown .menu .item:after {
@@ -1607,23 +1606,23 @@ Floated Menu / Item
 
 /* Colors */
 .ui.pointing.menu .active.item:hover:after {
-  background-color: $arrowHoverColor;
+  background-color: $menu-arrow-hover-color;
 }
 .ui.pointing.menu .active.item:after {
-  background-color: $arrowActiveColor;
+  background-color: $menu-arrow-active-color;
 }
 .ui.pointing.menu .active.item:hover:after {
-  background-color: $arrowActiveHoverColor;
+  background-color: $menu-arrow-active-hover-color;
 }
 
 .ui.vertical.pointing.menu .active.item:hover:after {
-  background-color: $arrowVerticalHoverColor;
+  background-color: $menu-arrow-vertical-hover-color;
 }
 .ui.vertical.pointing.menu .active.item:after {
-  background-color: $arrowVerticalActiveColor;
+  background-color: $menu-arrow-vertical-active-color;
 }
 .ui.vertical.pointing.menu .menu .active.item:after {
-  background-color: $arrowVerticalSubMenuColor;
+  background-color: $menu-arrow-vertical-sub-color;
 }
 
 @each $key, $value in $colors {
@@ -1641,51 +1640,51 @@ Floated Menu / Item
   top: 0;
   bottom: 0;
   border-radius: 0;
-  margin: 0 $attachedHorizontalOffset;
-  width: $attachedWidth;
-  max-width: $attachedWidth;
-  box-shadow: $attachedBoxShadow;
+  margin: 0 $menu-attached-horizontal-offset;
+  width: $menu-attached-width;
+  max-width: $menu-attached-width;
+  box-shadow: $menu-attached-box-shadow;
 }
 .ui.attached + .ui.attached.menu:not(.top) {
   border-top: none;
 }
 
 /* Top */
-.ui[class*='top attached'].menu {
+.ui[class*="top attached"].menu {
   bottom: 0;
   margin-bottom: 0;
-  top: $attachedTopOffset;
-  margin-top: $verticalMargin;
-  border-radius: $borderRadius $borderRadius 0 0;
+  top: $menu-attached-top-offset;
+  margin-top: $menu-vertical-margin;
+  border-radius: $menu-border-radius $menu-border-radius 0 0;
 }
-.ui.menu[class*='top attached']:first-child {
+.ui.menu[class*="top attached"]:first-child {
   margin-top: 0;
 }
 
 /* Bottom */
-.ui[class*='bottom attached'].menu {
+.ui[class*="bottom attached"].menu {
   bottom: 0;
   margin-top: 0;
-  top: $attachedBottomOffset;
-  margin-bottom: $verticalMargin;
-  box-shadow: $attachedBottomBoxShadow;
-  border-radius: 0 0 $borderRadius $borderRadius;
+  top: $menu-attached-bottom-offset;
+  margin-bottom: $menu-vertical-margin;
+  box-shadow: $menu-attached-bottom-box-shadow;
+  border-radius: 0 0 $menu-border-radius $menu-border-radius;
 }
-.ui[class*='bottom attached'].menu:last-child {
+.ui[class*="bottom attached"].menu:last-child {
   margin-bottom: 0;
 }
 
 /* Attached Menu Item */
 .ui.top.attached.menu > .item:first-child {
-  border-radius: $borderRadius 0 0 0;
+  border-radius: $menu-border-radius 0 0 0;
 }
 .ui.bottom.attached.menu > .item:first-child {
-  border-radius: 0 0 0 $borderRadius;
+  border-radius: 0 0 0 $menu-border-radius;
 }
 
 /* Tabular Attached */
 .ui.attached.menu:not(.tabular) {
-  border: $attachedBorder;
+  border: $menu-attached-border;
 }
 .ui.attached.inverted.menu {
   border: none;
@@ -1702,44 +1701,44 @@ Floated Menu / Item
 
 /* Mini */
 .ui.mini.menu {
-  font-size: $mini;
+  font-size: $menu-mini;
 }
 .ui.mini.vertical.menu:not(.icon) {
-  width: $miniWidth;
+  width: $menu-mini-width;
 }
 .ui.mini.menu .dropdown {
-  font-size: $mini;
+  font-size: $menu-mini;
 }
 .ui.mini.menu .dropdown .menu > .item {
-  font-size: $mini;
+  font-size: $menu-mini;
 }
 
 /* Tiny */
 .ui.tiny.menu {
-  font-size: $tiny;
+  font-size: $menu-tiny;
 }
 .ui.tiny.vertical.menu:not(.icon) {
-  width: $tinyWidth;
+  width: $menu-tiny-width;
 }
 .ui.tiny.menu .dropdown {
-  font-size: $tiny;
+  font-size: $menu-tiny;
 }
 .ui.tiny.menu .dropdown .menu > .item {
-  font-size: $tiny;
+  font-size: $menu-tiny;
 }
 
 /* Small */
 .ui.small.menu {
-  font-size: $small;
+  font-size: $menu-small;
 }
 .ui.small.vertical.menu:not(.icon) {
-  width: $smallWidth;
+  width: $menu-small-width;
 }
 .ui.small.menu .dropdown {
-  font-size: $small;
+  font-size: $menu-small;
 }
 .ui.small.menu .dropdown .menu > .item {
-  font-size: $small;
+  font-size: $menu-small;
 }
 
 /* Medium */
@@ -1747,93 +1746,93 @@ Floated Menu / Item
   font-size: $medium;
 }
 .ui.vertical.menu {
-  width: $mediumWidth;
+  width: $menu-medium-width;
 }
 
 /* Large */
 .ui.large.menu {
-  font-size: $large;
+  font-size: $menu-large;
 }
 .ui.large.vertical.menu:not(.icon) {
-  width: $largeWidth;
+  width: $menu-large-width;
 }
 .ui.large.menu .dropdown {
-  font-size: $large;
+  font-size: $menu-large;
 }
 .ui.large.menu .dropdown .menu > .item {
-  font-size: $large;
+  font-size: $menu-large;
 }
 
 /* Huge */
 .ui.huge.menu {
-  font-size: $huge;
+  font-size: $menu-huge;
 }
 .ui.huge.vertical.menu:not(.icon) {
-  width: $hugeWidth;
+  width: $menu-huge-width;
 }
 .ui.huge.menu .dropdown {
-  font-size: $huge;
+  font-size: $menu-huge;
 }
 .ui.huge.menu .dropdown .menu > .item {
-  font-size: $huge;
+  font-size: $menu-huge;
 }
 
 /* Big */
 .ui.big.menu {
-  font-size: $big;
+  font-size: $menu-big;
 }
 .ui.big.vertical.menu:not(.icon) {
-  width: $bigWidth;
+  width: $menu-big-width;
 }
 .ui.big.menu .dropdown {
-  font-size: $big;
+  font-size: $menu-big;
 }
 .ui.big.menu .dropdown .menu > .item {
-  font-size: $big;
+  font-size: $menu-big;
 }
 
 /* Massive */
 .ui.massive.menu {
-  font-size: $massive;
+  font-size: $menu-massive;
 }
 .ui.massive.vertical.menu:not(.icon) {
-  width: $massiveWidth;
+  width: $menu-massive-width;
 }
 .ui.massive.menu .dropdown {
-  font-size: $massive;
+  font-size: $menu-massive;
 }
 .ui.massive.menu .dropdown .menu > .item {
-  font-size: $massive;
+  font-size: $menu-massive;
 }
 
 /*-------------------
   Inverted dropdowns
 --------------------*/
 .ui.menu .ui.inverted.inverted.dropdown.item .menu {
-  background: $invertedDropdownBackground;
-  box-shadow: $invertedDropdownMenuBoxShadow;
+  background: $menu-inverted-dropdown-background;
+  box-shadow: $menu-inverted-dropdown-box-shadow;
 }
 
 .ui.menu .ui.inverted.dropdown .menu > .item {
-  color: $invertedDropdownItemColor !important;
+  color: $menu-inverted-dropdown-item-color !important;
 }
 
 .ui.menu .ui.inverted.dropdown .menu > .active.item {
-  background: $invertedDropdownActiveItemBackground !important;
-  color: $invertedDropdownActiveItemColor !important;
+  background: $menu-inverted-dropdown-active-item-background !important;
+  color: $menu-inverted-dropdown-active-item-color !important;
 }
 
 .ui.menu .ui.inverted.dropdown .menu > .item:hover {
-  background: $invertedDropdownHoveredItemBackground !important;
-  color: $invertedDropdownHoveredItemColor !important;
+  background: $menu-inverted-dropdown-hovered-item-background !important;
+  color: $menu-inverted-dropdown-hovered-item-color !important;
 }
 
 .ui.menu .ui.inverted.dropdown .menu > .selected.item {
-  background: $invertedDropdownSelectedItemBackground !important;
-  color: $invertedDropdownSelectedItemColor !important;
+  background: $menu-inverted-dropdown-selected-item-background !important;
+  color: $menu-inverted-dropdown-selected-item-color !important;
 }
 
 /* Vertical */
 .ui.vertical.menu .inverted.dropdown.item .menu {
-  box-shadow: $invertedDropdownMenuBoxShadow;
+  box-shadow: $menu-inverted-dropdown-box-shadow;
 }

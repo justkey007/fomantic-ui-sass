@@ -1,4 +1,4 @@
-@import '../../themes/default/elements/list';
+@import "../../themes/default/elements/list";
 
 /*******************************
             List
@@ -7,9 +7,9 @@
 ul.ui.list,
 ol.ui.list,
 .ui.list {
-  list-style-type: $listStyleType;
-  margin: $margin;
-  padding: $verticalPadding $horizontalPadding;
+  list-style-type: $list-style-type;
+  margin: $list-margin;
+  padding: $list-vertical-padding $list-horizontal-padding;
 }
 
 ul.ui.list:first-child,
@@ -37,18 +37,18 @@ ol.ui.list li,
 .ui.list .list > .item {
   display: list-item;
   table-layout: fixed;
-  list-style-type: $listStyleType;
-  list-style-position: $listStylePosition;
+  list-style-type: $list-style-type;
+  list-style-position: $list-style-position;
 
-  padding: $itemPadding;
-  line-height: $itemLineHeight;
+  padding: $list-item-padding;
+  line-height: $list-item-line-height;
 }
 
 ul.ui.list > li:first-child:after,
 ol.ui.list > li:first-child:after,
 .ui.list > .list > .item:after,
 .ui.list > .item:after {
-  content: '';
+  content: "";
   display: block;
   height: 0;
   clear: both;
@@ -74,17 +74,16 @@ ol.ui.list ol,
 .ui.list .list:not(.icon) {
   clear: both;
   margin: 0;
-  padding: $childListPadding;
+  padding: $list-child-padding;
 }
 
 /* Child Item */
 ul.ui.list ul li,
 ol.ui.list ol li,
 .ui.list .list > .item {
-  padding: $childItemPadding;
-  line-height: $childItemLineHeight;
+  padding: $list-child-item-padding;
+  line-height: $list-child-item-line-height;
 }
-
 
 /* Icon */
 .ui.list .list > .item > i.icon,
@@ -92,20 +91,19 @@ ol.ui.list ol li,
   display: table-cell;
   min-width: 1.55em;
   margin: 0;
-  padding-top: $iconOffset;
-  transition: $iconTransition;
+  padding-top: $list-icon-offset;
+  transition: $list-icon-transition;
   &:not(.loading) {
-    padding-right: $iconDistance;
-    vertical-align: $iconContentVerticalAlign;
+    padding-right: $list-icon-distance;
+    vertical-align: $list-icon-content-vertical-align;
   }
 }
 .ui.list .list > .item > i.icon:only-child,
 .ui.list > .item > i.icon:only-child {
   display: inline-block;
   min-width: auto;
-  vertical-align: $iconVerticalAlign;
+  vertical-align: $list-icon-vertical-align;
 }
-
 
 /* Image */
 .ui.list .list > .item > .image,
@@ -113,15 +111,15 @@ ol.ui.list ol li,
   display: table-cell;
   background-color: transparent;
   margin: 0;
-  vertical-align: $imageAlign;
+  vertical-align: $list-image-align;
 }
 .ui.list .list > .item > .image:not(:only-child):not(img),
 .ui.list > .item > .image:not(:only-child):not(img) {
-  padding-right: $imageDistance;
+  padding-right: $list-image-distance;
 }
 .ui.list .list > .item > .image img,
 .ui.list > .item > .image img {
-  vertical-align: $imageAlign;
+  vertical-align: $list-image-align;
 }
 
 .ui.list .list > .item > img.image,
@@ -134,8 +132,8 @@ ol.ui.list ol li,
 /* Content */
 .ui.list .list > .item > .content,
 .ui.list > .item > .content {
-  line-height: $contentLineHeight;
-  color: $contentColor;
+  line-height: $list-content-line-height;
+  color: $list-content-color;
 }
 .ui.list .list > .item > .image + .content,
 .ui.list .list > .item > .icon + .content,
@@ -143,12 +141,12 @@ ol.ui.list ol li,
 .ui.list > .item > .icon + .content {
   display: table-cell;
   width: 100%;
-  padding: 0 0 0 $contentDistance;
-  vertical-align: $contentVerticalAlign;
+  padding: 0 0 0 $list-content-distance;
+  vertical-align: $list-content-vertical-align;
 }
 .ui.list .list > .item > .loading.icon + .content,
 .ui.list > .item > .loading.icon + .content {
-  padding-left: calc(#{$iconDistance} + #{$contentDistance});
+  padding-left: calc(#{$list-icon-distance} + #{$list-content-distance});
 }
 .ui.list .list > .item > img.image + .content,
 .ui.list > .item > img.image + .content {
@@ -166,16 +164,16 @@ ol.ui.list ol li,
 .ui.list > .item .header {
   display: block;
   margin: 0;
-  font-family: $itemHeaderFontFamily;
-  font-weight: $itemHeaderFontWeight;
-  color: $itemHeaderColor;
+  font-family: $list-item-header-font-family;
+  font-weight: $list-item-header-font-weight;
+  color: $list-item-header-color;
 }
 
 /* Description */
 .ui.list .list > .item .description,
 .ui.list > .item .description {
   display: block;
-  color: $itemDescriptionColor;
+  color: $list-item-description-color;
 }
 
 /* Child Link */
@@ -188,28 +186,28 @@ ol.ui.list ol li,
 .ui.list .list > a.item,
 .ui.list > a.item {
   cursor: pointer;
-  color: $itemLinkColor;
+  color: $list-item-link-color;
 }
 .ui.list .list > a.item:hover,
 .ui.list > a.item:hover {
-  color: $itemLinkHoverColor;
+  color: $list-item-link-hover-color;
 }
 
 /* Linked Item Icons */
 .ui.list .list > a.item > i.icon,
 .ui.list > a.item > i.icon {
-  color: $itemLinkIconColor;
+  color: $list-item-link-icon-color;
 }
 
 /* Header Link */
 .ui.list .list > .item a.header,
 .ui.list > .item a.header {
   cursor: pointer;
-  color: $itemHeaderLinkColor !important;
+  color: $list-item-header-link-color !important;
 }
 .ui.list .list > .item > a.header:hover,
 .ui.list > .item > a.header:hover {
-  color: $itemHeaderLinkHoverColor !important;
+  color: $list-item-header-link-hover-color !important;
 }
 
 /* Floated Content */
@@ -223,12 +221,12 @@ ol.ui.list ol li,
 .ui.list .list > .item [class*="left floated"],
 .ui.list > .item [class*="left floated"] {
   float: left;
-  margin: $leftFloatMargin;
+  margin: $list-left-float-margin;
 }
 .ui.list .list > .item [class*="right floated"],
 .ui.list > .item [class*="right floated"] {
   float: right;
-  margin: $rightFloatMargin;
+  margin: $list-right-float-margin;
 }
 
 /*******************************
@@ -241,11 +239,11 @@ ol.ui.list ol li,
   table-layout: fixed;
   background-color: transparent;
 
-  list-style-type: $listStyleType;
-  list-style-position: $listStylePosition;
+  list-style-type: $list-style-type;
+  list-style-position: $list-style-position;
 
-  padding: $itemVerticalPadding $itemHorizontalPadding;
-  line-height: $itemLineHeight;
+  padding: $list-item-vertical-padding $list-item-horizontal-padding;
+  line-height: $list-item-line-height;
 }
 .ui.menu .ui.list .list > .item:before,
 .ui.menu .ui.list > .item:before {
@@ -261,7 +259,6 @@ ol.ui.list ol li,
   padding-bottom: 0;
 }
 
-
 /*******************************
             Types
 *******************************/
@@ -276,7 +273,7 @@ ol.ui.list ol li,
 }
 .ui.horizontal.list > .item {
   display: inline-block;
-  margin-right: $horizontalSpacing;
+  margin-right: $list-horizontal-spacing;
   font-size: 1rem;
 }
 .ui.horizontal.list:not(.celled) > .item:last-child {
@@ -294,20 +291,20 @@ ol.ui.list ol li,
 .ui.horizontal.list .list > .item > .icon,
 .ui.horizontal.list > .item > .content,
 .ui.horizontal.list .list > .item > .content {
-  vertical-align: $horizontalVerticalAlign;
+  vertical-align: $list-horizontal-vertical-align;
 }
 
 /* Padding on all elements */
 .ui.horizontal.list > .item:first-child,
 .ui.horizontal.list > .item:last-child {
-  padding-top: $itemVerticalPadding;
-  padding-bottom: $itemVerticalPadding;
+  padding-top: $list-item-vertical-padding;
+  padding-bottom: $list-item-vertical-padding;
 }
 
 /* Horizontal List */
 .ui.horizontal.list > .item > i.icon {
   margin: 0;
-  padding: 0 $horizontalIconDistance 0 0;
+  padding: 0 $list-horizontal-icon-distance 0 0;
 }
 .ui.horizontal.list > .item > .image + .content,
 .ui.horizontal.list > .item > .icon,
@@ -317,7 +314,7 @@ ol.ui.list ol li,
   width: auto;
 }
 .ui.horizontal.list > .item > .image {
-  display:inline-block;
+  display: inline-block;
 }
 
 /*******************************
@@ -331,11 +328,11 @@ ol.ui.list ol li,
 .ui.list .list > .disabled.item,
 .ui.list > .disabled.item {
   pointer-events: none;
-  color: $disabledColor !important;
+  color: $list-disabled-color !important;
 }
 .ui.inverted.list .list > .disabled.item,
 .ui.inverted.list > .disabled.item {
-  color: $invertedDisabledColor !important;
+  color: $list-inverted-disabled-color !important;
 }
 
 /*-------------------
@@ -344,9 +341,8 @@ ol.ui.list ol li,
 
 .ui.list .list > a.item:hover > .icon,
 .ui.list > a.item:hover > .icon {
-  color: $itemLinkIconHoverColor;
+  color: $list-item-link-icon-hover-color;
 }
-
 
 /*******************************
            Variations
@@ -358,38 +354,37 @@ ol.ui.list ol li,
 
 .ui.inverted.list .list > a.item > .icon,
 .ui.inverted.list > a.item > .icon {
-  color: $invertedIconLinkColor;
+  color: $list-inverted-icon-link-color;
 }
 .ui.inverted.list .list > .item .header,
 .ui.inverted.list > .item .header {
-  color: $invertedHeaderColor;
+  color: $list-inverted-header-color;
 }
 .ui.inverted.list .list > .item .description,
 .ui.inverted.list > .item .description {
-  color: $invertedDescriptionColor;
+  color: $list-inverted-description-color;
 }
 .ui.inverted.list .list > .item > .content,
 .ui.inverted.list > .item > .content {
-  color: $invertedContentColor;
+  color: $list-inverted-content-color;
 }
 /* Item Link */
 .ui.inverted.list .list > a.item,
 .ui.inverted.list > a.item {
   cursor: pointer;
-  color: $invertedItemLinkColor;
+  color: $list-inverted-item-link-color;
 }
 .ui.inverted.list .list > a.item:hover,
 .ui.inverted.list > a.item:hover {
-  color: $invertedItemLinkHoverColor;
+  color: $list-inverted-item-link-hover-color;
 }
-
 
 /* Linking Content */
 .ui.inverted.list .item a:not(.ui) {
-  color: $invertedItemLinkColor !important;
+  color: $list-inverted-item-link-color !important;
 }
 .ui.inverted.list .item a:not(.ui):hover {
-  color: $invertedItemLinkHoverColor !important;
+  color: $list-inverted-item-link-hover-color !important;
 }
 
 /*-------------------
@@ -419,39 +414,39 @@ ol.ui.list ol li,
 .ui.link.list .item,
 .ui.link.list a.item,
 .ui.link.list .item a:not(.ui) {
-  color: $linkListItemColor;
-  transition: $linkListTransition;
+  color: $list-link-item-color;
+  transition: $list-link-transition;
 }
 .ui.link.list.list a.item:hover,
 .ui.link.list.list .item a:not(.ui):hover {
-  color: $linkListItemHoverColor;
+  color: $list-link-item-hover-color;
 }
 .ui.link.list.list a.item:active,
 .ui.link.list.list .item a:not(.ui):active {
-  color: $linkListItemDownColor;
+  color: $list-link-item-down-color;
 }
 .ui.link.list.list .active.item,
 .ui.link.list.list .active.item a:not(.ui) {
-  color: $linkListItemActiveColor;
+  color: $list-link-item-active-color;
 }
 
 /* Inverted */
 .ui.inverted.link.list .item,
 .ui.inverted.link.list a.item,
 .ui.inverted.link.list .item a:not(.ui) {
-  color: $invertedLinkListItemColor;
+  color: $list-inverted-link-item-color;
 }
 .ui.inverted.link.list.list a.item:hover,
 .ui.inverted.link.list.list .item a:not(.ui):hover {
-  color: $invertedLinkListItemHoverColor;
+  color: $list-inverted-link-item-hover-color;
 }
 .ui.inverted.link.list.list a.item:active,
 .ui.inverted.link.list.list .item a:not(.ui):active {
-  color: $invertedLinkListItemDownColor;
+  color: $list-inverted-link-item-down-color;
 }
 .ui.inverted.link.list.list a.active.item,
 .ui.inverted.link.list.list .active.item a:not(.ui) {
-  color: $invertedLinkListItemActiveColor;
+  color: $list-inverted-link-item-active-color;
 }
 
 /*-------------------
@@ -461,12 +456,13 @@ ol.ui.list ol li,
 .ui.selection.list .list > .item,
 .ui.selection.list > .item {
   cursor: pointer;
-  background: $selectionListBackground;
-  padding: $selectionListItemVerticalPadding $selectionListItemHorizontalPadding;
-  margin: $selectionListItemMargin;
-  color: $selectionListColor;
-  border-radius: $selectionListItemBorderRadius;
-  transition: $selectionListTransition;
+  background: $list-selection-background;
+  padding: $list-selection-item-vertical-padding
+    $list-selection-item-horizontal-padding;
+  margin: $list-selection-item-margin;
+  color: $list-selection-color;
+  border-radius: $list-selection-item-border-radius;
+  transition: $list-selection-transition;
 }
 .ui.selection.list .list > .item:last-child,
 .ui.selection.list > .item:last-child {
@@ -474,36 +470,36 @@ ol.ui.list ol li,
 }
 .ui.selection.list .list > .item:hover,
 .ui.selection.list > .item:hover {
-  background: $selectionListHoverBackground;
-  color: $selectionListHoverColor;
+  background: $list-selection-hover-background;
+  color: $list-selection-hover-color;
 }
 .ui.selection.list .list > .item:active,
 .ui.selection.list > .item:active {
-  background: $selectionListDownBackground;
-  color: $selectionListDownColor;
+  background: $list-selection-down-background;
+  color: $list-selection-down-color;
 }
 .ui.selection.list .list > .item.active,
 .ui.selection.list > .item.active {
-  background: $selectionListActiveBackground;
-  color: $selectionListActiveColor;
+  background: $list-selection-active-background;
+  color: $list-selection-active-color;
 }
 
 /* Inverted */
 .ui.inverted.selection.list > .item {
-  background: $invertedSelectionListBackground;
-  color: $invertedSelectionListColor;
+  background: $list-inverted-selection-background;
+  color: $list-inverted-selection-color;
 }
 .ui.inverted.selection.list > .item:hover {
-  background: $invertedSelectionListHoverBackground;
-  color: $invertedSelectionListHoverColor;
+  background: $list-inverted-selection-hover-background;
+  color: $list-inverted-selection-hover-color;
 }
 .ui.inverted.selection.list > .item:active {
-  background: $invertedSelectionListDownBackground;
-  color: $invertedSelectionListDownColor;
+  background: $list-inverted-selection-down-background;
+  color: $list-inverted-selection-down-color;
 }
 .ui.inverted.selection.list > .item.active {
-  background: $invertedSelectionListActiveBackground;
-  color: $invertedSelectionListActiveColor;
+  background: $list-inverted-selection-active-background;
+  color: $list-inverted-selection-active-color;
 }
 
 /* Celled / Divided Selection List */
@@ -519,10 +515,10 @@ ol.ui.list ol li,
 --------------------*/
 
 .ui.animated.list > .item {
-  transition: $animatedListTransition;
+  transition: $list-animated-transition;
 }
 .ui.animated.list:not(.horizontal) > .item:hover {
-  padding-left: $animatedListIndent;
+  padding-left: $list-animated-indent;
 }
 
 /*-------------------
@@ -535,8 +531,8 @@ ol.ui.list ol li,
 }
 .ui.fitted.selection.list .list > .item,
 .ui.fitted.selection.list > .item {
-  margin-left: -$selectionListItemHorizontalPadding;
-  margin-right: -$selectionListItemHorizontalPadding;
+  margin-left: -$list-selection-item-horizontal-padding;
+  margin-right: -$list-selection-item-horizontal-padding;
 }
 
 /*-------------------
@@ -545,7 +541,7 @@ ol.ui.list ol li,
 
 ul.ui.list,
 .ui.bulleted.list {
-  margin-left: $bulletDistance;
+  margin-left: $list-bullet-distance;
 }
 ul.ui.list li,
 .ui.bulleted.list .list > .item,
@@ -561,22 +557,22 @@ ul.ui.list li:before,
   top: auto;
   left: auto;
   font-weight: $normal;
-  margin-left: $bulletOffset;
-  content: $bulletCharacter;
-  opacity: $bulletOpacity;
-  color: $bulletColor;
-  vertical-align: $bulletVerticalAlign;
+  margin-left: $list-bullet-offset;
+  content: $list-bullet-character;
+  opacity: $list-bullet-opacity;
+  color: $list-bullet-color;
+  vertical-align: $list-bullet-vertical-align;
 }
 
 ul.ui.list li:before,
 .ui.bulleted.list .list > a.item:before,
 .ui.bulleted.list > a.item:before {
-  color: $bulletLinkColor;
+  color: $list-bullet-link-color;
 }
 
 ul.ui.list ul,
 .ui.bulleted.list .list:not(.icon) {
-  padding-left: $bulletChildDistance;
+  padding-left: $list-bullet-child-distance;
 }
 
 /* Horizontal Bulleted */
@@ -586,7 +582,7 @@ ul.ui.horizontal.bulleted.list,
 }
 ul.ui.horizontal.bulleted.list li,
 .ui.horizontal.bulleted.list > .item {
-  margin-left: $horizontalBulletSpacing;
+  margin-left: $list-horizontal-bullet-spacing;
 }
 ul.ui.horizontal.bulleted.list li:first-child,
 .ui.horizontal.bulleted.list > .item:first-child {
@@ -594,7 +590,7 @@ ul.ui.horizontal.bulleted.list li:first-child,
 }
 ul.ui.horizontal.bulleted.list li::before,
 .ui.horizontal.bulleted.list > .item::before {
-  color: $horizontalBulletColor;
+  color: $list-horizontal-bullet-color;
 }
 ul.ui.horizontal.bulleted.list li:first-child::before,
 .ui.horizontal.bulleted.list > .item:first-child::before {
@@ -610,7 +606,7 @@ ol.ui.list,
 .ui.ordered.list .list:not(.icon),
 ol.ui.list ol {
   counter-reset: ordered;
-  margin-left: $orderedCountDistance;
+  margin-left: $list-ordered-count-distance;
   list-style-type: none;
 }
 ol.ui.list li,
@@ -627,19 +623,19 @@ ol.ui.list li:before,
   left: auto;
   user-select: none;
   pointer-events: none;
-  margin-left: -($orderedCountDistance);
-  counter-increment: $orderedCountName;
-  content: $orderedCountContent;
-  text-align: $orderedCountTextAlign;
-  color: $orderedCountColor;
-  vertical-align: $orderedCountVerticalAlign;
-  opacity: $orderedCountOpacity;
+  margin-left: (-$list-ordered-count-distance);
+  counter-increment: $list-ordered-count-name;
+  content: $list-ordered-count-content;
+  text-align: $list-ordered-count-text-align;
+  color: $list-ordered-count-color;
+  vertical-align: $list-ordered-count-vertical-align;
+  opacity: $list-ordered-count-opacity;
 }
 
 ol.ui.inverted.list li:before,
 .ui.ordered.inverted.list .list > .item:before,
 .ui.ordered.inverted.list > .item:before {
-  color: $orderedInvertedCountColor;
+  color: $list-ordered-inverted-count-color;
 }
 
 /* Value */
@@ -654,11 +650,11 @@ ol.ui.list li[value]:before {
 /* Child Lists */
 ol.ui.list ol,
 .ui.ordered.list .list:not(.icon) {
-  margin-left: $orderedChildCountDistance;
+  margin-left: $list-ordered-child-count-distance;
 }
 ol.ui.list ol li:before,
 .ui.ordered.list .list > .item:before {
-  margin-left: $orderedChildCountOffset;
+  margin-left: $list-ordered-child-count-offset;
 }
 
 /* Horizontal Ordered */
@@ -670,29 +666,28 @@ ol.ui.horizontal.list li:before,
 .ui.ordered.horizontal.list .list > .item:before,
 .ui.ordered.horizontal.list > .item:before {
   position: static;
-  margin: 0 $horizontalOrderedCountDistance 0 0;
+  margin: 0 $list-horizontal-ordered-count-distance 0 0;
 }
 
 /* Suffixed Ordered */
 ol.ui.suffixed.list li:before,
 .ui.suffixed.ordered.list .list > .item:before,
 .ui.suffixed.ordered.list > .item:before {
-  content: $orderedCountContentSuffixed;
+  content: $list-ordered-count-content-suffixed;
 }
-
 
 /*-------------------
        Divided
 --------------------*/
 
 .ui.divided.list > .item {
-  border-top: $dividedBorder;
+  border-top: $list-divided-border;
 }
 .ui.divided.list .list > .item {
-  border-top: $dividedChildListBorder;
+  border-top: $list-divided-child-border;
 }
 .ui.divided.list .item .list > .item {
-  border-top: $dividedChildItemBorder;
+  border-top: $list-divided-child-item-border;
 }
 .ui.divided.list .list > .item:first-child,
 .ui.divided.list > .item:first-child {
@@ -701,7 +696,7 @@ ol.ui.suffixed.list li:before,
 
 /* Sub Menu */
 .ui.divided.list:not(.horizontal) .list > .item:first-child {
-  border-top-width: $dividedBorderWidth;
+  border-top-width: $list-divided-border-width;
 }
 
 /* Divided bulleted */
@@ -711,7 +706,7 @@ ol.ui.suffixed.list li:before,
   padding-left: 0;
 }
 .ui.divided.bulleted.list > .item:not(.horizontal) {
-  padding-left: $bulletDistance;
+  padding-left: $list-bullet-distance;
 }
 
 /* Divided Ordered */
@@ -720,15 +715,15 @@ ol.ui.suffixed.list li:before,
 }
 .ui.divided.ordered.list .list > .item,
 .ui.divided.ordered.list > .item {
-  padding-left: $orderedCountDistance;
+  padding-left: $list-ordered-count-distance;
 }
 .ui.divided.ordered.list .item .list:not(.icon) {
   margin-left: 0;
   margin-right: 0;
-  padding-bottom: $itemVerticalPadding;
+  padding-bottom: $list-item-vertical-padding;
 }
 .ui.divided.ordered.list .item .list > .item {
-  padding-left: $orderedChildCountDistance;
+  padding-left: $list-ordered-child-count-distance;
 }
 
 /* Divided Selection */
@@ -743,16 +738,16 @@ ol.ui.suffixed.list li:before,
   margin-left: 0;
 }
 .ui.divided.horizontal.list > .item {
-  padding-left: $horizontalDividedSpacing;
+  padding-left: $list-horizontal-divided-spacing;
 }
 .ui.divided.horizontal.list > .item:not(:last-child) {
-  padding-right: $horizontalDividedSpacing;
+  padding-right: $list-horizontal-divided-spacing;
 }
 .ui.divided.horizontal.list > .item {
   border-top: none;
-  border-right: $dividedBorder;
+  border-right: $list-divided-border;
   margin: 0;
-  line-height: $horizontalDividedLineHeight;
+  line-height: $list-horizontal-divided-line-height;
 }
 .ui.horizontal.divided.list > .item:last-child {
   border-right: none;
@@ -761,9 +756,8 @@ ol.ui.suffixed.list li:before,
 .ui.divided.inverted.list > .item,
 .ui.divided.inverted.list > .list,
 .ui.divided.inverted.horizontal.list > .item {
-  border-color: $dividedInvertedBorderColor;
+  border-color: $list-divided-inverted-border-color;
 }
-
 
 /*-------------------
         Celled
@@ -771,19 +765,19 @@ ol.ui.suffixed.list li:before,
 
 .ui.celled.list > .item,
 .ui.celled.list > .list {
-  border-top: $celledBorder;
-  padding-left: $celledHorizontalPadding;
-  padding-right: $celledHorizontalPadding;
+  border-top: $list-celled-border;
+  padding-left: $list-celled-horizontal-padding;
+  padding-right: $list-celled-horizontal-padding;
 }
 .ui.celled.list > .item:last-child {
-  border-bottom: $celledBorder;
+  border-bottom: $list-celled-border;
 }
 
 /* Padding on all elements */
 .ui.celled.list > .item:first-child,
 .ui.celled.list > .item:last-child {
-  padding-top: $itemVerticalPadding;
-  padding-bottom: $itemVerticalPadding;
+  padding-top: $list-item-vertical-padding;
+  padding-bottom: $list-item-vertical-padding;
 }
 
 /* Sub Menu */
@@ -800,12 +794,12 @@ ol.ui.suffixed.list li:before,
 }
 .ui.celled.bulleted.list .list > .item,
 .ui.celled.bulleted.list > .item {
-  padding-left: ($bulletDistance);
+  padding-left: ($list-bullet-distance);
 }
 .ui.celled.bulleted.list .item .list:not(.icon) {
-  margin-left: -($bulletDistance);
-  margin-right: -($bulletDistance);
-  padding-bottom: $itemVerticalPadding;
+  margin-left: (-$list-bullet-distance);
+  margin-right: (-$list-bullet-distance);
+  padding-bottom: $list-item-vertical-padding;
 }
 
 /* Celled Ordered */
@@ -814,15 +808,15 @@ ol.ui.suffixed.list li:before,
 }
 .ui.celled.ordered.list .list > .item,
 .ui.celled.ordered.list > .item {
-  padding-left: $orderedCountDistance;
+  padding-left: $list-ordered-count-distance;
 }
 .ui.celled.ordered.list .item .list:not(.icon) {
   margin-left: 0;
   margin-right: 0;
-  padding-bottom: $itemVerticalPadding;
+  padding-bottom: $list-item-vertical-padding;
 }
 .ui.celled.ordered.list .list > .item {
-  padding-left: $orderedChildCountDistance;
+  padding-left: $list-ordered-child-count-distance;
 }
 
 /* Celled Horizontal */
@@ -832,27 +826,27 @@ ol.ui.suffixed.list li:before,
 .ui.horizontal.celled.list .list > .item,
 .ui.horizontal.celled.list > .item {
   border-top: none;
-  border-left: $celledBorder;
+  border-left: $list-celled-border;
   margin: 0;
-  padding-left: $horizontalCelledSpacing;
-  padding-right: $horizontalCelledSpacing;
+  padding-left: $list-horizontal-celled-spacing;
+  padding-right: $list-horizontal-celled-spacing;
 
-  line-height: $horizontalCelledLineHeight;
+  line-height: $list-horizontal-celled-line-height;
 }
 .ui.horizontal.celled.list .list > .item:last-child,
 .ui.horizontal.celled.list > .item:last-child {
   border-bottom: none;
-  border-right: $celledBorder;
+  border-right: $list-celled-border;
 }
 
 /* Inverted */
 .ui.celled.inverted.list > .item,
 .ui.celled.inverted.list > .list {
-  border-color: $celledInvertedBorder;
+  border-color: $list-celled-inverted-border;
 }
 .ui.celled.inverted.horizontal.list .list > .item,
 .ui.celled.inverted.horizontal.list > .item {
-  border-color: $celledInvertedBorder;
+  border-color: $list-celled-inverted-border;
 }
 
 /*-------------------
@@ -860,34 +854,34 @@ ol.ui.suffixed.list li:before,
 --------------------*/
 
 .ui.relaxed.list:not(.horizontal) > .item:not(:first-child) {
-  padding-top: $relaxedItemVerticalPadding;
+  padding-top: $list-relaxed-item-vertical-padding;
 }
 .ui.relaxed.list:not(.horizontal) > .item:not(:last-child) {
-  padding-bottom: $relaxedItemVerticalPadding;
+  padding-bottom: $list-relaxed-item-vertical-padding;
 }
 .ui.horizontal.relaxed.list .list > .item:not(:first-child),
 .ui.horizontal.relaxed.list > .item:not(:first-child) {
-  padding-left: $relaxedHorizontalPadding;
+  padding-left: $list-relaxed-horizontal-padding;
 }
 .ui.horizontal.relaxed.list .list > .item:not(:last-child),
 .ui.horizontal.relaxed.list > .item:not(:last-child) {
-  padding-right: $relaxedHorizontalPadding;
+  padding-right: $list-relaxed-horizontal-padding;
 }
 
 /* Very Relaxed */
 .ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:first-child) {
-  padding-top: $veryRelaxedItemVerticalPadding;
+  padding-top: $list-very-relaxed-item-vertical-padding;
 }
 .ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:last-child) {
-  padding-bottom: $veryRelaxedItemVerticalPadding;
+  padding-bottom: $list-very-relaxed-item-vertical-padding;
 }
 .ui.horizontal[class*="very relaxed"].list .list > .item:not(:first-child),
 .ui.horizontal[class*="very relaxed"].list > .item:not(:first-child) {
-  padding-left: $veryRelaxedHorizontalPadding;
+  padding-left: $list-very-relaxed-horizontal-padding;
 }
 .ui.horizontal[class*="very relaxed"].list .list > .item:not(:last-child),
 .ui.horizontal[class*="very relaxed"].list > .item:not(:last-child) {
-  padding-right: $veryRelaxedHorizontalPadding;
+  padding-right: $list-very-relaxed-horizontal-padding;
 }
 
 /*-------------------
@@ -895,28 +889,28 @@ ol.ui.suffixed.list li:before,
 --------------------*/
 
 .ui.mini.list {
-  font-size: $relativeMini;
+  font-size: $relative-mini;
 }
 .ui.tiny.list {
-  font-size: $relativeTiny;
+  font-size: $relative-tiny;
 }
 .ui.small.list {
-  font-size: $relativeSmall;
+  font-size: $relative-small;
 }
 .ui.list {
-  font-size: $relativeMedium;
+  font-size: $relative-medium;
 }
 .ui.large.list {
-  font-size: $relativeLarge;
+  font-size: $relative-large;
 }
 .ui.big.list {
-  font-size: $relativeBig;
+  font-size: $relative-big;
 }
 .ui.huge.list {
-  font-size: $relativeHuge;
+  font-size: $relative-huge;
 }
 .ui.massive.list {
-  font-size: $relativeMassive;
+  font-size: $relative-massive;
 }
 
 .ui.mini.horizontal.list .list > .item,
@@ -951,6 +945,3 @@ ol.ui.suffixed.list li:before,
 .ui.massive.horizontal.list > .item {
   font-size: $massive;
 }
-
-
-

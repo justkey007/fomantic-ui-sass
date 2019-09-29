@@ -1,0 +1,22 @@
+{
+  "@hoverPlaceholderBackgroundOpacity": "$embed-hover-placeholder-background-opacity",
+  "@placeholderBackgroundTransition": "$embed-placeholder-background-transition",
+  "@placeholderBackgroundOpacity": "$embed-placeholder-background-opacity",
+  "@hoverPlaceholderBackground": "$embed-hover-placeholder-background",
+  "@placeholderBackground": "$embed-placeholder-background",
+  "@ultraWidescreenRatio": "$embed-ultra-widescreen-ratio",
+  "@placeholderUnderlay": "$embed-placeholder-underlay",
+  "@transitionDuration": "$embed-transition-duration",
+  "@transitionEasing": "$embed-transition-easing",
+  "@widescreenRatio": "$embed-widescreen-ratio",
+  "@iconTransition": "$embed-icon-transition",
+  "@iconBackground": "$embed-icon-background",
+  "@hoverIconColor": "$embed-hover-icon-color",
+  "@standardRatio": "$embed-standard-ratio",
+  "@squareRatio": "$embed-square-ratio",
+  "@iconZIndex": "$embed-icon-z-index",
+  "@background": "$embed-background",
+  "@iconShadow": "$embed-icon-shadow",
+  "@iconColor": "$embed-icon-color",
+  "@iconSize": "$embed-icon-size"
+}

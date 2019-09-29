@@ -1,43 +1,42 @@
-@import '../../themes/default/elements/icon';
+@import "../../themes/default/elements/icon";
 
 /*******************************
              Icon
 *******************************/
-
 @font-face {
-   font-family: 'Icons';
-   src: $fallbackSRC;
-   src: $src;
-   font-style: normal;
-   font-weight: $normal;
-   font-variant: normal;
-   text-decoration: inherit;
-   text-transform: none;
+  font-family: "Icons";
+  src: $icon-fallback-src;
+  src: $icon-src;
+  font-style: normal;
+  font-weight: $normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
 }
 
 i.icon {
-   display: inline-block;
-   opacity: $opacity;
+  display: inline-block;
+  opacity: $icon-opacity;
 
-   margin: 0 $distanceFromText 0 0;
+  margin: 0 $icon-distance-from-text 0 0;
 
-   width: $width;
-   height: $height;
+  width: $icon-width;
+  height: $icon-height;
 
-   font-family: 'Icons';
-   font-style: normal;
-   font-weight: $normal;
-   text-decoration: inherit;
-   text-align: center;
+  font-family: "Icons";
+  font-style: normal;
+  font-weight: $normal;
+  text-decoration: inherit;
+  text-align: center;
 
-   speak: none;
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-   backface-visibility: hidden;
+  speak: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
 }
 
 i.icon:before {
-   background: none !important;
+  background: none !important;
 }
 
 /*******************************
@@ -49,9 +48,9 @@ i.icon:before {
 ---------------*/
 
 i.icon.loading {
-   height: 1em;
-   line-height: 1;
-   animation: loader $loadingDuration linear infinite;
+  height: 1em;
+  line-height: 1;
+  animation: loader $icon-loading-duration linear infinite;
 }
 
 /*******************************
@@ -64,14 +63,14 @@ i.icon:active,
 i.icons:active,
 i.emphasized.icon:not(.disabled),
 i.emphasized.icons:not(.disabled) {
-   opacity: 1;
+  opacity: 1;
 }
 
 i.disabled.icon,
 i.disabled.icons {
-   opacity: $disabledOpacity;
-   cursor: default;
-   pointer-events: none;
+  opacity: $disabled-opacity;
+  cursor: default;
+  pointer-events: none;
 }
 
 /*******************************
@@ -83,8 +82,8 @@ i.disabled.icons {
 --------------------*/
 
 i.fitted.icon {
-   width: auto;
-   margin: 0 !important;
+  width: auto;
+  margin: 0 !important;
 }
 
 /*-------------------
@@ -93,13 +92,13 @@ i.fitted.icon {
 
 i.link.icon:not(.disabled),
 i.link.icons:not(.disabled) {
-   cursor: pointer;
-   opacity: $linkOpacity;
-   transition: opacity $defaultDuration $defaultEasing;
+  cursor: pointer;
+  opacity: $icon-link-opacity;
+  transition: opacity $default-duration $default-easing;
 }
 i.link.icon:hover,
 i.link.icons:hover {
-   opacity: 1;
+  opacity: 1;
 }
 
 /*-------------------
@@ -107,18 +106,18 @@ i.link.icons:hover {
 --------------------*/
 
 i.circular.icon {
-   border-radius: 500em !important;
-   line-height: 1 !important;
+  border-radius: 500em !important;
+  line-height: 1 !important;
 
-   padding: $circularPadding !important;
-   box-shadow: $circularShadow;
+  padding: $icon-circular-padding !important;
+  box-shadow: $icon-circular-shadow;
 
-   width: $circularSize !important;
-   height: $circularSize !important;
+  width: $icon-circular-size !important;
+  height: $icon-circular-size !important;
 }
 i.circular.inverted.icon {
-   border: none;
-   box-shadow: none;
+  border: none;
+  box-shadow: none;
 }
 
 /*-------------------
@@ -127,10 +126,10 @@ i.circular.inverted.icon {
 
 i.flipped.icon,
 i.horizontally.flipped.icon {
-   transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 i.vertically.flipped.icon {
-   transform: scale(1, -1);
+  transform: scale(1, -1);
 }
 
 /*-------------------
@@ -140,16 +139,16 @@ i.vertically.flipped.icon {
 i.rotated.icon,
 i.right.rotated.icon,
 i.clockwise.rotated.icon {
-   transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 i.left.rotated.icon,
 i.counterclockwise.rotated.icon {
-   transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 i.halfway.rotated.icon {
-   transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /*--------------------------
@@ -158,31 +157,31 @@ i.halfway.rotated.icon {
 i.rotated.flipped.icon,
 i.right.rotated.flipped.icon,
 i.clockwise.rotated.flipped.icon {
-   transform: scale(-1, 1) rotate(90deg);
+  transform: scale(-1, 1) rotate(90deg);
 }
 
 i.left.rotated.flipped.icon,
 i.counterclockwise.rotated.flipped.icon {
-   transform: scale(-1, 1) rotate(-90deg);
+  transform: scale(-1, 1) rotate(-90deg);
 }
 
 i.halfway.rotated.flipped.icon {
-   transform: scale(-1, 1) rotate(180deg);
+  transform: scale(-1, 1) rotate(180deg);
 }
 
 i.rotated.vertically.flipped.icon,
 i.right.rotated.vertically.flipped.icon,
 i.clockwise.rotated.vertically.flipped.icon {
-   transform: scale(1, -1) rotate(90deg);
+  transform: scale(1, -1) rotate(90deg);
 }
 
 i.left.rotated.vertically.flipped.icon,
 i.counterclockwise.rotated.vertically.flipped.icon {
-   transform: scale(1, -1) rotate(-90deg);
+  transform: scale(1, -1) rotate(-90deg);
 }
 
 i.halfway.rotated.vertically.flipped.icon {
-   transform: scale(1, -1) rotate(180deg);
+  transform: scale(1, -1) rotate(180deg);
 }
 
 /*-------------------
@@ -190,17 +189,17 @@ i.halfway.rotated.vertically.flipped.icon {
 --------------------*/
 
 i.bordered.icon {
-   line-height: 1;
-   vertical-align: baseline;
+  line-height: 1;
+  vertical-align: baseline;
 
-   width: $borderedSize;
-   height: $borderedSize;
-   padding: $borderedVerticalPadding $borderedHorizontalPadding !important;
-   box-shadow: $borderedShadow;
+  width: $icon-bordered-size;
+  height: $icon-bordered-size;
+  padding: $icon-bordered-vertical-padding $icon-bordered-horizontal-padding !important;
+  box-shadow: $icon-bordered-shadow;
 }
 i.bordered.inverted.icon {
-   border: none;
-   box-shadow: none;
+  border: none;
+  box-shadow: none;
 }
 
 /*-------------------
@@ -210,12 +209,12 @@ i.bordered.inverted.icon {
 /* Inverted Shapes */
 i.inverted.bordered.icon,
 i.inverted.circular.icon {
-   background-color: $black;
-   color: $white;
+  background-color: $black;
+  color: $white;
 }
 
 i.inverted.icon {
-   color: $white;
+  color: $white;
 }
 
 /*-------------------
@@ -223,69 +222,68 @@ i.inverted.icon {
 --------------------*/
 
 @each $key, $value in $colors {
-   $c: map-get($value, color);
-   $l: map-get($value, light);
+  $c: map-get($value, color);
+  $l: map-get($value, light);
 
-  i.#{$key + ""}.icon.icon.icon.icon {
+  i.#{$key + ""}.icon {
     color: $c;
   }
-  i.inverted.#{$key + ""}.icon.icon.icon.icon {
+  i.inverted.#{$key + ""}.icon {
     color: $l;
   }
-  i.inverted.bordered.#{$key + ""}.icon.icon.icon.icon,
-  i.inverted.circular.#{$key + ""}.icon.icon.icon.icon {
+  i.inverted.bordered.#{$key + ""}.icon,
+  i.inverted.circular.#{$key + ""}.icon {
     background-color: $c;
     color: $white;
   }
 }
 
-
 /*-------------------
         Sizes
 --------------------*/
 
-i.mini.mini.mini.icon,
-i.mini.mini.mini.icons {
-   line-height: 1;
-   font-size: $mini;
+i.mini.icon,
+i.mini.icons {
+  line-height: 1;
+  font-size: $icon-mini;
 }
-i.tiny.tiny.tiny.icon,
-i.tiny.tiny.tiny.icons {
-   line-height: 1;
-   font-size: $tiny;
+i.tiny.icon,
+i.tiny.icons {
+  line-height: 1;
+  font-size: $icon-tiny;
 }
-i.small.small.small.icon,
-i.small.small.small.icons {
-   line-height: 1;
-   font-size: $small;
+i.small.icon,
+i.small.icons {
+  line-height: 1;
+  font-size: $icon-small;
 }
 i.icon,
 i.icons {
-   font-size: $medium;
+  font-size: $icon-medium;
 }
-i.large.large.large.icon,
-i.large.large.large.icons {
-   line-height: 1;
-   vertical-align: middle;
-   font-size: $large;
+i.large.icon,
+i.large.icons {
+  line-height: 1;
+  vertical-align: middle;
+  font-size: $icon-large;
 }
-i.big.big.big.icon,
-i.big.big.big.icons {
-   line-height: 1;
-   vertical-align: middle;
-   font-size: $big;
+i.big.icon,
+i.big.icons {
+  line-height: 1;
+  vertical-align: middle;
+  font-size: $icon-big;
 }
-i.huge.huge.huge.icon,
-i.huge.huge.huge.icons {
-   line-height: 1;
-   vertical-align: middle;
-   font-size: $huge;
+i.huge.icon,
+i.huge.icons {
+  line-height: 1;
+  vertical-align: middle;
+  font-size: $icon-huge;
 }
-i.massive.massive.massive.icon,
-i.massive.massive.massive.icons {
-   line-height: 1;
-   vertical-align: middle;
-   font-size: $massive;
+i.massive.icon,
+i.massive.icons {
+  line-height: 1;
+  vertical-align: middle;
+  font-size: $icon-massive;
 }
 
 /*******************************
@@ -293,62 +291,65 @@ i.massive.massive.massive.icons {
 *******************************/
 
 i.icons {
-   display: inline-block;
-   position: relative;
-   line-height: 1;
+  display: inline-block;
+  position: relative;
+  line-height: 1;
 }
 
 i.icons .icon {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translateX(-50%) translateY(-50%);
-   margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
 }
 
 i.icons .icon:first-child {
-   position: static;
-   width: auto;
-   height: auto;
-   vertical-align: top;
-   transform: none;
+  position: static;
+  width: auto;
+  height: auto;
+  vertical-align: top;
+  transform: none;
 }
 
 /* Corner Icon */
 i.icons .corner.icon {
-   top: auto;
-   left: auto;
-   right: 0;
-   bottom: 0;
-   transform: none;
-   font-size: $cornerIconSize;
-   text-shadow: $cornerIconShadow;
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  transform: none;
+  font-size: $icon-corner-size;
+  text-shadow: $icon-corner-shadow;
 }
-i.icons .icon.corner[class*='top right'] {
-   top: 0;
-   left: auto;
-   right: 0;
-   bottom: auto;
+i.icons .icon.corner[class*="top right"] {
+  top: 0;
+  left: auto;
+  right: 0;
+  bottom: auto;
 }
-i.icons .icon.corner[class*='top left'] {
-   top: 0;
-   left: 0;
-   right: auto;
-   bottom: auto;
+i.icons .icon.corner[class*="top left"] {
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
 }
-i.icons .icon.corner[class*='bottom left'] {
-   top: auto;
-   left: 0;
-   right: auto;
-   bottom: 0;
+i.icons .icon.corner[class*="bottom left"] {
+  top: auto;
+  left: 0;
+  right: auto;
+  bottom: 0;
 }
-i.icons .icon.corner[class*='bottom right'] {
-   top: auto;
-   left: auto;
-   right: 0;
-   bottom: 0;
+i.icons .icon.corner[class*="bottom right"] {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
 }
 
 i.icons .inverted.corner.icon {
-   text-shadow: $cornerIconInvertedShadow;
+  text-shadow: $icon-corner-inverted-shadow;
 }
+
+
+@import '../../themes/default/elements/icon.style';

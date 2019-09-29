@@ -1,0 +1,7 @@
+node_modules
+tasks
+*.map
+*temp*
+examples
+*pnpm*
+utilities

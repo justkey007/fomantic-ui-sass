@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/rating';
-
+@import "../../themes/default/modules/rating";
 
 /*******************************
            Rating
@@ -7,8 +6,8 @@
 
 .ui.rating:not(.field) {
   display: inline-flex;
-  white-space: $whiteSpace;
-  vertical-align: $verticalAlign;
+  white-space: $rating-white-space;
+  vertical-align: $rating-vertical-align;
 }
 .ui.rating:last-child {
   margin-right: 0;
@@ -22,19 +21,17 @@
   font-weight: $normal;
   font-style: normal;
   flex: 1 0 auto;
-  cursor: $iconCursor;
-  width: $iconWidth;
-  height: $iconHeight;
-  transition: $iconTransition;
+  cursor: $rating-icon-cursor;
+  width: $rating-icon-width;
+  height: $rating-icon-height;
+  transition: $rating-icon-transition;
   line-height: 1;
   backface-visibility: hidden;
 }
 
-
 /*******************************
              Types
 *******************************/
-
 
 /*-------------------
       Standard
@@ -42,30 +39,29 @@
 
 /* Inactive Icon */
 .ui.rating .icon {
-  background: $inactiveBackground;
-  color: $inactiveColor;
+  background: $rating-inactive-background;
+  color: $rating-inactive-color;
 }
 
 /* Active Icon */
 .ui.rating .active.icon {
-  background: $activeBackground;
-  color: $activeColor;
+  background: $rating-active-background;
+  color: $rating-active-color;
 }
 
 /* Selected Icon */
 .ui.rating .icon.selected,
 .ui.rating .icon.selected.active {
-  background: $selectedBackground;
-  color: $selectedColor;
+  background: $rating-selected-background;
+  color: $rating-selected-color;
 }
-
 
 /*--------------
      Colors
 -------------- */
 
 @each $key, $value in $colors {
-  $color: replace($key, '$', '');
+  $color: replace($key, "$", "");
   $c: map-get($value, color);
   $l: map-get($value, light);
   $h: map-get($value, hover);
@@ -73,21 +69,18 @@
 
   .ui.#{$key + ""}.rating .active.icon {
     color: $l;
-    text-shadow: 0px -$shadowWidth 0px $c,
-                 -$shadowWidth 0px 0px $c,
-                 0px $shadowWidth 0px $c,
-                 $shadowWidth 0px 0px $c;
+    text-shadow: 0px -$rating-shadow-width 0px $c,
+      -$rating-shadow-width 0px 0px $c, 0px $rating-shadow-width 0px $c,
+      $rating-shadow-width 0px 0px $c;
   }
   .ui.#{$key + ""}.rating .icon.selected,
   .ui.#{$key + ""}.rating .icon.selected.active {
     color: $lh;
-    text-shadow: 0px -$shadowWidth 0px $h,
-                 -$shadowWidth 0px 0px $h,
-                 0px $shadowWidth 0px $h,
-                 $shadowWidth 0px 0px $h;
+    text-shadow: 0px -$rating-shadow-width 0px $h,
+      -$rating-shadow-width 0px 0px $h, 0px $rating-shadow-width 0px $h,
+      $rating-shadow-width 0px 0px $h;
   }
 }
-
 
 /*******************************
              States
@@ -102,21 +95,18 @@
   cursor: default;
 }
 
-
 /*-------------------
    User Interactive
 --------------------*/
 
 /* Selected Rating */
 .ui.rating.selected .active.icon {
-  opacity: $interactiveActiveIconOpacity;
+  opacity: $rating-interactive-active-icon-opacity;
 }
 .ui.rating.selected .icon.selected,
 .ui.rating .icon.selected {
-  opacity: $interactiveSelectedIconOpacity;
+  opacity: $rating-interactive-selected-icon-opacity;
 }
-
-
 
 /*******************************
           Variations
@@ -141,5 +131,5 @@
   font-size: $huge;
 }
 .ui.massive.rating {
-  font-size: $massive;
+  font-size: $rating-massive;
 }

@@ -1,0 +1,19 @@
+{
+  "@interactiveSelectedIconOpacity": "$rating-interactive-selected-icon-opacity",
+  "@interactiveActiveIconOpacity": "$rating-interactive-active-icon-opacity",
+  "@inactiveBackground": "$rating-inactive-background",
+  "@selectedBackground": "$rating-selected-background",
+  "@activeBackground": "$rating-active-background",
+  "@iconTransition": "$rating-icon-transition",
+  "@selectedColor": "$rating-selected-color",
+  "@verticalAlign": "$rating-vertical-align",
+  "@inactiveColor": "$rating-inactive-color",
+  "@activeColor": "$rating-active-color",
+  "@shadowWidth": "$rating-shadow-width",
+  "@iconHeight": "$rating-icon-height",
+  "@iconCursor": "$rating-icon-cursor",
+  "@whiteSpace": "$rating-white-space",
+  "@iconWidth": "$rating-icon-width",
+  "@massive": "$rating-massive",
+  "@margin": "$rating-margin"
+}

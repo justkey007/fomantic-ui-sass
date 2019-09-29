@@ -1,12 +1,12 @@
-@import '../../themes/default/modules/slider';
- 
- /*******************************
+@import "../../themes/default/modules/slider";
+
+/*******************************
              Slider
  *******************************/
 
 .ui.slider:not(.vertical):not(.checkbox) {
   width: 100%;
-  padding: $padding;
+  padding: $slider-padding;
 }
 
 .ui.slider:not(.checkbox) {
@@ -23,35 +23,35 @@
 }
 
 .ui.slider:not(.vertical) .inner {
-  height: $height;
+  height: $slider-height;
 }
 
 .ui.slider .inner:hover {
-  cursor: $hoverPointer;
+  cursor: $slider-hover-pointer;
 }
 
 .ui.slider .inner .track {
   position: absolute;
-  border-radius: $trackBorderRadius;
-  background-color: $trackColor;
+  border-radius: $slider-track-border-radius;
+  background-color: $slider-track-color;
 }
 
 .ui.slider:not(.vertical) .inner .track {
   width: 100%;
-  height: $trackHeight;
-  top: $trackPositionTop;
+  height: $slider-track-height;
+  top: $slider-track-position-top;
   left: 0;
 }
 
 .ui.slider .inner .track-fill {
   position: absolute;
-  border-radius: $trackFillBorderRadius;
-  background-color: $trackFillColor;
+  border-radius: $slider-track-fill-border-radius;
+  background-color: $slider-track-fill-color;
 }
 
 .ui.slider:not(.vertical) .inner .track-fill {
-  height: $trackFillHeight;
-  top: $trackPositionTop;
+  height: $slider-track-fill-height;
+  top: $slider-track-position-top;
   left: 0;
 }
 
@@ -59,35 +59,33 @@
   position: absolute;
   left: 0;
   top: 0;
-  height: $thumbHeight;
-  width: $thumbHeight;
-  background: $thumbBackground;
-  border-radius: $thumbBorderRadius;
-  box-shadow: $thumbShadow;
-  transition: $thumbTransition;
+  height: $slider-thumb-height;
+  width: $slider-thumb-height;
+  background: $slider-thumb-background;
+  border-radius: $slider-thumb-border-radius;
+  box-shadow: $slider-thumb-shadow;
+  transition: $slider-thumb-transition;
 }
 
 .ui.slider:not(.disabled) .inner .thumb:hover {
-  cursor: $thumbHoverPointer;
-  background: $thumbHoverBackground;
+  cursor: $slider-thumb-hover-pointer;
+  background: $slider-thumb-hover-background;
 }
 
 .ui.slider:not(.disabled):focus .inner .thumb {
-  background: $thumbHoverBackground;
+  background: $slider-thumb-hover-background;
 }
-
 
 /*******************************
             States
 *******************************/
-
 
 /*--------------
      Disabled
 ---------------*/
 
 .ui.disabled.slider:not(.checkbox) {
-  opacity: $disabledOpactiy;
+  opacity: $slider-disabled-opactiy;
 }
 
 .ui.disabled.slider .inner:hover {
@@ -95,7 +93,7 @@
 }
 
 .ui.disabled.slider .inner .track-fill {
-  background: $disabledTrackFillColor;
+  background: $slider-disabled-track-fill-color;
 }
 
 /*--------------
@@ -126,8 +124,8 @@
 
 .ui.vertical.slider {
   height: 100%;
-  width: $height;
-  padding: $verticalPadding;
+  width: $slider-height;
+  padding: $slider-vertical-padding;
 }
 
 .ui.vertical.slider .inner {
@@ -136,14 +134,14 @@
 
 .ui.vertical.slider .inner .track {
   height: 100%;
-  width: $trackHeight;
-  left: $trackPositionTop;
+  width: $slider-track-height;
+  left: $slider-track-position-top;
   top: 0;
 }
 
 .ui.vertical.slider .inner .track-fill {
-  width: $trackFillHeight;
-  left: $trackPositionTop;
+  width: $slider-track-fill-height;
+  left: $slider-track-position-top;
   top: 0;
 }
 
@@ -163,7 +161,7 @@
 ---------------*/
 
 .ui.labeled.slider > .labels {
-  height: $labelHeight;
+  height: $slider-label-height;
   width: auto;
   margin: 0;
   padding: 0;
@@ -184,10 +182,10 @@
 }
 
 .ui.labeled.ticked.slider > .labels .label:after {
-  content: ' ';
-  height: $labelHeight;
-  width: $labelWidth;
-  background: $labelColor;
+  content: " ";
+  height: $slider-label-height;
+  width: $slider-label-width;
+  background: $slider-label-color;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -196,7 +194,7 @@
 /* Vertical Labels */
 
 .ui.labeled.vertical.slider > .labels {
-  width: $labelHeight;
+  width: $slider-label-height;
   height: auto;
   left: 50%;
   top: 0;
@@ -209,8 +207,8 @@
 }
 
 .ui.labeled.vertical.slider > .labels .label:after {
-  width: $labelHeight;
-  height: $labelWidth;
+  width: $slider-label-height;
+  height: $slider-label-width;
   left: 100%;
   top: 50%;
 }
@@ -225,26 +223,25 @@
 ---------------*/
 
 .ui.hover.slider .inner .thumb {
-  opacity: $hoverVarOpacity;
-  transition: $hoverOpacityTransition;
+  opacity: $slider-hover-var-opacity;
+  transition: $slider-hover-opacity-transition;
 }
 
-.ui.hover.slider:not(.disabled):hover .inner .thumb, .ui.hover.slider:not(.disabled):focus .inner .thumb {
-  opacity: $hoverVarHoverOpacity;
+.ui.hover.slider:not(.disabled):hover .inner .thumb,
+.ui.hover.slider:not(.disabled):focus .inner .thumb {
+  opacity: $slider-hover-var-hover-opacity;
 }
-
-
 
 /*--------------
     Inverted
 ---------------*/
 
 .ui.inverted.slider .inner .track-fill {
-  background-color: $invertedTrackFillColor;
+  background-color: $slider-inverted-track-fill-color;
 }
 
 .ui.inverted.slider .inner .track {
-  background-color: $transparentWhite;
+  background-color: $transparent-white;
 }
 
 /*--------------
@@ -282,7 +279,6 @@
   .ui.#{$key + ""}.inverted.slider.basic:focus .inner .thumb {
     background-color: $lh;
   }
-
 }
 
 /*--------------
@@ -291,10 +287,11 @@
 
 /* Standard */
 .ui.slider.basic .inner .thumb {
-  background-color: $trackFillColor;
+  background-color: $slider-track-fill-color;
 }
-.ui.slider.basic .inner .thumb:hover, .ui.slider.basic:focus .inner .thumb {
-  background-color: $trackFillColorFocus;
+.ui.slider.basic .inner .thumb:hover,
+.ui.slider.basic:focus .inner .thumb {
+  background-color: $slider-track-fill-color-focus;
 }
 
 /*--------------
@@ -303,12 +300,12 @@
 
 /* Standard */
 .ui.inverted.slider.basic .inner .thumb {
-  background-color: $invertedTrackFillColor;
+  background-color: $slider-inverted-track-fill-color;
 }
-.ui.inverted.slider.basic .inner .thumb:hover, .ui.inverted.slider.basic:focus .inner .thumb {
-  background-color: $invertedTrackFillColorFocus;
+.ui.inverted.slider.basic .inner .thumb:hover,
+.ui.inverted.slider.basic:focus .inner .thumb {
+  background-color: $slider-inverted-track-fill-color-focus;
 }
-
 
 /*--------------
      Sizing
@@ -316,98 +313,96 @@
 
 /* Small */
 .ui.slider.small .inner .thumb {
-  height: $smallHeight;
-  width: $smallHeight;
+  height: $slider-small-height;
+  width: $slider-small-height;
 }
 .ui.slider.small:not(.vertical) .inner {
-  height: $smallHeight;
+  height: $slider-small-height;
 }
 .ui.slider.small:not(.vertical) .inner .track,
 .ui.slider.small:not(.vertical) .inner .track-fill {
-  height: $smallTrackHeight;
-  top: $trackPositionTopSmall;
+  height: $slider-small-track-height;
+  top: $slider-track-position-top-small;
 }
 .ui.small.labeled.slider:not(.vertical) > .labels,
 .ui.small.labeled.slider:not(.vertical) > .labels .label:after {
-  height: $smallLabelHeight;
+  height: $slider-small-label-height;
 }
 
 /* Small Vertical */
 .ui.slider.small.vertical .inner {
-  width: $smallHeight;
+  width: $slider-small-height;
 }
 .ui.slider.small.vertical .inner .track,
 .ui.slider.small.vertical .inner .track-fill {
-  width: $smallTrackHeight;
-  left: $trackPositionTopSmall;
+  width: $slider-small-track-height;
+  left: $slider-track-position-top-small;
 }
-.ui.small.labeled.vertical.slider> .labels,
-.ui.small.labeled.vertical.slider> .labels .label:after {
-  width: $smallLabelHeight;
+.ui.small.labeled.vertical.slider > .labels,
+.ui.small.labeled.vertical.slider > .labels .label:after {
+  width: $slider-small-label-height;
 }
 
 /* Large */
 .ui.slider.large .inner .thumb {
-  height: $largeHeight;
-  width: $largeHeight;
+  height: $slider-large-height;
+  width: $slider-large-height;
 }
 .ui.slider.large:not(.vertical) .inner {
-  height: $largeHeight;
+  height: $slider-large-height;
 }
 .ui.slider.large:not(.vertical) .inner .track,
 .ui.slider.large:not(.vertical) .inner .track-fill {
-  height: $largeTrackHeight;
-  top: $trackPositionTopLarge;
+  height: $slider-large-track-height;
+  top: $slider-track-position-top-large;
 }
 .ui.large.labeled.slider:not(.vertical) > .labels,
 .ui.large.labeled.slider:not(.vertical) > .labels .label:after {
-  height: $largeLabelHeight;
+  height: $slider-large-label-height;
 }
 
 /* Large Vertical */
 .ui.slider.large.vertical .inner {
-  width: $largeHeight;
+  width: $slider-large-height;
 }
 .ui.slider.large.vertical .inner .track,
 .ui.slider.large.vertical .inner .track-fill {
-  width: $largeTrackHeight;
-  left: $trackPositionTopLarge;
+  width: $slider-large-track-height;
+  left: $slider-track-position-top-large;
 }
-.ui.large.labeled.vertical.slider> .labels,
-.ui.large.labeled.vertical.slider> .labels .label:after {
-  width: $largeLabelHeight;
+.ui.large.labeled.vertical.slider > .labels,
+.ui.large.labeled.vertical.slider > .labels .label:after {
+  width: $slider-large-label-height;
 }
 
 /* Big */
 .ui.slider.big .inner .thumb {
-  height: $bigHeight;
-  width: $bigHeight;
+  height: $slider-big-height;
+  width: $slider-big-height;
 }
 .ui.slider.big:not(.vertical) .inner {
-  height: $bigHeight;
+  height: $slider-big-height;
 }
 .ui.slider.big:not(.vertical) .inner .track,
 .ui.slider.big:not(.vertical) .inner .track-fill {
-  height: $bigTrackHeight;
-  top: $trackPositionTopBig;
+  height: $slider-big-track-height;
+  top: $slider-track-position-top-big;
 }
 .ui.big.labeled.slider:not(.vertical) > .labels,
 .ui.big.labeled.slider:not(.vertical) > .labels .label:after {
-  height: $bigLabelHeight;
+  height: $slider-big-label-height;
 }
 
 /* Big Vertical */
 .ui.slider.big.vertical .inner {
-  width: $bigHeight;
+  width: $slider-big-height;
 }
 .ui.slider.big.vertical .inner .track,
 .ui.slider.big.vertical .inner .track-fill {
-  width: $bigTrackHeight;
-  left: $trackPositionTopBig;
+  width: $slider-big-track-height;
+  left: $slider-track-position-top-big;
 }
-.ui.big.labeled.vertical.slider> .labels,
-.ui.big.labeled.vertical.slider> .labels .label:after {
-  width: $bigLabelHeight;
+.ui.big.labeled.vertical.slider > .labels,
+.ui.big.labeled.vertical.slider > .labels .label:after {
+  width: $slider-big-label-height;
 }
-
-

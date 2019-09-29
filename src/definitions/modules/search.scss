@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/search';
-
+@import "../../themes/default/modules/search";
 
 /*******************************
              Search
@@ -13,27 +12,26 @@
   margin: 0;
   outline: none;
   -webkit-appearance: none;
-  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
   text-shadow: none;
   font-style: normal;
   font-weight: $normal;
 
-  line-height: $promptLineHeight;
-  padding: $promptPadding;
-  font-size: $promptFontSize;
+  line-height: $search-prompt-line-height;
+  padding: $search-prompt-padding;
+  font-size: $search-prompt-font-size;
 
-  background: $promptBackground;
-  border: $promptBorder;
-  color: $promptColor;
-  box-shadow: $promptBoxShadow;
-  transition: $promptTransition;
+  background: $search-prompt-background;
+  border: $search-prompt-border;
+  color: $search-prompt-color;
+  box-shadow: $search-prompt-box-shadow;
+  transition: $search-prompt-transition;
 }
 
 .ui.search .prompt {
-  border-radius: $promptBorderRadius;
+  border-radius: $search-prompt-border-radius;
 }
-
 
 /*--------------
      Icon
@@ -58,21 +56,21 @@
   text-align: left;
   text-transform: none;
 
-  background: $resultsBackground;
+  background: $search-results-background;
 
-  margin-top: $resultsDistance;
-  width: $resultsWidth;
+  margin-top: $search-results-distance;
+  width: $search-results-width;
 
-  border-radius: $resultsBorderRadius;
-  box-shadow: $resultsBoxShadow;
-  border: $resultsBorder;
-  z-index: $resultsZIndex;
+  border-radius: $search-results-border-radius;
+  box-shadow: $search-results-box-shadow;
+  border: $search-results-border;
+  z-index: $search-results-z-index;
 }
 .ui.search > .results > :first-child {
-  border-radius: $resultsBorderRadius $resultsBorderRadius 0 0;
+  border-radius: $search-results-border-radius $search-results-border-radius 0 0;
 }
 .ui.search > .results > :last-child {
-  border-radius: 0 0 $resultsBorderRadius $resultsBorderRadius;
+  border-radius: 0 0 $search-results-border-radius $search-results-border-radius;
 }
 
 /*--------------
@@ -83,24 +81,24 @@
   cursor: pointer;
   display: block;
   overflow: hidden;
-  font-size: $resultFontSize;
-  padding: $resultPadding;
-  color: $resultTextColor;
-  line-height: $resultLineHeight;
-  border-bottom: $resultDivider;
+  font-size: $search-result-font-size;
+  padding: $search-result-padding;
+  color: $search-result-text-color;
+  line-height: $search-result-line-height;
+  border-bottom: $search-result-divider;
 }
 .ui.search > .results .result:last-child {
-  border-bottom: $resultLastDivider !important;
+  border-bottom: $search-result-last-divider !important;
 }
 
 /* Image */
 .ui.search > .results .result .image {
-  float: $resultImageFloat;
+  float: $search-result-image-float;
   overflow: hidden;
-  background: $resultImageBackground;
-  width: $resultImageWidth;
-  height: $resultImageHeight;
-  border-radius: $resultImageBorderRadius;
+  background: $search-result-image-background;
+  width: $search-result-image-width;
+  height: $search-result-image-height;
+  border-radius: $search-result-image-border-radius;
 }
 .ui.search > .results .result .image img {
   display: block;
@@ -113,24 +111,24 @@
 ---------------*/
 
 .ui.search > .results .result .image + .content {
-  margin: $resultImageMargin;
+  margin: $search-result-image-margin;
 }
 
 .ui.search > .results .result .title {
-  margin: $resultTitleMargin;
-  font-family: $resultTitleFont;
-  font-weight: $resultTitleFontWeight;
-  font-size: $resultTitleFontSize;
-  color: $resultTitleColor;
+  margin: $search-result-title-margin;
+  font-family: $search-result-title-font;
+  font-weight: $search-result-title-font-weight;
+  font-size: $search-result-title-font-size;
+  color: $search-result-title-color;
 }
 .ui.search > .results .result .description {
-  margin-top: $resultDescriptionDistance;
-  font-size: $resultDescriptionFontSize;
-  color: $resultDescriptionColor;
+  margin-top: $search-result-description-distance;
+  font-size: $search-result-description-font-size;
+  color: $search-result-description-color;
 }
 .ui.search > .results .result .price {
-  float: $resultPriceFloat;
-  color: $resultPriceColor;
+  float: $search-result-price-float;
+  color: $search-result-price-color;
 }
 
 /*--------------
@@ -138,31 +136,30 @@
 ---------------*/
 
 .ui.search > .results > .message {
-  padding: $messageVerticalPadding $messageHorizontalPadding;
+  padding: $search-message-vertical-padding $search-message-horizontal-padding;
 }
 .ui.search > .results > .message .header {
-  font-family: $headerFont;
-  font-size: $messageHeaderFontSize;
-  font-weight: $messageHeaderFontWeight;
-  color: $messageHeaderColor;
+  font-family: $header-font;
+  font-size: $search-message-header-font-size;
+  font-weight: $search-message-header-font-weight;
+  color: $search-message-header-color;
 }
 .ui.search > .results > .message .description {
-  margin-top: $messageDescriptionDistance;
-  font-size: $messageDescriptionFontSize;
-  color: $messageDescriptionColor;
+  margin-top: $search-message-description-distance;
+  font-size: $search-message-description-font-size;
+  color: $search-message-description-color;
 }
 
 /* View All Results */
 .ui.search > .results > .action {
   display: block;
-  border-top: $actionBorder;
-  background: $actionBackground;
-  padding: $actionPadding;
-  color: $actionColor;
-  font-weight: $actionFontWeight;
-  text-align: $actionAlign;
+  border-top: $search-action-border;
+  background: $search-action-background;
+  padding: $search-action-padding;
+  color: $search-action-color;
+  font-weight: $search-action-font-weight;
+  text-align: $search-action-align;
 }
-
 
 /*******************************
             States
@@ -173,9 +170,9 @@
 ---------------------*/
 
 .ui.search > .prompt:focus {
-  border-color: $promptFocusBorderColor;
-  background: $promptFocusBackground;
-  color: $promptFocusColor;
+  border-color: $search-prompt-focus-border-color;
+  background: $search-prompt-focus-background;
+  color: $search-prompt-focus-color;
 }
 
 /*--------------------
@@ -184,34 +181,33 @@
 
 .ui.loading.search .input > i.icon:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
 
-  margin: $loaderMargin;
-  width: $loaderSize;
-  height: $loaderSize;
+  margin: $loader-margin;
+  width: $loader-size;
+  height: $loader-size;
 
-  border-radius: $circularRadius;
-  border: $loaderLineWidth solid $loaderFillColor;
+  border-radius: $circular-radius;
+  border: $loader-line-width solid $loader-fill-color;
 }
 .ui.loading.search .input > i.icon:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
 
-  margin: $loaderMargin;
-  width: $loaderSize;
-  height: $loaderSize;
+  margin: $loader-margin;
+  width: $loader-size;
+  height: $loader-size;
 
-  animation: loader $loaderSpeed infinite linear;
-  border: $loaderLineWidth solid $loaderLineColor;
-  border-radius: $circularRadius;
+  animation: loader $loader-speed infinite linear;
+  border: $loader-line-width solid $loader-line-color;
+  border-radius: $circular-radius;
 
   box-shadow: 0 0 0 1px transparent;
 }
-
 
 /*--------------
       Hover
@@ -219,10 +215,10 @@
 
 .ui.search > .results .result:hover,
 .ui.category.search > .results .category .result:hover {
-  background: $resultHoverBackground;
+  background: $search-result-hover-background;
 }
 .ui.search .action:hover:not(div) {
-  background: $actionHoverBackground;
+  background: $search-action-hover-background;
 }
 
 /*--------------
@@ -230,24 +226,24 @@
 ---------------*/
 
 .ui.category.search > .results .category.active {
-  background: $categoryActiveBackground;
+  background: $search-category-active-background;
 }
 .ui.category.search > .results .category.active > .name {
-  color: $categoryNameActiveColor;
+  color: $search-category-name-active-color;
 }
 
 .ui.search > .results .result.active,
 .ui.category.search > .results .category .result.active {
   position: relative;
-  border-left-color: $resultActiveBorderLeft;
-  background: $resultActiveBackground;
-  box-shadow: $resultActiveBoxShadow;
+  border-left-color: $search-result-active-border-left;
+  background: $search-result-active-background;
+  box-shadow: $search-result-active-box-shadow;
 }
 .ui.search > .results .result.active .title {
-  color: $resultActiveTitleColor;
+  color: $search-result-active-title-color;
 }
 .ui.search > .results .result.active .description {
-  color: $resultActiveDescriptionColor;
+  color: $search-result-active-description-color;
 }
 
 /*--------------------
@@ -258,9 +254,8 @@
 .ui.disabled.search {
   cursor: default;
   pointer-events: none;
-  opacity: $disabledOpacity;
+  opacity: $disabled-opacity;
 }
-
 
 /*******************************
            Types
@@ -271,7 +266,7 @@
 ---------------*/
 
 .ui.search.selection .prompt {
-  border-radius: $selectionPromptBorderRadius;
+  border-radius: $search-selection-prompt-border-radius;
 }
 
 /* Remove input */
@@ -280,31 +275,33 @@
   position: absolute;
   left: auto;
   opacity: 0;
-  color: $selectionCloseIconColor;
-  top: $selectionCloseTop;
-  right: $selectionCloseRight;
-  transition: $selectionCloseTransition;
+  color: $search-selection-close-icon-color;
+  top: $search-selection-close-top;
+  right: $search-selection-close-right;
+  transition: $search-selection-close-transition;
 }
 .ui.search.selection > .icon.input > .active.remove.icon {
   cursor: pointer;
-  opacity: $selectionCloseIconOpacity;
+  opacity: $search-selection-close-icon-opacity;
   pointer-events: auto;
 }
-.ui.search.selection > .icon.input:not([class*="left icon"]) > .icon ~ .remove.icon {
-  right: $selectionCloseIconInputRight;
+.ui.search.selection
+  > .icon.input:not([class*="left icon"])
+  > .icon
+  ~ .remove.icon {
+  right: $search-selection-close-icon-input-right;
 }
 .ui.search.selection > .icon.input > .remove.icon:hover {
-  opacity: $selectionCloseIconHoverOpacity;
-  color: $selectionCloseIconHoverColor;
+  opacity: $search-selection-close-icon-hover-opacity;
+  color: $search-selection-close-icon-hover-color;
 }
-
 
 /*--------------
     Category
 ---------------*/
 
 .ui.category.search .results {
-  width: $categoryResultsWidth;
+  width: $search-category-results-width;
 }
 
 .ui.category.search .results.animating,
@@ -315,9 +312,9 @@
 /* Category */
 .ui.category.search > .results .category {
   display: table-row;
-  background: $categoryBackground;
-  box-shadow: $categoryBoxShadow;
-  transition: $categoryTransition;
+  background: $search-category-background;
+  box-shadow: $search-category-box-shadow;
+  transition: $search-category-transition;
 }
 
 /* Last Category */
@@ -327,38 +324,38 @@
 
 /* First / Last */
 .ui.category.search > .results .category:first-child .name + .result {
-  border-radius: 0 $resultsBorderRadius 0 0;
+  border-radius: 0 $search-results-border-radius 0 0;
 }
 .ui.category.search > .results .category:last-child .result:last-child {
-  border-radius: 0 0 $resultsBorderRadius 0;
+  border-radius: 0 0 $search-results-border-radius 0;
 }
 
 /* Category Result Name */
 .ui.category.search > .results .category > .name {
   display: table-cell;
   text-overflow: ellipsis;
-  width: $categoryNameWidth;
-  white-space: $categoryNameWhitespace;
-  background: $categoryNameBackground;
-  font-family: $categoryNameFont;
-  font-size: $categoryNameFontSize;
-  padding: $categoryNamePadding;
-  font-weight: $categoryNameFontWeight;
-  color: $categoryNameColor;
-  border-bottom: $categoryDivider;
+  width: $search-category-name-width;
+  white-space: $search-category-name-whitespace;
+  background: $search-category-name-background;
+  font-family: $search-category-name-font;
+  font-size: $search-category-name-font-size;
+  padding: $search-category-name-padding;
+  font-weight: $search-category-name-font-weight;
+  color: $search-category-name-color;
+  border-bottom: $search-category-divider;
 }
 
 /* Category Result */
 .ui.category.search > .results .category .results {
   display: table-cell;
-  background: $categoryResultBackground;
-  border-left: $categoryResultLeftBorder;
-  border-bottom: $categoryDivider;
+  background: $search-category-result-background;
+  border-left: $search-category-result-left-border;
+  border-bottom: $search-category-divider;
 }
 .ui.category.search > .results .category .result {
-  border-bottom: $categoryResultDivider;
-  transition: $categoryResultTransition;
-  padding: $categoryResultPadding;
+  border-bottom: $search-category-result-divider;
+  transition: $search-category-result-transition;
+  padding: $search-category-result-padding;
 }
 
 /*******************************
@@ -386,41 +383,38 @@
   width: 100%;
 }
 
-
 /*--------------
       Sizes
 ---------------*/
 
 .ui.mini.search {
-  font-size: $relativeMini;
+  font-size: $relative-mini;
 }
 .ui.small.search {
-  font-size: $relativeSmall;
+  font-size: $relative-small;
 }
 .ui.search {
-  font-size: $relativeMedium;
+  font-size: $relative-medium;
 }
 .ui.large.search {
-  font-size: $relativeLarge;
+  font-size: $relative-large;
 }
 .ui.big.search {
-  font-size: $relativeBig;
+  font-size: $relative-big;
 }
 .ui.huge.search {
-  font-size: $relativeHuge;
+  font-size: $relative-huge;
 }
 .ui.massive.search {
-  font-size: $relativeMassive;
+  font-size: $relative-massive;
 }
 
 /*--------------
       Mobile
 ---------------*/
 
-@media only screen and (max-width: $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.search .results {
-    max-width: $mobileMaxWidth;
+    max-width: $search-mobile-max-width;
   }
 }
-
-

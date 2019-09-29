@@ -1,4 +1,4 @@
-@import '../../themes/default/elements/header';
+@import "../../themes/default/elements/header";
 
 /*******************************
             Header
@@ -7,20 +7,20 @@
 /* Standard */
 .ui.header {
   border: none;
-  margin: $margin;
-  padding: $verticalPadding $horizontalPadding;
-  font-family: $fontFamily;
-  font-weight: $fontWeight;
-  line-height: $lineHeight;
-  text-transform: $textTransform;
-  color: $textColor;
+  margin: $header-margin;
+  padding: $header-vertical-padding $header-horizontal-padding;
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  line-height: $header-line-height;
+  text-transform: $header-text-transform;
+  color: $text-color;
 }
 
 .ui.header:first-child {
-  margin-top: $firstMargin;
+  margin-top: $header-first-margin;
 }
 .ui.header:last-child {
-  margin-bottom: $lastMargin;
+  margin-bottom: $header-last-margin;
 }
 
 /*--------------
@@ -31,10 +31,10 @@
   display: block;
   font-weight: $normal;
   padding: 0;
-  margin: $subHeaderMargin;
-  font-size: $subHeaderFontSize;
-  line-height: $subHeaderLineHeight;
-  color: $subHeaderColor;
+  margin: $header-sub-margin;
+  font-size: $header-sub-font-size;
+  line-height: $header-sub-line-height;
+  color: $header-sub-color;
 }
 
 /*--------------
@@ -43,17 +43,17 @@
 
 .ui.header > .icon {
   display: table-cell;
-  opacity: $iconOpacity;
-  font-size: $iconSize;
-  padding-top: $iconOffset;
-  vertical-align: $iconAlignment;
+  opacity: $header-icon-opacity;
+  font-size: $header-icon-size;
+  padding-top: $header-icon-offset;
+  vertical-align: $header-icon-alignment;
 }
 
 /* With Text Node */
 .ui.header .icon:only-child {
   display: inline-block;
   padding: 0;
-  margin-right: $iconMargin;
+  margin-right: $header-icon-margin;
 }
 
 /*-------------------
@@ -63,14 +63,14 @@
 .ui.header > .image:not(.icon),
 .ui.header > img {
   display: inline-block;
-  margin-top: $imageOffset;
-  width: $imageWidth;
-  height: $imageHeight;
-  vertical-align: $imageAlignment;
+  margin-top: $header-image-offset;
+  width: $header-image-width;
+  height: $header-image-height;
+  vertical-align: $header-image-alignment;
 }
 .ui.header > .image:not(.icon):only-child,
 .ui.header > img:only-child {
-  margin-right: $imageMargin;
+  margin-right: $header-image-margin;
 }
 
 /*--------------
@@ -79,45 +79,41 @@
 
 .ui.header .content {
   display: inline-block;
-  vertical-align: $contentAlignment;
+  vertical-align: $header-content-alignment;
 }
 
 /* After Image */
 .ui.header > img + .content,
 .ui.header > .image + .content {
-  padding-left: $imageMargin;
-  vertical-align: $contentImageAlignment;
+  padding-left: $header-image-margin;
+  vertical-align: $header-content-image-alignment;
 }
 
 /* After Icon */
 .ui.header > .icon + .content {
-  padding-left: $iconMargin;
+  padding-left: $header-icon-margin;
   display: table-cell;
-  vertical-align: $contentIconAlignment;
+  vertical-align: $header-content-icon-alignment;
 }
-
 
 /*--------------
  Loose Coupling
 ---------------*/
 
 .ui.header .ui.label {
-  font-size: $labelSize;
-  margin-left: $labelDistance;
-  vertical-align: $labelVerticalAlign;
+  font-size: $header-label-size;
+  margin-left: $header-label-distance;
+  vertical-align: $header-label-vertical-align;
 }
 
 /* Positioning */
 .ui.header + p {
-  margin-top: $nextParagraphDistance;
+  margin-top: $header-next-paragraph-distance;
 }
-
-
 
 /*******************************
             Types
 *******************************/
-
 
 /*--------------
      Page
@@ -139,24 +135,22 @@ h5.ui.header {
   font-size: $h5;
 }
 
-
 /* Sub Header */
 h1.ui.header .sub.header {
-  font-size: $h1SubHeaderFontSize;
+  font-size: $header-h1-sub-font-size;
 }
 h2.ui.header .sub.header {
-  font-size: $h2SubHeaderFontSize;
+  font-size: $header-h2-sub-font-size;
 }
 h3.ui.header .sub.header {
-  font-size: $h3SubHeaderFontSize;
+  font-size: $header-h3-sub-font-size;
 }
 h4.ui.header .sub.header {
-  font-size: $h4SubHeaderFontSize;
+  font-size: $header-h4-sub-font-size;
 }
 h5.ui.header .sub.header {
-  font-size: $h5SubHeaderFontSize;
+  font-size: $header-h5-sub-font-size;
 }
-
 
 /*--------------
  Content Heading
@@ -164,36 +158,36 @@ h5.ui.header .sub.header {
 
 .ui.huge.header {
   min-height: 1em;
-  font-size: $hugeFontSize;
+  font-size: $header-huge-font-size;
 }
 .ui.large.header {
-  font-size: $largeFontSize;
+  font-size: $header-large-font-size;
 }
 .ui.medium.header {
-  font-size: $mediumFontSize;
+  font-size: $header-medium-font-size;
 }
 .ui.small.header {
-  font-size: $smallFontSize;
+  font-size: $header-small-font-size;
 }
 .ui.tiny.header {
-  font-size: $tinyFontSize;
+  font-size: $header-tiny-font-size;
 }
 
 /* Sub Header */
 .ui.huge.header .sub.header {
-  font-size: $hugeSubHeaderFontSize;
+  font-size: $header-huge-sub-font-size;
 }
 .ui.large.header .sub.header {
-  font-size: $hugeSubHeaderFontSize;
+  font-size: $header-huge-sub-font-size;
 }
 .ui.header .sub.header {
-  font-size: $subHeaderFontSize;
+  font-size: $header-sub-font-size;
 }
 .ui.small.header .sub.header {
-  font-size: $smallSubHeaderFontSize;
+  font-size: $header-small-sub-font-size;
 }
 .ui.tiny.header .sub.header {
-  font-size: $tinySubHeaderFontSize;
+  font-size: $header-tiny-sub-font-size;
 }
 
 /*--------------
@@ -202,24 +196,22 @@ h5.ui.header .sub.header {
 
 .ui.sub.header {
   padding: 0;
-  margin-bottom: $subHeadingDistance;
-  font-weight: $subHeadingFontWeight;
-  font-size: $subHeadingFontSize;
-  text-transform: $subHeadingTextTransform;
-  color: $subHeadingColor;
+  margin-bottom: $header-sub-heading-distance;
+  font-weight: $header-sub-heading-font-weight;
+  font-size: $header-sub-heading-font-size;
+  text-transform: $header-sub-heading-text-transform;
+  color: $header-sub-heading-color;
 }
 
 .ui.small.sub.header {
-  font-size: $smallSubHeadingSize;
+  font-size: $header-small-sub-heading-size;
 }
 .ui.large.sub.header {
-  font-size: $largeSubHeadingSize;
+  font-size: $header-large-sub-heading-size;
 }
 .ui.huge.sub.header {
-  font-size: $hugeSubHeadingSize;
+  font-size: $header-huge-sub-heading-size;
 }
-
-
 
 /*-------------------
         Icon
@@ -228,10 +220,10 @@ h5.ui.header .sub.header {
 .ui.icon.header {
   display: inline-block;
   text-align: center;
-  margin: $iconHeaderTopMargin 0 $iconHeaderBottomMargin;
+  margin: $header-icon-top-margin 0 $header-icon-bottom-margin;
 }
 .ui.icon.header:after {
-  content: '';
+  content: "";
   display: block;
   height: 0;
   clear: both;
@@ -239,7 +231,7 @@ h5.ui.header .sub.header {
 }
 
 .ui.icon.header:first-child {
-  margin-top: $iconHeaderFirstMargin;
+  margin-top: $header-icon-first-margin;
 }
 .ui.icon.header .icon {
   float: none;
@@ -248,22 +240,22 @@ h5.ui.header .sub.header {
   height: auto;
   line-height: 1;
   padding: 0;
-  font-size: $iconHeaderSize;
-  margin: 0 auto $iconHeaderMargin;
-  opacity: $iconHeaderOpacity;
+  font-size: $header-iconed-icon-size;
+  margin: 0 auto $header-iconed-icon-margin;
+  opacity: $header-iconed-icon-opacity;
 }
 .ui.icon.header .corner.icon {
-  font-size: $cornerIconHeaderSize;
+  font-size: $header-corner-icon-size;
 }
 .ui.icon.header .content {
   display: block;
   padding: 0;
 }
 .ui.icon.header .circular.icon {
-  font-size: $circularHeaderIconSize;
+  font-size: $header-circular-icon-size;
 }
 .ui.icon.header .square.icon {
-  font-size: $squareHeaderIconSize;
+  font-size: $header-square-icon-size;
 }
 .ui.block.icon.header .icon {
   margin-bottom: 0;
@@ -279,9 +271,8 @@ h5.ui.header .sub.header {
 *******************************/
 
 .ui.disabled.header {
-  opacity: $disabledOpacity;
+  opacity: $disabled-opacity;
 }
-
 
 /*******************************
            Variations
@@ -292,22 +283,21 @@ h5.ui.header .sub.header {
 --------------------*/
 
 .ui.inverted.header {
-  color: $invertedColor;
+  color: $header-inverted-color;
 }
 .ui.inverted.header .sub.header {
-  color: $invertedSubHeaderColor;
+  color: $header-inverted-sub-color;
 }
 .ui.inverted.attached.header {
-  background: $invertedAttachedBackground;
+  background: $header-inverted-attached-background;
   box-shadow: none;
   border-color: transparent;
 }
 .ui.inverted.block.header {
-  background: $invertedBlockBackground;
+  background: $header-inverted-block-background;
   box-shadow: none;
   border-bottom: none;
 }
-
 
 /*-------------------
        Colors
@@ -326,7 +316,7 @@ h5.ui.header .sub.header {
     color: $h;
   }
   .ui.#{$key + ""}.dividing.header {
-    border-bottom: $dividedColoredBorderWidth solid $c;
+    border-bottom: $header-divided-colored-border-width solid $c;
   }
   .ui.inverted.#{$key + ""}.header.header.header {
     color: $l;
@@ -335,10 +325,9 @@ h5.ui.header .sub.header {
     color: $lh;
   }
   .ui.inverted.#{$key + ""}.dividing.header {
-    border-bottom: $dividedColoredBorderWidth solid $l;
+    border-bottom: $header-divided-colored-border-width solid $l;
   }
 }
-
 
 /*-------------------
        Aligned
@@ -359,7 +348,7 @@ h5.ui.header .sub.header {
 }
 .ui.justified.header:after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 100%;
 }
 
@@ -371,12 +360,12 @@ h5.ui.header .sub.header {
 .ui[class*="left floated"].header {
   float: left;
   margin-top: 0;
-  margin-right: $floatedMargin;
+  margin-right: $header-floated-margin;
 }
 .ui[class*="right floated"].header {
   float: right;
   margin-top: 0;
-  margin-left: $floatedMargin;
+  margin-left: $header-floated-margin;
 }
 
 /*-------------------
@@ -387,53 +376,51 @@ h5.ui.header .sub.header {
   padding: 0;
 }
 
-
 /*-------------------
       Dividing
 --------------------*/
 
 .ui.dividing.header {
-  padding-bottom: $dividedBorderPadding;
-  border-bottom: $dividedBorder;
+  padding-bottom: $header-divided-border-padding;
+  border-bottom: $header-divided-border;
 }
 .ui.dividing.header .sub.header {
-  padding-bottom: $dividedSubHeaderPadding;
+  padding-bottom: $header-divided-sub-padding;
 }
 .ui.dividing.header .icon {
-  margin-bottom: $dividedIconPadding;
+  margin-bottom: $header-divided-icon-padding;
 }
 
 .ui.inverted.dividing.header {
-  border-bottom-color: $invertedDividedBorderColor;
+  border-bottom-color: $header-inverted-divided-border-color;
 }
-
 
 /*-------------------
         Block
 --------------------*/
 
 .ui.block.header {
-  background: $blockBackground;
-  padding: $blockVerticalPadding $blockHorizontalPadding;
-  box-shadow: $blockBoxShadow;
-  border: $blockBorder;
-  border-radius: $blockBorderRadius;
+  background: $header-block-background;
+  padding: $header-block-vertical-padding $header-block-horizontal-padding;
+  box-shadow: $header-block-box-shadow;
+  border: $header-block-border;
+  border-radius: $header-block-border-radius;
 }
 
 .ui.tiny.block.header {
-  font-size: $tinyBlock;
+  font-size: $header-tiny-block;
 }
 .ui.small.block.header {
-  font-size: $smallBlock;
+  font-size: $header-small-block;
 }
 .ui.block.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: $mediumBlock;
+  font-size: $header-medium-block;
 }
 .ui.large.block.header {
-  font-size: $largeBlock;
+  font-size: $header-large-block;
 }
 .ui.huge.block.header {
-  font-size: $hugeBlock;
+  font-size: $header-huge-block;
 }
 
 /*-------------------
@@ -441,41 +428,43 @@ h5.ui.header .sub.header {
 --------------------*/
 
 .ui.attached.header {
-  background: $attachedBackground;
-  padding: $attachedVerticalPadding $attachedHorizontalPadding;
-  margin: 0 $attachedOffset 0 $attachedOffset;
-  box-shadow: $attachedBoxShadow;
-  border: $attachedBorder;
+  background: $header-attached-background;
+  padding: $header-attached-vertical-padding $header-attached-horizontal-padding;
+  margin: 0 $header-attached-offset 0 $header-attached-offset;
+  box-shadow: $header-attached-box-shadow;
+  border: $header-attached-border;
   border-radius: 0;
 }
 .ui.attached.block.header {
-  background: $blockBackground;
+  background: $header-block-background;
 }
 .ui.attached:not(.top).header {
   border-top: none;
 }
 .ui.top.attached.header {
-  border-radius: $attachedBorderRadius $attachedBorderRadius 0 0;
+  border-radius: $header-attached-border-radius $header-attached-border-radius 0
+    0;
 }
 .ui.bottom.attached.header {
-  border-radius: 0 0 $attachedBorderRadius $attachedBorderRadius;
+  border-radius: 0 0 $header-attached-border-radius
+    $header-attached-border-radius;
 }
 
 /* Attached Sizes */
 .ui.tiny.attached.header {
-  font-size: $tinyAttachedSize;
+  font-size: $header-tiny-attached-size;
 }
 .ui.small.attached.header {
-  font-size: $smallAttachedSize;
+  font-size: $header-small-attached-size;
 }
 .ui.attached.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: $mediumAttachedSize;
+  font-size: $header-medium-attached-size;
 }
 .ui.large.attached.header {
-  font-size: $largeAttachedSize;
+  font-size: $header-large-attached-size;
 }
 .ui.huge.attached.header {
-  font-size: $hugeAttachedSize;
+  font-size: $header-huge-attached-size;
 }
 
 /*-------------------
@@ -483,5 +472,5 @@ h5.ui.header .sub.header {
 --------------------*/
 
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: $mediumFontSize;
+  font-size: $header-medium-font-size;
 }

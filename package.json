@@ -1,0 +1,27 @@
+{
+  "name": "fomantic-ui-sass",
+  "version": "2.7.8",
+  "description": "The sass version of semantic ui. It is fully customizable with isolated variable names.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justkey007/semantic-ui-scss.git"
+  },
+  "keywords": [
+    "semantic-ui",
+    "semantic",
+    "ui",
+    "sass",
+    "semantic",
+    "ui",
+    "css3",
+    "framework",
+    "scss"
+  ],
+  "author": "Juste Méthode BOCOVO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justkey007/semantic-ui-scss/issues"
+  },
+  "homepage": "https://github.com/justkey007/semantic-ui-scss#readme"
+}

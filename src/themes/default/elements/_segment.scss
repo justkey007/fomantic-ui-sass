@@ -1,140 +1,140 @@
 //******************************  Segment *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 //------------------- Element --------------------*/
 
-$background: $white !default;
-$borderWidth: 1px !default;
-$border: $borderWidth solid $borderColor !default;
+$segment-background: $white !default;
+$segment-border-width: 1px !default;
+$segment-border: $segment-border-width solid $border-color !default;
 
-$boxShadow: $subtleShadow !default;
-$verticalPadding: 1em !default;
-$horizontalPadding: 1em !default;
-$padding: $verticalPadding $horizontalPadding !default;
+$segment-box-shadow: $subtle-shadow !default;
+$segment-vertical-padding: 1em !default;
+$segment-horizontal-padding: 1em !default;
+$segment-padding: $segment-vertical-padding $segment-horizontal-padding !default;
 
-$verticalMargin: 1rem !default;
-$horizontalMargin: 0 !default;
-$margin: $verticalMargin $horizontalMargin !default;
-$borderRadius: $defaultBorderRadius !default;
+$segment-vertical-margin: 1rem !default;
+$segment-horizontal-margin: 0 !default;
+$segment-margin: $segment-vertical-margin $segment-horizontal-margin !default;
+$segment-border-radius: $default-border-radius !default;
 
 //------------------- Group --------------------*/
 
-$groupedMargin: $margin !default;
-$groupedBorder: $border !default;
-$groupedBoxShadow: $boxShadow !default;
-$groupedBorderRadius: $borderRadius !default;
+$segment-grouped-super-margin: $segment-margin !default;
+$segment-grouped-super-border: $segment-border !default;
+$segment-grouped-super-box-shadow: $segment-box-shadow !default;
+$segment-grouped-border-radius: $segment-border-radius !default;
 
-$nestedGroupMargin: $verticalMargin $verticalMargin !default;
+$segment-nested-group-margin: $segment-vertical-margin $segment-vertical-margin !default;
 
-$groupedSegmentBorder: none !default;
-$groupedSegmentDivider: $border !default;
-$groupedSegmentMargin: 0 !default;
-$groupedSegmentWidth: auto !default;
-$groupedSegmentBoxShadow: none !default;
+$segment-grouped-border: none !default;
+$segment-grouped-divider: $segment-border !default;
+$segment-grouped-margin: 0 !default;
+$segment-grouped-width: auto !default;
+$segment-grouped-box-shadow: none !default;
 
 //------------------- Coupling --------------------*/
 
 // Page Grid Segment */
-$pageGridMargin: (2 * $verticalPadding) !default;
+$segment-page-grid-margin: (2 * $segment-vertical-padding) !default;
 
 //******************************  Types *******************************/
 
 // Placeholder */
-$placeholderBackground: $offWhite !default;
-$placeholderPadding: $padding !default;
-$placeholderBorderColor: $borderColor !default;
-$placeholderBoxShadow: 0 2px 25px 0 rgba(34, 36, 38, 0.05) inset !default;
-$placeholderMinHeight: 18rem !default;
-$placeholderContentMaxWidth: 15rem !default;
-$placeholderContentInlineButtonMargin: 0 $_5px 0 0 !default;
-
+$segment-placeholder-background: $off-white !default;
+$segment-placeholder-padding: $segment-padding !default;
+$segment-placeholder-border-color: $border-color !default;
+$segment-placeholder-box-shadow: 0 2px 25px 0 rgba(34, 36, 38, 0.05) inset !default;
+$segment-placeholder-min-height: 18rem !default;
+$segment-placeholder-content-max-width: 15rem !default;
+$segment-placeholder-content-inline-button-margin: 0 $_5px 0 0 !default;
 
 // Piled */
-$piledZIndex: auto !default;
-$piledMargin: 3em !default;
-$piledBoxShadow: '' !default;
-$piledDegrees: 1.2deg !default;
-$piledBorder: $border !default;
+$segment-piled-z-index: auto !default;
+$segment-piled-margin: 3em !default;
+$segment-piled-box-shadow: "" !default;
+$segment-piled-degrees: 1.2deg !default;
+$segment-piled-border: $segment-border !default;
 
 // Circular */
-$circularPadding: 2em !default;
+$segment-circular-padding: 2em !default;
 
 // Stacked */
-$stackedHeight: 6px !default;
-$stackedPageBackground: $subtleTransparentBlack !default;
-$stackedPadding: $verticalPadding + (0.4em) !default;
-$tallStackedPadding: $verticalPadding + (0.8em) !default;
+$segment-stacked-height: 6px !default;
+$segment-stacked-page-background: $subtle-transparent-black !default;
+$segment-stacked-padding: $segment-vertical-padding + (0.4em) !default;
+$segment-tall-stacked-padding: $segment-vertical-padding + (0.8em) !default;
 
 //******************************  States *******************************/
 
 // Loading Dimmer */
-$loaderDimmerColor: rgba(255, 255, 255, 0.8) !default;
-$loaderInvertedDimmerColor: rgba(0, 0, 0 , 0.85) !default;
-$loaderDimmerZIndex: 100 !default;
+$segment-loader-dimmer-color: rgba(255, 255, 255, 0.8) !default;
+$segment-loader-inverted-dimmer-color: rgba(0, 0, 0, 0.85) !default;
+$segment-loader-dimmer-z-index: 100 !default;
 
 // Loading Spinner */
-$loaderSize: 3em !default;
-$loaderLineZIndex: 101 !default;
-
+$segment-loader-size: 3em !default;
+$segment-loader-line-z-index: 101 !default;
 
 //******************************  Variations *******************************/
 
 // Raised */
-$raisedBoxShadow: $floatingShadow !default;
+$segment-raised-box-shadow: $floating-shadow !default;
 
 // Padded */
-$paddedSegmentPadding: 1.5em !default;
-$veryPaddedSegmentPadding: 3em !default;
+$segment-padded-padding: 1.5em !default;
+$segment-very-padded-padding: 3em !default;
 
 // Attached */
-$attachedTopOffset: 0 !default;
-$attachedBottomOffset: 0 !default;
-$attachedHorizontalOffset: -$borderWidth !default;
-$attachedWidth: calc(100% + #{-$attachedHorizontalOffset * 2}) !default;
-$attachedBoxShadow: none !default;
-$attachedBorder: $borderWidth solid $solidBorderColor !default;
-$attachedBottomBoxShadow:
-  $boxShadow,
-  $attachedBoxShadow
- !default;
+$segment-attached-top-offset: 0 !default;
+$segment-attached-bottom-offset: 0 !default;
+$segment-attached-horizontal-offset: -$segment-border-width !default;
+$segment-attached-width: calc(
+  100% + #{-$segment-attached-horizontal-offset * 2}
+) !default;
+$segment-attached-box-shadow: none !default;
+$segment-attached-border: $segment-border-width solid $solid-border-color !default;
+$segment-attached-bottom-box-shadow: $segment-box-shadow,
+  $segment-attached-box-shadow !default;
 
 // Inverted */
-$invertedBackground: $black !default;
+$segment-inverted-background: $black !default;
 
 // Floated */
-$floatedDistance: 1em !default;
+$segment-floated-distance: 1em !default;
 
 // Basic */
-$basicBackground: none transparent !default;
-$basicBorder: none !default;
-$basicBoxShadow: none !default;
-$basicBorderRadius: 0 !default;
+$segment-basic-background: none transparent !default;
+$segment-basic-border: none !default;
+$segment-basic-box-shadow: none !default;
+$segment-basic-border-radius: 0 !default;
 
 // Colors */
-$coloredBorderSize: 2px !default;
+$segment-colored-border-size: 2px !default;
 
 // Ordinality */
-$secondaryBackground: $darkWhite !default;
-$secondaryColor: $mutedTextColor !default;
+$segment-secondary-background: $dark-white !default;
+$segment-secondary-color: $muted-text-color !default;
 
-$tertiaryBackground:  $midWhite !default;
-$tertiaryColor: $mutedTextColor !default;
+$segment-tertiary-background: $mid-white !default;
+$segment-tertiary-color: $muted-text-color !default;
 
-$secondaryInvertedLightness: 0.2 !default;
-$secondaryInvertedBackground:
-  lighten($black, ($secondaryInvertedLightness * 100))
-  linear-gradient(
-    rgba(255, 255, 255, $secondaryInvertedLightness) 0,
-    rgba(255, 255, 255, $secondaryInvertedLightness) 100%
+$segment-secondary-inverted-lightness: 0.2 !default;
+$segment-secondary-inverted-background: lighten(
+    $black,
+    ($segment-secondary-inverted-lightness * 100)
   )
- !default;
-$secondaryInvertedColor: $invertedMutedTextColor !default;
-
-$tertiaryInvertedLightness: 0.35 !default;
-$tertiaryInvertedBackground:
-  lighten($black, ($tertiaryInvertedLightness * 100))
   linear-gradient(
-    rgba(255, 255, 255, $tertiaryInvertedLightness) 0,
-    rgba(255, 255, 255, $tertiaryInvertedLightness) 100%
+    rgba(255, 255, 255, $segment-secondary-inverted-lightness) 0,
+    rgba(255, 255, 255, $segment-secondary-inverted-lightness) 100%
+  ) !default;
+$segment-secondary-inverted-color: $inverted-muted-text-color !default;
+
+$segment-tertiary-inverted-lightness: 0.35 !default;
+$segment-tertiary-inverted-background: lighten(
+    $black,
+    ($segment-tertiary-inverted-lightness * 100)
   )
- !default;
-$tertiaryInvertedColor: $invertedMutedTextColor !default;
+  linear-gradient(
+    rgba(255, 255, 255, $segment-tertiary-inverted-lightness) 0,
+    rgba(255, 255, 255, $segment-tertiary-inverted-lightness) 100%
+  ) !default;
+$segment-tertiary-inverted-color: $inverted-muted-text-color !default;

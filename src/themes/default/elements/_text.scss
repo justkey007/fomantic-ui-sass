@@ -1,13 +1,12 @@
 //****************************** Text *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Element --------------------*/
-$mini: 0.4em !default;
-$tiny: 0.5em !default;
-$small: 0.75em !default;
-$medium: 1em !default;
-$large: 1.5em !default;
-$big: 2em !default;
-$huge: 4em !default;
-$massive: 8em !default;
-
+$text-mini: 0.4em !default;
+$text-tiny: 0.5em !default;
+$text-small: 0.75em !default;
+$text-medium: 1em !default;
+$text-large: 1.5em !default;
+$text-big: 2em !default;
+$text-huge: 4em !default;
+$text-massive: 8em !default;

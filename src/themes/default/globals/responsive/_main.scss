@@ -1,6 +1,6 @@
-@import './breakpoints';
+@import "./breakpoints";
 
-$largestMobileScreen : ($tabletBreakpoint - 0.02px) !default;
-$largestTabletScreen : ($computerBreakpoint - 0.02px) !default;
-$largestSmallMonitor : ($largeMonitorBreakpoint - 0.02px) !default;
-$largestLargeMonitor : ($widescreenMonitorBreakpoint - 0.02px) !default;
+$largest-mobile-screen: ($tablet-breakpoint - 0.02px) !default;
+$largest-tablet-screen: ($computer-breakpoint - 0.02px) !default;
+$largest-small-monitor: ($large-monitor-breakpoint - 0.02px) !default;
+$largest-large-monitor: ($widescreen-monitor-breakpoint - 0.02px) !default;

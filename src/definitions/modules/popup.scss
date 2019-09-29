@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/popup';
-
+@import "../../themes/default/modules/popup";
 
 /*******************************
             Popup
@@ -13,44 +12,44 @@
   right: 0;
 
   width: fit-content;
-  z-index: $zIndex;
+  z-index: $popup-z-index;
 
-  border: $border;
-  line-height: $lineHeight;
-  max-width: $maxWidth;
-  background: $background;
+  border: $popup-border;
+  line-height: $line-height;
+  max-width: $popup-max-width;
+  background: $popup-background;
 
-  padding: $verticalPadding $horizontalPadding;
-  font-weight: $fontWeight;
-  font-style: $fontStyle;
-  color: $color;
+  padding: $popup-vertical-padding $popup-horizontal-padding;
+  font-weight: $popup-font-weight;
+  font-style: $popup-font-style;
+  color: $popup-color;
 
-  border-radius: $borderRadius;
-  box-shadow: $boxShadow;
+  border-radius: $popup-border-radius;
+  box-shadow: $popup-box-shadow;
 }
 .ui.popup > .header {
   padding: 0;
   width: min-content;
-  font-family: $headerFont;
-  font-size: $headerFontSize;
-  line-height: $headerLineHeight;
-  font-weight: $headerFontWeight;
+  font-family: $header-font;
+  font-size: $popup-header-font-size;
+  line-height: $popup-header-line-height;
+  font-weight: $popup-header-font-weight;
 }
 .ui.popup > .header + .content {
-  padding-top: $headerDistance;
+  padding-top: $popup-header-distance;
 }
 
 .ui.popup:before {
   position: absolute;
-  content: '';
-  width: $arrowSize;
-  height: $arrowSize;
+  content: "";
+  width: $popup-arrow-size;
+  height: $popup-arrow-size;
 
-  background: $arrowBackground;
+  background: $popup-arrow-background;
   transform: rotate(45deg);
 
-  z-index: $arrowZIndex;
-  box-shadow: $arrowBoxShadow;
+  z-index: $popup-arrow-z-index;
+  box-shadow: $popup-arrow-box-shadow;
 }
 
 /*******************************
@@ -70,16 +69,16 @@
 [data-tooltip]:before {
   pointer-events: none;
   position: absolute;
-  content: '';
+  content: "";
   font-size: $medium;
-  width: $arrowSize;
-  height: $arrowSize;
+  width: $popup-arrow-size;
+  height: $popup-arrow-size;
 
-  background: $tooltipArrowBackground;
+  background: $popup-tooltip-arrow-background;
   transform: rotate(45deg);
 
-  z-index: $arrowZIndex;
-  box-shadow: $tooltipArrowBoxShadow;
+  z-index: $popup-arrow-z-index;
+  box-shadow: $popup-tooltip-arrow-box-shadow;
 }
 
 /* Popup */
@@ -91,21 +90,21 @@
   text-align: left;
   white-space: nowrap;
 
-  font-size: $tooltipFontSize;
+  font-size: $popup-tooltip-font-size;
 
-  border: $tooltipBorder;
-  line-height: $tooltipLineHeight;
-  max-width: $tooltipMaxWidth;
-  background: $tooltipBackground;
+  border: $popup-tooltip-border;
+  line-height: $popup-tooltip-line-height;
+  max-width: $popup-tooltip-max-width;
+  background: $popup-tooltip-background;
 
-  padding: $tooltipPadding;
-  font-weight: $tooltipFontWeight;
-  font-style: $tooltipFontStyle;
-  color: $tooltipColor;
+  padding: $popup-tooltip-padding;
+  font-weight: $popup-tooltip-font-weight;
+  font-style: $popup-tooltip-font-style;
+  color: $popup-tooltip-color;
 
-  border-radius: $tooltipBorderRadius;
-  box-shadow: $tooltipBoxShadow;
-  z-index: $tooltipZIndex;
+  border-radius: $popup-tooltip-border-radius;
+  box-shadow: $popup-tooltip-box-shadow;
+  z-index: $popup-tooltip-z-index;
 }
 
 /* Default Position (Top Center) */
@@ -114,15 +113,15 @@
   right: auto;
   bottom: 100%;
   left: 50%;
-  background: $tooltipArrowBottomBackground;
-  margin-left: $tooltipArrowHorizontalOffset;
-  margin-bottom: -$tooltipArrowVerticalOffset;
+  background: $popup-tooltip-arrow-bottom-background;
+  margin-left: $popup-tooltip-arrow-horizontal-offset;
+  margin-bottom: -$popup-tooltip-arrow-vertical-offset;
 }
 [data-tooltip]:not([data-position]):after {
   left: 50%;
   transform: translateX(-50%);
   bottom: 100%;
-  margin-bottom: $tooltipDistanceAway;
+  margin-bottom: $popup-tooltip-distance-away;
 }
 
 /* Animation */
@@ -135,16 +134,12 @@
   opacity: 0;
   transform: rotate(45deg) scale(0) !important;
   transform-origin: center top;
-  transition:
-    all $tooltipDuration $tooltipEasing
-  ;
+  transition: all $popup-tooltip-duration $popup-tooltip-easing;
 }
 [data-tooltip]:after {
   opacity: 1;
   transform-origin: center bottom;
-  transition:
-    all $tooltipDuration $tooltipEasing
-  ;
+  transition: all $popup-tooltip-duration $popup-tooltip-easing;
 }
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
@@ -187,7 +182,6 @@
   transform: scale(1) !important;
 }
 
-
 /*--------------
     Inverted
 ---------------*/
@@ -199,19 +193,19 @@
 
 /* Arrow Position */
 [data-tooltip][data-inverted]:before {
-  background: $invertedArrowBottomBackground;
+  background: $popup-inverted-arrow-bottom-background;
 }
 
 /* Popup  */
 [data-tooltip][data-inverted]:after {
-  background: $tooltipInvertedBackground;
-  color: $tooltipInvertedColor;
-  border: $tooltipInvertedBorder;
-  box-shadow: $tooltipInvertedBoxShadow;
+  background: $popup-tooltip-inverted-background;
+  color: $popup-tooltip-inverted-color;
+  border: $popup-tooltip-inverted-border;
+  box-shadow: $popup-tooltip-inverted-box-shadow;
 }
 [data-tooltip][data-inverted]:after .header {
-  background: $tooltipInvertedHeaderBackground;
-  color: $tooltipInvertedHeaderColor;
+  background: $popup-tooltip-inverted-header-background;
+  color: $popup-tooltip-inverted-header-color;
 }
 
 /*--------------
@@ -225,16 +219,16 @@
   left: 50%;
   bottom: 100%;
   transform: translateX(-50%);
-  margin-bottom: $tooltipDistanceAway;
+  margin-bottom: $popup-tooltip-distance-away;
 }
 [data-position="top center"][data-tooltip]:before {
   top: auto;
   right: auto;
   bottom: 100%;
   left: 50%;
-  background: $tooltipArrowTopBackground;
-  margin-left: $tooltipArrowHorizontalOffset;
-  margin-bottom: -$tooltipArrowVerticalOffset;
+  background: $popup-tooltip-arrow-top-background;
+  margin-left: $popup-tooltip-arrow-horizontal-offset;
+  margin-bottom: -$popup-tooltip-arrow-vertical-offset;
 }
 
 /* Top Left */
@@ -243,15 +237,15 @@
   right: auto;
   left: 0;
   bottom: 100%;
-  margin-bottom: $tooltipDistanceAway;
+  margin-bottom: $popup-tooltip-distance-away;
 }
 [data-position="top left"][data-tooltip]:before {
   top: auto;
   right: auto;
   bottom: 100%;
-  left: $arrowDistanceFromEdge;
-  margin-left: $tooltipArrowHorizontalOffset;
-  margin-bottom: -$tooltipArrowVerticalOffset;
+  left: $popup-arrow-distance-from-edge;
+  margin-left: $popup-tooltip-arrow-horizontal-offset;
+  margin-bottom: -$popup-tooltip-arrow-vertical-offset;
 }
 
 /* Top Right */
@@ -260,17 +254,16 @@
   left: auto;
   right: 0;
   bottom: 100%;
-  margin-bottom: $tooltipDistanceAway;
+  margin-bottom: $popup-tooltip-distance-away;
 }
 [data-position="top right"][data-tooltip]:before {
   top: auto;
   left: auto;
   bottom: 100%;
-  right: $arrowDistanceFromEdge;
-  margin-left: $tooltipArrowHorizontalOffset;
-  margin-bottom: -$tooltipArrowVerticalOffset;
+  right: $popup-arrow-distance-from-edge;
+  margin-left: $popup-tooltip-arrow-horizontal-offset;
+  margin-bottom: -$popup-tooltip-arrow-vertical-offset;
 }
-
 
 /* Bottom Center */
 [data-position="bottom center"][data-tooltip]:after {
@@ -279,107 +272,107 @@
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
-  margin-top: $tooltipDistanceAway;
+  margin-top: $popup-tooltip-distance-away;
 }
 [data-position="bottom center"][data-tooltip]:before {
   bottom: auto;
   right: auto;
   top: 100%;
   left: 50%;
-  margin-left: $tooltipArrowHorizontalOffset;
-  margin-top: -$tooltipArrowVerticalOffset;
+  margin-left: $popup-tooltip-arrow-horizontal-offset;
+  margin-top: -$popup-tooltip-arrow-vertical-offset;
 }
 
 /* Bottom Left */
 [data-position="bottom left"][data-tooltip]:after {
   left: 0;
   top: 100%;
-  margin-top: $tooltipDistanceAway;
+  margin-top: $popup-tooltip-distance-away;
 }
 [data-position="bottom left"][data-tooltip]:before {
   bottom: auto;
   right: auto;
   top: 100%;
-  left: $arrowDistanceFromEdge;
-  margin-left: $tooltipArrowHorizontalOffset;
-  margin-top: -$tooltipArrowVerticalOffset;
+  left: $popup-arrow-distance-from-edge;
+  margin-left: $popup-tooltip-arrow-horizontal-offset;
+  margin-top: -$popup-tooltip-arrow-vertical-offset;
 }
 
 /* Bottom Right */
 [data-position="bottom right"][data-tooltip]:after {
   right: 0;
   top: 100%;
-  margin-top: $tooltipDistanceAway;
+  margin-top: $popup-tooltip-distance-away;
 }
 [data-position="bottom right"][data-tooltip]:before {
   bottom: auto;
   left: auto;
   top: 100%;
-  right: $arrowDistanceFromEdge;
-  margin-left: $tooltipArrowVerticalOffset;
-  margin-top: -$tooltipArrowHorizontalOffset;
+  right: $popup-arrow-distance-from-edge;
+  margin-left: $popup-tooltip-arrow-vertical-offset;
+  margin-top: -$popup-tooltip-arrow-horizontal-offset;
 }
 
 /* Left Center */
 [data-position="left center"][data-tooltip]:after {
   right: 100%;
   top: 50%;
-  margin-right: $tooltipDistanceAway;
+  margin-right: $popup-tooltip-distance-away;
   transform: translateY(-50%);
 }
 [data-position="left center"][data-tooltip]:before {
   right: 100%;
   top: 50%;
-  margin-top: $tooltipArrowVerticalOffset;
-  margin-right: $tooltipArrowHorizontalOffset;
+  margin-top: $popup-tooltip-arrow-vertical-offset;
+  margin-right: $popup-tooltip-arrow-horizontal-offset;
 }
 
 /* Right Center */
 [data-position="right center"][data-tooltip]:after {
   left: 100%;
   top: 50%;
-  margin-left: $tooltipDistanceAway;
+  margin-left: $popup-tooltip-distance-away;
   transform: translateY(-50%);
 }
 [data-position="right center"][data-tooltip]:before {
   left: 100%;
   top: 50%;
-  margin-top: $tooltipArrowHorizontalOffset;
-  margin-left: -$tooltipArrowVerticalOffset;
+  margin-top: $popup-tooltip-arrow-horizontal-offset;
+  margin-left: -$popup-tooltip-arrow-vertical-offset;
 }
 
 /* Arrow */
 [data-position~="bottom"][data-tooltip]:before {
-  background: $arrowTopBackground;
-  box-shadow: $bottomArrowBoxShadow;
+  background: $popup-arrow-top-background;
+  box-shadow: $popup-bottom-arrow-box-shadow;
 }
 [data-position="left center"][data-tooltip]:before {
-  background: $arrowCenterBackground;
-  box-shadow: $leftArrowBoxShadow;
+  background: $popup-arrow-center-background;
+  box-shadow: $popup-left-arrow-box-shadow;
 }
 [data-position="right center"][data-tooltip]:before {
-  background: $arrowCenterBackground;
-  box-shadow: $rightArrowBoxShadow;
+  background: $popup-arrow-center-background;
+  box-shadow: $popup-right-arrow-box-shadow;
 }
 [data-position~="top"][data-tooltip]:before {
-  background: $arrowBottomBackground;
+  background: $popup-arrow-bottom-background;
 }
 
 /* Inverted Arrow Color */
 [data-inverted][data-position~="bottom"][data-tooltip]:before {
-  background: $invertedArrowTopBackground;
-  box-shadow: $bottomArrowBoxShadow;
+  background: $popup-inverted-arrow-top-background;
+  box-shadow: $popup-bottom-arrow-box-shadow;
 }
 [data-inverted][data-position="left center"][data-tooltip]:before {
-  background: $invertedArrowCenterBackground;
-  box-shadow: $leftArrowBoxShadow;
+  background: $popup-inverted-arrow-center-background;
+  box-shadow: $popup-left-arrow-box-shadow;
 }
 [data-inverted][data-position="right center"][data-tooltip]:before {
-  background: $invertedArrowCenterBackground;
-  box-shadow: $rightArrowBoxShadow;
+  background: $popup-inverted-arrow-center-background;
+  box-shadow: $popup-right-arrow-box-shadow;
 }
 [data-inverted][data-position~="top"][data-tooltip]:before {
-  background: $invertedArrowBottomBackground;
+  background: $popup-inverted-arrow-bottom-background;
 }
 
 [data-position~="bottom"][data-tooltip]:before {
@@ -447,7 +440,7 @@
 
 /* Extending from Top */
 .ui.top.popup {
-  margin: 0 0 $popupDistanceAway;
+  margin: 0 0 $popup-distance-away;
 }
 .ui.top.left.popup {
   transform-origin: left bottom;
@@ -461,17 +454,17 @@
 
 /* Extending from Vertical Center */
 .ui.left.center.popup {
-  margin: 0 $popupDistanceAway 0 0;
+  margin: 0 $popup-distance-away 0 0;
   transform-origin: right 50%;
 }
 .ui.right.center.popup {
-  margin: 0 0 0 $popupDistanceAway;
+  margin: 0 0 0 $popup-distance-away;
   transform-origin: left 50%;
 }
 
 /* Extending from Bottom */
 .ui.bottom.popup {
-  margin: $popupDistanceAway 0 0;
+  margin: $popup-distance-away 0 0;
 }
 .ui.bottom.left.popup {
   transform-origin: left top;
@@ -489,66 +482,66 @@
 
 /*--- Below ---*/
 .ui.bottom.center.popup:before {
-  margin-left: $arrowOffset;
-  top: $arrowOffset;
+  margin-left: $popup-arrow-offset;
+  top: $popup-arrow-offset;
   left: 50%;
   right: auto;
   bottom: auto;
-  box-shadow: $bottomArrowBoxShadow;
+  box-shadow: $popup-bottom-arrow-box-shadow;
 }
 
 .ui.bottom.left.popup {
-  margin-left: $boxArrowOffset;
+  margin-left: $popup-box-arrow-offset;
 }
 /*rtl:rename*/
 .ui.bottom.left.popup:before {
-  top: $arrowOffset;
-  left: $arrowDistanceFromEdge;
+  top: $popup-arrow-offset;
+  left: $popup-arrow-distance-from-edge;
   right: auto;
   bottom: auto;
   margin-left: 0;
-  box-shadow: $bottomArrowBoxShadow;
+  box-shadow: $popup-bottom-arrow-box-shadow;
 }
 
 .ui.bottom.right.popup {
-  margin-right: $boxArrowOffset;
+  margin-right: $popup-box-arrow-offset;
 }
 /*rtl:rename*/
 .ui.bottom.right.popup:before {
-  top: $arrowOffset;
-  right: $arrowDistanceFromEdge;
+  top: $popup-arrow-offset;
+  right: $popup-arrow-distance-from-edge;
   bottom: auto;
   left: auto;
   margin-left: 0;
-  box-shadow: $bottomArrowBoxShadow;
+  box-shadow: $popup-bottom-arrow-box-shadow;
 }
 
 /*--- Above ---*/
 .ui.top.center.popup:before {
   top: auto;
   right: auto;
-  bottom: $arrowOffset;
+  bottom: $popup-arrow-offset;
   left: 50%;
-  margin-left: $arrowOffset;
+  margin-left: $popup-arrow-offset;
 }
 .ui.top.left.popup {
-  margin-left: $boxArrowOffset;
+  margin-left: $popup-box-arrow-offset;
 }
 /*rtl:rename*/
 .ui.top.left.popup:before {
-  bottom: $arrowOffset;
-  left: $arrowDistanceFromEdge;
+  bottom: $popup-arrow-offset;
+  left: $popup-arrow-distance-from-edge;
   top: auto;
   right: auto;
   margin-left: 0;
 }
 .ui.top.right.popup {
-  margin-right: $boxArrowOffset;
+  margin-right: $popup-box-arrow-offset;
 }
 /*rtl:rename*/
 .ui.top.right.popup:before {
-  bottom: $arrowOffset;
-  right: $arrowDistanceFromEdge;
+  bottom: $popup-arrow-offset;
+  right: $popup-arrow-distance-from-edge;
   top: auto;
   left: auto;
   margin-left: 0;
@@ -558,48 +551,47 @@
 /*rtl:rename*/
 .ui.left.center.popup:before {
   top: 50%;
-  right: $arrowOffset;
+  right: $popup-arrow-offset;
   bottom: auto;
   left: auto;
-  margin-top: $arrowOffset;
-  box-shadow: $leftArrowBoxShadow;
+  margin-top: $popup-arrow-offset;
+  box-shadow: $popup-left-arrow-box-shadow;
 }
 
 /*--- Right Center  ---*/
 /*rtl:rename*/
 .ui.right.center.popup:before {
   top: 50%;
-  left: $arrowOffset;
+  left: $popup-arrow-offset;
   bottom: auto;
   right: auto;
-  margin-top: $arrowOffset;
-  box-shadow: $rightArrowBoxShadow;
+  margin-top: $popup-arrow-offset;
+  box-shadow: $popup-right-arrow-box-shadow;
 }
 
 /* Arrow Color By Location */
 .ui.bottom.popup:before {
-  background: $arrowTopBackground;
+  background: $popup-arrow-top-background;
 }
 .ui.right.center.popup:before,
 .ui.left.center.popup:before {
-  background: $arrowCenterBackground;
+  background: $popup-arrow-center-background;
 }
 .ui.top.popup:before {
-  background: $arrowBottomBackground;
+  background: $popup-arrow-bottom-background;
 }
 
 /* Inverted Arrow Color */
 .ui.inverted.bottom.popup:before {
-  background: $invertedArrowTopBackground;
+  background: $popup-inverted-arrow-top-background;
 }
 .ui.inverted.right.center.popup:before,
 .ui.inverted.left.center.popup:before {
-  background: $invertedArrowCenterBackground;
+  background: $popup-inverted-arrow-center-background;
 }
 .ui.inverted.top.popup:before {
-  background: $invertedArrowBottomBackground;
+  background: $popup-inverted-arrow-bottom-background;
 }
-
 
 /*******************************
             Coupling
@@ -607,8 +599,8 @@
 
 /* Immediate Nested Grid */
 .ui.popup > .ui.grid:not(.padded) {
-  width: $nestedGridWidth;
-  margin: $nestedGridMargin;
+  width: $popup-nested-grid-width;
+  margin: $popup-nested-grid-margin;
 }
 
 /*******************************
@@ -618,7 +610,7 @@
 .ui.loading.popup {
   display: block;
   visibility: hidden;
-  z-index: $loadingZIndex;
+  z-index: $popup-loading-z-index;
 }
 
 .ui.animating.popup,
@@ -630,7 +622,6 @@
   transform: translateZ(0);
   backface-visibility: hidden;
 }
-
 
 /*******************************
             Variations
@@ -644,25 +635,23 @@
   display: none;
 }
 
-
 /*--------------
      Wide
 ---------------*/
 
 .ui.wide.popup {
-  max-width: $wideWidth;
+  max-width: $popup-wide-width;
 }
 .ui[class*="very wide"].popup {
-  max-width: $veryWideWidth;
+  max-width: $popup-very-wide-width;
 }
 
-@media only screen and (max-width: $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.wide.popup,
   .ui[class*="very wide"].popup {
-    max-width: $maxWidth;
+    max-width: $popup-max-width;
   }
 }
-
 
 /*--------------
      Fluid
@@ -673,24 +662,23 @@
   max-width: none;
 }
 
-
 /*--------------
      Colors
 ---------------*/
 
 /* Inverted colors  */
 .ui.inverted.popup {
-  background: $invertedBackground;
-  color: $invertedColor;
-  border: $invertedBorder;
-  box-shadow: $invertedBoxShadow;
+  background: $popup-inverted-background;
+  color: $popup-inverted-color;
+  border: $popup-inverted-border;
+  box-shadow: $popup-inverted-box-shadow;
 }
 .ui.inverted.popup .header {
-  background-color: $invertedHeaderBackground;
-  color: $invertedHeaderColor;
+  background-color: $popup-inverted-header-background;
+  color: $popup-inverted-header-color;
 }
 .ui.inverted.popup:before {
-  background-color: $invertedArrowColor;
+  background-color: $popup-inverted-arrow-color;
   box-shadow: none !important;
 }
 
@@ -701,7 +689,6 @@
 .ui.flowing.popup {
   max-width: none;
 }
-
 
 /*--------------
      Sizes
@@ -725,6 +712,3 @@
 .ui.huge.popup {
   font-size: $huge;
 }
-
-
-

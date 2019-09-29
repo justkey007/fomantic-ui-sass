@@ -1,9 +1,9 @@
 //****************************** Flag *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Element --------------------*/
-$spritePath: "#{$imagePath}/flags.png" !default;
-$width: 16px !default;
-$height: 11px !default;
-$verticalAlign: baseline !default;
-$margin: 0.5em !default;
+$flag-sprite-path: "#{$image-path}/flags.png" !default;
+$flag-width: 16px !default;
+$flag-height: 11px !default;
+$flag-vertical-align: baseline !default;
+$flag-margin: 0.5em !default;

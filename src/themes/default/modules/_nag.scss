@@ -1,63 +1,60 @@
 //****************************** Nag *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //-------------- Collection ---------------*/
 
-$position: relative !default;
-$width: 100% !default;
-$zIndex: 999 !default;
-$margin: 0 !default;
+$nag-position: relative !default;
+$nag-width: 100% !default;
+$nag-z-index: 999 !default;
+$nag-margin: 0 !default;
 
-$background: #555555 !default;
-$opacity: 0.95 !default;
-$minHeight: 0 !default;
-$padding: 0.75em 1em !default;
-$lineHeight: 1em !default;
-$boxShadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !default;
+$nag-background: #555555 !default;
+$nag-opacity: 0.95 !default;
+$nag-min-height: 0 !default;
+$nag-padding: 0.75em 1em !default;
+$nag-line-height: 1em !default;
+$nag-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !default;
 
-$fontSize: 1rem !default;
-$textAlign: center !default;
-$color: $textColor !default;
+$nag-font-size: 1rem !default;
+$nag-text-align: center !default;
+$nag-color: $text-color !default;
 
-$transition: 0.2s background ease !default;
-
+$nag-transition: 0.2s background ease !default;
 
 //-------------- Elements ---------------*/
 
 // Title */
-$titleColor: $white !default;
-$titleMargin: 0 0.5em !default;
+$nag-title-color: $white !default;
+$nag-title-margin: 0 0.5em !default;
 
-$closeSize: 1em !default;
-$closeMargin: (-$closeSize / 2) 0 0 !default;
-$closeTop: 50% !default;
-$closeRight: 1em !default;
-$closeColor: $white !default;
-$closeTransition: opacity 0.2s ease !default;
-$closeOpacity: 0.4 !default;
-
+$nag-close-size: 1em !default;
+$nag-close-margin: (-$nag-close-size / 2) 0 0 !default;
+$nag-close-top: 50% !default;
+$nag-close-right: 1em !default;
+$nag-close-color: $white !default;
+$nag-close-transition: opacity 0.2s ease !default;
+$nag-close-opacity: 0.4 !default;
 
 //-------------- States ---------------*/
 
 // Hover */
-$nagHoverBackground: $background !default;
-$nagHoverOpacity: 1 !default;
+$nag-hover-background: $nag-background !default;
+$nag-hover-opacity: 1 !default;
 
-$closeHoverOpacity: 1 !default;
+$nag-close-hover-opacity: 1 !default;
 
 //-------------- Variations ---------------*/
 
 // Top / Bottom */
-$top: 0 !default;
-$bottom: 0 !default;
-$borderRadius: $defaultBorderRadius !default;
-$topBorderRadius: 0 0 $borderRadius $borderRadius !default;
-$bottomBorderRadius: $borderRadius $borderRadius 0 0 !default;
+$nag-top: 0 !default;
+$nag-bottom: 0 !default;
+$nag-border-radius: $default-border-radius !default;
+$nag-top-border-radius: 0 0 $nag-border-radius $nag-border-radius !default;
+$nag-bottom-border-radius: $nag-border-radius $nag-border-radius 0 0 !default;
 
 // Inverted */
-$invertedBackground: $darkWhite !default;
+$nag-inverted-background: $dark-white !default;
 
 //-------------- Plural ---------------*/
 
-$groupedBorderRadius: 0 !default;
-
+$nag-grouped-border-radius: 0 !default;

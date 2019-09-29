@@ -1,28 +1,33 @@
 //****************************** Rail *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 //------------------- Element --------------------*/
 
-$width: 300px !default;
-$height: 100% !default;
+$rail-width: 300px !default;
+$rail-height: 100% !default;
 
-$distance: 4rem !default;
-$splitDistance: ($distance / 2) !default;
+$rail-distance: 4rem !default;
+$rail-split-distance: ($rail-distance / 2) !default;
 
 //------------------- Variations --------------------*/
 
 // Close */
-$closeDistance: 2em !default;
-$veryCloseDistance: 1em !default;
+$rail-close-distance: 2em !default;
+$rail-very-close-distance: 1em !default;
 
-$splitCloseDistance: ($closeDistance / 2) !default;
-$splitVeryCloseDistance: ($veryCloseDistance / 2) !default;
+$rail-split-close-distance: ($rail-close-distance / 2) !default;
+$rail-split-very-close-distance: ($rail-very-close-distance / 2) !default;
 
-$closeWidth: calc(#{$width} + #{$splitCloseDistance}) !default;
-$veryCloseWidth: calc(#{$width} + #{$splitVeryCloseDistance}) !default;
+$rail-close-width: calc(
+  #{$rail-width} + #{$rail-split-close-distance}
+) !default;
+$rail-very-close-width: calc(
+  #{$rail-width} + #{$rail-split-very-close-distance}
+) !default;
 
 // Dividing */
-$dividingBorder: 1px solid $borderColor !default;
-$dividingDistance: 5rem !default;
-$splitDividingDistance: ($dividingDistance / 2) !default;
-$dividingWidth: calc(#{$width} + #{$splitDividingDistance}) !default;
-
+$rail-dividing-border: 1px solid $border-color !default;
+$rail-dividing-distance: 5rem !default;
+$rail-split-dividing-distance: ($rail-dividing-distance / 2) !default;
+$rail-dividing-width: calc(
+  #{$rail-width} + #{$rail-split-dividing-distance}
+) !default;

@@ -1,4 +1,4 @@
-@import '../../themes/default/collections/message';
+@import "../../themes/default/collections/message";
 
 /*******************************
             Message
@@ -7,14 +7,14 @@
 .ui.message {
   position: relative;
   min-height: 1em;
-  margin: $verticalMargin 0;
-  background: $background;
-  padding: $padding;
-  line-height: $lineHeight;
-  color: $textColor;
-  transition: $transition;
-  border-radius: $borderRadius;
-  box-shadow: $boxShadow;
+  margin: $message-vertical-margin 0;
+  background: $message-background;
+  padding: $message-padding;
+  line-height: $line-height;
+  color: $text-color;
+  transition: $message-transition;
+  border-radius: $message-border-radius;
+  box-shadow: $message-box-shadow;
 }
 
 .ui.message:first-child {
@@ -24,28 +24,27 @@
   margin-bottom: 0;
 }
 
-
 /*--------------
      Content
 ---------------*/
 
 /* Header */
 .ui.message .header {
-  display: $headerDisplay;
-  font-family: $headerFont;
-  font-weight: $headerFontWeight;
-  margin: $headerMargin;
+  display: $message-header-display;
+  font-family: $header-font;
+  font-weight: $message-header-font-weight;
+  margin: $message-header-margin;
 }
 
 /* Default font size */
 .ui.message .header:not(.ui) {
-  font-size: $headerFontSize;
+  font-size: $message-header-font-size;
 }
 
 /* Paragraph */
 .ui.message p {
-  opacity: $messageTextOpacity;
-  margin: $messageParagraphMargin 0;
+  opacity: $message-text-opacity;
+  margin: $message-paragraph-margin 0;
 }
 .ui.message p:first-child {
   margin-top: 0;
@@ -54,16 +53,16 @@
   margin-bottom: 0;
 }
 .ui.message .header + p {
-  margin-top: $headerParagraphDistance;
+  margin-top: $message-header-paragraph-distance;
 }
 
 /* List */
 .ui.message .list:not(.ui) {
   text-align: left;
   padding: 0;
-  opacity: $listOpacity;
-  list-style-position: $listStylePosition;
-  margin: $listMargin 0 0;
+  opacity: $message-list-opacity;
+  list-style-position: $message-list-style-position;
+  margin: $message-list-margin 0 0;
 }
 .ui.message .list:not(.ui):first-child {
   margin-top: 0;
@@ -74,12 +73,12 @@
 .ui.message .list:not(.ui) li {
   position: relative;
   list-style-type: none;
-  margin: 0 0 $listItemMargin $listItemIndent;
+  margin: 0 0 $message-list-item-margin $message-list-item-indent;
   padding: 0;
 }
 .ui.message .list:not(.ui) li:before {
   position: absolute;
-  content: '•';
+  content: "•";
   left: -1em;
   height: 100%;
   vertical-align: baseline;
@@ -88,10 +87,9 @@
   margin-bottom: 0;
 }
 
-
 /* Icon */
 .ui.message > .icon {
-  margin-right: $iconDistance;
+  margin-right: $message-icon-distance;
 }
 
 /* Close Icon */
@@ -99,10 +97,10 @@
   cursor: pointer;
   position: absolute;
   margin: 0;
-  top: $closeTopDistance;
-  right: $closeRightDistance;
-  opacity: $closeOpacity;
-  transition: $closeTransition;
+  top: $message-close-top-distance;
+  right: $message-close-right-distance;
+  opacity: $message-close-opacity;
+  transition: $message-close-transition;
 }
 .ui.message > .close.icon:hover {
   opacity: 1;
@@ -121,7 +119,7 @@
 *******************************/
 
 .ui.dropdown .menu > .message {
-  margin: 0 -$borderWidth;
+  margin: 0 (-$message-border-width);
 }
 
 /*******************************
@@ -148,7 +146,6 @@
   display: none;
 }
 
-
 /*******************************
             Variations
 *******************************/
@@ -165,34 +162,32 @@
   width: auto;
 }
 
-
 /*--------------
     Attached
 ---------------*/
 
 .ui.attached.message {
-  margin-bottom: $attachedYOffset;
-  border-radius: $borderRadius $borderRadius 0 0;
-  box-shadow: $attachedBoxShadow;
-  margin-left: $attachedXOffset;
-  margin-right: $attachedXOffset;
+  margin-bottom: $message-attached-y-offset;
+  border-radius: $message-border-radius $message-border-radius 0 0;
+  box-shadow: $message-attached-box-shadow;
+  margin-left: $message-attached-x-offset;
+  margin-right: $message-attached-x-offset;
 }
 .ui.attached + .ui.attached.message:not(.top):not(.bottom) {
-  margin-top: $attachedYOffset;
+  margin-top: $message-attached-y-offset;
   border-radius: 0;
 }
 .ui.bottom.attached.message {
-  margin-top: $attachedYOffset;
-  border-radius: 0 0 $borderRadius $borderRadius;
-  box-shadow: $attachedBottomBoxShadow;
+  margin-top: $message-attached-y-offset;
+  border-radius: 0 0 $message-border-radius $message-border-radius;
+  box-shadow: $message-attached-bottom-box-shadow;
 }
 .ui.bottom.attached.message:not(:last-child) {
-  margin-bottom: $verticalMargin;
+  margin-bottom: $message-vertical-margin;
 }
 .ui.attached.icon.message {
   width: auto;
 }
-
 
 /*--------------
       Icon
@@ -208,19 +203,18 @@
   flex: 0 0 auto;
   width: auto;
   line-height: 1;
-  // vertical-align: $iconVerticalAlign;
-  font-size: $iconSize;
-  opacity: $iconOpacity;
+  // vertical-align: $message-icon-vertical-align;
+  font-size: $message-icon-size;
+  opacity: $message-icon-opacity;
 }
 .ui.icon.message > .content {
   display: block;
   flex: 1 1 auto;
-  // vertical-align: $iconVerticalAlign;
+  // vertical-align: $message-icon-vertical-align;
 }
 
-
 .ui.icon.message .icon:not(.close) + .content {
-  padding-left: $iconContentDistance;
+  padding-left: $message-icon-content-distance;
 }
 .ui.icon.message .circular.icon {
   width: 1em;
@@ -231,15 +225,14 @@
 ---------------*/
 
 .ui.floating.message {
-  box-shadow: $floatingBoxShadow;
+  box-shadow: $message-floating-box-shadow;
 }
-
 
 /*--------------
      Colors
 ---------------*/
 
-@each $key, $value in $consequences {
+@each $key, $value in $message-consequences {
   $bg: map-get($value, "background");
   $hd: map-get($value, "header");
   $bs: map-get($value, "boxShadow");
@@ -257,7 +250,7 @@
   }
 
   .ui.floating.#{$key + ""}.message {
-      box-shadow: $bfs;
+    box-shadow: $bfs;
   }
 
   .ui.#{$key + ""}.message .header {
@@ -265,7 +258,7 @@
   }
 }
 
-@each $key, $value in $consequences {
+@each $key, $value in $message-consequences {
   $bg: map-get($value, "background");
   $hd: map-get($value, "header");
   $bs: map-get($value, "boxShadow");
@@ -274,43 +267,42 @@
   $isVeryDark: map-get($value, "isVeryDark");
 
   .ui.#{$key + ""}.message {
-    @if not ($isVeryDark) {
+    @if not($isVeryDark) {
       background-color: $bg;
       color: $t;
     }
     @if ($isVeryDark) {
       background-color: $black;
-      color: $invertedTextColor;
+      color: $inverted-text-color;
     }
   }
 
   .ui.#{$key + ""}.message,
   .ui.attached.#{$key + ""}.message {
-    @if not ($isVeryDark) {
+    @if not($isVeryDark) {
       box-shadow: $bs;
     }
   }
 
   .ui.floating.#{$key + ""}.message {
-    @if not ($isVeryDark) {
+    @if not($isVeryDark) {
       box-shadow: $bfs;
     }
   }
 
   .ui.#{$key + ""}.message .header {
-    @if not ($isVeryDark) {
+    @if not($isVeryDark) {
       color: $hd;
     }
     @if ($isVeryDark) {
-      color: $invertedTextColor;
+      color: $inverted-text-color;
     }
   }
 }
 
-
 .ui.inverted.message {
   background-color: $black;
-  color: $invertedTextColor;
+  color: $inverted-text-color;
 }
 
 /*--------------
@@ -318,26 +310,26 @@
 ---------------*/
 
 .ui.mini.message {
-  font-size: $relativeMini;
+  font-size: $relative-mini;
 }
 .ui.tiny.message {
-  font-size: $relativeTiny;
+  font-size: $relative-tiny;
 }
 .ui.small.message {
-  font-size: $relativeSmall;
+  font-size: $relative-small;
 }
 .ui.message {
-  font-size: $relativeMedium;
+  font-size: $relative-medium;
 }
 .ui.large.message {
-  font-size: $relativeLarge;
+  font-size: $relative-large;
 }
 .ui.big.message {
-  font-size: $relativeBig;
+  font-size: $relative-big;
 }
 .ui.huge.message {
-  font-size: $relativeHuge;
+  font-size: $relative-huge;
 }
 .ui.massive.message {
-  font-size: $relativeMassive;
+  font-size: $relative-massive;
 }

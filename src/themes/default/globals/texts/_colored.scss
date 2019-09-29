@@ -1,20 +1,20 @@
-@import '../colors/all';
-@import './neutral';
+@import "../colors/all";
+@import "./neutral";
 
-$textColor          : rgba(0, 0, 0, 0.87) !default;
+$text-color: rgba(0, 0, 0, 0.87) !default;
 
-$primaryTextColor   : $invertedTextColor !default;
-$secondaryTextColor : $invertedTextColor !default;
-$redTextColor       : $red !default;
-$orangeTextColor    : $orange !default;
-$yellowTextColor    : #B58105 !default; // Yellow text is difficult to read
-$oliveTextColor     : #8ABC1E !default; // Olive is difficult to read
-$greenTextColor     : #1EBC30 !default; // Green is difficult to read
-$tealTextColor      : #10A3A3 !default; // Teal text is difficult to read
-$blueTextColor      : $blue !default;
-$violetTextColor    : $violet !default;
-$purpleTextColor    : $purple !default;
-$pinkTextColor      : $pink !default;
-$brownTextColor     : $brown !default;
-$greyTextColor      : $grey !default;
-$blackTextColor     : $black !default;
+$primary-text-color: $inverted-text-color !default;
+$secondary-text-color: $inverted-text-color !default;
+$red-text-color: $red !default;
+$orange-text-color: $orange !default;
+$yellow-text-color: #b58105 !default; // Yellow text is difficult to read
+$olive-text-color: #8abc1e !default; // Olive is difficult to read
+$green-text-color: #1ebc30 !default; // Green is difficult to read
+$teal-text-color: #10a3a3 !default; // Teal text is difficult to read
+$blue-text-color: $blue !default;
+$violet-text-color: $violet !default;
+$purple-text-color: $purple !default;
+$pink-text-color: $pink !default;
+$brown-text-color: $brown !default;
+$grey-text-color: $grey !default;
+$black-text-color: $black !default;

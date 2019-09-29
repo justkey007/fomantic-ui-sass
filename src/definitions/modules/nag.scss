@@ -1,4 +1,4 @@
-@import '../../themes/default/modules/nag';
+@import "../../themes/default/modules/nag";
 
 /*******************************
              Nag
@@ -6,28 +6,28 @@
 
 .ui.nag {
   display: none;
-  opacity: $opacity;
-  position: $position;
+  opacity: $nag-opacity;
+  position: $nag-position;
 
-  top: $top;
+  top: $nag-top;
   left: 0;
-  z-index: $zIndex;
+  z-index: $nag-z-index;
 
-  min-height: $minHeight;
-  width: $width;
+  min-height: $nag-min-height;
+  width: $nag-width;
 
-  margin: $margin;
-  padding: $padding;
+  margin: $nag-margin;
+  padding: $nag-padding;
 
-  background: $background;
-  box-shadow: $boxShadow;
+  background: $nag-background;
+  box-shadow: $nag-box-shadow;
 
-  font-size: $fontSize;
-  text-align: $textAlign;
-  color: $color;
+  font-size: $nag-font-size;
+  text-align: $nag-text-align;
+  color: $nag-color;
 
-  border-radius: $topBorderRadius;
-  transition: $transition;
+  border-radius: $nag-top-border-radius;
+  transition: $nag-transition;
 }
 
 a.ui.nag {
@@ -36,27 +36,24 @@ a.ui.nag {
 
 .ui.nag > .title {
   display: inline-block;
-  margin: $titleMargin;
-  color: $titleColor;
+  margin: $nag-title-margin;
+  color: $nag-title-color;
 }
-
 
 .ui.nag > .close.icon {
   cursor: pointer;
-  opacity: $closeOpacity;
+  opacity: $nag-close-opacity;
 
   position: absolute;
-  top: $closeTop;
-  right: $closeRight;
+  top: $nag-close-top;
+  right: $nag-close-right;
 
-  font-size: $closeSize;
+  font-size: $nag-close-size;
 
-  margin: $closeMargin;
-  color: $closeColor;
-  transition: $closeTransition;
+  margin: $nag-close-margin;
+  color: $nag-close-color;
+  transition: $nag-close-transition;
 }
-
-
 
 /*******************************
              States
@@ -64,19 +61,17 @@ a.ui.nag {
 
 /* Hover */
 .ui.nag:hover {
-  background: $nagHoverBackground;
-  opacity: $nagHoverOpacity;
+  background: $nag-hover-background;
+  opacity: $nag-hover-opacity;
 }
 
 .ui.nag .close:hover {
-  opacity: $closeHoverOpacity;
+  opacity: $nag-close-hover-opacity;
 }
-
 
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
      Static
@@ -101,9 +96,9 @@ a.ui.nag {
 
 .ui.bottom.nags,
 .ui.bottom.nag {
-  border-radius: $bottomBorderRadius;
+  border-radius: $nag-bottom-border-radius;
   top: auto;
-  bottom: $bottom;
+  bottom: $nag-bottom;
 }
 
 /*--------------
@@ -112,29 +107,26 @@ a.ui.nag {
 
 .ui.inverted.nags .nag,
 .ui.inverted.nag {
-  background-color: $invertedBackground;
-  color: $darkTextColor;
+  background-color: $nag-inverted-background;
+  color: $dark-text-color;
 }
 .ui.inverted.nags .nag .close,
 .ui.inverted.nags .nag .title,
 .ui.inverted.nag .close,
 .ui.inverted.nag .title {
-  color: $lightTextColor;
+  color: $light-text-color;
 }
-
 
 /*******************************
            Groups
 *******************************/
 
 .ui.nags .nag {
-  border-radius: $groupedBorderRadius !important;
+  border-radius: $nag-grouped-border-radius !important;
 }
 .ui.nags .nag:last-child {
-  border-radius: $topBorderRadius;
+  border-radius: $nag-top-border-radius;
 }
 .ui.bottom.nags .nag:last-child {
-  border-radius: $bottomBorderRadius;
+  border-radius: $nag-bottom-border-radius;
 }
-
-

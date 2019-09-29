@@ -1,0 +1,19 @@
+@import "./helpers/to-number";
+
+@function join-value-to-unit($value, $unit) {
+  @if not unitless($value) {
+    $value: to-number($value + "");
+  }
+  @if $unit == "px" {
+    @return $value + 0px;
+  } @else if $unit == "em" {
+    @return $value + 0em;
+  } @else if $unit == "%" {
+    @return $value + 0%;
+  } @else if $unit == "rem" {
+    @return $value + 0rem;
+  } @else {
+    @warn 'Unrecognized unit, the returned value is of string type.';
+    @return $value + $unit;
+  }
+}

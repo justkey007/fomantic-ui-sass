@@ -1,191 +1,188 @@
 //****************************** Checkbox *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
-$checkboxSize: 17px !default;
-$checkboxColor: $textColor !default;
-$checkboxLineHeight: $checkboxSize !default;
-
+$checkbox-size: 17px !default;
+$checkbox-color: $text-color !default;
+$checkbox-line-height: $checkbox-size !default;
 
 // Label */
-$labelDistance: 1.85714em !default; // 26px $ 14/em */
+$checkbox-label-distance: 1.85714em !default; // 26px $ 14/em */
 
 // Checkbox */
-$checkboxBackground: $white !default;
-$checkboxBorder: 1px solid $solidBorderColor !default;
-$checkboxBorderRadius: $_3px !default;
-$checkboxTransition:
-  border $defaultDuration $defaultEasing,
-  opacity $defaultDuration $defaultEasing,
-  transform $defaultDuration $defaultEasing,
-  box-shadow $defaultDuration $defaultEasing
- !default;
+$checkbox-background: $white !default;
+$checkbox-border: 1px solid $solid-border-color !default;
+$checkbox-border-radius: $_3px !default;
+$checkbox-transition: border $default-duration $default-easing,
+  opacity $default-duration $default-easing,
+  transform $default-duration $default-easing,
+  box-shadow $default-duration $default-easing !default;
 
 // Checkmark */
-$checkboxCheckFontSize: 14px !default;
-$checkboxCheckTop: 0 !default;
-$checkboxCheckLeft: 0 !default;
-$checkboxCheckSize: $checkboxSize !default;
+$checkbox-check-font-size: 14px !default;
+$checkbox-check-top: 0 !default;
+$checkbox-check-left: 0 !default;
+$checkbox-check-size: $checkbox-size !default;
 
 // Label */
-$labelFontSize: $relativeMedium !default;
-$labelColor: $textColor !default;
-$labelTransition: color $defaultDuration $defaultEasing !default;
+$checkbox-label-font-size: $relative-medium !default;
+$checkbox-label-color: $text-color !default;
+$checkbox-label-transition: color $default-duration $default-easing !default;
 
 //------------------- States --------------------*/
 
 // Hover */
-$checkboxHoverBackground: $checkboxBackground !default;
-$checkboxHoverBorderColor: $selectedBorderColor !default;
-$labelHoverColor: $hoveredTextColor !default;
+$checkbox-hover-background: $checkbox-background !default;
+$checkbox-hover-border-color: $selected-border-color !default;
+$checkbox-label-hover-color: $hovered-text-color !default;
 
 // Pressed */
-$checkboxPressedBackground: $offWhite !default;
-$checkboxPressedBorderColor: $selectedBorderColor !default;
-$checkboxPressedColor: $selectedTextColor !default;
-$labelPressedColor: $selectedTextColor !default;
+$checkbox-pressed-background: $off-white !default;
+$checkbox-pressed-border-color: $selected-border-color !default;
+$checkbox-pressed-color: $selected-text-color !default;
+$checkbox-label-pressed-color: $selected-text-color !default;
 
 // Focus */
-$checkboxFocusBackground: $white !default;
-$checkboxFocusBorderColor: $focusedFormMutedBorderColor !default;
-$checkboxFocusCheckColor: $selectedTextColor !default;
-$labelFocusColor: $selectedTextColor !default;
+$checkbox-focus-background: $white !default;
+$checkbox-focus-border-color: $focused-form-muted-border-color !default;
+$checkbox-focus-check-color: $selected-text-color !default;
+$checkbox-label-focus-color: $selected-text-color !default;
 
 // Active */
-$labelActiveColor: $selectedTextColor !default;
-$checkboxActiveBackground: $white !default;
-$checkboxActiveBorderColor: $selectedBorderColor !default;
-$checkboxActiveCheckColor: $selectedTextColor !default;
-$checkboxActiveCheckOpacity: 1 !default;
+$checkbox-label-active-color: $selected-text-color !default;
+$checkbox-active-background: $white !default;
+$checkbox-active-border-color: $selected-border-color !default;
+$checkbox-active-check-color: $selected-text-color !default;
+$checkbox-active-check-opacity: 1 !default;
 
 // Active Focus */
-$checkboxActiveFocusBackground: $white !default;
-$checkboxActiveFocusBorderColor: $checkboxFocusBorderColor !default;
-$checkboxActiveFocusCheckColor: $selectedTextColor !default;
+$checkbox-active-focus-background: $white !default;
+$checkbox-active-focus-border-color: $checkbox-focus-border-color !default;
+$checkbox-active-focus-check-color: $selected-text-color !default;
 
 // Indeterminate */
-$checkboxIndeterminateBackground: $checkboxActiveBackground !default;
-$checkboxIndeterminateBorderColor: $checkboxActiveBorderColor !default;
-$checkboxIndeterminateCheckOpacity: 1 !default;
-$checkboxIndeterminateCheckColor: $checkboxActiveCheckColor !default;
+$checkbox-indeterminate-background: $checkbox-active-background !default;
+$checkbox-indeterminate-border-color: $checkbox-active-border-color !default;
+$checkbox-indeterminate-check-opacity: 1 !default;
+$checkbox-indeterminate-check-color: $checkbox-active-check-color !default;
 
 // Disabled */
-$disabledCheckboxOpacity: 0.5 !default;
-$disabledCheckboxLabelColor: rgba(0, 0, 0, 1) !default;
+$checkbox-disabled-opacity: 0.5 !default;
+$checkbox-disabled-label-color: rgba(0, 0, 0, 1) !default;
 
 //------------------- Types --------------------*/
 
 // Radio */
 // Uses px to avoid rounding issues with circles */
 
-$radioSize: 15px !default;
-$radioTop: 1px !default;
-$radioLeft: 0 !default;
-$radioLabelDistance: $labelDistance !default;
+$checkbox-radio-size: 15px !default;
+$checkbox-radio-top: 1px !default;
+$checkbox-radio-left: 0 !default;
+$checkbox-radio-label-distance: $checkbox-label-distance !default;
 
-$bulletTop: 1px !default;
-$bulletLeft: 0 !default;
-$bulletScale: (7 / 15) !default; // 7px as unitless value from radio size */
-$bulletColor: $textColor !default;
-$bulletRadius: $circularRadius !default;
+$checkbox-bullet-top: 1px !default;
+$checkbox-bullet-left: 0 !default;
+$checkbox-bullet-scale: (
+  7 / 15
+) !default; // 7px as unitless value from radio size */
+$checkbox-bullet-color: $text-color !default;
+$checkbox-bullet-radius: $circular-radius !default;
 
-$radioFocusBackground: $checkboxFocusBackground !default;
-$radioFocusBulletColor: $checkboxFocusCheckColor !default;
+$checkbox-radio-focus-background: $checkbox-focus-background !default;
+$checkbox-radio-focus-bullet-color: $checkbox-focus-check-color !default;
 
-$radioActiveBackground: $checkboxActiveBackground !default;
-$radioActiveBulletColor: $checkboxActiveCheckColor !default;
+$checkbox-radio-active-background: $checkbox-active-background !default;
+$checkbox-radio-active-bullet-color: $checkbox-active-check-color !default;
 
-$radioActiveFocusBackground: $checkboxActiveFocusBackground !default;
-$radioActiveFocusBulletColor: $checkboxActiveFocusCheckColor !default;
+$checkbox-radio-active-focus-background: $checkbox-active-focus-background !default;
+$checkbox-radio-active-focus-bullet-color: $checkbox-active-focus-check-color !default;
 
 // Slider & Toggle Handle */
-$handleBackground: $white $subtleGradient !default;
-$handleBoxShadow:
-  $subtleShadow,
-  0 0 0 1px $borderColor inset
- !default;
+$checkbox-handle-background: $white $subtle-gradient !default;
+$checkbox-handle-box-shadow: $subtle-shadow, 0 0 0 1px $border-color inset !default;
 
 // Slider */
-$sliderHandleSize: 1.5rem !default;
-$sliderLineWidth: 3.5rem !default;
-$sliderTransitionDuration: 0.3s !default;
+$checkbox-slider-handle-size: 1.5rem !default;
+$checkbox-slider-line-width: 3.5rem !default;
+$checkbox-slider-transition-duration: 0.3s !default;
 
-$sliderHandleOffset: (1rem - $sliderHandleSize) / 2 !default;
-$sliderHandleTransition: left $sliderTransitionDuration $defaultEasing !default;
+$checkbox-slider-handle-offset: (1rem - $checkbox-slider-handle-size) / 2 !default;
+$checkbox-slider-handle-transition: left $checkbox-slider-transition-duration
+  $default-easing !default;
 
-$sliderWidth: $sliderLineWidth !default;
-$sliderHeight: ($sliderHandleSize + $sliderHandleOffset) !default;
+$checkbox-slider-width: $checkbox-slider-line-width !default;
+$checkbox-slider-height: (
+  $checkbox-slider-handle-size + $checkbox-slider-handle-offset
+) !default;
 
-$sliderLineHeight: $_3px !default;
-$sliderLineVerticalOffset: 0.4rem !default;
-$sliderLineColor: $transparentBlack !default;
-$sliderLineRadius: $circularRadius !default;
-$sliderLineTransition: background $sliderTransitionDuration $defaultEasing !default;
+$checkbox-slider-line-height: $_3px !default;
+$checkbox-slider-line-vertical-offset: 0.4rem !default;
+$checkbox-slider-line-color: $transparent-black !default;
+$checkbox-slider-line-radius: $circular-radius !default;
+$checkbox-slider-line-transition: background
+  $checkbox-slider-transition-duration $default-easing !default;
 
-$sliderTravelDistance: $sliderLineWidth - $sliderHandleSize !default;
+$checkbox-slider-travel-distance: $checkbox-slider-line-width -
+  $checkbox-slider-handle-size !default;
 
-$sliderLabelDistance: $sliderLineWidth + 1rem !default;
-$sliderOffLabelColor: $unselectedTextColor !default;
+$checkbox-slider-label-distance: $checkbox-slider-line-width + 1rem !default;
+$checkbox-slider-off-label-color: $unselected-text-color !default;
 
-$sliderLabelLineHeight: 1rem !default;
+$checkbox-slider-label-line-height: 1rem !default;
 
 // Slider States */
-$sliderHoverLaneBackground: $veryStrongTransparentBlack !default;
-$sliderHoverLabelColor: $hoveredTextColor !default;
+$checkbox-slider-hover-lane-background: $very-strong-transparent-black !default;
+$checkbox-slider-hover-label-color: $hovered-text-color !default;
 
-$sliderOnLineColor: $lightBlack !default;
-$sliderOnLabelColor: $selectedTextColor !default;
+$checkbox-slider-on-line-color: $light-black !default;
+$checkbox-slider-on-label-color: $selected-text-color !default;
 
-$sliderOnFocusLineColor: $lightBlackFocus !default;
-$sliderOnFocusLabelColor: $sliderOnLabelColor !default;
-
-
+$checkbox-slider-on-focus-line-color: $light-black-focus !default;
+$checkbox-slider-on-focus-label-color: $checkbox-slider-on-label-color !default;
 
 // Toggle */
-$toggleLaneWidth: 3.5rem !default;
-$toggleHandleSize: 1.5rem !default;
-$toggleTransitionDuration: 0.2s !default;
+$checkbox-toggle-lane-width: 3.5rem !default;
+$checkbox-toggle-handle-size: 1.5rem !default;
+$checkbox-toggle-transition-duration: 0.2s !default;
 
-$toggleWidth: $toggleLaneWidth !default;
-$toggleHeight: $toggleHandleSize !default;
+$checkbox-toggle-width: $checkbox-toggle-lane-width !default;
+$checkbox-toggle-height: $checkbox-toggle-handle-size !default;
 
-$toggleHandleRadius: $circularRadius !default;
-$toggleHandleOffset: 0 !default;
-$toggleHandleTransition:
-  background $sliderTransitionDuration $defaultEasing,
-  left $sliderTransitionDuration $defaultEasing
- !default;
+$checkbox-toggle-handle-radius: $circular-radius !default;
+$checkbox-toggle-handle-offset: 0 !default;
+$checkbox-toggle-handle-transition: background
+    $checkbox-slider-transition-duration $default-easing,
+  left $checkbox-slider-transition-duration $default-easing !default;
 
-$toggleLaneBackground: $transparentBlack !default;
-$toggleLaneHeight: $toggleHandleSize !default;
-$toggleLaneBoxShadow: none !default;
-$toggleLaneVerticalOffset: 0 !default;
-$toggleOffOffset: -0.05rem !default;
-$toggleOnOffset: ($toggleLaneWidth - $toggleHandleSize) + 0.15rem !default;
-$toggleCenterOffset: $toggleOnOffset / 2 !default;
-$toggleCenterLaneBackground: $veryStrongTransparentBlack !default;
+$checkbox-toggle-lane-background: $transparent-black !default;
+$checkbox-toggle-lane-height: $checkbox-toggle-handle-size !default;
+$checkbox-toggle-lane-box-shadow: none !default;
+$checkbox-toggle-lane-vertical-offset: 0 !default;
+$checkbox-toggle-off-offset: -0.05rem !default;
+$checkbox-toggle-on-offset: (
+    $checkbox-toggle-lane-width - $checkbox-toggle-handle-size
+  ) + 0.15rem !default;
+$checkbox-toggle-center-offset: $checkbox-toggle-on-offset / 2 !default;
+$checkbox-toggle-center-lane-background: $very-strong-transparent-black !default;
 
-$toggleLabelDistance: $toggleLaneWidth + 1rem !default;
-$toggleLabelLineHeight: 1.5rem !default;
-$toggleLabelOffset: 0.15em !default;
+$checkbox-toggle-label-distance: $checkbox-toggle-lane-width + 1rem !default;
+$checkbox-toggle-label-line-height: 1.5rem !default;
+$checkbox-toggle-label-offset: 0.15em !default;
 
+$checkbox-toggle-focus-color: $very-strong-transparent-black !default;
+$checkbox-toggle-hover-color: $checkbox-toggle-focus-color !default;
 
-$toggleFocusColor: $veryStrongTransparentBlack !default;
-$toggleHoverColor: $toggleFocusColor !default;
+$checkbox-toggle-off-label-color: $checkbox-color !default;
+$checkbox-toggle-off-handle-box-shadow: $checkbox-handle-box-shadow !default;
 
-$toggleOffLabelColor: $checkboxColor !default;
-$toggleOffHandleBoxShadow: $handleBoxShadow !default;
+$checkbox-toggle-on-label-color: $selected-text-color !default;
+$checkbox-toggle-on-lane-color: $primary-color !default;
 
-$toggleOnLabelColor: $selectedTextColor !default;
-$toggleOnLaneColor: $primaryColor !default;
+$checkbox-toggle-on-handle-box-shadow: $checkbox-handle-box-shadow !default;
 
-$toggleOnHandleBoxShadow: $handleBoxShadow !default;
-
-$toggleOnFocusLaneColor: $primaryColorFocus !default;
-$toggleOnFocusLabelColor: $toggleOnLabelColor !default;
-
-
+$checkbox-toggle-on-focus-lane-color: $primary-color-focus !default;
+$checkbox-toggle-on-focus-label-color: $checkbox-toggle-on-label-color !default;
 
 //------------------- Variations --------------------*/
 
 // Inverted */
-$checkboxInvertedHoverBackground: $black !default;
+$checkbox-inverted-hover-background: $black !default;

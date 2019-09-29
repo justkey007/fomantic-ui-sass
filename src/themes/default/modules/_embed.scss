@@ -1,47 +1,46 @@
 //****************************** Video *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Element --------------------*/
 
 // Simple */
-$background: $lightGrey !default;
-$transitionDuration: 0.5s !default;
-$transitionEasing: $defaultEasing !default;
+$embed-background: $light-grey !default;
+$embed-transition-duration: 0.5s !default;
+$embed-transition-easing: $default-easing !default;
 
 // Placeholder */
-$placeholderUnderlay: $background !default;
+$embed-placeholder-underlay: $embed-background !default;
 
 // Placeholder Overlayed Background */
-$placeholderBackground: radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3)) !default;
-@debug $placeholderBackground;
-$placeholderBackgroundOpacity: 0.5 !default;
-$placeholderBackgroundTransition: opacity $transitionDuration $transitionEasing !default;
+$embed-placeholder-background: radial-gradient(
+  transparent 45%,
+  rgba(0, 0, 0, 0.3)
+) !default;
+$embed-placeholder-background-opacity: 0.5 !default;
+$embed-placeholder-background-transition: opacity $embed-transition-duration
+  $embed-transition-easing !default;
 
 // Icon */
-$iconBackground: $veryStrongTransparentBlack !default;
-$iconSize: 6rem !default;
-$iconTransition:
-  opacity $transitionDuration $transitionEasing,
-  color $transitionDuration $transitionEasing
- !default;
-$iconColor: $white !default;
-$iconShadow:
-  0 2px 10px rgba(34, 36, 38, 0.2)
- !default;
-$iconZIndex: 10 !default;
+$embed-icon-background: $very-strong-transparent-black !default;
+$embed-icon-size: 6rem !default;
+$embed-icon-transition: opacity $embed-transition-duration
+    $embed-transition-easing,
+  color $embed-transition-duration $embed-transition-easing !default;
+$embed-icon-color: $white !default;
+$embed-icon-shadow: 0 2px 10px rgba(34, 36, 38, 0.2) !default;
+$embed-icon-z-index: 10 !default;
 
 //------------------- States --------------------*/
 
 // Hover */
-$hoverPlaceholderBackground: $placeholderBackground !default;
-$hoverPlaceholderBackgroundOpacity: 1 !default;
-$hoverIconColor: $white !default;
-
+$embed-hover-placeholder-background: $embed-placeholder-background !default;
+$embed-hover-placeholder-background-opacity: 1 !default;
+$embed-hover-icon-color: $white !default;
 
 //------------------- Variations --------------------*/
 
 // Aspect Ratios */
-$squareRatio: (1/1) * 100% !default;
-$widescreenRatio: (9/16) * 100% !default;
-$ultraWidescreenRatio: (9/21) * 100% !default;
-$standardRatio: (3/4) * 100% !default;
+$embed-square-ratio: (1/1) * 100% !default;
+$embed-widescreen-ratio: (9/16) * 100% !default;
+$embed-ultra-widescreen-ratio: (9/21) * 100% !default;
+$embed-standard-ratio: (3/4) * 100% !default;

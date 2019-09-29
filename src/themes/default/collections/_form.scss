@@ -1,189 +1,193 @@
 //****************************** Form *******************************
-@import '../globals/site';
+@import "../globals/variables";
 
 // Form */
-$gutterWidth: 1em !default;
-$rowDistance: 1em !default;
+$form-gutter-width: 1em !default;
+$form-row-distance: 1em !default;
 
 // Text */
-$paragraphMargin: $rowDistance 0 !default;
+$form-paragraph-margin: $form-row-distance 0 !default;
 
 // Field */
-$fieldMargin: 0 0 $rowDistance !default;
+$form-field-margin: 0 0 $form-row-distance !default;
 
 // Fields */
-$fieldsMargin: 0 -($gutterWidth / 2) $rowDistance !default;
+$form-fields-margin: 0 (-$form-gutter-width / 2) $form-row-distance !default;
 
 // Form Label */
-$labelDistance: $_4px !default;
-$labelMargin: 0 0 $labelDistance 0 !default;
-$labelFontSize: $relativeSmall !default;
-$labelFontWeight: $bold !default;
-$labelTextTransform: none !default;
-$labelColor: $textColor !default;
+$form-label-distance: $_4px !default;
+$form-label-margin: 0 0 $form-label-distance 0 !default;
+$form-label-font-size: $relative-small !default;
+$form-label-font-weight: $bold !default;
+$form-label-text-transform: none !default;
+$form-label-color: $text-color !default;
 
 // Input */
-$inputFont: $pageFont !default;
-$inputWidth: 100% !default;
-$inputFontSize: 1em !default;
-$inputPadding: ($inputVerticalPadding + ((1em - $inputLineHeight) / 2)) $inputHorizontalPadding !default;
-$inputBorder: 1px solid $borderColor !default;
-$inputBorderRadius: $absoluteBorderRadius !default;
-$inputColor: $textColor !default;
-$inputTransition:
-  color $defaultDuration $defaultEasing,
-  border-color $defaultDuration $defaultEasing
- !default;
-$inputBoxShadow: 0 0 0 0 transparent inset !default;
+$form-input-font: $page-font !default;
+$form-input-width: 100% !default;
+$form-input-font-size: 1em !default;
+$form-input-padding: (
+    $input-vertical-padding + ((1em - $input-line-height) / 2)
+  )
+  $input-horizontal-padding !default;
+$form-input-border: 1px solid $border-color !default;
+$form-input-border-radius: $absolute-border-radius !default;
+$form-input-color: $text-color !default;
+$form-input-transition: color $default-duration $default-easing,
+  border-color $default-duration $default-easing !default;
+$form-input-box-shadow: 0 0 0 0 transparent inset !default;
 
 // Select */
-$selectBackground: $white !default;
-$selectBorderRadius: $inputBorderRadius !default;
-$selectBorder: $inputBorder !default;
-$selectPadding: 0.62em $inputHorizontalPadding !default;
-$selectBoxShadow: $inputBoxShadow !default;
-$selectTransition: $inputTransition !default;
-$selectColor: $inputColor !default;
+$form-select-background: $white !default;
+$form-select-border-radius: $form-input-border-radius !default;
+$form-select-border: $form-input-border !default;
+$form-select-padding: 0.62em $input-horizontal-padding !default;
+$form-select-box-shadow: $form-input-box-shadow !default;
+$form-select-transition: $form-input-transition !default;
+$form-select-color: $form-input-color !default;
 
 // Text Area */
-$textAreaPadding: $inputVerticalPadding $inputHorizontalPadding !default;
-$textAreaHeight: 12em !default;
-$textAreaResize: vertical !default;
-$textAreaLineHeight: 1.2857 !default;
-$textAreaMinHeight: 8em !default;
-$textAreaMaxHeight: 24em !default;
-$textAreaBackground: $inputBackground !default;
-$textAreaBorder: $inputBorder !default;
-$textAreaFontSize: $inputFontSize !default;
-$textAreaTransition: $inputTransition !default;
+$form-text-area-padding: $input-vertical-padding $input-horizontal-padding !default;
+$form-text-area-height: 12em !default;
+$form-text-area-resize: vertical !default;
+$form-text-area-line-height: 1.2857 !default;
+$form-text-area-min-height: 8em !default;
+$form-text-area-max-height: 24em !default;
+$form-text-area-background: $input-background !default;
+$form-text-area-border: $form-input-border !default;
+$form-text-area-font-size: $form-input-font-size !default;
+$form-text-area-transition: $form-input-transition !default;
 
 // Checkbox */
-$checkboxVerticalAlign: top !default;
-$checkboxLabelFontSize: 1em !default;
-$checkboxLabelTextTransform: $labelTextTransform !default;
-$checkboxFieldTopMargin: 1.2em !default;
-$checkboxToggleFieldTopMargin: 1em !default;
-$checkboxSliderFieldTopMargin: 1.4em !default;
+$form-checkbox-vertical-align: top !default;
+$form-checkbox-label-font-size: 1em !default;
+$form-checkbox-label-text-transform: $form-label-text-transform !default;
+$form-checkbox-field-top-margin: 1.2em !default;
+$form-checkbox-toggle-field-top-margin: 1em !default;
+$form-checkbox-slider-field-top-margin: 1.4em !default;
 
 // Errored Input */
-$formErrorColor: $negativeTextColor !default;
-$formErrorBorder: $negativeBorderColor !default;
-$formErrorBackground: $negativeBackgroundColor !default;
-$transparentFormErrorColor: $formErrorColor !default;
-$transparentFormErrorBackground: $formErrorBackground !default;
-$transparentPadding: $inputPadding !default;
+$form-error-color: $negative-text-color !default;
+$form-error-border: $negative-border-color !default;
+$form-error-background: $negative-background-color !default;
+$form-transparent-error-color: $form-error-color !default;
+$form-transparent-error-background: $form-error-background !default;
+$form-transparent-padding: $form-input-padding !default;
 
 // Inline Validation Prompt */
-$promptBackground: $white !default;
-$promptBorderColor: $formErrorBorder !default;
-$promptBorder: 1px solid $promptBorderColor !default;
-$promptTextColor: $formErrorColor !default;
-$inlinePromptMargin: -0.25em 0 -0.5em 0.5em !default;
-$inlinePromptBorderWidth: 1px !default;
+$form-prompt-background: $white !default;
+$form-prompt-border-color: $form-error-border !default;
+$form-prompt-border: 1px solid $form-prompt-border-color !default;
+$form-prompt-text-color: $form-error-color !default;
+$form-inline-prompt-margin: -0.25em 0 -0.5em 0.5em !default;
+$form-inline-prompt-border-width: 1px !default;
 
 //------------------ States --------------------*/
 
 // Focus */
-$inputFocusPointerSize: 0 !default;
+$form-input-focus-pointer-size: 0 !default;
 
 // Input Focus */
-$inputFocusBackground: $inputBackground !default;
-$inputFocusBorderColor: $focusedFormBorderColor !default;
-$inputFocusColor: $selectedTextColor !default;
-$inputFocusBoxShadow: $inputFocusPointerSize 0 0 0 $selectedBorderColor inset !default;
-$inputFocusBorderRadius: $inputBorderRadius !default;
+$form-input-focus-background: $input-background !default;
+$form-input-focus-border-color: $focused-form-border-color !default;
+$form-input-focus-color: $selected-text-color !default;
+$form-input-focus-box-shadow: $form-input-focus-pointer-size 0 0 0
+  $selected-border-color inset !default;
+$form-input-focus-border-radius: $form-input-border-radius !default;
 
 // Text Area Focus */
-$textAreaFocusBackground: $inputFocusBackground !default;
-$textAreaFocusBorderColor: $inputFocusBorderColor !default;
-$textAreaFocusColor: $inputFocusColor !default;
-$textAreaFocusBoxShadow: $inputFocusBoxShadow !default;
-$textAreaFocusBorderRadius: $inputFocusBorderRadius !default;
+$form-text-area-focus-background: $form-input-focus-background !default;
+$form-text-area-focus-border-color: $form-input-focus-border-color !default;
+$form-text-area-focus-color: $form-input-focus-color !default;
+$form-text-area-focus-box-shadow: $form-input-focus-box-shadow !default;
+$form-text-area-focus-border-radius: $form-input-focus-border-radius !default;
 
 // Disabled */
-$disabledLabelOpacity: $disabledOpacity !default;
+$form-disabled-label-opacity: $disabled-opacity !default;
 
 // AutoFill */
-$inputAutoFillBackground: #FFFFF0 !default;
-$inputAutoFillBorder: #E5DFA1 !default;
-$inputAutoFillFocusBackground: $inputAutoFillBackground !default;
-$inputAutoFillFocusBorder: #D5C315 !default;
-$inputAutoFillErrorBackground: #FFFAF0 !default;
-$inputAutoFillErrorBorder: #E0B4B4 !default;
-
+$form-input-auto-fill-background: #fffff0 !default;
+$form-input-auto-fill-border: #e5dfa1 !default;
+$form-input-auto-fill-focus-background: $form-input-auto-fill-background !default;
+$form-input-auto-fill-focus-border: #d5c315 !default;
+$form-input-auto-fill-error-background: #fffaf0 !default;
+$form-input-auto-fill-error-border: #e0b4b4 !default;
 
 // Input Error */
-$inputErrorBorderRadius: '' !default;
-$inputErrorBoxShadow: none !default;
+$form-input-error-border-radius: "" !default;
+$form-input-error-box-shadow: none !default;
 
 // Dropdown Error */
-$dropdownErrorHoverBackground: #FBE7E7 !default;
-$dropdownErrorSelectedBackground: $dropdownErrorHoverBackground !default;
-$dropdownErrorActiveBackground: #FDCFCF !default;
-$dropdownErrorLabelBackground: #EACBCB !default;
-$dropdownErrorLabelColor: $errorTextColor !default;
+$form-dropdown-error-hover-background: #fbe7e7 !default;
+$form-dropdown-error-selected-background: $form-dropdown-error-hover-background !default;
+$form-dropdown-error-active-background: #fdcfcf !default;
+$form-dropdown-error-label-background: #eacbcb !default;
+$form-dropdown-error-label-color: $error-text-color !default;
 
 // Focused Error */
-$inputErrorFocusBackground: $negativeBackgroundColor !default;
-$inputErrorFocusColor: $negativeTextColor !default;
-$inputErrorFocusBorder: $negativeBorderColor !default;
-$inputErrorFocusBoxShadow: none !default;
+$form-input-error-focus-background: $negative-background-color !default;
+$form-input-error-focus-color: $negative-text-color !default;
+$form-input-error-focus-border: $negative-border-color !default;
+$form-input-error-focus-box-shadow: none !default;
 
 // Placeholder Error */
-$inputErrorPlaceholderColor: lighten($formErrorColor, 40) !default;
-$inputErrorPlaceholderFocusColor: lighten($formErrorColor, 30) !default;
+$form-input-error-placeholder-color: lighten($form-error-color, 40) !default;
+$form-input-error-placeholder-focus-color: lighten(
+  $form-error-color,
+  30
+) !default;
 
 // Loading Dimmer */
-$loaderDimmerColor: rgba(255, 255, 255, 0.8) !default;
-$loaderInvertedDimmerColor: rgba(0, 0, 0 , 0.85) !default;
-$loaderDimmerZIndex: 100 !default;
+$form-loader-dimmer-color: rgba(255, 255, 255, 0.8) !default;
+$form-loader-inverted-dimmer-color: rgba(0, 0, 0, 0.85) !default;
+$form-loader-dimmer-z-index: 100 !default;
 
 // Loading Spinner */
-$loaderSize: 3em !default;
-$loaderLineZIndex: 101 !default;
+$form-loader-size: 3em !default;
+$form-loader-line-z-index: 101 !default;
 
 //------------------ Types --------------------*/
 
 // Required */
-$requiredContent: '*' !default;
-$requiredColor: $negativeColor !default;
-$requiredVerticalOffset: -0.2em !default;
-$requiredDistance: 0.2em !default;
-$requiredMargin: $requiredVerticalOffset 0 0 $requiredDistance !default;
+$form-required-content: "*" !default;
+$form-required-color: $negative-color !default;
+$form-required-vertical-offset: -0.2em !default;
+$form-required-distance: 0.2em !default;
+$form-required-margin: $form-required-vertical-offset 0 0
+  $form-required-distance !default;
 
 // Inverted */
-$invertedInputBackground: $inputBackground !default;
-$invertedInputBorderColor: $whiteBorderColor !default;
-$invertedInputBoxShadow: $inputBoxShadow !default;
-$invertedInputColor: $inputColor !default;
-$invertedLabelColor: $invertedTextColor !default;
-$invertedInputBoxShadow: none !default;
+$form-inverted-input-background: $input-background !default;
+$form-inverted-input-border-color: $white-border-color !default;
+$form-inverted-input-box-shadow: $form-input-box-shadow !default;
+$form-inverted-input-color: $form-input-color !default;
+$form-inverted-label-color: $inverted-text-color !default;
+$form-inverted-input-box-shadow: none !default;
 
 //------------------- Variations --------------------*/
 
 // Grouped Fields */
-$groupedMargin: $fieldMargin !default;
-$groupedFieldMargin: 0.5em 0 !default;
+$form-grouped-margin: $form-field-margin !default;
+$form-grouped-field-margin: 0.5em 0 !default;
 
-$groupedLabelDistance: $labelDistance !default;
-$groupedLabelColor: $labelColor !default;
-$groupedLabelMargin: $labelMargin !default;
-$groupedLabelFontSize: $labelFontSize !default;
-$groupedLabelFontWeight: $labelFontWeight !default;
-$groupedLabelTextTransform: $labelTextTransform !default;
-
+$form-grouped-label-distance: $form-label-distance !default;
+$form-grouped-label-color: $form-label-color !default;
+$form-grouped-label-margin: $form-label-margin !default;
+$form-grouped-label-font-size: $form-label-font-size !default;
+$form-grouped-label-font-weight: $form-label-font-weight !default;
+$form-grouped-label-text-transform: $form-label-text-transform !default;
 
 // Inline */
-$inlineInputSize: $relativeMedium !default;
+$form-inline-input-size: $relative-medium !default;
 
-$inlineLabelDistance: $relativeTiny !default;
-$inlineLabelColor: $labelColor !default;
-$inlineLabelFontSize: $labelFontSize !default;
-$inlineLabelFontWeight: $labelFontWeight !default;
-$inlineLabelTextTransform: $labelTextTransform !default;
+$form-inline-label-distance: $relative-tiny !default;
+$form-inline-label-color: $form-label-color !default;
+$form-inline-label-font-size: $form-label-font-size !default;
+$form-inline-label-font-weight: $form-label-font-weight !default;
+$form-inline-label-text-transform: $form-label-text-transform !default;
 
-$groupedInlineLabelMargin: 0.035714em 1em 0 0 !default;
+$form-grouped-inline-label-margin: 0.035714em 1em 0 0 !default;
 
 //------------------ Groups --------------------*/
 
-$inlineFieldsMargin: 0 1em 0 0 !default;
+$form-inline-fields-margin: 0 1em 0 0 !default;

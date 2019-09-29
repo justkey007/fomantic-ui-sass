@@ -1,199 +1,225 @@
 //****************************** Modal *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
-$background: white !default;
-$border: none !default;
-$zIndex: 1001 !default;
-$borderRadius: $defaultBorderRadius !default;
-$transformOrigin: 50% 25% !default;
-$boxShadow:
-  0px 0px 0px 0 rgba(0,0,0,.2),
-  0px 0px 1px 0px rgba(0,0,0,.2)
- !default;
+$modal-background: white !default;
+$modal-border: none !default;
+$modal-z-index: 1001 !default;
+$modal-border-radius: $default-border-radius !default;
+$modal-transform-origin: 50% 25% !default;
+$modal-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0.2),
+  0px 0px 1px 0px rgba(0, 0, 0, 0.2) !default;
 
 // Close Icon */
-$closeOpacity: 0.8 !default;
-$closeSize: 1.25em !default;
-$closeColor: $white !default;
+$modal-close-opacity: 0.8 !default;
+$modal-close-size: 1.25em !default;
+$modal-close-color: $white !default;
 
-$closeHitbox: 2.25rem !default;
-$closeDistance: 0.25rem !default;
-$closeHitBoxOffset: ($closeHitbox - 1rem) / 2 !default;
-$closePadding: $closeHitBoxOffset 0 0 0 !default;
-$closeTop: -($closeDistance + $closeHitbox) !default;
-$closeRight: -($closeDistance + $closeHitbox) !default;
+$modal-close-hitbox: 2.25rem !default;
+$modal-close-distance: 0.25rem !default;
+$modal-close-hit-box-offset: ($modal-close-hitbox - 1rem) / 2 !default;
+$modal-close-padding: $modal-close-hit-box-offset 0 0 0 !default;
+$modal-close-top: -($modal-close-distance + $modal-close-hitbox) !default;
+$modal-close-right: -($modal-close-distance + $modal-close-hitbox) !default;
 
 // Header */
-$headerMargin: 0em !default;
-$headerVerticalPadding: 1.25rem !default;
-$headerHorizontalPadding: 1.5rem !default;
-$headerPadding: $headerVerticalPadding $headerHorizontalPadding !default;
-$headerBoxShadow: none !default;
-$headerFontWeight: bold !default;
-$headerFontFamily: $headerFont !default;
-$headerBorder: 1px solid $borderColor !default;
-$headerHeight: 40px !default;
+$modal-header-margin: 0em !default;
+$modal-header-vertical-padding: 1.25rem !default;
+$modal-header-horizontal-padding: 1.5rem !default;
+$modal-header-padding: $modal-header-vertical-padding
+  $modal-header-horizontal-padding !default;
+$modal-header-box-shadow: none !default;
+$modal-header-font-weight: bold !default;
+$modal-header-font-family: $header-font !default;
+$modal-header-border: 1px solid $border-color !default;
+$modal-header-height: 40px !default;
 
-$headerBackground: $primaryColor !default;
-$headerFontSize: 1em !default;
-$headerColor: $white !default;
+$modal-header-background: $primary-color !default;
+$modal-header-font-size: 1em !default;
+$modal-header-color: $white !default;
 
 // Content */
-$contentFontSize: 1em !default;
-$contentPadding: 1.5rem !default;
-$contentLineHeight: 1.4 !default;
-$contentBackground: #FFFFFF !default;
+$modal-content-font-size: 1em !default;
+$modal-content-padding: 1.5rem !default;
+$modal-content-line-height: 1.4 !default;
+$modal-content-background: #ffffff !default;
 
 // Image / Description */
-$imageWidth: '' !default;
-$imageIconSize: 8rem !default;
-$imageVerticalAlign: start !default;
+$modal-image-width: "" !default;
+$modal-image-icon-size: 8rem !default;
+$modal-image-vertical-align: start !default;
 
-$descriptionDistance: 2em !default;
-$descriptionMinWidth: '' !default;
-$descriptionWidth: auto !default;
-$descriptionVerticalAlign: start !default;
+$modal-description-distance: 2em !default;
+$modal-description-min-width: "" !default;
+$modal-description-width: auto !default;
+$modal-description-vertical-align: start !default;
 
 // Modal Actions */
-$actionBorder: 1px solid $borderColor !default;
-$actionBackground: $offWhite !default;
-$actionPadding: 1rem 1rem !default;
-$actionAlign: right !default;
+$modal-action-border: 1px solid $border-color !default;
+$modal-action-background: $off-white !default;
+$modal-action-padding: 1rem 1rem !default;
+$modal-action-align: right !default;
 
-$buttonDistance: 0.75em !default;
+$modal-button-distance: 0.75em !default;
 
 // Inner Close Position (Tablet/Mobile) */
-$innerCloseTop: (strip-unit($headerVerticalPadding - $closeHitBoxOffset) + ($lineHeight - 1em)) !default;
-$innerCloseRight: 1rem !default;
-$innerCloseColor: $textColor !default;
+$modal-inner-close-top: (
+  strip-unit($modal-header-vertical-padding - $modal-close-hit-box-offset) +
+    ($line-height - 1em)
+) !default;
+$modal-inner-close-right: 1rem !default;
+$modal-inner-close-color: $text-color !default;
 
 // Mobile Positions */
-$mobileHeaderPadding: 0.75rem 1rem !default;
-$mobileContentPadding: 1rem !default;
-$mobileImagePadding: 0 0 1rem !default;
-$mobileDescriptionPadding: 1rem 0  !default;
-$mobileButtonDistance: 1rem !default;
-$mobileActionPadding: 1rem 1rem (1rem - $mobileButtonDistance) !default;
-$mobileImageIconSize: 5rem !default;
-$mobileCloseTop: 0.5rem !default;
-$mobileCloseRight: 0.5rem !default;
+$modal-mobile-header-padding: 0.75rem 1rem !default;
+$modal-mobile-content-padding: 1rem !default;
+$modal-mobile-image-padding: 0 0 1rem !default;
+$modal-mobile-description-padding: 1rem 0 !default;
+$modal-mobile-button-distance: 1rem !default;
+$modal-mobile-action-padding: 1rem 1rem (1rem - $modal-mobile-button-distance) !default;
+$modal-mobile-image-icon-size: 5rem !default;
+$modal-mobile-close-top: 0.5rem !default;
+$modal-mobile-close-right: 0.5rem !default;
 
 // Responsive Widths */
-$mobileWidth: 95% !default;
-$tabletWidth: 88% !default;
-$computerWidth: 850px !default;
-$largeMonitorWidth: 900px !default;
-$widescreenMonitorWidth: 950px !default;
+$modal-mobile-width: 95% !default;
+$modal-tablet-width: 88% !default;
+$modal-computer-width: 850px !default;
+$modal-large-monitor-width: 900px !default;
+$modal-widescreen-monitor-width: 950px !default;
 
-$mobileMargin: 0 0 0 0 !default;
-$tabletMargin: 0 0 0 0 !default;
-$computerMargin: 0 0 0 0 !default;
-$largeMonitorMargin: 0 0 0 0 !default;
-$widescreenMonitorMargin: 0 0 0 0 !default;
+$modal-mobile-margin: 0 0 0 0 !default;
+$modal-tablet-margin: 0 0 0 0 !default;
+$modal-computer-margin: 0 0 0 0 !default;
+$modal-large-monitor-margin: 0 0 0 0 !default;
+$modal-widescreen-monitor-margin: 0 0 0 0 !default;
 
-$fullScreenWidth: 95% !default;
-$fullScreenOffset: (100% - $fullScreenWidth) / 2 !default;
-$fullScreenMargin: 1em auto !default;
+$modal-full-screen-width: 95% !default;
+$modal-full-screen-offset: (100% - $modal-full-screen-width) / 2 !default;
+$modal-full-screen-margin: 1em auto !default;
 
 // Coupling */
-$invertedBoxShadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2) !default;
+$modal-inverted-box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2) !default;
 
 //------------------- States --------------------*/
 
-$loadingZIndex: -1 !default;
+$modal-loading-z-index: -1 !default;
 
 //------------------  Types -------------------*/
 
 // Basic */
-$basicModalHeaderColor: $white !default;
-$basicModalColor: $white !default;
-$basicModalCloseTop: 1rem !default;
-$basicModalCloseRight: 1.5rem !default;
-$basicInnerCloseColor: $white !default;
+$modal-basic-header-color: $white !default;
+$modal-basic-color: $white !default;
+$modal-basic-close-top: 1rem !default;
+$modal-basic-close-right: 1.5rem !default;
+$modal-basic-inner-close-color: $white !default;
 
-$basicInvertedModalColor: $textColor !default;
-$basicInvertedModalHeaderColor: $darkTextColor !default;
+$modal-basic-inverted-color: $text-color !default;
+$modal-basic-inverted-header-color: $dark-text-color !default;
 
 // Aligned */
-$topAlignedMargin: 5vh !default;
-$mobileTopAlignedMargin: 1rem !default;
-$bottomAlignedMargin: $topAlignedMargin !default;
-$mobileBottomAlignedMargin: $mobileTopAlignedMargin !default;
+$modal-top-aligned-margin: 5vh !default;
+$modal-mobile-top-aligned-margin: 1rem !default;
+$modal-bottom-aligned-margin: $modal-top-aligned-margin !default;
+$modal-mobile-bottom-aligned-margin: $modal-mobile-top-aligned-margin !default;
 
 // Scrolling Margin */
-$scrollingMargin: 1rem !default;
-$mobileScrollingMargin: $mobileTopAlignedMargin !default;
+$modal-scrolling-margin: 1rem !default;
+$modal-mobile-scrolling-margin: $modal-mobile-top-aligned-margin !default;
 
 // Scrolling Content */
-$scrollingContentMaxHeight: calc(80vh - 10rem) !default;
+$modal-scrolling-content-max-height: calc(80vh - 10rem) !default;
 
 //------------------ Variations --------------------*/
 
 // Size Widths */
-$miniRatio: 0.4 !default;
-$tinyRatio: 0.6 !default;
-$smallRatio: 0.8 !default;
-$largeRatio: 1.2 !default;
+$modal-mini-ratio: 0.4 !default;
+$modal-tiny-ratio: 0.6 !default;
+$modal-small-ratio: 0.8 !default;
+$modal-large-ratio: 1.2 !default;
 
 // Derived Responsive Sizes */
-$miniHeaderSize: 12px !default;
-$miniMobileWidth: $mobileWidth !default;
-$miniTabletWidth: ($tabletWidth * $miniRatio) !default;
-$miniComputerWidth: ($computerWidth * $miniRatio) !default;
-$miniLargeMonitorWidth: ($largeMonitorWidth * $miniRatio) !default;
-$miniWidescreenMonitorWidth: ($widescreenMonitorWidth * $miniRatio) !default;
+$modal-mini-header-size: $_12px !default;
+$modal-mini-mobile-width: $modal-mobile-width !default;
+$modal-mini-tablet-width: ($modal-tablet-width * $modal-mini-ratio) !default;
+$modal-mini-computer-width: (
+  $modal-computer-width * $modal-mini-ratio
+) !default;
+$modal-mini-large-monitor-width: (
+  $modal-large-monitor-width * $modal-mini-ratio
+) !default;
+$modal-mini-widescreen-monitor-width: (
+  $modal-widescreen-monitor-width * $modal-mini-ratio
+) !default;
 
-$miniMobileMargin: 0 0 0 0 !default;
-$miniTabletMargin: 0 0 0 0 !default;
-$miniComputerMargin: 0 0 0 0 !default;
-$miniLargeMonitorMargin: 0 0 0 0 !default;
-$miniWidescreenMonitorMargin: 0 0 0 0 !default;
+$modal-mini-mobile-margin: 0 0 0 0 !default;
+$modal-mini-tablet-margin: 0 0 0 0 !default;
+$modal-mini-computer-margin: 0 0 0 0 !default;
+$modal-mini-large-monitor-margin: 0 0 0 0 !default;
+$modal-mini-widescreen-monitor-margin: 0 0 0 0 !default;
 
-$tinyHeaderSize: 1.3em !default;
-$tinyMobileWidth: $mobileWidth !default;
-$tinyTabletWidth: ($tabletWidth * $tinyRatio) !default;
-$tinyComputerWidth: ($computerWidth * $tinyRatio) !default;
-$tinyLargeMonitorWidth: ($largeMonitorWidth * $tinyRatio) !default;
-$tinyWidescreenMonitorWidth: ($widescreenMonitorWidth * $tinyRatio) !default;
+$modal-tiny-header-size: 1.3em !default;
+$modal-tiny-mobile-width: $modal-mobile-width !default;
+$modal-tiny-tablet-width: ($modal-tablet-width * $modal-tiny-ratio) !default;
+$modal-tiny-computer-width: (
+  $modal-computer-width * $modal-tiny-ratio
+) !default;
+$modal-tiny-large-monitor-width: (
+  $modal-large-monitor-width * $modal-tiny-ratio
+) !default;
+$modal-tiny-widescreen-monitor-width: (
+  $modal-widescreen-monitor-width * $modal-tiny-ratio
+) !default;
 
-$tinyMobileMargin: 0 0 0 0 !default;
-$tinyTabletMargin: 0 0 0 0 !default;
-$tinyComputerMargin: 0 0 0 0 !default;
-$tinyLargeMonitorMargin: 0 0 0 0 !default;
-$tinyWidescreenMonitorMargin: 0 0 0 0 !default;
+$modal-tiny-mobile-margin: 0 0 0 0 !default;
+$modal-tiny-tablet-margin: 0 0 0 0 !default;
+$modal-tiny-computer-margin: 0 0 0 0 !default;
+$modal-tiny-large-monitor-margin: 0 0 0 0 !default;
+$modal-tiny-widescreen-monitor-margin: 0 0 0 0 !default;
 
-$smallHeaderSize: 1.3em !default;
-$smallMobileWidth: $mobileWidth !default;
-$smallTabletWidth: ($tabletWidth * $smallRatio) !default;
-$smallComputerWidth: ($computerWidth * $smallRatio) !default;
-$smallLargeMonitorWidth: ($largeMonitorWidth * $smallRatio) !default;
-$smallWidescreenMonitorWidth: ($widescreenMonitorWidth * $smallRatio) !default;
+$modal-small-header-size: 1.3em !default;
+$modal-small-mobile-width: $modal-mobile-width !default;
+$modal-small-tablet-width: ($modal-tablet-width * $modal-small-ratio) !default;
+$modal-small-computer-width: (
+  $modal-computer-width * $modal-small-ratio
+) !default;
+$modal-small-large-monitor-width: (
+  $modal-large-monitor-width * $modal-small-ratio
+) !default;
+$modal-small-widescreen-monitor-width: (
+  $modal-widescreen-monitor-width * $modal-small-ratio
+) !default;
 
-$smallMobileMargin: 0 0 0 0 !default;
-$smallTabletMargin: 0 0 0 0 !default;
-$smallComputerMargin: 0 0 0 0 !default;
-$smallLargeMonitorMargin: 0 0 0 0 !default;
-$smallWidescreenMonitorMargin: 0 0 0 0 !default;
+$modal-small-mobile-margin: 0 0 0 0 !default;
+$modal-small-tablet-margin: 0 0 0 0 !default;
+$modal-small-computer-margin: 0 0 0 0 !default;
+$modal-small-large-monitor-margin: 0 0 0 0 !default;
+$modal-small-widescreen-monitor-margin: 0 0 0 0 !default;
 
-$largeHeaderSize: 1.6em !default;
-$largeMobileWidth: $mobileWidth !default;
-$largeTabletWidth: $tabletWidth !default;
-$largeComputerWidth: ($computerWidth * $largeRatio) !default;
-$largeLargeMonitorWidth: ($largeMonitorWidth * $largeRatio) !default;
-$largeWidescreenMonitorWidth: ($widescreenMonitorWidth * $largeRatio) !default;
+$modal-large-header-size: 1.6em !default;
+$modal-large-mobile-width: $modal-mobile-width !default;
+$modal-large-tablet-width: $modal-tablet-width !default;
+$modal-large-computer-width: (
+  $modal-computer-width * $modal-large-ratio
+) !default;
+$modal-large-large-monitor-width: (
+  $modal-large-monitor-width * $modal-large-ratio
+) !default;
+$modal-large-widescreen-monitor-width: (
+  $modal-widescreen-monitor-width * $modal-large-ratio
+) !default;
 
-$largeMobileMargin: 0 0 0 0 !default;
-$largeTabletMargin: 0 0 0 0 !default;
-$largeComputerMargin: 0 0 0 0 !default;
-$largeLargeMonitorMargin: 0 0 0 0 !default;
-$largeWidescreenMonitorMargin: 0 0 0 0 !default;
+$modal-large-mobile-margin: 0 0 0 0 !default;
+$modal-large-tablet-margin: 0 0 0 0 !default;
+$modal-large-computer-margin: 0 0 0 0 !default;
+$modal-large-large-monitor-margin: 0 0 0 0 !default;
+$modal-large-widescreen-monitor-margin: 0 0 0 0 !default;
 
 //------------------- Inverted -------------------*/
-$invertedBackground: rgba(0,0,0,.9) !default;
-$invertedCloseColor: $white !default;
-$invertedHeaderColor: $white !default;
-$invertedHeaderBackgroundColor: $darkTextColor !default;
-$invertedActionBackground: #191A1B !default;
-$invertedActionBorder: 1px solid rgba(34, 36, 38, 0.85) !default;
-$invertedActionColor: $white !default;
-$invertedDimmerCloseColor: rgba(0,0,0,.85) !default;
+$modal-inverted-background: rgba(0, 0, 0, 0.9) !default;
+$modal-inverted-close-color: $white !default;
+$modal-inverted-header-color: $white !default;
+$modal-inverted-header-background-color: $dark-text-color !default;
+$modal-inverted-action-background: #191a1b !default;
+$modal-inverted-action-border: 1px solid rgba(34, 36, 38, 0.85) !default;
+$modal-inverted-action-color: $white !default;
+$modal-inverted-dimmer-close-color: rgba(0, 0, 0, 0.85) !default;

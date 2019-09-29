@@ -1,0 +1,10 @@
+{
+  "@testMobileFontSize": "$ad-test-mobile-font-size",
+  "@testBackground": "$ad-test-background",
+  "@testFontWeight": "$ad-test-font-weight",
+  "@testFontSize": "$ad-test-font-size",
+  "@testColor": "$ad-test-color",
+  "@overflow": "$ad-overflow",
+  "@testText": "$ad-test-text",
+  "@margin": "$ad-margin"
+}

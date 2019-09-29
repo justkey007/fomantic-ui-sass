@@ -1,37 +1,34 @@
 //****************************** Shape *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
-$display: inline-block !default;
+$shape-display: inline-block !default;
 
 // Animating */
-$perspective: 2000px !default;
+$shape-perspective: 2000px !default;
 
-$duration: 0.6s !default;
-$easing: ease-in-out !default;
+$shape-duration: 0.6s !default;
+$shape-easing: ease-in-out !default;
 
-$hiddenSideOpacity: 0.6 !default;
-$animatingZIndex: 100 !default;
+$shape-hidden-side-opacity: 0.6 !default;
+$shape-animating-z-index: 100 !default;
 
-$transition:
-  transform $duration $easing,
-  left $duration $easing,
-  width $duration $easing,
-  height $duration $easing
- !default;
-$sideTransition: opacity $duration $easing !default;
-$backfaceVisibility: hidden !default;
+$shape-transition: transform $shape-duration $shape-easing,
+  left $shape-duration $shape-easing, width $shape-duration $shape-easing,
+  height $shape-duration $shape-easing !default;
+$shape-side-transition: opacity $shape-duration $shape-easing !default;
+$shape-backface-visibility: hidden !default;
 
 // Side */
-$sideMargin: 0 !default;
+$shape-side-margin: 0 !default;
 
 //-------------- Types ---------------*/
 
 // Cube */
-$cubeSize: 15em !default;
-$cubeBackground: #E6E6E6 !default;
-$cubePadding: 2em !default;
-$cubeTextColor: $textColor !default;
-$cubeBoxShadow: 0 0 2px rgba(0, 0, 0, 0.3) !default;
+$shape-cube-size: 15em !default;
+$shape-cube-background: #e6e6e6 !default;
+$shape-cube-padding: 2em !default;
+$shape-cube-text-color: $text-color !default;
+$shape-cube-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3) !default;
 
-$cubeTextAlign: center !default;
-$cubeFontSize: 2em !default;
+$shape-cube-text-align: center !default;
+$shape-cube-font-size: 2em !default;

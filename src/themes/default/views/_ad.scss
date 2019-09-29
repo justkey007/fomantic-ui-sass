@@ -1,12 +1,12 @@
 //****************************** Advertisement *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
-$margin: 1em 0 !default;
-$overflow: hidden !default;
+$ad-margin: 1em 0 !default;
+$ad-overflow: hidden !default;
 
-$testBackground: $lightBlack !default;
-$testColor: $white !default;
-$testFontWeight: $bold !default;
-$testText: 'Ad' !default;
-$testFontSize: $relativeMedium !default;
-$testMobileFontSize: $relativeTiny !default;
+$ad-test-background: $light-black !default;
+$ad-test-color: $white !default;
+$ad-test-font-weight: $bold !default;
+$ad-test-text: "Ad" !default;
+$ad-test-font-size: $relative-medium !default;
+$ad-test-mobile-font-size: $relative-tiny !default;

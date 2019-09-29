@@ -1,17 +1,20 @@
 //******************************  Reveal *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
-$transitionDelay: 0.1s !default;
-$transitionDuration: 0.5s !default;
-$transitionEasing: cubic-bezier(0.175, 0.885, 0.320, 1) !default;
-$transition: all $transitionDuration $defaultEasing $transitionDelay !default;
+$reveal-transition-delay: 0.1s !default;
+$reveal-transition-duration: 0.5s !default;
+$reveal-transition-easing: cubic-bezier(0.175, 0.885, 0.32, 1) !default;
+$reveal-transition: all $reveal-transition-duration $default-easing
+  $reveal-transition-delay !default;
 
-$bottomZIndex: 2 !default;
-$topZIndex: 3 !default;
-$activeZIndex: 4 !default;
-$overlayZIndex: 5 !default;
+$reveal-bottom-z-index: 2 !default;
+$reveal-top-z-index: 3 !default;
+$reveal-active-z-index: 4 !default;
+$reveal-overlay-z-index: 5 !default;
 
 // Types */
-$rotateDegrees: 110deg !default;
-$moveTransition: transform $transitionDuration $transitionEasing $transitionDelay !default;
-$slideTransition: transform $transitionDuration $defaultEasing $transitionDelay !default;
+$reveal-rotate-degrees: 110deg !default;
+$reveal-move-transition: transform $reveal-transition-duration
+  $reveal-transition-easing $reveal-transition-delay !default;
+$reveal-slide-transition: transform $reveal-transition-duration $default-easing
+  $reveal-transition-delay !default;

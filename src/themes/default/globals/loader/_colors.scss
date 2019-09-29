@@ -1,6 +1,6 @@
-@import '../colors/all';
+@import "../colors/all";
 
-$loaderFillColor         : rgba(0, 0, 0, 0.1) !default;
-$loaderLineColor         : $grey !default;
-$invertedLoaderFillColor : rgba(255, 255, 255, 0.15) !default;
-$invertedLoaderLineColor : $white !default;
+$loader-fill-color: rgba(0, 0, 0, 0.1) !default;
+$loader-line-color: $grey !default;
+$inverted-loader-fill-color: rgba(255, 255, 255, 0.15) !default;
+$inverted-loader-line-color: $white !default;

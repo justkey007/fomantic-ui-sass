@@ -1,4 +1,4 @@
-@import '../../themes/default/elements/text';
+@import "../../themes/default/elements/text";
 
 /*******************************
              Text
@@ -17,33 +17,31 @@
 }
 
 span.ui.disabled.text {
-  opacity: $disabledOpacity;
+  opacity: $disabled-opacity;
 }
 
 /* Sizes */
 span.ui.mini.text {
-  font-size: $mini;
+  font-size: $text-mini;
 }
 span.ui.tiny.text {
-  font-size: $tiny;
+  font-size: $text-tiny;
 }
 span.ui.small.text {
-  font-size: $small;
+  font-size: $text-small;
 }
 span.ui.medium.text {
-  font-size: $medium;
+  font-size: $text-medium;
 }
 span.ui.large.text {
-  font-size: $large;
+  font-size: $text-large;
 }
 span.ui.big.text {
-  font-size: $big;
+  font-size: $text-big;
 }
 span.ui.huge.text {
-  font-size: $huge;
+  font-size: $text-huge;
 }
 span.ui.massive.text {
-  font-size: $massive;
+  font-size: $text-massive;
 }
-
-

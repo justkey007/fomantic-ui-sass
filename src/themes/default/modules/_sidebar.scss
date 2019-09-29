@@ -1,40 +1,40 @@
 //****************************** Sidebar *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Content --------------------*/
 
 // Animation */
-$perspective: 1500px !default;
-$duration: 500ms !default;
-$easing: $defaultEasing !default;
+$sidebar-perspective: 1500px !default;
+$sidebar-duration: 500ms !default;
+$sidebar-easing: $default-easing !default;
 
 // Dimmer */
-$dimmerColor: rgba(0, 0, 0, 0.4) !default;
-$dimmerTransition: opacity $duration !default;
+$sidebar-dimmer-color: rgba(0, 0, 0, 0.4) !default;
+$sidebar-dimmer-transition: opacity $sidebar-duration !default;
 
 // Color below page */
-$canvasBackground: $lightBlack !default;
+$sidebar-canvas-background: $light-black !default;
 
 // Shadow */
-$boxShadow: 0 0 20px $borderColor !default;
-$horizontalBoxShadow: $boxShadow !default;
-$verticalBoxShadow: $boxShadow !default;
+$sidebar-box-shadow: 0 0 20px $border-color !default;
+$sidebar-horizontal-box-shadow: $sidebar-box-shadow !default;
+$sidebar-vertical-box-shadow: $sidebar-box-shadow !default;
 
 // Layering */
-$bottomLayer: 1 !default;
-$middleLayer: 2 !default;
-$fixedLayer: 101 !default;
-$topLayer: 102 !default;
-$dimmerLayer: 1000 !default;
+$sidebar-bottom-layer: 1 !default;
+$sidebar-middle-layer: 2 !default;
+$sidebar-fixed-layer: 101 !default;
+$sidebar-top-layer: 102 !default;
+$sidebar-dimmer-layer: 1000 !default;
 
 //------------------- Variations --------------------*/
 
 // Width */
-$veryThinWidth: 60px !default;
-$thinWidth: 150px !default;
-$width: 260px !default;
-$wideWidth: 350px !default;
-$veryWideWidth: 475px !default;
+$sidebar-very-thin-width: 60px !default;
+$sidebar-thin-width: 150px !default;
+$sidebar-width: 260px !default;
+$sidebar-wide-width: 350px !default;
+$sidebar-very-wide-width: 475px !default;
 
 // Height */
-$height: 36px !default;
+$sidebar-height: 36px !default;

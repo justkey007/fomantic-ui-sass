@@ -1,61 +1,63 @@
 //****************************** Dimmer *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
-$dimmablePosition: relative !default;
-$dimmerPosition: absolute !default;
+$dimmer-dimmable-position: relative !default;
+$dimmer-position: absolute !default;
 
-$backgroundColor: rgba(0, 0, 0 , 0.85) !default;
-$lineHeight: 1 !default;
-$perspective: 2000px !default;
-$padding: 1em !default;
+$dimmer-background-color: rgba(0, 0, 0, 0.85) !default;
+$dimmer-line-height: 1 !default;
+$dimmer-perspective: 2000px !default;
+$dimmer-padding: 1em !default;
 
-$duration: 0.5s !default;
-$transition:
-  background-color $duration linear
- !default;
-$zIndex: 1000 !default;
-$textAlign: center !default;
-$verticalAlign: middle !default;
-$textColor: $white !default;
-$overflow: hidden !default;
+$dimmer-duration: 0.5s !default;
+$dimmer-transition: background-color $dimmer-duration linear !default;
+$dimmer-z-index: 1000 !default;
+$dimmer-text-align: center !default;
+$dimmer-vertical-align: middle !default;
+$dimmer-text-color: $white !default;
+$dimmer-overflow: hidden !default;
 
-$blurredStartFilter: initial !default;
-$blurredEndFilter: e("blur(5px) grayscale(0.7)") !default;
-$blurredTransition: 800ms filter $defaultEasing !default;
+$dimmer-blurred-start-filter: initial !default;
+$dimmer-blurred-end-filter: e("blur(5px) grayscale(0.7)") !default;
+$dimmer-blurred-transition: 800ms filter $default-easing !default;
 
-$blurredBackgroundColor: rgba(0, 0, 0, 0.6) !default;
-$blurredInvertedBackgroundColor: rgba(255, 255, 255, 0.6) !default;
+$dimmer-blurred-background-color: rgba(0, 0, 0, 0.6) !default;
+$dimmer-blurred-inverted-background-color: rgba(255, 255, 255, 0.6) !default;
 
 // Hidden (Default) */
-$hiddenOpacity: 0 !default;
+$dimmer-hidden-opacity: 0 !default;
 
 // Visible */
-$visibleOpacity: 1 !default;
+$dimmer-visible-opacity: 1 !default;
 
 //------------------- Types --------------------*/
 
 // Page Dimmer*/
-$transformStyle: '' !default;
-$pageDimmerPosition: fixed !default;
-
+$dimmer-transform-style: "" !default;
+$dimmer-page-position: fixed !default;
 
 //------------------- Variations --------------------*/
 
 // Inverted */
-$invertedBackgroundColor: rgba(255, 255, 255, 0.85) !default;
-$invertedTextColor: $fullBlack !default;
+$dimmer-inverted-background-color: rgba(255, 255, 255, 0.85) !default;
+$dimmer-inverted-text-color: $full-black !default;
 
 // Simple */
-$simpleZIndex: 1 !default;
-$simpleStartBackgroundColor: rgba(0, 0, 0, 0) !default;
-$simpleEndBackgroundColor: $backgroundColor !default;
-$simpleInvertedStartBackgroundColor: rgba(255, 255, 255, 0) !default;
-$simpleInvertedEndBackgroundColor: $invertedBackgroundColor !default;
+$dimmer-simple-z-index: 1 !default;
+$dimmer-simple-start-background-color: rgba(0, 0, 0, 0) !default;
+$dimmer-simple-end-background-color: $dimmer-background-color !default;
+$dimmer-simple-inverted-start-background-color: rgba(255, 255, 255, 0) !default;
+$dimmer-simple-inverted-end-background-color: $dimmer-inverted-background-color !default;
 
 // Intensity */
-$veryLightBackgroundColor: rgba(0,0,0,.25) !default;
-$lightBackgroundColor: rgba(0,0,0,.45) !default;
-$mediumBackgroundColor: rgba(0,0,0,.65) !default;
-$veryLightInvertedBackgroundColor: rgba(255,255,255,.25) !default;
-$lightInvertedBackgroundColor: rgba(255,255,255,.45) !default;
-$mediumInvertedBackgroundColor: rgba(255,255,255,.65) !default;
+$dimmer-very-light-background-color: rgba(0, 0, 0, 0.25) !default;
+$dimmer-light-background-color: rgba(0, 0, 0, 0.45) !default;
+$dimmer-medium-background-color: rgba(0, 0, 0, 0.65) !default;
+$dimmer-very-light-inverted-background-color: rgba(
+  255,
+  255,
+  255,
+  0.25
+) !default;
+$dimmer-light-inverted-background-color: rgba(255, 255, 255, 0.45) !default;
+$dimmer-medium-inverted-background-color: rgba(255, 255, 255, 0.65) !default;

@@ -1,6 +1,0 @@
-.ui.grid > .#{$key + ""}.row,
-      .ui.grid > .#{$key + ""}.column,
-      .ui.grid > .row > .#{$key + ""}.column {
-        background-color: map-get($value, "color");
-        color: $white;
-      }

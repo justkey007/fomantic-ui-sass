@@ -1,156 +1,152 @@
 //******************************  Search *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 // Search Prompt */
-$promptBackground: $inputBackground !default;
-$promptVerticalPadding: $inputVerticalPadding !default;
-$promptHorizontalPadding: $inputHorizontalPadding !default;
-$promptLineHeight: $inputLineHeight !default;
-$promptFontSize: $relativeMedium !default;
-$promptPadding: ($promptVerticalPadding + ((1em - $promptLineHeight) / 2)) $promptHorizontalPadding !default;
-$promptBorder: 1px solid $borderColor !default;
-$promptBorderRadius: $circularRadius !default;
-$promptColor: $textColor !default;
-$promptTransition:
-  background-color $defaultDuration $defaultEasing,
-  color $defaultDuration $defaultEasing,
-  box-shadow $defaultDuration $defaultEasing,
-  border-color $defaultDuration $defaultEasing
- !default;
-$promptBoxShadow: 0 0 0 0 transparent inset !default;
+$search-prompt-background: $input-background !default;
+$search-prompt-vertical-padding: $input-vertical-padding !default;
+$search-prompt-horizontal-padding: $input-horizontal-padding !default;
+$search-prompt-line-height: $input-line-height !default;
+$search-prompt-font-size: $relative-medium !default;
+$search-prompt-padding: (
+    $search-prompt-vertical-padding + ((1em - $search-prompt-line-height) / 2)
+  )
+  $search-prompt-horizontal-padding !default;
+$search-prompt-border: 1px solid $border-color !default;
+$search-prompt-border-radius: $circular-radius !default;
+$search-prompt-color: $text-color !default;
+$search-prompt-transition: background-color $default-duration $default-easing,
+  color $default-duration $default-easing,
+  box-shadow $default-duration $default-easing,
+  border-color $default-duration $default-easing !default;
+$search-prompt-box-shadow: 0 0 0 0 transparent inset !default;
 
 // Mobile */
-$mobileMaxWidth: calc(100vw - 2rem) !default;
+$search-mobile-max-width: calc(100vw - 2rem) !default;
 
 // Result Box */
-$resultsWidth: 18em !default;
-$resultsBackground: #FFFFFF !default;
-$resultsDistance: 0.5em !default;
-$resultsBorderRadius: $defaultBorderRadius !default;
-$resultsBorder: 1px solid $solidBorderColor !default;
-$resultsBoxShadow: $floatingShadow !default;
+$search-results-width: 18em !default;
+$search-results-background: #ffffff !default;
+$search-results-distance: 0.5em !default;
+$search-results-border-radius: $default-border-radius !default;
+$search-results-border: 1px solid $solid-border-color !default;
+$search-results-box-shadow: $floating-shadow !default;
 
 // Result */
-$resultFontSize: 1em !default;
-$resultVerticalPadding: $relativeTiny !default;
-$resultHorizontalPadding: $relativeLarge !default;
-$resultPadding: $resultVerticalPadding $resultHorizontalPadding !default;
-$resultTextColor: $textColor !default;
-$resultLineHeight: 1.33 !default;
-$resultDivider: 1px solid $internalBorderColor !default;
-$resultLastDivider: none !default;
+$search-result-font-size: 1em !default;
+$search-result-vertical-padding: $relative-tiny !default;
+$search-result-horizontal-padding: $relative-large !default;
+$search-result-padding: $search-result-vertical-padding
+  $search-result-horizontal-padding !default;
+$search-result-text-color: $text-color !default;
+$search-result-line-height: 1.33 !default;
+$search-result-divider: 1px solid $internal-border-color !default;
+$search-result-last-divider: none !default;
 
 // Result Image */
-$resultImageFloat: right !default;
-$resultImageBackground: none !default;
-$resultImageWidth: 5em !default;
-$resultImageHeight: 3em !default;
-$resultImageBorderRadius: 0.25em !default;
-$resultImageMargin: 0 6em 0 0 !default;
+$search-result-image-float: right !default;
+$search-result-image-background: none !default;
+$search-result-image-width: 5em !default;
+$search-result-image-height: 3em !default;
+$search-result-image-border-radius: 0.25em !default;
+$search-result-image-margin: 0 6em 0 0 !default;
 
 // Result Content */
-$resultTitleFont: $headerFont !default;
-$resultTitleMargin: -$headerLineHeightOffset 0 0 !default;
-$resultTitleFontWeight: $bold !default;
-$resultTitleFontSize: $relativeMedium !default;
-$resultTitleColor: $darkTextColor !default;
+$search-result-title-font: $header-font !default;
+$search-result-title-margin: -$header-line-height-offset 0 0 !default;
+$search-result-title-font-weight: $bold !default;
+$search-result-title-font-size: $relative-medium !default;
+$search-result-title-color: $dark-text-color !default;
 
 // Description */
-$resultDescriptionFontSize: $relativeSmall !default;
-$resultDescriptionDistance: 0 !default;
-$resultDescriptionColor: $lightTextColor !default;
+$search-result-description-font-size: $relative-small !default;
+$search-result-description-distance: 0 !default;
+$search-result-description-color: $light-text-color !default;
 
 // Price */
-$resultPriceFloat: right !default;
-$resultPriceColor: $green !default;
+$search-result-price-float: right !default;
+$search-result-price-color: $green !default;
 
 // Special Message */
-$messageVerticalPadding: 1em !default;
-$messageHorizontalPadding: 1em !default;
-$messageHeaderFontSize: $medium !default;
-$messageHeaderFontWeight: $bold !default;
-$messageHeaderColor: $textColor !default;
-$messageDescriptionDistance: 0.25rem !default;
-$messageDescriptionFontSize: 1em !default;
-$messageDescriptionColor: $textColor !default;
+$search-message-vertical-padding: 1em !default;
+$search-message-horizontal-padding: 1em !default;
+$search-message-header-font-size: $medium !default;
+$search-message-header-font-weight: $bold !default;
+$search-message-header-color: $text-color !default;
+$search-message-description-distance: 0.25rem !default;
+$search-message-description-font-size: 1em !default;
+$search-message-description-color: $text-color !default;
 
 // All Results Link */
-$actionBorder: none !default;
-$actionBackground: $darkWhite !default;
-$actionPadding: $relativeSmall $relativeMedium !default;
-$actionColor: $textColor !default;
-$actionFontWeight: $bold !default;
-$actionAlign: center !default;
-
+$search-action-border: none !default;
+$search-action-background: $dark-white !default;
+$search-action-padding: $relative-small $relative-medium !default;
+$search-action-color: $text-color !default;
+$search-action-font-weight: $bold !default;
+$search-action-align: center !default;
 
 //******************************  States *******************************/
 
 // Focus */
-$promptFocusBackground: $promptBackground !default;
-$promptFocusBorderColor: $selectedBorderColor !default;
-$promptFocusColor: $selectedTextColor !default;
+$search-prompt-focus-background: $search-prompt-background !default;
+$search-prompt-focus-border-color: $selected-border-color !default;
+$search-prompt-focus-color: $selected-text-color !default;
 
 // Hover */
-$resultHoverBackground: $offWhite !default;
-$actionHoverBackground: #E0E0E0 !default;
+$search-result-hover-background: $off-white !default;
+$search-action-hover-background: #e0e0e0 !default;
 
 // Loading */
-$invertedLoaderFillColor: rgba(0, 0, 0, 0.15) !default;
+$search-inverted-loader-fill-color: rgba(0, 0, 0, 0.15) !default;
 
 // Active Category */
-$categoryActiveBackground: $darkWhite !default;
-$categoryNameActiveColor: $textColor !default;
+$search-category-active-background: $dark-white !default;
+$search-category-name-active-color: $text-color !default;
 
 // Active Result */
-$resultActiveBorderLeft: $internalBorderColor !default;
-$resultActiveBackground: $darkWhite !default;
-$resultActiveBoxShadow: none !default;
-$resultActiveTitleColor: $darkTextColor !default;
-$resultActiveDescriptionColor: $darkTextColor !default;
-$resultsZIndex: 998 !default;
-
+$search-result-active-border-left: $internal-border-color !default;
+$search-result-active-background: $dark-white !default;
+$search-result-active-box-shadow: none !default;
+$search-result-active-title-color: $dark-text-color !default;
+$search-result-active-description-color: $dark-text-color !default;
+$search-results-z-index: 998 !default;
 
 //******************************  Types *******************************/
 
 // Selection */
-$selectionPromptBorderRadius: $defaultBorderRadius !default;
+$search-selection-prompt-border-radius: $default-border-radius !default;
 
-$selectionCloseTop: 0 !default;
-$selectionCloseTransition:
-  color $defaultDuration $defaultEasing,
-  opacity $defaultDuration $defaultEasing
- !default;
-$selectionCloseRight: 0 !default;
-$selectionCloseIconOpacity: 0.8 !default;
-$selectionCloseIconColor: '' !default;
-$selectionCloseIconHoverOpacity: 1 !default;
-$selectionCloseIconHoverColor: $red !default;
+$search-selection-close-top: 0 !default;
+$search-selection-close-transition: color $default-duration $default-easing,
+  opacity $default-duration $default-easing !default;
+$search-selection-close-right: 0 !default;
+$search-selection-close-icon-opacity: 0.8 !default;
+$search-selection-close-icon-color: "" !default;
+$search-selection-close-icon-hover-opacity: 1 !default;
+$search-selection-close-icon-hover-color: $red !default;
 
-$selectionCloseIconInputRight: 1.85714em !default;
+$search-selection-close-icon-input-right: 1.85714em !default;
 
 // Category */
-$categoryBackground: $darkWhite !default;
-$categoryBoxShadow: none !default;
-$categoryDivider: 1px solid $internalBorderColor !default;
-$categoryTransition:
-  background $defaultDuration $defaultEasing,
-  border-color $defaultDuration $defaultEasing
- !default;
+$search-category-background: $dark-white !default;
+$search-category-box-shadow: none !default;
+$search-category-divider: 1px solid $internal-border-color !default;
+$search-category-transition: background $default-duration $default-easing,
+  border-color $default-duration $default-easing !default;
 
-$categoryResultsWidth: 28em !default;
+$search-category-results-width: 28em !default;
 
-$categoryResultBackground: $white !default;
-$categoryResultLeftBorder: 1px solid $borderColor !default;
-$categoryResultDivider: $resultDivider !default;
-$categoryResultLastDivider: none !default;
-$categoryResultPadding: $resultPadding !default;
-$categoryResultTransition: $categoryTransition !default;
+$search-category-result-background: $white !default;
+$search-category-result-left-border: 1px solid $border-color !default;
+$search-category-result-divider: $search-result-divider !default;
+$search-category-result-last-divider: none !default;
+$search-category-result-padding: $search-result-padding !default;
+$search-category-result-transition: $search-category-transition !default;
 
-$categoryNameWidth: 100px !default;
-$categoryNameBackground: transparent !default;
-$categoryNameFont: $pageFont !default;
-$categoryNameFontSize: 1em !default;
-$categoryNameWhitespace: nowrap !default;
-$categoryNamePadding: 0.4em 1em !default;
-$categoryNameFontWeight: $bold !default;
-$categoryNameColor: $lightTextColor !default;
+$search-category-name-width: 100px !default;
+$search-category-name-background: transparent !default;
+$search-category-name-font: $page-font !default;
+$search-category-name-font-size: 1em !default;
+$search-category-name-whitespace: nowrap !default;
+$search-category-name-padding: 0.4em 1em !default;
+$search-category-name-font-weight: $bold !default;
+$search-category-name-color: $light-text-color !default;

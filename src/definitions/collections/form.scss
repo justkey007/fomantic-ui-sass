@@ -14,7 +14,7 @@
 ---------------------*/
 
 .ui.form > p {
-  margin: $paragraphMargin;
+  margin: $form-paragraph-margin;
 }
 
 /*--------------------
@@ -23,7 +23,7 @@
 
 .ui.form .field {
   clear: both;
-  margin: $fieldMargin;
+  margin: $form-field-margin;
 }
 
 .ui.form .field:last-child,
@@ -42,11 +42,11 @@
 
 .ui.form .field > label {
   display: block;
-  margin: $labelMargin;
-  color: $labelColor;
-  font-size: $labelFontSize;
-  font-weight: $labelFontWeight;
-  text-transform: $labelTextTransform;
+  margin: $form-label-margin;
+  color: $form-label-color;
+  font-size: $form-label-font-size;
+  font-weight: $form-label-font-weight;
+  text-transform: $form-label-text-transform;
 }
 
 /*--------------------
@@ -55,55 +55,55 @@
 
 .ui.form textarea,
 .ui.form input:not([type]),
-.ui.form input[type='date'],
-.ui.form input[type='datetime-local'],
-.ui.form input[type='email'],
-.ui.form input[type='number'],
-.ui.form input[type='password'],
-.ui.form input[type='search'],
-.ui.form input[type='tel'],
-.ui.form input[type='time'],
-.ui.form input[type='text'],
-.ui.form input[type='file'],
-.ui.form input[type='url'] {
-  width: $inputWidth;
+.ui.form input[type="date"],
+.ui.form input[type="datetime-local"],
+.ui.form input[type="email"],
+.ui.form input[type="number"],
+.ui.form input[type="password"],
+.ui.form input[type="search"],
+.ui.form input[type="tel"],
+.ui.form input[type="time"],
+.ui.form input[type="text"],
+.ui.form input[type="file"],
+.ui.form input[type="url"] {
+  width: $form-input-width;
   vertical-align: top;
 }
 
 /* Set max height on unusual input */
 .ui.form ::-webkit-datetime-edit,
 .ui.form ::-webkit-inner-spin-button {
-  height: $inputLineHeight;
+  height: $input-line-height;
 }
 
 .ui.form input:not([type]),
-.ui.form input[type='date'],
-.ui.form input[type='datetime-local'],
-.ui.form input[type='email'],
-.ui.form input[type='number'],
-.ui.form input[type='password'],
-.ui.form input[type='search'],
-.ui.form input[type='tel'],
-.ui.form input[type='time'],
-.ui.form input[type='text'],
-.ui.form input[type='file'],
-.ui.form input[type='url'] {
-  font-family: $inputFont;
+.ui.form input[type="date"],
+.ui.form input[type="datetime-local"],
+.ui.form input[type="email"],
+.ui.form input[type="number"],
+.ui.form input[type="password"],
+.ui.form input[type="search"],
+.ui.form input[type="tel"],
+.ui.form input[type="time"],
+.ui.form input[type="text"],
+.ui.form input[type="file"],
+.ui.form input[type="url"] {
+  font-family: $form-input-font;
   margin: 0;
   outline: none;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
-  line-height: $inputLineHeight;
-  padding: $inputPadding;
-  font-size: $inputFontSize;
+  line-height: $input-line-height;
+  padding: $form-input-padding;
+  font-size: $form-input-font-size;
 
-  background: $inputBackground;
-  border: $inputBorder;
-  color: $inputColor;
-  border-radius: $inputBorderRadius;
-  box-shadow: $inputBoxShadow;
-  transition: $inputTransition;
+  background: $input-background;
+  border: $form-input-border;
+  color: $form-input-color;
+  border-radius: $form-input-border-radius;
+  box-shadow: $form-input-box-shadow;
+  transition: $form-input-transition;
 }
 
 /* Text Area */
@@ -112,28 +112,28 @@
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
-  padding: $textAreaPadding;
-  background: $textAreaBackground;
-  border: $textAreaBorder;
+  padding: $form-text-area-padding;
+  background: $form-text-area-background;
+  border: $form-text-area-border;
   outline: none;
-  color: $inputColor;
-  border-radius: $inputBorderRadius;
-  box-shadow: $inputBoxShadow;
-  transition: $textAreaTransition;
-  font-size: $textAreaFontSize;
-  font-family: $inputFont;
-  line-height: $textAreaLineHeight;
-  resize: $textAreaResize;
+  color: $form-input-color;
+  border-radius: $form-input-border-radius;
+  box-shadow: $form-input-box-shadow;
+  transition: $form-text-area-transition;
+  font-size: $form-text-area-font-size;
+  font-family: $form-input-font;
+  line-height: $form-text-area-line-height;
+  resize: $form-text-area-resize;
 }
 .ui.form textarea:not([rows]) {
-  height: $textAreaHeight;
-  min-height: $textAreaMinHeight;
-  max-height: $textAreaMaxHeight;
+  height: $form-text-area-height;
+  min-height: $form-text-area-min-height;
+  max-height: $form-text-area-max-height;
 }
 
 .ui.form textarea,
-.ui.form input[type='checkbox'] {
-  vertical-align: $checkboxVerticalAlign;
+.ui.form input[type="checkbox"] {
+  vertical-align: $form-checkbox-vertical-align;
 }
 
 /*--------------------
@@ -144,28 +144,28 @@
   .fields:not(.grouped):not(.inline)
   .field:not(:only-child)
   .ui.checkbox {
-  margin-top: $inputLineHeight + $checkboxFieldTopMargin;
+  margin-top: $input-line-height + $form-checkbox-field-top-margin;
 }
 .ui.form
   .fields:not(.grouped):not(.inline)
   .field:not(:only-child)
   .ui.toggle.checkbox {
-  margin-top: $inputLineHeight + $checkboxToggleFieldTopMargin;
+  margin-top: $input-line-height + $form-checkbox-toggle-field-top-margin;
 }
 .ui.form
   .fields:not(.grouped):not(.inline)
   .field:not(:only-child)
   .ui.slider.checkbox {
-  margin-top: $inputLineHeight + $checkboxSliderFieldTopMargin;
+  margin-top: $input-line-height + $form-checkbox-slider-field-top-margin;
 }
-.ui.ui.form .field .fields .field:not(:only-child) .ui.checkbox {
-  margin-top: $checkboxFieldTopMargin / 2;
+.ui.form .field .fields .field:not(:only-child) .ui.checkbox {
+  margin-top: $form-checkbox-field-top-margin / 2;
 }
-.ui.ui.form .field .fields .field:not(:only-child) .ui.toggle.checkbox {
-  margin-top: $checkboxToggleFieldTopMargin / 2;
+.ui.form .field .fields .field:not(:only-child) .ui.toggle.checkbox {
+  margin-top: $form-checkbox-toggle-field-top-margin / 2;
 }
-.ui.ui.form .field .fields .field:not(:only-child) .ui.slider.checkbox {
-  margin-top: $checkboxSliderFieldTopMargin / 2;
+.ui.form .field .fields .field:not(:only-child) .ui.slider.checkbox {
+  margin-top: $form-checkbox-slider-field-top-margin / 2;
 }
 
 /*--------------------
@@ -175,7 +175,7 @@
 .ui.form .field .transparent.input input,
 .ui.form .field input.transparent,
 .ui.form .field textarea.transparent {
-  padding: $transparentPadding !important;
+  padding: $form-transparent-padding !important;
 }
 
 .ui.form .field textarea.transparent {
@@ -187,8 +187,8 @@
 .ui.form .field.error .transparent.input input,
 .ui.form .field.error input.transparent,
 .ui.form .field.error textarea.transparent {
-  background-color: $transparentFormErrorBackground !important;
-  color: $transparentFormErrorColor !important;
+  background-color: $form-transparent-error-background !important;
+  color: $form-transparent-error-color !important;
 }
 
 /*--------------------------
@@ -207,13 +207,13 @@
   display: block;
   height: auto;
   width: 100%;
-  background: $selectBackground;
-  border: $selectBorder;
-  border-radius: $selectBorderRadius;
-  box-shadow: $selectBoxShadow;
-  padding: $selectPadding;
-  color: $selectColor;
-  transition: $selectTransition;
+  background: $form-select-background;
+  border: $form-select-border;
+  border-radius: $form-select-border-radius;
+  box-shadow: $form-select-box-shadow;
+  padding: $form-select-padding;
+  color: $form-select-color;
+  transition: $form-select-transition;
 }
 
 /*--------------------
@@ -300,18 +300,19 @@
 
 .ui.form .field .prompt.label {
   white-space: normal;
-  background: $promptBackground !important;
-  border: $promptBorder !important;
-  color: $promptTextColor !important;
+  background: $form-prompt-background !important;
+  border: $form-prompt-border !important;
+  color: $form-prompt-text-color !important;
 }
 .ui.form .inline.fields .field .prompt,
 .ui.form .inline.field .prompt {
   vertical-align: top;
-  margin: $inlinePromptMargin;
+  margin: $form-inline-prompt-margin;
 }
 .ui.form .inline.fields .field .prompt:before,
 .ui.form .inline.field .prompt:before {
-  border-width: 0 0 $inlinePromptBorderWidth $inlinePromptBorderWidth;
+  border-width: 0 0 $form-inline-prompt-border-width
+    $form-inline-prompt-border-width;
   bottom: auto;
   right: auto;
   top: 50%;
@@ -327,20 +328,20 @@
 ---------------------*/
 
 .ui.form .field.field input:-webkit-autofill {
-  box-shadow: 0 0 0 100px $inputAutoFillBackground inset !important;
-  border-color: $inputAutoFillBorder !important;
+  box-shadow: 0 0 0 100px $form-input-auto-fill-background inset !important;
+  border-color: $form-input-auto-fill-border !important;
 }
 
 /* Focus */
 .ui.form .field.field input:-webkit-autofill:focus {
-  box-shadow: 0 0 0 100px $inputAutoFillFocusBackground inset !important;
-  border-color: $inputAutoFillFocusBorder !important;
+  box-shadow: 0 0 0 100px $form-input-auto-fill-focus-background inset !important;
+  border-color: $form-input-auto-fill-focus-border !important;
 }
 
 /* Error */
 .ui.form .error.error input:-webkit-autofill {
-  box-shadow: 0 0 0 100px $inputAutoFillErrorBackground inset !important;
-  border-color: $inputAutoFillErrorBorder !important;
+  box-shadow: 0 0 0 100px $form-input-auto-fill-error-background inset !important;
+  border-color: $form-input-auto-fill-error-border !important;
 }
 
 /*--------------------
@@ -349,44 +350,44 @@
 
 /* browsers require these rules separate */
 .ui.form ::-webkit-input-placeholder {
-  color: $inputPlaceholderColor;
+  color: $input-placeholder-color;
 }
 .ui.form :-ms-input-placeholder {
-  color: $inputPlaceholderColor !important;
+  color: $input-placeholder-color !important;
 }
 .ui.form ::-moz-placeholder {
-  color: $inputPlaceholderColor;
+  color: $input-placeholder-color;
 }
 
 .ui.form :focus::-webkit-input-placeholder {
-  color: $inputPlaceholderFocusColor;
+  color: $input-placeholder-focus-color;
 }
 .ui.form :focus:-ms-input-placeholder {
-  color: $inputPlaceholderFocusColor !important;
+  color: $input-placeholder-focus-color !important;
 }
 .ui.form :focus::-moz-placeholder {
-  color: $inputPlaceholderFocusColor;
+  color: $input-placeholder-focus-color;
 }
 
 /* Error Placeholder */
 .ui.form .error ::-webkit-input-placeholder {
-  color: $inputErrorPlaceholderColor;
+  color: $form-input-error-placeholder-color;
 }
 .ui.form .error :-ms-input-placeholder {
-  color: $inputErrorPlaceholderColor !important;
+  color: $form-input-error-placeholder-color !important;
 }
 .ui.form .error ::-moz-placeholder {
-  color: $inputErrorPlaceholderColor;
+  color: $form-input-error-placeholder-color;
 }
 
 .ui.form .error :focus::-webkit-input-placeholder {
-  color: $inputErrorPlaceholderFocusColor;
+  color: $form-input-error-placeholder-focus-color;
 }
 .ui.form .error :focus:-ms-input-placeholder {
-  color: $inputErrorPlaceholderFocusColor !important;
+  color: $form-input-error-placeholder-focus-color !important;
 }
 .ui.form .error :focus::-moz-placeholder {
-  color: $inputErrorPlaceholderFocusColor;
+  color: $form-input-error-placeholder-focus-color;
 }
 
 /*--------------------
@@ -394,29 +395,29 @@
 ---------------------*/
 
 .ui.form input:not([type]):focus,
-.ui.form input[type='date']:focus,
-.ui.form input[type='datetime-local']:focus,
-.ui.form input[type='email']:focus,
-.ui.form input[type='number']:focus,
-.ui.form input[type='password']:focus,
-.ui.form input[type='search']:focus,
-.ui.form input[type='tel']:focus,
-.ui.form input[type='time']:focus,
-.ui.form input[type='text']:focus,
-.ui.form input[type='file']:focus,
-.ui.form input[type='url']:focus {
-  color: $inputFocusColor;
-  border-color: $inputFocusBorderColor;
-  border-radius: $inputFocusBorderRadius;
-  background: $inputFocusBackground;
-  box-shadow: $inputFocusBoxShadow;
+.ui.form input[type="date"]:focus,
+.ui.form input[type="datetime-local"]:focus,
+.ui.form input[type="email"]:focus,
+.ui.form input[type="number"]:focus,
+.ui.form input[type="password"]:focus,
+.ui.form input[type="search"]:focus,
+.ui.form input[type="tel"]:focus,
+.ui.form input[type="time"]:focus,
+.ui.form input[type="text"]:focus,
+.ui.form input[type="file"]:focus,
+.ui.form input[type="url"]:focus {
+  color: $form-input-focus-color;
+  border-color: $form-input-focus-border-color;
+  border-radius: $form-input-focus-border-radius;
+  background: $form-input-focus-background;
+  box-shadow: $form-input-focus-box-shadow;
 }
 .ui.form textarea:focus {
-  color: $textAreaFocusColor;
-  border-color: $textAreaFocusBorderColor;
-  border-radius: $textAreaFocusBorderRadius;
-  background: $textAreaFocusBackground;
-  box-shadow: $textAreaFocusBoxShadow;
+  color: $form-text-area-focus-color;
+  border-color: $form-text-area-focus-border-color;
+  border-radius: $form-text-area-focus-border-radius;
+  background: $form-text-area-focus-background;
+  box-shadow: $form-text-area-focus-box-shadow;
   -webkit-appearance: none;
 }
 
@@ -471,68 +472,68 @@
 .ui.form .fields.error .field .input,
 label.error,
 .ui.form .field.error .input {
-  color: $formErrorColor !important;
+  color: $form-error-color !important;
 }
 
 .ui.form .fields.error .field .corner.label,
 .ui.form .field.error .corner.label {
-  border-color: $formErrorColor;
+  border-color: $form-error-color;
   color: $white;
 }
 
 .ui.form .fields.error .field textarea,
 .ui.form .fields.error .field select,
 .ui.form .fields.error .field input:not([type]),
-.ui.form .fields.error .field input[type='date'],
-.ui.form .fields.error .field input[type='datetime-local'],
-.ui.form .fields.error .field input[type='email'],
-.ui.form .fields.error .field input[type='number'],
-.ui.form .fields.error .field input[type='password'],
-.ui.form .fields.error .field input[type='search'],
-.ui.form .fields.error .field input[type='tel'],
-.ui.form .fields.error .field input[type='time'],
-.ui.form .fields.error .field input[type='text'],
-.ui.form .fields.error .field input[type='file'],
-.ui.form .fields.error .field input[type='url'],
+.ui.form .fields.error .field input[type="date"],
+.ui.form .fields.error .field input[type="datetime-local"],
+.ui.form .fields.error .field input[type="email"],
+.ui.form .fields.error .field input[type="number"],
+.ui.form .fields.error .field input[type="password"],
+.ui.form .fields.error .field input[type="search"],
+.ui.form .fields.error .field input[type="tel"],
+.ui.form .fields.error .field input[type="time"],
+.ui.form .fields.error .field input[type="text"],
+.ui.form .fields.error .field input[type="file"],
+.ui.form .fields.error .field input[type="url"],
 .ui.form .field.error textarea,
 .ui.form .field.error select,
 .ui.form .field.error input:not([type]),
-.ui.form .field.error input[type='date'],
-.ui.form .field.error input[type='datetime-local'],
-.ui.form .field.error input[type='email'],
-.ui.form .field.error input[type='number'],
-.ui.form .field.error input[type='password'],
-.ui.form .field.error input[type='search'],
-.ui.form .field.error input[type='tel'],
-.ui.form .field.error input[type='time'],
-.ui.form .field.error input[type='text'],
-.ui.form .field.error input[type='file'],
-.ui.form .field.error input[type='url'] {
-  background: $formErrorBackground;
-  border-color: $formErrorBorder;
-  color: $formErrorColor;
-  border-radius: $inputErrorBorderRadius;
-  box-shadow: $inputErrorBoxShadow;
+.ui.form .field.error input[type="date"],
+.ui.form .field.error input[type="datetime-local"],
+.ui.form .field.error input[type="email"],
+.ui.form .field.error input[type="number"],
+.ui.form .field.error input[type="password"],
+.ui.form .field.error input[type="search"],
+.ui.form .field.error input[type="tel"],
+.ui.form .field.error input[type="time"],
+.ui.form .field.error input[type="text"],
+.ui.form .field.error input[type="file"],
+.ui.form .field.error input[type="url"] {
+  background: $form-error-background;
+  border-color: $form-error-border;
+  color: $form-error-color;
+  border-radius: $form-input-error-border-radius;
+  box-shadow: $form-input-error-box-shadow;
 }
 .ui.form .field.error textarea:focus,
 .ui.form .field.error select:focus,
 .ui.form .field.error input:not([type]):focus,
-.ui.form .field.error input[type='date']:focus,
-.ui.form .field.error input[type='datetime-local']:focus,
-.ui.form .field.error input[type='email']:focus,
-.ui.form .field.error input[type='number']:focus,
-.ui.form .field.error input[type='password']:focus,
-.ui.form .field.error input[type='search']:focus,
-.ui.form .field.error input[type='tel']:focus,
-.ui.form .field.error input[type='time']:focus,
-.ui.form .field.error input[type='text']:focus,
-.ui.form .field.error input[type='file']:focus,
-.ui.form .field.error input[type='url']:focus {
-  background: $inputErrorFocusBackground;
-  border-color: $inputErrorFocusBorder;
-  color: $inputErrorFocusColor;
+.ui.form .field.error input[type="date"]:focus,
+.ui.form .field.error input[type="datetime-local"]:focus,
+.ui.form .field.error input[type="email"]:focus,
+.ui.form .field.error input[type="number"]:focus,
+.ui.form .field.error input[type="password"]:focus,
+.ui.form .field.error input[type="search"]:focus,
+.ui.form .field.error input[type="tel"]:focus,
+.ui.form .field.error input[type="time"]:focus,
+.ui.form .field.error input[type="text"]:focus,
+.ui.form .field.error input[type="file"]:focus,
+.ui.form .field.error input[type="url"]:focus {
+  background: $form-input-error-focus-background;
+  border-color: $form-input-error-focus-border;
+  color: $form-input-error-focus-color;
 
-  box-shadow: $inputErrorFocusBoxShadow;
+  box-shadow: $form-input-error-focus-box-shadow;
 }
 
 /* Preserve Native Select Stylings */
@@ -549,43 +550,43 @@ label.error,
 .ui.form .field.error .ui.dropdown,
 .ui.form .field.error .ui.dropdown .text,
 .ui.form .field.error .ui.dropdown .item {
-  background: $formErrorBackground;
-  color: $formErrorColor;
+  background: $form-error-background;
+  color: $form-error-color;
 }
 .ui.form .fields.error .field .ui.dropdown,
 .ui.form .field.error .ui.dropdown {
-  border-color: $formErrorBorder !important;
+  border-color: $form-error-border !important;
 }
 .ui.form .fields.error .field .ui.dropdown:hover,
 .ui.form .field.error .ui.dropdown:hover {
-  border-color: $formErrorBorder !important;
+  border-color: $form-error-border !important;
 }
 .ui.form .fields.error .field .ui.dropdown:hover .menu,
 .ui.form .field.error .ui.dropdown:hover .menu {
-  border-color: $formErrorBorder;
+  border-color: $form-error-border;
 }
 .ui.form .fields.error .field .ui.multiple.selection.dropdown > .label,
 .ui.form .field.error .ui.multiple.selection.dropdown > .label {
-  background-color: $dropdownErrorLabelBackground;
-  color: $dropdownErrorLabelColor;
+  background-color: $form-dropdown-error-label-background;
+  color: $form-dropdown-error-label-color;
 }
 
 /* Hover */
 .ui.form .fields.error .field .ui.dropdown .menu .item:hover,
 .ui.form .field.error .ui.dropdown .menu .item:hover {
-  background-color: $dropdownErrorHoverBackground;
+  background-color: $form-dropdown-error-hover-background;
 }
 
 /* Selected */
 .ui.form .fields.error .field .ui.dropdown .menu .selected.item,
 .ui.form .field.error .ui.dropdown .menu .selected.item {
-  background-color: $dropdownErrorSelectedBackground;
+  background-color: $form-dropdown-error-selected-background;
 }
 
 /* Active */
 .ui.form .fields.error .field .ui.dropdown .menu .active.item,
 .ui.form .field.error .ui.dropdown .menu .active.item {
-  background-color: $dropdownErrorActiveBackground !important;
+  background-color: $form-dropdown-error-active-background !important;
 }
 
 /*--------------------
@@ -596,20 +597,20 @@ label.error,
 .ui.form .field.error .checkbox:not(.toggle):not(.slider) label,
 .ui.form .fields.error .field .checkbox:not(.toggle):not(.slider) .box,
 .ui.form .field.error .checkbox:not(.toggle):not(.slider) .box {
-  color: $formErrorColor;
+  color: $form-error-color;
 }
 .ui.form .fields.error .field .checkbox:not(.toggle):not(.slider) label:before,
 .ui.form .field.error .checkbox:not(.toggle):not(.slider) label:before,
 .ui.form .fields.error .field .checkbox:not(.toggle):not(.slider) .box:before,
 .ui.form .field.error .checkbox:not(.toggle):not(.slider) .box:before {
-  background: $formErrorBackground;
-  border-color: $formErrorBorder;
+  background: $form-error-background;
+  border-color: $form-error-border;
 }
 .ui.form .fields.error .field .checkbox label:after,
 .ui.form .field.error .checkbox label:after,
 .ui.form .fields.error .field .checkbox .box:after,
 .ui.form .field.error .checkbox .box:after {
-  color: $formErrorColor;
+  color: $form-error-color;
 }
 
 /*--------------------
@@ -620,11 +621,11 @@ label.error,
 .ui.form .disabled.field,
 .ui.form .field :disabled {
   pointer-events: none;
-  opacity: $disabledOpacity;
+  opacity: $disabled-opacity;
 }
 .ui.form .field.disabled > label,
 .ui.form .fields.disabled > label {
-  opacity: $disabledLabelOpacity;
+  opacity: $form-disabled-label-opacity;
 }
 .ui.form .field.disabled :disabled {
   opacity: 1;
@@ -641,36 +642,36 @@ label.error,
 }
 .ui.loading.form:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
-  background: $loaderDimmerColor;
+  background: $form-loader-dimmer-color;
   width: 100%;
   height: 100%;
-  z-index: $loaderDimmerZIndex;
+  z-index: $form-loader-dimmer-z-index;
 }
 
 .ui.loading.form.segments:before {
-  border-radius: $defaultBorderRadius;
+  border-radius: $default-border-radius;
 }
 
 .ui.loading.form:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
 
-  margin: $loaderMargin;
-  width: $loaderSize;
-  height: $loaderSize;
+  margin: $loader-margin;
+  width: $form-loader-size;
+  height: $form-loader-size;
 
-  animation: loader $loaderSpeed infinite linear;
-  border: $loaderLineWidth solid $loaderLineColor;
-  border-radius: $circularRadius;
+  animation: loader $loader-speed infinite linear;
+  border: $loader-line-width solid $loader-line-color;
+  border-radius: $circular-radius;
 
   box-shadow: 0 0 0 1px transparent;
   visibility: visible;
-  z-index: $loaderLineZIndex;
+  z-index: $form-loader-line-z-index;
 }
 
 /*******************************
@@ -687,9 +688,9 @@ label.error,
 .ui.form .required.fields:not(.grouped) > .field > .checkbox:after,
 .ui.form .required.field > .checkbox:after,
 .ui.form label.required:after {
-  margin: $requiredMargin;
-  content: $requiredContent;
-  color: $requiredColor;
+  margin: $form-required-margin;
+  content: $form-required-content;
+  color: $form-required-color;
 }
 
 .ui.form .required.fields:not(.grouped) > .field > label:after,
@@ -726,31 +727,31 @@ label.error,
 .ui.inverted.form .inline.fields .field > p,
 .ui.inverted.form .inline.field > label,
 .ui.inverted.form .inline.field > p {
-  color: $invertedLabelColor;
+  color: $form-inverted-label-color;
 }
 .ui.inverted.loading.form {
-  color: $invertedLoaderLineColor;
+  color: $inverted-loader-line-color;
 }
 .ui.inverted.loading.form:before {
-  background: $loaderInvertedDimmerColor;
+  background: $form-loader-inverted-dimmer-color;
 }
 /* Inverted Field */
 .ui.inverted.form input:not([type]),
-.ui.inverted.form input[type='date'],
-.ui.inverted.form input[type='datetime-local'],
-.ui.inverted.form input[type='email'],
-.ui.inverted.form input[type='number'],
-.ui.inverted.form input[type='password'],
-.ui.inverted.form input[type='search'],
-.ui.inverted.form input[type='tel'],
-.ui.inverted.form input[type='time'],
-.ui.inverted.form input[type='text'],
-.ui.inverted.form input[type='file'],
-.ui.inverted.form input[type='url'] {
-  background: $invertedInputBackground;
-  border-color: $invertedInputBorderColor;
-  color: $invertedInputColor;
-  box-shadow: $invertedInputBoxShadow;
+.ui.inverted.form input[type="date"],
+.ui.inverted.form input[type="datetime-local"],
+.ui.inverted.form input[type="email"],
+.ui.inverted.form input[type="number"],
+.ui.inverted.form input[type="password"],
+.ui.inverted.form input[type="search"],
+.ui.inverted.form input[type="tel"],
+.ui.inverted.form input[type="time"],
+.ui.inverted.form input[type="text"],
+.ui.inverted.form input[type="file"],
+.ui.inverted.form input[type="url"] {
+  background: $form-inverted-input-background;
+  border-color: $form-inverted-input-border-color;
+  color: $form-inverted-input-color;
+  box-shadow: $form-inverted-input-box-shadow;
 }
 
 /*--------------------
@@ -760,24 +761,24 @@ label.error,
 /* Grouped Vertically */
 .ui.form .grouped.fields {
   display: block;
-  margin: $groupedMargin;
+  margin: $form-grouped-margin;
 }
 .ui.form .grouped.fields:last-child {
   margin-bottom: 0;
 }
 
 .ui.form .grouped.fields > label {
-  margin: $groupedLabelMargin;
-  color: $groupedLabelColor;
-  font-size: $groupedLabelFontSize;
-  font-weight: $groupedLabelFontWeight;
-  text-transform: $groupedLabelTextTransform;
+  margin: $form-grouped-label-margin;
+  color: $form-grouped-label-color;
+  font-size: $form-grouped-label-font-size;
+  font-weight: $form-grouped-label-font-weight;
+  text-transform: $form-grouped-label-text-transform;
 }
 
 .ui.form .grouped.fields .field,
 .ui.form .grouped.inline.fields .field {
   display: block;
-  margin: $groupedFieldMargin;
+  margin: $form-grouped-field-margin;
   padding: 0;
 }
 
@@ -789,12 +790,12 @@ label.error,
 .ui.form .fields {
   display: flex;
   flex-direction: row;
-  margin: $fieldsMargin;
+  margin: $form-fields-margin;
 }
 .ui.form .fields > .field {
   flex: 0 1 auto;
-  padding-left: ($gutterWidth / 2);
-  padding-right: ($gutterWidth / 2);
+  padding-left: ($form-gutter-width / 2);
+  padding-right: ($form-gutter-width / 2);
 }
 .ui.form .fields > .field:first-child {
   border-left: none;
@@ -804,50 +805,50 @@ label.error,
 /* Other Combinations */
 .ui.form .two.fields > .fields,
 .ui.form .two.fields > .field {
-  width: $twoColumn;
+  width: $two-column;
 }
 .ui.form .three.fields > .fields,
 .ui.form .three.fields > .field {
-  width: $threeColumn;
+  width: $three-column;
 }
 .ui.form .four.fields > .fields,
 .ui.form .four.fields > .field {
-  width: $fourColumn;
+  width: $four-column;
 }
 .ui.form .five.fields > .fields,
 .ui.form .five.fields > .field {
-  width: $fiveColumn;
+  width: $five-column;
 }
 .ui.form .six.fields > .fields,
 .ui.form .six.fields > .field {
-  width: $sixColumn;
+  width: $six-column;
 }
 .ui.form .seven.fields > .fields,
 .ui.form .seven.fields > .field {
-  width: $sevenColumn;
+  width: $seven-column;
 }
 .ui.form .eight.fields > .fields,
 .ui.form .eight.fields > .field {
-  width: $eightColumn;
+  width: $eight-column;
 }
 .ui.form .nine.fields > .fields,
 .ui.form .nine.fields > .field {
-  width: $nineColumn;
+  width: $nine-column;
 }
 .ui.form .ten.fields > .fields,
 .ui.form .ten.fields > .field {
-  width: $tenColumn;
+  width: $ten-column;
 }
 
 /* Swap to full width on mobile */
-@media only screen and (max-width: $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.form .fields {
     flex-wrap: wrap;
   }
 
-  .ui[class*='equal width'].form:not(.unstackable) .fields > .field,
+  .ui[class*="equal width"].form:not(.unstackable) .fields > .field,
   .ui.form:not(.unstackable)
-    [class*='equal width'].fields:not(.unstackable)
+    [class*="equal width"].fields:not(.unstackable)
     > .field,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .fields,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .field,
@@ -867,69 +868,69 @@ label.error,
   .ui.form:not(.unstackable) .nine.fields:not(.unstackable) > .field,
   .ui.form:not(.unstackable) .ten.fields:not(.unstackable) > .fields,
   .ui.form:not(.unstackable) .ten.fields:not(.unstackable) > .field {
-    width: $oneColumn !important;
-    margin: 0 0 $rowDistance;
+    width: $one-column !important;
+    margin: 0 0 $form-row-distance;
   }
 }
 
 /* Sizing Combinations */
 .ui.form .fields .wide.field {
-  width: $oneWide;
-  padding-left: ($gutterWidth / 2);
-  padding-right: ($gutterWidth / 2);
+  width: $one-wide;
+  padding-left: ($form-gutter-width / 2);
+  padding-right: ($form-gutter-width / 2);
 }
 
 .ui.form .one.wide.field {
-  width: $oneWide !important;
+  width: $one-wide !important;
 }
 .ui.form .two.wide.field {
-  width: $twoWide !important;
+  width: $two-wide !important;
 }
 .ui.form .three.wide.field {
-  width: $threeWide !important;
+  width: $three-wide !important;
 }
 .ui.form .four.wide.field {
-  width: $fourWide !important;
+  width: $four-wide !important;
 }
 .ui.form .five.wide.field {
-  width: $fiveWide !important;
+  width: $five-wide !important;
 }
 .ui.form .six.wide.field {
-  width: $sixWide !important;
+  width: $six-wide !important;
 }
 .ui.form .seven.wide.field {
-  width: $sevenWide !important;
+  width: $seven-wide !important;
 }
 .ui.form .eight.wide.field {
-  width: $eightWide !important;
+  width: $eight-wide !important;
 }
 .ui.form .nine.wide.field {
-  width: $nineWide !important;
+  width: $nine-wide !important;
 }
 .ui.form .ten.wide.field {
-  width: $tenWide !important;
+  width: $ten-wide !important;
 }
 .ui.form .eleven.wide.field {
-  width: $elevenWide !important;
+  width: $eleven-wide !important;
 }
 .ui.form .twelve.wide.field {
-  width: $twelveWide !important;
+  width: $twelve-wide !important;
 }
 .ui.form .thirteen.wide.field {
-  width: $thirteenWide !important;
+  width: $thirteen-wide !important;
 }
 .ui.form .fourteen.wide.field {
-  width: $fourteenWide !important;
+  width: $fourteen-wide !important;
 }
 .ui.form .fifteen.wide.field {
-  width: $fifteenWide !important;
+  width: $fifteen-wide !important;
 }
 .ui.form .sixteen.wide.field {
-  width: $sixteenWide !important;
+  width: $sixteen-wide !important;
 }
 
 /* Swap to full width on mobile */
-@media only screen and (max-width: $largestMobileScreen) {
+@media only screen and (max-width: $largest-mobile-screen) {
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .fields,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .field,
   .ui.form:not(.unstackable) .three.fields:not(.unstackable) > .fields,
@@ -953,7 +954,7 @@ label.error,
   .ui.form:not(.unstackable) .fields:not(.unstackable) > .fourteen.wide.field,
   .ui.form:not(.unstackable) .fields:not(.unstackable) > .fifteen.wide.field,
   .ui.form:not(.unstackable) .fields:not(.unstackable) > .sixteen.wide.field {
-    width: $oneColumn !important;
+    width: $one-column !important;
   }
   .ui.form .fields {
     margin-bottom: 0;
@@ -964,8 +965,8 @@ label.error,
      Equal Width
 ---------------------*/
 
-.ui[class*='equal width'].form .fields > .field,
-.ui.form [class*='equal width'].fields > .field {
+.ui[class*="equal width"].form .fields > .field,
+.ui.form [class*="equal width"].fields > .field {
   width: 100%;
   flex: 1 1 auto;
 }
@@ -975,12 +976,12 @@ label.error,
 ---------------------*/
 
 .ui.form .inline.fields {
-  margin: $fieldMargin;
+  margin: $form-field-margin;
   align-items: center;
 }
 .ui.form .inline.fields .field {
   margin: 0;
-  padding: $inlineFieldsMargin;
+  padding: $form-inline-fields-margin;
 }
 
 /* Inline Label */
@@ -994,15 +995,15 @@ label.error,
   margin-top: 0;
   margin-bottom: 0;
   vertical-align: baseline;
-  font-size: $inlineLabelFontSize;
-  font-weight: $inlineLabelFontWeight;
-  color: $inlineLabelColor;
-  text-transform: $inlineLabelTextTransform;
+  font-size: $form-inline-label-font-size;
+  font-weight: $form-inline-label-font-weight;
+  color: $form-inline-label-color;
+  text-transform: $form-inline-label-text-transform;
 }
 
 /* Grouped Inline Label */
 .ui.form .inline.fields > label {
-  margin: $groupedInlineLabelMargin;
+  margin: $form-grouped-inline-label-margin;
 }
 
 /* Inline Input */
@@ -1017,13 +1018,13 @@ label.error,
   margin-bottom: 0;
 
   vertical-align: middle;
-  font-size: $inlineInputSize;
+  font-size: $form-inline-input-size;
 }
 
 /* Label */
 .ui.form .inline.fields .field > :first-child,
 .ui.form .inline.field > :first-child {
-  margin: 0 $inlineLabelDistance 0 0;
+  margin: 0 $form-inline-label-distance 0 0;
 }
 .ui.form .inline.fields .field > :only-child,
 .ui.form .inline.field > :only-child {

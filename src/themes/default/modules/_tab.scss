@@ -1,10 +1,10 @@
 //******************************  Tab *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 // Loading */
-$loadingMinHeight: 250px !default;
-$loadingContentPosition: relative !default;
-$loadingContentOffset: -10000px !default;
+$tab-loading-min-height: 250px !default;
+$tab-loading-content-position: relative !default;
+$tab-loading-content-offset: -10000px !default;
 
-$loaderDistanceFromTop: 50% !default;
-$loaderSize: 2.5em !default;
+$tab-loader-distance-from-top: 50% !default;
+$tab-loader-size: 2.5em !default;

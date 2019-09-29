@@ -1,36 +1,35 @@
 //****************************** Image *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 //------------------ Element --------------------*/
 
-$placeholderColor: transparent !default;
-$roundedBorderRadius: 0.3125em !default;
+$image-placeholder-color: transparent !default;
+$image-rounded-border-radius: 0.3125em !default;
 
-$imageHorizontalMargin: 0.25rem !default;
-$imageVerticalMargin: 0.5rem !default;
-$imageBorder: 1px solid rgba(0, 0, 0, 0.1) !default;
+$image-horizontal-margin: 0.25rem !default;
+$image-vertical-margin: 0.5rem !default;
+$image-border: 1px solid rgba(0, 0, 0, 0.1) !default;
 
 //------------------- Types --------------------*/
 
 // Avatar */
-$avatarSize: 2em !default;
-$avatarMargin: 0.25em !default;
-
+$image-avatar-size: 2em !default;
+$image-avatar-margin: 0.25em !default;
 
 //------------------- Variations --------------------*/
 
 // Spaced */
-$spacedDistance: 0.5em !default;
+$image-spaced-distance: 0.5em !default;
 
 // Floated */
-$floatedHorizontalMargin: 1em !default;
-$floatedVerticalMargin: 1em !default;
+$image-floated-horizontal-margin: 1em !default;
+$image-floated-vertical-margin: 1em !default;
 
 // Size */
-$miniWidth: 35px !default;
-$tinyWidth: 80px !default;
-$smallWidth: 150px !default;
-$mediumWidth: 300px !default;
-$largeWidth: 450px !default;
-$bigWidth: 600px !default;
-$hugeWidth: 800px !default;
-$massiveWidth: 960px !default;
+$image-mini-width: 35px !default;
+$image-tiny-width: 80px !default;
+$image-small-width: 150px !default;
+$image-medium-width: 300px !default;
+$image-large-width: 450px !default;
+$image-big-width: 600px !default;
+$image-huge-width: 800px !default;
+$image-massive-width: 960px !default;

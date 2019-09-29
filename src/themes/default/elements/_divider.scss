@@ -1,46 +1,47 @@
 //****************************** Divider *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Element --------------------*/
 
-$margin: 1rem 0 !default;
+$divider-margin: 1rem 0 !default;
 
-$highlightWidth: 1px !default;
-$highlightColor: $whiteBorderColor !default;
+$divider-highlight-width: 1px !default;
+$divider-highlight-color: $white-border-color !default;
 
-$shadowWidth: 1px !default;
-$shadowColor: $borderColor !default;
+$divider-shadow-width: 1px !default;
+$divider-shadow-color: $border-color !default;
 
 // Text */
-$letterSpacing: 0.05em !default;
-$fontWeight: $bold !default;
-$color: $darkTextColor !default;
-$textTransform: uppercase !default;
+$divider-letter-spacing: 0.05em !default;
+$divider-font-weight: $bold !default;
+$divider-color: $dark-text-color !default;
+$divider-text-transform: uppercase !default;
 
 //------------------- Coupling --------------------*/
 
 // Icon */
-$dividerIconSize: 1rem !default;
-$dividerIconMargin: 0 !default;
-
+$divider-icon-size: 1rem !default;
+$divider-icon-margin: 0 !default;
 
 //******************************  Variations *******************************/
 
 // Horizontal / Vertical */
-$horizontalMargin: '' !default;
-$horizontalDividerMargin: 1em !default;
-$horizontalRulerOffset: calc(-50% - #{$horizontalDividerMargin}) !default;
+$divider-horizontal-margin: "" !default;
+$divider-in-horizontal-position-margin: 1em !default;
+$divider-horizontal-ruler-offset: calc(
+  -50% - #{$divider-in-horizontal-position-margin}
+) !default;
 
-$verticalDividerMargin: 1rem !default;
-$verticalDividerHeight: calc(100% - #{$verticalDividerMargin}) !default;
+$divider-vertical-margin: 1rem !default;
+$divider-vertical-height: calc(100% - #{$divider-vertical-margin}) !default;
 
 // Inverted */
-$invertedTextColor: $white !default;
-$invertedHighlightColor: rgba(255, 255, 255, 0.15) !default;
-$invertedShadowColor: $borderColor !default;
+$divider-inverted-text-color: $white !default;
+$divider-inverted-highlight-color: rgba(255, 255, 255, 0.15) !default;
+$divider-inverted-shadow-color: $border-color !default;
 
 // Section */
-$sectionMargin: 2rem !default;
+$divider-section-margin: 2rem !default;
 
 // Sizes */
-$medium: 1rem !default;
+$divider-medium: 1rem !default;

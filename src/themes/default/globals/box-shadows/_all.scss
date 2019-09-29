@@ -1,126 +1,58 @@
-@import '../border/all';
-@import '../shadows/all';
+@import "../border/all";
+@import "../shadows/all";
 
-$shadowShadow: 0 0 0 0 rgba(0, 0, 0, 0) !default;
-$borderWidth: 1px !default;
+$shadow-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !default;
+$border-width: 1px !default;
 
-$primaryBoxShadow:
-        0 0 0 $borderWidth $primaryBorderColor inset,
-        $shadowShadow
- !default;
-$primaryBoxFloatingShadow:
-        0 0 0 $borderWidth $primaryBorderColor inset,
-        $floatingShadow
- !default;
-$secondaryBoxShadow:
-        0 0 0 $borderWidth $secondaryBorderColor inset,
-        $shadowShadow
- !default;
-$secondaryBoxFloatingShadow:
-        0 0 0 $borderWidth $secondaryBorderColor inset,
-        $floatingShadow
- !default;
-$redBoxShadow:
-        0 0 0 $borderWidth $redBorderColor inset,
-        $shadowShadow
- !default;
-$redBoxFloatingShadow:
-        0 0 0 $borderWidth $redBorderColor inset,
-        $floatingShadow
- !default;
-$orangeBoxShadow:
-        0 0 0 $borderWidth $orangeBorderColor inset,
-        $shadowShadow
- !default;
-$orangeBoxFloatingShadow:
-        0 0 0 $borderWidth $orangeBorderColor inset,
-        $floatingShadow
- !default;
-$yellowBoxShadow:
-        0 0 0 $borderWidth $yellowBorderColor inset,
-        $shadowShadow
- !default;
-$yellowBoxFloatingShadow:
-        0 0 0 $borderWidth $yellowBorderColor inset,
-        $floatingShadow
- !default;
-$oliveBoxShadow:
-        0 0 0 $borderWidth $oliveBorderColor inset,
-        $shadowShadow
- !default;
-$oliveBoxFloatingShadow:
-        0 0 0 $borderWidth $oliveBorderColor inset,
-        $floatingShadow
- !default;
-$greenBoxShadow:
-        0 0 0 $borderWidth $greenBorderColor inset,
-        $shadowShadow
- !default;
-$greenBoxFloatingShadow:
-        0 0 0 $borderWidth $greenBorderColor inset,
-        $floatingShadow
- !default;
-$tealBoxShadow:
-        0 0 0 $borderWidth $tealBorderColor inset,
-        $shadowShadow
- !default;
-$tealBoxFloatingShadow:
-        0 0 0 $borderWidth $tealBorderColor inset,
-        $floatingShadow
- !default;
-$blueBoxShadow:
-        0 0 0 $borderWidth $blueBorderColor inset,
-        $shadowShadow
- !default;
-$blueBoxFloatingShadow:
-        0 0 0 $borderWidth $blueBorderColor inset,
-        $floatingShadow
- !default;
-$violetBoxShadow:
-        0 0 0 $borderWidth $violetBorderColor inset,
-        $shadowShadow
- !default;
-$violetBoxFloatingShadow:
-        0 0 0 $borderWidth $violetBorderColor inset,
-        $floatingShadow
- !default;
-$purpleBoxShadow:
-        0 0 0 $borderWidth $purpleBorderColor inset,
-        $shadowShadow
- !default;
-$purpleBoxFloatingShadow:
-        0 0 0 $borderWidth $purpleBorderColor inset,
-        $floatingShadow
- !default;
-$pinkBoxShadow:
-        0 0 0 $borderWidth $pinkBorderColor inset,
-        $shadowShadow
- !default;
-$pinkBoxFloatingShadow:
-        0 0 0 $borderWidth $pinkBorderColor inset,
-        $floatingShadow
- !default;
-$brownBoxShadow:
-        0 0 0 $borderWidth $brownBorderColor inset,
-        $shadowShadow
- !default;
-$brownBoxFloatingShadow:
-        0 0 0 $borderWidth $brownBorderColor inset,
-        $floatingShadow
- !default;
-$greyBoxShadow:
-        0 0 0 $borderWidth $greyBorderColor inset,
-        $shadowShadow
- !default;
-$greyBoxFloatingShadow:
-        0 0 0 $borderWidth $greyBorderColor inset,
-        $floatingShadow
- !default;
-$blackBoxShadow:
-        0 0 0 $borderWidth $blackBorderColor inset,
-        $shadowShadow
- !default;
-$blackBoxFloatingShadow:
-        0 0 0 $borderWidth $blackBorderColor inset,
-        $floatingShadow
- !default;
+$primary-box-shadow: 0 0 0 $border-width $primary-border-color inset,
+  $shadow-shadow !default;
+$primary-box-floating-shadow: 0 0 0 $border-width $primary-border-color inset,
+  $floating-shadow !default;
+$secondary-box-shadow: 0 0 0 $border-width $secondary-border-color inset,
+  $shadow-shadow !default;
+$secondary-box-floating-shadow: 0 0 0 $border-width $secondary-border-color
+    inset,
+  $floating-shadow !default;
+$red-box-shadow: 0 0 0 $border-width $red-border-color inset, $shadow-shadow !default;
+$red-box-floating-shadow: 0 0 0 $border-width $red-border-color inset,
+  $floating-shadow !default;
+$orange-box-shadow: 0 0 0 $border-width $orange-border-color inset,
+  $shadow-shadow !default;
+$orange-box-floating-shadow: 0 0 0 $border-width $orange-border-color inset,
+  $floating-shadow !default;
+$yellow-box-shadow: 0 0 0 $border-width $yellow-border-color inset,
+  $shadow-shadow !default;
+$yellow-box-floating-shadow: 0 0 0 $border-width $yellow-border-color inset,
+  $floating-shadow !default;
+$olive-box-shadow: 0 0 0 $border-width $olive-border-color inset, $shadow-shadow !default;
+$olive-box-floating-shadow: 0 0 0 $border-width $olive-border-color inset,
+  $floating-shadow !default;
+$green-box-shadow: 0 0 0 $border-width $green-border-color inset, $shadow-shadow !default;
+$green-box-floating-shadow: 0 0 0 $border-width $green-border-color inset,
+  $floating-shadow !default;
+$teal-box-shadow: 0 0 0 $border-width $teal-border-color inset, $shadow-shadow !default;
+$teal-box-floating-shadow: 0 0 0 $border-width $teal-border-color inset,
+  $floating-shadow !default;
+$blue-box-shadow: 0 0 0 $border-width $blue-border-color inset, $shadow-shadow !default;
+$blue-box-floating-shadow: 0 0 0 $border-width $blue-border-color inset,
+  $floating-shadow !default;
+$violet-box-shadow: 0 0 0 $border-width $violet-border-color inset,
+  $shadow-shadow !default;
+$violet-box-floating-shadow: 0 0 0 $border-width $violet-border-color inset,
+  $floating-shadow !default;
+$purple-box-shadow: 0 0 0 $border-width $purple-border-color inset,
+  $shadow-shadow !default;
+$purple-box-floating-shadow: 0 0 0 $border-width $purple-border-color inset,
+  $floating-shadow !default;
+$pink-box-shadow: 0 0 0 $border-width $pink-border-color inset, $shadow-shadow !default;
+$pink-box-floating-shadow: 0 0 0 $border-width $pink-border-color inset,
+  $floating-shadow !default;
+$brown-box-shadow: 0 0 0 $border-width $brown-border-color inset, $shadow-shadow !default;
+$brown-box-floating-shadow: 0 0 0 $border-width $brown-border-color inset,
+  $floating-shadow !default;
+$grey-box-shadow: 0 0 0 $border-width $grey-border-color inset, $shadow-shadow !default;
+$grey-box-floating-shadow: 0 0 0 $border-width $grey-border-color inset,
+  $floating-shadow !default;
+$black-box-shadow: 0 0 0 $border-width $black-border-color inset, $shadow-shadow !default;
+$black-box-floating-shadow: 0 0 0 $border-width $black-border-color inset,
+  $floating-shadow !default;

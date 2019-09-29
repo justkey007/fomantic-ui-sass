@@ -1,88 +1,78 @@
 //****************************** Icon *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 //-------------- Font Files ---------------*/
 
 // Solid Icons */
-$fontName: 'icons' !default;
-$src:
-  url("${fontPath}/${fontName}.eot?#iefix") format('embedded-opentype'),
-  url("${fontPath}/${fontName}.woff2") format('woff2'),
-  url("${fontPath}/${fontName}.woff") format('woff'),
-  url("${fontPath}/${fontName}.ttf") format('truetype'),
-  url("${fontPath}/${fontName}.svg#icons") format('svg')
- !default;
-$fallbackSRC: url("${fontPath}/${fontName}.eot") !default;
+$icon-font-name: "icons" !default;
+$icon-src: url("#{$font-path}/#{$icon-font-name}.eot?#iefix") format("embedded-opentype"),
+  url("#{$font-path}/#{$icon-font-name}.woff2") format("woff2"),
+  url("#{$font-path}/#{$icon-font-name}.woff") format("woff"),
+  url("#{$font-path}/#{$icon-font-name}.ttf") format("truetype"),
+  url("#{$font-path}/#{$icon-font-name}.svg#icons") format("svg") !default;
+$icon-fallback-src: url("#{$font-path}/#{$icon-font-name}.eot") !default;
 
 // Outline Icons */
-$importOutlineIcons: true !default;
-$outlineFontName: 'outline-icons' !default;
-$outlineSrc:
-  url("${fontPath}/${outlineFontName}.eot?#iefix") format('embedded-opentype'),
-  url("${fontPath}/${outlineFontName}.woff2") format('woff2'),
-  url("${fontPath}/${outlineFontName}.woff") format('woff'),
-  url("${fontPath}/${outlineFontName}.ttf") format('truetype'),
-  url("${fontPath}/${outlineFontName}.svg#icons") format('svg')
- !default;
-$outlineFallbackSRC: url("${fontPath}/${outlineFontName}.eot") !default;
-
-
+$icon-import-outline-icons: true !default;
+$icon-outline-font-name: "outline-icons" !default;
+$icon-outline-src: url("#{$font-path}/#{$icon-outline-font-name}.eot?#iefix")
+    format("embedded-opentype"),
+  url("#{$font-path}/#{$icon-outline-font-name}.woff2") format("woff2"),
+  url("#{$font-path}/#{$icon-outline-font-name}.woff") format("woff"),
+  url("#{$font-path}/#{$icon-outline-font-name}.ttf") format("truetype"),
+  url("#{$font-path}/#{$icon-outline-font-name}.svg#icons") format("svg") !default;
+$icon-outline-fallback-src: url("#{$font-path}/#{$icon-outline-font-name}.eot") !default;
 
 // Brand Icons */
-$importBrandIcons: true !default;
-$brandFontName: 'brand-icons' !default;
-$brandSrc:
-  url("${fontPath}/${brandFontName}.eot?#iefix") format('embedded-opentype'),
-  url("${fontPath}/${brandFontName}.woff2") format('woff2'),
-  url("${fontPath}/${brandFontName}.woff") format('woff'),
-  url("${fontPath}/${brandFontName}.ttf") format('truetype'),
-  url("${fontPath}/${brandFontName}.svg#icons") format('svg')
- !default;
-$brandFallbackSRC: url("${fontPath}/${brandFontName}.eot") !default;
-
+$icon-import-brand-icons: true !default;
+$icon-brand-font-name: "brand-icons" !default;
+$icon-brand-src: url("#{$font-path}/#{$icon-brand-font-name}.eot?#iefix")
+    format("embedded-opentype"),
+  url("#{$font-path}/#{$icon-brand-font-name}.woff2") format("woff2"),
+  url("#{$font-path}/#{$icon-brand-font-name}.woff") format("woff"),
+  url("#{$font-path}/#{$icon-brand-font-name}.ttf") format("truetype"),
+  url("#{$font-path}/#{$icon-brand-font-name}.svg#icons") format("svg") !default;
+$icon-brand-fallback-src: url("#{$font-path}/#{$icon-brand-font-name}.eot") !default;
 
 //-------------- Definition ---------------*/
 
 // Icon Variables */
-$opacity: 1 !default;
-$width: $iconWidth !default;
-$height: 1em !default;
-$distanceFromText: 0.25rem !default;
-
+$icon-opacity: 1 !default;
+$icon-width: $icon-width !default;
+$icon-height: 1em !default;
+$icon-distance-from-text: 0.25rem !default;
 
 // Variations */
-$linkOpacity: 0.8 !default;
-$linkDuration: 0.3s !default;
-$loadingDuration: 2s !default;
+$icon-link-opacity: 0.8 !default;
+$icon-link-duration: 0.3s !default;
+$icon-loading-duration: 2s !default;
 
-$circularSize: 2em !default;
-$circularPadding: 0.5em 0 !default;
-$circularShadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset !default;
+$icon-circular-size: 2em !default;
+$icon-circular-padding: 0.5em 0 !default;
+$icon-circular-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset !default;
 
-$borderedSize: 2em !default;
-$borderedVerticalPadding: (($borderedSize - $height) / 2) !default;
-$borderedHorizontalPadding: 0 !default;
-$borderedShadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset !default;
+$icon-bordered-size: 2em !default;
+$icon-bordered-vertical-padding: (
+  ($icon-bordered-size - $icon-height) / 2
+) !default;
+$icon-bordered-horizontal-padding: 0 !default;
+$icon-bordered-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset !default;
 
-$cornerIconSize: 0.45em !default;
-$cornerIconStroke: 1px !default;
-$cornerIconShadow:
-  -$cornerIconStroke -$cornerIconStroke 0 $white,
-   $cornerIconStroke -$cornerIconStroke 0 $white,
-  -$cornerIconStroke  $cornerIconStroke 0 $white,
-   $cornerIconStroke  $cornerIconStroke 0 $white
- !default;
-$cornerIconInvertedShadow:
-  -$cornerIconStroke -$cornerIconStroke 0 $black,
-   $cornerIconStroke -$cornerIconStroke 0 $black,
-  -$cornerIconStroke  $cornerIconStroke 0 $black,
-   $cornerIconStroke  $cornerIconStroke 0 $black
- !default;
+$icon-corner-size: 0.45em !default;
+$icon-corner-stroke: 1px !default;
+$icon-corner-shadow: -$icon-corner-stroke -$icon-corner-stroke 0 $white,
+  $icon-corner-stroke -$icon-corner-stroke 0 $white,
+  -$icon-corner-stroke $icon-corner-stroke 0 $white,
+  $icon-corner-stroke $icon-corner-stroke 0 $white !default;
+$icon-corner-inverted-shadow: -$icon-corner-stroke -$icon-corner-stroke 0 $black,
+  $icon-corner-stroke -$icon-corner-stroke 0 $black,
+  -$icon-corner-stroke $icon-corner-stroke 0 $black,
+  $icon-corner-stroke $icon-corner-stroke 0 $black !default;
 
-$mini: 0.4em !default;
-$tiny: 0.5em !default;
-$small: 0.75em !default;
-$medium: 1em !default;
-$large: 1.5em !default;
-$big: 2em !default;
-$huge: 4em !default;
-$massive: 8em !default;
+$icon-mini: 0.4em !default;
+$icon-tiny: 0.5em !default;
+$icon-small: 0.75em !default;
+$icon-medium: 1em !default;
+$icon-large: 1.5em !default;
+$icon-big: 2em !default;
+$icon-huge: 4em !default;
+$icon-massive: 8em !default;

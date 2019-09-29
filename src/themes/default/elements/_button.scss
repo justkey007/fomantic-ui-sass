@@ -1,375 +1,392 @@
 //******************************  Button *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 
 //------------------- Element --------------------*/
 
 // Button */
-$verticalMargin: 0 !default;
-$horizontalMargin: 0.25em !default;
-$backgroundColor: #E0E1E2 !default;
-$backgroundImage: none !default;
-$background: $backgroundColor $backgroundImage !default;
-$lineHeight: 1em !default;
+$button-vertical-margin: 0 !default;
+$button-horizontal-margin: 0.25em !default;
+$button-background-color: #e0e1e2 !default;
+$button-background-image: none !default;
+$button-background: $button-background-color $button-background-image !default;
+$button-line-height: 1em !default;
 
 // Button defaults to using same height as input globally */
-$verticalPadding: $inputVerticalPadding !default;
-$horizontalPadding: 1.5em !default;
+$button-vertical-padding: $input-vertical-padding !default;
+$button-horizontal-padding: 1.5em !default;
 
 // Text */
-$textTransform: none !default;
-$tapColor: transparent !default;
-$fontFamily: $pageFont !default;
-$fontWeight: $bold !default;
-$textColor: rgba(0, 0, 0, 0.6) !default;
-$textShadow: none !default;
-$invertedTextShadow: $textShadow !default;
-$borderRadius: $defaultBorderRadius !default;
-$verticalAlign: baseline !default;
+$button-text-transform: none !default;
+$button-tap-color: transparent !default;
+$button-font-family: $page-font !default;
+$button-font-weight: $bold !default;
+$button-text-color: rgba(0, 0, 0, 0.6) !default;
+$button-text-shadow: none !default;
+$button-inverted-text-shadow: $button-text-shadow !default;
+$button-border-radius: $default-border-radius !default;
+$button-vertical-align: baseline !default;
 
 // Internal Shadow */
-$shadowDistance: 0 !default;
-$shadowOffset: ($shadowDistance / 2) !default;
-$shadowBoxShadow: 0 -$shadowDistance 0 0 $borderColor inset !default;
+$button-shadow-distance: 0 !default;
+$button-shadow-offset: ($button-shadow-distance / 2) !default;
+$button-shadow-box-shadow: 0 (-$button-shadow-distance) 0 0 $border-color inset !default;
 
 // Box Shadow */
-$borderBoxShadowColor: transparent !default;
-$borderBoxShadowWidth: 1px !default;
-$borderBoxShadow: 0 0 0 $borderBoxShadowWidth $borderBoxShadowColor inset !default;
-$boxShadow:
-  $borderBoxShadow,
-  $shadowBoxShadow
- !default;
+$button-border-box-shadow-color: transparent !default;
+$button-border-box-shadow-width: 1px !default;
+$button-border-box-shadow: 0 0 0 $button-border-box-shadow-width
+  $button-border-box-shadow-color inset !default;
+$button-box-shadow: $button-border-box-shadow, $button-shadow-box-shadow !default;
 
 // Icon */
-$iconHeight: auto !default;
-$iconOpacity: 0.8 !default;
-$iconDistance: $relative6px !default;
-$iconColor: '' !default;
-$iconTransition: opacity $defaultDuration $defaultEasing !default;
-$iconVerticalAlign: '' !default;
+$button-icon-height: auto !default;
+$button-icon-opacity: 0.8 !default;
+$button-icon-distance: $relative6px !default;
+$button-icon-color: "" !default;
+$button-icon-transition: opacity $default-duration $default-easing !default;
+$button-icon-vertical-align: "" !default;
 
-$iconMargin: 0 $iconDistance 0 -($iconDistance / 2) !default;
-$rightIconMargin: 0 -($iconDistance / 2) 0 $iconDistance !default;
+$button-icon-margin: 0 $button-icon-distance 0 (-$button-icon-distance / 2) !default;
+$button-right-icon-margin: 0 (-$button-icon-distance / 2) 0
+  $button-icon-distance !default;
 
 // Loader */
-$invertedLoaderFillColor: rgba(0, 0, 0, 0.15) !default;
+$button-inverted-loader-fill-color: rgba(0, 0, 0, 0.15) !default;
 
-$transition:
-  opacity $defaultDuration $defaultEasing,
-  background-color $defaultDuration $defaultEasing,
-  color $defaultDuration $defaultEasing,
-  box-shadow $defaultDuration $defaultEasing,
-  background $defaultDuration $defaultEasing
- !default;
+$button-transition: opacity $default-duration $default-easing,
+  background-color $default-duration $default-easing,
+  color $default-duration $default-easing,
+  box-shadow $default-duration $default-easing,
+  background $default-duration $default-easing !default;
 
-$willChange: auto !default;
+$button-will-change: auto !default;
 
 //-------------------  Group --------------------*/
-$groupBoxShadow: none !default;
-$groupButtonBoxShadow: $boxShadow !default;
-$verticalBoxShadow: none !default;
-$groupButtonOffset: 0 0 0 0 !default;
-$verticalGroupOffset: 0 0 0 0 !default;
+$button-group-box-shadow: none !default;
+$button-group-super-box-shadow: $button-box-shadow !default;
+$button-vertical-box-shadow: none !default;
+$button-group-offset: 0 0 0 0 !default;
+$button-vertical-group-offset: 0 0 0 0 !default;
 
 //-------------------  States --------------------*/
 
 // Hovered */
-$hoverBackgroundColor: #CACBCD !default;
-$hoverBackgroundImage: $backgroundImage !default;
-$hoverBoxShadow: $boxShadow !default;
-$hoverColor: $hoveredTextColor !default;
-$iconHoverOpacity: 0.85 !default;
+$button-hover-background-color: #cacbcd !default;
+$button-hover-background-image: $button-background-image !default;
+$button-hover-box-shadow: $button-box-shadow !default;
+$button-hover-color: $hovered-text-color !default;
+$button-icon-hover-opacity: 0.85 !default;
 
 // Focused */
-$focusBackgroundColor: $hoverBackgroundColor !default;
-$focusBackgroundImage: none !default;
-$focusBoxShadow: '' !default;
-$focusColor: $hoveredTextColor !default;
-$iconFocusOpacity: 0.85 !default;
+$button-focus-background-color: $button-hover-background-color !default;
+$button-focus-background-image: none !default;
+$button-focus-box-shadow: "" !default;
+$button-focus-color: $hovered-text-color !default;
+$button-icon-focus-opacity: 0.85 !default;
 
 // Disabled */
-$disabledBackgroundImage: none !default;
-$disabledBoxShadow: none !default;
+$button-disabled-background-image: none !default;
+$button-disabled-box-shadow: none !default;
 
 // Pressed Down */
-$downBackgroundColor: #BABBBC !default;
-$downBackgroundImage: '' !default;
-$downPressedShadow: none !default;
-$downBoxShadow:
-  $borderBoxShadow,
-  $downPressedShadow
- !default;
-$downColor: $pressedTextColor !default;
+$button-down-background-color: #babbbc !default;
+$button-down-background-image: "" !default;
+$button-down-pressed-shadow: none !default;
+$button-down-box-shadow: $button-border-box-shadow, $button-down-pressed-shadow !default;
+$button-down-color: $pressed-text-color !default;
 
 // Active */
-$activeBackgroundColor: #C0C1C2 !default;
-$activeBackgroundImage: none !default;
-$activeColor: $selectedTextColor !default;
-$activeBoxShadow: $borderBoxShadow !default;
+$button-active-background-color: #c0c1c2 !default;
+$button-active-background-image: none !default;
+$button-active-color: $selected-text-color !default;
+$button-active-box-shadow: $button-border-box-shadow !default;
 
 // Active + Hovered */
-$activeHoverBackgroundColor: $activeBackgroundColor !default;
-$activeHoverBackgroundImage: none !default;
-$activeHoverColor: $activeColor !default;
-$activeHoverBoxShadow: $activeBoxShadow !default;
+$button-active-hover-background-color: $button-active-background-color !default;
+$button-active-hover-background-image: none !default;
+$button-active-hover-color: $button-active-color !default;
+$button-active-hover-box-shadow: $button-active-box-shadow !default;
 
 // Loading */
-$loadingOpacity: 1 !default;
-$loadingPointerEvents: auto !default;
-$loadingTransition:
-  all 0s linear,
-  opacity $defaultDuration $defaultEasing
- !default;
+$button-loading-opacity: 1 !default;
+$button-loading-pointer-events: auto !default;
+$button-loading-transition: all 0s linear,
+  opacity $default-duration $default-easing !default;
 
 //-------------------  Types --------------------*/
 // Or */
-$orText: 'or' !default;
+$button-or-text: "or" !default;
 
-$orGap: 0.3em !default;
-$orHeight: ($verticalPadding * 2) !default;
-$orZIndex: 3 !default;
+$button-or-gap: 0.3em !default;
+$button-or-height: ($button-vertical-padding * 2) + 1em !default;
+$button-or-z-index: 3 !default;
 
-$orCircleDistanceToEdge: $verticalPadding !default;
-$orCircleSize: ($orHeight - $orCircleDistanceToEdge) !default;
-$orLineHeight: ($orCircleSize) !default;
-$orBoxShadow: $borderBoxShadow !default;
+$button-or-circle-distance-to-edge: $button-vertical-padding !default;
+$button-or-circle-size: (
+  $button-or-height - $button-or-circle-distance-to-edge
+) !default;
+$button-or-line-height: ($button-or-circle-size - 0.1) !default;
+$button-or-box-shadow: $button-border-box-shadow !default;
 
-$orVerticalOffset: -($orCircleSize / 2) !default;
-$orHorizontalOffset: -($orCircleSize / 2) !default;
+$button-or-vertical-offset: (-$button-or-circle-size / 2) !default;
+$button-or-horizontal-offset: (-$button-or-circle-size / 2) !default;
 
-$orBackgroundColor: $white !default;
-$orTextShadow: $invertedTextShadow !default;
-$orTextStyle: $normal !default;
-$orTextWeight: $bold !default;
-$orTextColor: $lightTextColor !default;
+$button-or-background-color: $white !default;
+$button-or-text-shadow: $button-inverted-text-shadow !default;
+$button-or-text-style: $normal !default;
+$button-or-text-weight: $bold !default;
+$button-or-text-color: $light-text-color !default;
 
-
-$orSpacerHeight: $verticalPadding !default;
-$orSpacerColor: transparent !default;
+$button-or-spacer-height: $button-vertical-padding !default;
+$button-or-spacer-color: transparent !default;
 
 // Icon */
-$iconButtonOpacity: 0.9 !default;
+$button-with-icon-opacity: 0.9 !default;
 
 // Labeled */
-$labeledLabelFontSize: $medium !default;
-$labeledLabelAlign: center !default;
-$labeledLabelPadding: '' !default;
-$labeledLabelFontSize: $relativeMedium !default;
-$labeledLabelBorderColor: $borderColor !default;
-$labeledLabelBorderOffset: -$borderBoxShadowWidth !default;
-$labeledTagLabelSize: 1.85em !default; // hypotenuse of triangle */
-$labeledIconMargin: 0 !default;
+$button-labeled-label-font-size: $medium !default;
+$button-labeled-label-align: center !default;
+$button-labeled-label-padding: "" !default;
+$button-labeled-label-font-size: $relative-medium !default;
+$button-labeled-label-border-color: $border-color !default;
+$button-labeled-label-border-offset: -$button-border-box-shadow-width !default;
+$button-labeled-tag-label-size: 1.85em !default; // hypotenuse of triangle */
+$button-labeled-icon-margin: 0 !default;
 
 // Labeled Icon */
-$labeledIconWidth: 1em + ($verticalPadding * 2) !default;
-$labeledIconBackgroundColor: rgba(0, 0, 0, 0.05) !default;
-$labeledIconPadding: ($horizontalPadding + $labeledIconWidth - 0.8) !default;
-$labeledIconBorder: transparent !default;
-$labeledIconColor: '' !default;
+$button-labeled-icon-width: 1em + ($button-vertical-padding * 2) !default;
+$button-labeled-icon-background-color: rgba(0, 0, 0, 0.05) !default;
+$button-labeled-icon-padding: (
+  $button-horizontal-padding + $button-labeled-icon-width - 0.8
+) !default;
+$button-labeled-icon-border: transparent !default;
+$button-labeled-icon-color: "" !default;
 
-$labeledIconLeftShadow: -1px 0 0 0 $labeledIconBorder inset !default;
-$labeledIconRightShadow: 1px 0 0 0 $labeledIconBorder inset !default;
-
+$button-labeled-icon-left-shadow: -1px 0 0 0 $button-labeled-icon-border inset !default;
+$button-labeled-icon-right-shadow: 1px 0 0 0 $button-labeled-icon-border inset !default;
 
 // Inverted */
-$invertedBorderSize: 2px !default;
-$invertedTextColor: $white !default;
-$invertedTextHoverColor: $hoverColor !default;
-$invertedGroupButtonOffset: 0 0 0 -($invertedBorderSize) !default;
-$invertedVerticalGroupButtonOffset: 0 0 -($invertedBorderSize) 0 !default;
+$button-inverted-border-size: 2px !default;
+$button-inverted-text-color: $white !default;
+$button-inverted-text-hover-color: $button-hover-color !default;
+$button-inverted-group-offset: 0 0 0 (-$button-inverted-border-size) !default;
+$button-inverted-vertical-group-offset: 0 0 (-$button-inverted-border-size) 0 !default;
 
 // Basic */
-$basicBorderRadius: $borderRadius !default;
-$basicBorderSize: 1px !default;
-$basicTextColor: $textColor !default;
-$basicColoredBorderSize: 1px !default;
+$button-basic-border-radius: $button-border-radius !default;
+$button-basic-border-size: 1px !default;
+$button-basic-text-color: $button-text-color !default;
+$button-basic-colored-border-size: 1px !default;
 
-$basicBackground: transparent none !default;
-$basicFontWeight: $normal !default;
-$basicBorder: 1px solid $borderColor !default;
-$basicBoxShadow: 0 0 0 $basicBorderSize $borderColor inset !default;
-$basicLoadingColor: $offWhite !default;
-$basicTextTransform: none !default;
+$button-basic-background: transparent none !default;
+$button-basic-font-weight: $normal !default;
+$button-basic-border: 1px solid $border-color !default;
+$button-basic-box-shadow: 0 0 0 $button-basic-border-size $border-color inset !default;
+$button-basic-loading-color: $off-white !default;
+$button-basic-text-transform: none !default;
 
 // Basic Hover */
-$basicHoverBackground: #FFFFFF !default;
-$basicHoverTextColor: $hoveredTextColor !default;
-$basicHoverBoxShadow:
-  0 0 0 $basicBorderSize $selectedBorderColor inset,
-  0 0 0 0 $borderColor inset
- !default;
+$button-basic-hover-background: #ffffff !default;
+$button-basic-hover-text-color: $hovered-text-color !default;
+$button-basic-hover-box-shadow: 0 0 0 $button-basic-border-size
+    $selected-border-color inset,
+  0 0 0 0 $border-color inset !default;
 // Basic Focus */
-$basicFocusBackground: $basicHoverBackground !default;
-$basicFocusTextColor: $basicHoverTextColor !default;
-$basicFocusBoxShadow: $basicHoverBoxShadow !default;
+$button-basic-focus-background: $button-basic-hover-background !default;
+$button-basic-focus-text-color: $button-basic-hover-text-color !default;
+$button-basic-focus-box-shadow: $button-basic-hover-box-shadow !default;
 
 // Basic Down */
-$basicDownBackground: #F8F8F8 !default;
-$basicDownTextColor: $pressedTextColor !default;
-$basicDownBoxShadow:
-  0 0 0 $basicBorderSize rgba(0, 0, 0, 0.15) inset,
-  0 1px 4px 0 $borderColor inset
- !default;
+$button-basic-down-background: #f8f8f8 !default;
+$button-basic-down-text-color: $pressed-text-color !default;
+$button-basic-down-box-shadow: 0 0 0 $button-basic-border-size
+    rgba(0, 0, 0, 0.15) inset,
+  0 1px 4px 0 $border-color inset !default;
 // Basic Active */
-$basicActiveBackground: $transparentBlack !default;
-$basicActiveBoxShadow: '' !default;
-$basicActiveTextColor: $selectedTextColor !default;
+$button-basic-active-background: $transparent-black !default;
+$button-basic-active-box-shadow: "" !default;
+$button-basic-active-text-color: $selected-text-color !default;
 
 // Basic Inverted */
-$basicInvertedBackground: transparent !default;
-$basicInvertedFocusBackground: transparent !default;
-$basicInvertedDownBackground: $transparentWhite !default;
-$basicInvertedActiveBackground: $transparentWhite !default;
+$button-basic-inverted-background: transparent !default;
+$button-basic-inverted-focus-background: transparent !default;
+$button-basic-inverted-down-background: $transparent-white !default;
+$button-basic-inverted-active-background: $transparent-white !default;
 
-$basicInvertedBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 0.5) inset !default;
-$basicInvertedHoverBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 1) inset !default;
-$basicInvertedFocusBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 1) inset !default;
-$basicInvertedDownBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 0.9) inset !default;
-$basicInvertedActiveBoxShadow: 0 0 0 $invertedBorderSize rgba(255, 255, 255, 0.7) inset !default;
+$button-basic-inverted-box-shadow: 0 0 0 $button-inverted-border-size
+  rgba(255, 255, 255, 0.5) inset !default;
+$button-basic-inverted-hover-box-shadow: 0 0 0 $button-inverted-border-size
+  rgba(255, 255, 255, 1) inset !default;
+$button-basic-inverted-focus-box-shadow: 0 0 0 $button-inverted-border-size
+  rgba(255, 255, 255, 1) inset !default;
+$button-basic-inverted-down-box-shadow: 0 0 0 $button-inverted-border-size
+  rgba(255, 255, 255, 0.9) inset !default;
+$button-basic-inverted-active-box-shadow: 0 0 0 $button-inverted-border-size
+  rgba(255, 255, 255, 0.7) inset !default;
 
-$basicInvertedColor: $darkWhite !default;
-$basicInvertedHoverColor: $darkWhiteHover !default;
-$basicInvertedDownColor: $darkWhiteActive !default;
-$basicInvertedActiveColor: $invertedTextColor !default;
-
+$button-basic-inverted-color: $dark-white !default;
+$button-basic-inverted-hover-color: $dark-white-hover !default;
+$button-basic-inverted-down-color: $dark-white-active !default;
+$button-basic-inverted-active-color: $button-inverted-text-color !default;
 
 // Basic Group */
-$basicGroupBorder: $basicBorderSize solid $borderColor !default;
-$basicGroupBoxShadow: none !default;
+$button-basic-group-border: $button-basic-border-size solid $border-color !default;
+$button-basic-group-box-shadow: none !default;
 
 //------------- Tertiary -------------*/
-$tertiaryLinePadding: 0.5em !default;
-$tertiaryLineHeight: 0.2em !default;
-$tertiaryTextColor: $textColor !default;
-$tertiaryLineColor: lighten($tertiaryTextColor, 20%) !default;
-$tertiaryWithUnderline: false !default;
-$tertiaryWithOverline: false !default;
-$tertiaryBackgroundColor: none !default;
+$button-tertiary-line-padding: 0.5em !default;
+$button-tertiary-line-height: 0.2em !default;
+$button-tertiary-text-color: $button-text-color !default;
+$button-tertiary-line-color: lighten($button-tertiary-text-color, 20%) !default;
+$button-tertiary-with-underline: false !default;
+$button-tertiary-with-overline: false !default;
+$button-tertiary-background-color: none !default;
 
 // Tertiary Hover */
-$tertiaryHoverColor: lighten(fade-in($tertiaryTextColor, 1), 20%) !default;
-$tertiaryHoverLineColor: lighten($tertiaryHoverColor, 20%) !default;
-$tertiaryHoverWithUnderline: true !default;
-$tertiaryHoverWithOverline: false !default;
-$tertiaryHoverBackgroundColor: none !default;
+$button-tertiary-hover-color: lighten(
+  fade-in($button-tertiary-text-color, 1),
+  20%
+) !default;
+$button-tertiary-hover-line-color: lighten(
+  $button-tertiary-hover-color,
+  20%
+) !default;
+$button-tertiary-hover-with-underline: true !default;
+$button-tertiary-hover-with-overline: false !default;
+$button-tertiary-hover-background-color: none !default;
 
 // Tertiary Focus */
-$tertiaryFocusColor: lighten(fade-in($tertiaryTextColor, 1), 20%) !default;
-$tertiaryFocusLineColor: lighten($tertiaryHoverColor, 20%) !default;
-$tertiaryFocusWithUnderline: true !default;
-$tertiaryFocusWithOverline: false !default;
-$tertiaryFocusBackgroundColor: none !default;
+$button-tertiary-focus-color: lighten(
+  fade-in($button-tertiary-text-color, 1),
+  20%
+) !default;
+$button-tertiary-focus-line-color: lighten(
+  $button-tertiary-hover-color,
+  20%
+) !default;
+$button-tertiary-focus-with-underline: true !default;
+$button-tertiary-focus-with-overline: false !default;
+$button-tertiary-focus-background-color: none !default;
 
 // Tertiary Active */
-$tertiaryActiveColor: lighten($tertiaryHoverColor, 20%) !default;
-$tertiaryActiveLineColor: lighten($tertiaryActiveColor, 20%) !default;
-$tertiaryActiveWithUnderline: true !default;
-$tertiaryActiveWithOverline: false !default;
-$tertiaryActiveBackgroundColor: none !default;
+$button-tertiary-active-color: lighten(
+  $button-tertiary-hover-color,
+  20%
+) !default;
+$button-tertiary-active-line-color: lighten(
+  $button-tertiary-active-color,
+  20%
+) !default;
+$button-tertiary-active-with-underline: true !default;
+$button-tertiary-active-with-overline: false !default;
+$button-tertiary-active-background-color: none !default;
 
 //-------------------  Variations --------------------*/
 
-// Colors */
-$coloredBackgroundImage: none !default;
-$coloredBoxShadow: $shadowBoxShadow !default;
-
 // Colored */
-$brownTextColor: $invertedTextColor !default;
-$brownTextShadow: $invertedTextShadow !default;
-$redTextColor: $invertedTextColor !default;
-$redTextShadow: $invertedTextShadow !default;
-$orangeTextColor: $invertedTextColor !default;
-$orangeTextShadow: $invertedTextShadow !default;
-$greenTextColor: $invertedTextColor !default;
-$greenTextShadow: $invertedTextShadow !default;
-$blueTextColor: $invertedTextColor !default;
-$blueTextShadow: $invertedTextShadow !default;
-$violetTextColor: $invertedTextColor !default;
-$violetTextShadow: $invertedTextShadow !default;
-$purpleTextColor: $invertedTextColor !default;
-$purpleTextShadow: $invertedTextShadow !default;
-$pinkTextColor: $invertedTextColor !default;
-$pinkTextShadow: $invertedTextShadow !default;
-$blackTextColor: $invertedTextColor !default;
-$blackTextShadow: $invertedTextShadow !default;
-$oliveTextColor: $invertedTextColor !default;
-$oliveTextShadow: $invertedTextShadow !default;
-$yellowTextColor: $invertedTextColor !default;
-$yellowTextShadow: $invertedTextShadow !default;
-$tealTextColor: $invertedTextColor !default;
-$tealTextShadow: $invertedTextShadow !default;
-$greyTextColor: $invertedTextColor !default;
-$greyTextShadow: $invertedTextShadow !default;
+$button-colored-background-image: none !default;
+$button-colored-box-shadow: $button-shadow-box-shadow !default;
+
+// Colors */
+$button-brown-text-color: $button-inverted-text-color !default;
+$button-brown-text-shadow: $button-inverted-text-shadow !default;
+$button-red-text-color: $button-inverted-text-color !default;
+$button-red-text-shadow: $button-inverted-text-shadow !default;
+$button-orange-text-color: $button-inverted-text-color !default;
+$button-orange-text-shadow: $button-inverted-text-shadow !default;
+$button-green-text-color: $button-inverted-text-color !default;
+$button-green-text-shadow: $button-inverted-text-shadow !default;
+$button-blue-text-color: $button-inverted-text-color !default;
+$button-blue-text-shadow: $button-inverted-text-shadow !default;
+$button-violet-text-color: $button-inverted-text-color !default;
+$button-violet-text-shadow: $button-inverted-text-shadow !default;
+$button-purple-text-color: $button-inverted-text-color !default;
+$button-purple-text-shadow: $button-inverted-text-shadow !default;
+$button-pink-text-color: $button-inverted-text-color !default;
+$button-pink-text-shadow: $button-inverted-text-shadow !default;
+$button-black-text-color: $button-inverted-text-color !default;
+$button-black-text-shadow: $button-inverted-text-shadow !default;
+$button-olive-text-color: $button-inverted-text-color !default;
+$button-olive-text-shadow: $button-inverted-text-shadow !default;
+$button-yellow-text-color: $button-inverted-text-color !default;
+$button-yellow-text-shadow: $button-inverted-text-shadow !default;
+$button-teal-text-color: $button-inverted-text-color !default;
+$button-teal-text-shadow: $button-inverted-text-shadow !default;
+$button-grey-text-color: $button-inverted-text-color !default;
+$button-grey-text-shadow: $button-inverted-text-shadow !default;
 
 // Inverted */
-$lightBrownTextColor: $invertedTextColor !default;
-$lightBrownTextShadow: $invertedTextShadow !default;
-$lightRedTextColor: $invertedTextColor !default;
-$lightRedTextShadow: $invertedTextShadow !default;
-$lightOrangeTextColor: $invertedTextColor !default;
-$lightOrangeTextShadow: $invertedTextShadow !default;
-$lightGreenTextColor: $invertedTextColor !default;
-$lightGreenTextShadow: $invertedTextShadow !default;
-$lightBlueTextColor: $invertedTextColor !default;
-$lightBlueTextShadow: $invertedTextShadow !default;
-$lightVioletTextColor: $invertedTextColor !default;
-$lightVioletTextShadow: $invertedTextShadow !default;
-$lightPurpleTextColor: $invertedTextColor !default;
-$lightPurpleTextShadow: $invertedTextShadow !default;
-$lightPinkTextColor: $invertedTextColor !default;
-$lightPinkTextShadow: $invertedTextShadow !default;
-$lightBlackTextColor: $invertedTextColor !default;
-$lightBlackTextShadow: $invertedTextShadow !default;
-$lightOliveTextColor: $textColor !default;
-$lightOliveTextShadow: $textShadow !default;
-$lightYellowTextColor: $textColor !default;
-$lightYellowTextShadow: $textShadow !default;
-$lightTealTextColor: $textColor !default;
-$lightTealTextShadow: $textShadow !default;
-$lightGreyTextColor: $textColor !default;
-$lightGreyTextShadow: $textShadow !default;
-
+$button-light-brown-text-color: $button-inverted-text-color !default;
+$button-light-brown-text-shadow: $button-inverted-text-shadow !default;
+$button-light-red-text-color: $button-inverted-text-color !default;
+$button-light-red-text-shadow: $button-inverted-text-shadow !default;
+$button-light-orange-text-color: $button-inverted-text-color !default;
+$button-light-orange-text-shadow: $button-inverted-text-shadow !default;
+$button-light-green-text-color: $button-inverted-text-color !default;
+$button-light-green-text-shadow: $button-inverted-text-shadow !default;
+$button-light-blue-text-color: $button-inverted-text-color !default;
+$button-light-blue-text-shadow: $button-inverted-text-shadow !default;
+$button-light-violet-text-color: $button-inverted-text-color !default;
+$button-light-violet-text-shadow: $button-inverted-text-shadow !default;
+$button-light-purple-text-color: $button-inverted-text-color !default;
+$button-light-purple-text-shadow: $button-inverted-text-shadow !default;
+$button-light-pink-text-color: $button-inverted-text-color !default;
+$button-light-pink-text-shadow: $button-inverted-text-shadow !default;
+$button-light-black-text-color: $button-inverted-text-color !default;
+$button-light-black-text-shadow: $button-inverted-text-shadow !default;
+$button-light-olive-text-color: $button-text-color !default;
+$button-light-olive-text-shadow: $button-text-shadow !default;
+$button-light-yellow-text-color: $button-text-color !default;
+$button-light-yellow-text-shadow: $button-text-shadow !default;
+$button-light-teal-text-color: $button-text-color !default;
+$button-light-teal-text-shadow: $button-text-shadow !default;
+$button-light-grey-text-color: $button-text-color !default;
+$button-light-grey-text-shadow: $button-text-shadow !default;
 
 // Ordinality */
-$primaryBackgroundImage: $coloredBackgroundImage !default;
-$primaryTextColor: $invertedTextColor !default;
-$lightPrimaryTextColor: $invertedTextColor !default;
-$primaryTextShadow: $invertedTextShadow !default;
-$primaryBoxShadow: $coloredBoxShadow !default;
+$button-primary-background-image: $button-colored-background-image !default;
+$button-primary-text-color: $button-inverted-text-color !default;
+$button-light-primary-text-color: $button-inverted-text-color !default;
+$button-primary-text-shadow: $button-inverted-text-shadow !default;
+$button-primary-box-shadow: $button-colored-box-shadow !default;
 
-$secondaryBackgroundImage: $coloredBackgroundImage !default;
-$secondaryTextColor: $invertedTextColor !default;
-$secondaryTextShadow: $invertedTextShadow !default;
-$lightSecondaryTextColor: $invertedTextColor !default;
-$secondaryBoxShadow: $coloredBoxShadow !default;
+$button-secondary-background-image: $button-colored-background-image !default;
+$button-secondary-text-color: $button-inverted-text-color !default;
+$button-secondary-text-shadow: $button-inverted-text-shadow !default;
+$button-light-secondary-text-color: $button-inverted-text-color !default;
+$button-secondary-box-shadow: $button-colored-box-shadow !default;
 
-$positiveBackgroundImage: $coloredBackgroundImage !default;
-$positiveTextColor: $invertedTextColor !default;
-$positiveTextShadow: $invertedTextShadow !default;
-$positiveBoxShadow: $coloredBoxShadow !default;
+$button-positive-background-image: $button-colored-background-image !default;
+$button-positive-text-color: $button-inverted-text-color !default;
+$button-positive-text-shadow: $button-inverted-text-shadow !default;
+$button-positive-box-shadow: $button-colored-box-shadow !default;
 
-$negativeBackgroundImage: $coloredBackgroundImage !default;
-$negativeTextColor: $invertedTextColor !default;
-$negativeTextShadow: $invertedTextShadow !default;
-$negativeBoxShadow: $coloredBoxShadow !default;
+$button-negative-background-image: $button-colored-background-image !default;
+$button-negative-text-color: $button-inverted-text-color !default;
+$button-negative-text-shadow: $button-inverted-text-shadow !default;
+$button-negative-box-shadow: $button-colored-box-shadow !default;
 
 // Compact */
-$compactVerticalPadding: ($verticalPadding * 0.75) !default;
-$compactHorizontalPadding: ($horizontalPadding * 0.75) !default;
+$button-compact-vertical-padding: ($button-vertical-padding * 0.75) !default;
+$button-compact-horizontal-padding: (
+  $button-horizontal-padding * 0.75
+) !default;
 
 // Attached */
-$attachedOffset: -1px !default;
-$attachedBoxShadow: 0 0 0 1px $borderColor !default;
-$attachedHorizontalPadding: 0.75em !default;
-$attachedZIndex: auto !default;
+$button-attached-offset: -1px !default;
+$button-attached-box-shadow: 0 0 0 1px $border-color !default;
+$button-attached-horizontal-padding: 0.75em !default;
+$button-attached-z-index: auto !default;
 
 // Floated */
-$floatedMargin: 0.25em !default;
+$button-floated-margin: 0.25em !default;
 
 // Animated */
-$animatedVerticalAlign: middle !default;
-$animatedZIndex: 1 !default;
-$animationDuration: 0.3s !default;
-$animationEasing: ease !default;
-$fadeScaleHigh: 1.5 !default;
-$fadeScaleLow: 0.75 !default;
+$button-animated-vertical-align: middle !default;
+$button-animated-z-index: 1 !default;
+$button-animation-duration: 0.3s !default;
+$button-animation-easing: ease !default;
+$button-fade-scale-high: 1.5 !default;
+$button-fade-scale-low: 0.75 !default;
+
+@import './button.colors-map';

@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/sidebar';
-
+@import "../../themes/default/modules/sidebar";
 
 /*******************************
             Sidebar
@@ -23,14 +22,13 @@
   border-radius: 0 !important;
   margin: 0 !important;
   overflow-y: auto !important;
-  z-index: $topLayer;
+  z-index: $sidebar-top-layer;
 }
 
 /* GPU Layers for Child Elements */
 .ui.sidebar > * {
   backface-visibility: hidden;
 }
-
 
 /*--------------
    Direction
@@ -63,7 +61,6 @@
   transform: translate3d(0, 100%, 0);
 }
 
-
 /*--------------
      Pushable
 ---------------*/
@@ -76,7 +73,7 @@
 
 /* Whole Page */
 body.pushable {
-  background: $canvasBackground;
+  background: $sidebar-canvas-background;
   &.dimmed {
     background: inherit;
   }
@@ -92,7 +89,6 @@ body.pushable {
   position: absolute;
 }
 
-
 /*--------------
      Fixed
 ---------------*/
@@ -101,9 +97,9 @@ body.pushable {
   position: fixed;
   backface-visibility: hidden;
 
-  transition: transform $duration $easing;
+  transition: transform $sidebar-duration $sidebar-easing;
   will-change: transform;
-  z-index: $fixedLayer;
+  z-index: $sidebar-fixed-layer;
 }
 
 /*--------------
@@ -115,15 +111,15 @@ body.pushable {
   backface-visibility: hidden;
   overflow: hidden;
   min-height: 100%;
-  transition: transform $duration $easing;
-  z-index: $middleLayer;
+  transition: transform $sidebar-duration $sidebar-easing;
+  z-index: $sidebar-middle-layer;
 
   /* Pusher should inherit background from context */
   background: inherit;
 }
 
 body.pushable > .pusher {
-  background: $pageBackground;
+  background: $page-background;
 }
 
 /*--------------
@@ -134,13 +130,13 @@ body.pushable > .pusher {
   position: fixed;
   top: 0;
   right: 0;
-  content: '';
-  background-color: $dimmerColor;
+  content: "";
+  background-color: $sidebar-dimmer-color;
   overflow: hidden;
   opacity: 0;
-  transition: $dimmerTransition;
+  transition: $sidebar-dimmer-transition;
   will-change: opacity;
-  z-index: $dimmerLayer;
+  z-index: $sidebar-dimmer-layer;
 }
 
 /*--------------
@@ -185,29 +181,29 @@ body.pushable > .pusher {
 /* Shadow Direction */
 .ui.left.visible.sidebar,
 .ui.right.visible.sidebar {
-  box-shadow: $horizontalBoxShadow;
+  box-shadow: $sidebar-horizontal-box-shadow;
 }
 .ui.top.visible.sidebar,
 .ui.bottom.visible.sidebar {
-  box-shadow: $verticalBoxShadow;
+  box-shadow: $sidebar-vertical-box-shadow;
 }
 
 /* Visible On Load */
 .ui.visible.left.sidebar ~ .fixed,
 .ui.visible.left.sidebar ~ .pusher {
-  transform: translate3d($width, 0, 0);
+  transform: translate3d($sidebar-width, 0, 0);
 }
 .ui.visible.right.sidebar ~ .fixed,
 .ui.visible.right.sidebar ~ .pusher {
-  transform: translate3d(-$width, 0, 0);
+  transform: translate3d(-$sidebar-width, 0, 0);
 }
 .ui.visible.top.sidebar ~ .fixed,
 .ui.visible.top.sidebar ~ .pusher {
-  transform: translate3d(0, $height, 0);
+  transform: translate3d(0, $sidebar-height, 0);
 }
 .ui.visible.bottom.sidebar ~ .fixed,
 .ui.visible.bottom.sidebar ~ .pusher {
-  transform: translate3d(0, -$height, 0);
+  transform: translate3d(0, -$sidebar-height, 0);
 }
 
 /* opposite sides visible forces content overlay */
@@ -222,7 +218,6 @@ body.pushable > .pusher {
        iOS
 ---------------*/
 
-
 /*******************************
           Variations
 *******************************/
@@ -234,62 +229,60 @@ body.pushable > .pusher {
 /* Left / Right */
 .ui.thin.left.sidebar,
 .ui.thin.right.sidebar {
-  width: $thinWidth;
+  width: $sidebar-thin-width;
 }
 .ui[class*="very thin"].left.sidebar,
 .ui[class*="very thin"].right.sidebar {
-  width: $veryThinWidth;
+  width: $sidebar-very-thin-width;
 }
 .ui.left.sidebar,
 .ui.right.sidebar {
-  width: $width;
+  width: $sidebar-width;
 }
 .ui.wide.left.sidebar,
 .ui.wide.right.sidebar {
-  width: $wideWidth;
+  width: $sidebar-wide-width;
 }
 .ui[class*="very wide"].left.sidebar,
 .ui[class*="very wide"].right.sidebar {
-  width: $veryWideWidth;
+  width: $sidebar-very-wide-width;
 }
 
 /* Left Visible */
 .ui.visible.thin.left.sidebar ~ .fixed,
 .ui.visible.thin.left.sidebar ~ .pusher {
-  transform: translate3d($thinWidth, 0, 0);
+  transform: translate3d($sidebar-thin-width, 0, 0);
 }
 .ui.visible[class*="very thin"].left.sidebar ~ .fixed,
 .ui.visible[class*="very thin"].left.sidebar ~ .pusher {
-  transform: translate3d($veryThinWidth, 0, 0);
+  transform: translate3d($sidebar-very-thin-width, 0, 0);
 }
 .ui.visible.wide.left.sidebar ~ .fixed,
 .ui.visible.wide.left.sidebar ~ .pusher {
-  transform: translate3d($wideWidth, 0, 0);
+  transform: translate3d($sidebar-wide-width, 0, 0);
 }
 .ui.visible[class*="very wide"].left.sidebar ~ .fixed,
 .ui.visible[class*="very wide"].left.sidebar ~ .pusher {
-  transform: translate3d($veryWideWidth, 0, 0);
+  transform: translate3d($sidebar-very-wide-width, 0, 0);
 }
 
 /* Right Visible */
 .ui.visible.thin.right.sidebar ~ .fixed,
 .ui.visible.thin.right.sidebar ~ .pusher {
-  transform: translate3d(-$thinWidth, 0, 0);
+  transform: translate3d(-$sidebar-thin-width, 0, 0);
 }
 .ui.visible[class*="very thin"].right.sidebar ~ .fixed,
 .ui.visible[class*="very thin"].right.sidebar ~ .pusher {
-  transform: translate3d(-$veryThinWidth, 0, 0);
+  transform: translate3d(-$sidebar-very-thin-width, 0, 0);
 }
 .ui.visible.wide.right.sidebar ~ .fixed,
 .ui.visible.wide.right.sidebar ~ .pusher {
-  transform: translate3d(-$wideWidth, 0, 0);
+  transform: translate3d(-$sidebar-wide-width, 0, 0);
 }
 .ui.visible[class*="very wide"].right.sidebar ~ .fixed,
 .ui.visible[class*="very wide"].right.sidebar ~ .pusher {
-  transform: translate3d(-$veryWideWidth, 0, 0);
+  transform: translate3d(-$sidebar-very-wide-width, 0, 0);
 }
-
-
 
 /*******************************
           Animations
@@ -301,7 +294,7 @@ body.pushable > .pusher {
 
 /* Set-up */
 .ui.overlay.sidebar {
-  z-index: $topLayer;
+  z-index: $sidebar-top-layer;
 }
 
 /* Initial */
@@ -321,7 +314,7 @@ body.pushable > .pusher {
 /* Animation */
 .animating.ui.overlay.sidebar,
 .ui.visible.overlay.sidebar {
-  transition: transform $duration $easing;
+  transition: transform $sidebar-duration $sidebar-easing;
 }
 
 /* End - Sidebar */
@@ -344,16 +337,14 @@ body.pushable > .pusher {
   transform: none !important;
 }
 
-
-
 /*--------------
       Push
 ---------------*/
 
 /* Initial */
 .ui.push.sidebar {
-  transition: transform $duration $easing;
-  z-index: $topLayer;
+  transition: transform $sidebar-duration $sidebar-easing;
+  z-index: $sidebar-top-layer;
 }
 
 /* Sidebar - Initial */
@@ -375,7 +366,6 @@ body.pushable > .pusher {
   transform: translate3d(0%, 0, 0);
 }
 
-
 /*--------------
     Uncover
 ---------------*/
@@ -383,15 +373,14 @@ body.pushable > .pusher {
 /* Initial */
 .ui.uncover.sidebar {
   transform: translate3d(0, 0, 0);
-  z-index: $bottomLayer;
+  z-index: $sidebar-bottom-layer;
 }
 
 /* End */
 .ui.visible.uncover.sidebar {
   transform: translate3d(0, 0, 0);
-  transition: transform $duration $easing;
+  transition: transform $sidebar-duration $sidebar-easing;
 }
-
 
 /*--------------
    Slide Along
@@ -399,7 +388,7 @@ body.pushable > .pusher {
 
 /* Initial */
 .ui.slide.along.sidebar {
-  z-index: $bottomLayer;
+  z-index: $sidebar-bottom-layer;
 }
 
 /* Sidebar - Initial */
@@ -418,7 +407,7 @@ body.pushable > .pusher {
 
 /* Animation */
 .ui.animating.slide.along.sidebar {
-  transition: transform $duration $easing;
+  transition: transform $sidebar-duration $sidebar-easing;
 }
 
 /* End */
@@ -426,14 +415,13 @@ body.pushable > .pusher {
   transform: translate3d(0%, 0, 0);
 }
 
-
 /*--------------
    Slide Out
 ---------------*/
 
 /* Initial */
 .ui.slide.out.sidebar {
-  z-index: $bottomLayer;
+  z-index: $sidebar-bottom-layer;
 }
 
 /* Sidebar - Initial */
@@ -452,7 +440,7 @@ body.pushable > .pusher {
 
 /* Animation */
 .ui.animating.slide.out.sidebar {
-  transition: transform $duration $easing;
+  transition: transform $sidebar-duration $sidebar-easing;
 }
 
 /* End */
@@ -466,8 +454,8 @@ body.pushable > .pusher {
 
 /* Initial */
 .ui.scale.down.sidebar {
-  transition: transform $duration $easing;
-  z-index: $topLayer;
+  transition: transform $sidebar-duration $sidebar-easing;
+  z-index: $sidebar-top-layer;
 }
 
 /* Sidebar - Initial  */
@@ -500,7 +488,7 @@ body.pushable > .pusher {
 
 /* Animation */
 .ui.animating.scale.down > .visible.ui.sidebar {
-  transition: transform $duration $easing;
+  transition: transform $sidebar-duration $sidebar-easing;
 }
 .ui.visible.scale.down.sidebar ~ .pusher,
 .ui.animating.scale.down.sidebar ~ .pusher {
@@ -517,5 +505,3 @@ body.pushable > .pusher {
 .ui.visible.scale.down.sidebar ~ .pusher {
   transform: scale(0.75);
 }
-
-

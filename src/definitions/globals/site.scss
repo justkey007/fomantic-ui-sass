@@ -1,10 +1,10 @@
-@import '../../themes/default/globals/site';
+@import "../../themes/default/globals/variables";
 
 /*******************************
              Page
 *******************************/
 
-@import url('#{$googleProtocol}fonts.googleapis.com/css?family=#{$googleFontRequest}');
+@import url("#{$google-protocol}fonts.googleapis.com/css?family=#{$google-font-request}");
 
 html,
 body {
@@ -12,19 +12,19 @@ body {
 }
 
 html {
-  font-size: $emSize;
+  font-size: $em-size;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow-x: $pageOverflowX;
-  min-width: $pageMinWidth;
-  background: $pageBackground;
-  font-family: $pageFont;
-  font-size: $fontSize;
-  line-height: $lineHeight;
-  color: $textColor;
+  overflow-x: $page-overflow-x;
+  min-width: $page-min-width;
+  background: $page-background;
+  font-family: $page-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $text-color;
 }
 
 /*******************************
@@ -36,10 +36,10 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: $headerFont;
-  line-height: $headerLineHeight;
-  margin: $headerMargin;
-  font-weight: $headerFontWeight;
+  font-family: $header-font;
+  line-height: $header-line-height;
+  margin: $header-margin;
+  font-weight: $header-font-weight;
   padding: 0;
 }
 
@@ -81,8 +81,8 @@ h5:last-child {
 *******************************/
 
 p {
-  margin: $paragraphMargin;
-  line-height: $paragraphLineHeight;
+  margin: $paragraph-margin;
+  line-height: $paragraph-line-height;
 }
 p:first-child {
   margin-top: 0;
@@ -96,54 +96,54 @@ p:last-child {
 --------------------*/
 
 a {
-  color: $linkColor;
-  text-decoration: $linkUnderline;
+  color: $link-color;
+  text-decoration: $link-underline;
 }
 a:hover {
-  color: $linkHoverColor;
-  text-decoration: $linkHoverUnderline;
+  color: $link-hover-color;
+  text-decoration: $link-hover-underline;
 }
 
 /*******************************
          Scrollbars
 *******************************/
 
-@if ($useCustomScrollbars) {
+@if ($use-custom-scrollbars) {
   /* Force Simple Scrollbars */
   body ::-webkit-scrollbar {
     -webkit-appearance: none;
-    width: $customScrollbarWidth;
-    height: $customScrollbarHeight;
+    width: $custom-scrollbar-width;
+    height: $custom-scrollbar-height;
   }
   body ::-webkit-scrollbar-track {
-    background: $trackBackground;
-    /* border-radius: $trackBorderRadius; */
+    background: $track-background;
+    /* border-radius: $track-border-radius; */
   }
   body ::-webkit-scrollbar-thumb {
     cursor: pointer;
-    /* border-radius: $thumbBorderRadius; */
-    background: $thumbBackground;
-    transition: $thumbTransition;
+    /* border-radius: $thumb-border-radius; */
+    background: $thumb-background;
+    transition: $thumb-transition;
   }
   body ::-webkit-scrollbar-thumb:window-inactive {
-    background: $thumbInactiveBackground;
+    background: $thumb-inactive-background;
   }
   body ::-webkit-scrollbar-thumb:hover {
-    background: $thumbHoverBackground;
+    background: $thumb-hover-background;
   }
 
   /* Inverted UI */
   body .ui.inverted:not(.dimmer)::-webkit-scrollbar-track {
-    background: $trackInvertedBackground;
+    background: $track-inverted-background;
   }
   body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb {
-    background: $thumbInvertedBackground;
+    background: $thumb-inverted-background;
   }
   body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:window-inactive {
-    background: $thumbInvertedInactiveBackground;
+    background: $thumb-inverted-inactive-background;
   }
   body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:hover {
-    background: $thumbInvertedHoverBackground;
+    background: $thumb-inverted-hover-background;
   }
 }
 
@@ -153,31 +153,31 @@ a:hover {
 
 /* Site */
 ::-webkit-selection {
-  background-color: $highlightBackground;
-  color: $highlightColor;
+  background-color: $highlight-background;
+  color: $highlight-color;
 }
 ::-moz-selection {
-  background-color: $highlightBackground;
-  color: $highlightColor;
+  background-color: $highlight-background;
+  color: $highlight-color;
 }
 ::selection {
-  background-color: $highlightBackground;
-  color: $highlightColor;
+  background-color: $highlight-background;
+  color: $highlight-color;
 }
 
 /* Form */
 textarea::-webkit-selection,
 input::-webkit-selection {
-  background-color: $inputHighlightBackground;
-  color: $inputHighlightColor;
+  background-color: $input-highlight-background;
+  color: $input-highlight-color;
 }
 textarea::-moz-selection,
 input::-moz-selection {
-  background-color: $inputHighlightBackground;
-  color: $inputHighlightColor;
+  background-color: $input-highlight-background;
+  color: $input-highlight-color;
 }
 textarea::selection,
 input::selection {
-  background-color: $inputHighlightBackground;
-  color: $inputHighlightColor;
+  background-color: $input-highlight-background;
+  color: $input-highlight-color;
 }

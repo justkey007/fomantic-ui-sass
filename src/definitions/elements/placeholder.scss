@@ -1,5 +1,4 @@
-@import '../../themes/default/elements/placeholder';
-
+@import "../../themes/default/elements/placeholder";
 
 /*-------------------
       Placeholder
@@ -8,37 +7,41 @@
 .ui.placeholder {
   position: static;
   overflow: hidden;
-  animation: placeholderShimmer $placeholderLoadingAnimationDuration linear;
+  animation: placeholderShimmer $placeholder-loading-animation-duration linear;
   animation-iteration-count: infinite;
   background-color: $white;
-  background-image: $placeholderLoadingGradient;
-  background-size: $placeholderLoadingGradientWidth 100%;
-  max-width: $placeholderMaxWidth;
+  background-image: $placeholder-loading-gradient;
+  background-size: $placeholder-loading-gradient-width 100%;
+  max-width: $placeholder-max-width;
 }
 
-@keyframes placeholderShimmer{
+@keyframes placeholderShimmer {
   0% {
-    background-position: -$placeholderLoadingGradientWidth 0
+    background-position: -$placeholder-loading-gradient-width 0;
   }
   100% {
-    background-position: $placeholderLoadingGradientWidth 0
+    background-position: $placeholder-loading-gradient-width 0;
   }
 }
 
 .ui.placeholder + .ui.placeholder {
-  margin-top: $consecutivePlaceholderSpacing;
+  margin-top: $placeholder-consecutive-spacing;
 }
 .ui.placeholder + .ui.placeholder {
-  animation-delay: $placeholderAnimationInterval;
+  animation-delay: $placeholder-animation-interval;
 }
 .ui.placeholder + .ui.placeholder + .ui.placeholder {
-  animation-delay: ($placeholderAnimationInterval * 2);
+  animation-delay: ($placeholder-animation-interval * 2);
 }
 .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder {
-  animation-delay: ($placeholderAnimationInterval * 3);
+  animation-delay: ($placeholder-animation-interval * 3);
 }
-.ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder {
-  animation-delay: ($placeholderAnimationInterval * 4);
+.ui.placeholder
+  + .ui.placeholder
+  + .ui.placeholder
+  + .ui.placeholder
+  + .ui.placeholder {
+  animation-delay: ($placeholder-animation-interval * 4);
 }
 
 .ui.placeholder,
@@ -50,12 +53,12 @@
 }
 
 .ui.placeholder.hidden {
-  display:none;
+  display: none;
 }
 
 /* Image */
 .ui.placeholder .image:not(.header):not(.ui):not(.icon) {
-  height: $placeholderImageHeight;
+  height: $placeholder-image-height;
 }
 .ui.placeholder .square.image:not(.header) {
   height: 0;
@@ -70,17 +73,16 @@
   padding-top: 75%;
 }
 
-
 /* Lines */
 .ui.placeholder .line {
   position: relative;
-  height: $placeholderLineMargin;
+  height: $placeholder-line-margin;
 }
 .ui.placeholder .line:before,
 .ui.placeholder .line:after {
   top: 100%;
   position: absolute;
-  content: '';
+  content: "";
   background-color: inherit;
 }
 .ui.placeholder .line:before {
@@ -92,14 +94,14 @@
 
 /* Any Lines */
 .ui.placeholder .line {
-  margin-bottom: $placeholderLineHeight;
+  margin-bottom: $placeholder-line-height;
 }
 .ui.placeholder .line:before,
 .ui.placeholder .line:after {
-  height: $placeholderLineHeight;
+  height: $placeholder-line-height;
 }
 .ui.placeholder .line:not(:first-child) {
-  margin-top: $placeholderLineHeight;
+  margin-top: $placeholder-line-height;
 }
 
 /* Header Image + 2 Lines */
@@ -110,51 +112,51 @@
 
 /* Line Outdent */
 .ui.placeholder .line:nth-child(1):after {
-  width: $placeholderLineOneOutdent;
+  width: $placeholder-line-one-outdent;
 }
 .ui.placeholder .line:nth-child(2):after {
-  width: $placeholderLineTwoOutdent;
+  width: $placeholder-line-two-outdent;
 }
 .ui.placeholder .line:nth-child(3):after {
-  width: $placeholderLineThreeOutdent;
+  width: $placeholder-line-three-outdent;
 }
 .ui.placeholder .line:nth-child(4):after {
-  width: $placeholderLineFourOutdent;
+  width: $placeholder-line-four-outdent;
 }
 .ui.placeholder .line:nth-child(5):after {
-  width: $placeholderLineFiveOutdent;
+  width: $placeholder-line-five-outdent;
 }
 
 /* Header Line 1 & 2*/
 .ui.placeholder .header .line {
-  margin-bottom: $placeholderHeaderLineHeight;
+  margin-bottom: $placeholder-header-line-height;
 }
 .ui.placeholder .header .line:before,
 .ui.placeholder .header .line:after {
-  height: $placeholderHeaderLineHeight;
+  height: $placeholder-header-line-height;
 }
 .ui.placeholder .header .line:not(:first-child) {
-  margin-top: $placeholderHeaderLineHeight;
+  margin-top: $placeholder-header-line-height;
 }
 .ui.placeholder .header .line:after {
-  width: $placeholderHeaderLineOneOutdent;
+  width: $placeholder-header-line-one-outdent;
 }
 .ui.placeholder .header .line:nth-child(2):after {
-  width: $placeholderHeaderLineTwoOutdent;
+  width: $placeholder-header-line-two-outdent;
 }
 
 /* Image Header */
 .ui.placeholder .image.header .line {
-  margin-left: $placeholderImageWidth;
+  margin-left: $placeholder-image-width;
 }
 .ui.placeholder .image.header .line:before {
-  width: $placeholderImageTextIndent;
+  width: $placeholder-image-text-indent;
 }
 .ui.placeholder .image.header:after {
   display: block;
-  height: $placeholderLineMargin;
-  content: '';
-  margin-left: $placeholderImageWidth;
+  height: $placeholder-line-margin;
+  content: "";
+  margin-left: $placeholder-image-width;
 }
 
 /* Spacing */
@@ -166,14 +168,14 @@
 .ui.placeholder .image:not(:first-child):before,
 .ui.placeholder .paragraph:not(:first-child):before,
 .ui.placeholder .header:not(:first-child):before {
-  height: $placeholderSpacing;
-  content: '';
+  height: $placeholder-spacing;
+  content: "";
   display: block;
 }
 
 /* Inverted Content Loader */
 .ui.inverted.placeholder {
-  background-image: $placeholderInvertedLoadingGradient;
+  background-image: $placeholder-inverted-loading-gradient;
 }
 .ui.inverted.placeholder,
 .ui.inverted.placeholder > :before,
@@ -187,30 +189,28 @@
             Variations
 *******************************/
 
-
 /*-------------------
         Sizes
 --------------------*/
 
 .ui.placeholder .full.line.line.line:after {
-  width: $placeholderFullLineOutdent;
+  width: $placeholder-full-line-outdent;
 }
 .ui.placeholder .very.long.line.line.line:after {
-  width: $placeholderVeryLongLineOutdent;
+  width: $placeholder-very-long-line-outdent;
 }
 .ui.placeholder .long.line.line.line:after {
-  width: $placeholderLongLineOutdent;
+  width: $placeholder-long-line-outdent;
 }
 .ui.placeholder .medium.line.line.line:after {
-  width: $placeholderMediumLineOutdent;
+  width: $placeholder-medium-line-outdent;
 }
 .ui.placeholder .short.line.line.line:after {
-  width: $placeholderShortLineOutdent;
+  width: $placeholder-short-line-outdent;
 }
 .ui.placeholder .very.short.line.line.line:after {
-  width: $placeholderVeryShortLineOutdent;
+  width: $placeholder-very-short-line-outdent;
 }
-
 
 /*-------------------
         Fluid
@@ -219,5 +219,3 @@
 .ui.fluid.placeholder {
   max-width: none;
 }
-
-

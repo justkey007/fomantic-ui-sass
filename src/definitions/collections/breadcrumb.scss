@@ -5,10 +5,10 @@
 *******************************/
 
 .ui.breadcrumb {
-  line-height: $lineHeight;
-  display: $display;
-  margin: $verticalMargin 0;
-  vertical-align: $verticalAlign;
+  line-height: $line-height;
+  display: $breadcrumb-display;
+  margin: $breadcrumb-vertical-margin 0;
+  vertical-align: $breadcrumb-vertical-align;
   font-size: $medium;
 
   &:first-child {
@@ -18,7 +18,7 @@
   // Loose Coupling */
   &.segment {
     display: inline-block;
-    padding: $segmentPadding;
+    padding: $breadcrumb-segment-padding;
   }
 
   .ui.breadcrumb:last-child {
@@ -28,19 +28,19 @@
   // Divider */
   .divider {
     display: inline-block;
-    opacity: $dividerOpacity;
-    margin: 0 $dividerSpacing 0;
+    opacity: $breadcrumb-divider-opacity;
+    margin: 0 $breadcrumb-divider-spacing 0;
 
-    font-size: $dividerSize;
-    color: $dividerColor;
-    vertical-align: $dividerVerticalAlign;
+    font-size: $breadcrumb-divider-size;
+    color: $breadcrumb-divider-color;
+    vertical-align: $breadcrumb-divider-vertical-align;
   }
 
   // Link */
   a {
-    color: $linkColor;
+    color: $link-color;
     &:hover {
-      color: $linkHoverColor;
+      color: $link-hover-color;
     }
     // Section */
     &.section {
@@ -50,27 +50,27 @@
 
   // Icon Divider */
   .icon.divider {
-    font-size: $iconDividerSize;
-    vertical-align: $iconDividerVerticalAlign;
+    font-size: $breadcrumb-icon-divider-size;
+    vertical-align: $breadcrumb-icon-divider-vertical-align;
   }
 
   .section {
     display: inline-block;
-    margin: $sectionMargin;
-    padding: $sectionPadding;
+    margin: $breadcrumb-section-margin;
+    padding: $breadcrumb-section-padding;
     &.active {
-      font-weight: $activeFontWeight;
+      font-weight: $breadcrumb-active-font-weight;
     }
   }
 
   // Inverted */
   &.inverted {
-    color: $invertedColor;
+    color: $breadcrumb-inverted-color;
     & > .active.section {
-      color: $invertedActiveColor;
+      color: $breadcrumb-inverted-active-color;
     }
     & > .divider {
-      color: $invertedDividerColor;
+      color: $breadcrumb-inverted-divider-color;
     }
   }
 

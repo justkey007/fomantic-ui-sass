@@ -1,124 +1,122 @@
 //****************************** Step *******************************/
-@import '../globals/site';
+@import "../globals/variables";
 //------------------ Group --------------------*/
 
-$stepMargin: 1em 0 !default;
-$stepsBorderRadius: $defaultBorderRadius !default;
-$stepsBackground: '' !default;
-$stepsBoxShadow: none !default;
-$stepsBorder: 1px solid $borderColor !default;
+$step-margin: 1em 0 !default;
+$step-steps-border-radius: $default-border-radius !default;
+$step-steps-background: "" !default;
+$step-steps-box-shadow: none !default;
+$step-steps-border: 1px solid $border-color !default;
 
 //------------------ Element --------------------*/
 
-$verticalMargin: 0 !default;
-$horizontalMargin: 0 !default;
+$step-vertical-margin: 0 !default;
+$step-horizontal-margin: 0 !default;
 
-$arrowSize: $relativeLarge !default;
-$verticalPadding: $relativeLarge !default;
-$horizontalPadding: 2em !default;
+$step-arrow-size: $relative-large !default;
+$step-vertical-padding: $relative-large !default;
+$step-horizontal-padding: 2em !default;
 
-$transition:
-  background-color $defaultDuration $defaultEasing,
-  opacity $defaultDuration $defaultEasing,
-  color $defaultDuration $defaultEasing,
-  box-shadow $defaultDuration $defaultEasing
- !default;
-$lineHeight: $relativeLarge !default;
-$alignItems: center !default;
-$justifyContent: center !default;
-$backgroundColor: $white !default;
-$background: $backgroundColor !default;
-$borderRadius: 0 !default;
-$borderWidth: 1px !default;
-$boxShadow: none !default;
-$border: none !default;
-$divider: $borderWidth solid $borderColor !default;
+$step-transition: background-color $default-duration $default-easing,
+  opacity $default-duration $default-easing,
+  color $default-duration $default-easing,
+  box-shadow $default-duration $default-easing !default;
+$step-line-height: $relative-large !default;
+$step-align-items: center !default;
+$step-justify-content: center !default;
+$step-background-color: $white !default;
+$step-background: $step-background-color !default;
+$step-border-radius: 0 !default;
+$step-border-width: 1px !default;
+$step-box-shadow: none !default;
+$step-border: none !default;
+$step-divider: $step-border-width solid $border-color !default;
 
 // Icon */
-$iconDistance: 1rem !default;
-$iconSize: 2.5em !default;
-$iconAlign: middle !default;
+$step-icon-distance: 1rem !default;
+$step-icon-size: 2.5em !default;
+$step-icon-align: middle !default;
 
 // Title */
-$titleFontFamily: $headerFont !default;
-$titleFontWeight: $bold !default;
-$titleFontSize: $relativeLarge !default;
-$titleColor: $darkTextColor !default;
+$step-title-font-family: $header-font !default;
+$step-title-font-weight: $bold !default;
+$step-title-font-size: $relative-large !default;
+$step-title-color: $dark-text-color !default;
 
 // Description */
-$descriptionDistance: 0.25em !default;
-$descriptionFontSize: $relativeSmall !default;
-$descriptionFontWeight: $normal !default;
-$descriptionColor: $textColor !default;
-
+$step-description-distance: 0.25em !default;
+$step-description-font-size: $relative-small !default;
+$step-description-font-weight: $normal !default;
+$step-description-color: $text-color !default;
 
 // Arrow */
-$arrowBackgroundColor: $backgroundColor !default;
-$arrowTopOffset: 50% !default;
-$arrowRightOffset: 0 !default;
-$arrowBorderWidth: 0 $borderWidth $borderWidth 0 !default;
+$step-arrow-background-color: $step-background-color !default;
+$step-arrow-top-offset: 50% !default;
+$step-arrow-right-offset: 0 !default;
+$step-arrow-border-width: 0 $step-border-width $step-border-width 0 !default;
 
-$arrowDisplay: block !default;
-$lastArrowDisplay: none !default;
+$step-arrow-display: block !default;
+$step-last-arrow-display: none !default;
 
-$activeArrowDisplay: block !default;
-$activeLastArrowDisplay: none !default;
+$step-active-arrow-display: block !default;
+$step-active-last-arrow-display: none !default;
 
 // Mobile */
-$mobileIconDistance: $iconDistance !default;
+$step-mobile-icon-distance: $step-icon-distance !default;
 
 //------------------- Types --------------------*/
 
 // Vertical */
-$verticalDivider: $divider !default;
-$verticalArrowTopOffset: 50% !default;
-$verticalArrowRightOffset: 0 !default;
-$verticalArrowBorderWidth: 0 $borderWidth $borderWidth 0 !default;
+$step-vertical-divider: $step-divider !default;
+$step-vertical-arrow-top-offset: 50% !default;
+$step-vertical-arrow-right-offset: 0 !default;
+$step-vertical-arrow-border-width: 0 $step-border-width $step-border-width 0 !default;
 
-$verticalArrowDisplay: none !default;
-$verticalLastArrowDisplay: $verticalArrowDisplay !default;
+$step-vertical-arrow-display: none !default;
+$step-vertical-last-arrow-display: $step-vertical-arrow-display !default;
 
-$verticalActiveArrowDisplay: block !default;
-$verticalActiveLastArrowDisplay: block !default;
+$step-vertical-active-arrow-display: block !default;
+$step-vertical-active-last-arrow-display: block !default;
 
 //------------------- Variations --------------------*/
 
-$attachedHorizontalOffset: -$borderWidth !default;
-$attachedVerticalOffset: 0 !default;
-$attachedWidth: calc(100% + #{-$attachedHorizontalOffset * 2}) !default;
+$step-attached-horizontal-offset: -$step-border-width !default;
+$step-attached-vertical-offset: 0 !default;
+$step-attached-width: calc(
+  100% + #{-$step-attached-horizontal-offset * 2}
+) !default;
 
-$orderedFontFamily: inherit !default;
-$orderedFontWeight: $bold !default;
+$step-ordered-font-family: inherit !default;
+$step-ordered-font-weight: $bold !default;
 
 //------------------- States --------------------*/
 
 // Completed */
-$completedColor: $positiveColor !default;
+$step-completed-color: $positive-color !default;
 
 // Hover */
-$hoverBackground: $offWhite !default;
-$hoverColor: $hoveredTextColor !default;
+$step-hover-background: $off-white !default;
+$step-hover-color: $hovered-text-color !default;
 
 // Down */
-$downBackground: $darkWhite !default;
-$downColor: $pressedTextColor !default;
+$step-down-background: $dark-white !default;
+$step-down-color: $pressed-text-color !default;
 
 // Active */
-$activeBackground: $darkWhite !default;
-$activeColor: $linkColor !default;
-$activeIconColor: $darkTextColor !default;
+$step-active-background: $dark-white !default;
+$step-active-color: $link-color !default;
+$step-active-icon-color: $dark-text-color !default;
 
 // Active + Hover */
-$activeHoverBackground: $lightGrey !default;
-$activeHoverColor: $textColor !default;
-
+$step-active-hover-background: $light-grey !default;
+$step-active-hover-color: $text-color !default;
 
 // Disabled */
-$disabledBackground: $background !default;
-$disabledColor: $disabledTextColor !default;
+$step-disabled-background: $step-background !default;
+$step-disabled-color: $disabled-text-color !default;
 
 // Inverted */
-$invertedActiveBackground: #333333 !default;
-$invertedActiveHoverBackground: #444444 !default;
-$invertedHoverBackground: #3F3F3F !default;
-$invertedDisabledBackground: #222222 !default;
+$step-inverted-active-background: #333333 !default;
+$step-inverted-active-hover-background: #444444 !default;
+$step-inverted-hover-background: #3f3f3f !default;
+$step-inverted-disabled-background: #222222 !default;

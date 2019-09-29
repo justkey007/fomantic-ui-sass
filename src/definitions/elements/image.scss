@@ -1,4 +1,4 @@
-@import '../../themes/default/elements/image';
+@import "../../themes/default/elements/image";
 
 /*******************************
              Image
@@ -9,7 +9,7 @@
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
-  background-color: $placeholderColor;
+  background-color: $image-placeholder-color;
 }
 
 img.ui.image {
@@ -22,7 +22,6 @@ img.ui.image {
   max-width: 100%;
   height: auto;
 }
-
 
 /*******************************
             States
@@ -42,18 +41,15 @@ img.ui.image {
   visibility: hidden;
 }
 
-
 .ui.disabled.images,
 .ui.disabled.image {
   cursor: default;
-  opacity: $disabledOpacity;
+  opacity: $disabled-opacity;
 }
-
 
 /*******************************
           Variations
 *******************************/
-
 
 /*--------------
      Inline
@@ -99,7 +95,7 @@ img.ui.image {
 .ui.rounded.image,
 .ui.rounded.images .image > *,
 .ui.rounded.image > * {
-  border-radius: $roundedBorderRadius;
+  border-radius: $image-rounded-border-radius;
 }
 
 /*--------------
@@ -112,7 +108,7 @@ img.ui.image {
 .ui.bordered.image img,
 .ui.bordered.image svg,
 img.ui.bordered.image {
-  border: $imageBorder;
+  border: $image-border;
 }
 
 /*--------------
@@ -128,9 +124,9 @@ img.ui.bordered.image {
 .ui.circular.image,
 .ui.circular.images .image > *,
 .ui.circular.image > * {
-  -webkit-border-radius: $circularRadius;
-  -moz-border-radius: $circularRadius;
-  border-radius: $circularRadius;
+  -webkit-border-radius: $circular-radius;
+  -moz-border-radius: $circular-radius;
+  border-radius: $circular-radius;
 }
 
 /*--------------
@@ -148,7 +144,6 @@ img.ui.bordered.image {
   height: auto;
 }
 
-
 /*--------------
      Avatar
 ---------------*/
@@ -159,15 +154,15 @@ img.ui.bordered.image {
 .ui.avatar.image img,
 .ui.avatar.image svg,
 .ui.avatar.image {
-  margin-right: $avatarMargin;
+  margin-right: $image-avatar-margin;
 
   display: inline-block;
-  width: $avatarSize;
-  height: $avatarSize;
+  width: $image-avatar-size;
+  height: $image-avatar-size;
 
-  -webkit-border-radius: $circularRadius;
-  -moz-border-radius: $circularRadius;
-  border-radius: $circularRadius;
+  -webkit-border-radius: $circular-radius;
+  -moz-border-radius: $circular-radius;
+  border-radius: $circular-radius;
 }
 
 /*-------------------
@@ -176,18 +171,18 @@ img.ui.bordered.image {
 
 .ui.spaced.image {
   display: inline-block !important;
-  margin-left: $spacedDistance;
-  margin-right: $spacedDistance;
+  margin-left: $image-spaced-distance;
+  margin-right: $image-spaced-distance;
 }
 
 .ui[class*="left spaced"].image {
-  margin-left: $spacedDistance;
+  margin-left: $image-spaced-distance;
   margin-right: 0;
 }
 
 .ui[class*="right spaced"].image {
   margin-left: 0;
-  margin-right: $spacedDistance;
+  margin-right: $image-spaced-distance;
 }
 
 /*-------------------
@@ -197,22 +192,21 @@ img.ui.bordered.image {
 .ui.floated.image,
 .ui.floated.images {
   float: left;
-  margin-right: $floatedHorizontalMargin;
-  margin-bottom: $floatedVerticalMargin;
+  margin-right: $image-floated-horizontal-margin;
+  margin-bottom: $image-floated-vertical-margin;
 }
 .ui.right.floated.images,
 .ui.right.floated.image {
   float: right;
   margin-right: 0;
-  margin-bottom: $floatedVerticalMargin;
-  margin-left: $floatedHorizontalMargin;
+  margin-bottom: $image-floated-vertical-margin;
+  margin-left: $image-floated-horizontal-margin;
 }
 
 .ui.floated.images:last-child,
 .ui.floated.image:last-child {
   margin-bottom: 0;
 }
-
 
 .ui.centered.images,
 .ui.centered.image {
@@ -228,7 +222,7 @@ img.ui.bordered.image {
 .ui.mini.images img,
 .ui.mini.images svg,
 .ui.mini.image {
-  width: $miniWidth;
+  width: $image-mini-width;
   height: auto;
   font-size: $mini;
 }
@@ -236,7 +230,7 @@ img.ui.bordered.image {
 .ui.tiny.images img,
 .ui.tiny.images svg,
 .ui.tiny.image {
-  width: $tinyWidth;
+  width: $image-tiny-width;
   height: auto;
   font-size: $tiny;
 }
@@ -244,7 +238,7 @@ img.ui.bordered.image {
 .ui.small.images img,
 .ui.small.images svg,
 .ui.small.image {
-  width: $smallWidth;
+  width: $image-small-width;
   height: auto;
   font-size: $small;
 }
@@ -252,7 +246,7 @@ img.ui.bordered.image {
 .ui.medium.images img,
 .ui.medium.images svg,
 .ui.medium.image {
-  width: $mediumWidth;
+  width: $image-medium-width;
   height: auto;
   font-size: $medium;
 }
@@ -260,7 +254,7 @@ img.ui.bordered.image {
 .ui.large.images img,
 .ui.large.images svg,
 .ui.large.image {
-  width: $largeWidth;
+  width: $image-large-width;
   height: auto;
   font-size: $large;
 }
@@ -268,7 +262,7 @@ img.ui.bordered.image {
 .ui.big.images img,
 .ui.big.images svg,
 .ui.big.image {
-  width: $bigWidth;
+  width: $image-big-width;
   height: auto;
   font-size: $big;
 }
@@ -276,7 +270,7 @@ img.ui.bordered.image {
 .ui.huge.images img,
 .ui.huge.images svg,
 .ui.huge.image {
-  width: $hugeWidth;
+  width: $image-huge-width;
   height: auto;
   font-size: $huge;
 }
@@ -284,11 +278,10 @@ img.ui.bordered.image {
 .ui.massive.images img,
 .ui.massive.images svg,
 .ui.massive.image {
-  width: $massiveWidth;
+  width: $image-massive-width;
   height: auto;
   font-size: $massive;
 }
-
 
 /*******************************
               Groups
@@ -296,14 +289,12 @@ img.ui.bordered.image {
 
 .ui.images {
   font-size: 0;
-  margin: 0 -$imageHorizontalMargin 0;
+  margin: 0 (-$image-horizontal-margin) 0;
 }
 
 .ui.images .image,
 .ui.images > img,
 .ui.images > svg {
   display: inline-block;
-  margin: 0 $imageHorizontalMargin $imageVerticalMargin;
+  margin: 0 $image-horizontal-margin $image-vertical-margin;
 }
-
-

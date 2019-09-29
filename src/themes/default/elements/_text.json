@@ -1,0 +1,10 @@
+{
+  "@massive": "$text-massive",
+  "@medium": "$text-medium",
+  "@small": "$text-small",
+  "@large": "$text-large",
+  "@mini": "$text-mini",
+  "@tiny": "$text-tiny",
+  "@huge": "$text-huge",
+  "@big": "$text-big"
+}

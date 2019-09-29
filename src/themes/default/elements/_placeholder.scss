@@ -1,56 +1,57 @@
-@import '../globals/site';
+@import "../globals/variables";
 
 // Variations */
-$placeholderFullLineOutdent: 0 !default;
-$placeholderVeryLongLineOutdent: 10% !default;
-$placeholderLongLineOutdent: 35% !default;
-$placeholderMediumLineOutdent: 50% !default;
-$placeholderShortLineOutdent: 65% !default;
-$placeholderVeryShortLineOutdent: 80% !default;
+$placeholder-full-line-outdent: 0 !default;
+$placeholder-very-long-line-outdent: 10% !default;
+$placeholder-long-line-outdent: 35% !default;
+$placeholder-medium-line-outdent: 50% !default;
+$placeholder-short-line-outdent: 65% !default;
+$placeholder-very-short-line-outdent: 80% !default;
 
-$placeholderMaxWidth: 30rem !default;
+$placeholder-max-width: 30rem !default;
 
 // Key Content Sizing */
-$placeholderLineMargin: $relative12px !default;
-$placeholderHeaderLineHeight: $relative9px !default;
-$placeholderLineHeight: $relative7px !default;
-$placeholderParagraphLineHeight: $placeholderLineHeight !default;
+$placeholder-line-margin: $relative12px !default;
+$placeholder-header-line-height: $relative9px !default;
+$placeholder-line-height: $relative7px !default;
+$placeholder-paragraph-line-height: $placeholder-line-height !default;
 
-$placeholderSpacing: $relative20px !default;
+$placeholder-spacing: $relative20px !default;
 
 // Interval between consecutive placeholders */
-$placeholderAnimationInterval: 0.15s !default;
+$placeholder-animation-interval: 0.15s !default;
 
 // Repeated Placeholder */
-$consecutivePlaceholderSpacing: 2rem !default;
+$placeholder-consecutive-spacing: 2rem !default;
 
 // Image */
-$placeholderImageHeight: 100px !default;
+$placeholder-image-height: 100px !default;
 
 // Header Image */
-$placeholderImageWidth: 3em !default;
-$placeholderImageTextIndent: $_10px !default;
+$placeholder-image-width: 3em !default;
+$placeholder-image-text-indent: $_10px !default;
 
 // Paragraph */
-$placeholderHeaderLineOneOutdent: 20% !default;
-$placeholderHeaderLineTwoOutdent: 60% !default;
+$placeholder-header-line-one-outdent: 20% !default;
+$placeholder-header-line-two-outdent: 60% !default;
 
-$placeholderLineOneOutdent: $placeholderFullLineOutdent !default;
-$placeholderLineTwoOutdent: $placeholderMediumLineOutdent !default;
-$placeholderLineThreeOutdent: $placeholderVeryLongLineOutdent !default;
-$placeholderLineFourOutdent: $placeholderLongLineOutdent !default;
-$placeholderLineFiveOutdent: $placeholderShortLineOutdent !default;
-
+$placeholder-line-one-outdent: $placeholder-full-line-outdent !default;
+$placeholder-line-two-outdent: $placeholder-medium-line-outdent !default;
+$placeholder-line-three-outdent: $placeholder-very-long-line-outdent !default;
+$placeholder-line-four-outdent: $placeholder-long-line-outdent !default;
+$placeholder-line-five-outdent: $placeholder-short-line-outdent !default;
 
 // Glow Gradient */
-$placeholderLoadingAnimationDuration: 2s !default;
-$placeholderLoadingGradientWidth: 1200px !default;
-$placeholderLoadingGradient: linear-gradient(to right,
+$placeholder-loading-animation-duration: 2s !default;
+$placeholder-loading-gradient-width: 1200px !default;
+$placeholder-loading-gradient: linear-gradient(
+  to right,
   rgba(0, 0, 0, 0.08) 0,
   rgba(0, 0, 0, 0.15) 15%,
   rgba(0, 0, 0, 0.08) 30%
 ) !default;
-$placeholderInvertedLoadingGradient: linear-gradient(to right,
+$placeholder-inverted-loading-gradient: linear-gradient(
+  to right,
   rgba(255, 255, 255, 0.08) 0,
   rgba(255, 255, 255, 0.14) 15%,
   rgba(255, 255, 255, 0.08) 30%

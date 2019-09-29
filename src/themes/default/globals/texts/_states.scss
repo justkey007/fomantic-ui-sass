@@ -1,11 +1,11 @@
-$positiveTextColor       : #2C662D !default;
-$successTextColor       : $positiveTextColor !default;
+$positive-text-color: #2c662d !default;
+$success-text-color: $positive-text-color !default;
 
-$negativeTextColor       : #9F3A38 !default;
-$errorTextColor          : $negativeTextColor !default;
+$negative-text-color: #9f3a38 !default;
+$error-text-color: $negative-text-color !default;
 
-$infoTextColor          : #276F86 !default;
-$warningTextColor       : #573A08 !default;
+$info-text-color: #276f86 !default;
+$warning-text-color: #573a08 !default;
 
-$disabledTextColor: rgba(40, 40, 40, 0.3) !default;
-$invertedDisabledTextColor: rgba(225, 225, 225, 0.3) !default;
+$disabled-text-color: rgba(40, 40, 40, 0.3) !default;
+$inverted-disabled-text-color: rgba(225, 225, 225, 0.3) !default;

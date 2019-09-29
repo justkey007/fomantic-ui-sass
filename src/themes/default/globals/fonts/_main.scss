@@ -1,23 +1,23 @@
-$fontName          : 'Lato' !default;
+$font-name: "Lato" !default;
 
-$headerFont        : $fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
-$pageFont          : $fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
+$header-font: $font-name, "Helvetica Neue", Arial, Helvetica, sans-serif !default;
+$page-font: $font-name, "Helvetica Neue", Arial, Helvetica, sans-serif !default;
 
-$googleFontName    : $fontName !default;
-$importGoogleFonts : true !default;
-$googleFontSizes   : '400,700,400italic,700italic' !default;
-$googleSubset      : 'latin' !default;
+$google-font-name: $font-name !default;
+$import-google-fonts: true !default;
+$google-font-sizes: "400,700,400italic,700italic" !default;
+$google-subset: "latin" !default;
 
-$googleProtocol    : 'https://' !default;
-$googleFontRequest : '#{googleFontName}:#{googleFontSizes}&subset=#{googleSubset}' !default;
+$google-protocol: "https://" !default;
+$google-font-request: "#{$google-font-name}:#{$google-font-sizes}&subset=#{$google-subset}" !default;
 
-$bold              : bold !default;
-$normal            : normal !default;
+$bold: bold !default;
+$normal: normal !default;
 
 // This is the single variable that controls them all */
-$emSize   : 14px !default;
+$em-size: 14px !default;
 
 // The size of page text  */
-$fontSize : 14px !default;
+$font-size: 14px !default;
 
-$glyphWidth: 1.1em !default;
+$glyph-width: 1.1em !default;

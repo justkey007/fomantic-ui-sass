@@ -1,34 +1,33 @@
-@import '../../themes/default/modules/dimmer';
-
+@import "../../themes/default/modules/dimmer";
 
 /*******************************
             Dimmer
 *******************************/
 
 .dimmable:not(body) {
-  position: $dimmablePosition;
+  position: $dimmer-dimmable-position;
 }
 
 .ui.dimmer {
   display: none;
-  position: $dimmerPosition;
+  position: $dimmer-position;
   top: 0 !important;
   left: 0 !important;
 
   width: 100%;
   height: 100%;
 
-  text-align: $textAlign;
-  vertical-align: $verticalAlign;
-  padding: $padding;
+  text-align: $dimmer-text-align;
+  vertical-align: $dimmer-vertical-align;
+  padding: $dimmer-padding;
 
-  background-color: $backgroundColor;
-  opacity: $hiddenOpacity;
-  line-height: $lineHeight;
+  background-color: $dimmer-background-color;
+  opacity: $dimmer-hidden-opacity;
+  line-height: $dimmer-line-height;
 
   animation-fill-mode: both;
-  animation-duration: $duration;
-  transition: $transition;
+  animation-duration: $dimmer-duration;
+  transition: $dimmer-transition;
 
   flex-direction: column;
   align-items: center;
@@ -36,13 +35,13 @@
 
   user-select: none;
   will-change: opacity;
-  z-index: $zIndex;
+  z-index: $dimmer-z-index;
 }
 
 /* Dimmer Content */
 .ui.dimmer > .content {
   user-select: text;
-  color: $textColor;
+  color: $dimmer-text-color;
 }
 
 /* Loose Coupling */
@@ -51,18 +50,18 @@
 }
 
 /* Scrollbars */
-@if ($useCustomScrollbars) {
+@if ($use-custom-scrollbars) {
   .ui.dimmer:not(.inverted)::-webkit-scrollbar-track {
-    background: $trackInvertedBackground;
+    background: $track-inverted-background;
   }
   .ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb {
-    background: $thumbInvertedBackground;
+    background: $thumb-inverted-background;
   }
   .ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb:window-inactive {
-    background: $thumbInvertedInactiveBackground;
+    background: $thumb-inverted-inactive-background;
   }
   .ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb:hover {
-    background: $thumbInvertedHoverBackground;
+    background: $thumb-inverted-hover-background;
   }
 }
 
@@ -73,7 +72,7 @@
 /* Animating */
 .animating.dimmable:not(body),
 .dimmed.dimmable:not(body) {
-  overflow: $overflow;
+  overflow: $dimmer-overflow;
 }
 
 /* Animating / Active / Visible */
@@ -81,7 +80,7 @@
 .dimmed.dimmable > .ui.visible.dimmer,
 .ui.active.dimmer {
   display: flex;
-  opacity: $visibleOpacity;
+  opacity: $dimmer-visible-opacity;
 }
 
 /* Disabled */
@@ -90,11 +89,9 @@
   height: 0 !important;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
     Legacy
@@ -123,9 +120,9 @@
 ---------------*/
 
 .ui.page.dimmer {
-  position: $pageDimmerPosition;
-  transform-style: $transformStyle;
-  perspective: $perspective;
+  position: $dimmer-page-position;
+  transform-style: $dimmer-transform-style;
+  perspective: $dimmer-perspective;
   transform-origin: center center;
 }
 
@@ -138,7 +135,7 @@ body.dimmable > .dimmer {
   position: fixed;
 }
 
-.scrolling.dimmable .dimmer  {
+.scrolling.dimmable .dimmer {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -149,19 +146,19 @@ body.dimmable > .dimmer {
 ---------------*/
 
 .blurring.dimmable > :not(.dimmer) {
-  filter: $blurredStartFilter;
-  transition: $blurredTransition;
+  filter: $dimmer-blurred-start-filter;
+  transition: $dimmer-blurred-transition;
 }
 .blurring.dimmed.dimmable > :not(.dimmer):not(.popup) {
-  filter: $blurredEndFilter;
+  filter: $dimmer-blurred-end-filter;
 }
 
 /* Dimmer Color */
 .blurring.dimmable > .dimmer {
-  background-color: $blurredBackgroundColor;
+  background-color: $dimmer-blurred-background-color;
 }
 .blurring.dimmable > .inverted.dimmer {
-  background-color: $blurredInvertedBackgroundColor;
+  background-color: $dimmer-blurred-inverted-background-color;
 }
 
 /*--------------
@@ -180,13 +177,13 @@ body.dimmable > .dimmer {
 ---------------*/
 
 .medium.medium.medium.medium.medium.dimmer {
-  background-color: $mediumBackgroundColor;
+  background-color: $dimmer-medium-background-color;
 }
 .light.light.light.light.light.dimmer {
-  background-color: $lightBackgroundColor;
+  background-color: $dimmer-light-background-color;
 }
 .very.light.light.light.light.dimmer {
-  background-color: $veryLightBackgroundColor;
+  background-color: $dimmer-very-light-background-color;
 }
 
 /*--------------
@@ -194,11 +191,11 @@ body.dimmable > .dimmer {
 ---------------*/
 
 .ui.inverted.dimmer {
-  background-color: $invertedBackgroundColor;
+  background-color: $dimmer-inverted-background-color;
 }
 .ui.inverted.dimmer > .content,
 .ui.inverted.dimmer > .content > * {
-  color: $invertedTextColor;
+  color: $dimmer-inverted-text-color;
 }
 
 /*--------------
@@ -206,13 +203,13 @@ body.dimmable > .dimmer {
 ---------------*/
 
 .medium.medium.medium.medium.medium.inverted.dimmer {
-  background-color: $mediumInvertedBackgroundColor;
+  background-color: $dimmer-medium-inverted-background-color;
 }
 .light.light.light.light.light.inverted.dimmer {
-  background-color: $lightInvertedBackgroundColor;
+  background-color: $dimmer-light-inverted-background-color;
 }
 .very.light.light.light.light.inverted.dimmer {
-  background-color: $veryLightInvertedBackgroundColor;
+  background-color: $dimmer-very-light-inverted-background-color;
 }
 
 /*--------------
@@ -227,22 +224,22 @@ body.dimmable > .dimmer {
   width: 0;
   height: 0;
   z-index: -100;
-  background-color: $simpleStartBackgroundColor;
+  background-color: $dimmer-simple-start-background-color;
 }
 .dimmed.dimmable > .ui.simple.dimmer {
   overflow: visible;
   opacity: 1;
   width: 100%;
   height: 100%;
-  background-color: $simpleEndBackgroundColor;
-  z-index: $simpleZIndex;
+  background-color: $dimmer-simple-end-background-color;
+  z-index: $dimmer-simple-z-index;
 }
 
 .ui.simple.inverted.dimmer {
-  background-color: $simpleInvertedStartBackgroundColor;
+  background-color: $dimmer-simple-inverted-start-background-color;
 }
 .dimmed.dimmable > .ui.simple.inverted.dimmer {
-  background-color: $simpleInvertedEndBackgroundColor;
+  background-color: $dimmer-simple-inverted-end-background-color;
 }
 
 /*--------------
@@ -259,21 +256,21 @@ body.dimmable > .dimmer {
   bottom: 0;
 }
 .ui[class*="center dimmer"] {
-  top:50% !important;
+  top: 50% !important;
   transform: translateY(-50%);
-  -webkit-transform: translateY(calc(-50% - .5px));
+  -webkit-transform: translateY(calc(-50% - 0.5px));
 }
 
 .ui.segment > .ui[class*="top dimmer"] {
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 .ui.segment > .ui[class*="center dimmer"] {
-    border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 .ui.segment > .ui[class*="bottom dimmer"] {
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 
 .ui[class*="center dimmer"].transition[class*="fade up"].in {
@@ -295,54 +292,58 @@ body.dimmable > .dimmer {
   0% {
     opacity: 0;
     transform: translateY(-40%);
-    -webkit-transform: translateY(calc(-40% - .5px));
+    -webkit-transform: translateY(calc(-40% - 0.5px));
   }
   100% {
     opacity: 1;
     transform: translateY(-50%);
-    -webkit-transform: translateY(calc(-50% - .5px));
+    -webkit-transform: translateY(calc(-50% - 0.5px));
   }
 }
 @keyframes fadeInDownCenter {
   0% {
     opacity: 0;
     transform: translateY(-60%);
-    -webkit-transform: translateY(calc(-60% - .5px));
+    -webkit-transform: translateY(calc(-60% - 0.5px));
   }
   100% {
     opacity: 1;
     transform: translateY(-50%);
-    -webkit-transform: translateY(calc(-50% - .5px));
+    -webkit-transform: translateY(calc(-50% - 0.5px));
   }
 }
 @keyframes fadeOutUpCenter {
   0% {
     opacity: 1;
     transform: translateY(-50%);
-    -webkit-transform: translateY(calc(-50% - .5px));
+    -webkit-transform: translateY(calc(-50% - 0.5px));
   }
   100% {
     opacity: 0;
     transform: translateY(-45%);
-    -webkit-transform: translateY(calc(-45% - .5px));
+    -webkit-transform: translateY(calc(-45% - 0.5px));
   }
 }
 @keyframes fadeOutDownCenter {
   0% {
     opacity: 1;
     transform: translateY(-50%);
-    -webkit-transform: translateY(calc(-50% - .5px));
+    -webkit-transform: translateY(calc(-50% - 0.5px));
   }
   100% {
     opacity: 0;
     transform: translateY(-55%);
-    -webkit-transform: translateY(calc(-55% - .5px));
+    -webkit-transform: translateY(calc(-55% - 0.5px));
   }
 }
 @keyframes bounceCenter {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(-50%);
-    -webkit-transform: translateY(calc(-50% - .5px));
+    -webkit-transform: translateY(calc(-50% - 0.5px));
   }
   40% {
     transform: translateY(calc(-50% - 30px));
@@ -351,5 +352,3 @@ body.dimmable > .dimmer {
     transform: translateY(calc(-50% - 15px));
   }
 }
-
-

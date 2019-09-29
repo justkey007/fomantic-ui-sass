@@ -1,5 +1,4 @@
-@import '../../themes/default/modules/sticky';
-
+@import "../../themes/default/modules/sticky";
 
 /*******************************
             Sticky
@@ -7,8 +6,8 @@
 
 .ui.sticky {
   position: static;
-  transition: $transition;
-  z-index: $zIndex;
+  transition: $sticky-transition;
+  z-index: $sticky-z-index;
 }
 
 /*******************************
@@ -41,7 +40,6 @@
   bottom: 0;
 }
 
-
 /*******************************
             Types
 *******************************/
@@ -53,5 +51,3 @@
   position: -o-sticky;
   position: sticky;
 }
-
-
