@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/calendar";
+@import '../../themes/default/modules/calendar.variables';
 
 /*******************************
-            Popup
+//@-        Popup
 *******************************/
 
 .ui.calendar .ui.popup {
@@ -140,20 +140,11 @@
   box-shadow: $calendar-focus-box-shadow;
 }
 
-.ui.calendar:not(.disabled)
-  .calendar:focus
-  .ui.table.inverted
-  tbody
-  tr
-  td.focus,
-.ui.calendar:not(.disabled)
-  .calendar.active
-  .ui.table.inverted
-  tbody
-  tr
-  td.focus {
+.ui.calendar:not(.disabled) .calendar:focus .ui.table.inverted tbody tr td.focus,
+.ui.calendar:not(.disabled) .calendar.active .ui.table.inverted tbody tr td.focus {
   box-shadow: $calendar-focus-inverted-box-shadow;
 }
+
 
 /*******************************
             States
@@ -171,3 +162,7 @@
 .ui.disabled.calendar .ui.table tr .link {
   pointer-events: none;
 }
+
+
+
+@import '../../themes/default/modules/calendar.style';

@@ -1,0 +1,809 @@
+@import "../globals/variables";
+
+//@-****************************** Button *******************************/
+
+//--------------------  Element --------------------*/
+
+//- Button */
+$button-vertical-margin: 0;
+$button-horizontal-margin: 0.25em;
+$button-background-color: #E0E1E2;
+$button-background-image: none;
+$button-background: $button-background-color $button-background-image;
+$button-line-height: 1em;
+
+//- Button defaults to using same height as input globally */
+$button-vertical-padding: $input-vertical-padding;
+$button-horizontal-padding: 1.5em;
+
+//- Text */
+$button-text-transform: none;
+$button-tap-color: transparent;
+$button-font-family: $page-font;
+$button-font-weight: $bold;
+$button-text-color: rgba(0, 0, 0, 0.6);
+$button-text-shadow: none;
+$button-inverted-text-shadow: $button-text-shadow;
+$button-border-radius: $default-border-radius;
+$button-vertical-align: baseline;
+
+//- Internal Shadow */
+$button-shadow-distance: 0;
+$button-shadow-offset: ($button-shadow-distance / 2);
+$button-shadow-box-shadow: 0 -$button-shadow-distance 0 0 $border-color inset;
+
+//- Box Shadow */
+$button-border-box-shadow-color: transparent;
+$button-border-box-shadow-width: 1px;
+$button-border-box-shadow: 0 0 0 $button-border-box-shadow-width $button-border-box-shadow-color inset;
+$button-box-shadow:
+  $button-border-box-shadow,
+  $button-shadow-box-shadow
+;
+
+//- Icon */
+$button-icon-height: auto;
+$button-icon-opacity: 0.8;
+$button-icon-distance: $relative6px;
+$button-icon-color: '';
+$button-icon-transition: opacity $default-duration $default-easing;
+$button-icon-vertical-align: '';
+
+$button-icon-margin: 0 $button-icon-distance 0 (-$button-icon-distance / 2);
+$button-right-icon-margin: 0 (-$button-icon-distance / 2) 0 $button-icon-distance;
+
+//- Loader */
+$button-inverted-loader-fill-color: rgba(0, 0, 0, 0.15);
+
+$button-transition:
+  opacity $default-duration $default-easing,
+  background-color $default-duration $default-easing,
+  color $default-duration $default-easing,
+  box-shadow $default-duration $default-easing,
+  background $default-duration $default-easing
+;
+//- $button-will-change: box-shadow, transform, opacity, color, background; */
+$button-will-change: auto;
+
+//-------------------- Group --------------------*/
+
+$button-group-box-shadow: none;
+$button-group-super-box-shadow: $button-box-shadow;
+$button-vertical-box-shadow: none;
+$button-group-offset: 0 0 0 0;
+$button-vertical-group-offset: 0 0 0 0;
+
+//-------------------- States --------------------*/
+
+//- Hovered */
+$button-hover-background-color: #CACBCD;
+$button-hover-background-image: $button-background-image;
+$button-hover-box-shadow: $button-box-shadow;
+$button-hover-color: $hovered-text-color;
+$button-icon-hover-opacity: 0.85;
+
+//- Focused */
+$button-focus-background-color: $button-hover-background-color;
+$button-focus-background-image: none;
+$button-focus-box-shadow: '';
+$button-focus-color: $hovered-text-color;
+$button-icon-focus-opacity: 0.85;
+
+//- Disabled */
+$button-disabled-background-image: none;
+$button-disabled-box-shadow: none;
+
+//- Pressed Down */
+$button-down-background-color: #BABBBC;
+$button-down-background-image: '';
+$button-down-pressed-shadow: none;
+$button-down-box-shadow:
+  $button-border-box-shadow,
+  $button-down-pressed-shadow
+;
+$button-down-color: $pressed-text-color;
+
+//- Active */
+$button-active-background-color: #C0C1C2;
+$button-active-background-image: none;
+$button-active-color: $selected-text-color;
+$button-active-box-shadow: $button-border-box-shadow;
+
+//- Active + Hovered */
+$button-active-hover-background-color: $button-active-background-color;
+$button-active-hover-background-image: none;
+$button-active-hover-color: $button-active-color;
+$button-active-hover-box-shadow: $button-active-box-shadow;
+
+//- Loading */
+$button-loading-opacity: 1;
+$button-loading-pointer-events: auto;
+$button-loading-transition:
+  all 0s linear,
+  opacity $default-duration $default-easing
+;
+
+//-------------------- Types --------------------*/
+
+//- Or */
+$button-or-text: 'or';
+
+$button-or-gap: 0.3em;
+$button-or-height: ($button-vertical-padding * 2) + 1em;
+$button-or-z-index: 3;
+
+$button-or-circle-distance-to-edge: ($button-vertical-padding);
+$button-or-circle-size: $button-or-height - $button-or-circle-distance-to-edge;
+$button-or-line-height: ($button-or-circle-size);
+$button-or-box-shadow: $button-border-box-shadow;
+
+$button-or-vertical-offset: -($button-or-circle-size / 2);
+$button-or-horizontal-offset: -($button-or-circle-size / 2);
+
+$button-or-background-color: $white;
+$button-or-text-shadow: $button-inverted-text-shadow;
+$button-or-text-style: $normal;
+$button-or-text-weight: $bold;
+$button-or-text-color: $light-text-color;
+
+
+$button-or-spacer-height: $button-vertical-padding;
+$button-or-spacer-color: transparent;
+
+//- Icon */
+$button-with-icon-opacity: 0.9;
+
+//- Labeled */
+$button-labeled-label-font-size: $medium;
+$button-labeled-label-align: center;
+$button-labeled-label-padding: '';
+$button-labeled-label-font-size: $relative-medium;
+$button-labeled-label-border-color: $border-color;
+$button-labeled-label-border-offset: -$button-border-box-shadow-width;
+$button-labeled-tag-label-size: 1.85em; //- hypotenuse of triangle */
+$button-labeled-icon-margin: 0;
+
+//- Labeled Icon */
+$button-labeled-icon-width: 1em + ($button-vertical-padding * 2);
+$button-labeled-icon-background-color: rgba(0, 0, 0, 0.05);
+$button-labeled-icon-padding: ($button-horizontal-padding + $button-labeled-icon-width);
+$button-labeled-icon-border: transparent;
+$button-labeled-icon-color: '';
+
+$button-labeled-icon-left-shadow: -1px 0 0 0 $button-labeled-icon-border inset;
+$button-labeled-icon-right-shadow: 1px 0 0 0 $button-labeled-icon-border inset;
+
+
+//- Inverted */
+$button-inverted-border-size: 2px;
+$button-inverted-text-color: $white;
+$button-inverted-text-hover-color: $button-hover-color;
+$button-inverted-group-offset: 0 0 0 (-$button-inverted-border-size);
+$button-inverted-vertical-group-offset: 0 0 (-$button-inverted-border-size) 0;
+
+//- Basic */
+$button-basic-border-radius: $button-border-radius;
+$button-basic-border-size: 1px;
+$button-basic-text-color: $button-text-color;
+$button-basic-colored-border-size: 1px;
+
+$button-basic-background: transparent none;
+$button-basic-font-weight: $normal;
+$button-basic-border: 1px solid $border-color;
+$button-basic-box-shadow: 0 0 0 $button-basic-border-size $border-color inset;
+$button-basic-loading-color: $off-white;
+$button-basic-text-transform: none;
+
+//- Basic Hover */
+$button-basic-hover-background: #FFFFFF;
+$button-basic-hover-text-color: $hovered-text-color;
+$button-basic-hover-box-shadow:
+  0 0 0 $button-basic-border-size $selected-border-color inset,
+  0 0 0 0 $border-color inset
+;
+//- Basic Focus */
+$button-basic-focus-background: $button-basic-hover-background;
+$button-basic-focus-text-color: $button-basic-hover-text-color;
+$button-basic-focus-box-shadow: $button-basic-hover-box-shadow;
+
+//- Basic Down */
+$button-basic-down-background: #F8F8F8;
+$button-basic-down-text-color: $pressed-text-color;
+$button-basic-down-box-shadow:
+  0 0 0 $button-basic-border-size rgba(0, 0, 0, 0.15) inset,
+  0 1px 4px 0 $border-color inset
+;
+//- Basic Active */
+$button-basic-active-background: $transparent-black;
+$button-basic-active-box-shadow: '';
+$button-basic-active-text-color: $selected-text-color;
+
+//- Basic Inverted */
+$button-basic-inverted-background: transparent;
+$button-basic-inverted-focus-background: transparent;
+$button-basic-inverted-down-background: $transparent-white;
+$button-basic-inverted-active-background: $transparent-white;
+
+$button-basic-inverted-box-shadow: 0 0 0 $button-inverted-border-size rgba(255, 255, 255, 0.5) inset;
+$button-basic-inverted-hover-box-shadow: 0 0 0 $button-inverted-border-size rgba(255, 255, 255, 1) inset;
+$button-basic-inverted-focus-box-shadow: 0 0 0 $button-inverted-border-size rgba(255, 255, 255, 1) inset;
+$button-basic-inverted-down-box-shadow: 0 0 0 $button-inverted-border-size rgba(255, 255, 255, 0.9) inset;
+$button-basic-inverted-active-box-shadow: 0 0 0 $button-inverted-border-size rgba(255, 255, 255, 0.7) inset;
+
+$button-basic-inverted-color: $dark-white;
+$button-basic-inverted-hover-color: $dark-white-hover;
+$button-basic-inverted-down-color: $dark-white-active;
+$button-basic-inverted-active-color: $button-inverted-text-color;
+
+
+//- Basic Group */
+$button-basic-group-border: $button-basic-border-size solid $border-color;
+$button-basic-group-box-shadow: none;
+
+//--------------  Tertiary -------------*/
+$button-tertiary-line-padding: 0.5em;
+$button-tertiary-line-height: 0.2em;
+$button-tertiary-text-color: $button-text-color;
+$button-tertiary-line-color: lighten($button-tertiary-text-color, 20%);
+$button-tertiary-with-underline: false;
+$button-tertiary-with-overline: false;
+$button-tertiary-background-color: none;
+
+//- Tertiary Hover */
+$button-tertiary-hover-color: lighten(fade-in($button-tertiary-text-color, 1), 20%);
+$button-tertiary-hover-line-color: lighten($button-tertiary-hover-color, 20%);
+$button-tertiary-hover-with-underline: true;
+$button-tertiary-hover-with-overline: false;
+$button-tertiary-hover-background-color: none;
+
+//- Tertiary Focus */
+$button-tertiary-focus-color: lighten(fade-in($button-tertiary-text-color, 1), 20%);
+$button-tertiary-focus-line-color: lighten($button-tertiary-hover-color, 20%);
+$button-tertiary-focus-with-underline: true;
+$button-tertiary-focus-with-overline: false;
+$button-tertiary-focus-background-color: none;
+
+//- Tertiary Active */
+$button-tertiary-active-color: lighten($button-tertiary-hover-color, 20%);
+$button-tertiary-active-line-color: lighten($button-tertiary-active-color, 20%);
+$button-tertiary-active-with-underline: true;
+$button-tertiary-active-with-overline: false;
+$button-tertiary-active-background-color: none;
+
+//-------------------- Variations --------------------*/
+
+//- Colors */
+$button-colored-background-image: none;
+$button-colored-box-shadow: $button-shadow-box-shadow;
+
+//- Colored */
+$button-brown-text-color: $button-inverted-text-color;
+$button-brown-text-shadow: $button-inverted-text-shadow;
+$button-red-text-color: $button-inverted-text-color;
+$button-red-text-shadow: $button-inverted-text-shadow;
+$button-orange-text-color: $button-inverted-text-color;
+$button-orange-text-shadow: $button-inverted-text-shadow;
+$button-green-text-color: $button-inverted-text-color;
+$button-green-text-shadow: $button-inverted-text-shadow;
+$button-blue-text-color: $button-inverted-text-color;
+$button-blue-text-shadow: $button-inverted-text-shadow;
+$button-violet-text-color: $button-inverted-text-color;
+$button-violet-text-shadow: $button-inverted-text-shadow;
+$button-purple-text-color: $button-inverted-text-color;
+$button-purple-text-shadow: $button-inverted-text-shadow;
+$button-pink-text-color: $button-inverted-text-color;
+$button-pink-text-shadow: $button-inverted-text-shadow;
+$button-black-text-color: $button-inverted-text-color;
+$button-black-text-shadow: $button-inverted-text-shadow;
+$button-olive-text-color: $button-inverted-text-color;
+$button-olive-text-shadow: $button-inverted-text-shadow;
+$button-yellow-text-color: $button-inverted-text-color;
+$button-yellow-text-shadow: $button-inverted-text-shadow;
+$button-teal-text-color: $button-inverted-text-color;
+$button-teal-text-shadow: $button-inverted-text-shadow;
+$button-grey-text-color: $button-inverted-text-color;
+$button-grey-text-shadow: $button-inverted-text-shadow;
+
+//- Inverted */
+$button-light-brown-text-color: $button-inverted-text-color;
+$button-light-brown-text-shadow: $button-inverted-text-shadow;
+$button-light-red-text-color: $button-inverted-text-color;
+$button-light-red-text-shadow: $button-inverted-text-shadow;
+$button-light-orange-text-color: $button-inverted-text-color;
+$button-light-orange-text-shadow: $button-inverted-text-shadow;
+$button-light-green-text-color: $button-inverted-text-color;
+$button-light-green-text-shadow: $button-inverted-text-shadow;
+$button-light-blue-text-color: $button-inverted-text-color;
+$button-light-blue-text-shadow: $button-inverted-text-shadow;
+$button-light-violet-text-color: $button-inverted-text-color;
+$button-light-violet-text-shadow: $button-inverted-text-shadow;
+$button-light-purple-text-color: $button-inverted-text-color;
+$button-light-purple-text-shadow: $button-inverted-text-shadow;
+$button-light-pink-text-color: $button-inverted-text-color;
+$button-light-pink-text-shadow: $button-inverted-text-shadow;
+$button-light-black-text-color: $button-inverted-text-color;
+$button-light-black-text-shadow: $button-inverted-text-shadow;
+$button-light-olive-text-color: $button-text-color;
+$button-light-olive-text-shadow: $button-text-shadow;
+$button-light-yellow-text-color: $button-text-color;
+$button-light-yellow-text-shadow: $button-text-shadow;
+$button-light-teal-text-color: $button-text-color;
+$button-light-teal-text-shadow: $button-text-shadow;
+$button-light-grey-text-color: $button-text-color;
+$button-light-grey-text-shadow: $button-text-shadow;
+
+
+//- Ordinality */
+$button-primary-background-image: $button-colored-background-image;
+$button-primary-text-color: $button-inverted-text-color;
+$button-light-primary-text-color: $button-inverted-text-color;
+$button-primary-text-shadow: $button-inverted-text-shadow;
+$button-primary-box-shadow: $button-colored-box-shadow;
+
+$button-secondary-background-image: $button-colored-background-image;
+$button-secondary-text-color: $button-inverted-text-color;
+$button-secondary-text-shadow: $button-inverted-text-shadow;
+$button-light-secondary-text-color: $button-inverted-text-color;
+$button-secondary-box-shadow: $button-colored-box-shadow;
+
+$button-positive-background-image: $button-colored-background-image;
+$button-positive-text-color: $button-inverted-text-color;
+$button-positive-text-shadow: $button-inverted-text-shadow;
+$button-positive-box-shadow: $button-colored-box-shadow;
+
+$button-negative-background-image: $button-colored-background-image;
+$button-negative-text-color: $button-inverted-text-color;
+$button-negative-text-shadow: $button-inverted-text-shadow;
+$button-negative-box-shadow: $button-colored-box-shadow;
+
+//- Compact */
+$button-compact-vertical-padding: ($button-vertical-padding * 0.75);
+$button-compact-horizontal-padding: ($button-horizontal-padding * 0.75);
+
+//- Attached */
+$button-attached-offset: -1px;
+$button-attached-box-shadow: 0 0 0 1px $border-color;
+$button-attached-horizontal-padding: 0.75em;
+$button-attached-z-index: auto;
+
+//- Floated */
+$button-floated-margin: 0.25em;
+
+//- Animated */
+$button-animated-vertical-align: middle;
+$button-animated-z-index: 1;
+$button-animation-duration: 0.3s;
+$button-animation-easing: ease;
+$button-fade-scale-high: 1.5;
+$button-fade-scale-low: 0.75;
+
+$button-colors-map: (
+  primary: (
+    color          : $primary-color,
+    light          : $light-primary-color,
+    border         : $primary-border-color,
+    background     : $primary-background,
+    header         : $primary-header-color,
+    boxShadow      : $button-primary-box-shadow,
+    boxFloatShadow : $primary-box-floating-shadow,
+    text           : $button-primary-text-color,
+    lightText      : $button-light-primary-text-color,
+    hoverText      : $primary-hover-text-color,
+    focus          : $primary-color-focus,
+    lightFocus     : $light-primary-color-focus,
+    down           : $primary-color-down,
+    lightDown      : $light-primary-color-down,
+    active         : $primary-color-active,
+    lightActive    : $light-primary-color-active,
+    shadow         : $button-primary-text-shadow,
+    lightShadow    : $light-primary-text-shadow,
+    hover          : $primary-color-hover,
+    lightHover     : $light-primary-color-hover,
+    ribbon         : $primary-ribbon-shadow,
+    invertedRibbon : $primary-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  secondary: (
+    color          : $secondary-color,
+    light          : $light-secondary-color,
+    border         : $secondary-border-color,
+    background     : $secondary-background,
+    header         : $secondary-header-color,
+    boxShadow      : $button-secondary-box-shadow,
+    boxFloatShadow : $secondary-box-floating-shadow,
+    text           : $button-secondary-text-color,
+    lightText      : $button-light-secondary-text-color,
+    hoverText      : $secondary-hover-text-color,
+    focus          : $secondary-color-focus,
+    lightFocus     : $light-secondary-color-focus,
+    down           : $secondary-color-down,
+    lightDown      : $light-secondary-color-down,
+    active         : $secondary-color-active,
+    lightActive    : $light-secondary-color-active,
+    shadow         : $button-secondary-text-shadow,
+    lightShadow    : $light-secondary-text-shadow,
+    hover          : $secondary-color-hover,
+    lightHover     : $light-secondary-color-hover,
+    ribbon         : $secondary-ribbon-shadow,
+    invertedRibbon : $secondary-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  red: (
+    color          : $red,
+    light          : $light-red,
+    border         : $red-border-color,
+    background     : $red-background,
+    header         : $red-header-color,
+    boxShadow      : $red-box-shadow,
+    boxFloatShadow : $red-box-floating-shadow,
+    text           : $button-red-text-color,
+    lightText      : $button-light-red-text-color,
+    hoverText      : $red-hover-text-color,
+    focus          : $red-focus,
+    lightFocus     : $light-red-focus,
+    down           : $red-down,
+    lightDown      : $light-red-down,
+    active         : $red-active,
+    lightActive    : $light-red-active,
+    shadow         : $button-red-text-shadow,
+    lightShadow    : $button-light-red-text-shadow,
+    hover          : $red-hover,
+    lightHover     : $light-red-hover,
+    ribbon         : $red-ribbon-shadow,
+    invertedRibbon : $red-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  orange: (
+    color          : $orange,
+    light          : $light-orange,
+    border         : $orange-border-color,
+    background     : $orange-background,
+    header         : $orange-header-color,
+    boxShadow      : $orange-box-shadow,
+    boxFloatShadow : $orange-box-floating-shadow,
+    text           : $button-orange-text-color,
+    lightText      : $button-light-orange-text-color,
+    hoverText      : $orange-hover-text-color,
+    focus          : $orange-focus,
+    lightFocus     : $light-orange-focus,
+    down           : $orange-down,
+    lightDown      : $light-orange-down,
+    active         : $orange-active,
+    lightActive    : $light-orange-active,
+    shadow         : $button-orange-text-shadow,
+    lightShadow    : $button-light-orange-text-shadow,
+    hover          : $orange-hover,
+    lightHover     : $light-orange-hover,
+    ribbon         : $orange-ribbon-shadow,
+    invertedRibbon : $orange-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  yellow: (
+    color          : $yellow,
+    light          : $light-yellow,
+    border         : $yellow-border-color,
+    background     : $yellow-background,
+    header         : $yellow-header-color,
+    boxShadow      : $yellow-box-shadow,
+    boxFloatShadow : $yellow-box-floating-shadow,
+    text           : $button-yellow-text-color,
+    lightText      : $button-light-yellow-text-color,
+    hoverText      : $yellow-hover-text-color,
+    focus          : $yellow-focus,
+    lightFocus     : $light-yellow-focus,
+    down           : $yellow-down,
+    lightDown      : $light-yellow-down,
+    active         : $yellow-active,
+    lightActive    : $light-yellow-active,
+    shadow         : $button-yellow-text-shadow,
+    lightShadow    : $button-light-yellow-text-shadow,
+    hover          : $yellow-hover,
+    lightHover     : $light-yellow-hover,
+    ribbon         : $yellow-ribbon-shadow,
+    invertedRibbon : $yellow-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  olive: (
+    color          : $olive,
+    light          : $light-olive,
+    border         : $olive-border-color,
+    background     : $olive-background,
+    header         : $olive-header-color,
+    boxShadow      : $olive-box-shadow,
+    boxFloatShadow : $olive-box-floating-shadow,
+    text           : $button-olive-text-color,
+    lightText      : $button-light-olive-text-color,
+    hoverText      : $olive-hover-text-color,
+    focus          : $olive-focus,
+    lightFocus     : $light-olive-focus,
+    down           : $olive-down,
+    lightDown      : $light-olive-down,
+    active         : $olive-active,
+    lightActive    : $light-olive-active,
+    shadow         : $button-olive-text-shadow,
+    lightShadow    : $button-light-olive-text-shadow,
+    hover          : $olive-hover,
+    lightHover     : $light-olive-hover,
+    ribbon         : $olive-ribbon-shadow,
+    invertedRibbon : $olive-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  green: (
+    color          : $green,
+    light          : $light-green,
+    border         : $green-border-color,
+    background     : $green-background,
+    header         : $green-header-color,
+    boxShadow      : $green-box-shadow,
+    boxFloatShadow : $green-box-floating-shadow,
+    text           : $button-green-text-color,
+    lightText      : $button-light-green-text-color,
+    hoverText      : $green-hover-text-color,
+    focus          : $green-focus,
+    lightFocus     : $light-green-focus,
+    down           : $green-down,
+    lightDown      : $light-green-down,
+    active         : $green-active,
+    lightActive    : $light-green-active,
+    shadow         : $button-green-text-shadow,
+    lightShadow    : $button-light-green-text-shadow,
+    hover          : $green-hover,
+    lightHover     : $light-green-hover,
+    ribbon         : $green-ribbon-shadow,
+    invertedRibbon : $green-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  teal: (
+    color          : $teal,
+    light          : $light-teal,
+    border         : $teal-border-color,
+    background     : $teal-background,
+    header         : $teal-header-color,
+    boxShadow      : $teal-box-shadow,
+    boxFloatShadow : $teal-box-floating-shadow,
+    text           : $button-teal-text-color,
+    lightText      : $button-light-teal-text-color,
+    hoverText      : $teal-hover-text-color,
+    focus          : $teal-focus,
+    lightFocus     : $light-teal-focus,
+    down           : $teal-down,
+    lightDown      : $light-teal-down,
+    active         : $teal-active,
+    lightActive    : $light-teal-active,
+    shadow         : $button-teal-text-shadow,
+    lightShadow    : $button-light-teal-text-shadow,
+    hover          : $teal-hover,
+    lightHover     : $light-teal-hover,
+    ribbon         : $teal-ribbon-shadow,
+    invertedRibbon : $teal-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  blue: (
+    color          : $blue,
+    light          : $light-blue,
+    border         : $blue-border-color,
+    background     : $blue-background,
+    header         : $blue-header-color,
+    boxShadow      : $blue-box-shadow,
+    boxFloatShadow : $blue-box-floating-shadow,
+    text           : $button-blue-text-color,
+    lightText      : $button-light-blue-text-color,
+    hoverText      : $blue-hover-text-color,
+    focus          : $blue-focus,
+    lightFocus     : $light-blue-focus,
+    down           : $blue-down,
+    lightDown      : $light-blue-down,
+    active         : $blue-active,
+    lightActive    : $light-blue-active,
+    shadow         : $button-blue-text-shadow,
+    lightShadow    : $button-light-blue-text-shadow,
+    hover          : $blue-hover,
+    lightHover     : $light-blue-hover,
+    ribbon         : $blue-ribbon-shadow,
+    invertedRibbon : $blue-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  violet: (
+    color          : $violet,
+    light          : $light-violet,
+    border         : $violet-border-color,
+    background     : $violet-background,
+    header         : $violet-header-color,
+    boxShadow      : $violet-box-shadow,
+    boxFloatShadow : $violet-box-floating-shadow,
+    text           : $button-violet-text-color,
+    lightText      : $button-light-violet-text-color,
+    hoverText      : $violet-hover-text-color,
+    focus          : $violet-focus,
+    lightFocus     : $light-violet-focus,
+    down           : $violet-down,
+    lightDown      : $light-violet-down,
+    active         : $violet-active,
+    lightActive    : $light-violet-active,
+    shadow         : $button-violet-text-shadow,
+    lightShadow    : $button-light-violet-text-shadow,
+    hover          : $violet-hover,
+    lightHover     : $light-violet-hover,
+    ribbon         : $violet-ribbon-shadow,
+    invertedRibbon : $violet-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  purple: (
+    color          : $purple,
+    light          : $light-purple,
+    border         : $purple-border-color,
+    background     : $purple-background,
+    header         : $purple-header-color,
+    boxShadow      : $purple-box-shadow,
+    boxFloatShadow : $purple-box-floating-shadow,
+    text           : $button-purple-text-color,
+    lightText      : $button-light-purple-text-color,
+    hoverText      : $purple-hover-text-color,
+    focus          : $purple-focus,
+    lightFocus     : $light-purple-focus,
+    down           : $purple-down,
+    lightDown      : $light-purple-down,
+    active         : $purple-active,
+    lightActive    : $light-purple-active,
+    shadow         : $button-purple-text-shadow,
+    lightShadow    : $button-light-purple-text-shadow,
+    hover          : $purple-hover,
+    lightHover     : $light-purple-hover,
+    ribbon         : $purple-ribbon-shadow,
+    invertedRibbon : $purple-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  pink: (
+    color          : $pink,
+    light          : $light-pink,
+    border         : $pink-border-color,
+    background     : $pink-background,
+    header         : $pink-header-color,
+    boxShadow      : $pink-box-shadow,
+    boxFloatShadow : $pink-box-floating-shadow,
+    text           : $button-pink-text-color,
+    lightText      : $button-light-pink-text-color,
+    hoverText      : $pink-hover-text-color,
+    focus          : $pink-focus,
+    lightFocus     : $light-pink-focus,
+    down           : $pink-down,
+    lightDown      : $light-pink-down,
+    active         : $pink-active,
+    lightActive    : $light-pink-active,
+    shadow         : $button-pink-text-shadow,
+    lightShadow    : $button-light-pink-text-shadow,
+    hover          : $pink-hover,
+    lightHover     : $light-pink-hover,
+    ribbon         : $pink-ribbon-shadow,
+    invertedRibbon : $pink-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  brown: (
+    color          : $brown,
+    light          : $light-brown,
+    border         : $brown-border-color,
+    background     : $brown-background,
+    header         : $brown-header-color,
+    boxShadow      : $brown-box-shadow,
+    boxFloatShadow : $brown-box-floating-shadow,
+    text           : $button-brown-text-color,
+    lightText      : $button-light-brown-text-color,
+    hoverText      : $brown-hover-text-color,
+    focus          : $brown-focus,
+    lightFocus     : $light-brown-focus,
+    down           : $brown-down,
+    lightDown      : $light-brown-down,
+    active         : $brown-active,
+    lightActive    : $light-brown-active,
+    shadow         : $button-brown-text-shadow,
+    lightShadow    : $button-light-brown-text-shadow,
+    hover          : $brown-hover,
+    lightHover     : $light-brown-hover,
+    ribbon         : $brown-ribbon-shadow,
+    invertedRibbon : $brown-inverted-ribbon-shadow,
+    isDark         : false,
+    isVeryDark     : false,
+  ),
+  grey: (
+    color          : $grey,
+    light          : $light-grey,
+    border         : $grey-border-color,
+    background     : $grey-background,
+    header         : $grey-header-color,
+    boxShadow      : $grey-box-shadow,
+    boxFloatShadow : $grey-box-floating-shadow,
+    text           : $button-grey-text-color,
+    lightText      : $button-light-grey-text-color,
+    hoverText      : $grey-hover-text-color,
+    focus          : $grey-focus,
+    lightFocus     : $light-grey-focus,
+    down           : $grey-down,
+    lightDown      : $light-grey-down,
+    active         : $grey-active,
+    lightActive    : $light-grey-active,
+    shadow         : $button-grey-text-shadow,
+    lightShadow    : $button-light-grey-text-shadow,
+    hover          : $grey-hover,
+    lightHover     : $light-grey-hover,
+    ribbon         : $grey-ribbon-shadow,
+    invertedRibbon : $grey-inverted-ribbon-shadow,
+    isDark         : true,
+    isVeryDark     : false,
+  ),
+  black: (
+    color          : $black,
+    light          : $light-black,
+    border         : $black-border-color,
+    background     : $black-background,
+    header         : $black-header-color,
+    boxShadow      : $black-box-shadow,
+    boxFloatShadow : $black-box-floating-shadow,
+    text           : $button-black-text-color,
+    lightText      : $button-light-black-text-color,
+    hoverText      : $black-hover-text-color,
+    focus          : $black-focus,
+    lightFocus     : $light-black-focus,
+    down           : $black-down,
+    lightDown      : $light-black-down,
+    active         : $black-active,
+    lightActive    : $light-black-active,
+    shadow         : $button-black-text-shadow,
+    lightShadow    : $button-light-black-text-shadow,
+    hover          : $black-hover,
+    lightHover     : $light-black-hover,
+    ribbon         : $black-ribbon-shadow,
+    invertedRibbon : $black-inverted-ribbon-shadow,
+    isDark         : true,
+    isVeryDark     : true,
+  )
+);
+
+// Functions to obtain new dynamic variables
+
+@function getTertiaryButtonColorHover($isVeryDark, $h) {
+  @if ($isVeryDark) {
+    @return lighten($h, 40%);
+  }
+  @if not($isVeryDark) {
+    @return desaturate($h, 20%);
+  }
+}
+
+@function getTertiaryButtonColor($isVeryDark, $c) {
+  @if ($isVeryDark) {
+    @return lighten($c, 20%);
+  }
+  @if not($isVeryDark) {
+    @return saturate($c, 20%);
+  }
+}
+
+@function getTertiaryButtonColorFocus($isVeryDark, $f) {
+  @if ($isVeryDark) {
+    @return lighten($f, 40%);
+  }
+  @if not($isVeryDark) {
+    @return desaturate($f, 20%);
+  }
+}
+
+@function getTertiaryButtonColorActive($isVeryDark, $a) {
+  @if ($isVeryDark) {
+    @return lighten($a, 20%);
+  }
+  @if not($isVeryDark) {
+    @return saturate($a, 20%);
+  }
+}

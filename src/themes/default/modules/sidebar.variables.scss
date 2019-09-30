@@ -1,0 +1,41 @@
+@import "../globals/variables";
+
+//@-******************************  Sidebar *******************************/
+
+//--------------------  Content --------------------*/
+
+//- Animation */
+$sidebar-perspective: 1500px;
+$sidebar-duration: 500ms;
+$sidebar-easing: $default-easing;
+
+//- Dimmer */
+$sidebar-dimmer-color: rgba(0, 0, 0, 0.4);
+$sidebar-dimmer-transition: opacity $sidebar-duration;
+
+//- Color below page */
+$sidebar-canvas-background: $light-black;
+
+//- Shadow */
+$sidebar-box-shadow: 0 0 20px $border-color;
+$sidebar-horizontal-box-shadow: $sidebar-box-shadow;
+$sidebar-vertical-box-shadow: $sidebar-box-shadow;
+
+//- Layering */
+$sidebar-bottom-layer: 1;
+$sidebar-middle-layer: 2;
+$sidebar-fixed-layer: 101;
+$sidebar-top-layer: 102;
+$sidebar-dimmer-layer: 1000;
+
+//-------------------- Variations --------------------*/
+
+//- Width */
+$sidebar-very-thin-width: 60px;
+$sidebar-thin-width: 150px;
+$sidebar-width: 260px;
+$sidebar-wide-width: 350px;
+$sidebar-very-wide-width: 475px;
+
+//- Height */
+$sidebar-height: 36px;

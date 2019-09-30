@@ -1,0 +1,20 @@
+{
+  "@floatedHorizontalMargin": "$image-floated-horizontal-margin",
+  "@floatedVerticalMargin": "$image-floated-vertical-margin",
+  "@roundedBorderRadius": "$image-rounded-border-radius",
+  "@imageHorizontalMargin": "$image-horizontal-margin",
+  "@imageVerticalMargin": "$image-vertical-margin",
+  "@placeholderColor": "$image-placeholder-color",
+  "@spacedDistance": "$image-spaced-distance",
+  "@avatarMargin": "$image-avatar-margin",
+  "@massiveWidth": "$image-massive-width",
+  "@mediumWidth": "$image-medium-width",
+  "@avatarSize": "$image-avatar-size",
+  "@largeWidth": "$image-large-width",
+  "@smallWidth": "$image-small-width",
+  "@miniWidth": "$image-mini-width",
+  "@tinyWidth": "$image-tiny-width",
+  "@hugeWidth": "$image-huge-width",
+  "@bigWidth": "$image-big-width",
+  "@imageBorder": "$image-border"
+}

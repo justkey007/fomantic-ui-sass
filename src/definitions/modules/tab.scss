@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/tab";
+@import '../../themes/default/modules/tab.variables';
 
 /*******************************
-           UI Tabs
+//@-       UI Tabs
 *******************************/
 
 .ui.tab {
@@ -39,7 +39,7 @@
 .ui.tab.loading:before,
 .ui.tab.loading.segment:before {
   position: absolute;
-  content: "";
+  content: '';
   top: $tab-loader-distance-from-top;
   left: 50%;
 
@@ -53,7 +53,7 @@
 .ui.tab.loading:after,
 .ui.tab.loading.segment:after {
   position: absolute;
-  content: "";
+  content: '';
   top: $tab-loader-distance-from-top;
   left: 50%;
 
@@ -67,3 +67,6 @@
 
   box-shadow: 0 0 0 1px transparent;
 }
+
+
+@import '../../themes/default/modules/tab.style';

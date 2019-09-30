@@ -1,0 +1,62 @@
+@import "../globals/variables";
+
+//@-****************************** Dimmer *******************************/
+
+$dimmer-dimmable-position: relative;
+$dimmer-position: absolute;
+
+$dimmer-background-color: rgba(0, 0, 0 , 0.85);
+$dimmer-line-height: 1;
+$dimmer-perspective: 2000px;
+$dimmer-padding: 1em;
+
+$dimmer-duration: 0.5s;
+$dimmer-transition:
+  background-color $dimmer-duration linear
+;
+$dimmer-z-index: 1000;
+$dimmer-text-align: center;
+$dimmer-vertical-align: middle;
+$dimmer-text-color: $white;
+$dimmer-overflow: hidden;
+
+$dimmer-blurred-start-filter: initial;
+$dimmer-blurred-end-filter: blur(5px) grayscale(0.7);
+$dimmer-blurred-transition: 800ms filter $default-easing;
+
+$dimmer-blurred-background-color: rgba(0, 0, 0, 0.6);
+$dimmer-blurred-inverted-background-color: rgba(255, 255, 255, 0.6);
+
+//- Hidden (Default) */
+$dimmer-hidden-opacity: 0;
+
+//- Visible */
+$dimmer-visible-opacity: 1;
+
+//-------------------- Types --------------------*/
+
+//- Page Dimmer*/
+$dimmer-transform-style: '';
+$dimmer-page-position: fixed;
+
+
+//-------------------- Variations --------------------*/
+
+//- Inverted */
+$dimmer-inverted-background-color: rgba(255, 255, 255, 0.85);
+$dimmer-inverted-text-color: $full-black;
+
+//- Simple */
+$dimmer-simple-z-index: 1;
+$dimmer-simple-start-background-color: rgba(0, 0, 0, 0);
+$dimmer-simple-end-background-color: $dimmer-background-color;
+$dimmer-simple-inverted-start-background-color: rgba(255, 255, 255, 0);
+$dimmer-simple-inverted-end-background-color: $dimmer-inverted-background-color;
+
+//- Intensity */
+$dimmer-very-light-background-color: rgba(0,0,0,.25);
+$dimmer-light-background-color: rgba(0,0,0,.45);
+$dimmer-medium-background-color: rgba(0,0,0,.65);
+$dimmer-very-light-inverted-background-color: rgba(255,255,255,.25);
+$dimmer-light-inverted-background-color: rgba(255,255,255,.45);
+$dimmer-medium-inverted-background-color: rgba(255,255,255,.65);

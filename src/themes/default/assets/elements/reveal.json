@@ -1,0 +1,13 @@
+{
+  "@transitionDuration": "$reveal-transition-duration",
+  "@transitionEasing": "$reveal-transition-easing",
+  "@transitionDelay": "$reveal-transition-delay",
+  "@slideTransition": "$reveal-slide-transition",
+  "@moveTransition": "$reveal-move-transition",
+  "@overlayZIndex": "$reveal-overlay-z-index",
+  "@rotateDegrees": "$reveal-rotate-degrees",
+  "@bottomZIndex": "$reveal-bottom-z-index",
+  "@activeZIndex": "$reveal-active-z-index",
+  "@transition": "$reveal-transition",
+  "@topZIndex": "$reveal-top-z-index"
+}

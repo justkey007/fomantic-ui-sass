@@ -1,7 +1,8 @@
-@import "../../themes/default/elements/flag";
+@import '../../themes/default/elements/flag.variables';
+
 
 /*******************************
-             Flag
+//@-         Flag
 *******************************/
 
 i.flag:not(.icon) {
@@ -24,10 +25,11 @@ i.flag:not(.icon) {
 /* Sprite */
 i.flag:not(.icon):before {
   display: inline-block;
-  content: "";
+  content: '';
   background: url($flag-sprite-path) no-repeat -108px -1976px;
   width: $flag-width;
   height: $flag-height;
 }
+
 
 @import '../../themes/default/elements/flag.style';

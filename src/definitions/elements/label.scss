@@ -1,7 +1,7 @@
-@import "../../themes/default/elements/label";
+@import '../../themes/default/elements/label.variables';
 
 /*******************************
-            Label
+//@-        Label
 *******************************/
 
 .ui.label {
@@ -114,6 +114,7 @@ a.ui.label {
   margin: 0 $label-group-horizontal-margin $label-group-vertical-margin 0;
 }
 
+
 /*-------------------
        Coupling
 --------------------*/
@@ -122,31 +123,33 @@ a.ui.label {
   margin-top: $label-line-height-offset;
 }
 
+
 /* Remove border radius on attached segment */
 .ui.attached.segment > .ui.top.left.attached.label,
-.ui.bottom.attached.segment > .ui.top.left.attached.label {
+.ui.bottom.attached.segment > .ui.top.left.attached.label  {
   border-top-left-radius: 0;
 }
 .ui.attached.segment > .ui.top.right.attached.label,
-.ui.bottom.attached.segment > .ui.top.right.attached.label {
+.ui.bottom.attached.segment > .ui.top.right.attached.label  {
   border-top-right-radius: 0;
 }
-.ui.top.attached.segment > .ui.bottom.left.attached.label {
+.ui.top.attached.segment > .ui.bottom.left.attached.label  {
   border-bottom-left-radius: 0;
 }
-.ui.top.attached.segment > .ui.bottom.right.attached.label {
+.ui.top.attached.segment > .ui.bottom.right.attached.label  {
   border-bottom-right-radius: 0;
 }
 
 /* Padding on next content after a label */
-.ui.top.attached.label:first-child + :not(.attached),
-.ui.top.attached.label + [class*="right floated"] + * {
+.ui.top.attached.label ~ .ui.bottom.attached.label + :not(.attached),
+.ui.top.attached.label + :not(.attached) {
   margin-top: $label-attached-segment-padding !important;
 }
-.ui.bottom.attached.label:first-child ~ :last-child:not(.attached) {
-  margin-top: 0;
+.ui.bottom.attached.label ~ :last-child:not(.attached) {
+  margin-top:0;
   margin-bottom: $label-attached-segment-padding !important;
 }
+
 
 /*******************************
              Types
@@ -198,29 +201,30 @@ a.ui.label {
 }
 .ui.tag.labels .label:before,
 .ui.tag.label:before {
-  position: absolute;
-  transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    position: absolute;
+    transform: translateY(-50%) translateX(50%) rotate(-45deg);
 
-  top: $label-tag-triangle-top-offset;
-  right: $label-tag-triangle-right-offset;
-  content: "";
+    top: $label-tag-triangle-top-offset;
+    right: $label-tag-triangle-right-offset;
+    content: '';
 
-  background-color: inherit;
-  background-image: $label-tag-triangle-background-image;
+    background-color: inherit;
+    background-image: $label-tag-triangle-background-image;
 
-  width: $label-tag-triangle-size;
-  height: $label-tag-triangle-size;
-  transition: $label-tag-transition;
+    width: $label-tag-triangle-size;
+    height: $label-tag-triangle-size;
+    transition: $label-tag-transition;
 }
+
 
 .ui.tag.labels .label:after,
 .ui.tag.label:after {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
-  left: (-$label-tag-circle-size / 2);
+  left: -($label-tag-circle-size / 2);
 
-  margin-top: (-$label-tag-circle-size / 2);
+  margin-top: -($label-tag-circle-size / 2);
   background-color: $label-tag-circle-color;
   width: $label-tag-circle-size;
   height: $label-tag-circle-size;
@@ -261,7 +265,7 @@ a.ui.label {
 }
 
 /* Icon Label */
-.ui.corner.label {
+.ui.corner.label{
   background-color: transparent !important;
 }
 .ui.corner.label:after {
@@ -337,7 +341,7 @@ a.ui.label {
 
 .ui.ribbon.label:after {
   position: absolute;
-  content: "";
+  content: '';
 
   top: 100%;
   left: 0;
@@ -426,6 +430,7 @@ a.ui.label {
   padding-left: $label-horizontal-padding;
 }
 
+
 /*-------------------
       Attached
 --------------------*/
@@ -440,36 +445,31 @@ a.ui.label {
 
   padding: $label-attached-vertical-padding $label-attached-horizontal-padding;
 
-  border-radius: $label-attached-corner-border-radius
-    $label-attached-corner-border-radius 0 0;
+  border-radius: $label-attached-corner-border-radius $label-attached-corner-border-radius 0 0;
 }
 .ui[class*="bottom attached"].label {
   top: auto;
   bottom: 0;
-  border-radius: 0 0 $label-attached-corner-border-radius
-    $label-attached-corner-border-radius;
+  border-radius: 0 0 $label-attached-corner-border-radius $label-attached-corner-border-radius;
 }
 
 .ui[class*="top left attached"].label {
   width: auto;
   margin-top: 0 !important;
-  border-radius: $label-attached-corner-border-radius 0
-    $label-attached-border-radius 0;
+  border-radius: $label-attached-corner-border-radius 0 $label-attached-border-radius 0;
 }
 
 .ui[class*="top right attached"].label {
   width: auto;
   left: auto;
   right: 0;
-  border-radius: 0 $label-attached-corner-border-radius 0
-    $label-attached-border-radius;
+  border-radius: 0 $label-attached-corner-border-radius 0 $label-attached-border-radius;
 }
 .ui[class*="bottom left attached"].label {
   width: auto;
   top: auto;
   bottom: 0;
-  border-radius: 0 $label-attached-border-radius 0
-    $label-attached-corner-border-radius;
+  border-radius: 0 $label-attached-border-radius 0 $label-attached-corner-border-radius;
 }
 .ui[class*="bottom right attached"].label {
   top: auto;
@@ -477,9 +477,9 @@ a.ui.label {
   left: auto;
   right: 0;
   width: auto;
-  border-radius: $label-attached-border-radius 0
-    $label-attached-corner-border-radius 0;
+  border-radius: $label-attached-border-radius 0 $label-attached-corner-border-radius 0;
 }
+
 
 /*******************************
              States
@@ -546,6 +546,7 @@ a.ui.active.label:hover:before {
   color: $label-active-hover-text-color;
 }
 
+
 /*-------------------
       Visible
 --------------------*/
@@ -564,9 +565,12 @@ a.ui.active.label:hover:before {
   display: none !important;
 }
 
+
 /*******************************
            Variations
 *******************************/
+
+
 
 /*-------------------
         Basic
@@ -594,6 +598,7 @@ a.ui.basic.label:hover {
   border-color: inherit;
 }
 
+
 /*-------------------
        Fluid
 --------------------*/
@@ -614,11 +619,11 @@ a.ui.basic.label:hover {
   background-color: $label-inverted-background-color;
 }
 .ui.inverted.corner.label {
-  border-color: $label-inverted-background-color;
+    border-color: $label-inverted-background-color;
 }
 .ui.inverted.corner.label:hover {
-  border-color: $label-background-color;
-  transition: none;
+    border-color: $label-background-color;
+    transition: none;
 }
 .ui.inverted.basic.labels .label,
 .ui.inverted.basic.label,
@@ -630,11 +635,12 @@ a.ui.basic.label:hover {
   color: $link-color;
 }
 
+
 /*-------------------
        Colors
 --------------------*/
 
-@each $key, $value in $colors {
+@each $key, $value in $label-colors-map {
   $isDark: map-get($value, isDark);
   $_labelColor: map-get($value, color);
   $_labelInvertedColor: map-get($value, light);
@@ -646,48 +652,48 @@ a.ui.basic.label:hover {
   $_labelInvertedRibbonShadow: map-get($value, invertedRibbon);
 
   .ui.#{$key + ""}.labels .label,
-  .ui.#{$key + ""}.label {
+  .ui.ui.ui.#{$key + ""}.label {
     background-color: $_labelColor;
     border-color: $_labelColor;
     color: $_labelTextColor;
   }
   /* Link */
   .ui.#{$key + ""}.labels a.label:hover,
-  a.ui.#{$key + ""}.label:hover {
+  a.ui.ui.ui.#{$key + ""}.label:hover{
     background-color: $_labelHover;
     border-color: $_labelHover;
     color: $_labelHoverTextColor;
   }
   /* Ribbon */
-  .ui.#{$key + ""}.ribbon.label {
+  .ui.ui.ui.#{$key + ""}.ribbon.label {
     border-color: $_labelRibbonShadow;
   }
   /* Basic */
   .ui.basic.labels .#{$key + ""}.label,
-  .ui.basic.#{$key + ""}.label {
+  .ui.ui.ui.basic.#{$key + ""}.label {
     background: $label-basic-background;
     border-color: $_labelColor;
     color: $_labelColor;
   }
   .ui.basic.labels a.#{$key + ""}.label:hover,
-  a.ui.basic.#{$key + ""}.label:hover {
+  a.ui.ui.ui.basic.#{$key + ""}.label:hover {
     background: $label-basic-background;
     border-color: $_labelHover;
     color: $_labelHover;
   }
   /* Inverted */
   .ui.inverted.labels .#{$key + ""}.label,
-  .ui.inverted.#{$key + ""}.label {
+  .ui.ui.ui.inverted.#{$key + ""}.label {
     background-color: $_labelInvertedColor;
     border-color: $_labelInvertedColor;
     color: $black;
   }
   /* Inverted Link */
   .ui.inverted.labels a.#{$key + ""}.label:hover,
-  a.ui.inverted.#{$key + ""}.label:hover {
+  a.ui.ui.ui.inverted.#{$key + ""}.label:hover{
     background-color: $_labelInvertedHover;
     border-color: $_labelInvertedHover;
-    @if not($isDark) {
+    @if not ($isDark) {
       color: $black;
     }
     @if ($isDark) {
@@ -695,15 +701,15 @@ a.ui.basic.label:hover {
     }
   }
   /* Inverted Ribbon */
-  .ui.inverted.#{$key + ""}.ribbon.label {
+  .ui.ui.ui.inverted.#{$key + ""}.ribbon.label {
     border-color: $_labelInvertedRibbonShadow;
   }
   /* Inverted Basic */
   .ui.inverted.basic.labels .#{$key + ""}.label,
-  .ui.inverted.basic.#{$key + ""}.label {
+  .ui.ui.ui.inverted.basic.#{$key + ""}.label {
     background-color: $label-inverted-background;
     border-color: $_labelInvertedColor;
-    @if not($isDark) {
+    @if not ($isDark) {
       color: $_labelInvertedColor;
     }
     @if ($isDark) {
@@ -711,20 +717,20 @@ a.ui.basic.label:hover {
     }
   }
   .ui.inverted.basic.labels a.#{$key + ""}.label:hover,
-  a.ui.inverted.basic.#{$key + ""}.label:hover {
+  a.ui.ui.ui.inverted.basic.#{$key + ""}.label:hover {
     border-color: $_labelInvertedHover;
     background-color: $label-inverted-background;
-    @if not($isDark) {
+    @if not ($isDark) {
       color: $_labelInvertedHover;
     }
   }
   /* Inverted Basic Tags */
   .ui.inverted.basic.tag.labels .#{$key + ""}.label,
-  .ui.inverted.#{$key + ""}.basic.tag.label {
+  .ui.ui.ui.inverted.#{$key + ""}.basic.tag.label {
     border: $label-inverted-border-size solid $_labelInvertedColor;
   }
   .ui.inverted.basic.tag.labels .#{$key + ""}.label:before,
-  .ui.inverted.#{$key + ""}.basic.tag.label:before {
+  .ui.ui.ui.inverted.#{$key + ""}.basic.tag.label:before {
     border-color: inherit;
     border-width: $label-inverted-border-size 0 0 $label-inverted-border-size;
     border-style: inherit;
@@ -745,6 +751,7 @@ a.ui.basic.label:hover {
   min-width: $label-horizontal-min-width;
   text-align: center;
 }
+
 
 /*-------------------
        Circular
@@ -793,7 +800,7 @@ a.ui.basic.label:hover {
 /* Arrow */
 .ui.pointing.label:before {
   position: absolute;
-  content: "";
+  content: '';
   transform: rotate(45deg);
   background-image: none;
 
@@ -882,6 +889,7 @@ a.ui.basic.label:hover {
   right: $label-basic-pointing-triangle-offset;
 }
 
+
 /*------------------
    Floating Label
 -------------------*/
@@ -898,8 +906,8 @@ a.ui.basic.label:hover {
   transform: translateX($label-floating-align-offset);
 }
 .ui.left.floating.label {
-  left: 0;
-  right: auto;
+  left:0;
+  right:auto;
   transform: translateX(-50%);
 }
 .ui.left.aligned.floating.label {
@@ -946,3 +954,6 @@ a.ui.basic.label:hover {
 .ui.massive.label {
   font-size: $label-massive;
 }
+
+
+@import '../../themes/default/elements/label.style';

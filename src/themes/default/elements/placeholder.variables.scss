@@ -1,0 +1,57 @@
+@import "../globals/variables";
+
+$placeholder-max-width: 30rem;
+
+//- Variations */
+$placeholder-full-line-outdent: 0;
+$placeholder-very-long-line-outdent: 10%;
+$placeholder-long-line-outdent: 35%;
+$placeholder-medium-line-outdent: 50%;
+$placeholder-short-line-outdent: 65%;
+$placeholder-very-short-line-outdent: 80%;
+
+//- Key Content Sizing */
+$placeholder-line-margin: $relative12px;
+$placeholder-header-line-height: $relative9px;
+$placeholder-line-height: $relative7px;
+$placeholder-paragraph-line-height: $placeholder-line-height;
+
+$placeholder-spacing: $relative20px;
+
+//- Interval between consecutive placeholders */
+$placeholder-animation-interval: 0.15s;
+
+//- Repeated Placeholder */
+$placeholder-consecutive-spacing: 2rem;
+
+//- Image */
+$placeholder-image-height: 100px;
+
+//- Header Image */
+$placeholder-image-width: 3em;
+$placeholder-image-text-indent: $_10px;
+
+//- Paragraph */
+$placeholder-header-line-one-outdent: 20%;
+$placeholder-header-line-two-outdent: 60%;
+
+$placeholder-line-one-outdent: $placeholder-full-line-outdent;
+$placeholder-line-two-outdent: $placeholder-medium-line-outdent;
+$placeholder-line-three-outdent: $placeholder-very-long-line-outdent;
+$placeholder-line-four-outdent: $placeholder-long-line-outdent;
+$placeholder-line-five-outdent: $placeholder-short-line-outdent;
+
+
+//- Glow Gradient */
+$placeholder-loading-animation-duration: 2s;
+$placeholder-loading-gradient-width: 1200px;
+$placeholder-loading-gradient: linear-gradient(to right,
+  rgba(0, 0, 0, 0.08) 0,
+  rgba(0, 0, 0, 0.15) 15%,
+  rgba(0, 0, 0, 0.08) 30%
+);
+$placeholder-inverted-loading-gradient: linear-gradient(to right,
+  rgba(255, 255, 255, 0.08) 0,
+  rgba(255, 255, 255, 0.14) 15%,
+  rgba(255, 255, 255, 0.08) 30%
+);

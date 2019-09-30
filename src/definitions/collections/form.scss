@@ -1,7 +1,7 @@
-@import "../../themes/default/collections/form";
+@import '../../themes/default/collections/form.variables';
 
 /*--------------------
-        Form
+//@-     Form
 ---------------------*/
 
 .ui.form {
@@ -36,6 +36,7 @@
   margin: 0;
 }
 
+
 /*--------------------
         Labels
 ---------------------*/
@@ -52,6 +53,7 @@
 /*--------------------
     Standard Inputs
 ---------------------*/
+
 
 .ui.form textarea,
 .ui.form input:not([type]),
@@ -92,7 +94,7 @@
   margin: 0;
   outline: none;
   -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 
   line-height: $input-line-height;
   padding: $form-input-padding;
@@ -107,10 +109,11 @@
 }
 
 /* Text Area */
+.ui.input textarea,
 .ui.form textarea {
   margin: 0;
   -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 
   padding: $form-text-area-padding;
   background: $form-text-area-background;
@@ -140,31 +143,25 @@
     Checkbox margin
 ---------------------*/
 
-.ui.form
-  .fields:not(.grouped):not(.inline)
-  .field:not(:only-child)
-  .ui.checkbox {
+.ui.form .fields:not(.grouped):not(.inline) .field:not(:only-child) label + .ui.ui.checkbox {
+  margin-top: $form-checkbox-label-field-top-margin;
+}
+.ui.form .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.checkbox {
   margin-top: $input-line-height + $form-checkbox-field-top-margin;
 }
-.ui.form
-  .fields:not(.grouped):not(.inline)
-  .field:not(:only-child)
-  .ui.toggle.checkbox {
+.ui.form .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.toggle.checkbox {
   margin-top: $input-line-height + $form-checkbox-toggle-field-top-margin;
 }
-.ui.form
-  .fields:not(.grouped):not(.inline)
-  .field:not(:only-child)
-  .ui.slider.checkbox {
+.ui.form .fields:not(.grouped):not(.inline) .field:not(:only-child) .ui.slider.checkbox {
   margin-top: $input-line-height + $form-checkbox-slider-field-top-margin;
 }
-.ui.form .field .fields .field:not(:only-child) .ui.checkbox {
+.ui.ui.form .field .fields .field:not(:only-child) .ui.checkbox {
   margin-top: $form-checkbox-field-top-margin / 2;
 }
-.ui.form .field .fields .field:not(:only-child) .ui.toggle.checkbox {
+.ui.ui.form .field .fields .field:not(:only-child) .ui.toggle.checkbox {
   margin-top: $form-checkbox-toggle-field-top-margin / 2;
 }
-.ui.form .field .fields .field:not(:only-child) .ui.slider.checkbox {
+.ui.ui.form .field .fields .field:not(:only-child) .ui.slider.checkbox {
   margin-top: $form-checkbox-slider-field-top-margin / 2;
 }
 
@@ -172,12 +169,13 @@
       Transparent
 ---------------------*/
 
-.ui.form .field .transparent.input input,
+.ui.form .field .transparent.input:not(.icon) input,
 .ui.form .field input.transparent,
 .ui.form .field textarea.transparent {
-  padding: $form-transparent-padding !important;
+  padding: $form-transparent-padding;
 }
 
+.ui.form .field input.transparent,
 .ui.form .field textarea.transparent {
   border-color: transparent !important;
   background-color: transparent !important;
@@ -185,6 +183,7 @@
 }
 
 .ui.form .field.error .transparent.input input,
+.ui.form .field.error .transparent.input textarea,
 .ui.form .field.error input.transparent,
 .ui.form .field.error textarea.transparent {
   background-color: $form-transparent-error-background !important;
@@ -198,6 +197,7 @@
 .ui.form input.attached {
   width: auto;
 }
+
 
 /*--------------------
      Basic Select
@@ -278,6 +278,7 @@
   width: 0;
 }
 
+
 /*--------------------
    Types of Messages
 ---------------------*/
@@ -311,13 +312,13 @@
 }
 .ui.form .inline.fields .field .prompt:before,
 .ui.form .inline.field .prompt:before {
-  border-width: 0 0 $form-inline-prompt-border-width
-    $form-inline-prompt-border-width;
+  border-width: 0 0 $form-inline-prompt-border-width $form-inline-prompt-border-width;
   bottom: auto;
   right: auto;
   top: 50%;
   left: 0;
 }
+
 
 /*******************************
             States
@@ -343,6 +344,8 @@
   box-shadow: 0 0 0 100px $form-input-auto-fill-error-background inset !important;
   border-color: $form-input-auto-fill-error-border !important;
 }
+
+
 
 /*--------------------
       Placeholder
@@ -390,6 +393,7 @@
   color: $form-input-error-placeholder-focus-color;
 }
 
+
 /*--------------------
         Focus
 ---------------------*/
@@ -420,6 +424,7 @@
   box-shadow: $form-text-area-focus-box-shadow;
   -webkit-appearance: none;
 }
+
 
 /*--------------------
         Success
@@ -467,12 +472,11 @@
 }
 
 /* On Field(s) */
-.ui.form .fields.error .field label,
-.ui.form .field.error label,
-.ui.form .fields.error .field .input,
-label.error,
-.ui.form .field.error .input {
-  color: $form-error-color !important;
+.ui.ui.form .fields.error .field label,
+.ui.ui.form .field.error label,
+.ui.ui.form .fields.error .field .input,
+.ui.ui.form .field.error .input {
+  color: $form-error-color;
 }
 
 .ui.form .fields.error .field .corner.label,
@@ -583,6 +587,7 @@ label.error,
   background-color: $form-dropdown-error-selected-background;
 }
 
+
 /* Active */
 .ui.form .fields.error .field .ui.dropdown .menu .active.item,
 .ui.form .field.error .ui.dropdown .menu .active.item {
@@ -631,6 +636,7 @@ label.error,
   opacity: 1;
 }
 
+
 /*--------------
     Loading
 ---------------*/
@@ -642,7 +648,7 @@ label.error,
 }
 .ui.loading.form:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   background: $form-loader-dimmer-color;
@@ -657,7 +663,7 @@ label.error,
 
 .ui.loading.form:after {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
   left: 50%;
 
@@ -708,9 +714,11 @@ label.error,
   left: 100%;
 }
 
+
 /*******************************
            Variations
 *******************************/
+
 
 /*--------------------
     Inverted Colors
@@ -841,15 +849,13 @@ label.error,
 }
 
 /* Swap to full width on mobile */
-@media only screen and (max-width: $largest-mobile-screen) {
+@media only screen and (max-width : $largest-mobile-screen) {
   .ui.form .fields {
     flex-wrap: wrap;
   }
 
   .ui[class*="equal width"].form:not(.unstackable) .fields > .field,
-  .ui.form:not(.unstackable)
-    [class*="equal width"].fields:not(.unstackable)
-    > .field,
+  .ui.form:not(.unstackable) [class*="equal width"].fields:not(.unstackable) > .field,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .fields,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .field,
   .ui.form:not(.unstackable) .three.fields:not(.unstackable) > .fields,
@@ -872,6 +878,7 @@ label.error,
     margin: 0 0 $form-row-distance;
   }
 }
+
 
 /* Sizing Combinations */
 .ui.form .fields .wide.field {
@@ -930,7 +937,7 @@ label.error,
 }
 
 /* Swap to full width on mobile */
-@media only screen and (max-width: $largest-mobile-screen) {
+@media only screen and (max-width : $largest-mobile-screen) {
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .fields,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .field,
   .ui.form:not(.unstackable) .three.fields:not(.unstackable) > .fields,
@@ -1041,6 +1048,7 @@ label.error,
   width: 100%;
 }
 
+
 /*--------------------
         Sizes
 ---------------------*/
@@ -1121,3 +1129,6 @@ label.error,
 .ui.massive.form .field .dropdown .menu > .item {
   font-size: $massive;
 }
+
+
+@import '../../themes/default/collections/form.style';

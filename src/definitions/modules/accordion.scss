@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/accordion";
+@import '../../themes/default/modules/accordion.variables';
 
 /*******************************
-            Accordion
+//@-        Accordion
 *******************************/
 
 .ui.accordion,
@@ -119,6 +119,7 @@
   border-top: none;
 }
 
+
 /* Content */
 .ui.styled.accordion .content,
 .ui.styled.accordion .accordion .content {
@@ -129,6 +130,7 @@
   margin: $accordion-styled-child-content-margin;
   padding: $accordion-styled-child-content-padding;
 }
+
 
 /* Hover */
 .ui.styled.accordion .title:hover,
@@ -144,6 +146,7 @@
   color: $accordion-styled-hover-child-title-color;
 }
 
+
 /* Active */
 .ui.styled.accordion .active.title {
   background: $accordion-styled-active-title-background;
@@ -153,6 +156,7 @@
   background: $accordion-styled-active-child-title-background;
   color: $accordion-styled-active-child-title-color;
 }
+
 
 /*******************************
             States
@@ -188,4 +192,4 @@
   color: $accordion-inverted-title-color;
 }
 
-@import "../../themes/default/modules/accordion.style";
+@import '../../themes/default/modules/accordion.style';

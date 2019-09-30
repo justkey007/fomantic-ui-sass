@@ -1,17 +1,18 @@
-@import "../../themes/default/modules/popup";
+@import '../../themes/default/modules/popup.variables';
+
 
 /*******************************
-            Popup
+//@-        Popup
 *******************************/
 
 .ui.popup {
-  outline: none;
   display: none;
   position: absolute;
   top: 0;
   right: 0;
 
-  width: fit-content;
+  /* Fixes content being squished when inline (moz only) */
+  min-width: min-content;
   z-index: $popup-z-index;
 
   border: $popup-border;
@@ -29,7 +30,7 @@
 }
 .ui.popup > .header {
   padding: 0;
-  width: min-content;
+
   font-family: $header-font;
   font-size: $popup-header-font-size;
   line-height: $popup-header-line-height;
@@ -41,7 +42,7 @@
 
 .ui.popup:before {
   position: absolute;
-  content: "";
+  content: '';
   width: $popup-arrow-size;
   height: $popup-arrow-size;
 
@@ -69,7 +70,7 @@
 [data-tooltip]:before {
   pointer-events: none;
   position: absolute;
-  content: "";
+  content: '';
   font-size: $medium;
   width: $popup-arrow-size;
   height: $popup-arrow-size;
@@ -134,12 +135,16 @@
   opacity: 0;
   transform: rotate(45deg) scale(0) !important;
   transform-origin: center top;
-  transition: all $popup-tooltip-duration $popup-tooltip-easing;
+  transition:
+    all $popup-tooltip-duration $popup-tooltip-easing
+  ;
 }
 [data-tooltip]:after {
   opacity: 1;
   transform-origin: center bottom;
-  transition: all $popup-tooltip-duration $popup-tooltip-easing;
+  transition:
+    all $popup-tooltip-duration $popup-tooltip-easing
+  ;
 }
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
@@ -181,6 +186,7 @@
 [data-tooltip][data-position="bottom right"]:hover:after {
   transform: scale(1) !important;
 }
+
 
 /*--------------
     Inverted
@@ -264,6 +270,7 @@
   margin-left: $popup-tooltip-arrow-horizontal-offset;
   margin-bottom: -$popup-tooltip-arrow-vertical-offset;
 }
+
 
 /* Bottom Center */
 [data-position="bottom center"][data-tooltip]:after {
@@ -593,6 +600,7 @@
   background: $popup-inverted-arrow-bottom-background;
 }
 
+
 /*******************************
             Coupling
 *******************************/
@@ -623,6 +631,7 @@
   backface-visibility: hidden;
 }
 
+
 /*******************************
             Variations
 *******************************/
@@ -634,6 +643,7 @@
 .ui.basic.popup:before {
   display: none;
 }
+
 
 /*--------------
      Wide
@@ -653,6 +663,7 @@
   }
 }
 
+
 /*--------------
      Fluid
 ---------------*/
@@ -661,6 +672,7 @@
   width: 100%;
   max-width: none;
 }
+
 
 /*--------------
      Colors
@@ -690,6 +702,7 @@
   max-width: none;
 }
 
+
 /*--------------
      Sizes
 ---------------*/
@@ -712,3 +725,7 @@
 .ui.huge.popup {
   font-size: $huge;
 }
+
+
+
+@import '../../themes/default/modules/popup.style';

@@ -1,48 +1,48 @@
-@import "../../themes/default/modules/toast";
+@import '../../themes/default/modules/toast.variables';
 
 /*******************************
-        Toast container
+//@-    Toast container
 *******************************/
 
 .ui.toast-container {
-  position: fixed;
-  z-index: 9999;
+    position: fixed;
+    z-index: 9999;
 }
 
 .ui.top.right.toast-container {
-  top: $toast-container-distance;
-  right: $toast-container-distance;
-  margin-left: $toast-container-distance;
+    top: $toast-container-distance;
+    right: $toast-container-distance;
+    margin-left: $toast-container-distance;
 }
 
 .ui.top.left.toast-container {
-  top: $toast-container-distance;
-  left: $toast-container-distance;
-  margin-right: $toast-container-distance;
+    top: $toast-container-distance;
+    left: $toast-container-distance;
+    margin-right: $toast-container-distance;
 }
 
 .ui.top.center.toast-container {
-  left: 50%;
-  transform: translate(-50%, 0);
-  top: $toast-container-distance;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: $toast-container-distance;
 }
 
 .ui.bottom.right.toast-container {
-  bottom: $toast-container-distance;
-  right: $toast-container-distance;
-  margin-left: $toast-container-distance;
+    bottom: $toast-container-distance;
+    right: $toast-container-distance;
+    margin-left: $toast-container-distance;
 }
 
 .ui.bottom.left.toast-container {
-  bottom: $toast-container-distance;
-  left: $toast-container-distance;
-  margin-right: $toast-container-distance;
+    bottom: $toast-container-distance;
+    left: $toast-container-distance;
+    margin-right: $toast-container-distance;
 }
 
 .ui.bottom.center.toast-container {
-  left: 50%;
-  transform: translate(-50%, 0);
-  bottom: $toast-container-distance;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: $toast-container-distance;
 }
 
 /*******************************
@@ -50,11 +50,11 @@
 *******************************/
 
 .toast {
-  display: block;
-  border-radius: $default-border-radius;
-  padding: $toast-padding;
-  margin: $toast-margin;
-  color: $toast-text-color;
+    display: block;
+    border-radius: $default-border-radius;
+    padding: $toast-padding;
+    margin: $toast-margin;
+    color: $toast-text-color;
 }
 
 .floating.toast,
@@ -68,18 +68,19 @@
 
 .center.toast-container .toast-box,
 .right.toast-container .toast-box {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .center.toast-container .toast-box {
-  margin-right: auto;
+    margin-right: auto;
 }
 
 .visible.toast-box,
 .animating.toast-box,
 .toast-box {
-  display: table !important;
+    display: table !important;
 }
+
 
 .toast-container .compact {
   display: block;
@@ -88,48 +89,49 @@
 
 .toast-container .message,
 .toast:hover {
-  opacity: $toast-opacity-on-hover;
-  cursor: $toast-cursor-on-hover;
+    opacity: $toast-opacity-on-hover;
+    cursor: $toast-cursor-on-hover;
 }
+
 
 .icon.toast .content {
   padding-left: $toast-icon-content-padding;
 }
 
 .toast > .content > .header {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .info.toast {
-  background-color: $toast-info-color;
+    background-color: $toast-info-color;
 }
 
 .warning.toast {
-  background-color: $toast-warning-color;
+    background-color: $toast-warning-color;
 }
 
 .success.toast {
-  background-color: $toast-success-color;
+    background-color: $toast-success-color;
 }
 
 .error.toast {
-  background-color: $toast-error-color;
+    background-color: $toast-error-color;
 }
 
 .toast-box .info.attached.progress .bar {
-  background: $toast-info-progress-color !important;
+    background: $toast-info-progress-color !important;
 }
 
 .toast-box .warning.attached.progress .bar {
-  background: $toast-warning-progress-color !important;
+    background: $toast-warning-progress-color !important;
 }
 
 .toast-box .success.attached.progress .bar {
-  background: $toast-success-progress-color !important;
+    background: $toast-success-progress-color !important;
 }
 
 .toast-box .error.attached.progress .bar {
-  background: $toast-error-progress-color !important;
+    background: $toast-error-progress-color !important;
 }
 
 /*--------------
@@ -137,6 +139,7 @@
 -------------- */
 
 @each $key, $value in $colors {
+  $color: $key;
   $c: map-get($value, color);
   $l: map-get($value, light);
 
@@ -158,15 +161,17 @@
 ---------------*/
 
 .icon.toast > .icon:not(.close) {
-  display: inline-block;
-  vertical-align: $toast-icon-vertical-align;
-  font-size: $toast-icon-font-size;
-  position: absolute;
+    display: inline-block;
+    vertical-align: $toast-icon-vertical-align;
+    font-size: $toast-icon-font-size;
+    position: absolute;
 }
 
+
+
 .icon.toast > .content {
-  display: inline-block;
-  vertical-align: $toast-content-vertical-align;
+    display: inline-block;
+    vertical-align: $toast-content-vertical-align;
 }
 
 /*---------------
@@ -174,7 +179,7 @@
  ----------------*/
 
 .toast-box .attached.progress .bar {
-  min-width: 0;
+    min-width: 0;
 }
 
 .toast-box .active.progress .bar:after {
@@ -182,17 +187,17 @@
 }
 
 .toast-box {
-  margin-bottom: $toast-margin-bottom;
+    margin-bottom: $toast-margin-bottom;
 }
 
 .toast-box .toast,
 .toast-box .message {
-  margin-top: 0;
-  margin-bottom: 0;
-  position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
 }
-.toast-box .attached.progress {
-  z-index: 1;
+.toast-box .attached.progress{
+    z-index:1;
 }
 
 .toast-box .bottom.attached.progress {
@@ -212,7 +217,8 @@
   right: $toast-close-right-distance;
 }
 
-.toast-box .toast > .close.icon {
+
+.toast-box .toast>.close.icon {
   cursor: pointer;
   position: absolute;
   margin: 0;
@@ -225,3 +231,6 @@
 .toast-box .toast > .close.icon:hover {
   opacity: 1;
 }
+
+
+@import '../../themes/default/modules/toast.style';

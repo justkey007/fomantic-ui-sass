@@ -1,0 +1,7 @@
+{
+  "@loadingContentPosition": "$tab-loading-content-position",
+  "@loaderDistanceFromTop": "$tab-loader-distance-from-top",
+  "@loadingContentOffset": "$tab-loading-content-offset",
+  "@loadingMinHeight": "$tab-loading-min-height",
+  "@loaderSize": "$tab-loader-size"
+}

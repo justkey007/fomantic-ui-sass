@@ -1,7 +1,7 @@
-@import "../../themes/default/views/feed";
+@import '../../themes/default/views/feed.variables';
 
 /*******************************
-         Activity Feed
+//@-      Activity Feed
 *******************************/
 
 .ui.feed {
@@ -13,6 +13,7 @@
 .ui.feed:last-child {
   margin-bottom: 0;
 }
+
 
 /*******************************
             Content
@@ -240,6 +241,8 @@
   color: $feed-metadata-action-hover-color;
 }
 
+
+
 /*******************************
             Variations
 *******************************/
@@ -275,3 +278,7 @@
 .ui.inverted.feed > .event > .content .meta .like:hover {
   color: $inverted-selected-text-color;
 }
+
+
+
+@import '../../themes/default/views/feed.style';

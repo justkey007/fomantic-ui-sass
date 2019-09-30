@@ -1,0 +1,10 @@
+@import "../globals/variables";
+
+//@-****************************** Transition *******************************/
+
+$transition-default-easing: $default-easing;
+$transition-default-fill: both;
+$transition-default-duration: 300ms;
+
+$transition-use3-d-acceleration: translateZ(0);
+$transition-backface-visibility: hidden;

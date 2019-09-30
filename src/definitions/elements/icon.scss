@@ -1,10 +1,12 @@
-@import "../../themes/default/elements/icon";
+@import '../../themes/default/elements/icon.variables';
+
 
 /*******************************
-             Icon
+//@-         Icon
 *******************************/
+
 @font-face {
-  font-family: "Icons";
+  font-family: 'Icons';
   src: $icon-fallback-src;
   src: $icon-src;
   font-style: normal;
@@ -23,7 +25,7 @@ i.icon {
   width: $icon-width;
   height: $icon-height;
 
-  font-family: "Icons";
+  font-family: 'Icons';
   font-style: normal;
   font-weight: $normal;
   text-decoration: inherit;
@@ -57,25 +59,23 @@ i.icon.loading {
              States
 *******************************/
 
-i.icon:hover,
-i.icons:hover,
-i.icon:active,
-i.icons:active,
-i.emphasized.icon:not(.disabled),
-i.emphasized.icons:not(.disabled) {
+i.icon:hover, i.icons:hover,
+i.icon:active, i.icons:active,
+i.emphasized.icon:not(.disabled), i.emphasized.icons:not(.disabled) {
   opacity: 1;
 }
 
-i.disabled.icon,
-i.disabled.icons {
+i.disabled.icon, i.disabled.icons {
   opacity: $disabled-opacity;
   cursor: default;
   pointer-events: none;
 }
 
+
 /*******************************
            Variations
 *******************************/
+
 
 /*-------------------
         Fitted
@@ -90,14 +90,12 @@ i.fitted.icon {
          Link
 --------------------*/
 
-i.link.icon:not(.disabled),
-i.link.icons:not(.disabled) {
+i.link.icon:not(.disabled), i.link.icons:not(.disabled) {
   cursor: pointer;
   opacity: $icon-link-opacity;
   transition: opacity $default-duration $default-easing;
 }
-i.link.icon:hover,
-i.link.icons:hover {
+i.link.icon:hover, i.link.icons:hover {
   opacity: 1;
 }
 
@@ -217,43 +215,46 @@ i.inverted.icon {
   color: $white;
 }
 
+
 /*-------------------
        Colors
 --------------------*/
 
 @each $key, $value in $colors {
+  $color: $key;
   $c: map-get($value, color);
   $l: map-get($value, light);
 
-  i.#{$key + ""}.icon {
+  i.#{$key + ""}.icon.icon.icon.icon {
     color: $c;
   }
-  i.inverted.#{$key + ""}.icon {
+  i.inverted.#{$key + ""}.icon.icon.icon.icon {
     color: $l;
   }
-  i.inverted.bordered.#{$key + ""}.icon,
-  i.inverted.circular.#{$key + ""}.icon {
+  i.inverted.bordered.#{$key + ""}.icon.icon.icon.icon,
+  i.inverted.circular.#{$key + ""}.icon.icon.icon.icon {
     background-color: $c;
     color: $white;
   }
 }
 
+
 /*-------------------
         Sizes
 --------------------*/
 
-i.mini.icon,
-i.mini.icons {
+i.mini.mini.mini.icon,
+i.mini.mini.mini.icons {
   line-height: 1;
   font-size: $icon-mini;
 }
-i.tiny.icon,
-i.tiny.icons {
+i.tiny.tiny.tiny.icon,
+i.tiny.tiny.tiny.icons {
   line-height: 1;
   font-size: $icon-tiny;
 }
-i.small.icon,
-i.small.icons {
+i.small.small.small.icon,
+i.small.small.small.icons {
   line-height: 1;
   font-size: $icon-small;
 }
@@ -261,26 +262,26 @@ i.icon,
 i.icons {
   font-size: $icon-medium;
 }
-i.large.icon,
-i.large.icons {
+i.large.large.large.icon,
+i.large.large.large.icons {
   line-height: 1;
   vertical-align: middle;
   font-size: $icon-large;
 }
-i.big.icon,
-i.big.icons {
+i.big.big.big.icon,
+i.big.big.big.icons {
   line-height: 1;
   vertical-align: middle;
   font-size: $icon-big;
 }
-i.huge.icon,
-i.huge.icons {
+i.huge.huge.huge.icon,
+i.huge.huge.huge.icons {
   line-height: 1;
   vertical-align: middle;
   font-size: $icon-huge;
 }
-i.massive.icon,
-i.massive.icons {
+i.massive.massive.massive.icon,
+i.massive.massive.massive.icons {
   line-height: 1;
   vertical-align: middle;
   font-size: $icon-massive;

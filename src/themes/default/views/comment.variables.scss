@@ -1,0 +1,92 @@
+@import "../globals/variables";
+
+//@-****************************** Comments *******************************/
+
+
+//--------------------  View --------------------*/
+
+$comment-max-width: 650px;
+$comment-super-margin: 1.5em 0;
+
+//-------------------- Elements --------------------*/
+
+//- Comment */
+$comment-background: none;
+$comment-margin: 0.5em 0 0;
+$comment-padding: 0.5em 0 0;
+$comment-divider: none;
+$comment-border: none;
+$comment-line-height: 1.2;
+$comment-first-margin: 0;
+$comment-first-padding: 0;
+
+//- Nested Comment */
+$comment-nested-comments-margin: 0 0 0.5em 0.5em;
+$comment-nested-comments-padding: 1em 0 1em 1em;
+
+$comment-nested-divider: none;
+$comment-nested-border: none;
+$comment-nested-background: none;
+
+//- Avatar */
+$comment-avatar-display: block;
+$comment-avatar-float: left;
+$comment-avatar-width: 2.5em;
+$comment-avatar-height: auto;
+$comment-avatar-spacing: 1em;
+$comment-avatar-margin: ($comment-line-height - 1em) 0 0;
+$comment-avatar-border-radius: 0.25rem;
+
+//- Content */
+$comment-content-margin: $comment-avatar-width + $comment-avatar-spacing;
+
+//- Author */
+$comment-author-font-size: 1em;
+$comment-author-color: $text-color;
+$comment-author-hover-color: $link-hover-color;
+$comment-author-font-weight: $bold;
+
+//- Metadata */
+$comment-metadata-display: inline-block;
+$comment-metadata-font-size: 0.875em;
+$comment-metadata-spacing: 0.5em;
+$comment-metadata-content-spacing: 0.5em;
+$comment-metadata-color: $light-text-color;
+
+//- Text */
+$comment-text-font-size: 1em;
+$comment-text-margin: 0.25em 0 0.5em;
+$comment-text-word-wrap: break-word;
+$comment-text-line-height: 1.3;
+
+//- Actions */
+$comment-action-font-size: 0.875em;
+$comment-action-content-distance: 0.75em;
+$comment-action-link-color: $unselected-text-color;
+$comment-action-link-hover-color: $hovered-text-color;
+
+//- Reply */
+$comment-super-reply-distance: 1em;
+$comment-reply-height: 12em;
+$comment-reply-font-size: 1em;
+
+$comment-reply-distance: $comment-super-reply-distance;
+
+//-------------------- Variations --------------------*/
+
+//- Threaded */
+$comment-threaded-margin: -1.5em 0 -1em  ($comment-avatar-width / 2);
+$comment-threaded-padding: 3em 0 2em 2.25em;
+$comment-threaded-box-shadow: -1px 0 0 $border-color;
+
+
+//- Minimal */
+$comment-minimal-action-position: absolute;
+$comment-minimal-action-top: 0;
+$comment-minimal-action-right: 0;
+$comment-minimal-action-left: auto;
+
+$comment-minimal-transition-delay: 0.1s;
+$comment-minimal-easing: $default-easing;
+$comment-minimal-duration: 0.2s;
+$comment-minimal-transition: opacity $comment-minimal-duration $comment-minimal-easing;

@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/sticky";
+@import '../../themes/default/modules/sticky.variables';
 
 /*******************************
-            Sticky
+//@-        Sticky
 *******************************/
 
 .ui.sticky {
@@ -40,6 +40,7 @@
   bottom: 0;
 }
 
+
 /*******************************
             Types
 *******************************/
@@ -51,3 +52,6 @@
   position: -o-sticky;
   position: sticky;
 }
+
+
+@import '../../themes/default/modules/sticky.style';

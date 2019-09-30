@@ -1,13 +1,13 @@
-@import "../../themes/default/elements/segment";
+@import '../../themes/default/elements/segment.variables';
 
 /*******************************
-            Segment
+//@-        Segment
 *******************************/
 
 .ui.segment {
   position: relative;
   background: $segment-background;
-  // box-shadow: $segment-box-shadow;
+  box-shadow: $segment-box-shadow;
   margin: $segment-margin;
   padding: $segment-padding;
   border-radius: $segment-border-radius;
@@ -20,6 +20,7 @@
 .ui.segment:last-child {
   margin-bottom: 0;
 }
+
 
 /* Vertical */
 .ui.vertical.segment {
@@ -36,6 +37,7 @@
 .ui.vertical.segment:last-child {
   border-bottom: none;
 }
+
 
 /*-------------------
     Loose Coupling
@@ -96,6 +98,7 @@
              Types
 *******************************/
 
+
 /*-------------------
      Placeholder
 --------------------*/
@@ -136,7 +139,7 @@
   margin-right: auto;
 }
 
-.ui.placeholder.segment > .inline {
+.ui.placeholder.segment > .inline  {
   align-self: center;
 }
 .ui.placeholder.segment > .inline > .button {
@@ -147,6 +150,7 @@
 .ui.placeholder.segment > .inline > .button:last-child {
   margin-right: 0;
 }
+
 
 /*-------------------
         Piled
@@ -170,7 +174,7 @@
 .ui.piled.segment:before {
   background-color: $white;
   visibility: visible;
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   left: 0;
@@ -219,9 +223,9 @@
 .ui.stacked.segments:after,
 .ui.stacked.segment:before,
 .ui.stacked.segment:after {
-  content: "";
+  content: '';
   position: absolute;
-  bottom: (-$segment-stacked-height / 2);
+  bottom: -($segment-stacked-height / 2);
   left: 0;
 
   border-top: 1px solid $border-color;
@@ -310,6 +314,7 @@
   box-shadow: $segment-raised-box-shadow;
 }
 
+
 /*******************************
             Groups
 *******************************/
@@ -320,7 +325,7 @@
   position: relative;
   margin: $segment-grouped-super-margin;
   border: $segment-grouped-super-border;
-  // box-shadow: $segment-grouped-super-box-shadow;
+  box-shadow: $segment-grouped-super-box-shadow;
   border-radius: $segment-grouped-border-radius;
 }
 .ui.segments:first-child {
@@ -329,6 +334,7 @@
 .ui.segments:last-child {
   margin-bottom: 0;
 }
+
 
 /* Nested Segment */
 .ui.segments > .segment {
@@ -365,6 +371,7 @@
 .ui.segments:not(.horizontal) > .segment:only-child {
   border-radius: $segment-border-radius;
 }
+
 
 /* Nested Group */
 .ui.segments > .ui.segments {
@@ -425,6 +432,7 @@
   border-left: none;
 }
 
+
 /*******************************
             States
 *******************************/
@@ -451,7 +459,7 @@
 }
 .ui.loading.segment:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   background: $segment-loader-dimmer-color;
@@ -462,7 +470,7 @@
 }
 .ui.loading.segment:after {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
   left: 50%;
 
@@ -479,9 +487,12 @@
   z-index: $segment-loader-line-z-index;
 }
 
+
+
 /*******************************
            Variations
 *******************************/
+
 
 /*-------------------
        Basic
@@ -511,8 +522,9 @@
 --------------------*/
 
 @each $key, $value in $colors {
+  $color: $key;
   $c: map-get($value, color);
-  @if not($key == primary) and not ($key == secondary) {
+  @if not ($color==primary) and not ($color==secondary) {
     .ui.#{$key + ""}.segment.segment.segment.segment.segment:not(.inverted) {
       border-top: $segment-colored-border-size solid $c;
     }
@@ -550,6 +562,7 @@
   float: right;
   margin-left: $segment-floated-distance;
 }
+
 
 /*-------------------
       Inverted
@@ -609,6 +622,7 @@
   background: $segment-tertiary-inverted-background;
   color: $segment-tertiary-inverted-color;
 }
+
 
 /*-------------------
       Attached
@@ -703,3 +717,6 @@
 .ui.massive.segment {
   font-size: $massive;
 }
+
+
+@import '../../themes/default/elements/segment.style';

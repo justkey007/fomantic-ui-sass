@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/nag";
+@import '../../themes/default/modules/nag.variables';
 
 /*******************************
-             Nag
+//@-         Nag
 *******************************/
 
 .ui.nag {
@@ -40,6 +40,7 @@ a.ui.nag {
   color: $nag-title-color;
 }
 
+
 .ui.nag > .close.icon {
   cursor: pointer;
   opacity: $nag-close-opacity;
@@ -55,6 +56,8 @@ a.ui.nag {
   transition: $nag-close-transition;
 }
 
+
+
 /*******************************
              States
 *******************************/
@@ -69,9 +72,11 @@ a.ui.nag {
   opacity: $nag-close-hover-opacity;
 }
 
+
 /*******************************
            Variations
 *******************************/
+
 
 /*--------------
      Static
@@ -117,6 +122,7 @@ a.ui.nag {
   color: $light-text-color;
 }
 
+
 /*******************************
            Groups
 *******************************/
@@ -130,3 +136,6 @@ a.ui.nag {
 .ui.bottom.nags .nag:last-child {
   border-radius: $nag-bottom-border-radius;
 }
+
+
+@import '../../themes/default/modules/nag.style';

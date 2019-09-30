@@ -1,0 +1,148 @@
+@import "../globals/variables";
+
+//@-****************************** Header *******************************/
+
+//--------------------  Element --------------------*/
+
+$header-text-transform: none;
+$header-font-family: $header-font;
+$header-font-weight: $header-font-weight;
+$header-line-height: $header-line-height;
+$header-line-height-offset: $header-line-height-offset;
+
+$header-top-margin: $header-top-margin;
+$header-bottom-margin: $header-bottom-margin;
+$header-margin: $header-top-margin 0 $header-bottom-margin;
+
+$header-first-margin: -$header-line-height-offset;
+$header-last-margin: 0;
+$header-horizontal-padding: 0;
+$header-vertical-padding: 0;
+
+//- Sub Heading */
+$header-sub-heading-distance: $_2px;
+$header-sub-heading-font-size: $relative-tiny;
+$header-sub-heading-font-weight: $bold;
+$header-sub-heading-text-transform: uppercase;
+$header-sub-heading-color: '';
+
+$header-small-sub-heading-size: $relative-mini;
+$header-large-sub-heading-size: $relative-small;
+$header-huge-sub-heading-size: $relative-medium;
+
+//- Sub Header */
+$header-sub-margin: 0;
+$header-sub-line-height: 1.2em;
+$header-sub-color: $muted-text-color;
+
+//- Icon */
+$header-icon-opacity: 1;
+$header-icon-size: 1.5em;
+$header-icon-offset: 0;
+$header-icon-margin: 0.75rem;
+$header-icon-alignment: middle;
+
+//- Image */
+$header-image-width: 2.5em;
+$header-image-height: auto;
+$header-image-offset: $header-line-height-offset;
+$header-image-margin: $header-icon-margin;
+$header-image-alignment: middle;
+
+//- Label */
+$header-label-size: '';
+$header-label-distance: 0.5rem;
+$header-label-vertical-align: middle;
+
+//- Content */
+$header-content-alignment: top;
+$header-content-icon-alignment: middle;
+$header-content-image-alignment: middle;
+
+//- Paragraph after Header */
+$header-next-paragraph-distance: 0;
+
+//-------------------- Variations --------------------*/
+
+//- Sizing */
+$header-huge-font-size   : join-value-to-unit($h1, em);
+$header-large-font-size  : join-value-to-unit($h2, em);
+$header-medium-font-size : join-value-to-unit($h3, em);
+$header-small-font-size  : join-value-to-unit($h4, em);
+$header-tiny-font-size   : join-value-to-unit($h5, em);
+
+//- Sub Header */
+$header-h1-sub-font-size: $large;
+$header-h2-sub-font-size: $large;
+$header-h3-sub-font-size: $medium;
+$header-h4-sub-font-size: $medium;
+$header-h5-sub-font-size: $small;
+
+$header-huge-sub-font-size  : $header-h1-sub-font-size;
+$header-large-sub-font-size : $header-h2-sub-font-size;
+$header-sub-font-size      : $header-h3-sub-font-size;
+$header-small-sub-font-size : $header-h4-sub-font-size;
+$header-tiny-sub-font-size  : $header-h5-sub-font-size;
+
+//- Icon Header */
+$header-iconed-icon-size: 3em;
+$header-iconed-icon-opacity: 1;
+$header-iconed-icon-margin: 0.5rem;
+$header-circular-icon-size: 2em;
+$header-square-icon-size: 2em;
+$header-corner-icon-size: calc($header-iconed-icon-size * 0.45);
+
+//- No Line Height Offset */
+$header-icon-top-margin: 2rem;
+$header-icon-bottom-margin: $header-bottom-margin;
+$header-icon-first-margin: 0;
+
+//- Divided */
+$header-divided-border-width: 1px;
+$header-divided-border: $header-divided-border-width solid $border-color;
+$header-divided-colored-border-width: 2px;
+
+$header-divided-border-padding: $_3px;
+$header-divided-sub-padding: $_3px;
+$header-divided-icon-padding: 0;
+
+//- Block */
+$header-block-background: $dark-white;
+$header-block-box-shadow: none;
+$header-block-border-width: 1px;
+$header-block-border: $header-block-border-width solid $solid-border-color;
+$header-block-horizontal-padding: $medium;
+$header-block-vertical-padding: $mini;
+$header-block-border-radius: $default-border-radius;
+
+$header-tiny-block: $tiny;
+$header-small-block: $small;
+$header-medium-block: $medium;
+$header-large-block: $large;
+$header-huge-block: $huge;
+
+//- Attached */
+$header-attached-offset: -1px;
+$header-attached-box-shadow: none;
+$header-attached-border: 1px solid $solid-border-color;
+$header-attached-vertical-padding: $header-block-vertical-padding;
+$header-attached-horizontal-padding: $header-block-horizontal-padding;
+$header-attached-background: $white;
+$header-attached-border-radius: $header-block-border-radius;
+
+$header-tiny-attached-size: $relative-tiny;
+$header-small-attached-size: $relative-small;
+$header-medium-attached-size: $relative-medium;
+$header-large-attached-size: $relative-large;
+$header-big-attached-size: $relative-big;
+$header-huge-attached-size: $relative-huge;
+
+//- Inverted */
+$header-inverted-color: $white;
+$header-inverted-sub-color: $inverted-muted-text-color;
+$header-inverted-divided-border-color: $white-border-color;
+$header-inverted-block-background: $light-black $subtle-gradient;
+$header-inverted-attached-background: $black;
+
+//- Floated */
+$header-floated-margin: 0.5em;

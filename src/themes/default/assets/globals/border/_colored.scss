@@ -1,0 +1,30 @@
+@import "../colors/all";
+@import "../texts/all";
+
+$border-color: rgba(34, 36, 38, 0.15) !default;
+
+$primary-border-color: $primary-color !default;
+$secondary-border-color: $secondary-color !default;
+$red-border-color: $red-text-color !default;
+$orange-border-color: $orange-text-color !default;
+$yellow-border-color: $yellow-text-color !default;
+$olive-border-color: $olive-text-color !default;
+$green-border-color: $green-text-color !default;
+$teal-border-color: $teal-text-color !default;
+$blue-border-color: $blue-text-color !default;
+$violet-border-color: $violet-text-color !default;
+$purple-border-color: $purple-text-color !default;
+$pink-border-color: $pink-text-color !default;
+$brown-border-color: $brown-text-color !default;
+$grey-border-color: $grey-text-color !default;
+$black-border-color: $black-text-color !default;
+$white-border-color: rgba(255, 255, 255, 0.1) !default;
+
+$strong-border-color: rgba(34, 36, 38, 0.22) !default;
+$strong-selected-border-color: rgba(34, 36, 38, 0.5) !default;
+$internal-border-color: rgba(34, 36, 38, 0.1) !default;
+
+$solid-internal-border-color: #fafafa !default;
+$solid-border-color: #d4d4d5 !default;
+$solid-selected-border-color: #bcbdbd !default;
+$solid-white-border-color: #555555 !default;

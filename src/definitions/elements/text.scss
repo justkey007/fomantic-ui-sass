@@ -1,10 +1,12 @@
-@import "../../themes/default/elements/text";
+@import '../../themes/default/elements/text.variables';
+
 
 /*******************************
-             Text
+//@-         Text
 *******************************/
 
 @each $key, $value in $colors {
+  $color: $key;
   $c: map-get($value, color);
   $l: map-get($value, light);
 
@@ -45,3 +47,6 @@ span.ui.huge.text {
 span.ui.massive.text {
   font-size: $text-massive;
 }
+
+
+@import '../../themes/default/elements/text.style';

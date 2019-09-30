@@ -1,7 +1,8 @@
-@import "../../themes/default/collections/breadcrumb";
+@import '../../themes/default/collections/breadcrumb.variables';
 
-/******************************
-           Breadcrumb
+
+/*******************************
+//@-       Breadcrumb
 *******************************/
 
 .ui.breadcrumb {
@@ -9,92 +10,108 @@
   display: $breadcrumb-display;
   margin: $breadcrumb-vertical-margin 0;
   vertical-align: $breadcrumb-vertical-align;
-  font-size: $medium;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  // Loose Coupling */
-  &.segment {
-    display: inline-block;
-    padding: $breadcrumb-segment-padding;
-  }
-
-  .ui.breadcrumb:last-child {
-    margin-bottom: 0;
-  }
-
-  // Divider */
-  .divider {
-    display: inline-block;
-    opacity: $breadcrumb-divider-opacity;
-    margin: 0 $breadcrumb-divider-spacing 0;
-
-    font-size: $breadcrumb-divider-size;
-    color: $breadcrumb-divider-color;
-    vertical-align: $breadcrumb-divider-vertical-align;
-  }
-
-  // Link */
-  a {
-    color: $link-color;
-    &:hover {
-      color: $link-hover-color;
-    }
-    // Section */
-    &.section {
-      cursor: pointer;
-    }
-  }
-
-  // Icon Divider */
-  .icon.divider {
-    font-size: $breadcrumb-icon-divider-size;
-    vertical-align: $breadcrumb-icon-divider-vertical-align;
-  }
-
-  .section {
-    display: inline-block;
-    margin: $breadcrumb-section-margin;
-    padding: $breadcrumb-section-padding;
-    &.active {
-      font-weight: $breadcrumb-active-font-weight;
-    }
-  }
-
-  // Inverted */
-  &.inverted {
-    color: $breadcrumb-inverted-color;
-    & > .active.section {
-      color: $breadcrumb-inverted-active-color;
-    }
-    & > .divider {
-      color: $breadcrumb-inverted-divider-color;
-    }
-  }
-
-  //****************************** Variations *******************************/
-  &.mini {
-    font-size: $mini;
-  }
-  &.tiny {
-    font-size: $tiny;
-  }
-  &.small {
-    font-size: $small;
-  }
-
-  &.large {
-    font-size: $large;
-  }
-  &.big {
-    font-size: $big;
-  }
-  &.huge {
-    font-size: $huge;
-  }
-  &.massive {
-    font-size: $massive;
-  }
 }
+.ui.breadcrumb:first-child {
+  margin-top: 0;
+}
+.ui.breadcrumb:last-child {
+  margin-bottom: 0;
+}
+
+/*******************************
+          Content
+*******************************/
+
+/* Divider */
+.ui.breadcrumb .divider {
+  display: inline-block;
+  opacity: $breadcrumb-divider-opacity;
+  margin: 0 $breadcrumb-divider-spacing 0;
+
+  font-size: $breadcrumb-divider-size;
+  color: $breadcrumb-divider-color;
+  vertical-align: $breadcrumb-divider-vertical-align;
+}
+
+/* Link */
+.ui.breadcrumb a {
+  color: $link-color;
+}
+.ui.breadcrumb a:hover {
+  color: $link-hover-color;
+}
+
+
+/* Icon Divider */
+.ui.breadcrumb .icon.divider {
+  font-size: $breadcrumb-icon-divider-size;
+  vertical-align: $breadcrumb-icon-divider-vertical-align;
+}
+
+/* Section */
+.ui.breadcrumb a.section {
+  cursor: pointer;
+}
+.ui.breadcrumb .section {
+  display: inline-block;
+  margin: $breadcrumb-section-margin;
+  padding: $breadcrumb-section-padding;
+}
+
+/* Loose Coupling */
+.ui.breadcrumb.segment {
+  display: inline-block;
+  padding: $breadcrumb-segment-padding;
+}
+
+/* Inverted */
+.ui.inverted.breadcrumb {
+  color: $breadcrumb-inverted-color;
+}
+.ui.inverted.breadcrumb > .active.section {
+  color: $breadcrumb-inverted-active-color;
+}
+.ui.inverted.breadcrumb > .divider {
+  color: $breadcrumb-inverted-divider-color;
+}
+
+/*******************************
+            States
+*******************************/
+
+.ui.breadcrumb .active.section {
+  font-weight: $breadcrumb-active-font-weight;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+.ui.mini.breadcrumb {
+  font-size: $mini;
+}
+.ui.tiny.breadcrumb {
+  font-size: $tiny;
+}
+.ui.small.breadcrumb {
+  font-size: $small;
+}
+.ui.breadcrumb {
+  font-size: $medium;
+}
+.ui.large.breadcrumb {
+  font-size: $large;
+}
+.ui.big.breadcrumb {
+  font-size: $big;
+}
+.ui.huge.breadcrumb {
+  font-size: $huge;
+}
+.ui.massive.breadcrumb {
+  font-size: $massive;
+}
+
+
+@import '../../themes/default/collections/breadcrumb.style';

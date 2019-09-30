@@ -1,7 +1,7 @@
-@import "../../themes/default/elements/list";
+@import '../../themes/default/elements/list.variables';
 
 /*******************************
-            List
+//@-        List
 *******************************/
 
 ul.ui.list,
@@ -48,7 +48,7 @@ ul.ui.list > li:first-child:after,
 ol.ui.list > li:first-child:after,
 .ui.list > .list > .item:after,
 .ui.list > .item:after {
-  content: "";
+  content: '';
   display: block;
   height: 0;
   clear: both;
@@ -85,6 +85,7 @@ ol.ui.list ol li,
   line-height: $list-child-item-line-height;
 }
 
+
 /* Icon */
 .ui.list .list > .item > i.icon,
 .ui.list > .item > i.icon {
@@ -104,6 +105,7 @@ ol.ui.list ol li,
   min-width: auto;
   vertical-align: $list-icon-vertical-align;
 }
+
 
 /* Image */
 .ui.list .list > .item > .image,
@@ -146,7 +148,7 @@ ol.ui.list ol li,
 }
 .ui.list .list > .item > .loading.icon + .content,
 .ui.list > .item > .loading.icon + .content {
-  padding-left: calc(#{$list-icon-distance} + #{$list-content-distance});
+  padding-left:  calc(#{$list-icon-distance} + #{$list-content-distance});;
 }
 .ui.list .list > .item > img.image + .content,
 .ui.list > .item > img.image + .content {
@@ -259,6 +261,7 @@ ol.ui.list ol li,
   padding-bottom: 0;
 }
 
+
 /*******************************
             Types
 *******************************/
@@ -314,7 +317,7 @@ ol.ui.list ol li,
   width: auto;
 }
 .ui.horizontal.list > .item > .image {
-  display: inline-block;
+  display:inline-block;
 }
 
 /*******************************
@@ -343,6 +346,7 @@ ol.ui.list ol li,
 .ui.list > a.item:hover > .icon {
   color: $list-item-link-icon-hover-color;
 }
+
 
 /*******************************
            Variations
@@ -378,6 +382,7 @@ ol.ui.list ol li,
 .ui.inverted.list > a.item:hover {
   color: $list-inverted-item-link-hover-color;
 }
+
 
 /* Linking Content */
 .ui.inverted.list .item a:not(.ui) {
@@ -457,8 +462,7 @@ ol.ui.list ol li,
 .ui.selection.list > .item {
   cursor: pointer;
   background: $list-selection-background;
-  padding: $list-selection-item-vertical-padding
-    $list-selection-item-horizontal-padding;
+  padding: $list-selection-item-vertical-padding $list-selection-item-horizontal-padding;
   margin: $list-selection-item-margin;
   color: $list-selection-color;
   border-radius: $list-selection-item-border-radius;
@@ -623,7 +627,7 @@ ol.ui.list li:before,
   left: auto;
   user-select: none;
   pointer-events: none;
-  margin-left: (-$list-ordered-count-distance);
+  margin-left: -($list-ordered-count-distance);
   counter-increment: $list-ordered-count-name;
   content: $list-ordered-count-content;
   text-align: $list-ordered-count-text-align;
@@ -675,6 +679,7 @@ ol.ui.suffixed.list li:before,
 .ui.suffixed.ordered.list > .item:before {
   content: $list-ordered-count-content-suffixed;
 }
+
 
 /*-------------------
        Divided
@@ -759,6 +764,7 @@ ol.ui.suffixed.list li:before,
   border-color: $list-divided-inverted-border-color;
 }
 
+
 /*-------------------
         Celled
 --------------------*/
@@ -797,8 +803,8 @@ ol.ui.suffixed.list li:before,
   padding-left: ($list-bullet-distance);
 }
 .ui.celled.bulleted.list .item .list:not(.icon) {
-  margin-left: (-$list-bullet-distance);
-  margin-right: (-$list-bullet-distance);
+  margin-left: -($list-bullet-distance);
+  margin-right: -($list-bullet-distance);
   padding-bottom: $list-item-vertical-padding;
 }
 
@@ -945,3 +951,7 @@ ol.ui.suffixed.list li:before,
 .ui.massive.horizontal.list > .item {
   font-size: $massive;
 }
+
+
+
+@import '../../themes/default/elements/list.style';

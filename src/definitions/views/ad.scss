@@ -1,7 +1,7 @@
-@import "../../themes/default/views/ad";
+@import '../../themes/default/views/ad.variables';
 
 /*******************************
-         Advertisement
+//@-     Advertisement
 *******************************/
 
 .ui.ad {
@@ -180,6 +180,8 @@
   height: 400px;
 }
 
+
+
 /*--------------
      Mobile
 ---------------*/
@@ -205,11 +207,12 @@
   display: none;
 }
 
-@media only screen and (max-width: $largest-mobile-screen) {
+@media only screen and (max-width : $largest-mobile-screen) {
   .ui.mobile.ad {
     display: block;
   }
 }
+
 
 /*******************************
            Variations
@@ -243,3 +246,6 @@
 .ui.test.ad[data-text]:after {
   content: attr(data-text);
 }
+
+
+@import '../../themes/default/views/ad.style';

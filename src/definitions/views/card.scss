@@ -1,4 +1,8 @@
-@import "../../themes/default/views/card";
+@import '../../themes/default/views/card.variables';
+
+/*******************************
+//@-        Standard
+*******************************/
 
 /*--------------
       Card
@@ -45,13 +49,13 @@
 
 .ui.cards {
   display: $card-group-super-display;
-  margin: $card-group-margin;
+  margin: $card-group-card-margin;
   flex-wrap: wrap;
 }
 
 .ui.cards > .card {
   display: $card-group-display;
-  margin: $card-group-card-margin;
+  margin: $card-group-margin;
   float: $card-group-float;
 }
 
@@ -59,17 +63,19 @@
 .ui.cards:after,
 .ui.card:after {
   display: block;
-  content: " ";
+  content: ' ';
   height: 0;
   clear: both;
   overflow: hidden;
   visibility: hidden;
 }
 
+
 /* Consecutive Card Groups Preserve Row Spacing */
 .ui.cards ~ .ui.cards {
   margin-top: $card-consecutive-group-distance;
 }
+
 
 /*--------------
   Rounded Edges
@@ -135,7 +141,7 @@
 .ui.cards > .card > .content:after,
 .ui.card > .content:after {
   display: block;
-  content: " ";
+  content: ' ';
   height: 0;
   clear: both;
   overflow: hidden;
@@ -162,7 +168,7 @@
 .ui.cards > .card > .content > .meta + .description,
 .ui.cards > .card > .content > .header + .description,
 .ui.card > .content > .meta + .description,
-.ui.card > .content > .header + .description {
+.ui.card > .content > .header + .description  {
   margin-top: $card-description-distance;
 }
 
@@ -170,7 +176,7 @@
  Floated Content
 -----------------*/
 
-.ui.cards > .card [class*="left floated"],
+.ui.cards > .card  [class*="left floated"],
 .ui.card [class*="left floated"] {
   float: left;
 }
@@ -183,7 +189,7 @@
      Aligned
 ---------------*/
 
-.ui.cards > .card [class*="left aligned"],
+.ui.cards > .card  [class*="left aligned"],
 .ui.card [class*="left aligned"] {
   text-align: left;
 }
@@ -195,6 +201,7 @@
 .ui.card [class*="right aligned"] {
   text-align: right;
 }
+
 
 /*--------------
   Content Image
@@ -214,6 +221,7 @@
   height: $card-avatar-size;
   border-radius: $card-avatar-border-radius;
 }
+
 
 /*--------------
    Description
@@ -394,6 +402,7 @@
   color: $card-extra-link-hover-color;
 }
 
+
 /*******************************
            Variations
 *******************************/
@@ -433,12 +442,10 @@
   height: 100%;
   border-radius: $default-border-radius 0 0 $default-border-radius;
 }
-.ui.horizontal.cards > .card > .content,
-.ui.horizontal.card > .content {
+.ui.horizontal.cards > .card > .content, .ui.horizontal.card > .content {
   flex-basis: 1px;
 }
-.ui.horizontal.cards > .card > .extra,
-.ui.horizontal.card > .extra {
+.ui.horizontal.cards > .card > .extra, .ui.horizontal.card > .extra {
   flex-basis: 100%;
 }
 
@@ -489,6 +496,7 @@ a.ui.card,
   transform: none;
 }
 
+
 .ui.cards a.card:hover,
 .ui.link.cards .card:not(.icon):hover,
 a.ui.card:hover,
@@ -506,6 +514,7 @@ a.ui.card:hover,
 --------------------*/
 
 @each $key, $value in $colors {
+  $color: $key;
   $c: map-get($value, color);
   $h: map-get($value, hover);
   $l: map-get($value, light);
@@ -514,23 +523,33 @@ a.ui.card:hover,
   .ui.#{$key + ""}.cards > .card,
   .ui.cards > .#{$key + ""}.card,
   .ui.#{$key + ""}.card {
-    box-shadow: $card-border-shadow, 0 $card-colored-shadow-distance 0 0 $c,
-      $card-shadow-box-shadow;
+    box-shadow:
+            $card-border-shadow,
+            0 $card-colored-shadow-distance 0 0 $c,
+            $card-shadow-box-shadow
+  ;
     &:hover {
-      box-shadow: $card-border-shadow, 0 $card-colored-shadow-distance 0 0 $h,
-        $card-shadow-hover-box-shadow;
+    box-shadow:
+            $card-border-shadow,
+            0 $card-colored-shadow-distance 0 0 $h,
+            $card-shadow-hover-box-shadow
+    ;
     }
   }
   .ui.inverted.#{$key + ""}.cards > .card,
   .ui.inverted.cards > .#{$key + ""}.card,
   .ui.inverted.#{$key + ""}.card {
-    box-shadow: 0 $card-shadow-distance 3px 0 $solid-white-border-color,
-      0 $card-colored-shadow-distance 0 0 $l,
-      0 0 0 $card-border-width $solid-white-border-color;
+    box-shadow:
+            0 $card-shadow-distance 3px 0 $solid-white-border-color,
+            0 $card-colored-shadow-distance 0 0 $l,
+            0 0 0 $card-border-width $solid-white-border-color
+  ;
     &:hover {
-      box-shadow: 0 $card-shadow-distance 3px 0 $solid-white-border-color,
-        0 $card-colored-shadow-distance 0 0 $lh,
-        0 0 0 $card-border-width $solid-white-border-color;
+    box-shadow:
+            0 $card-shadow-distance 3px 0 $solid-white-border-color,
+            0 $card-colored-shadow-distance 0 0 $lh,
+            0 0 0 $card-border-width $solid-white-border-color
+    ;
     }
   }
 }
@@ -639,12 +658,13 @@ a.ui.card:hover,
   margin-right: $card-ten-spacing;
 }
 
+
 /*-------------------
       Doubling
 --------------------*/
 
 /* Mobile Only */
-@media only screen and (max-width: $largest-mobile-screen) {
+@media only screen and (max-width : $largest-mobile-screen) {
   .ui.two.doubling.cards {
     margin-left: $card-one-offset;
     margin-right: $card-one-offset;
@@ -729,7 +749,7 @@ a.ui.card:hover,
 }
 
 /* Tablet Only */
-@media only screen and (min-width: $tablet-breakpoint) and (max-width: $largest-tablet-screen) {
+@media only screen and (min-width : $tablet-breakpoint) and (max-width : $largest-tablet-screen) {
   .ui.two.doubling.cards {
     margin-left: $card-one-offset;
     margin-right: $card-one-offset;
@@ -817,7 +837,7 @@ a.ui.card:hover,
       Stackable
 --------------------*/
 
-@media only screen and (max-width: $largest-mobile-screen) {
+@media only screen and (max-width : $largest-mobile-screen) {
   .ui.stackable.cards {
     display: block !important;
   }
@@ -905,3 +925,7 @@ a.inverted.ui.card:hover,
 .ui.inverted.link.card:hover {
   background: $card-inverted-link-hover-background;
 }
+
+
+
+@import '../../themes/default/views/card.style';

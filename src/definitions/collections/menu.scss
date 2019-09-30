@@ -1,7 +1,7 @@
-@import "../../themes/default/collections/menu";
+@import '../../themes/default/collections/menu.variables';
 
 /*--------------
-      Menu
+//@-  Menu
 ---------------*/
 
 .ui.menu {
@@ -11,13 +11,13 @@
   background: $menu-background;
   font-weight: $menu-font-weight;
   border: $menu-border;
-  // box-shadow: $menu-box-shadow;
+  box-shadow: $menu-box-shadow;
   border-radius: $menu-border-radius;
   min-height: $menu-min-height;
 }
 
 .ui.menu:after {
-  content: "";
+  content: '';
   display: block;
   height: 0;
   clear: both;
@@ -30,6 +30,7 @@
 .ui.menu:last-child {
   margin-bottom: 0;
 }
+
 
 /*--------------
     Sub-Menu
@@ -76,7 +77,7 @@
 /* Border */
 .ui.menu .item:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   right: 0;
   height: 100%;
@@ -129,9 +130,9 @@
  Grid / Container
 -----------------*/
 
-.ui.menu > .grid,
+.ui.menu >  .grid,
 .ui.menu > .container {
-  display: flex !important;
+  display: flex;
   align-items: inherit;
   flex-direction: inherit;
 }
@@ -153,6 +154,7 @@
   padding-top: $menu-input-vertical-padding;
   padding-bottom: $menu-input-vertical-padding;
 }
+
 
 /*--------------
      Header
@@ -176,12 +178,62 @@
     Dropdowns
 ---------------*/
 
+
 /* Dropdown Icon */
 .ui.menu .item > i.dropdown.icon {
   padding: 0;
   float: $menu-dropdown-icon-float;
   margin: 0 0 0 $menu-dropdown-icon-distance;
 }
+
+/* Menu */
+.ui.menu .dropdown.item .menu {
+  min-width: calc(100% - 1px);
+  border-radius: 0 0 $menu-dropdown-border-radius $menu-dropdown-border-radius;
+  background: $menu-dropdown-background;
+  margin: $menu-dropdown-distance 0 0;
+  box-shadow: $menu-dropdown-box-shadow;
+  flex-direction: column !important;
+}
+
+
+/* Menu Items */
+.ui.menu .ui.dropdown .menu > .item {
+  margin: 0;
+  text-align: left;
+  font-size: $menu-dropdown-item-font-size !important;
+  padding: $menu-dropdown-item-padding !important;
+  background: $menu-dropdown-item-background !important;
+  color: $menu-dropdown-item-color !important;
+  text-transform: $menu-dropdown-item-text-transform !important;
+  font-weight: $menu-dropdown-item-font-weight !important;
+  box-shadow: $menu-dropdown-item-box-shadow !important;
+  transition: $menu-dropdown-item-transition !important;
+}
+.ui.menu .ui.dropdown .menu > .item:hover {
+  background: $menu-dropdown-hovered-item-background !important;
+  color: $menu-dropdown-hovered-item-color !important;
+}
+.ui.menu .ui.dropdown .menu > .selected.item {
+  background: $menu-dropdown-selected-item-background !important;
+  color: $menu-dropdown-selected-item-color !important;
+}
+.ui.menu .ui.dropdown .menu > .active.item {
+  background: $menu-dropdown-active-item-background !important;
+  font-weight: $menu-dropdown-active-item-font-weight !important;
+  color: $menu-dropdown-active-item-color !important;
+}
+
+.ui.menu .ui.dropdown.item .menu .item:not(.filtered) {
+  display: block;
+}
+.ui.menu .ui.dropdown .menu > .item .icon:not(.dropdown) {
+  display: inline-block;
+  font-size: $menu-dropdown-item-icon-font-size !important;
+  float: $menu-dropdown-item-icon-float;
+  margin: $menu-dropdown-item-icon-margin !important;
+}
+
 
 /* Secondary */
 .ui.secondary.menu .dropdown.item > .menu,
@@ -214,8 +266,7 @@
   min-width: max-content;
   margin: 0 0 0 $menu-dropdown-distance;
   box-shadow: $menu-dropdown-vertical-box-shadow;
-  border-radius: 0 $menu-dropdown-border-radius $menu-dropdown-border-radius
-    $menu-dropdown-border-radius;
+  border-radius: 0 $menu-dropdown-border-radius $menu-dropdown-border-radius $menu-dropdown-border-radius;
 }
 .ui.vertical.menu .dropdown.item.upward .menu {
   bottom: 0;
@@ -245,9 +296,6 @@
   padding: $menu-label-vertical-padding $menu-label-horizontal-padding;
 }
 .ui.vertical.menu .item > .label {
-  margin-left: auto; /*$*/
-  float: right;
-  text-align: center;
   margin-top: $menu-label-offset;
   margin-bottom: $menu-label-offset;
   padding: $menu-label-vertical-padding $menu-label-horizontal-padding;
@@ -318,21 +366,15 @@
   }
 }
 @media only screen and (min-width: $tablet-breakpoint) {
-  .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless)
-    > .container
-    > .item:not(.right):not(.borderless):first-child {
+  .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless) > .container > .item:not(.right):not(.borderless):first-child {
     border-left: $menu-divider-size solid $menu-divider-background;
   }
-  .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless)
-    > .container
-    > .right.item:not(.borderless):last-child,
-  .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless)
-    > .container
-    > .right.menu
-    > .item:not(.borderless):last-child {
+  .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless) > .container > .right.item:not(.borderless):last-child,
+  .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless) > .container > .right.menu > .item:not(.borderless):last-child {
     border-right: $menu-divider-size solid $menu-divider-background;
   }
 }
+
 
 /*******************************
              States
@@ -342,6 +384,7 @@
       Hover
 ---------------*/
 
+
 .ui.link.menu .item:hover,
 .ui.menu .dropdown.item:hover,
 .ui.menu .link.item:hover,
@@ -350,6 +393,7 @@
   background: $menu-hover-item-background;
   color: $menu-hover-item-text-color;
 }
+
 
 /*--------------
      Pressed
@@ -362,11 +406,12 @@
   color: $menu-pressed-item-text-color;
 }
 
+
 /*--------------
      Active
 ---------------*/
 
-.ui.menu .active.item {
+.ui.menu .active.item  {
   background: $menu-active-item-background;
   color: $menu-active-item-text-color;
   font-weight: $menu-active-item-font-weight;
@@ -386,16 +431,18 @@
   color: $menu-active-hover-item-color;
 }
 
+
 /*--------------
      Disabled
 ---------------*/
 
-.ui.menu .item.disabled {
+.ui.ui.menu .item.disabled {
   cursor: default;
   background-color: transparent;
   color: $disabled-text-color;
   pointer-events: none;
 }
+
 
 /*******************************
              Types
@@ -450,6 +497,7 @@ Floated Menu / Item
 
 .ui.vertical.menu {
   display: block;
+  flex-direction: column;
   background: $menu-vertical-background;
   box-shadow: $menu-vertical-box-shadow;
 }
@@ -461,16 +509,17 @@ Floated Menu / Item
   border-top: none;
   border-right: none;
 }
-
-.ui.vertical.menu .item > .title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .ui.vertical.menu > .item:first-child {
   border-radius: $menu-border-radius $menu-border-radius 0 0;
 }
 .ui.vertical.menu > .item:last-child {
   border-radius: 0 0 $menu-border-radius $menu-border-radius;
+}
+
+/*--- Label ---*/
+.ui.vertical.menu .item > .label {
+  float: right;
+  text-align: center;
 }
 
 /*--- Icon ---*/
@@ -485,10 +534,11 @@ Floated Menu / Item
   margin: $menu-label-and-icon-margin;
 }
 
+
 /*--- Border ---*/
 .ui.vertical.menu .item:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   width: 100%;
@@ -500,15 +550,12 @@ Floated Menu / Item
   display: none !important;
 }
 
+
 /*--- Sub Menu ---*/
 .ui.vertical.menu .item > .menu {
   margin: $menu-sub-margin;
 }
 .ui.vertical.menu .menu .item {
-  /*$*/
-  display: flex;
-  align-items: center;
-
   background: none;
   padding: $menu-sub-vertical-padding $menu-sub-horizontal-padding;
   font-size: $menu-sub-font-size;
@@ -545,6 +592,7 @@ Floated Menu / Item
   font-weight: $menu-sub-active-font-weight;
   color: $menu-sub-active-text-color;
 }
+
 
 /*--------------
      Tabular
@@ -649,7 +697,7 @@ Floated Menu / Item
   background: $menu-tabular-active-background;
   color: $menu-tabular-active-color;
   border-color: $menu-tabular-border-color;
-  margin: 0 (-$menu-tabular-border-width) 0 0;
+  margin: 0 -$menu-tabular-border-width 0 0;
   border-radius: $menu-tabular-border-radius 0 0 $menu-tabular-border-radius !important;
 }
 
@@ -673,7 +721,7 @@ Floated Menu / Item
   background: $menu-tabular-active-background;
   color: $menu-tabular-active-color;
   border-color: $menu-tabular-border-color;
-  margin: 0 0 0 (-$menu-tabular-border-width);
+  margin: 0 0 0 -$menu-tabular-border-width;
   border-radius: 0 $menu-tabular-border-radius $menu-tabular-border-radius 0 !important;
 }
 
@@ -685,6 +733,8 @@ Floated Menu / Item
   border-top: $menu-tabular-opposite-border-width solid transparent;
   border-bottom: none;
 }
+
+
 
 /*--------------
    Pagination
@@ -787,6 +837,7 @@ Floated Menu / Item
   color: $menu-secondary-active-hover-item-color;
 }
 
+
 /* Inverted */
 .ui.secondary.inverted.menu .link.item:not(.disabled),
 .ui.secondary.inverted.menu a.item:not(.disabled) {
@@ -824,6 +875,7 @@ Floated Menu / Item
   padding: $menu-secondary-sub-menu-item-padding;
 }
 
+
 /*---------------------
    Secondary Vertical
 -----------------------*/
@@ -854,8 +906,7 @@ Floated Menu / Item
 .ui.secondary.pointing.menu {
   margin-left: 0;
   margin-right: 0;
-  border-bottom: $menu-secondary-pointing-border-width solid
-    $menu-secondary-pointing-border-color;
+  border-bottom: $menu-secondary-pointing-border-width solid $menu-secondary-pointing-border-color;
 }
 
 .ui.secondary.pointing.menu .item {
@@ -864,9 +915,8 @@ Floated Menu / Item
   border-radius: 0;
   align-self: flex-end;
 
-  margin: 0 0 (-$menu-secondary-pointing-border-width);
-  padding: $menu-secondary-pointing-item-vertical-padding
-    $menu-secondary-pointing-item-horizontal-padding;
+  margin: 0 0 -$menu-secondary-pointing-border-width;
+  padding: $menu-secondary-pointing-item-vertical-padding $menu-secondary-pointing-item-horizontal-padding;
   border-bottom-width: $menu-secondary-pointing-border-width;
   transition: $menu-secondary-item-transition;
 }
@@ -969,10 +1019,12 @@ Floated Menu / Item
   color: $menu-secondary-pointing-inverted-item-hover-text-color;
 }
 
+
 /* Active */
-.ui.secondary.inverted.pointing.menu .active.item {
+.ui.ui.secondary.inverted.pointing.menu .active.item {
   border-color: $menu-secondary-pointing-inverted-active-border-color;
   color: $menu-secondary-pointing-inverted-active-color;
+  background-color: transparent;
 }
 
 /*--------------
@@ -1173,6 +1225,7 @@ Floated Menu / Item
   min-width: 0;
 }
 
+
 /*******************************
            Variations
 *******************************/
@@ -1190,7 +1243,7 @@ Floated Menu / Item
   }
   .ui.stackable.menu .item:before {
     position: absolute;
-    content: "";
+    content: '';
     top: auto;
     bottom: 0;
     left: 0;
@@ -1225,10 +1278,18 @@ Floated Menu / Item
 ---------------*/
 
 @each $key, $value in $colors {
-  .ui.menu .#{$key + ""}.active.item,
-  .ui.#{$key + ""}.menu .active.item {
-    border-color: map-get($value, "color");
-    color: map-get($value, "color");
+  $color: $key;
+  $c: map-get($value, color);
+
+  @if not ($color==secondary) {
+    .ui.ui.menu .#{$key + ""}.active.item,
+    .ui.ui.#{$key + ""}.menu .active.item:hover,
+    .ui.ui.#{$key + ""}.menu .active.item {
+      @if not ($menu-secondary-pointing-active-border-color == currentColor) {
+        border-color: $c;
+      }
+      color: $c;
+    }
   }
 }
 
@@ -1274,7 +1335,7 @@ Floated Menu / Item
 }
 
 /* Disabled */
-.ui.inverted.menu .item.disabled {
+.ui.ui.inverted.menu .item.disabled {
   color: $inverted-disabled-text-color;
 }
 
@@ -1294,7 +1355,7 @@ Floated Menu / Item
 
 /*--- Pressed ---*/
 .ui.inverted.menu a.item:active,
-.ui.inverted.menu .link.item:active {
+.ui.inverted.menu .link.item:active{
   background: $menu-inverted-pressed-background;
   color: $menu-inverted-pressed-color;
 }
@@ -1324,6 +1385,7 @@ Floated Menu / Item
   background: $menu-inverted-arrow-active-hover-color;
 }
 
+
 /*--------------
      Floated
 ---------------*/
@@ -1341,21 +1403,35 @@ Floated Menu / Item
   margin: 0 0 0 $menu-floated-distance;
 }
 
+
 /*--------------
     Inverted
 ---------------*/
 
 @each $key, $value in $colors {
-  .ui.inverted.menu .#{$key + ""}.active.item,
-  .ui.inverted.#{$key + ""}.menu {
-    background-color: map-get($value, "color");
+  $color: $key;
+  $c: map-get($value, color);
+  $h: map-get($value, hover);
+
+  @if not ($color==secondary) {
+    .ui.ui.inverted.menu .#{$key + ""}.active.item,
+    .ui.ui.inverted.#{$key + ""}.menu {
+      background-color: $c;
+    }
+    .ui.inverted.#{$key + ""}.menu .item:before {
+      background-color: $menu-inverted-colored-divider-background;
+    }
+    .ui.ui.inverted.#{$key + ""}.menu .active.item {
+      background-color: $menu-inverted-colored-active-background;
+    }
+    .ui.inverted.pointing.#{$key + ""}.menu .active.item {
+      background-color: $h;
+    }
   }
-  .ui.inverted.#{$key + ""}.menu .item:before {
-    background-color: $menu-inverted-colored-divider-background;
-  }
-  .ui.inverted.#{$key + ""}.menu .active.item {
-    background-color: $menu-inverted-colored-active-background;
-  }
+}
+
+.ui.ui.ui.inverted.pointing.menu .active.item:after{
+  background-color: inherit;
 }
 
 /*--------------
@@ -1400,7 +1476,7 @@ Floated Menu / Item
   vertical-align: middle;
 }
 .ui.compact.vertical.menu {
-  /* IE hack to make dropdown icons appear inline */
+/* IE hack to make dropdown icons appear inline */
   display: -ms-inline-flexbox !important;
   display: inline-block;
 }
@@ -1425,6 +1501,7 @@ Floated Menu / Item
 .ui.vertical.menu.fluid {
   width: 100% !important;
 }
+
 
 /*-------------------
       Evenly Sized
@@ -1467,13 +1544,13 @@ Floated Menu / Item
   width: 14.285%;
 }
 .ui.menu.eight.item .item {
-  width: 12.5%;
+  width: 12.500%;
 }
 .ui.menu.nine.item .item {
   width: 11.11%;
 }
 .ui.menu.ten.item .item {
-  width: 10%;
+  width: 10.0%;
 }
 .ui.menu.eleven.item .item {
   width: 9.09%;
@@ -1547,6 +1624,7 @@ Floated Menu / Item
   padding-top: $menu-fixed-preceding-grid-margin;
 }
 
+
 /*-------------------
        Pointing
 --------------------*/
@@ -1554,7 +1632,7 @@ Floated Menu / Item
 .ui.pointing.menu .item:after {
   visibility: hidden;
   position: absolute;
-  content: "";
+  content: '';
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
@@ -1626,8 +1704,11 @@ Floated Menu / Item
 }
 
 @each $key, $value in $colors {
+  $color: $key;
+  $c: map-get($value, color);
+
   .ui.inverted.pointing.menu .#{$key + ""}.active.item:after {
-    background-color: map-get($value, "color");
+    background-color: $c;
   }
 }
 
@@ -1709,7 +1790,7 @@ Floated Menu / Item
 .ui.mini.menu .dropdown {
   font-size: $menu-mini;
 }
-.ui.mini.menu .dropdown .menu > .item {
+.ui.mini.menu .dropdown .menu > .item{
   font-size: $menu-mini;
 }
 
@@ -1723,7 +1804,7 @@ Floated Menu / Item
 .ui.tiny.menu .dropdown {
   font-size: $menu-tiny;
 }
-.ui.tiny.menu .dropdown .menu > .item {
+.ui.tiny.menu .dropdown .menu > .item{
   font-size: $menu-tiny;
 }
 
@@ -1737,7 +1818,7 @@ Floated Menu / Item
 .ui.small.menu .dropdown {
   font-size: $menu-small;
 }
-.ui.small.menu .dropdown .menu > .item {
+.ui.small.menu .dropdown .menu > .item{
   font-size: $menu-small;
 }
 
@@ -1759,7 +1840,7 @@ Floated Menu / Item
 .ui.large.menu .dropdown {
   font-size: $menu-large;
 }
-.ui.large.menu .dropdown .menu > .item {
+.ui.large.menu .dropdown .menu > .item{
   font-size: $menu-large;
 }
 
@@ -1773,7 +1854,7 @@ Floated Menu / Item
 .ui.huge.menu .dropdown {
   font-size: $menu-huge;
 }
-.ui.huge.menu .dropdown .menu > .item {
+.ui.huge.menu .dropdown .menu > .item{
   font-size: $menu-huge;
 }
 
@@ -1787,7 +1868,7 @@ Floated Menu / Item
 .ui.big.menu .dropdown {
   font-size: $menu-big;
 }
-.ui.big.menu .dropdown .menu > .item {
+.ui.big.menu .dropdown .menu > .item{
   font-size: $menu-big;
 }
 
@@ -1801,7 +1882,7 @@ Floated Menu / Item
 .ui.massive.menu .dropdown {
   font-size: $menu-massive;
 }
-.ui.massive.menu .dropdown .menu > .item {
+.ui.massive.menu .dropdown .menu > .item{
   font-size: $menu-massive;
 }
 
@@ -1836,3 +1917,6 @@ Floated Menu / Item
 .ui.vertical.menu .inverted.dropdown.item .menu {
   box-shadow: $menu-inverted-dropdown-box-shadow;
 }
+
+
+@import '../../themes/default/collections/menu.style';

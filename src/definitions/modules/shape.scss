@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/shape";
+@import '../../themes/default/modules/shape.variables';
 
 /*******************************
-              Shape
+//@-          Shape
 *******************************/
 
 .ui.shape {
@@ -71,6 +71,7 @@
   white-space: normal;
 }
 
+
 /*******************************
              States
 *******************************/
@@ -84,6 +85,7 @@
   top: -9999px;
   left: -9999px;
 }
+
 
 /*--------------
     Animating
@@ -99,6 +101,7 @@
 .ui.shape .hidden.side {
   opacity: $shape-hidden-side-opacity;
 }
+
 
 /*--------------
       CSS
@@ -123,3 +126,6 @@
 .ui.shape .active.side {
   display: block;
 }
+
+
+@import '../../themes/default/modules/shape.style';

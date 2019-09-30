@@ -1,0 +1,47 @@
+@import "../globals/variables";
+
+//@-******************************  Video *******************************/
+
+//--------------------  Element --------------------*/
+
+//- Simple */
+$embed-background: $light-grey;
+$embed-transition-duration: 0.5s;
+$embed-transition-easing: $default-easing;
+
+//- Placeholder */
+$embed-placeholder-underlay: $embed-background;
+
+//- Placeholder Overlayed Background */
+$embed-placeholder-background: radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3));
+$embed-placeholder-background-opacity: 0.5;
+$embed-placeholder-background-transition: opacity $embed-transition-duration $embed-transition-easing;
+
+//- Icon */
+$embed-icon-background: $very-strong-transparent-black;
+$embed-icon-size: 6rem;
+$embed-icon-transition:
+  opacity $embed-transition-duration $embed-transition-easing,
+  color $embed-transition-duration $embed-transition-easing
+;
+$embed-icon-color: $white;
+$embed-icon-shadow:
+  0 2px 10px rgba(34, 36, 38, 0.2)
+;
+$embed-icon-z-index: 10;
+
+//--------------------  States --------------------*/
+
+//- Hover */
+$embed-hover-placeholder-background: $embed-placeholder-background;
+$embed-hover-placeholder-background-opacity: 1;
+$embed-hover-icon-color: $white;
+
+
+//-------------------- Variations --------------------*/
+
+//- Aspect Ratios */
+$embed-square-ratio: (1/1) * 100%;
+$embed-widescreen-ratio: (9/16) * 100%;
+$embed-ultra-widescreen-ratio: (9/21) * 100%;
+$embed-standard-ratio: (3/4) * 100%;

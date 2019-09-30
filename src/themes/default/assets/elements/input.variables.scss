@@ -1,0 +1,96 @@
+@import "../globals/variables";
+
+//@-****************************** Input *******************************/
+
+//-------------------- Element --------------------*/
+
+$input-font: $page-font;
+$input-vertical-padding: $input-vertical-padding;
+$input-horizontal-padding: $input-horizontal-padding;
+
+$input-line-height: $input-line-height;
+$input-line-height-offset: (($input-line-height - 1em) / 2);
+
+$input-padding: ($input-vertical-padding - $input-line-height-offset) $input-horizontal-padding;
+
+$input-text-align: left;
+$input-background: $input-background;
+$input-border-width: 1px;
+$input-border: $input-border-width solid $border-color;
+$input-box-shadow: none;
+
+$input-border-radius: $default-border-radius;
+$input-transition:
+  box-shadow $default-duration $default-easing,
+  border-color $default-duration $default-easing
+;
+
+//-------------------- Types --------------------*/
+
+//- Icon Input */
+$input-icon-width: ($input-vertical-padding * 2) + $glyph-width;
+$input-icon-opacity: 0.5;
+$input-icon-focus-opacity: 1;
+$input-icon-offset: -0.5em;
+
+$input-icon-distance: 0;
+$input-icon-margin: $input-icon-width + $input-icon-distance;
+$input-icon-transition: opacity 0.3s $default-easing;
+
+$input-transparent-icon-width: $glyph-width;
+$input-transparent-icon-margin: 2em;
+
+$input-textarea-icon-height: 3em;
+$input-transparent-textarea-icon-height: 1.3em;
+
+//- Circular Icon Input */
+$input-circular-icon-vertical-offset: 0.35em;
+$input-circular-icon-horizontal-offset: 0.5em;
+
+//- Labeled Input */
+$input-label-corner-top: $input-border-width;
+$input-label-corner-right: $input-border-width;
+$input-label-corner-size: $relative9px;
+$input-label-size: 1em;
+$input-label-vertical-padding: ($input-vertical-padding - $input-line-height-offset);
+
+$input-labeled-margin: 2.5em;
+$input-labeled-icon-itself-margin: 3.25em;
+$input-labeled-icon-margin: 1.25em;
+
+//-------------------- States --------------------*/
+
+//- Placeholder */
+$input-placeholder-color: $input-placeholder-color;
+$input-placeholder-focus-color: $input-placeholder-focus-color;
+
+//- Down */
+$input-down-border-color: rgba(0, 0, 0, 0.3);
+$input-down-background: #FAFAFA;
+$input-down-color: $text-color;
+$input-down-box-shadow: none;
+
+//- Focus */
+$input-focus-border-color: $focused-form-border-color;
+$input-focus-background: $input-background;
+$input-focus-color: $hovered-text-color;
+$input-focus-box-shadow: none;
+
+//- Error */
+$input-error-background: $negative-background-color;
+$input-error-color: $negative-text-color;
+$input-error-border: $negative-border-color;
+$input-error-box-shadow: none;
+
+$input-placeholder-error-color: lighten($input-error-color, 40);
+$input-placeholder-error-focus-color: lighten($input-error-color, 30);
+
+//- Loader */
+$input-inverted-loader-fill-color: rgba(0, 0, 0, 0.15);
+
+//-------------------- Variations --------------------*/
+
+//- Inverted */
+$input-transparent-inverted-placeholder-color: $inverted-unselected-text-color;
+$input-transparent-inverted-color: $white;
+

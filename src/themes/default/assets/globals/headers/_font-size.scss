@@ -1,0 +1,11 @@
+@import "../../../../utils/all";
+@import "../fonts/all";
+
+$header-font-weight: $bold !default;
+$header-line-height: join-value-to-unit((18 / 14), em) !default;
+
+$h1: join-value-to-unit((28 / 14), rem) !default;
+$h2: join-value-to-unit((24 / 14), rem) !default;
+$h3: join-value-to-unit((18 / 14), rem) !default;
+$h4: join-value-to-unit((15 / 14), rem) !default;
+$h5: join-value-to-unit((14 / 14), rem) !default;

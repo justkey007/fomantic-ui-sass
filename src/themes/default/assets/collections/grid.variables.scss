@@ -1,0 +1,98 @@
+@import "../globals/variables";
+
+//@-******************************  Grid *******************************/
+
+//- Inherited From Site */
+
+// $mobile-breakpoint
+// $tablet-breakpoint
+// $computer-breakpoint
+// $large-monitor-breakpoint
+// $widescreen-monitor-breakpoint
+
+//-****************************** Grid *******************************/
+
+$grid-min-width: 320px;
+
+$grid-gutter-width: 2rem;
+$grid-row-spacing: 2rem;
+
+$grid-table-width: calc(100% + #{$grid-gutter-width});
+$grid-column-max-image-width: 100%;
+
+$grid-consecutive-distance: ($grid-row-spacing / 2);
+
+//-******************************  Variations *******************************/
+
+//---------------  Relaxed ---------------*/
+
+$grid-relaxed-gutter-width: 3rem;
+$grid-very-relaxed-gutter-width: 5rem;
+
+//---------------  Divided ---------------*/
+
+$grid-divided-border: -1px 0 0 0 $border-color;
+$grid-vertically-divided-border: 0 -1px 0 0 $border-color;
+
+$grid-divided-inverted-border: -1px 0 0 0 $white-border-color;
+$grid-vertically-divided-inverted-border: 0 -1px 0 0 $white-border-color;
+
+//--------------- Celled ---------------*/
+
+$grid-celled-margin: 1em 0;
+$grid-celled-width: 1px;
+$grid-celled-border-color: $solid-border-color;
+
+$grid-celled-padding: 1em;
+$grid-celled-relaxed-padding: 1.5em;
+$grid-celled-very-relaxed-padding: 2em;
+
+$grid-celled-divider: 0 0 0 $grid-celled-width $grid-celled-border-color;
+$grid-celled-row-divider: 0 (-$grid-celled-width) 0 0 $grid-celled-border-color;
+$grid-celled-column-divider: (-$grid-celled-width) 0 0 0 $grid-celled-border-color;
+
+
+//--------------- Stackable ---------------*/
+
+$grid-stackable-row-spacing: $grid-row-spacing;
+$grid-stackable-gutter: $grid-gutter-width;
+$grid-stackable-mobile-border: 1px solid $border-color;
+$grid-stackable-inverted-mobile-border: 1px solid $white-border-color;
+
+//--------------- Compact ---------------*/
+$grid-compact-gutter-width: $grid-gutter-width / 2;
+$grid-compact-row-spacing: $grid-row-spacing / 2;
+$grid-compact-celled-relaxed-padding: $grid-celled-relaxed-padding / 2;
+$grid-compact-celled-very-relaxed-padding: $grid-celled-very-relaxed-padding / 2;
+
+//------------------- Very Compact ------------------*/
+$grid-very-compact-gutter-width: $grid-compact-gutter-width / 2;
+$grid-very-compact-row-spacing: $grid-compact-row-spacing / 2;
+$grid-very-compact-celled-relaxed-padding: $grid-compact-celled-relaxed-padding / 2;
+$grid-very-compact-celled-very-relaxed-padding: $grid-compact-celled-very-relaxed-padding / 2;
+
+
+//-******************************  Legacy *******************************/
+
+//---------------  Page ---------------*/
+
+//- Legacy (DO NOT USE)  */
+$grid-mobile-width: auto;
+$grid-mobile-margin: 0;
+$grid-mobile-gutter: 0;
+
+$grid-tablet-width: auto;
+$grid-tablet-margin: 0;
+$grid-tablet-gutter: 2em;
+
+$grid-computer-width: auto;
+$grid-computer-margin: 0;
+$grid-computer-gutter: 3%;
+
+$grid-large-monitor-width: auto;
+$grid-large-monitor-margin: 0;
+$grid-large-monitor-gutter: 15%;
+
+$grid-widescreen-monitor-width: auto;
+$grid-widescreen-margin: 0;
+$grid-widescreen-monitor-gutter: 23%;

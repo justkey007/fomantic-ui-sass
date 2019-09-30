@@ -1,10 +1,10 @@
-@import "../../themes/default/elements/reveal";
+@import '../../themes/default/elements/reveal.variables';
 
 /*******************************
-            Reveal
+//@-        Reveal
 *******************************/
 
-.ui.reveal {
+.ui.reveal  {
   display: inherit;
   position: relative !important;
   font-size: 0 !important;
@@ -28,9 +28,11 @@
   z-index: $reveal-active-z-index !important;
 }
 
+
 /*******************************
               Types
 *******************************/
+
 
 /*--------------
       Slide
@@ -109,6 +111,7 @@
   transform: translateY(0%) !important;
 }
 
+
 /*--------------
       Fade
 ---------------*/
@@ -120,6 +123,7 @@
 .ui.fade.reveal:hover > .visible.content {
   opacity: 0;
 }
+
 
 /*--------------
       Move
@@ -164,6 +168,8 @@
 .ui.move.down.reveal:hover > .visible.content {
   transform: translateY(100%) !important;
 }
+
+
 
 /*--------------
      Rotate
@@ -211,6 +217,7 @@
   display: none !important;
 }
 
+
 /*******************************
            Coupling
 *******************************/
@@ -239,6 +246,7 @@
   transition-delay: 0s !important;
 }
 
+
 /*--------------
      Sizing
 ---------------*/
@@ -246,3 +254,6 @@
 .ui.reveal > .content {
   font-size: $medium !important;
 }
+
+
+@import '../../themes/default/elements/reveal.style';

@@ -1,7 +1,7 @@
-@import "../../themes/default/views/statistic";
+@import '../../themes/default/views/statistic.variables';
 
 /*******************************
-           Statistic
+//@-       Statistic
 *******************************/
 
 /* Standalone */
@@ -22,6 +22,8 @@
 .ui.statistic:last-child {
   margin-bottom: 0;
 }
+
+
 
 /*******************************
             Group
@@ -48,7 +50,7 @@
 /* Clearing */
 .ui.statistics:after {
   display: block;
-  content: " ";
+  content: ' ';
   height: 0;
   clear: both;
   overflow: hidden;
@@ -59,9 +61,11 @@
   margin-top: 0;
 }
 
+
 /*******************************
             Content
 *******************************/
+
 
 /*--------------
       Value
@@ -104,6 +108,8 @@
   margin-top: $statistic-bottom-label-distance;
 }
 
+
+
 /*******************************
              Types
 *******************************/
@@ -145,13 +151,17 @@
   vertical-align: $statistic-image-vertical-align;
 }
 
+
+
 /*******************************
             Variations
 *******************************/
 
+
 /*--------------
       Count
 ---------------*/
+
 
 .ui.ten.statistics {
   margin: $statistic-item-group-margin;
@@ -233,6 +243,9 @@
   margin: $statistic-item-margin;
 }
 
+
+
+
 /*--------------
    Horizontal
 ---------------*/
@@ -292,6 +305,7 @@
 ---------------*/
 
 @each $key, $value in $colors {
+  $color: $key;
   $c: map-get($value, color);
   $l: map-get($value, light);
 
@@ -336,14 +350,15 @@
   .ui.stackable.statistics > .statistic {
     width: 100% !important;
     margin: 0 0 !important;
-    padding: ($statistic-stackable-row-spacing / 2)
-      ($statistic-stackable-gutter / 2) !important;
+    padding: ($statistic-stackable-row-spacing / 2) ($statistic-stackable-gutter / 2) !important;
   }
 }
+
 
 /*--------------
      Sizes
 ---------------*/
+
 
 /* Mini */
 .ui.mini.statistics .statistic > .value,
@@ -358,6 +373,7 @@
 .ui.mini.statistic > .text.value {
   font-size: $statistic-mini-text-value-size !important;
 }
+
 
 /* Tiny */
 .ui.tiny.statistics .statistic > .value,
@@ -428,3 +444,7 @@
 .ui.huge.statistic > .text.value {
   font-size: $statistic-huge-text-value-size !important;
 }
+
+
+
+@import '../../themes/default/views/statistic.style';

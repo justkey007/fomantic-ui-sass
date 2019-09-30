@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/transition";
+@import '../../themes/default/modules/transition.variables';
 
 /*******************************
-          Transitions
+//@-      Transitions
 *******************************/
 
 .transition {
@@ -14,6 +14,7 @@
 /*******************************
             States
 *******************************/
+
 
 /* Animating */
 .animating.transition {
@@ -38,7 +39,7 @@
 .visible.transition {
   display: block !important;
   visibility: visible !important;
-  /*  backface-visibility: $transition-backface-visibility;
+/*  backface-visibility: $transition-backface-visibility;
   transform: $transition-use3-d-acceleration;*/
 }
 
@@ -55,4 +56,6 @@
   animation-iteration-count: infinite;
 }
 
-@import "../../themes/default/modules/transition.style";
+
+
+@import '../../themes/default/modules/transition.style';

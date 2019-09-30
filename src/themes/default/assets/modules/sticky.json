@@ -1,0 +1,5 @@
+{
+  "@transitionDuration": "$sticky-transition-duration",
+  "@transition": "$sticky-transition",
+  "@zIndex": "$sticky-z-index"
+}

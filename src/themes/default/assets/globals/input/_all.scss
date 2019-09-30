@@ -1,0 +1,27 @@
+@import "../../../../utils/all";
+@import "../colors/all";
+@import "../fonts/all";
+@import "../texts/all";
+
+$input-background: $white !default;
+$input-vertical-padding: $relative11px !default;
+$input-horizontal-padding: $relative14px !default;
+$input-padding: $input-vertical-padding $input-horizontal-padding !default;
+
+// Input Text Color */
+$input-color: $text-color !default;
+$input-placeholder-color: lighten($input-color, 75) !default;
+$input-placeholder-focus-color: lighten($input-color, 45) !default;
+
+// Line Height Default For Inputs in Browser (Descenders are 17px at 14px base em) */
+$input-line-height: join-value-to-unit((17 / 14), em) !default;
+
+//-------------------
+//   Focused Input
+//--------------------*/
+
+// Used on inputs, textarea etc */
+$focused-form-border-color: #85b7d9 !default;
+
+// Used on dropdowns, other larger blocks */
+$focused-form-muted-border-color: #96c8da !default;

@@ -1,7 +1,7 @@
-@import "../../themes/default/elements/placeholder";
+@import '../../themes/default/elements/placeholder.variables';
 
 /*-------------------
-      Placeholder
+//@-    Content
 --------------------*/
 
 .ui.placeholder {
@@ -15,12 +15,12 @@
   max-width: $placeholder-max-width;
 }
 
-@keyframes placeholderShimmer {
+@keyframes placeholderShimmer{
   0% {
-    background-position: -$placeholder-loading-gradient-width 0;
+    background-position: -$placeholder-loading-gradient-width 0
   }
   100% {
-    background-position: $placeholder-loading-gradient-width 0;
+    background-position: $placeholder-loading-gradient-width 0
   }
 }
 
@@ -36,11 +36,7 @@
 .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder {
   animation-delay: ($placeholder-animation-interval * 3);
 }
-.ui.placeholder
-  + .ui.placeholder
-  + .ui.placeholder
-  + .ui.placeholder
-  + .ui.placeholder {
+.ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder {
   animation-delay: ($placeholder-animation-interval * 4);
 }
 
@@ -53,7 +49,7 @@
 }
 
 .ui.placeholder.hidden {
-  display: none;
+  display:none;
 }
 
 /* Image */
@@ -73,6 +69,7 @@
   padding-top: 75%;
 }
 
+
 /* Lines */
 .ui.placeholder .line {
   position: relative;
@@ -82,7 +79,7 @@
 .ui.placeholder .line:after {
   top: 100%;
   position: absolute;
-  content: "";
+  content: '';
   background-color: inherit;
 }
 .ui.placeholder .line:before {
@@ -155,7 +152,7 @@
 .ui.placeholder .image.header:after {
   display: block;
   height: $placeholder-line-margin;
-  content: "";
+  content: '';
   margin-left: $placeholder-image-width;
 }
 
@@ -169,7 +166,7 @@
 .ui.placeholder .paragraph:not(:first-child):before,
 .ui.placeholder .header:not(:first-child):before {
   height: $placeholder-spacing;
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -188,6 +185,7 @@
 /*******************************
             Variations
 *******************************/
+
 
 /*-------------------
         Sizes
@@ -212,6 +210,7 @@
   width: $placeholder-very-short-line-outdent;
 }
 
+
 /*-------------------
         Fluid
 --------------------*/
@@ -219,3 +218,6 @@
 .ui.fluid.placeholder {
   max-width: none;
 }
+
+
+@import '../../themes/default/elements/placeholder.style';

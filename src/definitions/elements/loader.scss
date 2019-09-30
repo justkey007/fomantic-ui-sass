@@ -1,8 +1,9 @@
-@import "../../themes/default/elements/loader";
+@import '../../themes/default/elements/loader.variables';
 
 /*******************************
-            Loader
+//@-        Loader
 *******************************/
+
 
 /* Standard Size */
 .ui.loader {
@@ -19,7 +20,7 @@
 /* Static Shape */
 .ui.loader:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 50%;
   width: 100%;
@@ -32,7 +33,7 @@
 /* Active Shape */
 .ui.loader:after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 50%;
   width: 100%;
@@ -151,12 +152,13 @@
         Text
 --------------------*/
 
-.ui.text.loader {
+.ui.ui.ui.ui.text.loader {
   width: auto;
   height: auto;
   text-align: center;
   font-style: normal;
 }
+
 
 /*******************************
             States
@@ -180,9 +182,11 @@
             Variations
 *******************************/
 
+
 /*-------------------
         Sizes
 --------------------*/
+
 
 /* Loader */
 .ui.mini.loader {
@@ -260,12 +264,13 @@
   padding-top: (strip-unit($loader-massive) + $loader-text-distance);
 }
 
+
 /*-------------------
        Colors
 --------------------*/
 
 @each $key, $value in $colors {
-  $color: replace($key, "$", "");
+  $color: $key;
   $c: map-get($value, color);
   $l: map-get($value, light);
 
@@ -275,26 +280,18 @@
   .ui.#{$key + ""}.elastic.loading.loading.loading:not(.segment):before,
   .ui.#{$key + ""}.elastic.loading.loading.loading .input > i.icon:before,
   .ui.#{$key + ""}.elastic.loading.loading.loading.loading > i.icon:before,
-  .ui.#{$key
-    + ""}.loading.loading.loading.loading:not(.usual):not(.button):after,
+  .ui.#{$key + ""}.loading.loading.loading.loading:not(.usual):not(.button):after,
   .ui.#{$key + ""}.loading.loading.loading.loading .input > i.icon:after,
   .ui.#{$key + ""}.loading.loading.loading.loading > i.icon:after,
   .ui.#{$key + ""}.loader.loader.loader:after {
     color: $c;
   }
   .ui.inverted.#{$key + ""}.elastic.loader:before,
-  .ui.inverted.#{$key
-    + ""}.elastic.loading.loading.loading:not(.segment):before,
-  .ui.inverted.#{$key
-    + ""}.elastic.loading.loading.loading
-    .input
-    > i.icon:before,
+  .ui.inverted.#{$key + ""}.elastic.loading.loading.loading:not(.segment):before,
+  .ui.inverted.#{$key + ""}.elastic.loading.loading.loading .input > i.icon:before,
   .ui.inverted.#{$key + ""}.elastic.loading.loading.loading > i.icon:before,
   .ui.inverted.#{$key + ""}.loading.loading.loading.loading:not(.usual):after,
-  .ui.inverted.#{$key
-    + ""}.loading.loading.loading.loading
-    .input
-    > i.icon:after,
+  .ui.inverted.#{$key + ""}.loading.loading.loading.loading .input > i.icon:after,
   .ui.inverted.#{$key + ""}.loading.loading.loading.loading > i.icon:after,
   .ui.inverted.#{$key + ""}.loader.loader.loader:after {
     color: $l;
@@ -351,22 +348,19 @@
 .ui.loading.loading.loading.loading.loading.loading .input > i.icon:after,
 .ui.loading.loading.loading.loading.loading.loading > i.icon:after,
 .ui.loader.loader.loader.loader.loader:after {
-  border-left-color: transparent;
-  border-right-color: transparent;
+  border-left-color:transparent;
+  border-right-color:transparent;
 }
 .ui.loading.loading.loading.loading.loading.loading.loading:not(.double):after,
-.ui.loading.loading.loading.loading.loading.loading.loading:not(.double)
-  .input
-  > i.icon:after,
-.ui.loading.loading.loading.loading.loading.loading.loading:not(.double)
-  > i.icon:after,
+.ui.loading.loading.loading.loading.loading.loading.loading:not(.double) .input > i.icon:after,
+.ui.loading.loading.loading.loading.loading.loading.loading:not(.double) > i.icon:after,
 .ui.loader.loader.loader.loader.loader.loader:not(.double):after {
   border-bottom-color: transparent;
 }
 .ui.loading.loading.loading.loading.loading.loading.segment:after,
 .ui.loading.loading.loading.loading.loading.loading.form:after {
-  border-left-color: $loader-fill-color;
-  border-right-color: $loader-fill-color;
+  border-left-color:$loader-fill-color;
+  border-right-color:$loader-fill-color;
 }
 .ui.loading.loading.loading.loading.loading.loading.segment:not(.double):after,
 .ui.loading.loading.loading.loading.loading.loading.form:not(.double):after {
@@ -387,16 +381,15 @@
 .ui.elastic.loading.loading .input > i.icon:after,
 .ui.elastic.loading.loading > i.icon:after,
 .ui.elastic.loader.loader:after {
-  animation: loader 1s infinite cubic-bezier(0.27, 1.05, 0.92, 0.61);
+  animation: loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
   animation-delay: 0.3s;
 }
 .ui.elastic.loading.loading.loading:not(.form):not(.segment):before,
 .ui.elastic.loading.loading.loading .input > i.icon:before,
 .ui.elastic.loading.loading.loading > i.icon:before,
 .ui.elastic.loader.loader:before {
-  animation: elastic-loader 1s infinite cubic-bezier(0.27, 1.05, 0.92, 0.61);
-  -moz-animation: currentcolor-elastic-loader 1s infinite
-    cubic-bezier(0.27, 1.05, 0.92, 0.61);
+  animation: elastic-loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
+  -moz-animation: currentcolor-elastic-loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
   border-right-color: transparent;
 }
 .ui.elastic.inline.loader:empty {
@@ -420,7 +413,7 @@
 .ui.fast.elastic.loading.loading > i.icon:after,
 .ui.fast.elastic.loader.loader:after {
   animation-duration: 0.66s;
-  animation-delay: 0.2s;
+  animation-delay: 0.20s;
 }
 .ui.fast.elastic.loading.loading.loading:not(.form):not(.segment):before,
 .ui.fast.elastic.loading.loading.loading .input > i.icon:before,
@@ -429,24 +422,20 @@
   animation-duration: 0.66s;
 }
 @keyframes elastic-loader {
-  0%,
-  1% {
+  0%, 1% {
     border-left-color: transparent;
-    border-bottom-color: transparent;
+    border-bottom-color: transparent
   }
-  1.1%,
-  50% {
+  1.1%, 50% {
     border-left-color: inherit;
   }
-  10%,
-  35.1% {
+  10%, 35.1%{
     border-bottom-color: transparent;
   }
-  10.1%,
-  35% {
+  10.1%, 35%{
     border-bottom-color: inherit;
   }
-  50.1% {
+  50.1%{
     border-left-color: transparent;
   }
   100% {
@@ -457,24 +446,20 @@
 }
 
 @keyframes currentcolor-elastic-loader {
-  0%,
-  1% {
+  0%, 1% {
     border-left-color: transparent;
-    border-bottom-color: transparent;
+    border-bottom-color: transparent
   }
-  1.1%,
-  50% {
+  1.1%, 50% {
     border-left-color: currentColor;
   }
-  10%,
-  35.1% {
+  10%, 35.1%{
     border-bottom-color: transparent;
   }
-  10.1%,
-  35% {
+  10.1%, 35%{
     border-bottom-color: currentColor;
   }
-  50.1% {
+  50.1%{
     border-left-color: transparent;
   }
   100% {
@@ -483,3 +468,6 @@
     transform: rotate(360deg);
   }
 }
+
+
+@import '../../themes/default/elements/loader.style';

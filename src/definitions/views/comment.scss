@@ -1,4 +1,9 @@
-@import "../../themes/default/views/comment";
+@import '../../themes/default/views/comment.variables';
+
+/*******************************
+//@-        Standard
+*******************************/
+
 
 /*--------------
     Comments
@@ -34,6 +39,7 @@
   padding-top: $comment-first-padding;
 }
 
+
 /*--------------------
     Nested Comments
 ---------------------*/
@@ -42,7 +48,7 @@
   margin: $comment-nested-comments-margin;
   padding: $comment-nested-comments-padding;
 }
-.ui.comments .comment > .comments:before {
+.ui.comments .comment > .comments:before{
   position: absolute;
   top: 0;
   left: 0;
@@ -131,6 +137,7 @@
   line-height: $comment-text-line-height;
 }
 
+
 /*--------------------
      User Actions
 ---------------------*/
@@ -178,6 +185,7 @@
   display: none;
 }
 
+
 /*******************************
            Variations
 *******************************/
@@ -208,6 +216,7 @@
 .ui.minimal.comments .comment > .content:hover > .actions {
   opacity: 1;
 }
+
 
 /*-------------------
         Sizes
@@ -264,3 +273,7 @@
 .ui.inverted.threaded.comments .comment > .comments {
   box-shadow: -1px 0 0 $solid-white-border-color;
 }
+
+
+
+@import '../../themes/default/views/comment.style';

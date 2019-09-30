@@ -1,0 +1,221 @@
+@import "../globals/variables";
+
+//@-******************************  List *******************************/
+
+//--------------------  View --------------------*/
+
+//- List */
+$list-style-type: none;
+$list-style-position: outside;
+$list-margin: 1em 0;
+$list-vertical-padding: 0;
+$list-horizontal-padding: 0;
+
+//- List Item */
+$list-item-vertical-padding: $relative3px;
+$list-item-horizontal-padding: 0;
+$list-item-padding: $list-item-vertical-padding $list-item-horizontal-padding;
+$list-item-line-height: $relative-large;
+
+//- Sub List */
+$list-child-padding: 0.75em 0 0.25em 0.5em;
+$list-child-indent: 1em;
+
+//- Sub List Item */
+$list-child-item-vertical-padding: $relative2px;
+$list-child-item-horizontal-padding: 0;
+$list-child-item-padding: $list-child-item-vertical-padding $list-child-item-horizontal-padding;
+$list-child-item-line-height: inherit;
+
+//-------------------- Elements --------------------*/
+
+//- Icon */
+$list-icon-distance: $relative4px;
+$list-icon-offset: 0;
+$list-icon-transition: color $default-duration $default-easing;
+$list-icon-vertical-align: top;
+$list-icon-content-vertical-align: top;
+
+//- Image */
+$list-image-distance: 0.5em;
+$list-image-align: top;
+
+//- Content */
+$list-content-distance: 0.5em;
+$list-content-line-height: $list-item-line-height;
+$list-content-line-height-offset: ($list-content-line-height - 1em) / 2;
+$list-content-vertical-align: top;
+$list-content-color: $text-color;
+
+//- Header */
+$list-item-header-font-family: $header-font;
+$list-item-header-font-weight: $bold;
+$list-item-header-color: $text-color;
+
+//- Description */
+$list-item-description-color: rgba(0, 0, 0, 0.7);
+
+//- Link */
+$list-item-link-color: $link-color;
+$list-item-link-hover-color: $link-hover-color;
+
+//- Header Link */
+$list-item-header-link-color: $list-item-link-color;
+$list-item-header-link-hover-color: $list-item-link-hover-color;
+
+//- Linked Icon */
+$list-item-link-icon-color: $light-text-color;
+$list-item-link-icon-hover-color: $text-color;
+$list-inverted-icon-link-color: $inverted-light-text-color;
+
+//-------------------- States --------------------*/
+
+$list-disabled-color: $disabled-text-color;
+$list-inverted-disabled-color: $inverted-disabled-text-color;
+
+//-------------------- Variations --------------------*/
+
+//- Float */
+$list-float-distance: 1em;
+$list-left-float-margin: 0 $list-float-distance 0 0;
+$list-right-float-margin: 0 0 0 $list-float-distance;
+
+//- Horizontal */
+$list-horizontal-spacing: 1em;
+$list-horizontal-icon-distance: 0.25em;
+$list-horizontal-vertical-align: middle;
+
+//- Inverted */
+$list-inverted-icon-color: $inverted-light-text-color;
+$list-inverted-header-color: $inverted-text-color;
+$list-inverted-description-color: $inverted-light-text-color;
+$list-inverted-item-link-color: $inverted-text-color;
+$list-inverted-item-link-hover-color: $link-hover-color;
+$list-inverted-content-color: $inverted-light-text-color;
+
+//- Link List */
+$list-link-item-color: $unselected-text-color;
+$list-link-item-hover-color: $hovered-text-color;
+$list-link-item-down-color: $pressed-text-color;
+$list-link-item-active-color: $selected-text-color;
+$list-link-transition:
+  $default-duration color $default-easing
+;
+
+//- Inverted Link List */
+$list-inverted-link-item-color: $inverted-unselected-text-color;
+$list-inverted-link-item-hover-color: $inverted-hovered-text-color;
+$list-inverted-link-item-down-color: $inverted-pressed-text-color;
+$list-inverted-link-item-active-color: $inverted-selected-text-color;
+
+//- Selection List */
+$list-selection-item-margin: 0;
+$list-selection-item-border-radius: 0.5em;
+$list-selection-item-vertical-padding: 0.5em;
+$list-selection-item-horizontal-padding: 0.5em;
+$list-selection-transition:
+  $default-duration color $default-easing,
+  $default-duration padding-left $default-easing,
+  $default-duration background-color $default-easing
+;
+
+//- Selection List States */
+$list-selection-background: transparent;
+$list-selection-color: $unselected-text-color;
+$list-selection-hover-background: $subtle-transparent-black;
+$list-selection-hover-color: $hovered-text-color;
+$list-selection-down-background: $transparent-black;
+$list-selection-down-color: $pressed-text-color;
+$list-selection-active-background: $transparent-black;
+$list-selection-active-color: $selected-text-color;
+
+//- Inverted Selection List */
+$list-inverted-selection-background: transparent;
+$list-inverted-selection-color: $inverted-unselected-text-color;
+$list-inverted-selection-hover-background: $subtle-transparent-white;
+$list-inverted-selection-hover-color: $inverted-hovered-text-color;
+$list-inverted-selection-down-background: $transparent-white;
+$list-inverted-selection-down-color: $inverted-pressed-text-color;
+$list-inverted-selection-active-background: $transparent-white;
+$list-inverted-selection-active-color: $inverted-selected-text-color;
+
+//- Animated List */
+$list-animated-duration: 0.25s;
+$list-animated-delay: 0.1s;
+$list-animated-transition:
+  $list-animated-duration color $default-easing $list-animated-delay,
+  $list-animated-duration padding-left $default-easing $list-animated-delay,
+  $list-animated-duration background-color $default-easing $list-animated-delay
+;
+$list-animated-indent: 1em;
+
+//- Bulleted */
+$list-bullet-distance: 1.25rem;
+$list-bullet-offset: -$list-bullet-distance;
+
+$list-bullet-opacity: 1;
+$list-bullet-character: '•';
+$list-bullet-color: inherit;
+$list-bullet-link-color: $text-color;
+$list-bullet-vertical-align: top;
+$list-bullet-child-distance: $list-bullet-distance;
+
+//- Horizontal Bullets */
+$list-horizontal-bullet-color: $text-color;
+$list-horizontal-bullet-spacing: strip-unit($list-bullet-distance) + 0.5em;
+
+//- Ordered List */
+$list-ordered-count-name: ordered;
+$list-ordered-count-separator: ".";
+$list-ordered-count-suffix: ".";
+$list-ordered-count-content: counters($list-ordered-count-name, $list-ordered-count-separator) " ";
+$list-ordered-count-content-suffixed: counters($list-ordered-count-name, $list-ordered-count-separator) $list-ordered-count-suffix;
+$list-ordered-count-color: $text-color;
+$list-ordered-count-distance: 1.25rem;
+$list-ordered-count-opacity: 0.8;
+$list-ordered-count-text-align: right;
+$list-ordered-count-vertical-align: middle;
+
+$list-ordered-child-count-distance: 1em;
+$list-ordered-child-count-offset: -2em;
+
+$list-ordered-inverted-count-color: $inverted-light-text-color;
+
+//- Horizontal Ordered */
+$list-horizontal-ordered-count-distance: 0.5em;
+
+//- Divided */
+$list-divided-border-width: 1px;
+$list-divided-border: $list-divided-border-width solid $border-color;
+$list-divided-inverted-border-color: $white-border-color;
+$list-divided-child-border: none;
+$list-divided-child-item-border: none;
+
+//- Divided Horizontal */
+$list-horizontal-divided-spacing: ($list-horizontal-spacing / 2);
+$list-horizontal-divided-line-height: 0.6;
+
+//- Divided */
+$list-celled-border-width: 1px;
+$list-celled-border: $list-celled-border-width solid $border-color;
+$list-celled-inverted-border: $white-border-color;
+$list-celled-horizontal-padding: 0.5em;
+$list-celled-child-border: none;
+$list-celled-child-item-border: none;
+
+//- Divided Horizontal */
+$list-horizontal-celled-spacing: ($list-horizontal-spacing / 2);
+$list-horizontal-celled-line-height: 0.6;
+
+//- Relaxed */
+$list-relaxed-item-vertical-padding: $relative6px;
+$list-relaxed-child-item-vertical-padding: $relative3px;
+$list-relaxed-header-margin: 0.25rem;
+$list-relaxed-horizontal-padding: 1rem;
+
+//- Very Relaxed */
+$list-very-relaxed-item-vertical-padding: $relative12px;
+$list-very-relaxed-child-item-vertical-padding: $relative4px;
+$list-very-relaxed-header-margin: 0.5rem;
+$list-very-relaxed-horizontal-padding: 1.5rem;
+

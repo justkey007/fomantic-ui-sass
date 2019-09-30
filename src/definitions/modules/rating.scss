@@ -1,10 +1,10 @@
-@import "../../themes/default/modules/rating";
+@import '../../themes/default/modules/rating.variables';
 
 /*******************************
-           Rating
+//@-       Rating
 *******************************/
 
-.ui.rating:not(.field) {
+.ui.rating {
   display: inline-flex;
   white-space: $rating-white-space;
   vertical-align: $rating-vertical-align;
@@ -29,9 +29,11 @@
   backface-visibility: hidden;
 }
 
+
 /*******************************
              Types
 *******************************/
+
 
 /*-------------------
       Standard
@@ -56,12 +58,13 @@
   color: $rating-selected-color;
 }
 
+
 /*--------------
      Colors
 -------------- */
 
 @each $key, $value in $colors {
-  $color: replace($key, "$", "");
+  $color: $key;
   $c: map-get($value, color);
   $l: map-get($value, light);
   $h: map-get($value, hover);
@@ -70,17 +73,21 @@
   .ui.#{$key + ""}.rating .active.icon {
     color: $l;
     text-shadow: 0px -$rating-shadow-width 0px $c,
-      -$rating-shadow-width 0px 0px $c, 0px $rating-shadow-width 0px $c,
-      $rating-shadow-width 0px 0px $c;
+                 -$rating-shadow-width 0px 0px $c,
+                 0px $rating-shadow-width 0px $c,
+                 $rating-shadow-width 0px 0px $c;
   }
   .ui.#{$key + ""}.rating .icon.selected,
   .ui.#{$key + ""}.rating .icon.selected.active {
     color: $lh;
     text-shadow: 0px -$rating-shadow-width 0px $h,
-      -$rating-shadow-width 0px 0px $h, 0px $rating-shadow-width 0px $h,
-      $rating-shadow-width 0px 0px $h;
+                 -$rating-shadow-width 0px 0px $h,
+                 0px $rating-shadow-width 0px $h,
+                 $rating-shadow-width 0px 0px $h;
   }
 }
+
+
 
 /*******************************
              States
@@ -95,6 +102,7 @@
   cursor: default;
 }
 
+
 /*-------------------
    User Interactive
 --------------------*/
@@ -107,6 +115,8 @@
 .ui.rating .icon.selected {
   opacity: $rating-interactive-selected-icon-opacity;
 }
+
+
 
 /*******************************
           Variations
@@ -133,3 +143,7 @@
 .ui.massive.rating {
   font-size: $rating-massive;
 }
+
+
+
+@import '../../themes/default/modules/rating.style';

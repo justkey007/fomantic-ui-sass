@@ -1,7 +1,8 @@
-@import "../../themes/default/elements/divider";
+@import '../../themes/default/elements/divider.variables';
+
 
 /*******************************
-            Divider
+//@-        Divider
 *******************************/
 
 .ui.divider {
@@ -54,7 +55,7 @@
 
 .ui.horizontal.divider:before,
 .ui.horizontal.divider:after {
-  content: "";
+  content: '';
   display: table-cell;
   position: relative;
   top: 50%;
@@ -93,7 +94,7 @@
 .ui.vertical.divider:after {
   position: absolute;
   left: 50%;
-  content: "";
+  content: '';
   z-index: 3;
 
   border-left: $divider-shadow-width solid $divider-shadow-color;
@@ -112,7 +113,8 @@
 }
 
 /* Inside grid */
-@media only screen and (max-width: $largest-mobile-screen) {
+@media only screen and (max-width : $largest-mobile-screen) {
+
   .ui.stackable.grid .ui.vertical.divider,
   .ui.grid .stackable.row .ui.vertical.divider {
     display: table;
@@ -135,7 +137,7 @@
     left: 0;
     border-left: none;
     border-right: none;
-    content: "";
+    content: '';
     display: table-cell;
     position: relative;
     top: 50%;
@@ -250,5 +252,7 @@
 .ui.divider {
   font-size: $divider-medium;
 }
+
+
 
 @import '../../themes/default/elements/divider.style';

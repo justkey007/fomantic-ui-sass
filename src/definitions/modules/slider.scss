@@ -1,8 +1,6 @@
-@import "../../themes/default/modules/slider";
+@import '../../themes/default/modules/slider.variables'; 
 
-/*******************************
-             Slider
- *******************************/
+//@-
 
 .ui.slider:not(.vertical):not(.checkbox) {
   width: 100%;
@@ -76,9 +74,11 @@
   background: $slider-thumb-hover-background;
 }
 
+
 /*******************************
             States
 *******************************/
+
 
 /*--------------
      Disabled
@@ -182,13 +182,16 @@
 }
 
 .ui.labeled.ticked.slider > .labels .label:after {
-  content: " ";
+  content: ' ';
   height: $slider-label-height;
   width: $slider-label-width;
   background: $slider-label-color;
   position: absolute;
   top: 100%;
   left: 50%;
+}
+.ui.labeled.ticked.slider > .labels .halftick.label:after {
+  height: $slider-label-height / 2;
 }
 
 /* Vertical Labels */
@@ -212,6 +215,10 @@
   left: 100%;
   top: 50%;
 }
+.ui.labeled.vertical.slider > .labels .halftick.label:after {
+  width: $slider-label-height / 2;
+  height: $slider-label-width;
+}
 
 /* Vertical Reversed Labels */
 .ui.labeled.vertical.reversed.slider > .labels .label {
@@ -227,10 +234,11 @@
   transition: $slider-hover-opacity-transition;
 }
 
-.ui.hover.slider:not(.disabled):hover .inner .thumb,
-.ui.hover.slider:not(.disabled):focus .inner .thumb {
+.ui.hover.slider:not(.disabled):hover .inner .thumb, .ui.hover.slider:not(.disabled):focus .inner .thumb {
   opacity: $slider-hover-var-hover-opacity;
 }
+
+
 
 /*--------------
     Inverted
@@ -249,6 +257,7 @@
 ---------------*/
 
 @each $key, $value in $colors {
+  $color: $key;
   $c: map-get($value, color);
   $l: map-get($value, light);
   $h: map-get($value, hover);
@@ -279,6 +288,7 @@
   .ui.#{$key + ""}.inverted.slider.basic:focus .inner .thumb {
     background-color: $lh;
   }
+
 }
 
 /*--------------
@@ -289,8 +299,7 @@
 .ui.slider.basic .inner .thumb {
   background-color: $slider-track-fill-color;
 }
-.ui.slider.basic .inner .thumb:hover,
-.ui.slider.basic:focus .inner .thumb {
+.ui.slider.basic .inner .thumb:hover, .ui.slider.basic:focus .inner .thumb {
   background-color: $slider-track-fill-color-focus;
 }
 
@@ -302,10 +311,10 @@
 .ui.inverted.slider.basic .inner .thumb {
   background-color: $slider-inverted-track-fill-color;
 }
-.ui.inverted.slider.basic .inner .thumb:hover,
-.ui.inverted.slider.basic:focus .inner .thumb {
+.ui.inverted.slider.basic .inner .thumb:hover, .ui.inverted.slider.basic:focus .inner .thumb {
   background-color: $slider-inverted-track-fill-color-focus;
 }
+
 
 /*--------------
      Sizing
@@ -328,6 +337,9 @@
 .ui.small.labeled.slider:not(.vertical) > .labels .label:after {
   height: $slider-small-label-height;
 }
+.ui.small.labeled.slider:not(.vertical) > .labels .halftick.label:after {
+  height: $slider-small-label-height / 2;
+}
 
 /* Small Vertical */
 .ui.slider.small.vertical .inner {
@@ -338,9 +350,12 @@
   width: $slider-small-track-height;
   left: $slider-track-position-top-small;
 }
-.ui.small.labeled.vertical.slider > .labels,
-.ui.small.labeled.vertical.slider > .labels .label:after {
+.ui.small.labeled.vertical.slider> .labels,
+.ui.small.labeled.vertical.slider> .labels .label:after {
   width: $slider-small-label-height;
+}
+.ui.small.labeled.vertical.slider> .labels .halftick.label:after {
+  width: $slider-small-label-height / 2;
 }
 
 /* Large */
@@ -360,6 +375,9 @@
 .ui.large.labeled.slider:not(.vertical) > .labels .label:after {
   height: $slider-large-label-height;
 }
+.ui.large.labeled.slider:not(.vertical) > .labels .halftick.label:after {
+  height: $slider-large-label-height / 2;
+}
 
 /* Large Vertical */
 .ui.slider.large.vertical .inner {
@@ -370,9 +388,12 @@
   width: $slider-large-track-height;
   left: $slider-track-position-top-large;
 }
-.ui.large.labeled.vertical.slider > .labels,
-.ui.large.labeled.vertical.slider > .labels .label:after {
+.ui.large.labeled.vertical.slider> .labels,
+.ui.large.labeled.vertical.slider> .labels .label:after {
   width: $slider-large-label-height;
+}
+.ui.large.labeled.vertical.slider> .labels .halftick.label:after {
+  width: $slider-large-label-height / 2;
 }
 
 /* Big */
@@ -392,6 +413,9 @@
 .ui.big.labeled.slider:not(.vertical) > .labels .label:after {
   height: $slider-big-label-height;
 }
+.ui.big.labeled.slider:not(.vertical) > .labels .halftick.label:after {
+  height: $slider-big-label-height / 2;
+}
 
 /* Big Vertical */
 .ui.slider.big.vertical .inner {
@@ -402,7 +426,13 @@
   width: $slider-big-track-height;
   left: $slider-track-position-top-big;
 }
-.ui.big.labeled.vertical.slider > .labels,
-.ui.big.labeled.vertical.slider > .labels .label:after {
+.ui.big.labeled.vertical.slider> .labels,
+.ui.big.labeled.vertical.slider> .labels .label:after {
   width: $slider-big-label-height;
 }
+.ui.big.labeled.vertical.slider> .labels .halftick.label:after {
+  width: $slider-big-label-height / 2;
+}
+
+
+@import '../../themes/default/modules/slider.style';

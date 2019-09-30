@@ -1,0 +1,11 @@
+@import "../../../../utils/all";
+@import "./main";
+
+$mini-size: (11 / strip-unit($em-size)) !default;
+$tiny-size: (12 / strip-unit($em-size)) !default;
+$small-size: (13 / strip-unit($em-size)) !default;
+$medium-size: (14 / strip-unit($em-size)) !default;
+$large-size: (16 / strip-unit($em-size)) !default;
+$big-size: (18 / strip-unit($em-size)) !default;
+$huge-size: (20 / strip-unit($em-size)) !default;
+$massive-size: (24 / strip-unit($em-size)) !default;

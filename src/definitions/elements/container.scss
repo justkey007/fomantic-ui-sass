@@ -1,86 +1,84 @@
-@import "../../themes/default/elements/container";
+@import '../../themes/default/elements/container.variables';
 
 /*******************************
-            Container
+//@-        Container
 *******************************/
 
 /* All Sizes */
 .ui.container {
-  &:not(.grid) {
-    display: block;
-  }
-  max-width: $container-max-width !important;
+  display: block;
+  max-width: $container-max-width;
 }
 
 /* Mobile */
 @media only screen and (max-width: $largest-mobile-screen) {
-  .ui.container {
-    width: $container-mobile-width !important;
-    margin-left: $container-mobile-gutter !important;
-    margin-right: $container-mobile-gutter !important;
+  .ui.ui.ui.container:not(.fluid) {
+    width: $container-mobile-width;
+    margin-left: $container-mobile-gutter;
+    margin-right: $container-mobile-gutter;
   }
-  .ui.grid.container {
-    width: $container-mobile-grid-width !important;
+  .ui.ui.grid.container {
+    width: $container-mobile-grid-width;
   }
-  .ui.relaxed.grid.container {
-    width: $container-mobile-relaxed-grid-width !important;
+  .ui.ui.relaxed.grid.container {
+    width: $container-mobile-relaxed-grid-width;
   }
-  .ui.very.relaxed.grid.container {
-    width: $container-mobile-very-relaxed-grid-width !important;
+  .ui.ui.very.relaxed.grid.container {
+    width: $container-mobile-very-relaxed-grid-width;
   }
 }
 
 /* Tablet */
 @media only screen and (min-width: $tablet-breakpoint) and (max-width: $largest-tablet-screen) {
-  .ui.container {
+  .ui.ui.ui.container:not(.fluid) {
     width: $container-tablet-width;
-    margin-left: $container-tablet-gutter !important;
-    margin-right: $container-tablet-gutter !important;
+    margin-left: $container-tablet-gutter;
+    margin-right: $container-tablet-gutter;
   }
-  .ui.grid.container {
-    width: $container-tablet-grid-width !important;
+  .ui.ui.grid.container {
+    width: $container-tablet-grid-width;
   }
-  .ui.relaxed.grid.container {
-    width: $container-tablet-relaxed-grid-width !important;
+  .ui.ui.relaxed.grid.container {
+    width: $container-tablet-relaxed-grid-width;
   }
-  .ui.very.relaxed.grid.container {
-    width: $container-tablet-very-relaxed-grid-width !important;
+  .ui.ui.very.relaxed.grid.container {
+    width: $container-tablet-very-relaxed-grid-width;
   }
 }
 
 /* Small Monitor */
 @media only screen and (min-width: $computer-breakpoint) and (max-width: $largest-small-monitor) {
-  .ui.container {
+  .ui.ui.ui.container:not(.fluid) {
     width: $container-computer-width;
-    margin-left: $container-computer-gutter !important;
-    margin-right: $container-computer-gutter !important;
+    margin-left: $container-computer-gutter;
+    margin-right: $container-computer-gutter;
   }
-  .ui.grid.container {
-    width: $container-computer-grid-width !important;
+  .ui.ui.grid.container {
+    width: $container-computer-grid-width;
   }
-  .ui.relaxed.grid.container {
-    width: $container-computer-relaxed-grid-width !important;
+  .ui.ui.relaxed.grid.container {
+    width: $container-computer-relaxed-grid-width;
   }
-  .ui.very.relaxed.grid.container {
-    width: $container-computer-very-relaxed-grid-width !important;
+  .ui.ui.very.relaxed.grid.container {
+    width: $container-computer-very-relaxed-grid-width;
   }
 }
 
 /* Large Monitor */
 @media only screen and (min-width: $large-monitor-breakpoint) {
-  .ui.container {
+  .ui.ui.ui.container:not(.fluid) {
     width: $container-large-monitor-width;
-    margin-left: $container-large-monitor-gutter !important;
-    margin-right: $container-large-monitor-gutter !important;
+    margin-left: $container-large-monitor-gutter;
+    margin-right: $container-large-monitor-gutter;
   }
-  .ui.grid.container {
-    width: $container-large-monitor-grid-width !important;
+  .ui.ui.grid.container {
+    width: $container-large-monitor-grid-width;
   }
-  .ui.relaxed.grid.container {
-    width: $container-large-monitor-relaxed-grid-width !important;
+  .ui.ui.relaxed.grid.container {
+    width: $container-large-monitor-relaxed-grid-width;
   }
-  .ui.very.relaxed.grid.container {
-    width: $container-large-monitor-very-relaxed-grid-width !important;
+  .ui.ui.very.relaxed.grid.container {
+    width: $container-large-monitor-very-relaxed-grid-width;
   }
 }
 
@@ -88,10 +86,11 @@
              Types
 *******************************/
 
+
 /* Text Container */
 .ui.text.container {
   font-family: $container-text-font-family;
-  max-width: $container-text-width !important;
+  max-width: $container-text-width;
   line-height: $container-text-line-height;
   font-size: $container-text-size;
 }
@@ -100,6 +99,7 @@
 .ui.fluid.container {
   width: 100%;
 }
+
 
 /*******************************
            Variations
@@ -118,3 +118,7 @@
   text-align: justify;
   hyphens: auto;
 }
+
+
+
+@import '../../themes/default/elements/container.style';

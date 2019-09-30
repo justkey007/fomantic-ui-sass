@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/sidebar";
+@import '../../themes/default/modules/sidebar.variables';
 
 /*******************************
-            Sidebar
+//@-        Sidebar
 *******************************/
 
 /* Sidebar Menu */
@@ -29,6 +29,7 @@
 .ui.sidebar > * {
   backface-visibility: hidden;
 }
+
 
 /*--------------
    Direction
@@ -61,6 +62,7 @@
   transform: translate3d(0, 100%, 0);
 }
 
+
 /*--------------
      Pushable
 ---------------*/
@@ -88,6 +90,7 @@ body.pushable {
 .pushable:not(body) > .pusher:after {
   position: absolute;
 }
+
 
 /*--------------
      Fixed
@@ -130,7 +133,7 @@ body.pushable > .pusher {
   position: fixed;
   top: 0;
   right: 0;
-  content: "";
+  content: '';
   background-color: $sidebar-dimmer-color;
   overflow: hidden;
   opacity: 0;
@@ -218,6 +221,7 @@ body.pushable > .pusher {
        iOS
 ---------------*/
 
+
 /*******************************
           Variations
 *******************************/
@@ -284,6 +288,8 @@ body.pushable > .pusher {
   transform: translate3d(-$sidebar-very-wide-width, 0, 0);
 }
 
+
+
 /*******************************
           Animations
 *******************************/
@@ -337,6 +343,8 @@ body.pushable > .pusher {
   transform: none !important;
 }
 
+
+
 /*--------------
       Push
 ---------------*/
@@ -366,6 +374,7 @@ body.pushable > .pusher {
   transform: translate3d(0%, 0, 0);
 }
 
+
 /*--------------
     Uncover
 ---------------*/
@@ -381,6 +390,7 @@ body.pushable > .pusher {
   transform: translate3d(0, 0, 0);
   transition: transform $sidebar-duration $sidebar-easing;
 }
+
 
 /*--------------
    Slide Along
@@ -414,6 +424,7 @@ body.pushable > .pusher {
 .ui.visible.slide.along.sidebar {
   transform: translate3d(0%, 0, 0);
 }
+
 
 /*--------------
    Slide Out
@@ -505,3 +516,6 @@ body.pushable > .pusher {
 .ui.visible.scale.down.sidebar ~ .pusher {
   transform: scale(0.75);
 }
+
+
+@import '../../themes/default/modules/sidebar.style';

@@ -1,0 +1,11 @@
+@import "../globals/variables";
+
+//@-****************************** Flag *******************************/
+
+//--------------------  Element --------------------*/
+
+$flag-sprite-path: "#{$image-path}/flags.png";
+$flag-width: 16px;
+$flag-height: 11px;
+$flag-vertical-align: baseline;
+$flag-margin: 0.5em;

@@ -1,7 +1,7 @@
-@import "../../themes/default/collections/message";
+@import '../../themes/default/collections/message.variables';
 
 /*******************************
-            Message
+//@-        Message
 *******************************/
 
 .ui.message {
@@ -23,6 +23,7 @@
 .ui.message:last-child {
   margin-bottom: 0;
 }
+
 
 /*--------------
      Content
@@ -78,7 +79,7 @@
 }
 .ui.message .list:not(.ui) li:before {
   position: absolute;
-  content: "•";
+  content: '•';
   left: -1em;
   height: 100%;
   vertical-align: baseline;
@@ -86,6 +87,7 @@
 .ui.message .list:not(.ui) li:last-child {
   margin-bottom: 0;
 }
+
 
 /* Icon */
 .ui.message > .icon {
@@ -119,7 +121,7 @@
 *******************************/
 
 .ui.dropdown .menu > .message {
-  margin: 0 (-$message-border-width);
+  margin: 0 -$message-border-width;
 }
 
 /*******************************
@@ -146,6 +148,7 @@
   display: none;
 }
 
+
 /*******************************
             Variations
 *******************************/
@@ -161,6 +164,7 @@
   display: inline-flex;
   width: auto;
 }
+
 
 /*--------------
     Attached
@@ -189,6 +193,7 @@
   width: auto;
 }
 
+
 /*--------------
       Icon
 ---------------*/
@@ -203,15 +208,16 @@
   flex: 0 0 auto;
   width: auto;
   line-height: 1;
-  // vertical-align: $message-icon-vertical-align;
+  vertical-align: $message-icon-vertical-align;
   font-size: $message-icon-size;
   opacity: $message-icon-opacity;
 }
 .ui.icon.message > .content {
   display: block;
   flex: 1 1 auto;
-  // vertical-align: $message-icon-vertical-align;
+  vertical-align: $message-icon-vertical-align;
 }
+
 
 .ui.icon.message .icon:not(.close) + .content {
   padding-left: $message-icon-content-distance;
@@ -228,16 +234,18 @@
   box-shadow: $message-floating-box-shadow;
 }
 
+
 /*--------------
      Colors
 ---------------*/
 
 @each $key, $value in $message-consequences {
-  $bg: map-get($value, "background");
-  $hd: map-get($value, "header");
-  $bs: map-get($value, "boxShadow");
-  $bfs: map-get($value, "boxFloatShadow");
-  $t: map-get($value, "text");
+  $color: $key;
+  $bg: map-get($value, background);
+  $hd: map-get($value, header);
+  $bs: map-get($value, boxShadow);
+  $bfs: map-get($value, boxFloatShadow);
+  $t: map-get($value, text);
 
   .ui.#{$key + ""}.message {
     background-color: $bg;
@@ -250,7 +258,7 @@
   }
 
   .ui.floating.#{$key + ""}.message {
-    box-shadow: $bfs;
+      box-shadow: $bfs;
   }
 
   .ui.#{$key + ""}.message .header {
@@ -258,16 +266,17 @@
   }
 }
 
-@each $key, $value in $message-consequences {
-  $bg: map-get($value, "background");
-  $hd: map-get($value, "header");
-  $bs: map-get($value, "boxShadow");
-  $bfs: map-get($value, "boxFloatShadow");
-  $t: map-get($value, "text");
-  $isVeryDark: map-get($value, "isVeryDark");
+@each $key, $value in $colors {
+  $color: $key;
+  $bg: map-get($value, background);
+  $hd: map-get($value, header);
+  $bs: map-get($value, boxShadow);
+  $bfs: map-get($value, boxFloatShadow);
+  $t: map-get($value, text);
+  $isVeryDark: map-get($value, isVeryDark);
 
   .ui.#{$key + ""}.message {
-    @if not($isVeryDark) {
+    @if not ($isVeryDark) {
       background-color: $bg;
       color: $t;
     }
@@ -279,19 +288,19 @@
 
   .ui.#{$key + ""}.message,
   .ui.attached.#{$key + ""}.message {
-    @if not($isVeryDark) {
+    @if not ($isVeryDark) {
       box-shadow: $bs;
     }
   }
 
   .ui.floating.#{$key + ""}.message {
-    @if not($isVeryDark) {
+    @if not ($isVeryDark) {
       box-shadow: $bfs;
     }
   }
 
   .ui.#{$key + ""}.message .header {
-    @if not($isVeryDark) {
+    @if not ($isVeryDark) {
       color: $hd;
     }
     @if ($isVeryDark) {
@@ -299,6 +308,7 @@
     }
   }
 }
+
 
 .ui.inverted.message {
   background-color: $black;
@@ -333,3 +343,6 @@
 .ui.massive.message {
   font-size: $relative-massive;
 }
+
+
+@import '../../themes/default/collections/message.style';

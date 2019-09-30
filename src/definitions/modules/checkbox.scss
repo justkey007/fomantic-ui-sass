@@ -1,8 +1,13 @@
-@import "../../themes/default/modules/checkbox";
+@import '../../themes/default/modules/checkbox.variables';
 
 /*******************************
-           Checkbox
+//@-       Checkbox
 *******************************/
+
+
+/*--------------
+    Content
+---------------*/
 
 .ui.checkbox {
   position: relative;
@@ -13,7 +18,7 @@
   font-style: normal;
 
   min-height: $checkbox-size;
-  font-size: $medium;
+  font-size: $relative-medium;
   line-height: $checkbox-line-height;
   min-width: $checkbox-size;
 }
@@ -32,9 +37,11 @@
   height: $checkbox-size;
 }
 
+
 /*--------------
       Box
 ---------------*/
+
 
 .ui.checkbox .box,
 .ui.checkbox label {
@@ -54,7 +61,7 @@
 
   width: $checkbox-size;
   height: $checkbox-size;
-  content: "";
+  content: '';
 
   background: $checkbox-background;
   border-radius: $checkbox-border-radius;
@@ -98,9 +105,11 @@
   vertical-align: middle;
 }
 
+
 /*******************************
            States
 *******************************/
+
 
 /*--------------
       Hover
@@ -169,21 +178,21 @@
   Indeterminate
 ---------------*/
 
-.ui.checkbox input:not([type="radio"]):indeterminate ~ .box:before,
-.ui.checkbox input:not([type="radio"]):indeterminate ~ label:before {
+.ui.checkbox input:not([type=radio]):indeterminate ~ .box:before,
+.ui.checkbox input:not([type=radio]):indeterminate ~ label:before {
   background: $checkbox-indeterminate-background;
   border-color: $checkbox-indeterminate-border-color;
 }
-.ui.checkbox input:not([type="radio"]):indeterminate ~ .box:after,
-.ui.checkbox input:not([type="radio"]):indeterminate ~ label:after {
+.ui.checkbox input:not([type=radio]):indeterminate ~ .box:after,
+.ui.checkbox input:not([type=radio]):indeterminate ~ label:after {
   opacity: $checkbox-indeterminate-check-opacity;
   color: $checkbox-indeterminate-check-color;
 }
 .ui.indeterminate.toggle.checkbox {
-  & input:not([type="radio"]):indeterminate ~ label:before {
+  & input:not([type=radio]):indeterminate ~ label:before {
     background: $checkbox-toggle-center-lane-background;
   }
-  & input:not([type="radio"]) ~ label:after {
+  & input:not([type=radio]) ~ label:after {
     left: $checkbox-toggle-center-offset;
   }
 }
@@ -192,19 +201,20 @@
   Active Focus
 ---------------*/
 
-.ui.checkbox input:not([type="radio"]):indeterminate:focus ~ .box:before,
-.ui.checkbox input:not([type="radio"]):indeterminate:focus ~ label:before,
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before,
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before,
 .ui.checkbox input:checked:focus ~ .box:before,
-.ui.checkbox input:checked:focus ~ label:before {
+.ui.checkbox input:checked:focus ~ label:before  {
   background: $checkbox-active-focus-background;
   border-color: $checkbox-active-focus-border-color;
 }
-.ui.checkbox input:not([type="radio"]):indeterminate:focus ~ .box:after,
-.ui.checkbox input:not([type="radio"]):indeterminate:focus ~ label:after,
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:after,
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:after,
 .ui.checkbox input:checked:focus ~ .box:after,
 .ui.checkbox input:checked:focus ~ label:after {
   color: $checkbox-active-focus-check-color;
 }
+
 
 /*--------------
     Read-Only
@@ -214,6 +224,7 @@
 .ui.read-only.checkbox label {
   cursor: default;
 }
+
 
 /*--------------
      Disabled
@@ -244,9 +255,11 @@
   user-select: none;
 }
 
+
 /*******************************
              Types
 *******************************/
+
 
 /*--------------
      Radio
@@ -264,7 +277,7 @@
 /* Box */
 .ui.radio.checkbox .box:before,
 .ui.radio.checkbox label:before {
-  content: "";
+  content: '';
   transform: none;
 
   width: $checkbox-radio-size;
@@ -278,7 +291,7 @@
 .ui.radio.checkbox .box:after,
 .ui.radio.checkbox label:after {
   border: none;
-  content: "" !important;
+  content: '' !important;
   width: $checkbox-radio-size;
   height: $checkbox-radio-size;
   line-height: $checkbox-radio-size;
@@ -322,16 +335,6 @@
   background-color: $checkbox-radio-active-bullet-color;
 }
 
-/* Radio button slider */
-.ui.radio.toggle.checkbox input:checked ~ .box:after,
-.ui.radio.toggle.checkbox input:checked ~ label:after {
-  background-color: #fff; /* $checkbox-radio-active-bullet-color */
-}
-.ui.radio.toggle.checkbox input:focus:checked ~ .box:after,
-.ui.radio.toggle.checkbox input:focus:checked ~ label:after {
-  background-color: #fff; /* $checkbox-radio-active-focus-bullet-color */
-}
-
 /* Active Focus */
 .ui.radio.checkbox input:focus:checked ~ .box:before,
 .ui.radio.checkbox input:focus:checked ~ label:before {
@@ -361,7 +364,7 @@
 .ui.slider.checkbox label {
   padding-left: $checkbox-slider-label-distance;
   line-height: $checkbox-slider-label-line-height;
-  color: $selected-text-color;
+  color: $checkbox-slider-off-label-color;
 }
 
 /* Line */
@@ -369,7 +372,7 @@
 .ui.slider.checkbox label:before {
   display: block;
   position: absolute;
-  content: "";
+  content: '';
   transform: none;
   border: none !important;
   left: 0;
@@ -383,6 +386,7 @@
 
   border-radius: $checkbox-slider-line-radius;
   transition: $checkbox-slider-line-transition;
+
 }
 
 /* Handle */
@@ -390,7 +394,7 @@
 .ui.slider.checkbox label:after {
   background: $checkbox-handle-background;
   position: absolute;
-  content: "" !important;
+  content: '' !important;
   opacity: 1;
   z-index: 2;
 
@@ -447,6 +451,7 @@
   background-color: $checkbox-slider-on-focus-line-color !important;
 }
 
+
 /*--------------
      Toggle
 ---------------*/
@@ -477,7 +482,7 @@
 .ui.toggle.checkbox label:before {
   display: block;
   position: absolute;
-  content: "";
+  content: '';
   z-index: 1;
   transform: none;
   border: none;
@@ -496,7 +501,7 @@
 .ui.toggle.checkbox label:after {
   background: $checkbox-handle-background;
   position: absolute;
-  content: "" !important;
+  content: '' !important;
   opacity: 1;
   z-index: 2;
 
@@ -545,6 +550,7 @@
   left: $checkbox-toggle-on-offset;
   box-shadow: $checkbox-toggle-on-handle-box-shadow;
 }
+
 
 /* Active Focus */
 .ui.toggle.checkbox input:focus:checked ~ .box,
@@ -665,4 +671,52 @@
   background-color: $checkbox-toggle-on-focus-lane-color !important;
 }
 
-@import "../../themes/default/modules/checkbox.style";
+/*--------------------
+        Size
+---------------------*/
+
+@each $key, $value in $checkbox-variation-sizes {
+  
+  $raw: map-get($value, raw);
+  $size: map-get($value, size);
+  $circleScale: map-get($value, circleScale);
+  $circleLeft: map-get($value, circleLeft);
+  
+  .ui.#{$key}.checkbox {
+    font-size: $size;
+  }
+
+  @if ($raw > 1) {
+    .ui.#{$key}.form .checkbox,
+    .ui.#{$key}.checkbox {
+      &:not(.slider):not(.toggle):not(.radio) {
+        &
+        .box:after,
+        .box:before,
+        label:after,
+        label:before {
+          transform: scale($raw);
+          transform-origin:left;
+        }
+      }
+      &.radio {
+        &
+        .box:before,
+        label:before {
+          transform: scale($raw);
+          transform-origin:left;
+        }
+        &
+        .box:after,
+        label:after {
+          transform:scale($circleScale);
+          transform-origin:left;
+          left: $circleLeft;
+        }
+      }
+    }
+  }
+}
+
+
+@import '../../themes/default/modules/checkbox.style';

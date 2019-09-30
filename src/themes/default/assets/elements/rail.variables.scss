@@ -1,0 +1,30 @@
+@import "../globals/variables";
+
+//@-****************************** Rail *******************************/
+
+//--------------------  Element --------------------*/
+
+$rail-width: 300px;
+$rail-height: 100%;
+
+$rail-distance: 4rem;
+$rail-split-distance: ($rail-distance / 2);
+
+//-------------------- Variations --------------------*/
+
+//- Close */
+$rail-close-distance: 2em;
+$rail-very-close-distance: 1em;
+
+$rail-split-close-distance: ($rail-close-distance / 2);
+$rail-split-very-close-distance: ($rail-very-close-distance / 2);
+
+$rail-close-width:  calc(#{$rail-width} + #{$rail-split-close-distance});;
+$rail-very-close-width:  calc(#{$rail-width} + #{$rail-split-very-close-distance});;
+
+//- Dividing */
+$rail-dividing-border: 1px solid $border-color;
+$rail-dividing-distance: 5rem;
+$rail-split-dividing-distance: ($rail-dividing-distance / 2);
+$rail-dividing-width: strip-unit($rail-split-dividing-distance) + $rail-width;
+

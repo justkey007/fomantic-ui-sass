@@ -1,7 +1,7 @@
-@import "../../themes/default/modules/progress";
+@import '../../themes/default/modules/progress.variables';
 
 /*******************************
-            Progress
+//@-       Progress
 *******************************/
 
 .ui.progress {
@@ -39,9 +39,9 @@
   transition: $progress-bar-transition;
   overflow: hidden;
 }
-.ui.progress:not([data-percent]):not(.indeterminate) .bar,
-.ui.progress[data-percent="0"]:not(.indeterminate) .bar {
-  background: transparent;
+.ui.ui.ui.progress:not([data-percent]):not(.indeterminate) .bar,
+.ui.ui.ui.progress[data-percent="0"]:not(.indeterminate) .bar {
+  background:transparent;
 }
 .ui.progress[data-percent="0"] .bar .progress {
   color: $text-color;
@@ -84,9 +84,11 @@
   transition: $progress-label-transition;
 }
 
+
 /*******************************
             Types
 *******************************/
+
 
 /* Indicating */
 .ui.indicating.progress[data-percent^="1"] .bar,
@@ -198,7 +200,7 @@
 }
 
 /* Indicating Success */
-.ui.indicating.progress.success .label {
+.ui.ui.indicating.progress.success .label {
   color: $success-header-color;
 }
 
@@ -211,15 +213,16 @@
              States
 *******************************/
 
+
 /*--------------
      Success
 ---------------*/
 
-.ui.progress.success .bar {
+.ui.ui.progress.success .bar {
   background-color: $success-color;
 }
-.ui.progress.success .bar,
-.ui.progress.success .bar::after {
+.ui.ui.progress.success .bar,
+.ui.ui.progress.success .bar::after {
   animation: none;
 }
 .ui.progress.success > .label {
@@ -230,11 +233,11 @@
      Warning
 ---------------*/
 
-.ui.progress.warning .bar {
+.ui.ui.progress.warning .bar {
   background-color: $warning-color;
 }
-.ui.progress.warning .bar,
-.ui.progress.warning .bar::after {
+.ui.ui.progress.warning .bar,
+.ui.ui.progress.warning .bar::after {
   animation: none;
 }
 .ui.progress.warning > .label {
@@ -245,11 +248,11 @@
      Error
 ---------------*/
 
-.ui.progress.error .bar {
+.ui.ui.progress.error .bar {
   background-color: $error-color;
 }
-.ui.progress.error .bar,
-.ui.progress.error .bar::after {
+.ui.ui.progress.error .bar,
+.ui.ui.progress.error .bar::after {
   animation: none;
 }
 .ui.progress.error > .label {
@@ -265,7 +268,7 @@
   min-width: $progress-active-min-width;
 }
 .ui.active.progress .bar::after {
-  content: "";
+  content: '';
   opacity: 0;
 
   position: absolute;
@@ -277,8 +280,7 @@
 
   border-radius: $progress-bar-border-radius;
 
-  animation: progress-active $progress-active-pulse-duration $default-easing
-    infinite;
+  animation: progress-active $progress-active-pulse-duration $default-easing infinite;
   transform-origin: left;
 }
 @keyframes progress-active {
@@ -299,14 +301,16 @@
 .ui.disabled.progress {
   opacity: 0.35;
 }
-.ui.disabled.progress .bar,
-.ui.disabled.progress .bar::after {
+.ui.ui.disabled.progress .bar,
+.ui.ui.disabled.progress .bar::after {
   animation: none;
 }
+
 
 /*******************************
            Variations
 *******************************/
+
 
 /*--------------
     Inverted
@@ -352,8 +356,7 @@
   height: $progress-attached-height;
   padding: 0;
   overflow: hidden;
-  border-radius: 0 0 $progress-attached-border-radius
-    $progress-attached-border-radius;
+  border-radius: 0 0 $progress-attached-border-radius $progress-attached-border-radius;
 }
 .ui.progress.attached .bar {
   border-radius: 0;
@@ -363,8 +366,7 @@
 .ui.progress.top.attached,
 .ui.progress.top.attached .bar {
   top: 0;
-  border-radius: $progress-attached-border-radius
-    $progress-attached-border-radius 0 0;
+  border-radius: $progress-attached-border-radius $progress-attached-border-radius 0 0;
 }
 .ui.progress.top.attached .bar {
   border-radius: 0;
@@ -390,6 +392,7 @@
 ---------------*/
 
 @each $key, $value in $colors {
+  $color: $key;
   $c: map-get($value, color);
   $l: map-get($value, light);
 
@@ -457,13 +460,12 @@
   position: relative;
 }
 .ui.indeterminate.progress .bar::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   border-radius: $progress-bar-border-radius;
-  animation: progress-pulsating $progress-indeterminate-pulse-duration
-    $default-easing infinite;
+  animation: progress-pulsating $progress-indeterminate-pulse-duration $default-easing infinite;
   transform-origin: center;
   width: 100%;
 }
@@ -484,8 +486,7 @@
 .ui.filling.indeterminate.progress .bar::before {
   animation-name: progress-filling;
 }
-.ui.indeterminate.progress:not(.sliding):not(.filling):not(.swinging)
-  .bar::before {
+.ui.indeterminate.progress:not(.sliding):not(.filling):not(.swinging) .bar::before {
   background: $progress-indeterminate-pulse-color;
 }
 .ui.sliding.indeterminate.progress .bar,
@@ -508,55 +509,56 @@
 }
 
 @keyframes progress-swinging {
-  0%,
-  100% {
-    width: 10%;
-    left: -25%;
+  0%, 100% {
+    width:10%;
+    left:-25%;
   }
-  25%,
-  65% {
-    width: 70%;
+  25%, 65% {
+    width:70%;
   }
   50% {
     width: 10%;
-    left: 100%;
+    left:100%;
   }
 }
 
 @keyframes progress-sliding {
   0% {
-    width: 10%;
-    left: -25%;
+    width:10%;
+    left:-25%;
   }
   50% {
-    width: 70%;
+    width:70%;
   }
   100% {
-    width: 10%;
-    left: 100%;
+    width:10%;
+    left:100%;
   }
 }
 
 @keyframes progress-filling {
   0% {
-    transform: scale(0, 1);
+    transform: scale(0,1);
   }
   80% {
     transform: scale(1);
-    opacity: 1;
+    opacity:1;
   }
   100% {
-    opacity: 0;
+    opacity:0;
   }
 }
 
 @keyframes progress-pulsating {
   0% {
-    transform: scale(0, 1);
-    opacity: 0.7;
+    transform: scale(0,1);
+    opacity:0.7;
   }
   100% {
     transform: scale(1);
-    opacity: 0;
+    opacity:0;
   }
 }
+
+
+@import '../../themes/default/modules/progress.style';

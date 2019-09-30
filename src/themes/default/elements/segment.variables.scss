@@ -1,0 +1,143 @@
+@import "../globals/variables";
+
+//@-****************************** Segment *******************************/
+
+//--------------------  Element --------------------*/
+
+$segment-background: $white;
+$segment-border-width: 1px;
+$segment-border: $segment-border-width solid $border-color;
+
+$segment-box-shadow: $subtle-shadow;
+$segment-vertical-padding: 1em;
+$segment-horizontal-padding: 1em;
+$segment-padding: $segment-vertical-padding $segment-horizontal-padding;
+
+$segment-vertical-margin: 1rem;
+$segment-horizontal-margin: 0;
+$segment-margin: $segment-vertical-margin $segment-horizontal-margin;
+$segment-border-radius: $default-border-radius;
+
+//--------------------  Group --------------------*/
+
+$segment-grouped-super-margin: $segment-margin;
+$segment-grouped-super-border: $segment-border;
+$segment-grouped-super-box-shadow: $segment-box-shadow;
+$segment-grouped-border-radius: $segment-border-radius;
+
+$segment-nested-group-margin: $segment-vertical-margin $segment-vertical-margin;
+
+$segment-grouped-border: none;
+$segment-grouped-divider: $segment-border;
+$segment-grouped-margin: 0;
+$segment-grouped-width: auto;
+$segment-grouped-box-shadow: none;
+
+//--------------------  Coupling --------------------*/
+
+//- Page Grid Segment */
+$segment-page-grid-margin: (2 * $segment-vertical-padding);
+
+//-****************************** Types *******************************/
+
+//- Placeholder */
+$segment-placeholder-background: $off-white;
+$segment-placeholder-padding: $segment-padding;
+$segment-placeholder-border-color: $border-color;
+$segment-placeholder-box-shadow: 0 2px 25px 0 rgba(34, 36, 38, 0.05) inset;
+$segment-placeholder-min-height: 18rem;
+$segment-placeholder-content-max-width: 15rem;
+$segment-placeholder-content-inline-button-margin: 0 $_5px 0 0;
+
+
+//- Piled */
+$segment-piled-z-index: auto;
+$segment-piled-margin: 3em;
+$segment-piled-box-shadow: '';
+$segment-piled-degrees: 1.2deg;
+$segment-piled-border: $segment-border;
+
+//- Circular */
+$segment-circular-padding: 2em;
+
+//- Stacked */
+$segment-stacked-height: 6px;
+$segment-stacked-page-background: $subtle-transparent-black;
+$segment-stacked-padding: $segment-vertical-padding + (0.4em);
+$segment-tall-stacked-padding: $segment-vertical-padding + (0.8em);
+
+//-****************************** States *******************************/
+
+//- Loading Dimmer */
+$segment-loader-dimmer-color: rgba(255, 255, 255, 0.8);
+$segment-loader-inverted-dimmer-color: rgba(0, 0, 0 , 0.85);
+$segment-loader-dimmer-z-index: 100;
+
+//- Loading Spinner */
+$segment-loader-size: 3em;
+$segment-loader-line-z-index: 101;
+
+
+//-****************************** Variations *******************************/
+
+
+//- Raised */
+$segment-raised-box-shadow: $floating-shadow;
+
+//- Padded */
+$segment-padded-padding: 1.5em;
+$segment-very-padded-padding: 3em;
+
+//- Attached */
+$segment-attached-top-offset: 0;
+$segment-attached-bottom-offset: 0;
+$segment-attached-horizontal-offset: -$segment-border-width;
+$segment-attached-width: calc(100% + #{-$segment-attached-horizontal-offset * 2});
+$segment-attached-box-shadow: none;
+$segment-attached-border: $segment-border-width solid $solid-border-color;
+$segment-attached-bottom-box-shadow:
+  $segment-box-shadow,
+  $segment-attached-box-shadow
+;
+
+//- Inverted */
+$segment-inverted-background: $black;
+
+//- Floated */
+$segment-floated-distance: 1em;
+
+//- Basic */
+$segment-basic-background: none transparent;
+$segment-basic-border: none;
+$segment-basic-box-shadow: none;
+$segment-basic-border-radius: 0;
+
+//- Colors */
+$segment-colored-border-size: 2px;
+
+//- Ordinality */
+$segment-secondary-background: $dark-white;
+$segment-secondary-color: $muted-text-color;
+
+$segment-tertiary-background:  $mid-white;
+$segment-tertiary-color: $muted-text-color;
+
+$segment-secondary-inverted-lightness: 0.2;
+$segment-secondary-inverted-background:
+  lighten($black, ($segment-secondary-inverted-lightness * 100))
+  linear-gradient(
+    rgba(255, 255, 255, $segment-secondary-inverted-lightness) 0,
+    rgba(255, 255, 255, $segment-secondary-inverted-lightness) 100%
+  )
+;
+$segment-secondary-inverted-color: $inverted-muted-text-color;
+
+$segment-tertiary-inverted-lightness: 0.35;
+$segment-tertiary-inverted-background:
+  lighten($black, ($segment-tertiary-inverted-lightness * 100))
+  linear-gradient(
+    rgba(255, 255, 255, $segment-tertiary-inverted-lightness) 0,
+    rgba(255, 255, 255, $segment-tertiary-inverted-lightness) 100%
+  )
+;
+$segment-tertiary-inverted-color: $inverted-muted-text-color;

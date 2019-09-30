@@ -1,0 +1,38 @@
+@import "../globals/variables";
+
+//@-******************************  Shape *******************************/
+
+$shape-display: inline-block;
+
+//- Animating */
+$shape-perspective: 2000px;
+
+$shape-duration: 0.6s;
+$shape-easing: ease-in-out;
+
+$shape-hidden-side-opacity: 0.6;
+$shape-animating-z-index: 100;
+
+$shape-transition:
+  transform $shape-duration $shape-easing,
+  left $shape-duration $shape-easing,
+  width $shape-duration $shape-easing,
+  height $shape-duration $shape-easing
+;
+$shape-side-transition: opacity $shape-duration $shape-easing;
+$shape-backface-visibility: hidden;
+
+//- Side */
+$shape-side-margin: 0;
+
+//--------------- Types ---------------*/
+
+//- Cube */
+$shape-cube-size: 15em;
+$shape-cube-background: #E6E6E6;
+$shape-cube-padding: 2em;
+$shape-cube-text-color: $text-color;
+$shape-cube-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+
+$shape-cube-text-align: center;
+$shape-cube-font-size: 2em;

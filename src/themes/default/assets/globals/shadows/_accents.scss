@@ -1,0 +1,11 @@
+@import "../colors/all";
+@import "../border/all";
+
+// Differentiating Neutrals */
+$subtle-gradient: linear-gradient(transparent, $transparent-black) !default;
+
+// Differentiating Layers */
+$subtle-shadow: 0 1px 2px 0 $border-color !default;
+
+$floating-shadow: 0 0px 0px 0 rgba(34, 36, 38, 0.12),
+  0 0px 4px 0 rgba(34, 36, 38, 0.15) !default;

@@ -1,7 +1,7 @@
-@import "../../themes/default/elements/rail";
+@import '../../themes/default/elements/rail.variables';
 
 /*******************************
-             Rails
+//@-         Rails
 *******************************/
 
 .ui.rail {
@@ -46,6 +46,7 @@
   padding: 0 $rail-split-distance 0 0;
   margin: 0 $rail-split-distance 0 0;
 }
+
 
 /*--------------
     Dividing
@@ -131,3 +132,7 @@
 .ui.massive.rail {
   font-size: $massive;
 }
+
+
+
+@import '../../themes/default/elements/rail.style';
