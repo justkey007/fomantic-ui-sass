@@ -121,7 +121,7 @@
 *******************************/
 
 .ui.dropdown .menu > .message {
-  margin: 0 -$message-border-width;
+  margin: 0 (-$message-border-width);
 }
 
 /*******************************

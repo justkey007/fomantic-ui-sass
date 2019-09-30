@@ -62,7 +62,7 @@ $statistic-inverted-value-color: $white !default;
 $statistic-inverted-label-color: $inverted-text-color !default;
 
 //- Item Width */
-$statistic-item-group-margin: 0 0 -$statistic-row-spacing !default;
+$statistic-item-group-margin: 0 0 (-$statistic-row-spacing) !default;
 $statistic-item-margin: 0 0 $statistic-row-spacing !default;
 
 //- Stackable */

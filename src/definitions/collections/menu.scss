@@ -697,7 +697,7 @@ Floated Menu / Item
   background: $menu-tabular-active-background;
   color: $menu-tabular-active-color;
   border-color: $menu-tabular-border-color;
-  margin: 0 -$menu-tabular-border-width 0 0;
+  margin: 0 (-$menu-tabular-border-width) 0 0;
   border-radius: $menu-tabular-border-radius 0 0 $menu-tabular-border-radius !important;
 }
 
@@ -721,7 +721,7 @@ Floated Menu / Item
   background: $menu-tabular-active-background;
   color: $menu-tabular-active-color;
   border-color: $menu-tabular-border-color;
-  margin: 0 0 0 -$menu-tabular-border-width;
+  margin: 0 0 0 (-$menu-tabular-border-width);
   border-radius: 0 $menu-tabular-border-radius $menu-tabular-border-radius 0 !important;
 }
 
@@ -915,7 +915,7 @@ Floated Menu / Item
   border-radius: 0;
   align-self: flex-end;
 
-  margin: 0 0 -$menu-secondary-pointing-border-width;
+  margin: 0 0 (-$menu-secondary-pointing-border-width);
   padding: $menu-secondary-pointing-item-vertical-padding $menu-secondary-pointing-item-horizontal-padding;
   border-bottom-width: $menu-secondary-pointing-border-width;
   transition: $menu-secondary-item-transition;

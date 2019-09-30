@@ -136,7 +136,7 @@ $card-extra-link-color: $unselected-text-color !default;
 $card-extra-link-hover-color: $link-hover-color !default;
 
 //- Buttons */
-$card-button-margin: 0 -$card-border-width !default;
+$card-button-margin: 0 (-$card-border-width) !default;
 $card-button-width: calc(100% + #{$card-border-width * 2}) !default;
 
 //-------------------- Variations --------------------*/

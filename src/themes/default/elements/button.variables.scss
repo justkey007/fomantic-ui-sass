@@ -30,7 +30,7 @@ $button-vertical-align: baseline !default;
 //- Internal Shadow */
 $button-shadow-distance: 0 !default;
 $button-shadow-offset: ($button-shadow-distance / 2) !default;
-$button-shadow-box-shadow: 0 -$button-shadow-distance 0 0 $border-color inset !default;
+$button-shadow-box-shadow: 0 (-$button-shadow-distance) 0 0 $border-color inset !default;
 
 //- Box Shadow */
 $button-border-box-shadow-color: transparent !default;

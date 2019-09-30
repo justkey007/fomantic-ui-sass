@@ -234,7 +234,7 @@ $menu-secondary-item-vertical-spacing: $menu-secondary-item-spacing !default;
 $menu-secondary-vertical-item-margin: 0 0 $menu-secondary-item-vertical-spacing !default;
 $menu-secondary-vertical-item-border-radius: $default-border-radius !default;
 
-$menu-secondary-sub-menu-margin: 0 -$menu-secondary-item-horizontal-padding !default;
+$menu-secondary-sub-menu-margin: 0 (-$menu-secondary-item-horizontal-padding) !default;
 $menu-secondary-sub-menu-item-margin: 0 !default;
 $menu-secondary-sub-horizontal-padding: ($menu-item-horizontal-padding / $tiny-size) + $menu-sub-indent !default;
 $menu-secondary-sub-menu-item-padding: $relative7px $menu-secondary-sub-horizontal-padding !default;
@@ -257,7 +257,7 @@ $menu-secondary-pointing-active-hover-border-color: $menu-secondary-pointing-act
 $menu-secondary-pointing-active-hover-text-color: $menu-secondary-pointing-active-text-color !default;
 
 $menu-secondary-pointing-header-color: $dark-text-color !default;
-$menu-secondary-vertical-pointing-item-margin: 0 -$menu-secondary-pointing-border-width 0 0 !default;
+$menu-secondary-vertical-pointing-item-margin: 0 (-$menu-secondary-pointing-border-width) 0 0 !default;
 
 
 //- Inverted Secondary */
