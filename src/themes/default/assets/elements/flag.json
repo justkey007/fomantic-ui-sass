@@ -1,7 +1,0 @@
-{
-  "@verticalAlign": "$flag-vertical-align",
-  "@spritePath": "$flag-sprite-path",
-  "@height": "$flag-height",
-  "@margin": "$flag-margin",
-  "@width": "$flag-width"
-}

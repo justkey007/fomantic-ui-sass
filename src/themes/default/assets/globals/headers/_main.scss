@@ -1,8 +1,0 @@
-@import "./font-size";
-
-$header-line-height-offset: ($header-line-height - 1em) / 2 !default;
-
-// Header Spacing */
-$header-top-margin: calc(2rem - #{$header-line-height-offset}) !default;
-$header-bottom-margin: 1rem !default;
-$header-margin: $header-top-margin 0 $header-bottom-margin !default;

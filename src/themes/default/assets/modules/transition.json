@@ -1,7 +1,0 @@
-{
-  "@transitionDefaultDuration": "$transition-default-duration",
-  "@transitionDefaultEasing": "$transition-default-easing",
-  "@backfaceVisibility": "$transition-backface-visibility",
-  "@use3DAcceleration": "$transition-use3-d-acceleration",
-  "@transitionDefaultFill": "$transition-default-fill"
-}

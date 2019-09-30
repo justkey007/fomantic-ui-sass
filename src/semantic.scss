@@ -1,10 +1,6 @@
-// collections */
-@import "./definitions/collections/breadcrumb";
-@import "./definitions/collections/form";
-@import "./definitions/collections/grid";
-@import "./definitions/collections/menu";
-@import "./definitions/collections/message";
-@import "./definitions/collections/table";
+// globals */
+@import "./definitions/globals/reset";
+@import "./definitions/globals/site";
 
 // elements */
 @import "./definitions/elements/button";
@@ -25,9 +21,21 @@
 @import "./definitions/elements/step";
 @import "./definitions/elements/text";
 
-// globals */
-@import "./definitions/globals/reset";
-@import "./definitions/globals/site";
+// collections */
+@import "./definitions/collections/breadcrumb";
+@import "./definitions/collections/form";
+@import "./definitions/collections/grid";
+@import "./definitions/collections/menu";
+@import "./definitions/collections/message";
+@import "./definitions/collections/table";
+
+// views */
+@import "./definitions/views/ad";
+@import "./definitions/views/card";
+@import "./definitions/views/comment";
+@import "./definitions/views/feed";
+@import "./definitions/views/item";
+@import "./definitions/views/statistic";
 
 // modules */
 @import "./definitions/modules/accordion";
@@ -49,14 +57,3 @@
 @import "./definitions/modules/tab";
 @import "./definitions/modules/toast";
 @import "./definitions/modules/transition";
-
-// utilities */
-@import "./definitions/utilities/utilities";
-
-// views */
-@import "./definitions/views/ad";
-@import "./definitions/views/card";
-@import "./definitions/views/comment";
-@import "./definitions/views/feed";
-@import "./definitions/views/item";
-@import "./definitions/views/statistic";

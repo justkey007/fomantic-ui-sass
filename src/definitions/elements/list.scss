@@ -148,7 +148,7 @@ ol.ui.list ol li,
 }
 .ui.list .list > .item > .loading.icon + .content,
 .ui.list > .item > .loading.icon + .content {
-  padding-left:  calc(#{$list-icon-distance} + #{$list-content-distance});;
+  padding-left:  calc(#{$list-icon-distance} + #{$list-content-distance});
 }
 .ui.list .list > .item > img.image + .content,
 .ui.list > .item > img.image + .content {
