@@ -22,6 +22,6 @@
 @import "./abstract/colors-map";
 
 //------------------- Paths --------------------*/
-$theme-folder: './';
-$image-path: "#{$theme-folder}/themes/default/assets/images";
-$font-path: "#{$theme-folder}/themes/default/assets/fonts";
+$theme-folder: './' !default;
+$image-path: "#{$theme-folder}/themes/default/assets/images" !default;
+$font-path: "#{$theme-folder}/themes/default/assets/fonts" !default;

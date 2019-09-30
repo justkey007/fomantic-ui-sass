@@ -2,40 +2,40 @@
 
 //@-******************************  Rating *******************************/
 
-$rating-margin: 0 $relative-mini;
-$rating-white-space: nowrap;
-$rating-vertical-align: baseline;
+$rating-margin: 0 $relative-mini !default;
+$rating-white-space: nowrap !default;
+$rating-vertical-align: baseline !default;
 
-$rating-icon-cursor: pointer;
-$rating-icon-width: 1.25em;
-$rating-icon-height: auto;
+$rating-icon-cursor: pointer !default;
+$rating-icon-width: 1.25em !default;
+$rating-icon-height: auto !default;
 $rating-icon-transition:
   opacity $default-duration $default-easing,
   background $default-duration $default-easing,
   text-shadow $default-duration $default-easing,
   color $default-duration $default-easing
-;
+ !default;
 
 
 //-------------------- Types --------------------*/
 
 //- Standard */
-$rating-inactive-background: transparent;
-$rating-inactive-color: rgba(0, 0, 0, 0.15);
+$rating-inactive-background: transparent !default;
+$rating-inactive-color: rgba(0, 0, 0, 0.15) !default;
 
-$rating-selected-background: $rating-inactive-background;
-$rating-selected-color: $text-color;
+$rating-selected-background: $rating-inactive-background !default;
+$rating-selected-color: $text-color !default;
 
-$rating-active-background: $rating-inactive-background;
-$rating-active-color: $dark-text-color;
+$rating-active-background: $rating-inactive-background !default;
+$rating-active-color: $dark-text-color !default;
 
-$rating-shadow-width: 1px;
+$rating-shadow-width: 1px !default;
 
 //-------------------- States --------------------*/
 
-$rating-interactive-active-icon-opacity: 1;
-$rating-interactive-selected-icon-opacity: 1;
+$rating-interactive-active-icon-opacity: 1 !default;
+$rating-interactive-selected-icon-opacity: 1 !default;
 
 //-------------------- Variations --------------------*/
 
-$rating-massive: 2rem;
+$rating-massive: 2rem !default;

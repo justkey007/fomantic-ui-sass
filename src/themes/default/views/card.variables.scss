@@ -5,231 +5,231 @@
 //--------------------  View --------------------*/
 
 //- Shadow */
-$card-shadow-distance: 1px;
-$card-shadow-box-shadow: 0 $card-shadow-distance 3px 0 $solid-border-color;
+$card-shadow-distance: 1px !default;
+$card-shadow-box-shadow: 0 $card-shadow-distance 3px 0 $solid-border-color !default;
 
 //- Card */
-$card-font-family: $page-font;
-$card-display: flex;
-$card-background: $white;
-$card-border-radius: $default-border-radius;
-$card-margin: 1em 0;
-$card-min-height: 0;
-$card-padding: 0;
-$card-width: 290px;
-$card-border-width: 1px;
-$card-border-shadow: 0 0 0 $card-border-width $solid-border-color;
+$card-font-family: $page-font !default;
+$card-display: flex !default;
+$card-background: $white !default;
+$card-border-radius: $default-border-radius !default;
+$card-margin: 1em 0 !default;
+$card-min-height: 0 !default;
+$card-padding: 0 !default;
+$card-width: 290px !default;
+$card-border-width: 1px !default;
+$card-border-shadow: 0 0 0 $card-border-width $solid-border-color !default;
 $card-box-shadow:
   $card-shadow-box-shadow,
   $card-border-shadow
-;
-$card-border: none;
-$card-z-index: '';
+ !default;
+$card-border: none !default;
+$card-z-index: '' !default;
 $card-transition:
   box-shadow $default-duration $default-easing,
   transform $default-duration $default-easing
-;
+ !default;
 
 //- Card Group */
-$card-horizontal-spacing: 1em;
-$card-row-spacing: 1.75em;
+$card-horizontal-spacing: 1em !default;
+$card-row-spacing: 1.75em !default;
 
-$card-group-card-margin: (-$card-row-spacing / 2) (-$card-horizontal-spacing / 2);
-$card-group-super-display: flex;
+$card-group-card-margin: (-$card-row-spacing / 2) (-$card-horizontal-spacing / 2) !default;
+$card-group-super-display: flex !default;
 
-$card-group-float: none;
-$card-group-display: flex;
-$card-group-margin: ($card-row-spacing / 2) ($card-horizontal-spacing / 2);
+$card-group-float: none !default;
+$card-group-display: flex !default;
+$card-group-margin: ($card-row-spacing / 2) ($card-horizontal-spacing / 2) !default;
 
 //- Consecutive Cards */
-$card-consecutive-group-distance: ($card-row-spacing / 2);
+$card-consecutive-group-distance: ($card-row-spacing / 2) !default;
 
 //--------------------  Content --------------------*/
 
 
 //- Image */
-$card-image-background: $transparent-black;
-$card-image-padding: 0;
-$card-image-border: none;
-$card-image-box-shadow: none;
-$card-image-border: none;
+$card-image-background: $transparent-black !default;
+$card-image-padding: 0 !default;
+$card-image-border: none !default;
+$card-image-box-shadow: none !default;
+$card-image-border: none !default;
 
 //- Content */
-$card-content-divider: $card-border-width solid $internal-border-color;
-$card-content-margin: 0;
-$card-content-background: none;
-$card-content-padding: 1em 1em;
-$card-content-font-size: 1em;
-$card-content-border-radius: 0;
-$card-content-box-shadow: none;
-$card-content-border: none;
+$card-content-divider: $card-border-width solid $internal-border-color !default;
+$card-content-margin: 0 !default;
+$card-content-background: none !default;
+$card-content-padding: 1em 1em !default;
+$card-content-font-size: 1em !default;
+$card-content-border-radius: 0 !default;
+$card-content-box-shadow: none !default;
+$card-content-border: none !default;
 
 
 //- Header */
-$card-header-margin: '';
-$card-header-font-weight: $bold;
-$card-header-font-size: $relative-big;
-$card-header-line-height-offset: -($line-height - 1em) / 2;
-$card-header-color: $dark-text-color;
+$card-header-margin: '' !default;
+$card-header-font-weight: $bold !default;
+$card-header-font-size: $relative-big !default;
+$card-header-line-height-offset: -($line-height - 1em) / 2 !default;
+$card-header-color: $dark-text-color !default;
 
 //- Metadata */
-$card-meta-font-size: $relative-medium;
-$card-meta-spacing: 0.3em;
-$card-meta-color: $light-text-color;
+$card-meta-font-size: $relative-medium !default;
+$card-meta-spacing: 0.3em !default;
+$card-meta-color: $light-text-color !default;
 
 //- Icons */
-$card-action-opacity: 0.75;
-$card-action-hover-opacity: 1;
-$card-action-transition: color $default-duration $default-easing;
+$card-action-opacity: 0.75 !default;
+$card-action-hover-opacity: 1 !default;
+$card-action-transition: color $default-duration $default-easing !default;
 
-$card-star-color: #FFB70A;
-$card-star-active-color: #FFE623;
+$card-star-color: #FFB70A !default;
+$card-star-active-color: #FFE623 !default;
 
-$card-like-color: #FF2733;
-$card-like-active-color: #FF2733;
+$card-like-color: #FF2733 !default;
+$card-like-active-color: #FF2733 !default;
 
 //- Links */
-$card-content-link-color: '';
-$card-content-link-hover-color: '';
-$card-content-link-transition: color $default-duration $default-easing;
+$card-content-link-color: '' !default;
+$card-content-link-hover-color: '' !default;
+$card-content-link-transition: color $default-duration $default-easing !default;
 
-$card-header-link-color: $card-header-color;
-$card-header-link-hover-color: $link-hover-color;
+$card-header-link-color: $card-header-color !default;
+$card-header-link-hover-color: $link-hover-color !default;
 
-$card-meta-link-color: $light-text-color;
-$card-meta-link-hover-color: $text-color;
+$card-meta-link-color: $light-text-color !default;
+$card-meta-link-hover-color: $text-color !default;
 
 //- Description */
-$card-description-distance: 0.5em;
-$card-description-color: rgba(0, 0, 0, 0.68);
+$card-description-distance: 0.5em !default;
+$card-description-color: rgba(0, 0, 0, 0.68) !default;
 
 //- Content Image */
-$card-content-image-width: '';
-$card-content-image-vertical-align: middle;
+$card-content-image-width: '' !default;
+$card-content-image-vertical-align: middle !default;
 
 //- Avatar Image */
-$card-avatar-size: 2em;
-$card-avatar-border-radius: $circular-radius;
+$card-avatar-size: 2em !default;
+$card-avatar-border-radius: $circular-radius !default;
 
 //- Paragraph */
-$card-paragraph-distance: 0.5em;
+$card-paragraph-distance: 0.5em !default;
 
 //- Dimmer */
-$card-dimmer-z-index: 10;
-$card-dimmer-color: '';
+$card-dimmer-z-index: 10 !default;
+$card-dimmer-color: '' !default;
 
 //- Additional Content */
-$card-extra-divider: 1px solid rgba(0, 0, 0, 0.05);
-$card-extra-background: none;
-$card-extra-position: static;
-$card-extra-width: auto;
-$card-extra-top: 0;
-$card-extra-left: 0;
-$card-extra-margin: 0 0;
-$card-extra-padding: 0.75em 1em;
-$card-extra-box-shadow: none;
-$card-extra-color: $light-text-color;
-$card-extra-transition: color $default-duration $default-easing;
+$card-extra-divider: 1px solid rgba(0, 0, 0, 0.05) !default;
+$card-extra-background: none !default;
+$card-extra-position: static !default;
+$card-extra-width: auto !default;
+$card-extra-top: 0 !default;
+$card-extra-left: 0 !default;
+$card-extra-margin: 0 0 !default;
+$card-extra-padding: 0.75em 1em !default;
+$card-extra-box-shadow: none !default;
+$card-extra-color: $light-text-color !default;
+$card-extra-transition: color $default-duration $default-easing !default;
 
 //- Extra Links */
-$card-extra-link-color: $unselected-text-color;
-$card-extra-link-hover-color: $link-hover-color;
+$card-extra-link-color: $unselected-text-color !default;
+$card-extra-link-hover-color: $link-hover-color !default;
 
 //- Buttons */
-$card-button-margin: 0 -$card-border-width;
-$card-button-width: calc(100% + #{$card-border-width * 2});
+$card-button-margin: 0 -$card-border-width !default;
+$card-button-width: calc(100% + #{$card-border-width * 2}) !default;
 
 //-------------------- Variations --------------------*/
 
 //- Link */
-$card-link-hover-background: $white;
-$card-link-hover-border: $card-border;
-$card-link-hover-z-index: 5;
-$card-link-hover-raise-distance: 3px;
-$card-link-hover-transform: translateY(-$card-link-hover-raise-distance);
+$card-link-hover-background: $white !default;
+$card-link-hover-border: $card-border !default;
+$card-link-hover-z-index: 5 !default;
+$card-link-hover-raise-distance: 3px !default;
+$card-link-hover-transform: translateY(-$card-link-hover-raise-distance) !default;
 
-$card-shadow-hover-box-shadow: 0 $card-shadow-distance $card-link-hover-raise-distance 0 $solid-selected-border-color;
+$card-shadow-hover-box-shadow: 0 $card-shadow-distance $card-link-hover-raise-distance 0 $solid-selected-border-color !default;
 $card-link-hover-box-shadow:
   $card-shadow-hover-box-shadow,
   $card-border-shadow
-;
+ !default;
 
 //- Horizontal */
-$card-horizontal-min-width: 400px;
-$card-horizontal-width: 400px;
-$card-horizontal-image-width: 150px;
+$card-horizontal-min-width: 400px !default;
+$card-horizontal-width: 400px !default;
+$card-horizontal-image-width: 150px !default;
 
 //- Raised */
 $card-raised-shadow:
   $card-border-shadow,
   $floating-shadow
-;
+ !default;
 $card-raised-shadow-hover:
   $card-border-shadow,
   $floating-shadow-hover
-;
+ !default;
 
 //- Card Count */
-$card-wide-spacing: 1em;
-$card-spacing: 0.75em;
-$card-small-spacing: 0.5em;
+$card-wide-spacing: 1em !default;
+$card-spacing: 0.75em !default;
+$card-small-spacing: 0.5em !default;
 
-$card-one-spacing: 0;
-$card-two-spacing: $card-wide-spacing;
-$card-three-spacing: $card-wide-spacing;
-$card-four-spacing: $card-spacing;
-$card-five-spacing: $card-spacing;
-$card-six-spacing: $card-spacing;
-$card-seven-spacing: $card-small-spacing;
-$card-eight-spacing: $card-small-spacing;
-$card-nine-spacing: $card-small-spacing;
-$card-ten-spacing: $card-small-spacing;
+$card-one-spacing: 0 !default;
+$card-two-spacing: $card-wide-spacing !default;
+$card-three-spacing: $card-wide-spacing !default;
+$card-four-spacing: $card-spacing !default;
+$card-five-spacing: $card-spacing !default;
+$card-six-spacing: $card-spacing !default;
+$card-seven-spacing: $card-small-spacing !default;
+$card-eight-spacing: $card-small-spacing !default;
+$card-nine-spacing: $card-small-spacing !default;
+$card-ten-spacing: $card-small-spacing !default;
 
-$card-one: $one-column;
-$card-one-offset: 0;
-$card-two:  calc(#{$two-column} - #{$card-two-spacing * 2});;
-$card-two-offset: -$card-two-spacing;
-$card-three:  calc(#{$three-column} - #{$card-three-spacing * 2});;
-$card-three-offset: -$card-three-spacing;
-$card-four:  calc(#{$four-column} - #{$card-four-spacing * 2});;
-$card-four-offset: -$card-four-spacing;
-$card-five:  calc(#{$five-column} - #{$card-five-spacing * 2});;
-$card-five-offset: -$card-five-spacing;
-$card-six:  calc(#{$six-column} - #{$card-six-spacing * 2});;
-$card-six-offset: -$card-six-spacing;
-$card-seven:  calc(#{$seven-column} - #{$card-seven-spacing * 2});;
-$card-seven-offset: -$card-seven-spacing;
-$card-eight:  calc(#{$eight-column} - #{$card-seven-spacing * 2});;
-$card-eight-offset: -$card-seven-spacing;
-$card-nine:  calc(#{$nine-column} - #{$card-nine-spacing * 2});;
-$card-nine-offset: -$card-nine-spacing;
-$card-ten:  calc(#{$ten-column} - #{$card-ten-spacing * 2});;
-$card-ten-offset: -$card-ten-spacing;
+$card-one: $one-column !default;
+$card-one-offset: 0 !default;
+$card-two:  calc(#{$two-column} - #{$card-two-spacing * 2}) !default;
+$card-two-offset: -$card-two-spacing !default;
+$card-three:  calc(#{$three-column} - #{$card-three-spacing * 2}) !default;
+$card-three-offset: -$card-three-spacing !default;
+$card-four:  calc(#{$four-column} - #{$card-four-spacing * 2}) !default;
+$card-four-offset: -$card-four-spacing !default;
+$card-five:  calc(#{$five-column} - #{$card-five-spacing * 2}) !default;
+$card-five-offset: -$card-five-spacing !default;
+$card-six:  calc(#{$six-column} - #{$card-six-spacing * 2}) !default;
+$card-six-offset: -$card-six-spacing !default;
+$card-seven:  calc(#{$seven-column} - #{$card-seven-spacing * 2}) !default;
+$card-seven-offset: -$card-seven-spacing !default;
+$card-eight:  calc(#{$eight-column} - #{$card-seven-spacing * 2}) !default;
+$card-eight-offset: -$card-seven-spacing !default;
+$card-nine:  calc(#{$nine-column} - #{$card-nine-spacing * 2}) !default;
+$card-nine-offset: -$card-nine-spacing !default;
+$card-ten:  calc(#{$ten-column} - #{$card-ten-spacing * 2}) !default;
+$card-ten-offset: -$card-ten-spacing !default;
 
 //- Stackable */
-$card-stackable-row-spacing: 1em;
-$card-stackable-spacing: 1em;
-$card-stackable-margin:  calc(#{$one-column} - #{$card-stackable-spacing * 2});;
+$card-stackable-row-spacing: 1em !default;
+$card-stackable-spacing: 1em !default;
+$card-stackable-margin:  calc(#{$one-column} - #{$card-stackable-spacing * 2}) !default;
 
 //- Sizes */
-$card-medium: 1em;
+$card-medium: 1em !default;
 
 //- Colored */
-$card-colored-shadow-distance: 2px;
+$card-colored-shadow-distance: 2px !default;
 
 //- Inverted */
-$card-inverted-background: $black;
-$card-inverted-content-divider: $card-border-width solid rgba(255, 255, 255, 0.15);
-$card-inverted-header-color: $inverted-text-color;
-$card-inverted-description-color: $inverted-muted-text-color;
-$card-inverted-meta-color: $inverted-light-text-color;
-$card-inverted-meta-link-color: $inverted-light-text-color;
-$card-inverted-meta-link-hover-color: $inverted-hovered-text-color;
-$card-inverted-extra-color: $inverted-light-text-color;
-$card-inverted-extra-link-color: $inverted-unselected-text-color;
-$card-inverted-extra-divider: 1px solid rgba(255, 255, 255, 0.15);
-$card-inverted-link-hover-background: $black;
+$card-inverted-background: $black !default;
+$card-inverted-content-divider: $card-border-width solid rgba(255, 255, 255, 0.15) !default;
+$card-inverted-header-color: $inverted-text-color !default;
+$card-inverted-description-color: $inverted-muted-text-color !default;
+$card-inverted-meta-color: $inverted-light-text-color !default;
+$card-inverted-meta-link-color: $inverted-light-text-color !default;
+$card-inverted-meta-link-hover-color: $inverted-hovered-text-color !default;
+$card-inverted-extra-color: $inverted-light-text-color !default;
+$card-inverted-extra-link-color: $inverted-unselected-text-color !default;
+$card-inverted-extra-divider: 1px solid rgba(255, 255, 255, 0.15) !default;
+$card-inverted-link-hover-background: $black !default;
 $card-inverted-box-shadow:
   0 $card-shadow-distance 3px 0 $solid-white-border-color,
   0 0 0 $card-border-width $solid-white-border-color
-;
+ !default;

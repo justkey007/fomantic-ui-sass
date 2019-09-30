@@ -4,44 +4,44 @@
 
 //--------------------  Element --------------------*/
 
-$divider-margin: 1rem 0;
+$divider-margin: 1rem 0 !default;
 
-$divider-highlight-width: 1px;
-$divider-highlight-color: $white-border-color;
+$divider-highlight-width: 1px !default;
+$divider-highlight-color: $white-border-color !default;
 
-$divider-shadow-width: 1px;
-$divider-shadow-color: $border-color;
+$divider-shadow-width: 1px !default;
+$divider-shadow-color: $border-color !default;
 
 //- Text */
-$divider-letter-spacing: 0.05em;
-$divider-font-weight: $bold;
-$divider-color: $dark-text-color;
-$divider-text-transform: uppercase;
+$divider-letter-spacing: 0.05em !default;
+$divider-font-weight: $bold !default;
+$divider-color: $dark-text-color !default;
+$divider-text-transform: uppercase !default;
 
 //--------------------  Coupling --------------------*/
 
 //- Icon */
-$divider-icon-size: 1rem;
-$divider-icon-margin: 0;
+$divider-icon-size: 1rem !default;
+$divider-icon-margin: 0 !default;
 
 
 //-******************************  Variations *******************************/
 
 //- Horizontal / Vertical */
-$divider-horizontal-margin: '';
-$divider-in-horizontal-position-margin: 1em;
-$divider-horizontal-ruler-offset: calc(-50% - #{$divider-in-horizontal-position-margin});
+$divider-horizontal-margin: '' !default;
+$divider-in-horizontal-position-margin: 1em !default;
+$divider-horizontal-ruler-offset: calc(-50% - #{$divider-in-horizontal-position-margin}) !default;
 
-$divider-vertical-margin: 1rem;
-$divider-vertical-height: calc(100% - #{$divider-vertical-margin});
+$divider-vertical-margin: 1rem !default;
+$divider-vertical-height: calc(100% - #{$divider-vertical-margin}) !default;
 
 //- Inverted */
-$divider-inverted-text-color: $white;
-$divider-inverted-highlight-color: rgba(255, 255, 255, 0.15);
-$divider-inverted-shadow-color: $border-color;
+$divider-inverted-text-color: $white !default;
+$divider-inverted-highlight-color: rgba(255, 255, 255, 0.15) !default;
+$divider-inverted-shadow-color: $border-color !default;
 
 //- Section */
-$divider-section-margin: 2rem;
+$divider-section-margin: 2rem !default;
 
 //- Sizes */
-$divider-medium: 1rem;
+$divider-medium: 1rem !default;

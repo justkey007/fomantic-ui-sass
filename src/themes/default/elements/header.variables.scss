@@ -4,145 +4,145 @@
 
 //--------------------  Element --------------------*/
 
-$header-text-transform: none;
-$header-font-family: $header-font;
-$header-font-weight: $header-font-weight;
-$header-line-height: $header-line-height;
-$header-line-height-offset: $header-line-height-offset;
+$header-text-transform: none !default;
+$header-font-family: $header-font !default;
+$header-font-weight: $header-font-weight !default;
+$header-line-height: $header-line-height !default;
+$header-line-height-offset: $header-line-height-offset !default;
 
-$header-top-margin: $header-top-margin;
-$header-bottom-margin: $header-bottom-margin;
-$header-margin: $header-top-margin 0 $header-bottom-margin;
+$header-top-margin: $header-top-margin !default;
+$header-bottom-margin: $header-bottom-margin !default;
+$header-margin: $header-top-margin 0 $header-bottom-margin !default;
 
-$header-first-margin: -$header-line-height-offset;
-$header-last-margin: 0;
-$header-horizontal-padding: 0;
-$header-vertical-padding: 0;
+$header-first-margin: -$header-line-height-offset !default;
+$header-last-margin: 0 !default;
+$header-horizontal-padding: 0 !default;
+$header-vertical-padding: 0 !default;
 
 //- Sub Heading */
-$header-sub-heading-distance: $_2px;
-$header-sub-heading-font-size: $relative-tiny;
-$header-sub-heading-font-weight: $bold;
-$header-sub-heading-text-transform: uppercase;
-$header-sub-heading-color: '';
+$header-sub-heading-distance: $_2px !default;
+$header-sub-heading-font-size: $relative-tiny !default;
+$header-sub-heading-font-weight: $bold !default;
+$header-sub-heading-text-transform: uppercase !default;
+$header-sub-heading-color: '' !default;
 
-$header-small-sub-heading-size: $relative-mini;
-$header-large-sub-heading-size: $relative-small;
-$header-huge-sub-heading-size: $relative-medium;
+$header-small-sub-heading-size: $relative-mini !default;
+$header-large-sub-heading-size: $relative-small !default;
+$header-huge-sub-heading-size: $relative-medium !default;
 
 //- Sub Header */
-$header-sub-margin: 0;
-$header-sub-line-height: 1.2em;
-$header-sub-color: $muted-text-color;
+$header-sub-margin: 0 !default;
+$header-sub-line-height: 1.2em !default;
+$header-sub-color: $muted-text-color !default;
 
 //- Icon */
-$header-icon-opacity: 1;
-$header-icon-size: 1.5em;
-$header-icon-offset: 0;
-$header-icon-margin: 0.75rem;
-$header-icon-alignment: middle;
+$header-icon-opacity: 1 !default;
+$header-icon-size: 1.5em !default;
+$header-icon-offset: 0 !default;
+$header-icon-margin: 0.75rem !default;
+$header-icon-alignment: middle !default;
 
 //- Image */
-$header-image-width: 2.5em;
-$header-image-height: auto;
-$header-image-offset: $header-line-height-offset;
-$header-image-margin: $header-icon-margin;
-$header-image-alignment: middle;
+$header-image-width: 2.5em !default;
+$header-image-height: auto !default;
+$header-image-offset: $header-line-height-offset !default;
+$header-image-margin: $header-icon-margin !default;
+$header-image-alignment: middle !default;
 
 //- Label */
-$header-label-size: '';
-$header-label-distance: 0.5rem;
-$header-label-vertical-align: middle;
+$header-label-size: '' !default;
+$header-label-distance: 0.5rem !default;
+$header-label-vertical-align: middle !default;
 
 //- Content */
-$header-content-alignment: top;
-$header-content-icon-alignment: middle;
-$header-content-image-alignment: middle;
+$header-content-alignment: top !default;
+$header-content-icon-alignment: middle !default;
+$header-content-image-alignment: middle !default;
 
 //- Paragraph after Header */
-$header-next-paragraph-distance: 0;
+$header-next-paragraph-distance: 0 !default;
 
 //-------------------- Variations --------------------*/
 
 //- Sizing */
-$header-huge-font-size   : join-value-to-unit($h1, em);
-$header-large-font-size  : join-value-to-unit($h2, em);
-$header-medium-font-size : join-value-to-unit($h3, em);
-$header-small-font-size  : join-value-to-unit($h4, em);
-$header-tiny-font-size   : join-value-to-unit($h5, em);
+$header-huge-font-size   : join-value-to-unit($h1, em) !default;
+$header-large-font-size  : join-value-to-unit($h2, em) !default;
+$header-medium-font-size : join-value-to-unit($h3, em) !default;
+$header-small-font-size  : join-value-to-unit($h4, em) !default;
+$header-tiny-font-size   : join-value-to-unit($h5, em) !default;
 
 //- Sub Header */
-$header-h1-sub-font-size: $large;
-$header-h2-sub-font-size: $large;
-$header-h3-sub-font-size: $medium;
-$header-h4-sub-font-size: $medium;
-$header-h5-sub-font-size: $small;
+$header-h1-sub-font-size: $large !default;
+$header-h2-sub-font-size: $large !default;
+$header-h3-sub-font-size: $medium !default;
+$header-h4-sub-font-size: $medium !default;
+$header-h5-sub-font-size: $small !default;
 
-$header-huge-sub-font-size  : $header-h1-sub-font-size;
-$header-large-sub-font-size : $header-h2-sub-font-size;
-$header-sub-font-size      : $header-h3-sub-font-size;
-$header-small-sub-font-size : $header-h4-sub-font-size;
-$header-tiny-sub-font-size  : $header-h5-sub-font-size;
+$header-huge-sub-font-size  : $header-h1-sub-font-size !default;
+$header-large-sub-font-size : $header-h2-sub-font-size !default;
+$header-sub-font-size      : $header-h3-sub-font-size !default;
+$header-small-sub-font-size : $header-h4-sub-font-size !default;
+$header-tiny-sub-font-size  : $header-h5-sub-font-size !default;
 
 //- Icon Header */
-$header-iconed-icon-size: 3em;
-$header-iconed-icon-opacity: 1;
-$header-iconed-icon-margin: 0.5rem;
-$header-circular-icon-size: 2em;
-$header-square-icon-size: 2em;
-$header-corner-icon-size: calc($header-iconed-icon-size * 0.45);
+$header-iconed-icon-size: 3em !default;
+$header-iconed-icon-opacity: 1 !default;
+$header-iconed-icon-margin: 0.5rem !default;
+$header-circular-icon-size: 2em !default;
+$header-square-icon-size: 2em !default;
+$header-corner-icon-size: calc($header-iconed-icon-size * 0.45) !default;
 
 //- No Line Height Offset */
-$header-icon-top-margin: 2rem;
-$header-icon-bottom-margin: $header-bottom-margin;
-$header-icon-first-margin: 0;
+$header-icon-top-margin: 2rem !default;
+$header-icon-bottom-margin: $header-bottom-margin !default;
+$header-icon-first-margin: 0 !default;
 
 //- Divided */
-$header-divided-border-width: 1px;
-$header-divided-border: $header-divided-border-width solid $border-color;
-$header-divided-colored-border-width: 2px;
+$header-divided-border-width: 1px !default;
+$header-divided-border: $header-divided-border-width solid $border-color !default;
+$header-divided-colored-border-width: 2px !default;
 
-$header-divided-border-padding: $_3px;
-$header-divided-sub-padding: $_3px;
-$header-divided-icon-padding: 0;
+$header-divided-border-padding: $_3px !default;
+$header-divided-sub-padding: $_3px !default;
+$header-divided-icon-padding: 0 !default;
 
 //- Block */
-$header-block-background: $dark-white;
-$header-block-box-shadow: none;
-$header-block-border-width: 1px;
-$header-block-border: $header-block-border-width solid $solid-border-color;
-$header-block-horizontal-padding: $medium;
-$header-block-vertical-padding: $mini;
-$header-block-border-radius: $default-border-radius;
+$header-block-background: $dark-white !default;
+$header-block-box-shadow: none !default;
+$header-block-border-width: 1px !default;
+$header-block-border: $header-block-border-width solid $solid-border-color !default;
+$header-block-horizontal-padding: $medium !default;
+$header-block-vertical-padding: $mini !default;
+$header-block-border-radius: $default-border-radius !default;
 
-$header-tiny-block: $tiny;
-$header-small-block: $small;
-$header-medium-block: $medium;
-$header-large-block: $large;
-$header-huge-block: $huge;
+$header-tiny-block: $tiny !default;
+$header-small-block: $small !default;
+$header-medium-block: $medium !default;
+$header-large-block: $large !default;
+$header-huge-block: $huge !default;
 
 //- Attached */
-$header-attached-offset: -1px;
-$header-attached-box-shadow: none;
-$header-attached-border: 1px solid $solid-border-color;
-$header-attached-vertical-padding: $header-block-vertical-padding;
-$header-attached-horizontal-padding: $header-block-horizontal-padding;
-$header-attached-background: $white;
-$header-attached-border-radius: $header-block-border-radius;
+$header-attached-offset: -1px !default;
+$header-attached-box-shadow: none !default;
+$header-attached-border: 1px solid $solid-border-color !default;
+$header-attached-vertical-padding: $header-block-vertical-padding !default;
+$header-attached-horizontal-padding: $header-block-horizontal-padding !default;
+$header-attached-background: $white !default;
+$header-attached-border-radius: $header-block-border-radius !default;
 
-$header-tiny-attached-size: $relative-tiny;
-$header-small-attached-size: $relative-small;
-$header-medium-attached-size: $relative-medium;
-$header-large-attached-size: $relative-large;
-$header-big-attached-size: $relative-big;
-$header-huge-attached-size: $relative-huge;
+$header-tiny-attached-size: $relative-tiny !default;
+$header-small-attached-size: $relative-small !default;
+$header-medium-attached-size: $relative-medium !default;
+$header-large-attached-size: $relative-large !default;
+$header-big-attached-size: $relative-big !default;
+$header-huge-attached-size: $relative-huge !default;
 
 //- Inverted */
-$header-inverted-color: $white;
-$header-inverted-sub-color: $inverted-muted-text-color;
-$header-inverted-divided-border-color: $white-border-color;
-$header-inverted-block-background: $light-black $subtle-gradient;
-$header-inverted-attached-background: $black;
+$header-inverted-color: $white !default;
+$header-inverted-sub-color: $inverted-muted-text-color !default;
+$header-inverted-divided-border-color: $white-border-color !default;
+$header-inverted-block-background: $light-black $subtle-gradient !default;
+$header-inverted-attached-background: $black !default;
 
 //- Floated */
-$header-floated-margin: 0.5em;
+$header-floated-margin: 0.5em !default;

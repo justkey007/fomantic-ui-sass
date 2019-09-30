@@ -5,43 +5,43 @@
 //--------------------  Element --------------------*/
 
 //- Simple */
-$embed-background: $light-grey;
-$embed-transition-duration: 0.5s;
-$embed-transition-easing: $default-easing;
+$embed-background: $light-grey !default;
+$embed-transition-duration: 0.5s !default;
+$embed-transition-easing: $default-easing !default;
 
 //- Placeholder */
-$embed-placeholder-underlay: $embed-background;
+$embed-placeholder-underlay: $embed-background !default;
 
 //- Placeholder Overlayed Background */
-$embed-placeholder-background: radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3));
-$embed-placeholder-background-opacity: 0.5;
-$embed-placeholder-background-transition: opacity $embed-transition-duration $embed-transition-easing;
+$embed-placeholder-background: radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3)) !default;
+$embed-placeholder-background-opacity: 0.5 !default;
+$embed-placeholder-background-transition: opacity $embed-transition-duration $embed-transition-easing !default;
 
 //- Icon */
-$embed-icon-background: $very-strong-transparent-black;
-$embed-icon-size: 6rem;
+$embed-icon-background: $very-strong-transparent-black !default;
+$embed-icon-size: 6rem !default;
 $embed-icon-transition:
   opacity $embed-transition-duration $embed-transition-easing,
   color $embed-transition-duration $embed-transition-easing
-;
-$embed-icon-color: $white;
+ !default;
+$embed-icon-color: $white !default;
 $embed-icon-shadow:
   0 2px 10px rgba(34, 36, 38, 0.2)
-;
-$embed-icon-z-index: 10;
+ !default;
+$embed-icon-z-index: 10 !default;
 
 //--------------------  States --------------------*/
 
 //- Hover */
-$embed-hover-placeholder-background: $embed-placeholder-background;
-$embed-hover-placeholder-background-opacity: 1;
-$embed-hover-icon-color: $white;
+$embed-hover-placeholder-background: $embed-placeholder-background !default;
+$embed-hover-placeholder-background-opacity: 1 !default;
+$embed-hover-icon-color: $white !default;
 
 
 //-------------------- Variations --------------------*/
 
 //- Aspect Ratios */
-$embed-square-ratio: (1/1) * 100%;
-$embed-widescreen-ratio: (9/16) * 100%;
-$embed-ultra-widescreen-ratio: (9/21) * 100%;
-$embed-standard-ratio: (3/4) * 100%;
+$embed-square-ratio: (1/1) * 100% !default;
+$embed-widescreen-ratio: (9/16) * 100% !default;
+$embed-ultra-widescreen-ratio: (9/21) * 100% !default;
+$embed-standard-ratio: (3/4) * 100% !default;

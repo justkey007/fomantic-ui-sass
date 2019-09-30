@@ -4,123 +4,123 @@
 
 //--------------------  Group --------------------*/
 
-$step-margin: 1em 0;
-$step-steps-border-radius: $default-border-radius;
-$step-steps-background: '';
-$step-steps-box-shadow: none;
-$step-steps-border: 1px solid $border-color;
+$step-margin: 1em 0 !default;
+$step-steps-border-radius: $default-border-radius !default;
+$step-steps-background: '' !default;
+$step-steps-box-shadow: none !default;
+$step-steps-border: 1px solid $border-color !default;
 
 //-------------------- Element --------------------*/
 
-$step-vertical-margin: 0;
-$step-horizontal-margin: 0;
+$step-vertical-margin: 0 !default;
+$step-horizontal-margin: 0 !default;
 
-$step-arrow-size: $relative-large;
-$step-vertical-padding: $relative-large;
-$step-horizontal-padding: 2em;
+$step-arrow-size: $relative-large !default;
+$step-vertical-padding: $relative-large !default;
+$step-horizontal-padding: 2em !default;
 
 $step-transition:
   background-color $default-duration $default-easing,
   opacity $default-duration $default-easing,
   color $default-duration $default-easing,
   box-shadow $default-duration $default-easing
-;
-$step-line-height: $relative-large;
-$step-align-items: center;
-$step-justify-content: center;
-$step-background-color: $white;
-$step-background: $step-background-color;
-$step-border-radius: 0;
-$step-border-width: 1px;
-$step-box-shadow: none;
-$step-border: none;
-$step-divider: $step-border-width solid $border-color;
+ !default;
+$step-line-height: $relative-large !default;
+$step-align-items: center !default;
+$step-justify-content: center !default;
+$step-background-color: $white !default;
+$step-background: $step-background-color !default;
+$step-border-radius: 0 !default;
+$step-border-width: 1px !default;
+$step-box-shadow: none !default;
+$step-border: none !default;
+$step-divider: $step-border-width solid $border-color !default;
 
 //- Icon */
-$step-icon-distance: 1rem;
-$step-icon-size: 2.5em;
-$step-icon-align: middle;
+$step-icon-distance: 1rem !default;
+$step-icon-size: 2.5em !default;
+$step-icon-align: middle !default;
 
 //- Title */
-$step-title-font-family: $header-font;
-$step-title-font-weight: $bold;
-$step-title-font-size: $relative-large;
-$step-title-color: $dark-text-color;
+$step-title-font-family: $header-font !default;
+$step-title-font-weight: $bold !default;
+$step-title-font-size: $relative-large !default;
+$step-title-color: $dark-text-color !default;
 
 //- Description */
-$step-description-distance: 0.25em;
-$step-description-font-size: $relative-small;
-$step-description-font-weight: $normal;
-$step-description-color: $text-color;
+$step-description-distance: 0.25em !default;
+$step-description-font-size: $relative-small !default;
+$step-description-font-weight: $normal !default;
+$step-description-color: $text-color !default;
 
 
 //- Arrow */
-$step-arrow-background-color: $step-background-color;
-$step-arrow-top-offset: 50%;
-$step-arrow-right-offset: 0;
-$step-arrow-border-width: 0 $step-border-width $step-border-width 0;
+$step-arrow-background-color: $step-background-color !default;
+$step-arrow-top-offset: 50% !default;
+$step-arrow-right-offset: 0 !default;
+$step-arrow-border-width: 0 $step-border-width $step-border-width 0 !default;
 
-$step-arrow-display: block;
-$step-last-arrow-display: none;
+$step-arrow-display: block !default;
+$step-last-arrow-display: none !default;
 
-$step-active-arrow-display: block;
-$step-active-last-arrow-display: none;
+$step-active-arrow-display: block !default;
+$step-active-last-arrow-display: none !default;
 
 //- Mobile */
-$step-mobile-icon-distance: $step-icon-distance;
+$step-mobile-icon-distance: $step-icon-distance !default;
 
 //--------------------  Types --------------------*/
 
 //- Vertical */
-$step-vertical-divider: $step-divider;
-$step-vertical-arrow-top-offset: 50%;
-$step-vertical-arrow-right-offset: 0;
-$step-vertical-arrow-border-width: 0 $step-border-width $step-border-width 0;
+$step-vertical-divider: $step-divider !default;
+$step-vertical-arrow-top-offset: 50% !default;
+$step-vertical-arrow-right-offset: 0 !default;
+$step-vertical-arrow-border-width: 0 $step-border-width $step-border-width 0 !default;
 
-$step-vertical-arrow-display: none;
-$step-vertical-last-arrow-display: $step-vertical-arrow-display;
+$step-vertical-arrow-display: none !default;
+$step-vertical-last-arrow-display: $step-vertical-arrow-display !default;
 
-$step-vertical-active-arrow-display: block;
-$step-vertical-active-last-arrow-display: block;
+$step-vertical-active-arrow-display: block !default;
+$step-vertical-active-last-arrow-display: block !default;
 
 //-------------------- Variations --------------------*/
 
-$step-attached-horizontal-offset: -$step-border-width;
-$step-attached-vertical-offset: 0;
-$step-attached-width: calc(100% + #{-$step-attached-horizontal-offset * 2});
+$step-attached-horizontal-offset: -$step-border-width !default;
+$step-attached-vertical-offset: 0 !default;
+$step-attached-width: calc(100% + #{-$step-attached-horizontal-offset * 2}) !default;
 
-$step-ordered-font-family: inherit;
-$step-ordered-font-weight: $bold;
+$step-ordered-font-family: inherit !default;
+$step-ordered-font-weight: $bold !default;
 
 //--------------------  States --------------------*/
 
 //- Completed */
-$step-completed-color: $positive-color;
+$step-completed-color: $positive-color !default;
 
 //- Hover */
-$step-hover-background: $off-white;
-$step-hover-color: $hovered-text-color;
+$step-hover-background: $off-white !default;
+$step-hover-color: $hovered-text-color !default;
 
 //- Down */
-$step-down-background: $dark-white;
-$step-down-color: $pressed-text-color;
+$step-down-background: $dark-white !default;
+$step-down-color: $pressed-text-color !default;
 
 //- Active */
-$step-active-background: $dark-white;
-$step-active-color: $link-color;
-$step-active-icon-color: $dark-text-color;
+$step-active-background: $dark-white !default;
+$step-active-color: $link-color !default;
+$step-active-icon-color: $dark-text-color !default;
 
 //- Active + Hover */
-$step-active-hover-background: $light-grey;
-$step-active-hover-color: $text-color;
+$step-active-hover-background: $light-grey !default;
+$step-active-hover-color: $text-color !default;
 
 
 //- Disabled */
-$step-disabled-background: $step-background;
-$step-disabled-color: $disabled-text-color;
+$step-disabled-background: $step-background !default;
+$step-disabled-color: $disabled-text-color !default;
 
 //- Inverted */
-$step-inverted-active-background: #333333;
-$step-inverted-active-hover-background: #444444;
-$step-inverted-hover-background: #3F3F3F;
-$step-inverted-disabled-background: #222222;
+$step-inverted-active-background: #333333 !default;
+$step-inverted-active-hover-background: #444444 !default;
+$step-inverted-hover-background: #3F3F3F !default;
+$step-inverted-disabled-background: #222222 !default;

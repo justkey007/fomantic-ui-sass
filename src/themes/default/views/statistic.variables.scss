@@ -4,92 +4,92 @@
 
 //--------------------  View --------------------*/
 
-$statistic-vertical-margin: 1em;
-$statistic-margin: $statistic-vertical-margin 0;
-$statistic-text-align: center;
-$statistic-max-width: none;
+$statistic-vertical-margin: 1em !default;
+$statistic-margin: $statistic-vertical-margin 0 !default;
+$statistic-text-align: center !default;
+$statistic-max-width: none !default;
 
 //- Group */
-$statistic-horizontal-spacing: 1.5em;
-$statistic-row-spacing: 1em;
-$statistic-group-margin: $statistic-vertical-margin -$statistic-horizontal-spacing -$statistic-row-spacing;
+$statistic-horizontal-spacing: 1.5em !default;
+$statistic-row-spacing: 1em !default;
+$statistic-group-margin: $statistic-vertical-margin -$statistic-horizontal-spacing -$statistic-row-spacing !default;
 
 //- Group Element */
-$statistic-element-margin: 0 $statistic-horizontal-spacing $statistic-row-spacing;
-$statistic-element-max-width: $statistic-max-width;
+$statistic-element-margin: 0 $statistic-horizontal-spacing $statistic-row-spacing !default;
+$statistic-element-max-width: $statistic-max-width !default;
 
 //--------------------  Content --------------------*/
 
 //- Value */
-$statistic-value-font: $page-font;
-$statistic-value-font-weight: $normal;
-$statistic-value-line-height: 1em;
-$statistic-value-color: $black;
-$statistic-value-text-transform: uppercase;
+$statistic-value-font: $page-font !default;
+$statistic-value-font-weight: $normal !default;
+$statistic-value-line-height: 1em !default;
+$statistic-value-color: $black !default;
+$statistic-value-text-transform: uppercase !default;
 
 //- Label */
-$statistic-label-size: $relative-medium;
-$statistic-top-label-distance: 0;
-$statistic-bottom-label-distance: 0;
-$statistic-label-font: $header-font;
-$statistic-label-font-weight: $bold;
-$statistic-label-color: $text-color;
-$statistic-label-line-height: $relative-large;
-$statistic-label-text-transform: uppercase;
+$statistic-label-size: $relative-medium !default;
+$statistic-top-label-distance: 0 !default;
+$statistic-bottom-label-distance: 0 !default;
+$statistic-label-font: $header-font !default;
+$statistic-label-font-weight: $bold !default;
+$statistic-label-color: $text-color !default;
+$statistic-label-line-height: $relative-large !default;
+$statistic-label-text-transform: uppercase !default;
 
 //- Text */
-$statistic-text-value-line-height: 1em;
-$statistic-text-value-min-height: 2em;
-$statistic-text-value-font-weight: $bold;
+$statistic-text-value-line-height: 1em !default;
+$statistic-text-value-min-height: 2em !default;
+$statistic-text-value-font-weight: $bold !default;
 
 //- Label Image */
-$statistic-image-height: 3rem;
-$statistic-image-vertical-align: baseline;
+$statistic-image-height: 3rem !default;
+$statistic-image-vertical-align: baseline !default;
 
 //-------------------- Types --------------------*/
 
-$statistic-horizontal-group-element-margin: 1em 0;
-$statistic-horizontal-label-distance: 0.75em;
+$statistic-horizontal-group-element-margin: 1em 0 !default;
+$statistic-horizontal-label-distance: 0.75em !default;
 
 //-------------------- Variations --------------------*/
 
 //- Floated */
-$statistic-left-floated-margin: 0 2em 1em 0;
-$statistic-right-floated-margin: 0 0 1em 2em;
+$statistic-left-floated-margin: 0 2em 1em 0 !default;
+$statistic-right-floated-margin: 0 0 1em 2em !default;
 
 //- Inverted */
-$statistic-inverted-value-color: $white;
-$statistic-inverted-label-color: $inverted-text-color;
+$statistic-inverted-value-color: $white !default;
+$statistic-inverted-label-color: $inverted-text-color !default;
 
 //- Item Width */
-$statistic-item-group-margin: 0 0 -$statistic-row-spacing;
-$statistic-item-margin: 0 0 $statistic-row-spacing;
+$statistic-item-group-margin: 0 0 -$statistic-row-spacing !default;
+$statistic-item-margin: 0 0 $statistic-row-spacing !default;
 
 //- Stackable */
-$statistic-stackable-row-spacing: 2rem;
-$statistic-stackable-gutter: 2rem;
+$statistic-stackable-row-spacing: 2rem !default;
+$statistic-stackable-gutter: 2rem !default;
 
 //- Size */
-$statistic-mini-text-value-size: 1rem;
-$statistic-mini-value-size: 1.5rem;
-$statistic-mini-horizontal-value-size: 1.5rem;
+$statistic-mini-text-value-size: 1rem !default;
+$statistic-mini-value-size: 1.5rem !default;
+$statistic-mini-horizontal-value-size: 1.5rem !default;
 
-$statistic-tiny-text-value-size: 1rem;
-$statistic-tiny-value-size: 2rem;
-$statistic-tiny-horizontal-value-size: 2rem;
+$statistic-tiny-text-value-size: 1rem !default;
+$statistic-tiny-value-size: 2rem !default;
+$statistic-tiny-horizontal-value-size: 2rem !default;
 
-$statistic-small-text-value-size: 1rem;
-$statistic-small-value-size: 3rem;
-$statistic-small-horizontal-value-size: 2rem;
+$statistic-small-text-value-size: 1rem !default;
+$statistic-small-value-size: 3rem !default;
+$statistic-small-horizontal-value-size: 2rem !default;
 
-$statistic-text-value-size: 2rem;
-$statistic-value-size: 4rem;
-$statistic-horizontal-value-size: 3rem;
+$statistic-text-value-size: 2rem !default;
+$statistic-value-size: 4rem !default;
+$statistic-horizontal-value-size: 3rem !default;
 
-$statistic-large-text-value-size: 2.5rem;
-$statistic-large-value-size: 5rem;
-$statistic-large-horizontal-value-size: 4rem;
+$statistic-large-text-value-size: 2.5rem !default;
+$statistic-large-value-size: 5rem !default;
+$statistic-large-horizontal-value-size: 4rem !default;
 
-$statistic-huge-text-value-size: 2.5rem;
-$statistic-huge-value-size: 6rem;
-$statistic-huge-horizontal-value-size: 5rem;
+$statistic-huge-text-value-size: 2.5rem !default;
+$statistic-huge-value-size: 6rem !default;
+$statistic-huge-horizontal-value-size: 5rem !default;

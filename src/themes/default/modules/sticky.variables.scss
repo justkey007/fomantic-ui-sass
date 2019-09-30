@@ -2,6 +2,6 @@
 
 //@-****************************** Sticky *******************************/
 
-$sticky-transition-duration: $default-duration;
-$sticky-transition: none;
-$sticky-z-index: 800;
+$sticky-transition-duration: $default-duration !default;
+$sticky-transition: none !default;
+$sticky-z-index: 800 !default;

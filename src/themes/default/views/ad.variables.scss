@@ -2,12 +2,12 @@
 
 //@-****************************** Advertisement *******************************/
 
-$ad-margin: 1em 0;
-$ad-overflow: hidden;
+$ad-margin: 1em 0 !default;
+$ad-overflow: hidden !default;
 
-$ad-test-background: $light-black;
-$ad-test-color: $white;
-$ad-test-font-weight: $bold;
-$ad-test-text: 'Ad';
-$ad-test-font-size: $relative-medium;
-$ad-test-mobile-font-size: $relative-tiny;
+$ad-test-background: $light-black !default;
+$ad-test-color: $white !default;
+$ad-test-font-weight: $bold !default;
+$ad-test-text: 'Ad' !default;
+$ad-test-font-size: $relative-medium !default;
+$ad-test-mobile-font-size: $relative-tiny !default;

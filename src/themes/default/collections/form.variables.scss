@@ -5,191 +5,191 @@
 //--------------------  Elements --------------------*/
 
 //- Form */
-$form-gutter-width: 1em;
-$form-row-distance: 1em;
+$form-gutter-width: 1em !default;
+$form-row-distance: 1em !default;
 
 //- Text */
-$form-paragraph-margin: $form-row-distance 0;
+$form-paragraph-margin: $form-row-distance 0 !default;
 
 //- Field */
-$form-field-margin: 0 0 $form-row-distance;
+$form-field-margin: 0 0 $form-row-distance !default;
 
 //- Fields */
-$form-fields-margin: 0 (-$form-gutter-width / 2) $form-row-distance;
+$form-fields-margin: 0 (-$form-gutter-width / 2) $form-row-distance !default;
 
 //- Form Label */
-$form-label-distance: $_4px;
-$form-label-margin: 0 0 $form-label-distance 0;
-$form-label-font-size: $relative-small;
-$form-label-font-weight: $bold;
-$form-label-text-transform: none;
-$form-label-color: $text-color;
+$form-label-distance: $_4px !default;
+$form-label-margin: 0 0 $form-label-distance 0 !default;
+$form-label-font-size: $relative-small !default;
+$form-label-font-weight: $bold !default;
+$form-label-text-transform: none !default;
+$form-label-color: $text-color !default;
 
 //- Input */
-$form-input-font: $page-font;
-$form-input-width: 100%;
-$form-input-font-size: 1em;
-$form-input-padding: ($input-vertical-padding + ((1em - $input-line-height) / 2)) $input-horizontal-padding;
-$form-input-border: 1px solid $border-color;
-$form-input-border-radius: $absolute-border-radius;
-$form-input-color: $text-color;
+$form-input-font: $page-font !default;
+$form-input-width: 100% !default;
+$form-input-font-size: 1em !default;
+$form-input-padding: ($input-vertical-padding + ((1em - $input-line-height) / 2)) $input-horizontal-padding !default;
+$form-input-border: 1px solid $border-color !default;
+$form-input-border-radius: $absolute-border-radius !default;
+$form-input-color: $text-color !default;
 $form-input-transition:
   color $default-duration $default-easing,
   border-color $default-duration $default-easing
-;
-$form-input-box-shadow: 0 0 0 0 transparent inset;
+ !default;
+$form-input-box-shadow: 0 0 0 0 transparent inset !default;
 
 //- Select */
-$form-select-background: $white;
-$form-select-border-radius: $form-input-border-radius;
-$form-select-border: $form-input-border;
-$form-select-padding: 0.62em $input-horizontal-padding;
-$form-select-box-shadow: $form-input-box-shadow;
-$form-select-transition: $form-input-transition;
-$form-select-color: $form-input-color;
+$form-select-background: $white !default;
+$form-select-border-radius: $form-input-border-radius !default;
+$form-select-border: $form-input-border !default;
+$form-select-padding: 0.62em $input-horizontal-padding !default;
+$form-select-box-shadow: $form-input-box-shadow !default;
+$form-select-transition: $form-input-transition !default;
+$form-select-color: $form-input-color !default;
 
 //- Text Area */
-$form-text-area-padding: $input-vertical-padding $input-horizontal-padding;
-$form-text-area-height: 12em;
-$form-text-area-resize: vertical;
-$form-text-area-line-height: 1.2857;
-$form-text-area-min-height: 8em;
-$form-text-area-max-height: 24em;
-$form-text-area-background: $input-background;
-$form-text-area-border: $form-input-border;
-$form-text-area-font-size: $form-input-font-size;
-$form-text-area-transition: $form-input-transition;
+$form-text-area-padding: $input-vertical-padding $input-horizontal-padding !default;
+$form-text-area-height: 12em !default;
+$form-text-area-resize: vertical !default;
+$form-text-area-line-height: 1.2857 !default;
+$form-text-area-min-height: 8em !default;
+$form-text-area-max-height: 24em !default;
+$form-text-area-background: $input-background !default;
+$form-text-area-border: $form-input-border !default;
+$form-text-area-font-size: $form-input-font-size !default;
+$form-text-area-transition: $form-input-transition !default;
 
 //- Checkbox */
-$form-checkbox-vertical-align: top;
-$form-checkbox-label-font-size: 1em;
-$form-checkbox-label-text-transform: $form-label-text-transform;
-$form-checkbox-label-field-top-margin: 0.7em;
-$form-checkbox-field-top-margin: 1.2em;
-$form-checkbox-toggle-field-top-margin: 1em;
-$form-checkbox-slider-field-top-margin: 1.4em;
+$form-checkbox-vertical-align: top !default;
+$form-checkbox-label-font-size: 1em !default;
+$form-checkbox-label-text-transform: $form-label-text-transform !default;
+$form-checkbox-label-field-top-margin: 0.7em !default;
+$form-checkbox-field-top-margin: 1.2em !default;
+$form-checkbox-toggle-field-top-margin: 1em !default;
+$form-checkbox-slider-field-top-margin: 1.4em !default;
 
 //- Errored Input */
-$form-error-color: $negative-text-color;
-$form-error-border: $negative-border-color;
-$form-error-background: $negative-background-color;
+$form-error-color: $negative-text-color !default;
+$form-error-border: $negative-border-color !default;
+$form-error-background: $negative-background-color !default;
 
 //- Inline Validation Prompt */
-$form-prompt-background: $white;
-$form-prompt-border-color: $form-error-border;
-$form-prompt-border: 1px solid $form-prompt-border-color;
-$form-prompt-text-color: $form-error-color;
-$form-inline-prompt-margin: -0.25em 0 -0.5em 0.5em;
-$form-inline-prompt-border-width: 1px;
+$form-prompt-background: $white !default;
+$form-prompt-border-color: $form-error-border !default;
+$form-prompt-border: 1px solid $form-prompt-border-color !default;
+$form-prompt-text-color: $form-error-color !default;
+$form-inline-prompt-margin: -0.25em 0 -0.5em 0.5em !default;
+$form-inline-prompt-border-width: 1px !default;
 
 //-------------------- States --------------------*/
 
 //- Focus */
-$form-input-focus-pointer-size: 0;
+$form-input-focus-pointer-size: 0 !default;
 
 //- Input Focus */
-$form-input-focus-background: $input-background;
-$form-input-focus-border-color: $focused-form-border-color;
-$form-input-focus-color: $selected-text-color;
-$form-input-focus-box-shadow: $form-input-focus-pointer-size 0 0 0 $selected-border-color inset;
-$form-input-focus-border-radius: $form-input-border-radius;
+$form-input-focus-background: $input-background !default;
+$form-input-focus-border-color: $focused-form-border-color !default;
+$form-input-focus-color: $selected-text-color !default;
+$form-input-focus-box-shadow: $form-input-focus-pointer-size 0 0 0 $selected-border-color inset !default;
+$form-input-focus-border-radius: $form-input-border-radius !default;
 
 //- Text Area Focus */
-$form-text-area-focus-background: $form-input-focus-background;
-$form-text-area-focus-border-color: $form-input-focus-border-color;
-$form-text-area-focus-color: $form-input-focus-color;
-$form-text-area-focus-box-shadow: $form-input-focus-box-shadow;
-$form-text-area-focus-border-radius: $form-input-focus-border-radius;
+$form-text-area-focus-background: $form-input-focus-background !default;
+$form-text-area-focus-border-color: $form-input-focus-border-color !default;
+$form-text-area-focus-color: $form-input-focus-color !default;
+$form-text-area-focus-box-shadow: $form-input-focus-box-shadow !default;
+$form-text-area-focus-border-radius: $form-input-focus-border-radius !default;
 
 //- Disabled */
-$form-disabled-label-opacity: $disabled-opacity;
+$form-disabled-label-opacity: $disabled-opacity !default;
 
 //- Errored Input */
-$form-transparent-error-color: $form-error-color;
-$form-transparent-error-background: $form-error-background;
-$form-transparent-padding: $form-input-padding;
+$form-transparent-error-color: $form-error-color !default;
+$form-transparent-error-background: $form-error-background !default;
+$form-transparent-padding: $form-input-padding !default;
 
 //- AutoFill */
-$form-input-auto-fill-background: #FFFFF0;
-$form-input-auto-fill-border: #E5DFA1;
-$form-input-auto-fill-focus-background: $form-input-auto-fill-background;
-$form-input-auto-fill-focus-border: #D5C315;
-$form-input-auto-fill-error-background: #FFFAF0;
-$form-input-auto-fill-error-border: #E0B4B4;
+$form-input-auto-fill-background: #FFFFF0 !default;
+$form-input-auto-fill-border: #E5DFA1 !default;
+$form-input-auto-fill-focus-background: $form-input-auto-fill-background !default;
+$form-input-auto-fill-focus-border: #D5C315 !default;
+$form-input-auto-fill-error-background: #FFFAF0 !default;
+$form-input-auto-fill-error-border: #E0B4B4 !default;
 
 
 //- Input Error */
-$form-input-error-border-radius: '';
-$form-input-error-box-shadow: none;
+$form-input-error-border-radius: '' !default;
+$form-input-error-box-shadow: none !default;
 
 //- Dropdown Error */
-$form-dropdown-error-hover-background: #FBE7E7;
-$form-dropdown-error-selected-background: $form-dropdown-error-hover-background;
-$form-dropdown-error-active-background: #FDCFCF;
-$form-dropdown-error-label-background: #EACBCB;
-$form-dropdown-error-label-color: $error-text-color;
+$form-dropdown-error-hover-background: #FBE7E7 !default;
+$form-dropdown-error-selected-background: $form-dropdown-error-hover-background !default;
+$form-dropdown-error-active-background: #FDCFCF !default;
+$form-dropdown-error-label-background: #EACBCB !default;
+$form-dropdown-error-label-color: $error-text-color !default;
 
 //- Focused Error */
-$form-input-error-focus-background: $negative-background-color;
-$form-input-error-focus-color: $negative-text-color;
-$form-input-error-focus-border: $negative-border-color;
-$form-input-error-focus-box-shadow: none;
+$form-input-error-focus-background: $negative-background-color !default;
+$form-input-error-focus-color: $negative-text-color !default;
+$form-input-error-focus-border: $negative-border-color !default;
+$form-input-error-focus-box-shadow: none !default;
 
 //- Placeholder Error */
-$form-input-error-placeholder-color: lighten($form-error-color, 40);
-$form-input-error-placeholder-focus-color: lighten($form-error-color, 30);
+$form-input-error-placeholder-color: lighten($form-error-color, 40) !default;
+$form-input-error-placeholder-focus-color: lighten($form-error-color, 30) !default;
 
 //- Loading Dimmer */
-$form-loader-dimmer-color: rgba(255, 255, 255, 0.8);
-$form-loader-inverted-dimmer-color: rgba(0, 0, 0 , 0.85);
-$form-loader-dimmer-z-index: 100;
+$form-loader-dimmer-color: rgba(255, 255, 255, 0.8) !default;
+$form-loader-inverted-dimmer-color: rgba(0, 0, 0 , 0.85) !default;
+$form-loader-dimmer-z-index: 100 !default;
 
 //- Loading Spinner */
-$form-loader-size: 3em;
-$form-loader-line-z-index: 101;
+$form-loader-size: 3em !default;
+$form-loader-line-z-index: 101 !default;
 
 //-------------------- Types --------------------*/
 
 //- Required */
-$form-required-content: '*';
-$form-required-color: $negative-color;
-$form-required-vertical-offset: -0.2em;
-$form-required-distance: 0.2em;
-$form-required-margin: $form-required-vertical-offset 0 0 $form-required-distance;
+$form-required-content: '*' !default;
+$form-required-color: $negative-color !default;
+$form-required-vertical-offset: -0.2em !default;
+$form-required-distance: 0.2em !default;
+$form-required-margin: $form-required-vertical-offset 0 0 $form-required-distance !default;
 
 //- Inverted */
-$form-inverted-input-background: $input-background;
-$form-inverted-input-border-color: $white-border-color;
-$form-inverted-input-box-shadow: $form-input-box-shadow;
-$form-inverted-input-color: $form-input-color;
-$form-inverted-label-color: $inverted-text-color;
-$form-inverted-input-box-shadow: none;
+$form-inverted-input-background: $input-background !default;
+$form-inverted-input-border-color: $white-border-color !default;
+$form-inverted-input-box-shadow: $form-input-box-shadow !default;
+$form-inverted-input-color: $form-input-color !default;
+$form-inverted-label-color: $inverted-text-color !default;
+$form-inverted-input-box-shadow: none !default;
 
 //-------------------- Variations --------------------*/
 
 //- Grouped Fields */
-$form-grouped-margin: $form-field-margin;
-$form-grouped-field-margin: 0.5em 0;
+$form-grouped-margin: $form-field-margin !default;
+$form-grouped-field-margin: 0.5em 0 !default;
 
-$form-grouped-label-distance: $form-label-distance;
-$form-grouped-label-color: $form-label-color;
-$form-grouped-label-margin: $form-label-margin;
-$form-grouped-label-font-size: $form-label-font-size;
-$form-grouped-label-font-weight: $form-label-font-weight;
-$form-grouped-label-text-transform: $form-label-text-transform;
+$form-grouped-label-distance: $form-label-distance !default;
+$form-grouped-label-color: $form-label-color !default;
+$form-grouped-label-margin: $form-label-margin !default;
+$form-grouped-label-font-size: $form-label-font-size !default;
+$form-grouped-label-font-weight: $form-label-font-weight !default;
+$form-grouped-label-text-transform: $form-label-text-transform !default;
 
 
 //- Inline */
-$form-inline-input-size: $relative-medium;
+$form-inline-input-size: $relative-medium !default;
 
-$form-inline-label-distance: $relative-tiny;
-$form-inline-label-color: $form-label-color;
-$form-inline-label-font-size: $form-label-font-size;
-$form-inline-label-font-weight: $form-label-font-weight;
-$form-inline-label-text-transform: $form-label-text-transform;
+$form-inline-label-distance: $relative-tiny !default;
+$form-inline-label-color: $form-label-color !default;
+$form-inline-label-font-size: $form-label-font-size !default;
+$form-inline-label-font-weight: $form-label-font-weight !default;
+$form-inline-label-text-transform: $form-label-text-transform !default;
 
-$form-grouped-inline-label-margin: 0.035714em 1em 0 0;
+$form-grouped-inline-label-margin: 0.035714em 1em 0 0 !default;
 
 //--------------------  Groups --------------------*/
 
-$form-inline-fields-margin: 0 1em 0 0;
+$form-inline-fields-margin: 0 1em 0 0 !default;

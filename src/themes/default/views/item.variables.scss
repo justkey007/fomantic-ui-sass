@@ -5,168 +5,168 @@
 //--------------------  View --------------------*/
 
 //- Group */
-$item-group-margin: 1.5em 0;
+$item-group-margin: 1.5em 0 !default;
 
 //- Item */
-$item-display: flex;
-$item-background: transparent;
-$item-border-radius: 0;
-$item-min-height: 0;
-$item-padding: 0;
-$item-width: 100%;
-$item-box-shadow: none;
-$item-border: none;
-$item-z-index: '';
-$item-transition: box-shadow $default-duration $default-easing;
+$item-display: flex !default;
+$item-background: transparent !default;
+$item-border-radius: 0 !default;
+$item-min-height: 0 !default;
+$item-padding: 0 !default;
+$item-width: 100% !default;
+$item-box-shadow: none !default;
+$item-border: none !default;
+$item-z-index: '' !default;
+$item-transition: box-shadow $default-duration $default-easing !default;
 
 //- Responsive */
-$item-spacing: 1em;
-$item-image-width: 175px;
-$item-content-image-distance: 1.5em;
+$item-spacing: 1em !default;
+$item-image-width: 175px !default;
+$item-content-image-distance: 1.5em !default;
 
-$item-tablet-spacing: 1em;
-$item-tablet-image-width: 150px;
-$item-tablet-content-image-distance: 1em;
+$item-tablet-spacing: 1em !default;
+$item-tablet-image-width: 150px !default;
+$item-tablet-content-image-distance: 1em !default;
 
-$item-mobile-spacing: 2em;
-$item-mobile-image-width: auto;
-$item-mobile-image-max-height: 250px;
-$item-mobile-content-image-distance: 1.5em;
+$item-mobile-spacing: 2em !default;
+$item-mobile-image-width: auto !default;
+$item-mobile-image-max-height: 250px !default;
+$item-mobile-content-image-distance: 1.5em !default;
 
 
 //--------------------  Content --------------------*/
 
 //- Image */
-$item-image-display: block;
-$item-image-float: none;
-$item-image-max-height: '';
-$item-image-vertical-align: start;
-$item-image-margin: 0;
-$item-image-padding: 0;
-$item-image-border: none;
-$item-image-border-radius: 0.125rem;
-$item-image-box-shadow: none;
-$item-image-border: none;
+$item-image-display: block !default;
+$item-image-float: none !default;
+$item-image-max-height: '' !default;
+$item-image-vertical-align: start !default;
+$item-image-margin: 0 !default;
+$item-image-padding: 0 !default;
+$item-image-border: none !default;
+$item-image-border-radius: 0.125rem !default;
+$item-image-box-shadow: none !default;
+$item-image-border: none !default;
 
 //- Content */
-$item-content-display: block;
-$item-content-vertical-align: start;
+$item-content-display: block !default;
+$item-content-vertical-align: start !default;
 
-$item-content-width: auto;
-$item-content-offset: 0;
-$item-content-background: none;
-$item-content-margin: 0;
-$item-content-padding: 0;
-$item-content-font-size: 1em;
-$item-content-border: none;
-$item-content-border-radius: 0;
-$item-content-box-shadow: none;
-$item-content-color: $text-color;
+$item-content-width: auto !default;
+$item-content-offset: 0 !default;
+$item-content-background: none !default;
+$item-content-margin: 0 !default;
+$item-content-padding: 0 !default;
+$item-content-font-size: 1em !default;
+$item-content-border: none !default;
+$item-content-border-radius: 0 !default;
+$item-content-box-shadow: none !default;
+$item-content-color: $text-color !default;
 
 //- Header */
-$item-header-margin: -$line-height-offset 0 0;
-$item-header-font-weight: $bold;
-$item-header-font-size: $relative-big;
-$item-header-color: $dark-text-color;
+$item-header-margin: -$line-height-offset 0 0 !default;
+$item-header-font-weight: $bold !default;
+$item-header-font-size: $relative-big !default;
+$item-header-color: $dark-text-color !default;
 
 //- Metadata */
-$item-meta-margin: 0.5em 0 0.5em;
-$item-meta-font-size: 1em;
-$item-meta-line-height: 1em;
-$item-meta-spacing: 0.3em;
-$item-meta-color: rgba(0, 0, 0, 0.6);
+$item-meta-margin: 0.5em 0 0.5em !default;
+$item-meta-font-size: 1em !default;
+$item-meta-line-height: 1em !default;
+$item-meta-spacing: 0.3em !default;
+$item-meta-color: rgba(0, 0, 0, 0.6) !default;
 
 //- Icons */
-$item-action-opacity: 0.75;
-$item-action-hover-opacity: 1;
-$item-action-transition: color $default-duration $default-easing;
+$item-action-opacity: 0.75 !default;
+$item-action-hover-opacity: 1 !default;
+$item-action-transition: color $default-duration $default-easing !default;
 
 //- Actions */
-$item-favorite-color: #FFB70A;
-$item-favorite-active-color: #FFE623;
-$item-like-color: #FF2733;
-$item-like-active-color: #FF2733;
+$item-favorite-color: #FFB70A !default;
+$item-favorite-active-color: #FFE623 !default;
+$item-like-color: #FF2733 !default;
+$item-like-active-color: #FF2733 !default;
 
 //- Links */
-$item-header-link-color: $item-header-color;
-$item-header-link-hover-color: $link-hover-color;
-$item-meta-link-color: $light-text-color;
-$item-meta-link-hover-color: $text-color;
-$item-content-link-color: '';
-$item-content-link-hover-color: '';
-$item-content-link-transition: color $default-duration $default-easing;
+$item-header-link-color: $item-header-color !default;
+$item-header-link-hover-color: $link-hover-color !default;
+$item-meta-link-color: $light-text-color !default;
+$item-meta-link-hover-color: $text-color !default;
+$item-content-link-color: '' !default;
+$item-content-link-hover-color: '' !default;
+$item-content-link-transition: color $default-duration $default-easing !default;
 
 
 //- Description */
-$item-description-distance: 0.6em;
-$item-description-max-width: auto;
-$item-description-font-size: 1em;
-$item-description-line-height: $line-height;
-$item-description-color: $text-color;
+$item-description-distance: 0.6em !default;
+$item-description-max-width: auto !default;
+$item-description-font-size: 1em !default;
+$item-description-line-height: $line-height !default;
+$item-description-color: $text-color !default;
 
 //- Content Image */
-$item-content-image-width: '';
-$item-content-image-vertical-align: center;
+$item-content-image-width: '' !default;
+$item-content-image-vertical-align: center !default;
 
 //- Avatar Image */
-$item-avatar-size: $item-content-image-width;
-$item-avatar-border-radius: $circular-radius;
+$item-avatar-size: $item-content-image-width !default;
+$item-avatar-border-radius: $circular-radius !default;
 
 //- Paragraph */
-$item-paragraph-distance: 0.5em;
+$item-paragraph-distance: 0.5em !default;
 
 //- Additional Content */
-$item-extra-divider: none;
-$item-extra-horizontal-spacing: 0.5rem;
-$item-extra-row-spacing: 0.5rem;
+$item-extra-divider: none !default;
+$item-extra-horizontal-spacing: 0.5rem !default;
+$item-extra-row-spacing: 0.5rem !default;
 
-$item-extra-background: none;
-$item-extra-display: block;
-$item-extra-position: relative;
-$item-extra-margin: (1rem - $item-extra-row-spacing) 0 0;
-$item-extra-top: 0;
-$item-extra-left: 0;
-$item-extra-width: 100%;
-$item-extra-padding: 0 0 0;
-$item-extra-box-shadow: none;
-$item-extra-color: $light-text-color;
-$item-extra-transition: color $default-duration $default-easing;
+$item-extra-background: none !default;
+$item-extra-display: block !default;
+$item-extra-position: relative !default;
+$item-extra-margin: (1rem - $item-extra-row-spacing) 0 0 !default;
+$item-extra-top: 0 !default;
+$item-extra-left: 0 !default;
+$item-extra-width: 100% !default;
+$item-extra-padding: 0 0 0 !default;
+$item-extra-box-shadow: none !default;
+$item-extra-color: $light-text-color !default;
+$item-extra-transition: color $default-duration $default-easing !default;
 
 //-------------------- Variations --------------------*/
 
 //- Relaxed */
-$item-relaxed-spacing: 1.5em;
-$item-very-relaxed-spacing: 2em;
+$item-relaxed-spacing: 1.5em !default;
+$item-very-relaxed-spacing: 2em !default;
 
 //- Divided */
-$item-divided-border: 1px solid $border-color;
-$item-divided-margin: 0;
-$item-divided-padding: 1em 0;
+$item-divided-border: 1px solid $border-color !default;
+$item-divided-margin: 0 !default;
+$item-divided-padding: 1em 0 !default;
 
-$item-divided-first-last-margin: 0;
-$item-divided-first-last-padding: 0;
+$item-divided-first-last-margin: 0 !default;
+$item-divided-first-last-padding: 0 !default;
 
 
 //- Unstackable */
-$item-unstackable-mobile-image-width: 125px;
+$item-unstackable-mobile-image-width: 125px !default;
 
 //- Inverted */
-$item-inverted-background: $item-background;
-$item-inverted-content-background: $item-content-background;
-$item-inverted-extra-background: $item-extra-background;
-$item-inverted-header-color: $inverted-text-color;
-$item-inverted-header-link-color: $item-inverted-header-color;
-$item-inverted-header-link-hover-color: $inverted-hovered-text-color;
-$item-inverted-meta-link-color: $inverted-light-text-color;
-$item-inverted-meta-link-hover-color: $inverted-text-color;
-$item-inverted-content-color: $inverted-text-color;
-$item-inverted-content-link-color: lighten(saturate($link-color, 30), 25);
-$item-inverted-content-link-hover-color: $link-color;
-$item-inverted-extra-color: $inverted-light-text-color;
-$item-inverted-description-color: $inverted-text-color;
-$item-inverted-meta-color: rgba(255, 255, 255, 0.8);
-$item-inverted-like-color: lighten($item-like-color,10);
-$item-inverted-like-active-color: lighten($item-like-active-color,10);
-$item-inverted-favorite-color: lighten($item-favorite-color,10);
-$item-inverted-favorite-active-color: lighten($item-favorite-active-color,10);
-$item-inverted-divided-border: 1px solid $white-border-color;
+$item-inverted-background: $item-background !default;
+$item-inverted-content-background: $item-content-background !default;
+$item-inverted-extra-background: $item-extra-background !default;
+$item-inverted-header-color: $inverted-text-color !default;
+$item-inverted-header-link-color: $item-inverted-header-color !default;
+$item-inverted-header-link-hover-color: $inverted-hovered-text-color !default;
+$item-inverted-meta-link-color: $inverted-light-text-color !default;
+$item-inverted-meta-link-hover-color: $inverted-text-color !default;
+$item-inverted-content-color: $inverted-text-color !default;
+$item-inverted-content-link-color: lighten(saturate($link-color, 30), 25) !default;
+$item-inverted-content-link-hover-color: $link-color !default;
+$item-inverted-extra-color: $inverted-light-text-color !default;
+$item-inverted-description-color: $inverted-text-color !default;
+$item-inverted-meta-color: rgba(255, 255, 255, 0.8) !default;
+$item-inverted-like-color: lighten($item-like-color,10) !default;
+$item-inverted-like-active-color: lighten($item-like-active-color,10) !default;
+$item-inverted-favorite-color: lighten($item-favorite-color,10) !default;
+$item-inverted-favorite-active-color: lighten($item-favorite-active-color,10) !default;
+$item-inverted-divided-border: 1px solid $white-border-color !default;

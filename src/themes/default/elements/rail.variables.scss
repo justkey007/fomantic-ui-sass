@@ -4,27 +4,27 @@
 
 //--------------------  Element --------------------*/
 
-$rail-width: 300px;
-$rail-height: 100%;
+$rail-width: 300px !default;
+$rail-height: 100% !default;
 
-$rail-distance: 4rem;
-$rail-split-distance: ($rail-distance / 2);
+$rail-distance: 4rem !default;
+$rail-split-distance: ($rail-distance / 2) !default;
 
 //-------------------- Variations --------------------*/
 
 //- Close */
-$rail-close-distance: 2em;
-$rail-very-close-distance: 1em;
+$rail-close-distance: 2em !default;
+$rail-very-close-distance: 1em !default;
 
-$rail-split-close-distance: ($rail-close-distance / 2);
-$rail-split-very-close-distance: ($rail-very-close-distance / 2);
+$rail-split-close-distance: ($rail-close-distance / 2) !default;
+$rail-split-very-close-distance: ($rail-very-close-distance / 2) !default;
 
-$rail-close-width:  calc(#{$rail-width} + #{$rail-split-close-distance});;
-$rail-very-close-width:  calc(#{$rail-width} + #{$rail-split-very-close-distance});;
+$rail-close-width:  calc(#{$rail-width} + #{$rail-split-close-distance}) !default;
+$rail-very-close-width:  calc(#{$rail-width} + #{$rail-split-very-close-distance}) !default;
 
 //- Dividing */
-$rail-dividing-border: 1px solid $border-color;
-$rail-dividing-distance: 5rem;
-$rail-split-dividing-distance: ($rail-dividing-distance / 2);
-$rail-dividing-width: strip-unit($rail-split-dividing-distance) + $rail-width;
+$rail-dividing-border: 1px solid $border-color !default;
+$rail-dividing-distance: 5rem !default;
+$rail-split-dividing-distance: ($rail-dividing-distance / 2) !default;
+$rail-dividing-width: strip-unit($rail-split-dividing-distance) + $rail-width !default;
 

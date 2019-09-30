@@ -4,31 +4,31 @@
 
 //--------------------  Breadcrumb --------------------*/
 
-$breadcrumb-vertical-margin: 0;
-$breadcrumb-display: inline-block;
-$breadcrumb-vertical-align: middle;
+$breadcrumb-vertical-margin: 0 !default;
+$breadcrumb-display: inline-block !default;
+$breadcrumb-vertical-align: middle !default;
 
-$breadcrumb-divider-spacing: $_3px;
-$breadcrumb-divider-opacity: 0.7;
-$breadcrumb-divider-color: $light-text-color;
+$breadcrumb-divider-spacing: $_3px !default;
+$breadcrumb-divider-opacity: 0.7 !default;
+$breadcrumb-divider-color: $light-text-color !default;
 
-$breadcrumb-divider-size: $relative-small;
-$breadcrumb-divider-vertical-align: baseline;
+$breadcrumb-divider-size: $relative-small !default;
+$breadcrumb-divider-vertical-align: baseline !default;
 
-$breadcrumb-icon-divider-size: $relative-tiny;
-$breadcrumb-icon-divider-vertical-align: baseline;
+$breadcrumb-icon-divider-size: $relative-tiny !default;
+$breadcrumb-icon-divider-vertical-align: baseline !default;
 
-$breadcrumb-section-margin: 0;
-$breadcrumb-section-padding: 0;
+$breadcrumb-section-margin: 0 !default;
+$breadcrumb-section-padding: 0 !default;
 
 //- Coupling */
-$breadcrumb-segment-padding: $relative-mini $relative-medium;
+$breadcrumb-segment-padding: $relative-mini $relative-medium !default;
 
 //- Inverted */
-$breadcrumb-inverted-color: $mid-white;
-$breadcrumb-inverted-active-color: $white;
-$breadcrumb-inverted-divider-color: $inverted-light-text-color;
+$breadcrumb-inverted-color: $mid-white !default;
+$breadcrumb-inverted-active-color: $white !default;
+$breadcrumb-inverted-divider-color: $inverted-light-text-color !default;
 
 //--------------------  States --------------------*/
 
-$breadcrumb-active-font-weight: $bold;
+$breadcrumb-active-font-weight: $bold !default;

@@ -4,140 +4,140 @@
 
 //--------------------  Element --------------------*/
 
-$segment-background: $white;
-$segment-border-width: 1px;
-$segment-border: $segment-border-width solid $border-color;
+$segment-background: $white !default;
+$segment-border-width: 1px !default;
+$segment-border: $segment-border-width solid $border-color !default;
 
-$segment-box-shadow: $subtle-shadow;
-$segment-vertical-padding: 1em;
-$segment-horizontal-padding: 1em;
-$segment-padding: $segment-vertical-padding $segment-horizontal-padding;
+$segment-box-shadow: $subtle-shadow !default;
+$segment-vertical-padding: 1em !default;
+$segment-horizontal-padding: 1em !default;
+$segment-padding: $segment-vertical-padding $segment-horizontal-padding !default;
 
-$segment-vertical-margin: 1rem;
-$segment-horizontal-margin: 0;
-$segment-margin: $segment-vertical-margin $segment-horizontal-margin;
-$segment-border-radius: $default-border-radius;
+$segment-vertical-margin: 1rem !default;
+$segment-horizontal-margin: 0 !default;
+$segment-margin: $segment-vertical-margin $segment-horizontal-margin !default;
+$segment-border-radius: $default-border-radius !default;
 
 //--------------------  Group --------------------*/
 
-$segment-grouped-super-margin: $segment-margin;
-$segment-grouped-super-border: $segment-border;
-$segment-grouped-super-box-shadow: $segment-box-shadow;
-$segment-grouped-border-radius: $segment-border-radius;
+$segment-grouped-super-margin: $segment-margin !default;
+$segment-grouped-super-border: $segment-border !default;
+$segment-grouped-super-box-shadow: $segment-box-shadow !default;
+$segment-grouped-border-radius: $segment-border-radius !default;
 
-$segment-nested-group-margin: $segment-vertical-margin $segment-vertical-margin;
+$segment-nested-group-margin: $segment-vertical-margin $segment-vertical-margin !default;
 
-$segment-grouped-border: none;
-$segment-grouped-divider: $segment-border;
-$segment-grouped-margin: 0;
-$segment-grouped-width: auto;
-$segment-grouped-box-shadow: none;
+$segment-grouped-border: none !default;
+$segment-grouped-divider: $segment-border !default;
+$segment-grouped-margin: 0 !default;
+$segment-grouped-width: auto !default;
+$segment-grouped-box-shadow: none !default;
 
 //--------------------  Coupling --------------------*/
 
 //- Page Grid Segment */
-$segment-page-grid-margin: (2 * $segment-vertical-padding);
+$segment-page-grid-margin: (2 * $segment-vertical-padding) !default;
 
 //-****************************** Types *******************************/
 
 //- Placeholder */
-$segment-placeholder-background: $off-white;
-$segment-placeholder-padding: $segment-padding;
-$segment-placeholder-border-color: $border-color;
-$segment-placeholder-box-shadow: 0 2px 25px 0 rgba(34, 36, 38, 0.05) inset;
-$segment-placeholder-min-height: 18rem;
-$segment-placeholder-content-max-width: 15rem;
-$segment-placeholder-content-inline-button-margin: 0 $_5px 0 0;
+$segment-placeholder-background: $off-white !default;
+$segment-placeholder-padding: $segment-padding !default;
+$segment-placeholder-border-color: $border-color !default;
+$segment-placeholder-box-shadow: 0 2px 25px 0 rgba(34, 36, 38, 0.05) inset !default;
+$segment-placeholder-min-height: 18rem !default;
+$segment-placeholder-content-max-width: 15rem !default;
+$segment-placeholder-content-inline-button-margin: 0 $_5px 0 0 !default;
 
 
 //- Piled */
-$segment-piled-z-index: auto;
-$segment-piled-margin: 3em;
-$segment-piled-box-shadow: '';
-$segment-piled-degrees: 1.2deg;
-$segment-piled-border: $segment-border;
+$segment-piled-z-index: auto !default;
+$segment-piled-margin: 3em !default;
+$segment-piled-box-shadow: '' !default;
+$segment-piled-degrees: 1.2deg !default;
+$segment-piled-border: $segment-border !default;
 
 //- Circular */
-$segment-circular-padding: 2em;
+$segment-circular-padding: 2em !default;
 
 //- Stacked */
-$segment-stacked-height: 6px;
-$segment-stacked-page-background: $subtle-transparent-black;
-$segment-stacked-padding: $segment-vertical-padding + (0.4em);
-$segment-tall-stacked-padding: $segment-vertical-padding + (0.8em);
+$segment-stacked-height: 6px !default;
+$segment-stacked-page-background: $subtle-transparent-black !default;
+$segment-stacked-padding: $segment-vertical-padding + (0.4em) !default;
+$segment-tall-stacked-padding: $segment-vertical-padding + (0.8em) !default;
 
 //-****************************** States *******************************/
 
 //- Loading Dimmer */
-$segment-loader-dimmer-color: rgba(255, 255, 255, 0.8);
-$segment-loader-inverted-dimmer-color: rgba(0, 0, 0 , 0.85);
-$segment-loader-dimmer-z-index: 100;
+$segment-loader-dimmer-color: rgba(255, 255, 255, 0.8) !default;
+$segment-loader-inverted-dimmer-color: rgba(0, 0, 0 , 0.85) !default;
+$segment-loader-dimmer-z-index: 100 !default;
 
 //- Loading Spinner */
-$segment-loader-size: 3em;
-$segment-loader-line-z-index: 101;
+$segment-loader-size: 3em !default;
+$segment-loader-line-z-index: 101 !default;
 
 
 //-****************************** Variations *******************************/
 
 
 //- Raised */
-$segment-raised-box-shadow: $floating-shadow;
+$segment-raised-box-shadow: $floating-shadow !default;
 
 //- Padded */
-$segment-padded-padding: 1.5em;
-$segment-very-padded-padding: 3em;
+$segment-padded-padding: 1.5em !default;
+$segment-very-padded-padding: 3em !default;
 
 //- Attached */
-$segment-attached-top-offset: 0;
-$segment-attached-bottom-offset: 0;
-$segment-attached-horizontal-offset: -$segment-border-width;
-$segment-attached-width: calc(100% + #{-$segment-attached-horizontal-offset * 2});
-$segment-attached-box-shadow: none;
-$segment-attached-border: $segment-border-width solid $solid-border-color;
+$segment-attached-top-offset: 0 !default;
+$segment-attached-bottom-offset: 0 !default;
+$segment-attached-horizontal-offset: -$segment-border-width !default;
+$segment-attached-width: calc(100% + #{-$segment-attached-horizontal-offset * 2}) !default;
+$segment-attached-box-shadow: none !default;
+$segment-attached-border: $segment-border-width solid $solid-border-color !default;
 $segment-attached-bottom-box-shadow:
   $segment-box-shadow,
   $segment-attached-box-shadow
-;
+ !default;
 
 //- Inverted */
-$segment-inverted-background: $black;
+$segment-inverted-background: $black !default;
 
 //- Floated */
-$segment-floated-distance: 1em;
+$segment-floated-distance: 1em !default;
 
 //- Basic */
-$segment-basic-background: none transparent;
-$segment-basic-border: none;
-$segment-basic-box-shadow: none;
-$segment-basic-border-radius: 0;
+$segment-basic-background: none transparent !default;
+$segment-basic-border: none !default;
+$segment-basic-box-shadow: none !default;
+$segment-basic-border-radius: 0 !default;
 
 //- Colors */
-$segment-colored-border-size: 2px;
+$segment-colored-border-size: 2px !default;
 
 //- Ordinality */
-$segment-secondary-background: $dark-white;
-$segment-secondary-color: $muted-text-color;
+$segment-secondary-background: $dark-white !default;
+$segment-secondary-color: $muted-text-color !default;
 
-$segment-tertiary-background:  $mid-white;
-$segment-tertiary-color: $muted-text-color;
+$segment-tertiary-background:  $mid-white !default;
+$segment-tertiary-color: $muted-text-color !default;
 
-$segment-secondary-inverted-lightness: 0.2;
+$segment-secondary-inverted-lightness: 0.2 !default;
 $segment-secondary-inverted-background:
   lighten($black, ($segment-secondary-inverted-lightness * 100))
   linear-gradient(
     rgba(255, 255, 255, $segment-secondary-inverted-lightness) 0,
     rgba(255, 255, 255, $segment-secondary-inverted-lightness) 100%
   )
-;
-$segment-secondary-inverted-color: $inverted-muted-text-color;
+ !default;
+$segment-secondary-inverted-color: $inverted-muted-text-color !default;
 
-$segment-tertiary-inverted-lightness: 0.35;
+$segment-tertiary-inverted-lightness: 0.35 !default;
 $segment-tertiary-inverted-background:
   lighten($black, ($segment-tertiary-inverted-lightness * 100))
   linear-gradient(
     rgba(255, 255, 255, $segment-tertiary-inverted-lightness) 0,
     rgba(255, 255, 255, $segment-tertiary-inverted-lightness) 100%
   )
-;
-$segment-tertiary-inverted-color: $inverted-muted-text-color;
+ !default;
+$segment-tertiary-inverted-color: $inverted-muted-text-color !default;

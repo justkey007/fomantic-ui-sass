@@ -2,199 +2,199 @@
 
 //@-******************************  Modal *******************************/
 //- Image / Description */
-$modal-image-width: '';
-$modal-image-icon-size: 8rem;
-$modal-image-vertical-align: start;
+$modal-image-width: '' !default;
+$modal-image-icon-size: 8rem !default;
+$modal-image-vertical-align: start !default;
 
-$modal-description-distance: 2em;
-$modal-description-min-width: '';
-$modal-description-width: auto;
-$modal-description-vertical-align: start;
+$modal-description-distance: 2em !default;
+$modal-description-min-width: '' !default;
+$modal-description-width: auto !default;
+$modal-description-vertical-align: start !default;
 
 //- Modal Actions */
-$modal-action-border: 1px solid $border-color;
-$modal-action-background: $off-white;
-$modal-action-padding: 1rem 1rem;
-$modal-action-align: right;
+$modal-action-border: 1px solid $border-color !default;
+$modal-action-background: $off-white !default;
+$modal-action-padding: 1rem 1rem !default;
+$modal-action-align: right !default;
 
-$modal-button-distance: 0.75em;
+$modal-button-distance: 0.75em !default;
 
-$modal-background: $white;
-$modal-border: none;
-$modal-z-index: 1001;
-$modal-border-radius: $default-border-radius;
-$modal-transform-origin: 50% 25%;
+$modal-background: $white !default;
+$modal-border: none !default;
+$modal-z-index: 1001 !default;
+$modal-border-radius: $default-border-radius !default;
+$modal-transform-origin: 50% 25% !default;
 $modal-box-shadow:
   1px 3px 3px 0 rgba(0, 0, 0, 0.2),
   1px 3px 15px 2px rgba(0, 0, 0, 0.2)
-;
+ !default;
 
 //- Close Icon */
-$modal-close-opacity: 0.8;
-$modal-close-size: 1.25em;
-$modal-close-color: $white;
+$modal-close-opacity: 0.8 !default;
+$modal-close-size: 1.25em !default;
+$modal-close-color: $white !default;
 
-$modal-close-hitbox: 2.25rem;
-$modal-close-distance: 0.25rem;
-$modal-close-hit-box-offset: ($modal-close-hitbox - 1rem) / 2;
-$modal-close-padding: $modal-close-hit-box-offset 0 0 0;
-$modal-close-top: -($modal-close-distance + $modal-close-hitbox);
-$modal-close-right: -($modal-close-distance + $modal-close-hitbox);
+$modal-close-hitbox: 2.25rem !default;
+$modal-close-distance: 0.25rem !default;
+$modal-close-hit-box-offset: ($modal-close-hitbox - 1rem) / 2 !default;
+$modal-close-padding: $modal-close-hit-box-offset 0 0 0 !default;
+$modal-close-top: -($modal-close-distance + $modal-close-hitbox) !default;
+$modal-close-right: -($modal-close-distance + $modal-close-hitbox) !default;
 
 //- Header */
-$modal-header-margin: 0;
-$modal-header-vertical-padding: 1.25rem;
-$modal-header-horizontal-padding: 1.5rem;
-$modal-header-padding: $modal-header-vertical-padding $modal-header-horizontal-padding;
-$modal-header-background: $white;
-$modal-header-color: $dark-text-color;
-$modal-header-font-size: $huge;
-$modal-header-box-shadow: none;
-$modal-header-font-weight: $bold;
-$modal-header-font-family: $header-font;
-$modal-header-border: 1px solid $border-color;
+$modal-header-margin: 0 !default;
+$modal-header-vertical-padding: 1.25rem !default;
+$modal-header-horizontal-padding: 1.5rem !default;
+$modal-header-padding: $modal-header-vertical-padding $modal-header-horizontal-padding !default;
+$modal-header-background: $white !default;
+$modal-header-color: $dark-text-color !default;
+$modal-header-font-size: $huge !default;
+$modal-header-box-shadow: none !default;
+$modal-header-font-weight: $bold !default;
+$modal-header-font-family: $header-font !default;
+$modal-header-border: 1px solid $border-color !default;
 
 //- Content */
-$modal-content-font-size: 1em;
-$modal-content-padding: 1.5rem;
-$modal-content-line-height: 1.4;
-$modal-content-background: #FFFFFF;
+$modal-content-font-size: 1em !default;
+$modal-content-padding: 1.5rem !default;
+$modal-content-line-height: 1.4 !default;
+$modal-content-background: #FFFFFF !default;
 
 
 //- Inner Close Position (Tablet/Mobile) */
-$modal-inner-close-top: (strip-unit($modal-header-vertical-padding - $modal-close-hit-box-offset) + ($line-height - 1em));
-$modal-inner-close-right: 1rem;
-$modal-inner-close-color: $text-color;
+$modal-inner-close-top: (strip-unit($modal-header-vertical-padding - $modal-close-hit-box-offset) + ($line-height - 1em)) !default;
+$modal-inner-close-right: 1rem !default;
+$modal-inner-close-color: $text-color !default;
 
 //- Mobile Positions */
-$modal-mobile-header-padding: 0.75rem 1rem;
-$modal-mobile-content-padding: 1rem;
-$modal-mobile-image-padding: 0 0 1rem;
-$modal-mobile-description-padding: 1rem 0 ;
-$modal-mobile-button-distance: 1rem;
-$modal-mobile-action-padding: 1rem 1rem (1rem - $modal-mobile-button-distance);
-$modal-mobile-image-icon-size: 5rem;
-$modal-mobile-close-top: 0.5rem;
-$modal-mobile-close-right: 0.5rem;
+$modal-mobile-header-padding: 0.75rem 1rem !default;
+$modal-mobile-content-padding: 1rem !default;
+$modal-mobile-image-padding: 0 0 1rem !default;
+$modal-mobile-description-padding: 1rem 0  !default;
+$modal-mobile-button-distance: 1rem !default;
+$modal-mobile-action-padding: 1rem 1rem (1rem - $modal-mobile-button-distance) !default;
+$modal-mobile-image-icon-size: 5rem !default;
+$modal-mobile-close-top: 0.5rem !default;
+$modal-mobile-close-right: 0.5rem !default;
 
 //- Responsive Widths */
-$modal-mobile-width: 95%;
-$modal-tablet-width: 88%;
-$modal-computer-width: 850px;
-$modal-large-monitor-width: 900px;
-$modal-widescreen-monitor-width: 950px;
+$modal-mobile-width: 95% !default;
+$modal-tablet-width: 88% !default;
+$modal-computer-width: 850px !default;
+$modal-large-monitor-width: 900px !default;
+$modal-widescreen-monitor-width: 950px !default;
 
-$modal-mobile-margin: 0 0 0 0;
-$modal-tablet-margin: 0 0 0 0;
-$modal-computer-margin: 0 0 0 0;
-$modal-large-monitor-margin: 0 0 0 0;
-$modal-widescreen-monitor-margin: 0 0 0 0;
+$modal-mobile-margin: 0 0 0 0 !default;
+$modal-tablet-margin: 0 0 0 0 !default;
+$modal-computer-margin: 0 0 0 0 !default;
+$modal-large-monitor-margin: 0 0 0 0 !default;
+$modal-widescreen-monitor-margin: 0 0 0 0 !default;
 
-$modal-full-screen-width: 95%;
-$modal-full-screen-offset: (100% - $modal-full-screen-width) / 2;
-$modal-full-screen-margin: 1em auto;
+$modal-full-screen-width: 95% !default;
+$modal-full-screen-offset: (100% - $modal-full-screen-width) / 2 !default;
+$modal-full-screen-margin: 1em auto !default;
 
 //- Coupling */
-$modal-inverted-box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
+$modal-inverted-box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2) !default;
 
 //--------------------  States --------------------*/
 
-$modal-loading-z-index: -1;
+$modal-loading-z-index: -1 !default;
 
 //-------------------- Types --------------------*/
 
 //- Basic */
-$modal-basic-header-color: $white;
-$modal-basic-color: $white;
-$modal-basic-close-top: 1rem;
-$modal-basic-close-right: 1.5rem;
-$modal-basic-inner-close-color: $white;
+$modal-basic-header-color: $white !default;
+$modal-basic-color: $white !default;
+$modal-basic-close-top: 1rem !default;
+$modal-basic-close-right: 1.5rem !default;
+$modal-basic-inner-close-color: $white !default;
 
-$modal-basic-inverted-color: $text-color;
-$modal-basic-inverted-header-color: $dark-text-color;
+$modal-basic-inverted-color: $text-color !default;
+$modal-basic-inverted-header-color: $dark-text-color !default;
 
 //- Aligned */
-$modal-top-aligned-margin: 5vh;
-$modal-mobile-top-aligned-margin: 1rem;
-$modal-bottom-aligned-margin: $modal-top-aligned-margin;
-$modal-mobile-bottom-aligned-margin: $modal-mobile-top-aligned-margin;
+$modal-top-aligned-margin: 5vh !default;
+$modal-mobile-top-aligned-margin: 1rem !default;
+$modal-bottom-aligned-margin: $modal-top-aligned-margin !default;
+$modal-mobile-bottom-aligned-margin: $modal-mobile-top-aligned-margin !default;
 
 //- Scrolling Margin */
-$modal-scrolling-margin: 1rem;
-$modal-mobile-scrolling-margin: $modal-mobile-top-aligned-margin;
+$modal-scrolling-margin: 1rem !default;
+$modal-mobile-scrolling-margin: $modal-mobile-top-aligned-margin !default;
 
 //- Scrolling Content */
-$modal-scrolling-content-max-height: calc(80vh - 10rem);
-$modal-overlay-fullscreen-scrolling-content-max-height: calc(100vh - 9.1rem);
-$modal-overlay-fullscreen-scrolling-content-max-height-mobile: calc(100vh - 8.1rem);
+$modal-scrolling-content-max-height: calc(80vh - 10rem) !default;
+$modal-overlay-fullscreen-scrolling-content-max-height: calc(100vh - 9.1rem) !default;
+$modal-overlay-fullscreen-scrolling-content-max-height-mobile: calc(100vh - 8.1rem) !default;
 
 //-------------------- Variations --------------------*/
 
 //- Size Widths */
-$modal-mini-ratio: 0.4;
-$modal-tiny-ratio: 0.6;
-$modal-small-ratio: 0.8;
-$modal-large-ratio: 1.2;
+$modal-mini-ratio: 0.4 !default;
+$modal-tiny-ratio: 0.6 !default;
+$modal-small-ratio: 0.8 !default;
+$modal-large-ratio: 1.2 !default;
 
 //- Derived Responsive Sizes */
-$modal-mini-header-size: 1.3em;
-$modal-mini-mobile-width: $modal-mobile-width;
-$modal-mini-tablet-width: ($modal-tablet-width * $modal-mini-ratio);
-$modal-mini-computer-width: ($modal-computer-width * $modal-mini-ratio);
-$modal-mini-large-monitor-width: ($modal-large-monitor-width * $modal-mini-ratio);
-$modal-mini-widescreen-monitor-width: ($modal-widescreen-monitor-width * $modal-mini-ratio);
+$modal-mini-header-size: 1.3em !default;
+$modal-mini-mobile-width: $modal-mobile-width !default;
+$modal-mini-tablet-width: ($modal-tablet-width * $modal-mini-ratio) !default;
+$modal-mini-computer-width: ($modal-computer-width * $modal-mini-ratio) !default;
+$modal-mini-large-monitor-width: ($modal-large-monitor-width * $modal-mini-ratio) !default;
+$modal-mini-widescreen-monitor-width: ($modal-widescreen-monitor-width * $modal-mini-ratio) !default;
 
-$modal-mini-mobile-margin: 0 0 0 0;
-$modal-mini-tablet-margin: 0 0 0 0;
-$modal-mini-computer-margin: 0 0 0 0;
-$modal-mini-large-monitor-margin: 0 0 0 0;
-$modal-mini-widescreen-monitor-margin: 0 0 0 0;
+$modal-mini-mobile-margin: 0 0 0 0 !default;
+$modal-mini-tablet-margin: 0 0 0 0 !default;
+$modal-mini-computer-margin: 0 0 0 0 !default;
+$modal-mini-large-monitor-margin: 0 0 0 0 !default;
+$modal-mini-widescreen-monitor-margin: 0 0 0 0 !default;
 
-$modal-tiny-header-size: 1.3em;
-$modal-tiny-mobile-width: $modal-mobile-width;
-$modal-tiny-tablet-width: ($modal-tablet-width * $modal-tiny-ratio);
-$modal-tiny-computer-width: ($modal-computer-width * $modal-tiny-ratio);
-$modal-tiny-large-monitor-width: ($modal-large-monitor-width * $modal-tiny-ratio);
-$modal-tiny-widescreen-monitor-width: ($modal-widescreen-monitor-width * $modal-tiny-ratio);
+$modal-tiny-header-size: 1.3em !default;
+$modal-tiny-mobile-width: $modal-mobile-width !default;
+$modal-tiny-tablet-width: ($modal-tablet-width * $modal-tiny-ratio) !default;
+$modal-tiny-computer-width: ($modal-computer-width * $modal-tiny-ratio) !default;
+$modal-tiny-large-monitor-width: ($modal-large-monitor-width * $modal-tiny-ratio) !default;
+$modal-tiny-widescreen-monitor-width: ($modal-widescreen-monitor-width * $modal-tiny-ratio) !default;
 
-$modal-tiny-mobile-margin: 0 0 0 0;
-$modal-tiny-tablet-margin: 0 0 0 0;
-$modal-tiny-computer-margin: 0 0 0 0;
-$modal-tiny-large-monitor-margin: 0 0 0 0;
-$modal-tiny-widescreen-monitor-margin: 0 0 0 0;
+$modal-tiny-mobile-margin: 0 0 0 0 !default;
+$modal-tiny-tablet-margin: 0 0 0 0 !default;
+$modal-tiny-computer-margin: 0 0 0 0 !default;
+$modal-tiny-large-monitor-margin: 0 0 0 0 !default;
+$modal-tiny-widescreen-monitor-margin: 0 0 0 0 !default;
 
-$modal-small-header-size: 1.3em;
-$modal-small-mobile-width: $modal-mobile-width;
-$modal-small-tablet-width: ($modal-tablet-width * $modal-small-ratio);
-$modal-small-computer-width: ($modal-computer-width * $modal-small-ratio);
-$modal-small-large-monitor-width: ($modal-large-monitor-width * $modal-small-ratio);
-$modal-small-widescreen-monitor-width: ($modal-widescreen-monitor-width * $modal-small-ratio);
+$modal-small-header-size: 1.3em !default;
+$modal-small-mobile-width: $modal-mobile-width !default;
+$modal-small-tablet-width: ($modal-tablet-width * $modal-small-ratio) !default;
+$modal-small-computer-width: ($modal-computer-width * $modal-small-ratio) !default;
+$modal-small-large-monitor-width: ($modal-large-monitor-width * $modal-small-ratio) !default;
+$modal-small-widescreen-monitor-width: ($modal-widescreen-monitor-width * $modal-small-ratio) !default;
 
-$modal-small-mobile-margin: 0 0 0 0;
-$modal-small-tablet-margin: 0 0 0 0;
-$modal-small-computer-margin: 0 0 0 0;
-$modal-small-large-monitor-margin: 0 0 0 0;
-$modal-small-widescreen-monitor-margin: 0 0 0 0;
+$modal-small-mobile-margin: 0 0 0 0 !default;
+$modal-small-tablet-margin: 0 0 0 0 !default;
+$modal-small-computer-margin: 0 0 0 0 !default;
+$modal-small-large-monitor-margin: 0 0 0 0 !default;
+$modal-small-widescreen-monitor-margin: 0 0 0 0 !default;
 
-$modal-large-header-size: 1.6em;
-$modal-large-mobile-width: $modal-mobile-width;
-$modal-large-tablet-width: $modal-tablet-width;
-$modal-large-computer-width: ($modal-computer-width * $modal-large-ratio);
-$modal-large-large-monitor-width: ($modal-large-monitor-width * $modal-large-ratio);
-$modal-large-widescreen-monitor-width: ($modal-widescreen-monitor-width * $modal-large-ratio);
+$modal-large-header-size: 1.6em !default;
+$modal-large-mobile-width: $modal-mobile-width !default;
+$modal-large-tablet-width: $modal-tablet-width !default;
+$modal-large-computer-width: ($modal-computer-width * $modal-large-ratio) !default;
+$modal-large-large-monitor-width: ($modal-large-monitor-width * $modal-large-ratio) !default;
+$modal-large-widescreen-monitor-width: ($modal-widescreen-monitor-width * $modal-large-ratio) !default;
 
-$modal-large-mobile-margin: 0 0 0 0;
-$modal-large-tablet-margin: 0 0 0 0;
-$modal-large-computer-margin: 0 0 0 0;
-$modal-large-large-monitor-margin: 0 0 0 0;
-$modal-large-widescreen-monitor-margin: 0 0 0 0;
+$modal-large-mobile-margin: 0 0 0 0 !default;
+$modal-large-tablet-margin: 0 0 0 0 !default;
+$modal-large-computer-margin: 0 0 0 0 !default;
+$modal-large-large-monitor-margin: 0 0 0 0 !default;
+$modal-large-widescreen-monitor-margin: 0 0 0 0 !default;
 
 //-------------------- Inverted --------------------*/
-$modal-inverted-background: rgba(0,0,0,.9);
-$modal-inverted-close-color: $white;
-$modal-inverted-header-color: $white;
-$modal-inverted-header-background-color: $dark-text-color;
-$modal-inverted-action-background: #191A1B;
-$modal-inverted-action-border: 1px solid rgba(34, 36, 38, 0.85);
-$modal-inverted-action-color: $white;
-$modal-inverted-dimmer-close-color: rgba(0,0,0,.85);
+$modal-inverted-background: rgba(0,0,0,.9) !default;
+$modal-inverted-close-color: $white !default;
+$modal-inverted-header-color: $white !default;
+$modal-inverted-header-background-color: $dark-text-color !default;
+$modal-inverted-action-background: #191A1B !default;
+$modal-inverted-action-border: 1px solid rgba(34, 36, 38, 0.85) !default;
+$modal-inverted-action-color: $white !default;
+$modal-inverted-dimmer-close-color: rgba(0,0,0,.85) !default;

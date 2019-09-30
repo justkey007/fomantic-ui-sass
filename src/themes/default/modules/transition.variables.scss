@@ -2,9 +2,9 @@
 
 //@-****************************** Transition *******************************/
 
-$transition-default-easing: $default-easing;
-$transition-default-fill: both;
-$transition-default-duration: 300ms;
+$transition-default-easing: $default-easing !default;
+$transition-default-fill: both !default;
+$transition-default-duration: 300ms !default;
 
-$transition-use3-d-acceleration: translateZ(0);
-$transition-backface-visibility: hidden;
+$transition-use3-d-acceleration: translateZ(0) !default;
+$transition-backface-visibility: hidden !default;

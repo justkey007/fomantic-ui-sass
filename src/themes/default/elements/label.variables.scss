@@ -4,249 +4,249 @@
 
 //--------------------  Element --------------------*/
 
-$label-vertical-align: baseline;
-$label-vertical-margin: 0;
-$label-horizontal-margin: $relative2px;
-$label-background-color: #E8E8E8;
-$label-color: $muted-text-color;
-$label-background-image: none;
-$label-vertical-padding: 0.5833em; //- medium is not $em-size custom value required */
-$label-horizontal-padding: 0.833em;
-$label-border-radius: $absolute-border-radius;
-$label-text-transform: none;
-$label-font-weight: $bold;
-$label-border-width: 1px;
-$label-border: 0 solid transparent;
+$label-vertical-align: baseline !default;
+$label-vertical-margin: 0 !default;
+$label-horizontal-margin: $relative2px !default;
+$label-background-color: #E8E8E8 !default;
+$label-color: $muted-text-color !default;
+$label-background-image: none !default;
+$label-vertical-padding: 0.5833em !default; //- medium is not $em-size custom value required */
+$label-horizontal-padding: 0.833em !default;
+$label-border-radius: $absolute-border-radius !default;
+$label-text-transform: none !default;
+$label-font-weight: $bold !default;
+$label-border-width: 1px !default;
+$label-border: 0 solid transparent !default;
 
-$label-line-height-offset: -($label-vertical-padding / 2);
+$label-line-height-offset: -($label-vertical-padding / 2) !default;
 
-$label-transition-duration: $default-duration;
-$label-transition-easing: $default-easing;
-$label-transition: background $label-transition-duration $label-transition-easing;
+$label-transition-duration: $default-duration !default;
+$label-transition-easing: $default-easing !default;
+$label-transition: background $label-transition-duration $label-transition-easing !default;
 
 //- Group */
-$label-group-vertical-margin: 0.5em;
-$label-group-horizontal-margin: 0.5em;
+$label-group-vertical-margin: 0.5em !default;
+$label-group-horizontal-margin: 0.5em !default;
 
 //-------------------- Parts --------------------*/
 
 //- Link */
-$label-link-opacity: 0.5;
-$label-link-transition: $label-transition-duration opacity $label-transition-easing;
+$label-link-opacity: 0.5 !default;
+$label-link-transition: $label-transition-duration opacity $label-transition-easing !default;
 
 //- Icon */
-$label-icon-distance: 0.75em;
+$label-icon-distance: 0.75em !default;
 
 //- Image */
-$label-image-height: (1em + $label-vertical-padding * 2);
+$label-image-height: (1em + $label-vertical-padding * 2) !default;
 
 //- Detail */
-$label-detail-font-weight: $bold;
-$label-detail-opacity: 0.8;
-$label-detail-icon-distance: 0.25em;
-$label-detail-margin: 1em;
+$label-detail-font-weight: $bold !default;
+$label-detail-opacity: 0.8 !default;
+$label-detail-icon-distance: 0.25em !default;
+$label-detail-margin: 1em !default;
 
 //- Delete */
-$label-delete-opacity: $label-link-opacity;
-$label-delete-size: $relative-small;
-$label-delete-margin: 0.5em;
-$label-delete-transition: background $label-transition-duration $label-transition-easing;
+$label-delete-opacity: $label-link-opacity !default;
+$label-delete-size: $relative-small !default;
+$label-delete-margin: 0.5em !default;
+$label-delete-transition: background $label-transition-duration $label-transition-easing !default;
 
 //-------------------- Types --------------------*/
 
 //- Image Label */
-$label-image-background: $label-background-color;
-$label-image-vertical-padding: $label-vertical-padding;
-$label-image-horizontal-padding: $label-horizontal-padding;
-$label-image-text-distance: 0.5em;
-$label-image-detail-distance: $label-image-text-distance;
-$label-image-border-radius: $label-border-radius;
-$label-image-box-shadow: none;
-$label-image-padding: $label-image-vertical-padding $label-image-horizontal-padding $label-image-vertical-padding $label-image-text-distance;
+$label-image-background: $label-background-color !default;
+$label-image-vertical-padding: $label-vertical-padding !default;
+$label-image-horizontal-padding: $label-horizontal-padding !default;
+$label-image-text-distance: 0.5em !default;
+$label-image-detail-distance: $label-image-text-distance !default;
+$label-image-border-radius: $label-border-radius !default;
+$label-image-box-shadow: none !default;
+$label-image-padding: $label-image-vertical-padding $label-image-horizontal-padding $label-image-vertical-padding $label-image-text-distance !default;
 
-$label-image-image-margin: (-$label-vertical-padding) $label-image-text-distance (-$label-vertical-padding) (-$label-image-text-distance);
-$label-image-image-border-radius: $label-image-border-radius 0 0 $label-image-border-radius;
-$label-image-image-height: $label-image-height;
+$label-image-image-margin: (-$label-vertical-padding) $label-image-text-distance (-$label-vertical-padding) (-$label-image-text-distance) !default;
+$label-image-image-border-radius: $label-image-border-radius 0 0 $label-image-border-radius !default;
+$label-image-image-height: $label-image-height !default;
 
-$label-image-detail-background: $strong-transparent-black;
-$label-image-detail-padding: $label-image-vertical-padding $label-image-horizontal-padding;
-$label-image-detail-margin: -$label-image-vertical-padding (-$label-image-horizontal-padding) (-$label-image-vertical-padding) $label-image-detail-distance;
+$label-image-detail-background: $strong-transparent-black !default;
+$label-image-detail-padding: $label-image-vertical-padding $label-image-horizontal-padding !default;
+$label-image-detail-margin: -$label-image-vertical-padding (-$label-image-horizontal-padding) (-$label-image-vertical-padding) $label-image-detail-distance !default;
 
 //-------------------- States --------------------*/
 
 //- Hover */
-$label-hover-background-color: #E0E0E0;
-$label-hover-background-image: none;
-$label-hover-text-color: $hovered-text-color;
+$label-hover-background-color: #E0E0E0 !default;
+$label-hover-background-image: none !default;
+$label-hover-text-color: $hovered-text-color !default;
 
 //- Active */
-$label-active-background-color: #D0D0D0;
-$label-active-background-image: none;
-$label-active-text-color: $selected-text-color;
+$label-active-background-color: #D0D0D0 !default;
+$label-active-background-image: none !default;
+$label-active-text-color: $selected-text-color !default;
 
 //- Active Hover */
-$label-active-hover-background-color: #C8C8C8;
-$label-active-hover-background-image: none;
-$label-active-hover-text-color: $selected-text-color;
+$label-active-hover-background-color: #C8C8C8 !default;
+$label-active-hover-background-image: none !default;
+$label-active-hover-text-color: $selected-text-color !default;
 
 
 //-------------------- Variations --------------------*/
 
 //- Basic */
-$label-basic-background: none $white;
-$label-basic-border-width: 1px;
-$label-basic-border-width-offset: -$label-basic-border-width;
-$label-basic-border-full-width-offset: calc(100% + #{$label-basic-border-width});
-$label-basic-border: $label-basic-border-width solid $border-color;
-$label-basic-color: $text-color;
-$label-basic-box-shadow: none;
+$label-basic-background: none $white !default;
+$label-basic-border-width: 1px !default;
+$label-basic-border-width-offset: -$label-basic-border-width !default;
+$label-basic-border-full-width-offset: calc(100% + #{$label-basic-border-width}) !default;
+$label-basic-border: $label-basic-border-width solid $border-color !default;
+$label-basic-color: $text-color !default;
+$label-basic-box-shadow: none !default;
 
-$label-basic-hover-background: $label-basic-background;
-$label-basic-hover-color: $link-hover-color;
-$label-basic-hover-border: $label-basic-border;
-$label-basic-hover-box-shadow: $label-basic-box-shadow;
+$label-basic-hover-background: $label-basic-background !default;
+$label-basic-hover-color: $link-hover-color !default;
+$label-basic-hover-border: $label-basic-border !default;
+$label-basic-hover-box-shadow: $label-basic-box-shadow !default;
 
 //- Tag */
-$label-tag-circle-color: $white;
-$label-tag-circle-size: 0.5em;
-$label-tag-horizontal-padding: 1.5em;
-$label-tag-circle-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
-$label-basic-tag-circle-box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.8);
-$label-tag-triangle-right-offset: 100%;
-$label-tag-triangle-top-offset: 50%;
-$label-tag-triangle-size: 1.56em;
-$label-tag-triangle-background-image: none;
-$label-tag-transition: none; //- Avoids error with background: inherit; on animation */
+$label-tag-circle-color: $white !default;
+$label-tag-circle-size: 0.5em !default;
+$label-tag-horizontal-padding: 1.5em !default;
+$label-tag-circle-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3) !default;
+$label-basic-tag-circle-box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.8) !default;
+$label-tag-triangle-right-offset: 100% !default;
+$label-tag-triangle-top-offset: 50% !default;
+$label-tag-triangle-size: 1.56em !default;
+$label-tag-triangle-background-image: none !default;
+$label-tag-transition: none !default; //- Avoids error with background: inherit !default; on animation */
 
 //- Ribbon */
-$label-ribbon-triangle-size: 1.2em;
-$label-basic-ribbon-triangle-size:  calc(#{$label-ribbon-triangle-size} - #{$label-basic-border-width});;
-$label-basic-ribbon-triangle-size-offset:  calc(1rem + #{$label-ribbon-triangle-size} - #{$label-basic-border-width});;
-$label-ribbon-shadow-color: rgba(0, 0, 0, 0.15);
+$label-ribbon-triangle-size: 1.2em !default;
+$label-basic-ribbon-triangle-size:  calc(#{$label-ribbon-triangle-size} - #{$label-basic-border-width}) !default;
+$label-basic-ribbon-triangle-size-offset:  calc(1rem + #{$label-ribbon-triangle-size} - #{$label-basic-border-width}) !default;
+$label-ribbon-shadow-color: rgba(0, 0, 0, 0.15) !default;
 
-$label-ribbon-margin: 1rem;
-$label-ribbon-offset:  calc(#{-$label-ribbon-margin} - #{$label-ribbon-triangle-size});;
-$label-basic-ribbon-offset:  calc(#{$label-vertical-padding} - #{$label-basic-border-width});;
-$label-ribbon-distance:  calc(#{$label-ribbon-margin} + #{$label-ribbon-triangle-size});;
-$label-right-ribbon-offset:  calc(100% + #{$label-ribbon-margin} + #{$label-ribbon-triangle-size});;
+$label-ribbon-margin: 1rem !default;
+$label-ribbon-offset:  calc(#{-$label-ribbon-margin} - #{$label-ribbon-triangle-size}) !default;
+$label-basic-ribbon-offset:  calc(#{$label-vertical-padding} - #{$label-basic-border-width}) !default;
+$label-ribbon-distance:  calc(#{$label-ribbon-margin} + #{$label-ribbon-triangle-size}) !default;
+$label-right-ribbon-offset:  calc(100% + #{$label-ribbon-margin} + #{$label-ribbon-triangle-size}) !default;
 
-$label-ribbon-image-top-distance: 1rem;
-$label-ribbon-image-margin: -0.05rem; //- Rounding Offset on Triangle */
-$label-ribbon-image-offset:  calc(#{-$label-ribbon-image-margin} - #{$label-ribbon-triangle-size});;
-$label-right-ribbon-image-offset:  calc(100% + #{$label-ribbon-image-margin} + #{$label-ribbon-triangle-size});;
+$label-ribbon-image-top-distance: 1rem !default;
+$label-ribbon-image-margin: -0.05rem !default; //- Rounding Offset on Triangle */
+$label-ribbon-image-offset:  calc(#{-$label-ribbon-image-margin} - #{$label-ribbon-triangle-size}) !default;
+$label-right-ribbon-image-offset:  calc(100% + #{$label-ribbon-image-margin} + #{$label-ribbon-triangle-size}) !default;
 
-$label-ribbon-table-margin: $relative-medium; //- Rounding Offset on Triangle */
-$label-ribbon-table-offset:  calc(#{-$label-ribbon-table-margin} - #{$label-ribbon-triangle-size});;
-$label-right-ribbon-table-offset:  calc(100% + #{$label-ribbon-table-margin} + #{$label-ribbon-triangle-size});;
+$label-ribbon-table-margin: $relative-medium !default; //- Rounding Offset on Triangle */
+$label-ribbon-table-offset:  calc(#{-$label-ribbon-table-margin} - #{$label-ribbon-triangle-size}) !default;
+$label-right-ribbon-table-offset:  calc(100% + #{$label-ribbon-table-margin} + #{$label-ribbon-triangle-size}) !default;
 
 //- Inverted */
-$label-inverted-background-color: darken($label-background-color,20);
-$label-inverted-background: $black;
-$label-inverted-box-shadow-size: 2px;
-$label-inverted-border-size: 1px;
+$label-inverted-background-color: darken($label-background-color,20) !default;
+$label-inverted-background: $black !default;
+$label-inverted-box-shadow-size: 2px !default;
+$label-inverted-border-size: 1px !default;
 
-$label-basic-inverted-border-color: rgba(255, 255, 255, 0.5);
+$label-basic-inverted-border-color: rgba(255, 255, 255, 0.5) !default;
 
 //- Colors */
-$label-red-text-color: $white;
-$label-orange-text-color: $white;
-$label-yellow-text-color: $white;
-$label-olive-text-color: $white;
-$label-green-text-color: $white;
-$label-teal-text-color: $white;
-$label-blue-text-color: $white;
-$label-violet-text-color: $white;
-$label-purple-text-color: $white;
-$label-pink-text-color: $white;
-$label-brown-text-color: $white;
-$label-grey-text-color: $white;
-$label-black-text-color: $white;
+$label-red-text-color: $white !default;
+$label-orange-text-color: $white !default;
+$label-yellow-text-color: $white !default;
+$label-olive-text-color: $white !default;
+$label-green-text-color: $white !default;
+$label-teal-text-color: $white !default;
+$label-blue-text-color: $white !default;
+$label-violet-text-color: $white !default;
+$label-purple-text-color: $white !default;
+$label-pink-text-color: $white !default;
+$label-brown-text-color: $white !default;
+$label-grey-text-color: $white !default;
+$label-black-text-color: $white !default;
 
-$label-red-hover-text-color: $white;
-$label-orange-hover-text-color: $white;
-$label-yellow-hover-text-color: $white;
-$label-olive-hover-text-color: $white;
-$label-green-hover-text-color: $white;
-$label-teal-hover-text-color: $white;
-$label-blue-hover-text-color: $white;
-$label-violet-hover-text-color: $white;
-$label-purple-hover-text-color: $white;
-$label-pink-hover-text-color: $white;
-$label-brown-hover-text-color: $white;
-$label-grey-hover-text-color: $white;
-$label-black-hover-text-color: $white;
+$label-red-hover-text-color: $white !default;
+$label-orange-hover-text-color: $white !default;
+$label-yellow-hover-text-color: $white !default;
+$label-olive-hover-text-color: $white !default;
+$label-green-hover-text-color: $white !default;
+$label-teal-hover-text-color: $white !default;
+$label-blue-hover-text-color: $white !default;
+$label-violet-hover-text-color: $white !default;
+$label-purple-hover-text-color: $white !default;
+$label-pink-hover-text-color: $white !default;
+$label-brown-hover-text-color: $white !default;
+$label-grey-hover-text-color: $white !default;
+$label-black-hover-text-color: $white !default;
 
-$label-primary-hover-text-color: $white;
-$label-secondary-hover-text-color: $white;
+$label-primary-hover-text-color: $white !default;
+$label-secondary-hover-text-color: $white !default;
 
-$label-primary-text-color: $inverted-text-color;
-$label-secondary-text-color: $inverted-text-color;
+$label-primary-text-color: $inverted-text-color !default;
+$label-secondary-text-color: $inverted-text-color !default;
 
 //- Attached */
-$label-attached-segment-padding: 2rem;
-$label-attached-vertical-padding: 0.75em;
-$label-attached-horizontal-padding: 1em;
+$label-attached-segment-padding: 2rem !default;
+$label-attached-vertical-padding: 0.75em !default;
+$label-attached-horizontal-padding: 1em !default;
 
-$label-attached-corner-border-radius: $_3px;
-$label-attached-border-radius: $label-border-radius;
+$label-attached-corner-border-radius: $_3px !default;
+$label-attached-border-radius: $label-border-radius !default;
 
 //- Corner */
-$label-corner-size-ratio: 1;
-$label-corner-transition: color $label-transition-duration $label-transition-easing;
-$label-corner-triangle-size: 4em;
-$label-corner-triangle-transition: border-color $label-transition-duration $label-transition-easing;
-$label-corner-triangle-z-index: 1;
+$label-corner-size-ratio: 1 !default;
+$label-corner-transition: color $label-transition-duration $label-transition-easing !default;
+$label-corner-triangle-size: 4em !default;
+$label-corner-triangle-transition: border-color $label-transition-duration $label-transition-easing !default;
+$label-corner-triangle-z-index: 1 !default;
 
-$label-corner-icon-size: $relative-large;
-$label-corner-icon-top-offset: $relative9px;
-$label-corner-icon-left-offset: $relative8px;
-$label-corner-icon-right-offset: $relative8px;
+$label-corner-icon-size: $relative-large !default;
+$label-corner-icon-top-offset: $relative9px !default;
+$label-corner-icon-left-offset: $relative8px !default;
+$label-corner-icon-right-offset: $relative8px !default;
 
 //- Corner Text */
-$label-corner-text-width: 3em;
-$label-corner-text-weight: $bold;
-$label-corner-text-size: 1em;
+$label-corner-text-width: 3em !default;
+$label-corner-text-weight: $bold !default;
+$label-corner-text-size: 1em !default;
 
 //- Horizontal */
-$label-horizontal-min-width: 3em;
-$label-in-horizontal-position-margin: 0.5em;
-$label-horizontal-vertical-padding: 0.4em;
+$label-horizontal-min-width: 3em !default;
+$label-in-horizontal-position-margin: 0.5em !default;
+$label-horizontal-vertical-padding: 0.4em !default;
 
 //- Circular Padding */
-$label-circular-padding: 0.5em;
-$label-circular-min-size: 2em;
-$label-empty-circle-size: 0.5em;
+$label-circular-padding: 0.5em !default;
+$label-circular-min-size: 2em !default;
+$label-empty-circle-size: 0.5em !default;
 
 //- Pointing */
-$label-pointing-border-color: inherit;
-$label-pointing-border-width: $label-border-width;
-$label-pointing-vertical-distance: 1em;
-$label-pointing-triangle-size: 0.6666em;
-$label-pointing-horizontal-distance: $label-pointing-triangle-size;
+$label-pointing-border-color: inherit !default;
+$label-pointing-border-width: $label-border-width !default;
+$label-pointing-vertical-distance: 1em !default;
+$label-pointing-triangle-size: 0.6666em !default;
+$label-pointing-horizontal-distance: $label-pointing-triangle-size !default;
 
-$label-pointing-triangle-transition: none; //- Avoids error with background: inherit; on animation */
-$label-pointing-triangle-z-index: 2;
+$label-pointing-triangle-transition: none !default; //- Avoids error with background: inherit !default; on animation */
+$label-pointing-triangle-z-index: 2 !default;
 
 //- Basic Pointing */
-$label-basic-pointing-triangle-offset: -$label-pointing-border-width;
+$label-basic-pointing-triangle-offset: -$label-pointing-border-width !default;
 
 //- Floating */
-$label-floating-top-offset: -1em;
-$label-floating-bottom-offset: $label-floating-top-offset;
-$label-floating-align-offset: 1.2em;
-$label-floating-z-index: 100;
+$label-floating-top-offset: -1em !default;
+$label-floating-bottom-offset: $label-floating-top-offset !default;
+$label-floating-align-offset: 1.2em !default;
+$label-floating-z-index: 100 !default;
 
 //-------------------- Group --------------------*/
 
 //- Sizing */
-$label-mini    : $_9px;
-$label-tiny    : $_10px;
-$label-small   : $_11px;
-$label-medium  : $_12px;
-$label-large   : $absolute-medium;
-$label-big     : $absolute-big;
-$label-huge    : $absolute-huge;
-$label-massive : $absolute-massive;
+$label-mini    : $_9px !default;
+$label-tiny    : $_10px !default;
+$label-small   : $_11px !default;
+$label-medium  : $_12px !default;
+$label-large   : $absolute-medium !default;
+$label-big     : $absolute-big !default;
+$label-huge    : $absolute-huge !default;
+$label-massive : $absolute-massive !default;
 
 $label-colors-map: (
   primary: (
@@ -639,4 +639,4 @@ $label-colors-map: (
     isDark         : true,
     isVeryDark     : true,
   )
-);
+) !default;

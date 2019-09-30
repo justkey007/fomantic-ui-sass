@@ -1,450 +1,450 @@
-@import '../globals/variables';
+@import "../globals/variables";
 
 //@-****************************** Dropdown *******************************/
 
 //--------------------  Element --------------------*/
 
-$dropdown-transition: box-shadow $default-duration $default-easing, width $default-duration $default-easing;
-$dropdown-border-radius: $default-border-radius;
+$dropdown-transition: box-shadow $default-duration $default-easing, width $default-duration $default-easing !default;
+$dropdown-border-radius: $default-border-radius !default;
 
-$dropdown-raised-shadow: 0 2px 3px 0 $border-color;
+$dropdown-raised-shadow: 0 2px 3px 0 $border-color !default;
 
 //--------------------  Content --------------------*/
 
 //- Icon */
-$dropdown-icon-size: $relative12px;
-$dropdown-icon-margin: 0 0 0 1em;
+$dropdown-icon-size: $relative12px !default;
+$dropdown-icon-margin: 0 0 0 1em !default;
 
 //- Current Text */
-$dropdown-text-transition: none;
+$dropdown-text-transition: none !default;
 
 //- Menu */
-$dropdown-menu-background: #ffffff;
-$dropdown-menu-margin: 0;
-$dropdown-menu-padding: 0 0;
-$dropdown-menu-top: 100%;
-$dropdown-menu-text-align: left;
+$dropdown-menu-background: #ffffff !default;
+$dropdown-menu-margin: 0 !default;
+$dropdown-menu-padding: 0 0 !default;
+$dropdown-menu-top: 100% !default;
+$dropdown-menu-text-align: left !default;
 
-$dropdown-menu-border-width: 1px;
-$dropdown-menu-border-color: $border-color;
-$dropdown-menu-border: $dropdown-menu-border-width solid $dropdown-menu-border-color;
-$dropdown-menu-box-shadow: $dropdown-raised-shadow;
-$dropdown-menu-border-radius: $dropdown-border-radius;
-$dropdown-menu-transition: opacity $default-duration $default-easing;
-$dropdown-menu-min-width: calc(100% + #{$dropdown-menu-border-width * 2});
-$dropdown-menu-z-index: 11;
+$dropdown-menu-border-width: 1px !default;
+$dropdown-menu-border-color: $border-color !default;
+$dropdown-menu-border: $dropdown-menu-border-width solid $dropdown-menu-border-color !default;
+$dropdown-menu-box-shadow: $dropdown-raised-shadow !default;
+$dropdown-menu-border-radius: $dropdown-border-radius !default;
+$dropdown-menu-transition: opacity $default-duration $default-easing !default;
+$dropdown-menu-min-width: calc(100% + #{$dropdown-menu-border-width * 2}) !default;
+$dropdown-menu-z-index: 11 !default;
 
 //- Text */
-$dropdown-text-line-height: 1em;
-$dropdown-text-line-height-offset: ($dropdown-text-line-height - 1em);
-$dropdown-text-cursor-spacing: 1px;
+$dropdown-text-line-height: 1em !default;
+$dropdown-text-line-height-offset: ($dropdown-text-line-height - 1em) !default;
+$dropdown-text-cursor-spacing: 1px !default;
 
 //- Menu Item */
-$dropdown-item-font-size: $medium;
-$dropdown-item-text-align: left;
-$dropdown-item-border: none;
-$dropdown-item-height: auto;
-$dropdown-item-divider: none;
-$dropdown-item-color: $text-color;
-$dropdown-item-vertical-padding: $mini;
-$dropdown-item-horizontal-padding: $large;
-$dropdown-item-padding: $dropdown-item-vertical-padding $dropdown-item-horizontal-padding;
-$dropdown-item-font-weight: $normal;
-$dropdown-item-line-height: 1em;
-$dropdown-item-line-height-offset: ($dropdown-item-line-height - 1em);
-$dropdown-item-text-transform: none;
-$dropdown-item-box-shadow: none;
+$dropdown-item-font-size: $medium !default;
+$dropdown-item-text-align: left !default;
+$dropdown-item-border: none !default;
+$dropdown-item-height: auto !default;
+$dropdown-item-divider: none !default;
+$dropdown-item-color: $text-color !default;
+$dropdown-item-vertical-padding: $mini !default;
+$dropdown-item-horizontal-padding: $large !default;
+$dropdown-item-padding: $dropdown-item-vertical-padding $dropdown-item-horizontal-padding !default;
+$dropdown-item-font-weight: $normal !default;
+$dropdown-item-line-height: 1em !default;
+$dropdown-item-line-height-offset: ($dropdown-item-line-height - 1em) !default;
+$dropdown-item-text-transform: none !default;
+$dropdown-item-box-shadow: none !default;
 
 //- Sub Menu */
-$dropdown-sub-menu-top: 0;
-$dropdown-sub-menu-left: 100%;
-$dropdown-sub-menu-right: auto;
-$dropdown-sub-menu-distance-away: -0.5em;
-$dropdown-sub-menu-margin: 0 0 0 $dropdown-sub-menu-distance-away;
-$dropdown-sub-menu-border-radius: $dropdown-border-radius;
-$dropdown-sub-menu-z-index: 21;
+$dropdown-sub-menu-top: 0 !default;
+$dropdown-sub-menu-left: 100% !default;
+$dropdown-sub-menu-right: auto !default;
+$dropdown-sub-menu-distance-away: -0.5em !default;
+$dropdown-sub-menu-margin: 0 0 0 $dropdown-sub-menu-distance-away !default;
+$dropdown-sub-menu-border-radius: $dropdown-border-radius !default;
+$dropdown-sub-menu-z-index: 21 !default;
 
 //- Menu Header */
-$dropdown-menu-header-color: $dark-text-color;
-$dropdown-menu-header-font-size: $relative11px;
-$dropdown-menu-header-font-weight: $bold;
-$dropdown-menu-header-text-transform: uppercase;
-$dropdown-menu-header-margin: 1rem 0 0.75rem;
-$dropdown-menu-header-padding: 0 $dropdown-item-horizontal-padding;
+$dropdown-menu-header-color: $dark-text-color !default;
+$dropdown-menu-header-font-size: $relative11px !default;
+$dropdown-menu-header-font-weight: $bold !default;
+$dropdown-menu-header-text-transform: uppercase !default;
+$dropdown-menu-header-margin: 1rem 0 0.75rem !default;
+$dropdown-menu-header-padding: 0 $dropdown-item-horizontal-padding !default;
 
 //- Menu Divider */
-$dropdown-menu-divider-margin: 0.5em 0;
-$dropdown-menu-divider-color: $internal-border-color;
-$dropdown-menu-divider-size: 1px;
-$dropdown-menu-divider-border: $dropdown-menu-divider-size solid $dropdown-menu-divider-color;
+$dropdown-menu-divider-margin: 0.5em 0 !default;
+$dropdown-menu-divider-color: $internal-border-color !default;
+$dropdown-menu-divider-size: 1px !default;
+$dropdown-menu-divider-border: $dropdown-menu-divider-size solid $dropdown-menu-divider-color !default;
 
 //- Menu Input */
-$dropdown-menu-input-margin: $large $mini;
-$dropdown-menu-input-min-width: 10rem;
-$dropdown-menu-input-vertical-padding: 0.5em;
-$dropdown-menu-input-horizontal-padding: $input-horizontal-padding;
-$dropdown-menu-input-padding: $dropdown-menu-input-vertical-padding $dropdown-menu-input-horizontal-padding;
+$dropdown-menu-input-margin: $large $mini !default;
+$dropdown-menu-input-min-width: 10rem !default;
+$dropdown-menu-input-vertical-padding: 0.5em !default;
+$dropdown-menu-input-horizontal-padding: $input-horizontal-padding !default;
+$dropdown-menu-input-padding: $dropdown-menu-input-vertical-padding $dropdown-menu-input-horizontal-padding !default;
 
 //- Menu Image */
-$dropdown-menu-image-max-height: 2em;
-$dropdown-menu-image-vertical-margin: -($dropdown-menu-image-max-height - 1em) / 2;
+$dropdown-menu-image-max-height: 2em !default;
+$dropdown-menu-image-vertical-margin: -($dropdown-menu-image-max-height - 1em) / 2 !default;
 
 //- Item Sub-Element */
-$dropdown-item-element-float: none;
-$dropdown-item-element-distance: $mini;
-$dropdown-item-element-bottom-distance: $dropdown-item-element-distance / 2;
+$dropdown-item-element-float: none !default;
+$dropdown-item-element-distance: $mini !default;
+$dropdown-item-element-bottom-distance: $dropdown-item-element-distance / 2 !default;
 
 //- Sub-Menu Dropdown Icon */
-$dropdown-item-icon-distance: 1em;
-$dropdown-item-icon-float: right;
-$dropdown-item-icon-margin: $dropdown-item-line-height-offset 0 0 $dropdown-item-icon-distance;
+$dropdown-item-icon-distance: 1em !default;
+$dropdown-item-icon-float: right !default;
+$dropdown-item-icon-margin: $dropdown-item-line-height-offset 0 0 $dropdown-item-icon-distance !default;
 
 //- Description */
-$dropdown-item-description-float: right;
-$dropdown-item-description-margin: 0 0 0 1em;
-$dropdown-item-description-color: $light-text-color;
+$dropdown-item-description-float: right !default;
+$dropdown-item-description-margin: 0 0 0 1em !default;
+$dropdown-item-description-color: $light-text-color !default;
 
 //-------------  Selection --------------*/
 
-$dropdown-selection-min-width: 14em;
-$dropdown-selection-vertical-padding: $input-vertical-padding;
-$dropdown-selection-horizontal-padding: $input-horizontal-padding;
-$dropdown-selection-border-em-width: $relative1px;
+$dropdown-selection-min-width: 14em !default;
+$dropdown-selection-vertical-padding: $input-vertical-padding !default;
+$dropdown-selection-horizontal-padding: $input-horizontal-padding !default;
+$dropdown-selection-border-em-width: $relative1px !default;
 $dropdown-selection-min-height: $input-line-height + ($dropdown-selection-vertical-padding * 2) -
-  $dropdown-selection-border-em-width;
-$dropdown-selection-background: $input-background;
-$dropdown-selection-display: inline-block;
-$dropdown-selection-icon-distance: $input-horizontal-padding + ($glyph-width * 2);
+  $dropdown-selection-border-em-width !default;
+$dropdown-selection-background: $input-background !default;
+$dropdown-selection-display: inline-block !default;
+$dropdown-selection-icon-distance: $input-horizontal-padding + ($glyph-width * 2) !default;
 $dropdown-selection-padding: $dropdown-selection-vertical-padding $dropdown-selection-icon-distance
-  $dropdown-selection-vertical-padding $dropdown-selection-horizontal-padding;
-$dropdown-selection-z-index: 10;
+  $dropdown-selection-vertical-padding $dropdown-selection-horizontal-padding !default;
+$dropdown-selection-z-index: 10 !default;
 
-$dropdown-selection-item-horizontal-padding: $dropdown-item-horizontal-padding;
-$dropdown-selection-item-vertical-padding: $dropdown-item-vertical-padding;
-$dropdown-selection-item-padding: $dropdown-selection-item-vertical-padding $dropdown-selection-item-horizontal-padding;
-$dropdown-selection-item-divider: 1px solid $solid-internal-border-color;
-$dropdown-selection-message-padding: $dropdown-selection-item-padding;
+$dropdown-selection-item-horizontal-padding: $dropdown-item-horizontal-padding !default;
+$dropdown-selection-item-vertical-padding: $dropdown-item-vertical-padding !default;
+$dropdown-selection-item-padding: $dropdown-selection-item-vertical-padding $dropdown-selection-item-horizontal-padding !default;
+$dropdown-selection-item-divider: 1px solid $solid-internal-border-color !default;
+$dropdown-selection-message-padding: $dropdown-selection-item-padding !default;
 
 //- <select> */
-$dropdown-select-border: 1px solid $border-color;
-$dropdown-select-padding: 0.5em;
-$dropdown-select-visibility: visible;
-$dropdown-select-height: 38px;
+$dropdown-select-border: 1px solid $border-color !default;
+$dropdown-select-padding: 0.5em !default;
+$dropdown-select-visibility: visible !default;
+$dropdown-select-height: 38px !default;
 
-$dropdown-selection-text-color: $text-color;
+$dropdown-selection-text-color: $text-color !default;
 
-$dropdown-selection-text-underlay-icon-opacity: $disabled-opacity;
-$dropdown-selection-text-underlay-color: $input-placeholder-focus-color;
+$dropdown-selection-text-underlay-icon-opacity: $disabled-opacity !default;
+$dropdown-selection-text-underlay-color: $input-placeholder-focus-color !default;
 
-$dropdown-selection-box-shadow: none;
-$dropdown-selection-border-color: $border-color;
-$dropdown-selection-border: 1px solid $dropdown-selection-border-color;
-$dropdown-selection-border-radius: $dropdown-border-radius;
+$dropdown-selection-box-shadow: none !default;
+$dropdown-selection-border-color: $border-color !default;
+$dropdown-selection-border: 1px solid $dropdown-selection-border-color !default;
+$dropdown-selection-border-radius: $dropdown-border-radius !default;
 
-$dropdown-selection-icon-opacity: 0.8;
-$dropdown-selection-icon-z-index: 3;
-$dropdown-selection-icon-hitbox: $dropdown-selection-vertical-padding;
-$dropdown-selection-icon-margin: -$dropdown-selection-icon-hitbox;
-$dropdown-selection-icon-padding: join-value-to-unit($dropdown-selection-icon-hitbox / $dropdown-icon-size, em);
-$dropdown-selection-icon-transition: opacity $default-duration $default-easing;
+$dropdown-selection-icon-opacity: 0.8 !default;
+$dropdown-selection-icon-z-index: 3 !default;
+$dropdown-selection-icon-hitbox: $dropdown-selection-vertical-padding !default;
+$dropdown-selection-icon-margin: -$dropdown-selection-icon-hitbox !default;
+$dropdown-selection-icon-padding: join-value-to-unit($dropdown-selection-icon-hitbox / $dropdown-icon-size, em) !default;
+$dropdown-selection-icon-transition: opacity $default-duration $default-easing !default;
 
-$dropdown-selection-menu-border-radius: 0 0 $dropdown-border-radius $dropdown-border-radius;
-$dropdown-selection-menu-box-shadow: $dropdown-raised-shadow;
-$dropdown-selection-menu-item-box-shadow: none;
+$dropdown-selection-menu-border-radius: 0 0 $dropdown-border-radius $dropdown-border-radius !default;
+$dropdown-selection-menu-box-shadow: $dropdown-raised-shadow !default;
+$dropdown-selection-menu-item-box-shadow: none !default;
 
-$dropdown-selection-transition: $dropdown-transition;
-$dropdown-selection-menu-transition: $dropdown-menu-transition;
+$dropdown-selection-transition: $dropdown-transition !default;
+$dropdown-selection-menu-transition: $dropdown-menu-transition !default;
 
 //- Message */
-$dropdown-message-padding: $dropdown-selection-item-padding;
-$dropdown-message-font-weight: $normal;
-$dropdown-message-color: $unselected-text-color;
+$dropdown-message-padding: $dropdown-selection-item-padding !default;
+$dropdown-message-font-weight: $normal !default;
+$dropdown-message-color: $unselected-text-color !default;
 
 //- Floated Content */
-$dropdown-floated-distance: 1em;
+$dropdown-floated-distance: 1em !default;
 
 //-------------------- Types --------------------*/
 
 //- Responsive */
-$dropdown-selection-mobile-max-items: 3;
-$dropdown-selection-tablet-max-items: 4;
-$dropdown-selection-computer-max-items: 6;
-$dropdown-selection-widescreen-max-items: 8;
+$dropdown-selection-mobile-max-items: 3 !default;
+$dropdown-selection-tablet-max-items: 4 !default;
+$dropdown-selection-computer-max-items: 6 !default;
+$dropdown-selection-widescreen-max-items: 8 !default;
 
 //- Derived */
-$dropdown-selected-border-em-width: 0.1em; //- 1px / em size */
+$dropdown-selected-border-em-width: 0.1em !default; //- 1px / em size */
 $dropdown-selection-item-height: strip-unit($dropdown-selection-item-vertical-padding * 2) + $dropdown-item-line-height +
-  $dropdown-selected-border-em-width;
-$dropdown-selection-mobile-max-menu-height: ($dropdown-selection-item-height * $dropdown-selection-mobile-max-items);
-$dropdown-selection-tablet-max-menu-height: ($dropdown-selection-item-height * $dropdown-selection-tablet-max-items);
+  $dropdown-selected-border-em-width !default;
+$dropdown-selection-mobile-max-menu-height: ($dropdown-selection-item-height * $dropdown-selection-mobile-max-items) !default;
+$dropdown-selection-tablet-max-menu-height: ($dropdown-selection-item-height * $dropdown-selection-tablet-max-items) !default;
 $dropdown-selection-computer-max-menu-height: (
   $dropdown-selection-item-height * $dropdown-selection-computer-max-items
-);
+) !default;
 $dropdown-selection-widescreen-max-menu-height: (
   $dropdown-selection-item-height * $dropdown-selection-widescreen-max-items
-);
+) !default;
 
 //- Hover */
-$dropdown-selection-hover-border-color: $selected-border-color;
-$dropdown-selection-hover-box-shadow: none;
+$dropdown-selection-hover-border-color: $selected-border-color !default;
+$dropdown-selection-hover-box-shadow: none !default;
 
 //- Focus */
-$dropdown-selection-focus-border-color: $focused-form-muted-border-color;
-$dropdown-selection-focus-box-shadow: none;
-$dropdown-selection-focus-menu-box-shadow: $dropdown-raised-shadow;
+$dropdown-selection-focus-border-color: $focused-form-muted-border-color !default;
+$dropdown-selection-focus-box-shadow: none !default;
+$dropdown-selection-focus-menu-box-shadow: $dropdown-raised-shadow !default;
 
 //- Visible */
-$dropdown-selection-visible-text-font-weight: $normal;
-$dropdown-selection-visible-text-color: $hovered-text-color;
+$dropdown-selection-visible-text-font-weight: $normal !default;
+$dropdown-selection-visible-text-color: $hovered-text-color !default;
 
-$dropdown-selection-visible-border-color: $focused-form-muted-border-color;
-$dropdown-selection-visible-box-shadow: $dropdown-raised-shadow;
-$dropdown-selection-visible-menu-box-shadow: $dropdown-raised-shadow;
+$dropdown-selection-visible-border-color: $focused-form-muted-border-color !default;
+$dropdown-selection-visible-box-shadow: $dropdown-raised-shadow !default;
+$dropdown-selection-visible-menu-box-shadow: $dropdown-raised-shadow !default;
 
 //- Visible Hover */
-$dropdown-selection-active-hover-border-color: $focused-form-muted-border-color;
-$dropdown-selection-active-hover-box-shadow: $dropdown-selection-visible-box-shadow;
-$dropdown-selection-active-hover-menu-box-shadow: $dropdown-selection-visible-menu-box-shadow;
+$dropdown-selection-active-hover-border-color: $focused-form-muted-border-color !default;
+$dropdown-selection-active-hover-box-shadow: $dropdown-selection-visible-box-shadow !default;
+$dropdown-selection-active-hover-menu-box-shadow: $dropdown-selection-visible-menu-box-shadow !default;
 
-$dropdown-selection-visible-connecting-border: 0;
-$dropdown-selection-visible-icon-opacity: '';
+$dropdown-selection-visible-connecting-border: 0 !default;
+$dropdown-selection-visible-icon-opacity: '' !default;
 
 //---------------  Search --------------*/
 
-$dropdown-search-min-width: '';
+$dropdown-search-min-width: '' !default;
 
 //- Search Selection */
-$dropdown-search-selection-line-height: $input-line-height;
-$dropdown-search-selection-line-height-offset: (($dropdown-search-selection-line-height - 1em) / 2);
+$dropdown-search-selection-line-height: $input-line-height !default;
+$dropdown-search-selection-line-height-offset: (($dropdown-search-selection-line-height - 1em) / 2) !default;
 $dropdown-search-selection-vertical-padding: (
   $dropdown-selection-vertical-padding - $dropdown-search-selection-line-height-offset
-);
-$dropdown-search-selection-horizontal-padding: $dropdown-selection-horizontal-padding;
+) !default;
+$dropdown-search-selection-horizontal-padding: $dropdown-selection-horizontal-padding !default;
 $dropdown-search-selection-input-padding: $dropdown-search-selection-vertical-padding $dropdown-selection-icon-distance
-  $dropdown-search-selection-vertical-padding $dropdown-search-selection-horizontal-padding;
+  $dropdown-search-selection-vertical-padding $dropdown-search-selection-horizontal-padding !default;
 
-$dropdown-search-mobile-max-menu-height: $dropdown-selection-mobile-max-menu-height;
-$dropdown-search-tablet-max-menu-height: $dropdown-selection-tablet-max-menu-height;
-$dropdown-search-computer-max-menu-height: $dropdown-selection-computer-max-menu-height;
-$dropdown-search-widescreen-max-menu-height: $dropdown-selection-widescreen-max-menu-height;
+$dropdown-search-mobile-max-menu-height: $dropdown-selection-mobile-max-menu-height !default;
+$dropdown-search-tablet-max-menu-height: $dropdown-selection-tablet-max-menu-height !default;
+$dropdown-search-computer-max-menu-height: $dropdown-selection-computer-max-menu-height !default;
+$dropdown-search-widescreen-max-menu-height: $dropdown-selection-widescreen-max-menu-height !default;
 
 //- Inline */
-$dropdown-inline-icon-margin: 0 $relative3px 0 $relative3px;
-$dropdown-inline-text-color: inherit;
-$dropdown-inline-text-font-weight: $bold;
-$dropdown-inline-menu-distance: $relative3px;
-$dropdown-inline-menu-border-radius: $dropdown-border-radius;
+$dropdown-inline-icon-margin: 0 $relative3px 0 $relative3px !default;
+$dropdown-inline-text-color: inherit !default;
+$dropdown-inline-text-font-weight: $bold !default;
+$dropdown-inline-menu-distance: $relative3px !default;
+$dropdown-inline-menu-border-radius: $dropdown-border-radius !default;
 
 //--------------- Multiple --------------*/
 
 //- Split Actual Padding Between Child and Parent (allows for label spacing) */
-$dropdown-multiple-selection-vertical-padding: ($dropdown-search-selection-vertical-padding * (1/3));
-$dropdown-multiple-selection-left-padding: $relative5px;
-$dropdown-multiple-selection-right-padding: $dropdown-selection-icon-distance;
+$dropdown-multiple-selection-vertical-padding: ($dropdown-search-selection-vertical-padding * (1/3)) !default;
+$dropdown-multiple-selection-left-padding: $relative5px !default;
+$dropdown-multiple-selection-right-padding: $dropdown-selection-icon-distance !default;
 $dropdown-multiple-selection-padding: $dropdown-multiple-selection-vertical-padding
   $dropdown-multiple-selection-right-padding $dropdown-multiple-selection-vertical-padding
-  $dropdown-multiple-selection-left-padding;
+  $dropdown-multiple-selection-left-padding !default;
 
 //- Child Elements */
-$dropdown-multiple-selection-child-vertical-margin: ($dropdown-search-selection-vertical-padding * (2/3));
-$dropdown-multiple-selection-child-left-margin: ($input-horizontal-padding - $dropdown-multiple-selection-left-padding);
+$dropdown-multiple-selection-child-vertical-margin: ($dropdown-search-selection-vertical-padding * (2/3)) !default;
+$dropdown-multiple-selection-child-left-margin: ($input-horizontal-padding - $dropdown-multiple-selection-left-padding) !default;
 $dropdown-multiple-selection-child-margin: $dropdown-multiple-selection-child-vertical-margin 0
-  $dropdown-multiple-selection-child-vertical-margin $dropdown-multiple-selection-child-left-margin;
-$dropdown-multiple-selection-child-line-height: $relative17px;
-$dropdown-multiple-selection-search-start-width: ($glyph-width * 2);
+  $dropdown-multiple-selection-child-vertical-margin $dropdown-multiple-selection-child-left-margin !default;
+$dropdown-multiple-selection-child-line-height: $relative17px !default;
+$dropdown-multiple-selection-search-start-width: ($glyph-width * 2) !default;
 
 //- Dropdown Icon */
-$dropdown-multiple-selection-icon-margin: '';
-$dropdown-multiple-selection-icon-padding: '';
+$dropdown-multiple-selection-icon-margin: '' !default;
+$dropdown-multiple-selection-icon-padding: '' !default;
 
-$dropdown-multiple-selection-search-after-label-distance: $relative2px;
+$dropdown-multiple-selection-search-after-label-distance: $relative2px !default;
 
 //- Selection Label */
-$dropdown-label-size: $relative-medium;
-$dropdown-label-horizontal-margin: $_4px;
-$dropdown-label-vertical-margin: $_2px;
+$dropdown-label-size: $relative-medium !default;
+$dropdown-label-horizontal-margin: $_4px !default;
+$dropdown-label-vertical-margin: $_2px !default;
 $dropdown-label-margin: $dropdown-label-vertical-margin $dropdown-label-horizontal-margin
-  $dropdown-label-vertical-margin 0;
-$dropdown-label-border-width: 1px;
-$dropdown-label-box-shadow: 0 0 0 $dropdown-label-border-width $border-color inset;
+  $dropdown-label-vertical-margin 0 !default;
+$dropdown-label-border-width: 1px !default;
+$dropdown-label-box-shadow: 0 0 0 $dropdown-label-border-width $border-color inset !default;
 
-$dropdown-label-vertical-padding: $relative5px;
-$dropdown-label-horizontal-padding: $relative-mini;
-$dropdown-label-padding: $dropdown-label-vertical-padding $dropdown-label-horizontal-padding;
+$dropdown-label-vertical-padding: $relative5px !default;
+$dropdown-label-horizontal-padding: $relative-mini !default;
+$dropdown-label-padding: $dropdown-label-vertical-padding $dropdown-label-horizontal-padding !default;
 
-$dropdown-image-label-height: (1em + $dropdown-label-vertical-padding * 2); //- Logic adopted from label.less */
-$dropdown-image-label-image-margin: -$dropdown-label-vertical-padding $dropdown-label-horizontal-padding -$dropdown-label-vertical-padding -$dropdown-label-horizontal-padding;
+$dropdown-image-label-height: (1em + $dropdown-label-vertical-padding * 2) !default; //- Logic adopted from label.less */
+$dropdown-image-label-image-margin: -$dropdown-label-vertical-padding $dropdown-label-horizontal-padding -$dropdown-label-vertical-padding -$dropdown-label-horizontal-padding !default;
 
 //--------------------  States --------------------*/
 
 //- Hovered */
-$dropdown-hovered-item-background: $transparent-black;
-$dropdown-hovered-item-color: $selected-text-color;
-$dropdown-hovered-z-index: $dropdown-menu-z-index + 2;
+$dropdown-hovered-item-background: $transparent-black !default;
+$dropdown-hovered-item-color: $selected-text-color !default;
+$dropdown-hovered-z-index: $dropdown-menu-z-index + 2 !default;
 
 //- Default Text */
-$dropdown-default-text-color: $input-placeholder-color;
-$dropdown-default-text-focus-color: $input-placeholder-focus-color;
+$dropdown-default-text-color: $input-placeholder-color !default;
+$dropdown-default-text-focus-color: $input-placeholder-focus-color !default;
 
 //- Loading */
-$dropdown-loading-z-index: -1;
+$dropdown-loading-z-index: -1 !default;
 
 //- Active Menu Item */
-$dropdown-active-item-z-index: $dropdown-menu-z-index + 1;
-$dropdown-active-item-background: transparent;
-$dropdown-active-item-box-shadow: none;
-$dropdown-active-item-font-weight: $bold;
-$dropdown-active-item-color: $selected-text-color;
+$dropdown-active-item-z-index: $dropdown-menu-z-index + 1 !default;
+$dropdown-active-item-background: transparent !default;
+$dropdown-active-item-box-shadow: none !default;
+$dropdown-active-item-font-weight: $bold !default;
+$dropdown-active-item-color: $selected-text-color !default;
 
 //- Selected */
-$dropdown-selected-background: $subtle-transparent-black;
-$dropdown-selected-color: $selected-text-color;
+$dropdown-selected-background: $subtle-transparent-black !default;
+$dropdown-selected-color: $selected-text-color !default;
 
 //- Error */
-$dropdown-error-label-background: #eacbcb;
-$dropdown-error-label-color: $error-text-color;
+$dropdown-error-label-background: #eacbcb !default;
+$dropdown-error-label-color: $error-text-color !default;
 
-$dropdown-error-item-text-color: $error-text-color;
-$dropdown-error-item-hover-background: #fff2f2;
-$dropdown-error-item-active-background: #fdcfcf;
+$dropdown-error-item-text-color: $error-text-color !default;
+$dropdown-error-item-hover-background: #fff2f2 !default;
+$dropdown-error-item-active-background: #fdcfcf !default;
 
 //- Clearable */
-$dropdown-clearable-icon-opacity: 0.8;
-$dropdown-clearable-icon-active-opacity: 1;
+$dropdown-clearable-icon-opacity: 0.8 !default;
+$dropdown-clearable-icon-active-opacity: 1 !default;
 
 //-------------------- Variations --------------------*/
 
 //- Scrolling */
-$dropdown-scrolling-menu-width: 100%;
-$dropdown-scrolling-menu-item-border: none;
-$dropdown-scrolling-menu-right-item-padding: calc(#{$dropdown-item-horizontal-padding} + #{$scrollbar-width});
+$dropdown-scrolling-menu-width: 100% !default;
+$dropdown-scrolling-menu-item-border: none !default;
+$dropdown-scrolling-menu-right-item-padding: calc(#{$dropdown-item-horizontal-padding} + #{$scrollbar-width}) !default;
 
-$dropdown-scrolling-mobile-max-items: 4;
-$dropdown-scrolling-tablet-max-items: 6;
-$dropdown-scrolling-computer-max-items: 8;
-$dropdown-scrolling-widescreen-max-items: 12;
+$dropdown-scrolling-mobile-max-items: 4 !default;
+$dropdown-scrolling-tablet-max-items: 6 !default;
+$dropdown-scrolling-computer-max-items: 8 !default;
+$dropdown-scrolling-widescreen-max-items: 12 !default;
 
-$dropdown-scrolling-border-em-width: 0; //- 0 / em size */
+$dropdown-scrolling-border-em-width: 0 !default; //- 0 / em size */
 $dropdown-scrolling-item-height: strip-unit($dropdown-item-vertical-padding * 2) + $dropdown-item-line-height +
-  $dropdown-scrolling-border-em-width;
-$dropdown-scrolling-mobile-max-menu-height: ($dropdown-scrolling-item-height * $dropdown-scrolling-mobile-max-items);
-$dropdown-scrolling-tablet-max-menu-height: ($dropdown-scrolling-item-height * $dropdown-scrolling-tablet-max-items);
+  $dropdown-scrolling-border-em-width !default;
+$dropdown-scrolling-mobile-max-menu-height: ($dropdown-scrolling-item-height * $dropdown-scrolling-mobile-max-items) !default;
+$dropdown-scrolling-tablet-max-menu-height: ($dropdown-scrolling-item-height * $dropdown-scrolling-tablet-max-items) !default;
 $dropdown-scrolling-computer-max-menu-height: (
   $dropdown-scrolling-item-height * $dropdown-scrolling-computer-max-items
-);
+) !default;
 $dropdown-scrolling-widescreen-max-menu-height: (
   $dropdown-scrolling-item-height * $dropdown-selection-widescreen-max-items
-);
+) !default;
 
 //- Upward */
 $dropdown-upward-selection-visible-border-radius: $dropdown-selection-visible-connecting-border
-  $dropdown-selection-visible-connecting-border $dropdown-border-radius $dropdown-border-radius;
-$dropdown-upward-menu-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08);
-$dropdown-upward-selection-menu-box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.08);
-$dropdown-upward-menu-border-radius: $dropdown-border-radius $dropdown-border-radius 0 0;
-$dropdown-upward-selection-hover-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.05);
-$dropdown-upward-selection-visible-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08);
-$dropdown-upward-selection-active-hover-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.05);
-$dropdown-upward-selection-active-hover-menu-box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.08);
+  $dropdown-selection-visible-connecting-border $dropdown-border-radius $dropdown-border-radius !default;
+$dropdown-upward-menu-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08) !default;
+$dropdown-upward-selection-menu-box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.08) !default;
+$dropdown-upward-menu-border-radius: $dropdown-border-radius $dropdown-border-radius 0 0 !default;
+$dropdown-upward-selection-hover-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.05) !default;
+$dropdown-upward-selection-visible-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08) !default;
+$dropdown-upward-selection-active-hover-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.05) !default;
+$dropdown-upward-selection-active-hover-menu-box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.08) !default;
 
 //- Flyout Direction */
-$dropdown-left-menu-icon-float: left;
-$dropdown-left-menu-icon-margin: $dropdown-item-line-height-offset 0 0 0;
+$dropdown-left-menu-icon-float: left !default;
+$dropdown-left-menu-icon-margin: $dropdown-item-line-height-offset 0 0 0 !default;
 
 //- Left */
-$dropdown-left-sub-menu-border-radius: $dropdown-border-radius;
-$dropdown-left-sub-menu-margin: 0 $dropdown-sub-menu-distance-away 0 0;
+$dropdown-left-sub-menu-border-radius: $dropdown-border-radius !default;
+$dropdown-left-sub-menu-margin: 0 $dropdown-sub-menu-distance-away 0 0 !default;
 
 //- Simple */
-$dropdown-simple-transition-duration: $default-duration;
-$dropdown-simple-transition: opacity $dropdown-simple-transition-duration $default-easing;
+$dropdown-simple-transition-duration: $default-duration !default;
+$dropdown-simple-transition: opacity $dropdown-simple-transition-duration $default-easing !default;
 
 //- Floating */
-$dropdown-floating-menu-distance: 0.5em;
-$dropdown-floating-menu-box-shadow: $floating-shadow;
-$dropdown-floating-menu-border-radius: $dropdown-border-radius;
+$dropdown-floating-menu-distance: 0.5em !default;
+$dropdown-floating-menu-box-shadow: $floating-shadow !default;
+$dropdown-floating-menu-border-radius: $dropdown-border-radius !default;
 
 //- Pointing */
-$dropdown-pointing-arrow-size: $relative7px;
-$dropdown-pointing-arrow-offset: -($dropdown-pointing-arrow-size / 2);
-$dropdown-pointing-arrow-distance-from-edge: 1em;
+$dropdown-pointing-arrow-size: $relative7px !default;
+$dropdown-pointing-arrow-offset: -($dropdown-pointing-arrow-size / 2) !default;
+$dropdown-pointing-arrow-distance-from-edge: 1em !default;
 
-$dropdown-pointing-arrow-background: $white;
-$dropdown-pointing-arrow-z-index: 2;
-$dropdown-pointing-arrow-box-shadow: -$dropdown-menu-border-width -$dropdown-menu-border-width 0 0 $dropdown-menu-border-color;
+$dropdown-pointing-arrow-background: $white !default;
+$dropdown-pointing-arrow-z-index: 2 !default;
+$dropdown-pointing-arrow-box-shadow: -$dropdown-menu-border-width -$dropdown-menu-border-width 0 0 $dropdown-menu-border-color !default;
 
-$dropdown-pointing-menu-distance: $mini;
-$dropdown-pointing-menu-border-radius: $dropdown-border-radius;
+$dropdown-pointing-menu-distance: $mini !default;
+$dropdown-pointing-menu-border-radius: $dropdown-border-radius !default;
 
 //- Pointing Upward */
-$dropdown-pointing-upward-menu-border-radius: $dropdown-border-radius;
+$dropdown-pointing-upward-menu-border-radius: $dropdown-border-radius !default;
 $dropdown-pointing-upward-arrow-box-shadow: $dropdown-menu-border-width $dropdown-menu-border-width 0 0
-  $dropdown-menu-border-color;
+  $dropdown-menu-border-color !default;
 
 //--------------- Inverted ---------------*/
 
 //- General rules and basic dropdowns */
-$dropdown-inverted-menu-background: $black;
-$dropdown-inverted-menu-color: $inverted-muted-text-color;
-$dropdown-inverted-menu-border-color: $strong-transparent-white;
-$dropdown-inverted-menu-border: 1px solid $dropdown-inverted-menu-border-color;
-$dropdown-inverted-menu-box-shadow: none;
+$dropdown-inverted-menu-background: $black !default;
+$dropdown-inverted-menu-color: $inverted-muted-text-color !default;
+$dropdown-inverted-menu-border-color: $strong-transparent-white !default;
+$dropdown-inverted-menu-border: 1px solid $dropdown-inverted-menu-border-color !default;
+$dropdown-inverted-menu-box-shadow: none !default;
 
-$dropdown-inverted-pointing-arrow-background: $black;
-$dropdown-inverted-pointing-arrow-box-shadow: -$dropdown-menu-border-width -$dropdown-menu-border-width 0 0 $dropdown-inverted-menu-border-color;
+$dropdown-inverted-pointing-arrow-background: $black !default;
+$dropdown-inverted-pointing-arrow-box-shadow: -$dropdown-menu-border-width -$dropdown-menu-border-width 0 0 $dropdown-inverted-menu-border-color !default;
 
-$dropdown-inverted-hovered-item-background: $transparent-white;
-$dropdown-inverted-hovered-item-color: $dropdown-inverted-menu-color;
+$dropdown-inverted-hovered-item-background: $transparent-white !default;
+$dropdown-inverted-hovered-item-color: $dropdown-inverted-menu-color !default;
 
-$dropdown-inverted-active-item-background: transparent;
-$dropdown-inverted-active-item-color: $dropdown-inverted-menu-color;
-$dropdown-inverted-active-item-box-shadow: none;
+$dropdown-inverted-active-item-background: transparent !default;
+$dropdown-inverted-active-item-color: $dropdown-inverted-menu-color !default;
+$dropdown-inverted-active-item-box-shadow: none !default;
 
-$dropdown-inverted-selected-background: $strong-transparent-white;
-$dropdown-inverted-selected-color: $dropdown-inverted-menu-color;
+$dropdown-inverted-selected-background: $strong-transparent-white !default;
+$dropdown-inverted-selected-color: $dropdown-inverted-menu-color !default;
 
-$dropdown-inverted-menu-header-color: $white;
-$dropdown-inverted-item-description-color: $inverted-unselected-text-color;
+$dropdown-inverted-menu-header-color: $white !default;
+$dropdown-inverted-item-description-color: $inverted-unselected-text-color !default;
 
-$dropdown-inverted-menu-divider-border: $dropdown-menu-divider-size solid $strong-transparent-white;
+$dropdown-inverted-menu-divider-border: $dropdown-menu-divider-size solid $strong-transparent-white !default;
 
 //- Selection */
-$dropdown-inverted-selection-border-color: $strong-transparent-white;
-$dropdown-inverted-selection-border: 1px solid $dropdown-inverted-selection-border-color;
-$dropdown-inverted-selection-background: $black;
-$dropdown-inverted-selection-text-color: $dropdown-inverted-menu-color;
-$dropdown-inverted-selection-input-text-color: $white;
+$dropdown-inverted-selection-border-color: $strong-transparent-white !default;
+$dropdown-inverted-selection-border: 1px solid $dropdown-inverted-selection-border-color !default;
+$dropdown-inverted-selection-background: $black !default;
+$dropdown-inverted-selection-text-color: $dropdown-inverted-menu-color !default;
+$dropdown-inverted-selection-input-text-color: $white !default;
 
-$dropdown-inverted-selection-hover-border-color: rgba(255, 255, 255, 0.25);
-$dropdown-inverted-selection-hover-box-shadow: none;
+$dropdown-inverted-selection-hover-border-color: rgba(255, 255, 255, 0.25) !default;
+$dropdown-inverted-selection-hover-box-shadow: none !default;
 
-$dropdown-inverted-default-text-color: $inverted-unselected-text-color;
-$dropdown-inverted-default-text-focus-color: $inverted-light-text-color;
+$dropdown-inverted-default-text-color: $inverted-unselected-text-color !default;
+$dropdown-inverted-default-text-focus-color: $inverted-light-text-color !default;
 
-$dropdown-inverted-selection-visible-text-color: $inverted-text-color;
+$dropdown-inverted-selection-visible-text-color: $inverted-text-color !default;
 
-$dropdown-inverted-selection-text-underlay-icon-opacity: 0.45;
-$dropdown-inverted-selection-text-underlay-color: $inverted-light-text-color;
+$dropdown-inverted-selection-text-underlay-icon-opacity: 0.45 !default;
+$dropdown-inverted-selection-text-underlay-color: $inverted-light-text-color !default;
 
-$dropdown-inverted-selection-item-divider: 1px solid #242526;
-$dropdown-inverted-selection-visible-border-color: $strong-transparent-white;
+$dropdown-inverted-selection-item-divider: 1px solid #242526 !default;
+$dropdown-inverted-selection-visible-border-color: $strong-transparent-white !default;
 
-$dropdown-inverted-message-color: $inverted-unselected-text-color;
+$dropdown-inverted-message-color: $inverted-unselected-text-color !default;
 
-$dropdown-inverted-input-highlight-background: rgba(255, 255, 255, 0.25);
-$dropdown-inverted-input-highlight-color: $inverted-muted-text-color;
+$dropdown-inverted-input-highlight-background: rgba(255, 255, 255, 0.25) !default;
+$dropdown-inverted-input-highlight-color: $inverted-muted-text-color !default;
 
 //- Multiple */
-//-$dropdown-inverted-label-background-color: rgba(255, 255, 255, 0.06); $dropdown-inverted-label-background-image: none; $dropdown-inverted-label-color: rgba(255, 255, 255, 0.6); $dropdown-inverted-label-box-shadow: 0 0 0 $dropdown-label-border-width rgba(255, 255, 255, 0.16) inset;  $dropdown-inverted-label-hover-background-color: rgba(255, 255, 255, 0.12); $dropdown-inverted-label-hover-background-image: none; $dropdown-inverted-label-hover-text-color: rgba(255, 255, 255, 0.7);*/
+//-$dropdown-inverted-label-background-color: rgba(255, 255, 255, 0.06) !default; $dropdown-inverted-label-background-image: none !default; $dropdown-inverted-label-color: rgba(255, 255, 255, 0.6) !default; $dropdown-inverted-label-box-shadow: 0 0 0 $dropdown-label-border-width rgba(255, 255, 255, 0.16) inset !default;  $dropdown-inverted-label-hover-background-color: rgba(255, 255, 255, 0.12) !default; $dropdown-inverted-label-hover-background-image: none !default; $dropdown-inverted-label-hover-text-color: rgba(255, 255, 255, 0.7) !default;*/
 
-$dropdown-inverted-label-background-color: rgba(255, 255, 255, 0.7);
-$dropdown-inverted-label-background-image: none;
-$dropdown-inverted-label-color: rgba(0, 0, 0, 1);
-$dropdown-inverted-label-box-shadow: 0 0 0 $dropdown-label-border-width rgba(255, 255, 255, 0) inset;
+$dropdown-inverted-label-background-color: rgba(255, 255, 255, 0.7) !default;
+$dropdown-inverted-label-background-image: none !default;
+$dropdown-inverted-label-color: rgba(0, 0, 0, 1) !default;
+$dropdown-inverted-label-box-shadow: 0 0 0 $dropdown-label-border-width rgba(255, 255, 255, 0) inset !default;
 
-$dropdown-inverted-label-hover-background-color: rgba(255, 255, 255, 0.9);
-$dropdown-inverted-label-hover-background-image: none;
-$dropdown-inverted-label-hover-text-color: $dropdown-inverted-label-color;
+$dropdown-inverted-label-hover-background-color: rgba(255, 255, 255, 0.9) !default;
+$dropdown-inverted-label-hover-background-image: none !default;
+$dropdown-inverted-label-hover-text-color: $dropdown-inverted-label-color !default;
 
-$dropdown-inverted-label-icon-opacity: 0.6;
-$dropdown-inverted-label-icon-hover-opacity: 0.8;
+$dropdown-inverted-label-icon-opacity: 0.6 !default;
+$dropdown-inverted-label-icon-hover-opacity: 0.8 !default;

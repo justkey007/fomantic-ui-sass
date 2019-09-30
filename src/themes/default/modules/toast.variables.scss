@@ -3,43 +3,43 @@
 //@-****************************** Toast *******************************/
 
 //- Container */
-$toast-container-distance: $relative12px;
+$toast-container-distance: $relative12px !default;
 
 //- Toast */
-$toast-width: 300px;
-$toast-border-radius: $default-border-radius;
-$toast-padding: $input-padding;
-$toast-margin-bottom: 6px;
-$toast-margin: 0 0 $toast-margin-bottom;
-$toast-text-color: $inverted-text-color;
-$toast-inverted-text-color: $text-color;
+$toast-width: 300px !default;
+$toast-border-radius: $default-border-radius !default;
+$toast-padding: $input-padding !default;
+$toast-margin-bottom: 6px !default;
+$toast-margin: 0 0 $toast-margin-bottom !default;
+$toast-text-color: $inverted-text-color !default;
+$toast-inverted-text-color: $text-color !default;
 
 //- on Hover */
-$toast-opacity-on-hover: 1;
-$toast-cursor-on-hover: pointer;
+$toast-opacity-on-hover: 1 !default;
+$toast-cursor-on-hover: pointer !default;
 
 //- Color variations */
-$toast-info-color: $info-color;
-$toast-warning-color: $warning-color;
-$toast-error-color: $error-color;
-$toast-success-color: $success-color;
+$toast-info-color: $info-color !default;
+$toast-warning-color: $warning-color !default;
+$toast-error-color: $error-color !default;
+$toast-success-color: $success-color !default;
 
 //- Icon */
-$toast-icon-content-padding: 3em;
-$toast-icon-vertical-align: middle;
-$toast-icon-font-size: 1.5em;
+$toast-icon-content-padding: 3em !default;
+$toast-icon-vertical-align: middle !default;
+$toast-icon-font-size: 1.5em !default;
 
 //- Content */
-$toast-content-vertical-align: middle;
+$toast-content-vertical-align: middle !default;
 
 //- Progressbar Colors */
-$toast-info-progress-color: darken($toast-info-color,15);
-$toast-warning-progress-color: darken($toast-warning-color,15);
-$toast-error-progress-color: darken($toast-error-color,15);
-$toast-success-progress-color: darken($toast-success-color,15);
+$toast-info-progress-color: darken($toast-info-color,15) !default;
+$toast-warning-progress-color: darken($toast-warning-color,15) !default;
+$toast-error-progress-color: darken($toast-error-color,15) !default;
+$toast-success-progress-color: darken($toast-success-color,15) !default;
 
 //- Close Icon */
-$toast-close-top-distance: 0.3em;
-$toast-close-right-distance: 0.3em;
-$toast-close-opacity: 0.7;
-$toast-close-transition: opacity $default-duration $default-easing;
+$toast-close-top-distance: 0.3em !default;
+$toast-close-right-distance: 0.3em !default;
+$toast-close-opacity: 0.7 !default;
+$toast-close-transition: opacity $default-duration $default-easing !default;
