@@ -26541,7 +26541,7 @@ span.ui.massive.text {
 }
 
 .ui.menu .item > .image.label img {
-  margin: -0.2833em -0.2833em;
+  margin: -0.2833em 0.8em -0.2833em -0.8em;
   height: 1.5666em;
 }
 
@@ -29464,7 +29464,7 @@ Floated Menu / Item
   background: #ffffff;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.4);
-  box-shadow: -0.3em 0 0.1em #ffffff;
+  box-shadow: -0.1em -0.2em 0 0.1em #ffffff;
   -moz-transform: scale(1);
 }
 
@@ -33265,7 +33265,7 @@ a.inverted.ui.card:hover,
 
 .ui.statistics {
   display: flex;
-  margin: -1.5em;
+  margin: 1em -1.5em -1em;
 }
 
 /* Clearing */
@@ -36099,7 +36099,7 @@ select.ui.dropdown {
 }
 
 .ui.multiple.dropdown > .image.label img {
-  margin: -0.3571428571em -0.3571428571em;
+  margin: -0.3571428571em 0.7857142857em -0.3571428571em -0.7857142857em;
   height: 1.7142857143em;
 }
 
@@ -37101,7 +37101,7 @@ select.ui.dropdown {
 
 .ui.inverted.pointing.dropdown > .menu:after {
   background: #1b1c1d;
-  box-shadow: -2px 0 0 rgba(255, 255, 255, 0.15);
+  box-shadow: -1px -1px 0 0 rgba(255, 255, 255, 0.15);
 }
 
 /* Dropdown Carets */
@@ -38389,12 +38389,12 @@ a.ui.nag {
 /* Arrow */
 [data-position~=bottom][data-tooltip]:before {
   background: #ffffff;
-  box-shadow: -2px 0 0 #bababc;
+  box-shadow: -1px -1px 0 0 #bababc;
 }
 
 [data-position="left center"][data-tooltip]:before {
   background: #ffffff;
-  box-shadow: 0px 0 0 #bababc;
+  box-shadow: 1px -1px 0 0 #bababc;
 }
 
 [data-position="right center"][data-tooltip]:before {
@@ -38409,12 +38409,12 @@ a.ui.nag {
 /* Inverted Arrow Color */
 [data-inverted][data-position~=bottom][data-tooltip]:before {
   background: #1b1c1d;
-  box-shadow: -2px 0 0 #bababc;
+  box-shadow: -1px -1px 0 0 #bababc;
 }
 
 [data-inverted][data-position="left center"][data-tooltip]:before {
   background: #1b1c1d;
-  box-shadow: 0px 0 0 #bababc;
+  box-shadow: 1px -1px 0 0 #bababc;
 }
 
 [data-inverted][data-position="right center"][data-tooltip]:before {
@@ -38552,7 +38552,7 @@ a.ui.nag {
   left: 50%;
   right: auto;
   bottom: auto;
-  box-shadow: -2px 0 0 #bababc;
+  box-shadow: -1px -1px 0 0 #bababc;
 }
 
 .ui.bottom.left.popup {
@@ -38566,7 +38566,7 @@ a.ui.nag {
   right: auto;
   bottom: auto;
   margin-left: 0;
-  box-shadow: -2px 0 0 #bababc;
+  box-shadow: -1px -1px 0 0 #bababc;
 }
 
 .ui.bottom.right.popup {
@@ -38580,7 +38580,7 @@ a.ui.nag {
   bottom: auto;
   left: auto;
   margin-left: 0;
-  box-shadow: -2px 0 0 #bababc;
+  box-shadow: -1px -1px 0 0 #bababc;
 }
 
 /*--- Above ---*/
@@ -38626,7 +38626,7 @@ a.ui.nag {
   bottom: auto;
   left: auto;
   margin-top: -0.3071428571em;
-  box-shadow: 0px 0 0 #bababc;
+  box-shadow: 1px -1px 0 0 #bababc;
 }
 
 /*--- Right Center  ---*/
