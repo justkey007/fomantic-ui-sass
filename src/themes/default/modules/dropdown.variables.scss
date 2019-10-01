@@ -273,7 +273,7 @@ $dropdown-label-horizontal-padding: $relative-mini !default;
 $dropdown-label-padding: $dropdown-label-vertical-padding $dropdown-label-horizontal-padding !default;
 
 $dropdown-image-label-height: (1em + $dropdown-label-vertical-padding * 2) !default; //- Logic adopted from label.less */
-$dropdown-image-label-image-margin: -$dropdown-label-vertical-padding $dropdown-label-horizontal-padding -$dropdown-label-vertical-padding -$dropdown-label-horizontal-padding !default;
+$dropdown-image-label-image-margin: (-$dropdown-label-vertical-padding) $dropdown-label-horizontal-padding (-$dropdown-label-vertical-padding) (-$dropdown-label-horizontal-padding) !default;
 
 //--------------------  States --------------------*/
 
@@ -371,7 +371,7 @@ $dropdown-pointing-arrow-distance-from-edge: 1em !default;
 
 $dropdown-pointing-arrow-background: $white !default;
 $dropdown-pointing-arrow-z-index: 2 !default;
-$dropdown-pointing-arrow-box-shadow: -$dropdown-menu-border-width -$dropdown-menu-border-width 0 0 $dropdown-menu-border-color !default;
+$dropdown-pointing-arrow-box-shadow: (-$dropdown-menu-border-width) (-$dropdown-menu-border-width) 0 0 $dropdown-menu-border-color !default;
 
 $dropdown-pointing-menu-distance: $mini !default;
 $dropdown-pointing-menu-border-radius: $dropdown-border-radius !default;
@@ -391,7 +391,7 @@ $dropdown-inverted-menu-border: 1px solid $dropdown-inverted-menu-border-color !
 $dropdown-inverted-menu-box-shadow: none !default;
 
 $dropdown-inverted-pointing-arrow-background: $black !default;
-$dropdown-inverted-pointing-arrow-box-shadow: -$dropdown-menu-border-width -$dropdown-menu-border-width 0 0 $dropdown-inverted-menu-border-color !default;
+$dropdown-inverted-pointing-arrow-box-shadow: (-$dropdown-menu-border-width) (-$dropdown-menu-border-width) 0 0 $dropdown-inverted-menu-border-color !default;
 
 $dropdown-inverted-hovered-item-background: $transparent-white !default;
 $dropdown-inverted-hovered-item-color: $dropdown-inverted-menu-color !default;

@@ -34,7 +34,7 @@ $message-header-font-size: $relative-large !default;
 $message-header-font-weight: $bold !default;
 $message-header-display: block !default;
 $message-header-distance: 0 !default;
-$message-header-margin: -$header-line-height-offset 0 $message-header-distance 0 !default;
+$message-header-margin: (-$header-line-height-offset) 0 $message-header-distance 0 !default;
 $message-header-paragraph-distance: 0.25em !default;
 
 //- Paragraph */

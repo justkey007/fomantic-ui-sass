@@ -68,15 +68,15 @@ $icon-bordered-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.1) inset !default;
 $icon-corner-size: 0.45em !default;
 $icon-corner-stroke: 1px !default;
 $icon-corner-shadow:
-  -$icon-corner-stroke -$icon-corner-stroke 0 $white,
-   $icon-corner-stroke -$icon-corner-stroke 0 $white,
-  -$icon-corner-stroke  $icon-corner-stroke 0 $white,
+  (-$icon-corner-stroke) (-$icon-corner-stroke) 0 $white,
+   $icon-corner-stroke (-$icon-corner-stroke) 0 $white,
+  (-$icon-corner-stroke)  $icon-corner-stroke 0 $white,
    $icon-corner-stroke  $icon-corner-stroke 0 $white
  !default;
 $icon-corner-inverted-shadow:
-  -$icon-corner-stroke -$icon-corner-stroke 0 $black,
-   $icon-corner-stroke -$icon-corner-stroke 0 $black,
-  -$icon-corner-stroke  $icon-corner-stroke 0 $black,
+  (-$icon-corner-stroke) (-$icon-corner-stroke) 0 $black,
+   $icon-corner-stroke (-$icon-corner-stroke) 0 $black,
+  (-$icon-corner-stroke)  $icon-corner-stroke 0 $black,
    $icon-corner-stroke  $icon-corner-stroke 0 $black
  !default;
 

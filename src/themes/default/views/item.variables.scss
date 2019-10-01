@@ -64,7 +64,7 @@ $item-content-box-shadow: none !default;
 $item-content-color: $text-color !default;
 
 //- Header */
-$item-header-margin: -$line-height-offset 0 0 !default;
+$item-header-margin: (-$line-height-offset) 0 0 !default;
 $item-header-font-weight: $bold !default;
 $item-header-font-size: $relative-big !default;
 $item-header-color: $dark-text-color !default;

@@ -70,7 +70,7 @@ $label-image-image-height: $label-image-height !default;
 
 $label-image-detail-background: $strong-transparent-black !default;
 $label-image-detail-padding: $label-image-vertical-padding $label-image-horizontal-padding !default;
-$label-image-detail-margin: -$label-image-vertical-padding (-$label-image-horizontal-padding) (-$label-image-vertical-padding) $label-image-detail-distance !default;
+$label-image-detail-margin: (-$label-image-vertical-padding) (-$label-image-horizontal-padding) (-$label-image-vertical-padding) $label-image-detail-distance !default;
 
 //-------------------- States --------------------*/
 

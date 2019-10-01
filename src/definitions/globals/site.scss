@@ -117,11 +117,11 @@ a:hover {
   }
   body ::-webkit-scrollbar-track {
     background: $track-background;
-    /* border-radius: $track-border-radius; */
+    border-radius: $track-border-radius;
   }
   body ::-webkit-scrollbar-thumb {
     cursor: pointer;
-    /* border-radius: $thumb-border-radius; */
+    border-radius: $thumb-border-radius;
     background: $thumb-background;
     transition: $thumb-transition;
   }

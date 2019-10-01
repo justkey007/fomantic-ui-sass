@@ -72,16 +72,16 @@
 
   .ui.#{$key + ""}.rating .active.icon {
     color: $l;
-    text-shadow: 0px -$rating-shadow-width 0px $c,
-                 -$rating-shadow-width 0px 0px $c,
+    text-shadow: 0px (-$rating-shadow-width) 0px $c,
+                 (-$rating-shadow-width) 0px 0px $c,
                  0px $rating-shadow-width 0px $c,
                  $rating-shadow-width 0px 0px $c;
   }
   .ui.#{$key + ""}.rating .icon.selected,
   .ui.#{$key + ""}.rating .icon.selected.active {
     color: $lh;
-    text-shadow: 0px -$rating-shadow-width 0px $h,
-                 -$rating-shadow-width 0px 0px $h,
+    text-shadow: 0px (-$rating-shadow-width) 0px $h,
+                 (-$rating-shadow-width) 0px 0px $h,
                  0px $rating-shadow-width 0px $h,
                  $rating-shadow-width 0px 0px $h;
   }

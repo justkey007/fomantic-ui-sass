@@ -17,7 +17,7 @@
 
 @keyframes placeholderShimmer{
   0% {
-    background-position: -$placeholder-loading-gradient-width 0
+    background-position: (-$placeholder-loading-gradient-width) 0
   }
   100% {
     background-position: $placeholder-loading-gradient-width 0

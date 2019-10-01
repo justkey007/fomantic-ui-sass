@@ -1,8 +1,10 @@
 {
   "name": "fomantic-ui-sass",
-  "version": "2.7.80004",
+  "version": "2.7.80005",
   "description": "The sass version of semantic ui. It is fully customizable with isolated variable names.",
-  "scripts": {},
+  "scripts": {
+    "build": "sass src/semantic.scss dist/semantic.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/justkey007/semantic-ui-scss.git"

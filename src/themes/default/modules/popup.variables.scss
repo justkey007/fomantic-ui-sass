@@ -54,9 +54,9 @@ $popup-arrow-center-background: $popup-arrow-background !default;
 $popup-arrow-bottom-background: $popup-arrow-background !default;
 
 $popup-arrow-box-shadow: $popup-arrow-stroke $popup-arrow-stroke 0 0 $popup-arrow-color !default;
-$popup-left-arrow-box-shadow: $popup-arrow-stroke -$popup-arrow-stroke 0 0 $popup-arrow-color !default;
-$popup-right-arrow-box-shadow: -$popup-arrow-stroke $popup-arrow-stroke 0 0 $popup-arrow-color !default;
-$popup-bottom-arrow-box-shadow: -$popup-arrow-stroke -$popup-arrow-stroke 0 0 $popup-arrow-color !default;
+$popup-left-arrow-box-shadow: $popup-arrow-stroke (-$popup-arrow-stroke) 0 0 $popup-arrow-color !default;
+$popup-right-arrow-box-shadow: (-$popup-arrow-stroke) $popup-arrow-stroke 0 0 $popup-arrow-color !default;
+$popup-bottom-arrow-box-shadow: (-$popup-arrow-stroke) (-$popup-arrow-stroke) 0 0 $popup-arrow-color !default;
 
 //--------------------  Types --------------------*/
 

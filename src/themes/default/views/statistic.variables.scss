@@ -12,7 +12,7 @@ $statistic-max-width: none !default;
 //- Group */
 $statistic-horizontal-spacing: 1.5em !default;
 $statistic-row-spacing: 1em !default;
-$statistic-group-margin: $statistic-vertical-margin -$statistic-horizontal-spacing -$statistic-row-spacing !default;
+$statistic-group-margin: $statistic-vertical-margin (-$statistic-horizontal-spacing) (-$statistic-row-spacing) !default;
 
 //- Group Element */
 $statistic-element-margin: 0 $statistic-horizontal-spacing $statistic-row-spacing !default;

@@ -674,7 +674,7 @@ Floated Menu / Item
   background: $menu-tabular-active-background;
   color: $menu-tabular-active-color;
   border-color: $menu-tabular-border-color;
-  margin: -$menu-tabular-border-width 0 0 0;
+  margin: (-$menu-tabular-border-width) 0 0 0;
   border-radius: 0 0 $menu-tabular-border-radius $menu-tabular-border-radius !important;
 }
 

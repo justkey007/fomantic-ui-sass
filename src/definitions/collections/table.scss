@@ -265,7 +265,7 @@
   background: $table-definition-header-background;
   font-weight: $table-definition-header-font-weight;
   color: $table-definition-header-color;
-  box-shadow: -$table-colored-border-size-cover -$table-colored-border-size 0 $table-colored-border-size-cover $table-definition-page-background;
+  box-shadow: (-$table-colored-border-size-cover) (-$table-colored-border-size) 0 $table-colored-border-size-cover $table-definition-page-background;
   -moz-transform: scale(1);
 }
 
@@ -274,7 +274,7 @@
   background: $table-definition-footer-background;
   font-weight: $table-definition-footer-font-weight;
   color: $table-definition-footer-color;
-  box-shadow: -$table-colored-border-size-cover $table-colored-border-size 0 $table-colored-border-size-cover $table-definition-page-background;
+  box-shadow: (-$table-colored-border-size-cover) $table-colored-border-size 0 $table-colored-border-size-cover $table-definition-page-background;
   -moz-transform: scale(1);
 }
 

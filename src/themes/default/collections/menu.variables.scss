@@ -123,7 +123,7 @@ $menu-label-and-icon-margin: 0 0.5em 0 0 !default;
 $menu-image-label-text-distance: 0.8em !default;
 $menu-image-label-vertical-padding: 0.2833em !default; //- Calculates as: @verticalLabel (from label.less) - $menu-label-vertical-padding (from here) */
 $menu-image-label-height: (1em + $menu-image-label-vertical-padding * 2) !default;  //- Logic adopted from label.less */
-$menu-image-label-image-margin: -$menu-image-label-vertical-padding $menu-image-label-text-distance -$menu-image-label-vertical-padding -$menu-image-label-text-distance !default;
+$menu-image-label-image-margin: (-$menu-image-label-vertical-padding) $menu-image-label-text-distance (-$menu-image-label-vertical-padding) (-$menu-image-label-text-distance) !default;
 
 //- Dropdown in Menu */
 $menu-dropdown-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08) !default;
@@ -258,7 +258,6 @@ $menu-secondary-pointing-active-hover-text-color: $menu-secondary-pointing-activ
 
 $menu-secondary-pointing-header-color: $dark-text-color !default;
 $menu-secondary-vertical-pointing-item-margin: 0 (-$menu-secondary-pointing-border-width) 0 0 !default;
-
 
 //- Inverted Secondary */
 $menu-secondary-inverted-color: $inverted-light-text-color !default;

@@ -1322,6 +1322,10 @@ select.ui.dropdown {
 }
 
 .ui.pointing.dropdown > .menu:not(.hidden):after {
+  top: $dropdown-pointing-arrow-offset;
+  left: 50%;
+  margin: 0 0 0 $dropdown-pointing-arrow-offset;
+  
   display: block;
   position: absolute;
   pointer-events: none;
@@ -1334,12 +1338,6 @@ select.ui.dropdown {
   box-shadow: $dropdown-pointing-arrow-box-shadow;
   background: $dropdown-pointing-arrow-background;
   z-index: $dropdown-pointing-arrow-z-index;
-}
-
-.ui.pointing.dropdown > .menu:not(.hidden):after {
-  top: $dropdown-pointing-arrow-offset;
-  left: 50%;
-  margin: 0 0 0 $dropdown-pointing-arrow-offset;
 }
 
 /* Top Left Pointing */
