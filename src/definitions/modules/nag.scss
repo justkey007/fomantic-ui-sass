@@ -1,141 +1,142 @@
 @import '../../themes/default/modules/nag.variables';
 
-/*******************************
-//@-         Nag
-*******************************/
+@if $use-nag {
+  /*******************************
+  //@-         Nag
+  *******************************/
 
-.ui.nag {
-  display: none;
-  opacity: $nag-opacity;
-  position: $nag-position;
+  .ui.nag {
+    display: none;
+    opacity: $nag-opacity;
+    position: $nag-position;
 
-  top: $nag-top;
-  left: 0;
-  z-index: $nag-z-index;
+    top: $nag-top;
+    left: 0;
+    z-index: $nag-z-index;
 
-  min-height: $nag-min-height;
-  width: $nag-width;
+    min-height: $nag-min-height;
+    width: $nag-width;
 
-  margin: $nag-margin;
-  padding: $nag-padding;
+    margin: $nag-margin;
+    padding: $nag-padding;
 
-  background: $nag-background;
-  box-shadow: $nag-box-shadow;
+    background: $nag-background;
+    box-shadow: $nag-box-shadow;
 
-  font-size: $nag-font-size;
-  text-align: $nag-text-align;
-  color: $nag-color;
+    font-size: $nag-font-size;
+    text-align: $nag-text-align;
+    color: $nag-color;
 
-  border-radius: $nag-top-border-radius;
-  transition: $nag-transition;
+    border-radius: $nag-top-border-radius;
+    transition: $nag-transition;
+  }
+
+  a.ui.nag {
+    cursor: pointer;
+  }
+
+  .ui.nag > .title {
+    display: inline-block;
+    margin: $nag-title-margin;
+    color: $nag-title-color;
+  }
+
+
+  .ui.nag > .close.icon {
+    cursor: pointer;
+    opacity: $nag-close-opacity;
+
+    position: absolute;
+    top: $nag-close-top;
+    right: $nag-close-right;
+
+    font-size: $nag-close-size;
+
+    margin: $nag-close-margin;
+    color: $nag-close-color;
+    transition: $nag-close-transition;
+  }
+
+
+
+  /*******************************
+              States
+  *******************************/
+
+  /* Hover */
+  .ui.nag:hover {
+    background: $nag-hover-background;
+    opacity: $nag-hover-opacity;
+  }
+
+  .ui.nag .close:hover {
+    opacity: $nag-close-hover-opacity;
+  }
+
+
+  /*******************************
+            Variations
+  *******************************/
+
+
+  /*--------------
+      Static
+  ---------------*/
+
+  .ui.overlay.nag {
+    position: absolute;
+    display: block;
+  }
+
+  /*--------------
+      Fixed
+  ---------------*/
+
+  .ui.fixed.nag {
+    position: fixed;
+  }
+
+  /*--------------
+      Bottom
+  ---------------*/
+
+  .ui.bottom.nags,
+  .ui.bottom.nag {
+    border-radius: $nag-bottom-border-radius;
+    top: auto;
+    bottom: $nag-bottom;
+  }
+
+  /*--------------
+      White
+  ---------------*/
+
+  .ui.inverted.nags .nag,
+  .ui.inverted.nag {
+    background-color: $nag-inverted-background;
+    color: $dark-text-color;
+  }
+  .ui.inverted.nags .nag .close,
+  .ui.inverted.nags .nag .title,
+  .ui.inverted.nag .close,
+  .ui.inverted.nag .title {
+    color: $light-text-color;
+  }
+
+
+  /*******************************
+            Groups
+  *******************************/
+
+  .ui.nags .nag {
+    border-radius: $nag-grouped-border-radius !important;
+  }
+  .ui.nags .nag:last-child {
+    border-radius: $nag-top-border-radius;
+  }
+  .ui.bottom.nags .nag:last-child {
+    border-radius: $nag-bottom-border-radius;
+  }
 }
-
-a.ui.nag {
-  cursor: pointer;
-}
-
-.ui.nag > .title {
-  display: inline-block;
-  margin: $nag-title-margin;
-  color: $nag-title-color;
-}
-
-
-.ui.nag > .close.icon {
-  cursor: pointer;
-  opacity: $nag-close-opacity;
-
-  position: absolute;
-  top: $nag-close-top;
-  right: $nag-close-right;
-
-  font-size: $nag-close-size;
-
-  margin: $nag-close-margin;
-  color: $nag-close-color;
-  transition: $nag-close-transition;
-}
-
-
-
-/*******************************
-             States
-*******************************/
-
-/* Hover */
-.ui.nag:hover {
-  background: $nag-hover-background;
-  opacity: $nag-hover-opacity;
-}
-
-.ui.nag .close:hover {
-  opacity: $nag-close-hover-opacity;
-}
-
-
-/*******************************
-           Variations
-*******************************/
-
-
-/*--------------
-     Static
----------------*/
-
-.ui.overlay.nag {
-  position: absolute;
-  display: block;
-}
-
-/*--------------
-     Fixed
----------------*/
-
-.ui.fixed.nag {
-  position: fixed;
-}
-
-/*--------------
-     Bottom
----------------*/
-
-.ui.bottom.nags,
-.ui.bottom.nag {
-  border-radius: $nag-bottom-border-radius;
-  top: auto;
-  bottom: $nag-bottom;
-}
-
-/*--------------
-     White
----------------*/
-
-.ui.inverted.nags .nag,
-.ui.inverted.nag {
-  background-color: $nag-inverted-background;
-  color: $dark-text-color;
-}
-.ui.inverted.nags .nag .close,
-.ui.inverted.nags .nag .title,
-.ui.inverted.nag .close,
-.ui.inverted.nag .title {
-  color: $light-text-color;
-}
-
-
-/*******************************
-           Groups
-*******************************/
-
-.ui.nags .nag {
-  border-radius: $nag-grouped-border-radius !important;
-}
-.ui.nags .nag:last-child {
-  border-radius: $nag-top-border-radius;
-}
-.ui.bottom.nags .nag:last-child {
-  border-radius: $nag-bottom-border-radius;
-}
-
 
 @import '../../themes/default/modules/nag.style';

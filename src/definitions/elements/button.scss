@@ -1,1647 +1,13 @@
 @import '../../themes/default/elements/button.variables';
 
-/*******************************
-//@-        Button
-*******************************/
-
-.ui.button {
-  cursor: pointer;
-  display: inline-block;
-
-  min-height: 1em;
-
-  outline: none;
-  border: none;
-  vertical-align: $button-vertical-align;
-  background: $button-background;
-  color: $button-text-color;
-
-  font-family: $button-font-family;
-
-  margin: 0 $button-horizontal-margin $button-vertical-margin 0;
-  padding: $button-vertical-padding $button-horizontal-padding ($button-vertical-padding + $button-shadow-offset);
-
-  text-transform: $button-text-transform;
-  text-shadow: $button-text-shadow;
-  font-weight: $button-font-weight;
-  line-height: $button-line-height;
-  font-style: normal;
-  text-align: center;
-  text-decoration: none;
-
-  border-radius: $button-border-radius;
-  box-shadow: $button-box-shadow;
-
-  user-select: none;
-  transition: $button-transition;
-  will-change: $button-will-change;
-
-  -webkit-tap-highlight-color: $button-tap-color;
-}
-
-
-/*******************************
-            States
-*******************************/
-
-/*--------------
-      Hover
----------------*/
-
-.ui.button:hover {
-  background-color: $button-hover-background-color;
-  background-image: $button-hover-background-image;
-  box-shadow: $button-hover-box-shadow;
-  color: $button-hover-color;
-}
-
-.ui.button:hover .icon {
-  opacity: $button-icon-hover-opacity;
-}
-
-/*--------------
-      Focus
----------------*/
-
-.ui.button:focus {
-  background-color: $button-focus-background-color;
-  color: $button-focus-color;
-  background-image: $button-focus-background-image;
-  box-shadow: $button-focus-box-shadow;
-}
-
-.ui.button:focus .icon {
-  opacity: $button-icon-focus-opacity;
-}
-
-/*--------------
-      Down
----------------*/
-
-.ui.button:active,
-.ui.active.button:active {
-  background-color: $button-down-background-color;
-  background-image: $button-down-background-image;
-  color: $button-down-color;
-  box-shadow: $button-down-box-shadow;
-}
-
-/*--------------
-     Active
----------------*/
-
-.ui.active.button {
-  background-color: $button-active-background-color;
-  background-image: $button-active-background-image;
-  box-shadow: $button-active-box-shadow;
-  color: $button-active-color;
-}
-.ui.active.button:hover {
-  background-color: $button-active-hover-background-color;
-  background-image: $button-active-hover-background-image;
-  color: $button-active-hover-color;
-}
-.ui.active.button:active {
-  background-color: $button-active-background-color;
-  background-image: $button-active-background-image;
-}
-
-
-/*--------------
-    Loading
----------------*/
-
-/* Specificity hack */
-.ui.loading.loading.loading.loading.loading.loading.button {
-  position: relative;
-  cursor: default;
-  text-shadow: none !important;
-  color: transparent;
-  opacity: $button-loading-opacity;
-  pointer-events: $button-loading-pointer-events;
-  transition: $button-loading-transition;
-}
-.ui.loading.button:before {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-
-  margin: $loader-margin;
-  width: $loader-size;
-  height: $loader-size;
-
-  border-radius: $circular-radius;
-  border: $loader-line-width solid $button-inverted-loader-fill-color;
-}
-.ui.loading.button:after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-
-  margin: $loader-margin;
-  width: $loader-size;
-  height: $loader-size;
-
-  border-radius: $circular-radius;
-
-  animation: loader $loader-speed infinite linear;
-  border: $loader-line-width solid currentColor;
-  color: $inverted-loader-line-color;
-
-  box-shadow: 0 0 0 1px transparent;
-}
-.ui.labeled.icon.loading.button .icon {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.ui.basic.loading.button:not(.inverted):before {
-  border-color: $loader-fill-color;
-}
-.ui.basic.loading.button:not(.inverted):after {
-  border-color: $loader-line-color;
-}
-
-/*-------------------
-      Disabled
---------------------*/
-
-.ui.buttons .disabled.button:not(.basic),
-.ui.disabled.button,
-.ui.button:disabled,
-.ui.disabled.button:hover,
-.ui.disabled.active.button {
-  cursor: default;
-  opacity: $disabled-opacity !important;
-  background-image: none;
-  box-shadow: none;
-  pointer-events: none !important;
-}
-
-/* Basic Group With Disabled */
-.ui.basic.buttons .ui.disabled.button {
-  border-color: $disabled-border-color;
-}
-
-/*******************************
-             Types
-*******************************/
-
-/*-------------------
-       Animated
---------------------*/
-
-.ui.animated.button {
-  position: relative;
-  overflow: hidden;
-  padding-right: 0 !important;
-  vertical-align: $button-animated-vertical-align;
-  z-index: $button-animated-z-index;
-}
-
-.ui.animated.button .content {
-  will-change: transform, opacity;
-}
-.ui.animated.button .visible.content {
-  position: relative;
-  margin-right: $button-horizontal-padding;
-}
-.ui.animated.button .hidden.content {
-  position: absolute;
-  width: 100%;
-}
-
-/* Horizontal */
-.ui.animated.button .visible.content,
-.ui.animated.button .hidden.content {
-  transition: right $button-animation-duration $button-animation-easing 0s;
-}
-.ui.animated.button .visible.content {
-  left: auto;
-  right: 0;
-}
-.ui.animated.button .hidden.content {
-  top: 50%;
-  left: auto;
-  right: -100%;
-  margin-top: -($button-line-height / 2);
-}
-.ui.animated.button:focus .visible.content,
-.ui.animated.button:hover .visible.content {
-  left: auto;
-  right: 200%;
-}
-.ui.animated.button:focus .hidden.content,
-.ui.animated.button:hover .hidden.content {
-  left: auto;
-  right: 0;
-}
-
-/* Vertical */
-.ui.vertical.animated.button .visible.content,
-.ui.vertical.animated.button .hidden.content {
-  transition: top $button-animation-duration $button-animation-easing, transform $button-animation-duration $button-animation-easing;
-}
-.ui.vertical.animated.button .visible.content {
-  transform: translateY(0%);
-  right: auto;
-}
-.ui.vertical.animated.button .hidden.content {
-  top: -50%;
-  left: 0;
-  right: auto;
-}
-.ui.vertical.animated.button:focus .visible.content,
-.ui.vertical.animated.button:hover .visible.content {
-  transform: translateY(200%);
-  right: auto;
-}
-.ui.vertical.animated.button:focus .hidden.content,
-.ui.vertical.animated.button:hover .hidden.content {
-  top: 50%;
-  right: auto;
-}
-
-/* Fade */
-.ui.fade.animated.button .visible.content,
-.ui.fade.animated.button .hidden.content {
-  transition: opacity $button-animation-duration $button-animation-easing, transform $button-animation-duration $button-animation-easing;
-}
-.ui.fade.animated.button .visible.content {
-  left: auto;
-  right: auto;
-  opacity: 1;
-  transform: scale(1);
-}
-.ui.fade.animated.button .hidden.content {
-  opacity: 0;
-  left: 0;
-  right: auto;
-  transform: scale($button-fade-scale-high);
-}
-.ui.fade.animated.button:focus .visible.content,
-.ui.fade.animated.button:hover .visible.content {
-  left: auto;
-  right: auto;
-  opacity: 0;
-  transform: scale($button-fade-scale-low);
-}
-.ui.fade.animated.button:focus .hidden.content,
-.ui.fade.animated.button:hover .hidden.content {
-  left: 0;
-  right: auto;
-  opacity: 1;
-  transform: scale(1);
-}
-
-/*-------------------
-       Inverted
---------------------*/
-
-.ui.inverted.button {
-  box-shadow: 0 0 0 $button-inverted-border-size $white inset;
-  background: transparent none;
-  color: $white;
-  text-shadow: none !important;
-}
-
-/* Group */
-.ui.inverted.buttons .button {
-  margin: $button-inverted-group-offset;
-}
-.ui.inverted.buttons .button:first-child {
-  margin-left: 0;
-}
-.ui.inverted.vertical.buttons .button {
-  margin: $button-inverted-vertical-group-offset;
-}
-.ui.inverted.vertical.buttons .button:first-child {
-  margin-top: 0;
-}
-
-/* States */
-
-/* Hover */
-.ui.inverted.button:hover {
-  background: $white;
-  box-shadow: 0 0 0 $button-inverted-border-size $white inset;
-  color: $button-hover-color;
-}
-
-/* Active / Focus */
-.ui.inverted.button:focus,
-.ui.inverted.button.active {
-  background: $white;
-  box-shadow: 0 0 0 $button-inverted-border-size $white inset;
-  color: $button-focus-color;
-}
-
-/* Active Focus */
-.ui.inverted.button.active:focus {
-  background: $mid-white;
-  box-shadow: 0 0 0 $button-inverted-border-size $mid-white inset;
-  color: $button-focus-color;
-}
-
-
-/*-------------------
-    Labeled Button
---------------------*/
-
-.ui.labeled.button:not(.icon) {
-  display: inline-flex;
-  flex-direction: row;
-  background: none;
-  padding: 0 !important;
-  border: none;
-  box-shadow: none;
-}
-
-.ui.labeled.button > .button {
-  margin: 0;
-}
-.ui.labeled.button > .label {
-  display: flex;
-  align-items: $button-labeled-label-align;
-  margin: 0 0 0 $button-labeled-label-border-offset !important;
-  font-size: $button-labeled-label-font-size;
-  padding: $button-labeled-label-padding;
-  border-color: $button-labeled-label-border-color;
-}
-
-/* Tag */
-.ui.labeled.button > .tag.label:before {
-  width: $button-labeled-tag-label-size;
-  height: $button-labeled-tag-label-size;
-}
-
-/* Right */
-.ui.labeled.button:not([class*="left labeled"]) > .button {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.ui.labeled.button:not([class*="left labeled"]) > .label {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-/* Left Side */
-.ui[class*="left labeled"].button > .button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.ui[class*="left labeled"].button > .label {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-/*-------------------
-       Social
---------------------*/
-
-/* Facebook */
-.ui.facebook.button {
-  background-color: $facebook-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.facebook.button:hover {
-  background-color: $facebook-hover-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-.ui.facebook.button:active {
-  background-color: $facebook-down-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-
-/* Twitter */
-.ui.twitter.button {
-  background-color: $twitter-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.twitter.button:hover {
-  background-color: $twitter-hover-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-.ui.twitter.button:active {
-  background-color: $twitter-down-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-
-/* Google Plus */
-.ui.google.plus.button {
-  background-color: $google-plus-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.google.plus.button:hover {
-  background-color: $google-plus-hover-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-.ui.google.plus.button:active {
-  background-color: $google-plus-down-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-
-/* Linked In */
-.ui.linkedin.button {
-  background-color: $linked-in-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-.ui.linkedin.button:hover {
-  background-color: $linked-in-hover-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-.ui.linkedin.button:active {
-  background-color: $linked-in-down-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-
-/* YouTube */
-.ui.youtube.button {
-  background-color: $youtube-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.youtube.button:hover {
-  background-color: $youtube-hover-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-.ui.youtube.button:active {
-  background-color: $youtube-down-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-
-/* Instagram */
-.ui.instagram.button {
-  background-color: $instagram-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.instagram.button:hover {
-  background-color: $instagram-hover-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-.ui.instagram.button:active {
-  background-color: $instagram-down-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-
-/* Pinterest */
-.ui.pinterest.button {
-  background-color: $pinterest-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.pinterest.button:hover {
-  background-color: $pinterest-hover-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-.ui.pinterest.button:active {
-  background-color: $pinterest-down-color;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-}
-
-/* VK */
-.ui.vk.button {
-  background-color: $vk-color;
-  color: $white;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.vk.button:hover {
-  background-color: $vk-hover-color;
-  color: $white;
-}
-.ui.vk.button:active {
-  background-color: $vk-down-color;
-  color: $white;
-}
-
-/* WhatsApp */
-.ui.whatsapp.button {
-  background-color: $whats-app-color;
-  color: $white;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.whatsapp.button:hover {
-  background-color: $whats-app-hover-color;
-  color: $white;
-}
-.ui.whatsapp.button:active {
-  background-color: $whats-app-down-color;
-  color: $white;
-}
-
-/* Telegram */
-.ui.telegram.button {
-  background-color: $telegram-color;
-  color: $white;
-  background-image: $button-colored-background-image;
-  box-shadow: $button-colored-box-shadow;
-}
-.ui.telegram.button:hover {
-  background-color: $telegram-hover-color;
-  color: $white;
-}
-.ui.telegram.button:active {
-  background-color: $telegram-down-color;
-  color: $white;
-}
-
-/*--------------
-     Icon
----------------*/
-
-.ui.button > .icon:not(.button) {
-  height: $button-icon-height;
-  opacity: $button-icon-opacity;
-  margin: $button-icon-margin;
-  transition: $button-icon-transition;
-  vertical-align: $button-icon-vertical-align;
-  color: $button-icon-color;
-}
-
-.ui.button:not(.icon) > .icon:not(.button):not(.dropdown),
-.ui.button:not(.icon) > .icons:not(.button):not(.dropdown) {
-  margin: $button-icon-margin;
-}
-.ui.button:not(.icon) > .right.icon:not(.button):not(.dropdown) {
-  margin: $button-right-icon-margin;
-}
-
-/*******************************
-           Variations
-*******************************/
-
-
-/*-------------------
-       Floated
---------------------*/
-
-.ui[class*="left floated"].buttons,
-.ui[class*="left floated"].button {
-  float: left;
-  margin-left: 0;
-  margin-right: $button-floated-margin;
-}
-.ui[class*="right floated"].buttons,
-.ui[class*="right floated"].button {
-  float: right;
-  margin-right: 0;
-  margin-left: $button-floated-margin;
-}
-
-/*-------------------
-       Compact
---------------------*/
-
-.ui.compact.buttons .button,
-.ui.compact.button {
-  padding: $button-compact-vertical-padding $button-compact-horizontal-padding ( $button-compact-vertical-padding + $button-shadow-offset );
-}
-.ui.compact.icon.buttons .button,
-.ui.compact.icon.button {
-  padding: $button-compact-vertical-padding $button-compact-vertical-padding ( $button-compact-vertical-padding + $button-shadow-offset );
-}
-.ui.compact.labeled.icon.buttons .button,
-.ui.compact.labeled.icon.button {
-  padding: $button-compact-vertical-padding ($button-compact-horizontal-padding + $button-labeled-icon-width) ( $button-compact-vertical-padding + $button-shadow-offset );
-}
-.ui.compact.labeled.icon.buttons .button > .icon,
-.ui.compact.labeled.icon.button > .icon {
-  padding: $button-compact-vertical-padding 0 $button-compact-vertical-padding 0;
-}
-
-/*-------------------
-        Sizes
---------------------*/
-
-.ui.mini.buttons .button,
-.ui.mini.buttons .or,
-.ui.ui.ui.ui.mini.button {
-  font-size: $mini;
-}
-.ui.tiny.buttons .button,
-.ui.tiny.buttons .or,
-.ui.ui.ui.ui.tiny.button {
-  font-size: $tiny;
-}
-.ui.small.buttons .button,
-.ui.small.buttons .or,
-.ui.ui.ui.ui.small.button {
-  font-size: $small;
-}
-.ui.buttons .button,
-.ui.buttons .or,
-.ui.button {
-  font-size: $medium;
-}
-.ui.large.buttons .button,
-.ui.large.buttons .or,
-.ui.ui.ui.ui.large.button {
-  font-size: $large;
-}
-.ui.big.buttons .button,
-.ui.big.buttons .or,
-.ui.ui.ui.ui.big.button {
-  font-size: $big;
-}
-.ui.huge.buttons .button,
-.ui.huge.buttons .or,
-.ui.ui.ui.ui.huge.button {
-  font-size: $huge;
-}
-.ui.massive.buttons .button,
-.ui.massive.buttons .or,
-.ui.ui.ui.ui.massive.button {
-  font-size: $massive;
-}
-
-/* Dropdown coupled buttons sizes */
-.ui.mini.buttons .dropdown {
-  font-size: $mini;
-}
-.ui.mini.buttons .dropdown .menu > .item {
-  font-size: $mini;
-}
-.ui.tiny.buttons .dropdown {
-  font-size: $tiny;
-}
-.ui.tiny.buttons .dropdown .menu > .item {
-  font-size: $tiny;
-}
-.ui.small.buttons .dropdown {
-  font-size: $small;
-}
-.ui.small.buttons .dropdown .menu > .item {
-  font-size: $small;
-}
-.ui.large.buttons .dropdown {
-  font-size: $large;
-}
-.ui.large.buttons .dropdown .menu > .item {
-  font-size: $large;
-}
-.ui.big.buttons .dropdown {
-  font-size: $big;
-}
-.ui.big.buttons .dropdown .menu > .item {
-  font-size: $big;
-}
-.ui.huge.buttons .dropdown {
-  font-size: $huge;
-}
-.ui.huge.buttons .dropdown .menu > .item {
-  font-size: $huge;
-}
-.ui.massive.buttons .dropdown {
-  font-size: $massive;
-}
-.ui.massive.buttons .dropdown .menu > .item {
-  font-size: $massive;
-}
-
-/*--------------
-    Icon Only
----------------*/
-
-.ui.icon.buttons .button,
-.ui.icon.button {
-  padding: $button-vertical-padding $button-vertical-padding ( $button-vertical-padding + $button-shadow-offset );
-}
-.ui.icon.buttons .button > .icon,
-.ui.icon.button > .icon {
-  opacity: $button-with-icon-opacity;
-  margin: 0 !important;
-  vertical-align: top;
-}
-
-
-/*-------------------
-        Basic
---------------------*/
-
-.ui.basic.buttons .button,
-.ui.basic.button {
-  background: $button-basic-background;
-  color: $button-basic-text-color;
-  font-weight: $button-basic-font-weight;
-  border-radius: $button-basic-border-radius;
-  text-transform: $button-basic-text-transform;
-  text-shadow: none !important;
-  box-shadow: $button-basic-box-shadow;
-}
-.ui.basic.buttons {
-  box-shadow: $button-basic-group-box-shadow;
-  border: $button-basic-group-border;
-  border-radius: $button-border-radius;
-}
-.ui.basic.buttons .button {
-  border-radius: 0;
-}
-
-.ui.basic.buttons .button:hover,
-.ui.basic.button:hover {
-  background: $button-basic-hover-background;
-  color: $button-basic-hover-text-color;
-  box-shadow: $button-basic-hover-box-shadow;
-}
-.ui.basic.buttons .button:focus,
-.ui.basic.button:focus {
-  background: $button-basic-focus-background;
-  color: $button-basic-focus-text-color;
-  box-shadow: $button-basic-focus-box-shadow;
-}
-.ui.basic.buttons .button:active,
-.ui.basic.button:active {
-  background: $button-basic-down-background;
-  color: $button-basic-down-text-color;
-  box-shadow: $button-basic-down-box-shadow;
-}
-.ui.basic.buttons .active.button,
-.ui.basic.active.button {
-  background: $button-basic-active-background;
-  box-shadow: $button-basic-active-box-shadow;
-  color: $button-basic-active-text-color;
-}
-.ui.basic.buttons .active.button:hover,
-.ui.basic.active.button:hover {
-  background-color: $transparent-black;
-}
-
-/* Vertical */
-.ui.basic.buttons .button:hover {
-  box-shadow: $button-basic-hover-box-shadow inset;
-}
-.ui.basic.buttons .button:active {
-  box-shadow: $button-basic-down-box-shadow inset;
-}
-.ui.basic.buttons .active.button {
-  box-shadow: $button-basic-active-box-shadow;
-}
-
-/* Standard Basic Inverted */
-.ui.basic.inverted.buttons .button,
-.ui.basic.inverted.button {
-  background-color: transparent;
-  color: $off-white;
-  box-shadow: $button-basic-inverted-box-shadow;
-}
-.ui.basic.inverted.buttons .button:hover,
-.ui.basic.inverted.button:hover {
-  color: $white;
-  box-shadow: $button-basic-inverted-hover-box-shadow;
-}
-.ui.basic.inverted.buttons .button:focus,
-.ui.basic.inverted.button:focus {
-  color: $white;
-  box-shadow: $button-basic-inverted-focus-box-shadow;
-}
-.ui.basic.inverted.buttons .button:active,
-.ui.basic.inverted.button:active {
-  background-color: $transparent-white;
-  color: $white;
-  box-shadow: $button-basic-inverted-down-box-shadow;
-}
-.ui.basic.inverted.buttons .active.button,
-.ui.basic.inverted.active.button {
-  background-color: $transparent-white;
-  color: $button-inverted-text-color;
-  text-shadow: $button-inverted-text-shadow;
-  box-shadow: $button-basic-inverted-active-box-shadow;
-}
-.ui.basic.inverted.buttons .active.button:hover,
-.ui.basic.inverted.active.button:hover {
-  background-color: $strong-transparent-white;
-  box-shadow: $button-basic-inverted-hover-box-shadow;
-}
-
-
-/* Basic Group */
-.ui.basic.buttons .button {
-  border-left: $button-basic-group-border;
-  box-shadow: none;
-}
-.ui.basic.vertical.buttons .button {
-  border-left: none;
-  border-left-width: 0;
-  border-top: $button-basic-group-border;
-}
-.ui.basic.vertical.buttons .button:first-child {
-  border-top-width: 0;
-}
-
-/*-------------------
-       Tertiary
---------------------*/
-
-/* Overline Mixin */
-
-.ui.tertiary.button {
-  transition: color $default-duration $default-easing !important;
-  border-radius: 0;
-  margin:
-    ($button-vertical-padding  - $button-tertiary-line-padding)
-    ($button-horizontal-margin)
-    ($button-vertical-padding + $button-shadow-offset + $button-vertical-margin - $button-tertiary-line-padding)
-    0
-    !important;
-  padding: $button-tertiary-line-padding !important;
-
-  @if ($button-tertiary-with-underline == true) {
-    box-shadow: inset 0 (-$button-tertiary-line-height) 0 $button-tertiary-line-color;
-  }
-
-  @if ($button-tertiary-with-overline == true) {
-    box-shadow: inset 0 $button-tertiary-line-height 0 $button-tertiary-line-color;
-  }
-
-  @if ($button-tertiary-with-underline == false) and ($button-tertiary-with-overline == false){
-    box-shadow: none;
-  }
-  color: $button-tertiary-text-color;
-  background: $button-tertiary-background-color;
-}
-
-.ui.tertiary.button:hover {
-
-  @if ($button-tertiary-hover-with-underline == true) {
-    box-shadow: inset 0 (-$button-tertiary-line-height) 0 $button-tertiary-hover-line-color;
-  }
-
-  @if ($button-tertiary-hover-with-overline == true) {
-    box-shadow: inset 0 $button-tertiary-line-height 0 $button-tertiary-hover-line-color;
-  }
-
-  @if ($button-tertiary-hover-with-underline == false) and ($button-tertiary-hover-with-overline == false) {
-    box-shadow: none;
-  }
-  color: $button-tertiary-hover-color;
-  background: $button-tertiary-hover-background-color;
-}
-
-.ui.tertiary.button:focus {
-  @if ($button-tertiary-focus-with-underline == true) {
-    box-shadow: inset 0 (-$button-tertiary-line-height) 0 $button-tertiary-focus-line-color;
-  }
-
-  @if ($button-tertiary-focus-with-overline == true) {
-    box-shadow: inset 0 $button-tertiary-line-height 0 $button-tertiary-focus-line-color;
-  }
-
-  @if ($button-tertiary-focus-with-underline == false) and ($button-tertiary-focus-with-overline == false){
-    box-shadow: none;
-  }
-  color: $button-tertiary-focus-color;
-  background: $button-tertiary-focus-background-color;
-}
-
-.ui.tertiary.button:active {
-  @if ($button-tertiary-active-with-underline == true) {
-    box-shadow: inset 0 (-$button-tertiary-line-height) 0 $button-tertiary-active-line-color;
-    border-radius: $button-border-radius $button-border-radius 0 0;
-  }
-
-  @if ($button-tertiary-active-with-overline == true) {
-    box-shadow: inset 0 $button-tertiary-line-height 0 $button-tertiary-active-line-color;
-    border-radius: 0 0 $button-border-radius $button-border-radius;
-  }
-
-  @if ($button-tertiary-active-with-underline == false) and ($button-tertiary-active-with-overline == false){
-    box-shadow: none;
-    border-radius: 0;
-  }
-  color: $button-tertiary-active-color;
-  background: $button-tertiary-active-background-color;
-}
-
-/*--------------
-  Labeled Icon
----------------*/
-
-.ui.labeled.icon.buttons .button,
-.ui.labeled.icon.button {
-  position: relative;
-  padding-left: $button-labeled-icon-padding !important;
-  padding-right: $button-horizontal-padding !important;
-}
-
-/* Left Labeled */
-.ui.labeled.icon.buttons > .button > .icon,
-.ui.labeled.icon.button > .icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  line-height: 1;
-  border-radius: 0;
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-  text-align: center;
-  animation:none;
-  padding: $button-vertical-padding 0 $button-vertical-padding 0;
-
-  margin: $button-labeled-icon-margin;
-  width: $button-labeled-icon-width;
-  background-color: $button-labeled-icon-background-color;
-  color: $button-labeled-icon-color;
-  box-shadow: $button-labeled-icon-left-shadow;
-}
-
-/* Right Labeled */
-.ui[class*="right labeled"].icon.button {
-  padding-right: $button-labeled-icon-padding !important;
-  padding-left: $button-horizontal-padding !important;
-}
-.ui[class*="right labeled"].icon.button > .icon {
-  left: auto;
-  right: 0;
-  border-radius: 0;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
-  box-shadow: $button-labeled-icon-right-shadow;
-}
-
-
-.ui.labeled.icon.buttons > .button > .icon:before,
-.ui.labeled.icon.button > .icon:before,
-.ui.labeled.icon.buttons > .button > .icon:after,
-.ui.labeled.icon.button > .icon:after {
-  display: block;
-  position: relative;
-  width: 100%;
-  top: 0;
-  text-align: center;
-}
-
-.ui.labeled.icon.buttons .button > .icon {
-  border-radius: 0;
-}
-.ui.labeled.icon.buttons .button:first-child > .icon {
-  border-top-left-radius: $button-border-radius;
-  border-bottom-left-radius: $button-border-radius;
-}
-.ui.labeled.icon.buttons .button:last-child > .icon {
-  border-top-right-radius: $button-border-radius;
-  border-bottom-right-radius: $button-border-radius;
-}
-.ui.vertical.labeled.icon.buttons .button:first-child > .icon {
-  border-radius: 0;
-  border-top-left-radius: $button-border-radius;
-}
-.ui.vertical.labeled.icon.buttons .button:last-child > .icon {
-  border-radius: 0;
-  border-bottom-left-radius: $button-border-radius;
-}
-
-/* Loading Icon in Labeled Button */
-.ui.labeled.icon.button > .loading.icon:before {
-  animation: loader 2s linear infinite;
-}
-
-
-/*--------------
-     Toggle
----------------*/
-
-/* Toggle (Modifies active state to give affordances) */
-.ui.toggle.buttons .active.button,
-.ui.buttons .button.toggle.active,
-.ui.button.toggle.active {
-  background-color: $positive-color;
-  box-shadow: none;
-  text-shadow: $button-inverted-text-shadow;
-  color: $button-inverted-text-color;
-}
-.ui.button.toggle.active:hover {
-  background-color: $positive-color-hover;
-  text-shadow: $button-inverted-text-shadow;
-  color: $button-inverted-text-color;
-}
-
-/*--------------
-    Circular
----------------*/
-
-.ui.circular.button {
-  border-radius: 10em;
-}
-.ui.circular.button > .icon {
-  width: 1em;
-  vertical-align: baseline;
-}
-
-
-/*-------------------
-      Or Buttons
---------------------*/
-
-.ui.buttons .or {
-  position: relative;
-  width: $button-or-gap;
-  height: $button-or-height;
-  z-index: $button-or-z-index;
-}
-.ui.buttons .or:before {
-  position: absolute;
-  text-align: center;
-  border-radius: $circular-radius;
-
-  content: $button-or-text;
-  top: 50%;
-  left: 50%;
-  background-color: $button-or-background-color;
-  text-shadow: $button-or-text-shadow;
-
-  margin-top: $button-or-vertical-offset;
-  margin-left: $button-or-horizontal-offset;
-
-  width: $button-or-circle-size;
-  height: $button-or-circle-size;
-
-  line-height: $button-or-line-height;
-  color: $button-or-text-color;
-
-  font-style: $button-or-text-style;
-  font-weight: $button-or-text-weight;
-
-  box-shadow: $button-or-box-shadow;
-}
-.ui.buttons .or[data-text]:before {
-  content: attr(data-text);
-}
-
-/* Fluid Or */
-.ui.fluid.buttons .or {
-  width: 0 !important;
-}
-.ui.fluid.buttons .or:after {
-  display: none;
-}
-
-
-/*-------------------
-       Attached
---------------------*/
-
-
-/* Singular */
-.ui.attached.button {
-  position: relative;
-  display: block;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: $button-attached-box-shadow;
-}
-
-/* Top / Bottom */
-.ui.attached.top.button {
-  border-radius: $button-border-radius $button-border-radius 0 0;
-}
-.ui.attached.bottom.button {
-  border-radius: 0 0 $button-border-radius $button-border-radius;
-}
-
-/* Left / Right */
-.ui.left.attached.button {
-  display: inline-block;
-  border-left: none;
-  text-align: right;
-
-  padding-right: $button-attached-horizontal-padding;
-  border-radius: $button-border-radius 0 0 $button-border-radius;
-}
-.ui.right.attached.button {
-  display: inline-block;
-  text-align: left;
-  padding-left: $button-attached-horizontal-padding;
-  border-radius: 0 $button-border-radius $button-border-radius 0;
-}
-
-/* Plural */
-.ui.attached.buttons {
-  position: relative;
-  display: flex;
-  border-radius: 0;
-  width: auto !important;
-  z-index: $button-attached-z-index;
-  margin-left: $button-attached-offset;
-  margin-right: $button-attached-offset;
-}
-.ui.attached.buttons .button {
-  margin: 0;
-}
-.ui.attached.buttons .button:first-child {
-  border-radius: 0;
-}
-.ui.attached.buttons .button:last-child {
-  border-radius: 0;
-}
-
-/* Top / Bottom */
-.ui[class*="top attached"].buttons {
-  margin-bottom: $button-attached-offset;
-  border-radius: $button-border-radius $button-border-radius 0 0;
-}
-.ui[class*="top attached"].buttons .button:first-child {
-  border-radius: $button-border-radius 0 0 0;
-}
-.ui[class*="top attached"].buttons .button:last-child {
-  border-radius: 0 $button-border-radius 0 0;
-}
-
-.ui[class*="bottom attached"].buttons {
-  margin-top: $button-attached-offset;
-  border-radius: 0 0 $button-border-radius $button-border-radius;
-}
-.ui[class*="bottom attached"].buttons .button:first-child {
-  border-radius: 0 0 0 $button-border-radius;
-}
-.ui[class*="bottom attached"].buttons .button:last-child {
-  border-radius: 0 0 $button-border-radius 0;
-}
-
-/* Left / Right */
-.ui[class*="left attached"].buttons {
-  display: inline-flex;
-  margin-right: 0;
-  margin-left: $button-attached-offset;
-  border-radius: 0 $button-border-radius $button-border-radius 0;
-}
-.ui[class*="left attached"].buttons .button:first-child {
-  margin-left: $button-attached-offset;
-  border-radius: 0 $button-border-radius 0 0;
-}
-.ui[class*="left attached"].buttons .button:last-child {
-  margin-left: $button-attached-offset;
-  border-radius: 0 0 $button-border-radius 0;
-}
-
-.ui[class*="right attached"].buttons {
-  display: inline-flex;
-  margin-left: 0;
-  margin-right: $button-attached-offset;
-  border-radius: $button-border-radius 0 0 $button-border-radius;
-}
-.ui[class*="right attached"].buttons .button:first-child {
-  margin-left: $button-attached-offset;
-  border-radius: $button-border-radius 0 0 0;
-}
-.ui[class*="right attached"].buttons .button:last-child {
-  margin-left: $button-attached-offset;
-  border-radius: 0 0 0 $button-border-radius;
-}
-
-/*-------------------
-        Fluid
---------------------*/
-
-.ui.fluid.buttons,
-.ui.fluid.button {
-  width: 100%;
-}
-.ui.fluid.button {
-  display: block;
-}
-
-.ui.two.buttons {
-  width: 100%;
-}
-.ui.two.buttons > .button {
-  width: 50%;
-}
-
-.ui.three.buttons {
-  width: 100%;
-}
-.ui.three.buttons > .button {
-  width: 33.333%;
-}
-
-.ui.four.buttons {
-  width: 100%;
-}
-.ui.four.buttons > .button {
-  width: 25%;
-}
-
-.ui.five.buttons {
-  width: 100%;
-}
-.ui.five.buttons > .button {
-  width: 20%;
-}
-
-.ui.six.buttons {
-  width: 100%;
-}
-.ui.six.buttons > .button {
-  width: 16.666%;
-}
-
-.ui.seven.buttons {
-  width: 100%;
-}
-.ui.seven.buttons > .button {
-  width: 14.285%;
-}
-
-.ui.eight.buttons {
-  width: 100%;
-}
-.ui.eight.buttons > .button {
-  width: 12.500%;
-}
-
-.ui.nine.buttons {
-  width: 100%;
-}
-.ui.nine.buttons > .button {
-  width: 11.11%;
-}
-
-.ui.ten.buttons {
-  width: 100%;
-}
-.ui.ten.buttons > .button {
-  width: 10%;
-}
-
-.ui.eleven.buttons {
-  width: 100%;
-}
-.ui.eleven.buttons > .button {
-  width: 9.09%;
-}
-
-.ui.twelve.buttons {
-  width: 100%;
-}
-.ui.twelve.buttons > .button {
-  width: 8.3333%;
-}
-
-/* Fluid Vertical Buttons */
-.ui.fluid.vertical.buttons,
-.ui.fluid.vertical.buttons > .button {
-  display: flex;
-  width: auto;
-  justify-content: center;
-}
-
-.ui.two.vertical.buttons > .button {
-  height: 50%;
-}
-.ui.three.vertical.buttons > .button {
-  height: 33.333%;
-}
-.ui.four.vertical.buttons > .button {
-  height: 25%;
-}
-.ui.five.vertical.buttons > .button {
-  height: 20%;
-}
-.ui.six.vertical.buttons > .button {
-  height: 16.666%;
-}
-.ui.seven.vertical.buttons > .button {
-  height: 14.285%;
-}
-.ui.eight.vertical.buttons > .button {
-  height: 12.500%;
-}
-.ui.nine.vertical.buttons > .button {
-  height: 11.11%;
-}
-.ui.ten.vertical.buttons > .button {
-  height: 10%;
-}
-.ui.eleven.vertical.buttons > .button {
-  height: 9.09%;
-}
-.ui.twelve.vertical.buttons > .button {
-  height: 8.3333%;
-}
-
-
-/*-------------------
-       Colors
---------------------*/
-
-@each $key, $value in $button-colors-map {
-  $color: $key;
-  $c: map-get($value, color);
-  $h: map-get($value, hover);
-  $f: map-get($value, focus);
-  $d: map-get($value, down);
-  $a: map-get($value, active);
-  $t: map-get($value, text);
-  $s: map-get($value, shadow);
-  $l: map-get($value, light);
-  $lh: map-get($value, lightHover);
-  $lf: map-get($value, lightFocus);
-  $ld: map-get($value, lightDown);
-  $la: map-get($value, lightActive);
-  $lt: map-get($value, lightText);
-  $ls: map-get($value, lightShadow);
-  $isDark: map-get($value, isDark);
-  $isVeryDark: map-get($value, isVeryDark);
-  $ty: getTertiaryButtonColor($isVeryDark, $c);
-  $tyh: getTertiaryButtonColor($isVeryDark, $c);
-  $tyf: getTertiaryButtonColorFocus($isVeryDark, $f);
-  $tya: getTertiaryButtonColorActive($isVeryDark, $a);
-
-
-  .ui.#{$key + ""}.buttons .button,
-  .ui.#{$key + ""}.button {
-    background-color: $c;
-    color: $t;
-    text-shadow: $s;
-    background-image: $button-colored-background-image;
-  }
-  .ui.#{$key + ""}.button {
-    box-shadow: $button-colored-box-shadow;
-  }
-  .ui.#{$key + ""}.buttons .button:hover,
-  .ui.#{$key + ""}.button:hover {
-    background-color: $h;
-    color: $t;
-    text-shadow: $s;
-  }
-  .ui.#{$key + ""}.buttons .button:focus,
-  .ui.#{$key + ""}.button:focus {
-    background-color: $f;
-    color: $t;
-    text-shadow: $s;
-  }
-  .ui.#{$key + ""}.buttons .button:active,
-  .ui.#{$key + ""}.button:active {
-    background-color: $d;
-    color: $t;
-    text-shadow: $s;
-  }
-  .ui.#{$key + ""}.buttons .active.button,
-  .ui.#{$key + ""}.buttons .active.button:active,
-  .ui.#{$key + ""}.active.button,
-  .ui.#{$key + ""}.button .active.button:active {
-    background-color: $a;
-    color: $t;
-    text-shadow: $s;
-  }
-
-  /* Basic */
-  .ui.basic.#{$key + ""}.buttons .button,
-  .ui.basic.#{$key + ""}.button {
-    background: transparent;
-    box-shadow: 0 0 0 $button-basic-border-size $c inset ;
-    color: $c ;
-  }
-  .ui.basic.#{$key + ""}.buttons .button:hover,
-  .ui.basic.#{$key + ""}.button:hover {
-    background: transparent ;
-    box-shadow: 0 0 0 $button-basic-colored-border-size $h inset ;
-    color: $h ;
-  }
-  .ui.basic.#{$key + ""}.buttons .button:focus,
-  .ui.basic.#{$key + ""}.button:focus {
-    background: transparent ;
-    box-shadow: 0 0 0 $button-basic-colored-border-size $f inset ;
-    color: $h ;
-  }
-  .ui.basic.#{$key + ""}.buttons .active.button,
-  .ui.basic.#{$key + ""}.active.button {
-    background: transparent ;
-    box-shadow: 0 0 0 $button-basic-colored-border-size $a inset ;
-    color: $d ;
-  }
-  .ui.basic.#{$key + ""}.buttons .button:active,
-  .ui.basic.#{$key + ""}.button:active {
-    box-shadow: 0 0 0 $button-basic-colored-border-size $d inset ;
-    color: $d ;
-  }
-  .ui.buttons:not(.vertical) > .basic.#{$key + ""}.button:not(:first-child) {
-    margin-left: -$button-basic-colored-border-size;
-  }
-
-  /* Inverted */
-  .ui.inverted.#{$key + ""}.buttons .button,
-  .ui.inverted.#{$key + ""}.button {
-    background-color: transparent;
-
-    @if ($isDark) {
-      box-shadow: 0 0 0 $button-inverted-border-size $solid-border-color inset ;
-      color: $button-inverted-text-color;
-    }
-
-    @if not ($isDark) {
-      box-shadow: 0 0 0 $button-inverted-border-size $l inset ;
-      color: $l;
-    }
-  }
-  .ui.inverted.#{$key + ""}.buttons .button:hover,
-  .ui.inverted.#{$key + ""}.button:hover,
-  .ui.inverted.#{$key + ""}.buttons .button:focus,
-  .ui.inverted.#{$key + ""}.button:focus,
-  .ui.inverted.#{$key + ""}.buttons .button.active,
-  .ui.inverted.#{$key + ""}.button.active,
-  .ui.inverted.#{$key + ""}.buttons .button:active,
-  .ui.inverted.#{$key + ""}.button:active {
-    box-shadow: none ;
-    color: $lt;
-  }
-  .ui.inverted.#{$key + ""}.buttons .button:hover,
-  .ui.inverted.#{$key + ""}.button:hover {
-    background-color: $lh;
-  }
-  .ui.inverted.#{$key + ""}.buttons .button:focus,
-  .ui.inverted.#{$key + ""}.button:focus {
-    background-color: $lf;
-  }
-  .ui.inverted.#{$key + ""}.buttons .active.button,
-  .ui.inverted.#{$key + ""}.active.button {
-    background-color: $la;
-  }
-  .ui.inverted.#{$key + ""}.buttons .button:active,
-  .ui.inverted.#{$key + ""}.button:active {
-    background-color: $ld;
-  }
-
-  /* Inverted Basic */
-  .ui.inverted.#{$key + ""}.basic.buttons .button,
-  .ui.inverted.#{$key + ""}.buttons .basic.button,
-  .ui.inverted.#{$key + ""}.basic.button {
-    background-color: transparent;
-    box-shadow: $button-basic-inverted-box-shadow ;
-    color: $white ;
-  }
-  .ui.inverted.#{$key + ""}.basic.buttons .button:hover,
-  .ui.inverted.#{$key + ""}.buttons .basic.button:hover,
-  .ui.inverted.#{$key + ""}.basic.button:hover {
-    box-shadow: 0 0 0 $button-inverted-border-size $lh inset ;
-
-    @if ($isDark) {
-      color: $white ;
-    }
-
-    @if not ($isDark) {
-      color: $l ;
-    }
-  }
-  .ui.inverted.#{$key + ""}.basic.buttons .button:focus,
-  .ui.inverted.#{$key + ""}.basic.buttons .button:focus,
-  .ui.inverted.#{$key + ""}.basic.button:focus {
-    box-shadow: 0 0 0 $button-inverted-border-size $lf inset ;
-    color: $l ;
-  }
-  .ui.inverted.#{$key + ""}.basic.buttons .active.button,
-  .ui.inverted.#{$key + ""}.buttons .basic.active.button,
-  .ui.inverted.#{$key + ""}.basic.active.button {
-    box-shadow: 0 0 0 $button-inverted-border-size $la inset ;
-
-    @if ($isDark) {
-      color: $white ;
-    }
-
-    @if not ($isDark) {
-      color: $l ;
-    }
-  }
-  .ui.inverted.#{$key + ""}.basic.buttons .button:active,
-  .ui.inverted.#{$key + ""}.buttons .basic.button:active,
-  .ui.inverted.#{$key + ""}.basic.button:active {
-    box-shadow: 0 0 0 $button-inverted-border-size $ld inset ;
-
-    @if ($isDark) {
-      color: $white ;
-    }
-
-    @if not ($isDark) {
-      color: $l ;
-    }
-  }
-
-  /* Tertiary */
-
-  .ui.tertiary.#{$key + ""}.buttons .button,
-  .ui.tertiary.#{$key + ""}.buttons .tertiary.button,
-  .ui.tertiary.#{$key + ""}.button {
-    background: transparent;
-
-    @if ($button-tertiary-with-underline == true) {
-      box-shadow: inset 0 (-$button-tertiary-line-height) 0 $ty;
-    }
-
-    @if ($button-tertiary-with-overline == true) {
-      box-shadow: inset 0 $button-tertiary-line-height 0 $ty;
-    }
-
-    @if ($button-tertiary-with-underline == false) and ($button-tertiary-with-overline == false){
-      box-shadow: none;
-    }
-    color: $c ;
-  }
-
-  .ui.tertiary.#{$key + ""}.buttons .button:hover,
-  .ui.tertiary.#{$key + ""}.buttons button:hover,
-  .ui.tertiary.#{$key + ""}.button:hover {
-
-    @if ($button-tertiary-hover-with-underline == true) {
-      box-shadow: inset 0 (-$button-tertiary-line-height) 0 $tyh;
-    }
-
-    @if ($button-tertiary-hover-with-overline == true) {
-      box-shadow: inset 0 $button-tertiary-line-height 0 $tyh;
-    }
-
-    @if ($button-tertiary-hover-with-underline == false) and ($button-tertiary-hover-with-overline == false) {
-      box-shadow: none ;
-    }
-
-    color: $tyh;
-  }
-
-  .ui.tertiary.#{$key + ""}.buttons .button:focus,
-  .ui.tertiary.#{$key + ""}.buttons .tertiary.button:focus,
-  .ui.tertiary.#{$key + ""}.button:focus {
-
-    @if ($button-tertiary-focus-with-underline == true) {
-      box-shadow: inset 0 (-$button-tertiary-line-height) 0 $tyf;
-    }
-
-    @if ($button-tertiary-focus-with-overline == true) {
-      box-shadow: inset 0 $button-tertiary-line-height 0 $tyf;
-    }
-
-    @if ($button-tertiary-focus-with-underline == false) and ($button-tertiary-focus-with-overline == false) {
-      box-shadow: none;
-    }
-
-    color: $tyf;
-  }
-
-  .ui.tertiary.#{$key + ""}.buttons .active.button,
-  .ui.tertiary.#{$key + ""}.buttons .tertiary.active.button,
-  .ui.tertiary.#{$key + ""}.active.button,
-  .ui.tertiary.#{$key + ""}.buttons .button:active,
-  .ui.tertiary.#{$key + ""}.buttons .tertiary.button:active,
-  .ui.tertiary.#{$key + ""}.button:active {
-
-    @if ($button-tertiary-active-with-underline == true) {
-      box-shadow: inset 0 (-$button-tertiary-line-height) 0 $tya;
-    }
-
-    @if ($button-tertiary-active-with-overline == true) {
-      box-shadow: inset 0 $button-tertiary-line-height 0 $tya;
-    }
-
-    @if ($button-tertiary-active-with-underline == false) and ($button-tertiary-active-with-overline == false) {
-      box-shadow: none;
-    }
-
-    color: $a ;
-  }
-}
-
 @mixin addConsequence($consequence) {
-  $_backgroundColor: "#{$consequence}Color";
-  $_backgroundColorHover: "#{$consequence}ColorHover";
-  $_backgroundColorFocus: "#{$consequence}ColorFocus";
-  $_backgroundColorDown: "#{$consequence}ColorDown";
-  $_backgroundColorActive: "#{$consequence}ColorActive";
-  $_textColor: "#{$consequence}TextColor";
-  $_textShadow: "#{$consequence}TextShadow";
+  $_backgroundColor: get('#{$consequence}.color', $consequence-colors-map);
+  $_backgroundColorHover: get('#{$consequence}.hover', $consequence-colors-map);
+  $_backgroundColorFocus: get('#{$consequence}.focus', $consequence-colors-map);
+  $_backgroundColorDown: get('#{$consequence}.down', $consequence-colors-map);
+  $_backgroundColorActive: get('#{$consequence}.active', $consequence-colors-map);
+  $_textColor: $button-positive-text-color;
+  $_textShadow: $button-positive-text-shadow;
 
   /* Standard */
   .ui.#{$consequence}.buttons .button,
@@ -1681,126 +47,1801 @@
     text-shadow: $_textShadow;
   }
 
-  /* Basic */
-  .ui.basic.#{$consequence}.buttons .button,
-  .ui.basic.#{$consequence}.button {
-    background: transparent;
-    box-shadow: 0 0 0 $button-basic-border-size $_backgroundColor inset;
-    color: $_backgroundColor;
+  @if($use-button-type-basic) {
+    /* Basic */
+    .ui.basic.#{$consequence}.buttons .button,
+    .ui.basic.#{$consequence}.button {
+      background: transparent;
+      box-shadow: 0 0 0 $button-basic-border-size $_backgroundColor inset;
+      color: $_backgroundColor;
+    }
+    .ui.basic.#{$consequence}.buttons .button:hover,
+    .ui.basic.#{$consequence}.button:hover {
+      background: transparent;
+      box-shadow: 0 0 0 $button-basic-colored-border-size $_backgroundColorHover
+        inset;
+      color: $_backgroundColorHover;
+    }
+    .ui.basic.#{$consequence}.buttons .button:focus,
+    .ui.basic.#{$consequence}.button:focus {
+      background: transparent;
+      box-shadow: 0 0 0 $button-basic-colored-border-size $_backgroundColorFocus
+        inset;
+      color: $_backgroundColorHover;
+    }
+    .ui.basic.#{$consequence}.buttons .active.button,
+    .ui.basic.#{$consequence}.active.button {
+      background: transparent;
+      box-shadow: 0 0 0 $button-basic-colored-border-size $_backgroundColorActive
+        inset;
+      color: $_backgroundColorDown;
+    }
+    .ui.basic.#{$consequence}.buttons .button:active,
+    .ui.basic.#{$consequence}.button:active {
+      box-shadow: 0 0 0 $button-basic-colored-border-size $_backgroundColorDown
+        inset;
+      color: $_backgroundColorDown;
+    }
+    .ui.buttons:not(.vertical) > .basic.#{$consequence}.button:not(:first-child) {
+      margin-left: -$button-basic-colored-border-size;
+    }
   }
-  .ui.basic.#{$consequence}.buttons .button:hover,
-  .ui.basic.#{$consequence}.button:hover {
-    background: transparent;
-    box-shadow: 0 0 0 $button-basic-colored-border-size $_backgroundColorHover
-      inset;
-    color: $_backgroundColorHover;
+}
+
+@if $use-button {
+  /*******************************
+  //@-        Button
+  *******************************/
+  
+  .ui.button {
+    cursor: pointer;
+    display: inline-block;
+  
+    min-height: 1em;
+  
+    outline: none;
+    border: none;
+    vertical-align: $button-vertical-align;
+    background: $button-background;
+    color: $button-text-color;
+  
+    font-family: $button-font-family;
+  
+    margin: 0 $button-horizontal-margin $button-vertical-margin 0;
+    padding: $button-vertical-padding $button-horizontal-padding ($button-vertical-padding + $button-shadow-offset);
+  
+    text-transform: $button-text-transform;
+    text-shadow: $button-text-shadow;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+  
+    border-radius: $button-border-radius;
+    box-shadow: $button-box-shadow;
+  
+    user-select: none;
+    transition: $button-transition;
+    will-change: $button-will-change;
+  
+    -webkit-tap-highlight-color: $button-tap-color;
   }
-  .ui.basic.#{$consequence}.buttons .button:focus,
-  .ui.basic.#{$consequence}.button:focus {
-    background: transparent;
-    box-shadow: 0 0 0 $button-basic-colored-border-size $_backgroundColorFocus
-      inset;
-    color: $_backgroundColorHover;
+  
+  
+  /*******************************
+              States
+  *******************************/
+  
+  /*--------------
+        Hover
+  ---------------*/
+  
+  .ui.button:hover {
+    background-color: $button-hover-background-color;
+    background-image: $button-hover-background-image;
+    box-shadow: $button-hover-box-shadow;
+    color: $button-hover-color;
   }
-  .ui.basic.#{$consequence}.buttons .active.button,
-  .ui.basic.#{$consequence}.active.button {
-    background: transparent;
-    box-shadow: 0 0 0 $button-basic-colored-border-size $_backgroundColorActive
-      inset;
-    color: $_backgroundColorDown;
+  
+  .ui.button:hover .icon {
+    opacity: $button-icon-hover-opacity;
   }
-  .ui.basic.#{$consequence}.buttons .button:active,
-  .ui.basic.#{$consequence}.button:active {
-    box-shadow: 0 0 0 $button-basic-colored-border-size $_backgroundColorDown
-      inset;
-    color: $_backgroundColorDown;
+  
+  /*--------------
+        Focus
+  ---------------*/
+  
+  .ui.button:focus {
+    background-color: $button-focus-background-color;
+    color: $button-focus-color;
+    background-image: $button-focus-background-image;
+    box-shadow: $button-focus-box-shadow;
   }
-  .ui.buttons:not(.vertical) > .basic.#{$consequence}.button:not(:first-child) {
-    margin-left: -$button-basic-colored-border-size;
+  
+  .ui.button:focus .icon {
+    opacity: $button-icon-focus-opacity;
   }
-}
-
-/*---------------
-    Positive
-----------------*/
-
-@include addConsequence(positive);
-
-/*---------------
-     Negative
-----------------*/
-
-@include addConsequence(negative);
-
-/*******************************
-            Groups
-*******************************/
-
-.ui.buttons {
-  display: inline-flex;
-  flex-direction: row;
-  font-size: 0;
-  vertical-align: baseline;
-  margin: $button-vertical-margin $button-horizontal-margin 0 0;
-}
-.ui.buttons:not(.basic):not(.inverted) {
-  box-shadow: $button-group-box-shadow;
-}
-
-/* Clearfix */
-.ui.buttons:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-/* Standard Group */
-.ui.buttons .button {
-  flex: 1 0 auto;
-  border-radius: 0;
-  margin: $button-group-offset;
-}
-.ui.buttons:not(.basic):not(.inverted) > .button:not(.basic):not(.inverted) {
-  box-shadow: $button-group-super-box-shadow;
-}
-
-.ui.buttons .button:first-child {
-  border-left: none;
-  margin-left: 0;
-  border-top-left-radius: $button-border-radius;
-  border-bottom-left-radius: $button-border-radius;
-}
-.ui.buttons .button:last-child {
-  border-top-right-radius: $button-border-radius;
-  border-bottom-right-radius: $button-border-radius;
-}
-
-/* Vertical  Style */
-.ui.vertical.buttons {
-  display: inline-flex;
-  flex-direction: column;
-}
-.ui.vertical.buttons .button {
-  display: block;
-  float: none;
-  width: 100%;
-  margin: $button-vertical-group-offset;
-  box-shadow: $button-vertical-box-shadow;
-  border-radius: 0;
-}
-.ui.vertical.buttons .button:first-child {
-  border-top-left-radius: $button-border-radius;
-  border-top-right-radius: $button-border-radius;
-}
-.ui.vertical.buttons .button:last-child {
-  margin-bottom: 0;
-  border-bottom-left-radius: $button-border-radius;
-  border-bottom-right-radius: $button-border-radius;
-}
-.ui.vertical.buttons .button:only-child {
-  border-radius: $button-border-radius;
+  
+  /*--------------
+        Down
+  ---------------*/
+  
+  .ui.button:active,
+  .ui.active.button:active {
+    background-color: $button-down-background-color;
+    background-image: $button-down-background-image;
+    color: $button-down-color;
+    box-shadow: $button-down-box-shadow;
+  }
+  
+  /*--------------
+       Active
+  ---------------*/
+  
+  .ui.active.button {
+    background-color: $button-active-background-color;
+    background-image: $button-active-background-image;
+    box-shadow: $button-active-box-shadow;
+    color: $button-active-color;
+  }
+  .ui.active.button:hover {
+    background-color: $button-active-hover-background-color;
+    background-image: $button-active-hover-background-image;
+    color: $button-active-hover-color;
+  }
+  .ui.active.button:active {
+    background-color: $button-active-background-color;
+    background-image: $button-active-background-image;
+  }
+  
+  
+  /*--------------
+      Loading
+  ---------------*/
+  
+  /* Specificity hack */
+  .ui.loading.loading.loading.loading.loading.loading.button {
+    position: relative;
+    cursor: default;
+    text-shadow: none !important;
+    color: transparent;
+    opacity: $button-loading-opacity;
+    pointer-events: $button-loading-pointer-events;
+    transition: $button-loading-transition;
+  }
+  .ui.loading.button:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+  
+    margin: $loader-margin;
+    width: $loader-size;
+    height: $loader-size;
+  
+    border-radius: $circular-radius;
+    border: $loader-line-width solid $button-inverted-loader-fill-color;
+  }
+  .ui.loading.button:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+  
+    margin: $loader-margin;
+    width: $loader-size;
+    height: $loader-size;
+  
+    border-radius: $circular-radius;
+  
+    animation: loader $loader-speed infinite linear;
+    border: $loader-line-width solid currentColor;
+    color: $inverted-loader-line-color;
+  
+    box-shadow: 0 0 0 1px transparent;
+  }
+  @if($use-button-type-labeled) {
+    .ui.labeled.icon.loading.button .icon {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  
+  @if($use-button-type-basic) {
+    .ui.basic.loading.button:not(.inverted):before {
+      border-color: $loader-fill-color;
+    }
+    .ui.basic.loading.button:not(.inverted):after {
+      border-color: $loader-line-color;
+    }
+  }
+  /*-------------------
+        Disabled
+  --------------------*/
+  
+  .ui.buttons .disabled.button:not(.basic),
+  .ui.disabled.button,
+  .ui.button:disabled,
+  .ui.disabled.button:hover,
+  .ui.disabled.active.button {
+    cursor: default;
+    opacity: $disabled-opacity !important;
+    background-image: none;
+    box-shadow: none;
+    pointer-events: none !important;
+  }
+  
+  @if($use-button-type-basic) {
+    /* Basic Group With Disabled */
+    .ui.basic.buttons .ui.disabled.button {
+      border-color: $disabled-border-color;
+    }
+  }
+  /*******************************
+               Types
+  *******************************/
+  
+  @if($use-button-type-animated) {
+    /*-------------------
+           Animated
+    --------------------*/
+    .ui.animated.button {
+      position: relative;
+      overflow: hidden;
+      padding-right: 0 !important;
+      vertical-align: $button-animated-vertical-align;
+      z-index: $button-animated-z-index;
+    }
+    
+    .ui.animated.button .content {
+      will-change: transform, opacity;
+    }
+    .ui.animated.button .visible.content {
+      position: relative;
+      margin-right: $button-horizontal-padding;
+    }
+    .ui.animated.button .hidden.content {
+      position: absolute;
+      width: 100%;
+    }
+    
+    /* Horizontal */
+    .ui.animated.button .visible.content,
+    .ui.animated.button .hidden.content {
+      transition: right $button-animation-duration $button-animation-easing 0s;
+    }
+    .ui.animated.button .visible.content {
+      left: auto;
+      right: 0;
+    }
+    .ui.animated.button .hidden.content {
+      top: 50%;
+      left: auto;
+      right: -100%;
+      margin-top: -($button-line-height / 2);
+    }
+    .ui.animated.button:focus .visible.content,
+    .ui.animated.button:hover .visible.content {
+      left: auto;
+      right: 200%;
+    }
+    .ui.animated.button:focus .hidden.content,
+    .ui.animated.button:hover .hidden.content {
+      left: auto;
+      right: 0;
+    }
+    
+    /* Vertical */
+    .ui.vertical.animated.button .visible.content,
+    .ui.vertical.animated.button .hidden.content {
+      transition: top $button-animation-duration $button-animation-easing, transform $button-animation-duration $button-animation-easing;
+    }
+    .ui.vertical.animated.button .visible.content {
+      transform: translateY(0%);
+      right: auto;
+    }
+    .ui.vertical.animated.button .hidden.content {
+      top: -50%;
+      left: 0;
+      right: auto;
+    }
+    .ui.vertical.animated.button:focus .visible.content,
+    .ui.vertical.animated.button:hover .visible.content {
+      transform: translateY(200%);
+      right: auto;
+    }
+    .ui.vertical.animated.button:focus .hidden.content,
+    .ui.vertical.animated.button:hover .hidden.content {
+      top: 50%;
+      right: auto;
+    }
+    
+    /* Fade */
+    .ui.fade.animated.button .visible.content,
+    .ui.fade.animated.button .hidden.content {
+      transition: opacity $button-animation-duration $button-animation-easing, transform $button-animation-duration $button-animation-easing;
+    }
+    .ui.fade.animated.button .visible.content {
+      left: auto;
+      right: auto;
+      opacity: 1;
+      transform: scale(1);
+    }
+    .ui.fade.animated.button .hidden.content {
+      opacity: 0;
+      left: 0;
+      right: auto;
+      transform: scale($button-fade-scale-high);
+    }
+    .ui.fade.animated.button:focus .visible.content,
+    .ui.fade.animated.button:hover .visible.content {
+      left: auto;
+      right: auto;
+      opacity: 0;
+      transform: scale($button-fade-scale-low);
+    }
+    .ui.fade.animated.button:focus .hidden.content,
+    .ui.fade.animated.button:hover .hidden.content {
+      left: 0;
+      right: auto;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @if($use-button-type-inverted) {
+    /*-------------------
+           Inverted
+    --------------------*/
+    
+    .ui.inverted.button {
+      box-shadow: 0 0 0 $button-inverted-border-size $white inset;
+      background: transparent none;
+      color: $white;
+      text-shadow: none !important;
+    }
+    
+    /* Group */
+    .ui.inverted.buttons .button {
+      margin: $button-inverted-group-offset;
+    }
+    .ui.inverted.buttons .button:first-child {
+      margin-left: 0;
+    }
+    .ui.inverted.vertical.buttons .button {
+      margin: $button-inverted-vertical-group-offset;
+    }
+    .ui.inverted.vertical.buttons .button:first-child {
+      margin-top: 0;
+    }
+    
+    /* States */
+    
+    /* Hover */
+    .ui.inverted.button:hover {
+      background: $white;
+      box-shadow: 0 0 0 $button-inverted-border-size $white inset;
+      color: $button-hover-color;
+    }
+    
+    /* Active / Focus */
+    .ui.inverted.button:focus,
+    .ui.inverted.button.active {
+      background: $white;
+      box-shadow: 0 0 0 $button-inverted-border-size $white inset;
+      color: $button-focus-color;
+    }
+    
+    /* Active Focus */
+    .ui.inverted.button.active:focus {
+      background: $mid-white;
+      box-shadow: 0 0 0 $button-inverted-border-size $mid-white inset;
+      color: $button-focus-color;
+    }
+  }
+  
+  
+  @if($use-button-type-labeled) {
+    /*-------------------
+        Labeled Button
+    --------------------*/
+  
+    .ui.labeled.button:not(.icon) {
+      display: inline-flex;
+      flex-direction: row;
+      background: none;
+      padding: 0 !important;
+      border: none;
+      box-shadow: none;
+    }
+  
+    .ui.labeled.button > .button {
+      margin: 0;
+    }
+    .ui.labeled.button > .label {
+      display: flex;
+      align-items: $button-labeled-label-align;
+      margin: 0 0 0 $button-labeled-label-border-offset !important;
+      font-size: $button-labeled-label-font-size;
+      padding: $button-labeled-label-padding;
+      border-color: $button-labeled-label-border-color;
+    }
+  
+    /* Tag */
+    .ui.labeled.button > .tag.label:before {
+      width: $button-labeled-tag-label-size;
+      height: $button-labeled-tag-label-size;
+    }
+  
+    /* Right */
+    .ui.labeled.button:not([class*="left labeled"]) > .button {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .ui.labeled.button:not([class*="left labeled"]) > .label {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  
+    /* Left Side */
+    .ui[class*="left labeled"].button > .button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .ui[class*="left labeled"].button > .label {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  
+  @if($use-button-variation-social) {
+    /*-------------------
+           Social
+    --------------------*/
+    @if(index($use-button-variation-social, facebook)) {
+      /* Facebook */
+      .ui.facebook.button {
+        background-color: $facebook-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.facebook.button:hover {
+        background-color: $facebook-hover-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+      .ui.facebook.button:active {
+        background-color: $facebook-down-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+    }
+    
+    @if(index($use-button-variation-social, twitter)) {
+      /* Twitter */
+      .ui.twitter.button {
+        background-color: $twitter-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.twitter.button:hover {
+        background-color: $twitter-hover-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+      .ui.twitter.button:active {
+        background-color: $twitter-down-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+    }
+    
+      @if(index($use-button-variation-social, "google plus")) {
+      /* Google Plus */
+      .ui.google.plus.button {
+        background-color: $google-plus-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.google.plus.button:hover {
+        background-color: $google-plus-hover-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+      .ui.google.plus.button:active {
+        background-color: $google-plus-down-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+    }
+    
+    @if(index($use-button-variation-social, linkedin)) {
+      /* Linked In */
+      .ui.linkedin.button {
+        background-color: $linked-in-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+      .ui.linkedin.button:hover {
+        background-color: $linked-in-hover-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+      .ui.linkedin.button:active {
+        background-color: $linked-in-down-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+    }
+    
+    @if(index($use-button-variation-social, youtube)) {
+      /* YouTube */
+      .ui.youtube.button {
+        background-color: $youtube-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.youtube.button:hover {
+        background-color: $youtube-hover-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+      .ui.youtube.button:active {
+        background-color: $youtube-down-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+    }
+    
+    @if(index($use-button-variation-social, instagram)) {
+      /* Instagram */
+      .ui.instagram.button {
+        background-color: $instagram-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.instagram.button:hover {
+        background-color: $instagram-hover-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+      .ui.instagram.button:active {
+        background-color: $instagram-down-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+    }
+    
+    @if(index($use-button-variation-social, pinterest)) {
+      /* Pinterest */
+      .ui.pinterest.button {
+        background-color: $pinterest-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.pinterest.button:hover {
+        background-color: $pinterest-hover-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+      .ui.pinterest.button:active {
+        background-color: $pinterest-down-color;
+        color: $button-inverted-text-color;
+        text-shadow: $button-inverted-text-shadow;
+      }
+    }
+    
+    @if(index($use-button-variation-social, vk)) {
+      /* VK */
+      .ui.vk.button {
+        background-color: $vk-color;
+        color: $white;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.vk.button:hover {
+        background-color: $vk-hover-color;
+        color: $white;
+      }
+      .ui.vk.button:active {
+        background-color: $vk-down-color;
+        color: $white;
+      }
+    }
+    
+    @if(index($use-button-variation-social, whatsapp)) {
+      /* WhatsApp */
+      .ui.whatsapp.button {
+        background-color: $whats-app-color;
+        color: $white;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.whatsapp.button:hover {
+        background-color: $whats-app-hover-color;
+        color: $white;
+      }
+      .ui.whatsapp.button:active {
+        background-color: $whats-app-down-color;
+        color: $white;
+      }
+    }
+    
+    @if(index($use-button-variation-social, twitter)) {
+      /* Telegram */
+      .ui.telegram.button {
+        background-color: $telegram-color;
+        color: $white;
+        background-image: $button-colored-background-image;
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.telegram.button:hover {
+        background-color: $telegram-hover-color;
+        color: $white;
+      }
+      .ui.telegram.button:active {
+        background-color: $telegram-down-color;
+        color: $white;
+      }
+    }
+  }
+  
+  /*--------------
+       Icon
+  ---------------*/
+  
+  .ui.button > .icon:not(.button) {
+    height: $button-icon-height;
+    opacity: $button-icon-opacity;
+    margin: $button-icon-margin;
+    transition: $button-icon-transition;
+    vertical-align: $button-icon-vertical-align;
+    color: $button-icon-color;
+  }
+  
+  .ui.button:not(.icon) > .icon:not(.button):not(.dropdown),
+  .ui.button:not(.icon) > .icons:not(.button):not(.dropdown) {
+    margin: $button-icon-margin;
+  }
+  .ui.button:not(.icon) > .right.icon:not(.button):not(.dropdown) {
+    margin: $button-right-icon-margin;
+  }
+  
+  /*******************************
+             Variations
+  *******************************/
+  
+  
+  /*-------------------
+         Floated
+  --------------------*/
+  
+  .ui[class*="left floated"].buttons,
+  .ui[class*="left floated"].button {
+    float: left;
+    margin-left: 0;
+    margin-right: $button-floated-margin;
+  }
+  .ui[class*="right floated"].buttons,
+  .ui[class*="right floated"].button {
+    float: right;
+    margin-right: 0;
+    margin-left: $button-floated-margin;
+  }
+  
+  /*-------------------
+         Compact
+  --------------------*/
+  
+  .ui.compact.buttons .button,
+  .ui.compact.button {
+    padding: $button-compact-vertical-padding $button-compact-horizontal-padding ( $button-compact-vertical-padding + $button-shadow-offset );
+  }
+  .ui.compact.icon.buttons .button,
+  .ui.compact.icon.button {
+    padding: $button-compact-vertical-padding $button-compact-vertical-padding ( $button-compact-vertical-padding + $button-shadow-offset );
+  }
+  .ui.compact.labeled.icon.buttons .button,
+  .ui.compact.labeled.icon.button {
+    padding: $button-compact-vertical-padding ($button-compact-horizontal-padding + $button-labeled-icon-width) ( $button-compact-vertical-padding + $button-shadow-offset );
+  }
+  .ui.compact.labeled.icon.buttons .button > .icon,
+  .ui.compact.labeled.icon.button > .icon {
+    padding: $button-compact-vertical-padding 0 $button-compact-vertical-padding 0;
+  }
+  
+  /*-------------------
+          Sizes
+  --------------------*/
+  
+  .ui.mini.buttons .button,
+  .ui.mini.buttons .or,
+  .ui.ui.ui.ui.mini.button {
+    font-size: $mini;
+  }
+  .ui.tiny.buttons .button,
+  .ui.tiny.buttons .or,
+  .ui.ui.ui.ui.tiny.button {
+    font-size: $tiny;
+  }
+  .ui.small.buttons .button,
+  .ui.small.buttons .or,
+  .ui.ui.ui.ui.small.button {
+    font-size: $small;
+  }
+  .ui.buttons .button,
+  .ui.buttons .or,
+  .ui.button {
+    font-size: $medium;
+  }
+  .ui.large.buttons .button,
+  .ui.large.buttons .or,
+  .ui.ui.ui.ui.large.button {
+    font-size: $large;
+  }
+  .ui.big.buttons .button,
+  .ui.big.buttons .or,
+  .ui.ui.ui.ui.big.button {
+    font-size: $big;
+  }
+  .ui.huge.buttons .button,
+  .ui.huge.buttons .or,
+  .ui.ui.ui.ui.huge.button {
+    font-size: $huge;
+  }
+  .ui.massive.buttons .button,
+  .ui.massive.buttons .or,
+  .ui.ui.ui.ui.massive.button {
+    font-size: $massive;
+  }
+  
+  /* Dropdown coupled buttons sizes */
+  .ui.mini.buttons .dropdown {
+    font-size: $mini;
+  }
+  .ui.mini.buttons .dropdown .menu > .item {
+    font-size: $mini;
+  }
+  .ui.tiny.buttons .dropdown {
+    font-size: $tiny;
+  }
+  .ui.tiny.buttons .dropdown .menu > .item {
+    font-size: $tiny;
+  }
+  .ui.small.buttons .dropdown {
+    font-size: $small;
+  }
+  .ui.small.buttons .dropdown .menu > .item {
+    font-size: $small;
+  }
+  .ui.large.buttons .dropdown {
+    font-size: $large;
+  }
+  .ui.large.buttons .dropdown .menu > .item {
+    font-size: $large;
+  }
+  .ui.big.buttons .dropdown {
+    font-size: $big;
+  }
+  .ui.big.buttons .dropdown .menu > .item {
+    font-size: $big;
+  }
+  .ui.huge.buttons .dropdown {
+    font-size: $huge;
+  }
+  .ui.huge.buttons .dropdown .menu > .item {
+    font-size: $huge;
+  }
+  .ui.massive.buttons .dropdown {
+    font-size: $massive;
+  }
+  .ui.massive.buttons .dropdown .menu > .item {
+    font-size: $massive;
+  }
+  
+  /*--------------
+      Icon Only
+  ---------------*/
+  
+  .ui.icon.buttons .button,
+  .ui.icon.button {
+    padding: $button-vertical-padding $button-vertical-padding ( $button-vertical-padding + $button-shadow-offset );
+  }
+  .ui.icon.buttons .button > .icon,
+  .ui.icon.button > .icon {
+    opacity: $button-with-icon-opacity;
+    margin: 0 !important;
+    vertical-align: top;
+  }
+  
+  
+  @if($use-button-type-basic) {
+    /*-------------------
+            Basic
+    --------------------*/
+    .ui.basic.buttons .button,
+    .ui.basic.button {
+      background: $button-basic-background;
+      color: $button-basic-text-color;
+      font-weight: $button-basic-font-weight;
+      border-radius: $button-basic-border-radius;
+      text-transform: $button-basic-text-transform;
+      text-shadow: none !important;
+      box-shadow: $button-basic-box-shadow;
+    }
+    .ui.basic.buttons {
+      box-shadow: $button-basic-group-box-shadow;
+      border: $button-basic-group-border;
+      border-radius: $button-border-radius;
+    }
+    .ui.basic.buttons .button {
+      border-radius: 0;
+    }
+  
+    .ui.basic.buttons .button:hover,
+    .ui.basic.button:hover {
+      background: $button-basic-hover-background;
+      color: $button-basic-hover-text-color;
+      box-shadow: $button-basic-hover-box-shadow;
+    }
+    .ui.basic.buttons .button:focus,
+    .ui.basic.button:focus {
+      background: $button-basic-focus-background;
+      color: $button-basic-focus-text-color;
+      box-shadow: $button-basic-focus-box-shadow;
+    }
+    .ui.basic.buttons .button:active,
+    .ui.basic.button:active {
+      background: $button-basic-down-background;
+      color: $button-basic-down-text-color;
+      box-shadow: $button-basic-down-box-shadow;
+    }
+    .ui.basic.buttons .active.button,
+    .ui.basic.active.button {
+      background: $button-basic-active-background;
+      box-shadow: $button-basic-active-box-shadow;
+      color: $button-basic-active-text-color;
+    }
+    .ui.basic.buttons .active.button:hover,
+    .ui.basic.active.button:hover {
+      background-color: $transparent-black;
+    }
+  
+    /* Vertical */
+    .ui.basic.buttons .button:hover {
+      box-shadow: $button-basic-hover-box-shadow inset;
+    }
+    .ui.basic.buttons .button:active {
+      box-shadow: $button-basic-down-box-shadow inset;
+    }
+    .ui.basic.buttons .active.button {
+      box-shadow: $button-basic-active-box-shadow;
+    }
+  
+    /* Standard Basic Inverted */
+    .ui.basic.inverted.buttons .button,
+    .ui.basic.inverted.button {
+      background-color: transparent;
+      color: $off-white;
+      box-shadow: $button-basic-inverted-box-shadow;
+    }
+    .ui.basic.inverted.buttons .button:hover,
+    .ui.basic.inverted.button:hover {
+      color: $white;
+      box-shadow: $button-basic-inverted-hover-box-shadow;
+    }
+    .ui.basic.inverted.buttons .button:focus,
+    .ui.basic.inverted.button:focus {
+      color: $white;
+      box-shadow: $button-basic-inverted-focus-box-shadow;
+    }
+    .ui.basic.inverted.buttons .button:active,
+    .ui.basic.inverted.button:active {
+      background-color: $transparent-white;
+      color: $white;
+      box-shadow: $button-basic-inverted-down-box-shadow;
+    }
+    .ui.basic.inverted.buttons .active.button,
+    .ui.basic.inverted.active.button {
+      background-color: $transparent-white;
+      color: $button-inverted-text-color;
+      text-shadow: $button-inverted-text-shadow;
+      box-shadow: $button-basic-inverted-active-box-shadow;
+    }
+    .ui.basic.inverted.buttons .active.button:hover,
+    .ui.basic.inverted.active.button:hover {
+      background-color: $strong-transparent-white;
+      box-shadow: $button-basic-inverted-hover-box-shadow;
+    }
+  
+  
+    /* Basic Group */
+    .ui.basic.buttons .button {
+      border-left: $button-basic-group-border;
+      box-shadow: none;
+    }
+    .ui.basic.vertical.buttons .button {
+      border-left: none;
+      border-left-width: 0;
+      border-top: $button-basic-group-border;
+    }
+    .ui.basic.vertical.buttons .button:first-child {
+      border-top-width: 0;
+    }
+  }
+  
+  @if($use-button-type-tertiary) {
+    /*-------------------
+           Tertiary
+    --------------------*/
+    
+    .ui.tertiary.button {
+      transition: color $default-duration $default-easing !important;
+      border-radius: 0;
+      margin:
+        ($button-vertical-padding  - $button-tertiary-line-padding)
+        ($button-horizontal-margin)
+        ($button-vertical-padding + $button-shadow-offset + $button-vertical-margin - $button-tertiary-line-padding)
+        0
+        !important;
+      padding: $button-tertiary-line-padding !important;
+  
+      @if ($button-tertiary-with-underline == true) {
+        box-shadow: inset 0 (-$button-tertiary-line-height) 0 $button-tertiary-line-color;
+      }
+  
+      @if ($button-tertiary-with-overline == true) {
+        box-shadow: inset 0 $button-tertiary-line-height 0 $button-tertiary-line-color;
+      }
+  
+      @if ($button-tertiary-with-underline == false) and ($button-tertiary-with-overline == false){
+        box-shadow: none;
+      }
+      color: $button-tertiary-text-color;
+      background: $button-tertiary-background-color;
+    }
+  
+    .ui.tertiary.button:hover {
+  
+      @if ($button-tertiary-hover-with-underline == true) {
+        box-shadow: inset 0 (-$button-tertiary-line-height) 0 $button-tertiary-hover-line-color;
+      }
+  
+      @if ($button-tertiary-hover-with-overline == true) {
+        box-shadow: inset 0 $button-tertiary-line-height 0 $button-tertiary-hover-line-color;
+      }
+  
+      @if ($button-tertiary-hover-with-underline == false) and ($button-tertiary-hover-with-overline == false) {
+        box-shadow: none;
+      }
+      color: $button-tertiary-hover-color;
+      background: $button-tertiary-hover-background-color;
+    }
+  
+    .ui.tertiary.button:focus {
+      @if ($button-tertiary-focus-with-underline == true) {
+        box-shadow: inset 0 (-$button-tertiary-line-height) 0 $button-tertiary-focus-line-color;
+      }
+  
+      @if ($button-tertiary-focus-with-overline == true) {
+        box-shadow: inset 0 $button-tertiary-line-height 0 $button-tertiary-focus-line-color;
+      }
+  
+      @if ($button-tertiary-focus-with-underline == false) and ($button-tertiary-focus-with-overline == false){
+        box-shadow: none;
+      }
+      color: $button-tertiary-focus-color;
+      background: $button-tertiary-focus-background-color;
+    }
+  
+    .ui.tertiary.button:active {
+      @if ($button-tertiary-active-with-underline == true) {
+        box-shadow: inset 0 (-$button-tertiary-line-height) 0 $button-tertiary-active-line-color;
+        border-radius: $button-border-radius $button-border-radius 0 0;
+      }
+  
+      @if ($button-tertiary-active-with-overline == true) {
+        box-shadow: inset 0 $button-tertiary-line-height 0 $button-tertiary-active-line-color;
+        border-radius: 0 0 $button-border-radius $button-border-radius;
+      }
+  
+      @if ($button-tertiary-active-with-underline == false) and ($button-tertiary-active-with-overline == false){
+        box-shadow: none;
+        border-radius: 0;
+      }
+      color: $button-tertiary-active-color;
+      background: $button-tertiary-active-background-color;
+    }
+  }
+  
+  @if($use-button-type-labeled) {
+    /*--------------
+      Labeled Icon
+    ---------------*/
+    .ui.labeled.icon.buttons .button,
+    .ui.labeled.icon.button {
+      position: relative;
+      padding-left: $button-labeled-icon-padding !important;
+      padding-right: $button-horizontal-padding !important;
+    }
+  
+    /* Left Labeled */
+    .ui.labeled.icon.buttons > .button > .icon,
+    .ui.labeled.icon.button > .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      line-height: 1;
+      border-radius: 0;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+      text-align: center;
+      animation:none;
+      padding: $button-vertical-padding 0 $button-vertical-padding 0;
+  
+      margin: $button-labeled-icon-margin;
+      width: $button-labeled-icon-width;
+      background-color: $button-labeled-icon-background-color;
+      color: $button-labeled-icon-color;
+      box-shadow: $button-labeled-icon-left-shadow;
+    }
+  
+    /* Right Labeled */
+    .ui[class*="right labeled"].icon.button {
+      padding-right: $button-labeled-icon-padding !important;
+      padding-left: $button-horizontal-padding !important;
+    }
+    .ui[class*="right labeled"].icon.button > .icon {
+      left: auto;
+      right: 0;
+      border-radius: 0;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      box-shadow: $button-labeled-icon-right-shadow;
+    }
+  
+  
+    .ui.labeled.icon.buttons > .button > .icon:before,
+    .ui.labeled.icon.button > .icon:before,
+    .ui.labeled.icon.buttons > .button > .icon:after,
+    .ui.labeled.icon.button > .icon:after {
+      display: block;
+      position: relative;
+      width: 100%;
+      top: 0;
+      text-align: center;
+    }
+  
+    .ui.labeled.icon.buttons .button > .icon {
+      border-radius: 0;
+    }
+    .ui.labeled.icon.buttons .button:first-child > .icon {
+      border-top-left-radius: $button-border-radius;
+      border-bottom-left-radius: $button-border-radius;
+    }
+    .ui.labeled.icon.buttons .button:last-child > .icon {
+      border-top-right-radius: $button-border-radius;
+      border-bottom-right-radius: $button-border-radius;
+    }
+    .ui.vertical.labeled.icon.buttons .button:first-child > .icon {
+      border-radius: 0;
+      border-top-left-radius: $button-border-radius;
+    }
+    .ui.vertical.labeled.icon.buttons .button:last-child > .icon {
+      border-radius: 0;
+      border-bottom-left-radius: $button-border-radius;
+    }
+  
+    /* Loading Icon in Labeled Button */
+    .ui.labeled.icon.button > .loading.icon:before {
+      animation: loader 2s linear infinite;
+    }
+  }
+  /*--------------
+       Toggle
+  ---------------*/
+  
+  /* Toggle (Modifies active state to give affordances) */
+  .ui.toggle.buttons .active.button,
+  .ui.buttons .button.toggle.active,
+  .ui.button.toggle.active {
+    background-color: $positive-color;
+    box-shadow: none;
+    text-shadow: $button-inverted-text-shadow;
+    color: $button-inverted-text-color;
+  }
+  .ui.button.toggle.active:hover {
+    background-color: $positive-color-hover;
+    text-shadow: $button-inverted-text-shadow;
+    color: $button-inverted-text-color;
+  }
+  
+  /*--------------
+      Circular
+  ---------------*/
+  
+  .ui.circular.button {
+    border-radius: 10em;
+  }
+  .ui.circular.button > .icon {
+    width: 1em;
+    vertical-align: baseline;
+  }
+  
+  
+  /*-------------------
+        Or Buttons
+  --------------------*/
+  
+  .ui.buttons .or {
+    position: relative;
+    width: $button-or-gap;
+    height: $button-or-height;
+    z-index: $button-or-z-index;
+  }
+  .ui.buttons .or:before {
+    position: absolute;
+    text-align: center;
+    border-radius: $circular-radius;
+  
+    content: $button-or-text;
+    top: 50%;
+    left: 50%;
+    background-color: $button-or-background-color;
+    text-shadow: $button-or-text-shadow;
+  
+    margin-top: $button-or-vertical-offset;
+    margin-left: $button-or-horizontal-offset;
+  
+    width: $button-or-circle-size;
+    height: $button-or-circle-size;
+  
+    line-height: $button-or-line-height;
+    color: $button-or-text-color;
+  
+    font-style: $button-or-text-style;
+    font-weight: $button-or-text-weight;
+  
+    box-shadow: $button-or-box-shadow;
+  }
+  .ui.buttons .or[data-text]:before {
+    content: attr(data-text);
+  }
+  
+  /* Fluid Or */
+  .ui.fluid.buttons .or {
+    width: 0 !important;
+  }
+  .ui.fluid.buttons .or:after {
+    display: none;
+  }
+  
+  
+  /*-------------------
+         Attached
+  --------------------*/
+  
+  
+  /* Singular */
+  .ui.attached.button {
+    position: relative;
+    display: block;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: $button-attached-box-shadow;
+  }
+  
+  /* Top / Bottom */
+  .ui.attached.top.button {
+    border-radius: $button-border-radius $button-border-radius 0 0;
+  }
+  .ui.attached.bottom.button {
+    border-radius: 0 0 $button-border-radius $button-border-radius;
+  }
+  
+  /* Left / Right */
+  .ui.left.attached.button {
+    display: inline-block;
+    border-left: none;
+    text-align: right;
+  
+    padding-right: $button-attached-horizontal-padding;
+    border-radius: $button-border-radius 0 0 $button-border-radius;
+  }
+  .ui.right.attached.button {
+    display: inline-block;
+    text-align: left;
+    padding-left: $button-attached-horizontal-padding;
+    border-radius: 0 $button-border-radius $button-border-radius 0;
+  }
+  
+  /* Plural */
+  .ui.attached.buttons {
+    position: relative;
+    display: flex;
+    border-radius: 0;
+    width: auto !important;
+    z-index: $button-attached-z-index;
+    margin-left: $button-attached-offset;
+    margin-right: $button-attached-offset;
+  }
+  .ui.attached.buttons .button {
+    margin: 0;
+  }
+  .ui.attached.buttons .button:first-child {
+    border-radius: 0;
+  }
+  .ui.attached.buttons .button:last-child {
+    border-radius: 0;
+  }
+  
+  /* Top / Bottom */
+  .ui[class*="top attached"].buttons {
+    margin-bottom: $button-attached-offset;
+    border-radius: $button-border-radius $button-border-radius 0 0;
+  }
+  .ui[class*="top attached"].buttons .button:first-child {
+    border-radius: $button-border-radius 0 0 0;
+  }
+  .ui[class*="top attached"].buttons .button:last-child {
+    border-radius: 0 $button-border-radius 0 0;
+  }
+  
+  .ui[class*="bottom attached"].buttons {
+    margin-top: $button-attached-offset;
+    border-radius: 0 0 $button-border-radius $button-border-radius;
+  }
+  .ui[class*="bottom attached"].buttons .button:first-child {
+    border-radius: 0 0 0 $button-border-radius;
+  }
+  .ui[class*="bottom attached"].buttons .button:last-child {
+    border-radius: 0 0 $button-border-radius 0;
+  }
+  
+  /* Left / Right */
+  .ui[class*="left attached"].buttons {
+    display: inline-flex;
+    margin-right: 0;
+    margin-left: $button-attached-offset;
+    border-radius: 0 $button-border-radius $button-border-radius 0;
+  }
+  .ui[class*="left attached"].buttons .button:first-child {
+    margin-left: $button-attached-offset;
+    border-radius: 0 $button-border-radius 0 0;
+  }
+  .ui[class*="left attached"].buttons .button:last-child {
+    margin-left: $button-attached-offset;
+    border-radius: 0 0 $button-border-radius 0;
+  }
+  
+  .ui[class*="right attached"].buttons {
+    display: inline-flex;
+    margin-left: 0;
+    margin-right: $button-attached-offset;
+    border-radius: $button-border-radius 0 0 $button-border-radius;
+  }
+  .ui[class*="right attached"].buttons .button:first-child {
+    margin-left: $button-attached-offset;
+    border-radius: $button-border-radius 0 0 0;
+  }
+  .ui[class*="right attached"].buttons .button:last-child {
+    margin-left: $button-attached-offset;
+    border-radius: 0 0 0 $button-border-radius;
+  }
+  
+  /*-------------------
+          Fluid
+  --------------------*/
+  
+  .ui.fluid.buttons,
+  .ui.fluid.button {
+    width: 100%;
+  }
+  .ui.fluid.button {
+    display: block;
+  }
+  
+  .ui.two.buttons {
+    width: 100%;
+  }
+  .ui.two.buttons > .button {
+    width: 50%;
+  }
+  
+  .ui.three.buttons {
+    width: 100%;
+  }
+  .ui.three.buttons > .button {
+    width: 33.333%;
+  }
+  
+  .ui.four.buttons {
+    width: 100%;
+  }
+  .ui.four.buttons > .button {
+    width: 25%;
+  }
+  
+  .ui.five.buttons {
+    width: 100%;
+  }
+  .ui.five.buttons > .button {
+    width: 20%;
+  }
+  
+  .ui.six.buttons {
+    width: 100%;
+  }
+  .ui.six.buttons > .button {
+    width: 16.666%;
+  }
+  
+  .ui.seven.buttons {
+    width: 100%;
+  }
+  .ui.seven.buttons > .button {
+    width: 14.285%;
+  }
+  
+  .ui.eight.buttons {
+    width: 100%;
+  }
+  .ui.eight.buttons > .button {
+    width: 12.500%;
+  }
+  
+  .ui.nine.buttons {
+    width: 100%;
+  }
+  .ui.nine.buttons > .button {
+    width: 11.11%;
+  }
+  
+  .ui.ten.buttons {
+    width: 100%;
+  }
+  .ui.ten.buttons > .button {
+    width: 10%;
+  }
+  
+  .ui.eleven.buttons {
+    width: 100%;
+  }
+  .ui.eleven.buttons > .button {
+    width: 9.09%;
+  }
+  
+  .ui.twelve.buttons {
+    width: 100%;
+  }
+  .ui.twelve.buttons > .button {
+    width: 8.3333%;
+  }
+  
+  /* Fluid Vertical Buttons */
+  .ui.fluid.vertical.buttons,
+  .ui.fluid.vertical.buttons > .button {
+    display: flex;
+    width: auto;
+    justify-content: center;
+  }
+  
+  .ui.two.vertical.buttons > .button {
+    height: 50%;
+  }
+  .ui.three.vertical.buttons > .button {
+    height: 33.333%;
+  }
+  .ui.four.vertical.buttons > .button {
+    height: 25%;
+  }
+  .ui.five.vertical.buttons > .button {
+    height: 20%;
+  }
+  .ui.six.vertical.buttons > .button {
+    height: 16.666%;
+  }
+  .ui.seven.vertical.buttons > .button {
+    height: 14.285%;
+  }
+  .ui.eight.vertical.buttons > .button {
+    height: 12.500%;
+  }
+  .ui.nine.vertical.buttons > .button {
+    height: 11.11%;
+  }
+  .ui.ten.vertical.buttons > .button {
+    height: 10%;
+  }
+  .ui.eleven.vertical.buttons > .button {
+    height: 9.09%;
+  }
+  .ui.twelve.vertical.buttons > .button {
+    height: 8.3333%;
+  }
+  
+  
+  /*-------------------
+         Colors
+  --------------------*/
+  
+  @each $key, $value in $button-colors-map {
+    @if(index(join($main-colors-names, $use-button-variation-colors), $key+'')) {
+      $color: $key;
+      $c: map-get($value, color);
+      $h: map-get($value, hover);
+      $f: map-get($value, focus);
+      $d: map-get($value, down);
+      $a: map-get($value, active);
+      $t: map-get($value, text);
+      $s: map-get($value, shadow);
+      $l: map-get($value, light);
+      $lh: map-get($value, lightHover);
+      $lf: map-get($value, lightFocus);
+      $ld: map-get($value, lightDown);
+      $la: map-get($value, lightActive);
+      $lt: map-get($value, lightText);
+      $ls: map-get($value, lightShadow);
+      $isDark: map-get($value, isDark);
+      $isVeryDark: map-get($value, isVeryDark);
+      $ty: getTertiaryButtonColor($isVeryDark, $c);
+      $tyh: getTertiaryButtonColor($isVeryDark, $c);
+      $tyf: getTertiaryButtonColorFocus($isVeryDark, $f);
+      $tya: getTertiaryButtonColorActive($isVeryDark, $a);
+    
+    
+      .ui.#{$key + ""}.buttons .button,
+      .ui.#{$key + ""}.button {
+        background-color: $c;
+        color: $t;
+        text-shadow: $s;
+        background-image: $button-colored-background-image;
+      }
+      .ui.#{$key + ""}.button {
+        box-shadow: $button-colored-box-shadow;
+      }
+      .ui.#{$key + ""}.buttons .button:hover,
+      .ui.#{$key + ""}.button:hover {
+        background-color: $h;
+        color: $t;
+        text-shadow: $s;
+      }
+      .ui.#{$key + ""}.buttons .button:focus,
+      .ui.#{$key + ""}.button:focus {
+        background-color: $f;
+        color: $t;
+        text-shadow: $s;
+      }
+      .ui.#{$key + ""}.buttons .button:active,
+      .ui.#{$key + ""}.button:active {
+        background-color: $d;
+        color: $t;
+        text-shadow: $s;
+      }
+      .ui.#{$key + ""}.buttons .active.button,
+      .ui.#{$key + ""}.buttons .active.button:active,
+      .ui.#{$key + ""}.active.button,
+      .ui.#{$key + ""}.button .active.button:active {
+        background-color: $a;
+        color: $t;
+        text-shadow: $s;
+      }
+    
+      @if($use-button-type-basic) {
+        /* Basic */
+        .ui.basic.#{$key + ""}.buttons .button,
+        .ui.basic.#{$key + ""}.button {
+          background: transparent;
+          box-shadow: 0 0 0 $button-basic-border-size $c inset ;
+          color: $c ;
+        }
+        .ui.basic.#{$key + ""}.buttons .button:hover,
+        .ui.basic.#{$key + ""}.button:hover {
+          background: transparent ;
+          box-shadow: 0 0 0 $button-basic-colored-border-size $h inset ;
+          color: $h ;
+        }
+        .ui.basic.#{$key + ""}.buttons .button:focus,
+        .ui.basic.#{$key + ""}.button:focus {
+          background: transparent ;
+          box-shadow: 0 0 0 $button-basic-colored-border-size $f inset ;
+          color: $h ;
+        }
+        .ui.basic.#{$key + ""}.buttons .active.button,
+        .ui.basic.#{$key + ""}.active.button {
+          background: transparent ;
+          box-shadow: 0 0 0 $button-basic-colored-border-size $a inset ;
+          color: $d ;
+        }
+        .ui.basic.#{$key + ""}.buttons .button:active,
+        .ui.basic.#{$key + ""}.button:active {
+          box-shadow: 0 0 0 $button-basic-colored-border-size $d inset ;
+          color: $d ;
+        }
+        .ui.buttons:not(.vertical) > .basic.#{$key + ""}.button:not(:first-child) {
+          margin-left: -$button-basic-colored-border-size;
+        }
+      }
+    
+      @if($use-button-type-inverted) {
+        /* Inverted */
+        .ui.inverted.#{$key + ""}.buttons .button,
+        .ui.inverted.#{$key + ""}.button {
+          background-color: transparent;
+    
+          @if ($isDark) {
+            box-shadow: 0 0 0 $button-inverted-border-size $solid-border-color inset ;
+            color: $button-inverted-text-color;
+          }
+    
+          @if not ($isDark) {
+            box-shadow: 0 0 0 $button-inverted-border-size $l inset ;
+            color: $l;
+          }
+        }
+        .ui.inverted.#{$key + ""}.buttons .button:hover,
+        .ui.inverted.#{$key + ""}.button:hover,
+        .ui.inverted.#{$key + ""}.buttons .button:focus,
+        .ui.inverted.#{$key + ""}.button:focus,
+        .ui.inverted.#{$key + ""}.buttons .button.active,
+        .ui.inverted.#{$key + ""}.button.active,
+        .ui.inverted.#{$key + ""}.buttons .button:active,
+        .ui.inverted.#{$key + ""}.button:active {
+          box-shadow: none ;
+          color: $lt;
+        }
+        .ui.inverted.#{$key + ""}.buttons .button:hover,
+        .ui.inverted.#{$key + ""}.button:hover {
+          background-color: $lh;
+        }
+        .ui.inverted.#{$key + ""}.buttons .button:focus,
+        .ui.inverted.#{$key + ""}.button:focus {
+          background-color: $lf;
+        }
+        .ui.inverted.#{$key + ""}.buttons .active.button,
+        .ui.inverted.#{$key + ""}.active.button {
+          background-color: $la;
+        }
+        .ui.inverted.#{$key + ""}.buttons .button:active,
+        .ui.inverted.#{$key + ""}.button:active {
+          background-color: $ld;
+        }
+    
+        /* Inverted Basic */
+        .ui.inverted.#{$key + ""}.basic.buttons .button,
+        .ui.inverted.#{$key + ""}.buttons .basic.button,
+        .ui.inverted.#{$key + ""}.basic.button {
+          background-color: transparent;
+          box-shadow: $button-basic-inverted-box-shadow ;
+          color: $white ;
+        }
+        .ui.inverted.#{$key + ""}.basic.buttons .button:hover,
+        .ui.inverted.#{$key + ""}.buttons .basic.button:hover,
+        .ui.inverted.#{$key + ""}.basic.button:hover {
+          box-shadow: 0 0 0 $button-inverted-border-size $lh inset ;
+    
+          @if ($isDark) {
+            color: $white ;
+          }
+    
+          @if not ($isDark) {
+            color: $l ;
+          }
+        }
+        .ui.inverted.#{$key + ""}.basic.buttons .button:focus,
+        .ui.inverted.#{$key + ""}.basic.buttons .button:focus,
+        .ui.inverted.#{$key + ""}.basic.button:focus {
+          box-shadow: 0 0 0 $button-inverted-border-size $lf inset ;
+          color: $l ;
+        }
+        .ui.inverted.#{$key + ""}.basic.buttons .active.button,
+        .ui.inverted.#{$key + ""}.buttons .basic.active.button,
+        .ui.inverted.#{$key + ""}.basic.active.button {
+          box-shadow: 0 0 0 $button-inverted-border-size $la inset ;
+    
+          @if ($isDark) {
+            color: $white ;
+          }
+    
+          @if not ($isDark) {
+            color: $l ;
+          }
+        }
+        .ui.inverted.#{$key + ""}.basic.buttons .button:active,
+        .ui.inverted.#{$key + ""}.buttons .basic.button:active,
+        .ui.inverted.#{$key + ""}.basic.button:active {
+          box-shadow: 0 0 0 $button-inverted-border-size $ld inset ;
+    
+          @if ($isDark) {
+            color: $white ;
+          }
+    
+          @if not ($isDark) {
+            color: $l ;
+          }
+        }
+      }
+      @if($use-button-type-tertiary) {
+        /* Tertiary */
+        .ui.tertiary.#{$key + ""}.buttons .button,
+        .ui.tertiary.#{$key + ""}.buttons .tertiary.button,
+        .ui.tertiary.#{$key + ""}.button {
+          background: transparent;
+    
+          @if ($button-tertiary-with-underline == true) {
+            box-shadow: inset 0 (-$button-tertiary-line-height) 0 $ty;
+          }
+    
+          @if ($button-tertiary-with-overline == true) {
+            box-shadow: inset 0 $button-tertiary-line-height 0 $ty;
+          }
+    
+          @if ($button-tertiary-with-underline == false) and ($button-tertiary-with-overline == false){
+            box-shadow: none;
+          }
+          color: $c ;
+        }
+    
+        .ui.tertiary.#{$key + ""}.buttons .button:hover,
+        .ui.tertiary.#{$key + ""}.buttons button:hover,
+        .ui.tertiary.#{$key + ""}.button:hover {
+    
+          @if ($button-tertiary-hover-with-underline == true) {
+            box-shadow: inset 0 (-$button-tertiary-line-height) 0 $tyh;
+          }
+    
+          @if ($button-tertiary-hover-with-overline == true) {
+            box-shadow: inset 0 $button-tertiary-line-height 0 $tyh;
+          }
+    
+          @if ($button-tertiary-hover-with-underline == false) and ($button-tertiary-hover-with-overline == false) {
+            box-shadow: none ;
+          }
+    
+          color: $tyh;
+        }
+    
+        .ui.tertiary.#{$key + ""}.buttons .button:focus,
+        .ui.tertiary.#{$key + ""}.buttons .tertiary.button:focus,
+        .ui.tertiary.#{$key + ""}.button:focus {
+    
+          @if ($button-tertiary-focus-with-underline == true) {
+            box-shadow: inset 0 (-$button-tertiary-line-height) 0 $tyf;
+          }
+    
+          @if ($button-tertiary-focus-with-overline == true) {
+            box-shadow: inset 0 $button-tertiary-line-height 0 $tyf;
+          }
+    
+          @if ($button-tertiary-focus-with-underline == false) and ($button-tertiary-focus-with-overline == false) {
+            box-shadow: none;
+          }
+    
+          color: $tyf;
+        }
+    
+        .ui.tertiary.#{$key + ""}.buttons .active.button,
+        .ui.tertiary.#{$key + ""}.buttons .tertiary.active.button,
+        .ui.tertiary.#{$key + ""}.active.button,
+        .ui.tertiary.#{$key + ""}.buttons .button:active,
+        .ui.tertiary.#{$key + ""}.buttons .tertiary.button:active,
+        .ui.tertiary.#{$key + ""}.button:active {
+    
+          @if ($button-tertiary-active-with-underline == true) {
+            box-shadow: inset 0 (-$button-tertiary-line-height) 0 $tya;
+          }
+    
+          @if ($button-tertiary-active-with-overline == true) {
+            box-shadow: inset 0 $button-tertiary-line-height 0 $tya;
+          }
+    
+          @if ($button-tertiary-active-with-underline == false) and ($button-tertiary-active-with-overline == false) {
+            box-shadow: none;
+          }
+    
+          color: $a ;
+        }
+      }
+    }
+  }
+  
+  @if(index($use-button-variation-consequences, positive)){
+    /*---------------
+        Positive
+    ----------------*/
+    @include addConsequence(positive);
+  }
+  
+  @if(index($use-button-variation-consequences, negative)){
+    /*---------------
+        Negative
+    ----------------*/
+    @include addConsequence(negative);
+  }
+  /*******************************
+              Groups
+  *******************************/
+  
+  .ui.buttons {
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 0;
+    vertical-align: baseline;
+    margin: $button-vertical-margin $button-horizontal-margin 0 0;
+  }
+  .ui.buttons:not(.basic):not(.inverted) {
+    box-shadow: $button-group-box-shadow;
+  }
+  
+  /* Clearfix */
+  .ui.buttons:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  
+  /* Standard Group */
+  .ui.buttons .button {
+    flex: 1 0 auto;
+    border-radius: 0;
+    margin: $button-group-offset;
+  }
+  .ui.buttons:not(.basic):not(.inverted) > .button:not(.basic):not(.inverted) {
+    box-shadow: $button-group-super-box-shadow;
+  }
+  
+  .ui.buttons .button:first-child {
+    border-left: none;
+    margin-left: 0;
+    border-top-left-radius: $button-border-radius;
+    border-bottom-left-radius: $button-border-radius;
+  }
+  .ui.buttons .button:last-child {
+    border-top-right-radius: $button-border-radius;
+    border-bottom-right-radius: $button-border-radius;
+  }
+  
+  /* Vertical  Style */
+  .ui.vertical.buttons {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .ui.vertical.buttons .button {
+    display: block;
+    float: none;
+    width: 100%;
+    margin: $button-vertical-group-offset;
+    box-shadow: $button-vertical-box-shadow;
+    border-radius: 0;
+  }
+  .ui.vertical.buttons .button:first-child {
+    border-top-left-radius: $button-border-radius;
+    border-top-right-radius: $button-border-radius;
+  }
+  .ui.vertical.buttons .button:last-child {
+    margin-bottom: 0;
+    border-bottom-left-radius: $button-border-radius;
+    border-bottom-right-radius: $button-border-radius;
+  }
+  .ui.vertical.buttons .button:only-child {
+    border-radius: $button-border-radius;
+  }
 }
 
 

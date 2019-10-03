@@ -1,284 +1,286 @@
 @import '../../themes/default/views/feed.variables';
 
-/*******************************
-//@-      Activity Feed
-*******************************/
+@if $use-feed {
+  /*******************************
+  //@-      Activity Feed
+  *******************************/
 
-.ui.feed {
-  margin: $feed-margin;
-}
-.ui.feed:first-child {
-  margin-top: 0;
-}
-.ui.feed:last-child {
-  margin-bottom: 0;
-}
-
-
-/*******************************
-            Content
-*******************************/
-
-/* Event */
-.ui.feed > .event {
-  display: flex;
-  flex-direction: row;
-  width: $feed-event-width;
-  padding: $feed-event-padding;
-  margin: $feed-event-margin;
-  background: $feed-event-background;
-  border-top: $feed-event-divider;
-}
-.ui.feed > .event:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-.ui.feed > .event:last-child {
-  padding-bottom: 0;
-}
-
-/* Event Label */
-.ui.feed > .event > .label {
-  display: block;
-  flex: 0 0 auto;
-  width: $feed-label-width;
-  height: $feed-label-height;
-  align-self: $feed-label-align-self;
-  text-align: $feed-label-text-align;
-}
-.ui.feed > .event > .label .icon {
-  opacity: $feed-icon-label-opacity;
-  font-size: $feed-icon-label-size;
-  width: $feed-icon-label-width;
-  padding: $feed-icon-label-padding;
-  background: $feed-icon-label-background;
-  border: $feed-icon-label-border;
-  border-radius: $feed-icon-label-border-radius;
-  color: $feed-icon-label-color;
-}
-.ui.feed > .event > .label img {
-  width: $feed-image-label-width;
-  height: $feed-image-label-height;
-  border-radius: $feed-image-label-border-radius;
-}
-.ui.feed > .event > .label + .content {
-  margin: $feed-labeled-content-margin;
-}
-
-/*--------------
-     Content
----------------*/
-
-/* Content */
-.ui.feed > .event > .content {
-  display: block;
-  flex: 1 1 auto;
-  align-self: $feed-content-align-self;
-  text-align: $feed-content-text-align;
-  word-wrap: $feed-content-word-wrap;
-}
-.ui.feed > .event:last-child > .content {
-  padding-bottom: $feed-last-labeled-content-padding;
-}
-
-/* Link */
-.ui.feed > .event > .content a {
-  cursor: pointer;
-}
-
-/*--------------
-      Date
----------------*/
-
-.ui.feed > .event > .content .date {
-  margin: $feed-date-margin;
-  padding: $feed-date-padding;
-  color: $feed-date-color;
-  font-weight: $feed-date-font-weight;
-  font-size: $feed-date-font-size;
-  font-style: $feed-date-font-style;
-}
-
-/*--------------
-     Summary
----------------*/
-
-.ui.feed > .event > .content .summary {
-  margin: $feed-summary-margin;
-  font-size: $feed-summary-font-size;
-  font-weight: $feed-summary-font-weight;
-  color: $feed-summary-color;
-}
-
-/* Summary Image */
-.ui.feed > .event > .content .summary img {
-  display: inline-block;
-  width: $feed-summary-image-width;
-  height: $feed-summary-image-height;
-  margin: $feed-summary-image-margin;
-  border-radius: $feed-summary-image-border-radius;
-  vertical-align: $feed-summary-image-vertical-align;
-}
-/*--------------
-      User
----------------*/
-
-.ui.feed > .event > .content .user {
-  display: inline-block;
-  font-weight: $feed-user-font-weight;
-  margin-right: $feed-user-distance;
-  vertical-align: baseline;
-}
-.ui.feed > .event > .content .user img {
-  margin: $feed-user-image-margin;
-  width: $feed-user-image-width;
-  height: $feed-user-image-height;
-  vertical-align: $feed-user-image-vertical-align;
-}
-/*--------------
-   Inline Date
----------------*/
-
-/* Date inside Summary */
-.ui.feed > .event > .content .summary > .date {
-  display: $feed-summary-date-display;
-  float: $feed-summary-date-float;
-  font-weight: $feed-summary-date-font-weight;
-  font-size: $feed-summary-date-font-size;
-  font-style: $feed-summary-date-font-style;
-  margin: $feed-summary-date-margin;
-  padding: $feed-summary-date-padding;
-  color: $feed-summary-date-color;
-}
-
-/*--------------
-  Extra Summary
----------------*/
-
-.ui.feed > .event > .content .extra {
-  margin: $feed-extra-margin;
-  background: $feed-extra-background;
-  padding: $feed-extra-padding;
-  color: $feed-extra-color;
-}
-
-/* Images */
-.ui.feed > .event > .content .extra.images img {
-  display: inline-block;
-  margin: $feed-extra-image-margin;
-  width: $feed-extra-image-width;
-}
-
-/* Text */
-.ui.feed > .event > .content .extra.text {
-  padding: $feed-extra-text-padding;
-  border-left: $feed-extra-text-pointer;
-  font-size: $feed-extra-text-font-size;
-  max-width: $feed-extra-text-max-width;
-  line-height: $feed-extra-text-line-height;
-}
-
-/*--------------
-      Meta
----------------*/
-
-.ui.feed > .event > .content .meta {
-  display: $feed-metadata-display;
-  font-size: $feed-metadata-font-size;
-  margin: $feed-metadata-margin;
-  background: $feed-metadata-background;
-  border: $feed-metadata-border;
-  border-radius: $feed-metadata-border-radius;
-  box-shadow: $feed-metadata-box-shadow;
-  padding: $feed-metadata-padding;
-  color: $feed-metadata-color;
-}
-
-.ui.feed > .event > .content .meta > * {
-  position: relative;
-  margin-left: $feed-metadata-element-spacing;
-}
-.ui.feed > .event > .content .meta > *:after {
-  content: $feed-metadata-divider;
-  color: $feed-metadata-divider-color;
-  top: 0;
-  left: $feed-metadata-divider-offset;
-  opacity: 1;
-  position: absolute;
-  vertical-align: top;
-}
-
-.ui.feed > .event > .content .meta .like {
-  color: $feed-like-color;
-  transition: $feed-like-transition;
-}
-.ui.feed > .event > .content .meta .like:hover .icon {
-  color: $feed-like-hover-color;
-}
-.ui.feed > .event > .content .meta .active.like .icon {
-  color: $feed-like-active-color;
-}
-
-/* First element */
-.ui.feed > .event > .content .meta > :first-child {
-  margin-left: 0;
-}
-.ui.feed > .event > .content .meta > :first-child::after {
-  display: none;
-}
-
-/* Action */
-.ui.feed > .event > .content .meta a,
-.ui.feed > .event > .content .meta > .icon {
-  cursor: $feed-metadata-action-cursor;
-  opacity: $feed-metadata-action-opacity;
-  color: $feed-metadata-action-color;
-  transition: $feed-metadata-action-transition;
-}
-.ui.feed > .event > .content .meta a:hover,
-.ui.feed > .event > .content .meta a:hover .icon,
-.ui.feed > .event > .content .meta > .icon:hover {
-  color: $feed-metadata-action-hover-color;
-}
+  .ui.feed {
+    margin: $feed-margin;
+  }
+  .ui.feed:first-child {
+    margin-top: 0;
+  }
+  .ui.feed:last-child {
+    margin-bottom: 0;
+  }
 
 
+  /*******************************
+              Content
+  *******************************/
 
-/*******************************
-            Variations
-*******************************/
+  /* Event */
+  .ui.feed > .event {
+    display: flex;
+    flex-direction: row;
+    width: $feed-event-width;
+    padding: $feed-event-padding;
+    margin: $feed-event-margin;
+    background: $feed-event-background;
+    border-top: $feed-event-divider;
+  }
+  .ui.feed > .event:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .ui.feed > .event:last-child {
+    padding-bottom: 0;
+  }
 
-.ui.small.feed {
-  font-size: $small;
+  /* Event Label */
+  .ui.feed > .event > .label {
+    display: block;
+    flex: 0 0 auto;
+    width: $feed-label-width;
+    height: $feed-label-height;
+    align-self: $feed-label-align-self;
+    text-align: $feed-label-text-align;
+  }
+  .ui.feed > .event > .label .icon {
+    opacity: $feed-icon-label-opacity;
+    font-size: $feed-icon-label-size;
+    width: $feed-icon-label-width;
+    padding: $feed-icon-label-padding;
+    background: $feed-icon-label-background;
+    border: $feed-icon-label-border;
+    border-radius: $feed-icon-label-border-radius;
+    color: $feed-icon-label-color;
+  }
+  .ui.feed > .event > .label img {
+    width: $feed-image-label-width;
+    height: $feed-image-label-height;
+    border-radius: $feed-image-label-border-radius;
+  }
+  .ui.feed > .event > .label + .content {
+    margin: $feed-labeled-content-margin;
+  }
+
+  /*--------------
+      Content
+  ---------------*/
+
+  /* Content */
+  .ui.feed > .event > .content {
+    display: block;
+    flex: 1 1 auto;
+    align-self: $feed-content-align-self;
+    text-align: $feed-content-text-align;
+    word-wrap: $feed-content-word-wrap;
+  }
+  .ui.feed > .event:last-child > .content {
+    padding-bottom: $feed-last-labeled-content-padding;
+  }
+
+  /* Link */
+  .ui.feed > .event > .content a {
+    cursor: pointer;
+  }
+
+  /*--------------
+        Date
+  ---------------*/
+
+  .ui.feed > .event > .content .date {
+    margin: $feed-date-margin;
+    padding: $feed-date-padding;
+    color: $feed-date-color;
+    font-weight: $feed-date-font-weight;
+    font-size: $feed-date-font-size;
+    font-style: $feed-date-font-style;
+  }
+
+  /*--------------
+      Summary
+  ---------------*/
+
+  .ui.feed > .event > .content .summary {
+    margin: $feed-summary-margin;
+    font-size: $feed-summary-font-size;
+    font-weight: $feed-summary-font-weight;
+    color: $feed-summary-color;
+  }
+
+  /* Summary Image */
+  .ui.feed > .event > .content .summary img {
+    display: inline-block;
+    width: $feed-summary-image-width;
+    height: $feed-summary-image-height;
+    margin: $feed-summary-image-margin;
+    border-radius: $feed-summary-image-border-radius;
+    vertical-align: $feed-summary-image-vertical-align;
+  }
+  /*--------------
+        User
+  ---------------*/
+
+  .ui.feed > .event > .content .user {
+    display: inline-block;
+    font-weight: $feed-user-font-weight;
+    margin-right: $feed-user-distance;
+    vertical-align: baseline;
+  }
+  .ui.feed > .event > .content .user img {
+    margin: $feed-user-image-margin;
+    width: $feed-user-image-width;
+    height: $feed-user-image-height;
+    vertical-align: $feed-user-image-vertical-align;
+  }
+  /*--------------
+    Inline Date
+  ---------------*/
+
+  /* Date inside Summary */
+  .ui.feed > .event > .content .summary > .date {
+    display: $feed-summary-date-display;
+    float: $feed-summary-date-float;
+    font-weight: $feed-summary-date-font-weight;
+    font-size: $feed-summary-date-font-size;
+    font-style: $feed-summary-date-font-style;
+    margin: $feed-summary-date-margin;
+    padding: $feed-summary-date-padding;
+    color: $feed-summary-date-color;
+  }
+
+  /*--------------
+    Extra Summary
+  ---------------*/
+
+  .ui.feed > .event > .content .extra {
+    margin: $feed-extra-margin;
+    background: $feed-extra-background;
+    padding: $feed-extra-padding;
+    color: $feed-extra-color;
+  }
+
+  /* Images */
+  .ui.feed > .event > .content .extra.images img {
+    display: inline-block;
+    margin: $feed-extra-image-margin;
+    width: $feed-extra-image-width;
+  }
+
+  /* Text */
+  .ui.feed > .event > .content .extra.text {
+    padding: $feed-extra-text-padding;
+    border-left: $feed-extra-text-pointer;
+    font-size: $feed-extra-text-font-size;
+    max-width: $feed-extra-text-max-width;
+    line-height: $feed-extra-text-line-height;
+  }
+
+  /*--------------
+        Meta
+  ---------------*/
+
+  .ui.feed > .event > .content .meta {
+    display: $feed-metadata-display;
+    font-size: $feed-metadata-font-size;
+    margin: $feed-metadata-margin;
+    background: $feed-metadata-background;
+    border: $feed-metadata-border;
+    border-radius: $feed-metadata-border-radius;
+    box-shadow: $feed-metadata-box-shadow;
+    padding: $feed-metadata-padding;
+    color: $feed-metadata-color;
+  }
+
+  .ui.feed > .event > .content .meta > * {
+    position: relative;
+    margin-left: $feed-metadata-element-spacing;
+  }
+  .ui.feed > .event > .content .meta > *:after {
+    content: $feed-metadata-divider;
+    color: $feed-metadata-divider-color;
+    top: 0;
+    left: $feed-metadata-divider-offset;
+    opacity: 1;
+    position: absolute;
+    vertical-align: top;
+  }
+
+  .ui.feed > .event > .content .meta .like {
+    color: $feed-like-color;
+    transition: $feed-like-transition;
+  }
+  .ui.feed > .event > .content .meta .like:hover .icon {
+    color: $feed-like-hover-color;
+  }
+  .ui.feed > .event > .content .meta .active.like .icon {
+    color: $feed-like-active-color;
+  }
+
+  /* First element */
+  .ui.feed > .event > .content .meta > :first-child {
+    margin-left: 0;
+  }
+  .ui.feed > .event > .content .meta > :first-child::after {
+    display: none;
+  }
+
+  /* Action */
+  .ui.feed > .event > .content .meta a,
+  .ui.feed > .event > .content .meta > .icon {
+    cursor: $feed-metadata-action-cursor;
+    opacity: $feed-metadata-action-opacity;
+    color: $feed-metadata-action-color;
+    transition: $feed-metadata-action-transition;
+  }
+  .ui.feed > .event > .content .meta a:hover,
+  .ui.feed > .event > .content .meta a:hover .icon,
+  .ui.feed > .event > .content .meta > .icon:hover {
+    color: $feed-metadata-action-hover-color;
+  }
+
+
+
+  /*******************************
+              Variations
+  *******************************/
+
+  .ui.small.feed {
+    font-size: $small;
+  }
+  .ui.feed {
+    font-size: $medium;
+  }
+  .ui.large.feed {
+    font-size: $large;
+  }
+
+  @if $use-feed-variation-inverted {
+    /*------------------
+          Inverted
+    -------------------*/
+    
+    .ui.inverted.feed > .event {
+      background: $black;
+    }
+    
+    .ui.inverted.feed > .event > .content .date,
+    .ui.inverted.feed > .event > .content .meta .like {
+      color: $inverted-light-text-color;
+    }
+    
+    .ui.inverted.feed > .event > .content .summary,
+    .ui.inverted.feed > .event > .content .extra.text {
+      color: $inverted-text-color;
+    }
+    
+    .ui.inverted.feed > .event > .content .meta .like:hover {
+      color: $inverted-selected-text-color;
+    }
+  }
 }
-.ui.feed {
-  font-size: $medium;
-}
-.ui.large.feed {
-  font-size: $large;
-}
-
-/*------------------
-      Inverted
--------------------*/
-
-.ui.inverted.feed > .event {
-  background: $black;
-}
-
-.ui.inverted.feed > .event > .content .date,
-.ui.inverted.feed > .event > .content .meta .like {
-  color: $inverted-light-text-color;
-}
-
-.ui.inverted.feed > .event > .content .summary,
-.ui.inverted.feed > .event > .content .extra.text {
-  color: $inverted-text-color;
-}
-
-.ui.inverted.feed > .event > .content .meta .like:hover {
-  color: $inverted-selected-text-color;
-}
-
-
 
 @import '../../themes/default/views/feed.style';

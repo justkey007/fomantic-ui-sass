@@ -1,473 +1,479 @@
 @import '../../themes/default/elements/loader.variables';
 
-/*******************************
-//@-        Loader
-*******************************/
+@if $use-loader {
+  /*******************************
+  //@-        Loader
+  *******************************/
 
 
-/* Standard Size */
-.ui.loader {
-  display: none;
-  position: absolute;
-  top: $loader-top-offset;
-  left: $loader-left-offset;
-  margin: 0;
-  text-align: center;
-  z-index: 1000;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-/* Static Shape */
-.ui.loader:before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-
-  border-radius: $circular-radius;
-  border: $loader-line-width solid $loader-fill-color;
-}
-
-/* Active Shape */
-.ui.loader:after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-
-  animation: loader $loader-speed infinite linear;
-  border: $loader-line-width solid $loader-shape-border-color;
-  border-radius: $circular-radius;
-
-  box-shadow: 0 0 0 1px transparent;
-}
-
-/* Speeds */
-
-.ui.fast.loading.loading:after,
-.ui.fast.loading.loading .input > i.icon:after,
-.ui.fast.loading.loading > i.icon:after,
-.ui.fast.loader:after {
-  animation-duration: $loader-speed-fast;
-}
-
-.ui.slow.loading.loading:after,
-.ui.slow.loading.loading .input > i.icon:after,
-.ui.slow.loading.loading > i.icon:after,
-.ui.slow.loader:after {
-  animation-duration: $loader-speed-slow;
-}
-
-/* Active Animation */
-@keyframes loader {
-  100% {
-    transform: rotate(360deg);
+  /* Standard Size */
+  .ui.loader {
+    display: none;
+    position: absolute;
+    top: $loader-top-offset;
+    left: $loader-left-offset;
+    margin: 0;
+    text-align: center;
+    z-index: 1000;
+    transform: translateX(-50%) translateY(-50%);
   }
-}
 
-/* Sizes */
-.ui.mini.loader:before,
-.ui.mini.loader:after {
-  width: $loader-mini;
-  height: $loader-mini;
-  margin: $loader-mini-offset;
-}
-.ui.tiny.loader:before,
-.ui.tiny.loader:after {
-  width: $loader-tiny;
-  height: $loader-tiny;
-  margin: $loader-tiny-offset;
-}
-.ui.small.loader:before,
-.ui.small.loader:after {
-  width: $loader-small;
-  height: $loader-small;
-  margin: $loader-small-offset;
-}
-.ui.loader:before,
-.ui.loader:after {
-  width: $loader-medium;
-  height: $loader-medium;
-  margin: $loader-medium-offset;
-}
-.ui.large.loader:before,
-.ui.large.loader:after {
-  width: $loader-large;
-  height: $loader-large;
-  margin: $loader-large-offset;
-}
-.ui.big.loader:before,
-.ui.big.loader:after {
-  width: $loader-big;
-  height: $loader-big;
-  margin: $loader-big-offset;
-}
-.ui.huge.loader:before,
-.ui.huge.loader:after {
-  width: $loader-huge;
-  height: $loader-huge;
-  margin: $loader-huge-offset;
-}
-.ui.massive.loader:before,
-.ui.massive.loader:after {
-  width: $loader-massive;
-  height: $loader-massive;
-  margin: $loader-massive-offset;
-}
+  /* Static Shape */
+  .ui.loader:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
 
-/*-------------------
-      Coupling
---------------------*/
-
-/* Show inside active dimmer */
-.ui.dimmer > .loader {
-  display: block;
-}
-
-/* Black Dimmer */
-.ui.dimmer > .ui.loader {
-  color: $loader-inverted-text-color;
-}
-.ui.dimmer > .ui.loader:not(.elastic):before {
-  border-color: $inverted-loader-fill-color;
-}
-
-/* White Dimmer (Inverted) */
-.ui.inverted.dimmer > .ui.loader {
-  color: $loader-text-color;
-}
-.ui.inverted.dimmer > .ui.loader:not(.elastic):before {
-  border-color: $loader-fill-color;
-}
-
-/*******************************
-             Types
-*******************************/
-
-/*-------------------
-        Text
---------------------*/
-
-.ui.ui.ui.ui.text.loader {
-  width: auto;
-  height: auto;
-  text-align: center;
-  font-style: normal;
-}
-
-
-/*******************************
-            States
-*******************************/
-
-.ui.indeterminate.loader:after {
-  animation-direction: $loader-indeterminate-direction;
-  animation-duration: $loader-indeterminate-speed;
-}
-
-.ui.loader.active,
-.ui.loader.visible {
-  display: block;
-}
-.ui.loader.disabled,
-.ui.loader.hidden {
-  display: none;
-}
-
-/*******************************
-            Variations
-*******************************/
-
-
-/*-------------------
-        Sizes
---------------------*/
-
-
-/* Loader */
-.ui.mini.loader {
-  width: $loader-mini;
-  height: $loader-mini;
-  font-size: $loader-mini-font-size;
-}
-.ui.tiny.loader {
-  width: $loader-tiny;
-  height: $loader-tiny;
-  font-size: $loader-tiny-font-size;
-}
-.ui.small.loader {
-  width: $loader-small;
-  height: $loader-small;
-  font-size: $loader-small-font-size;
-}
-.ui.loader {
-  width: $loader-medium;
-  height: $loader-medium;
-  font-size: $loader-medium-font-size;
-}
-.ui.large.loader {
-  width: $loader-large;
-  height: $loader-large;
-  font-size: $loader-large-font-size;
-}
-.ui.big.loader {
-  width: $loader-big;
-  height: $loader-big;
-  font-size: $loader-big-font-size;
-}
-.ui.huge.loader {
-  width: $loader-huge;
-  height: $loader-huge;
-  font-size: $loader-huge-font-size;
-}
-.ui.massive.loader {
-  width: $loader-massive;
-  height: $loader-massive;
-  font-size: $loader-massive-font-size;
-}
-
-/* Text Loader */
-.ui.mini.text.loader {
-  min-width: $loader-mini;
-  padding-top: (strip-unit($loader-mini) + $loader-text-distance);
-}
-.ui.tiny.text.loader {
-  min-width: $loader-tiny;
-  padding-top: (strip-unit($loader-tiny) + $loader-text-distance);
-}
-.ui.small.text.loader {
-  min-width: $loader-small;
-  padding-top: (strip-unit($loader-small) + $loader-text-distance);
-}
-.ui.text.loader {
-  min-width: $loader-medium;
-  padding-top: (strip-unit($loader-medium) + $loader-text-distance);
-}
-.ui.large.text.loader {
-  min-width: $loader-large;
-  padding-top: (strip-unit($loader-large) + $loader-text-distance);
-}
-.ui.big.text.loader {
-  min-width: $loader-big;
-  padding-top: (strip-unit($loader-big) + $loader-text-distance);
-}
-.ui.huge.text.loader {
-  min-width: $loader-huge;
-  padding-top: (strip-unit($loader-huge) + $loader-text-distance);
-}
-.ui.massive.text.loader {
-  min-width: $loader-massive;
-  padding-top: (strip-unit($loader-massive) + $loader-text-distance);
-}
-
-
-/*-------------------
-       Colors
---------------------*/
-
-@each $key, $value in $colors {
-  $color: $key;
-  $c: map-get($value, color);
-  $l: map-get($value, light);
-
-  .ui.#{$key + ""}.elastic.loader.loader:before,
-  .ui.#{$key + ""}.basic.elastic.loading.button:before,
-  .ui.#{$key + ""}.basic.elastic.loading.button:after,
-  .ui.#{$key + ""}.elastic.loading.loading.loading:not(.segment):before,
-  .ui.#{$key + ""}.elastic.loading.loading.loading .input > i.icon:before,
-  .ui.#{$key + ""}.elastic.loading.loading.loading.loading > i.icon:before,
-  .ui.#{$key + ""}.loading.loading.loading.loading:not(.usual):not(.button):after,
-  .ui.#{$key + ""}.loading.loading.loading.loading .input > i.icon:after,
-  .ui.#{$key + ""}.loading.loading.loading.loading > i.icon:after,
-  .ui.#{$key + ""}.loader.loader.loader:after {
-    color: $c;
+    border-radius: $circular-radius;
+    border: $loader-line-width solid $loader-fill-color;
   }
-  .ui.inverted.#{$key + ""}.elastic.loader:before,
-  .ui.inverted.#{$key + ""}.elastic.loading.loading.loading:not(.segment):before,
-  .ui.inverted.#{$key + ""}.elastic.loading.loading.loading .input > i.icon:before,
-  .ui.inverted.#{$key + ""}.elastic.loading.loading.loading > i.icon:before,
-  .ui.inverted.#{$key + ""}.loading.loading.loading.loading:not(.usual):after,
-  .ui.inverted.#{$key + ""}.loading.loading.loading.loading .input > i.icon:after,
-  .ui.inverted.#{$key + ""}.loading.loading.loading.loading > i.icon:after,
-  .ui.inverted.#{$key + ""}.loader.loader.loader:after {
-    color: $l;
-  }
-}
 
-.ui.elastic.loader.loader:before,
-.ui.elastic.loading.loading.loading:before,
-.ui.elastic.loading.loading.loading .input > i.icon:before,
-.ui.elastic.loading.loading.loading > i.icon:before,
-.ui.loading.loading.loading.loading:not(.usual):after,
-.ui.loading.loading.loading.loading .input > i.icon:after,
-.ui.loading.loading.loading.loading > i.icon:after,
-.ui.loader.loader.loader:after {
-  border-color: currentColor;
-}
-.ui.elastic.loading.loading.loading.loading.button:not(.inverted):not(.basic):before {
-  color: $inverted-loader-line-color;
-}
-.ui.elastic.basic.loading.button:before,
-.ui.elastic.basic.loading.button:after {
-  color: $loader-line-color;
-}
-.ui.double.loading.loading.loading.loading.button:after {
-  border-bottom-color: currentColor;
-}
-/*-------------------
-       Inline
---------------------*/
+  /* Active Shape */
+  .ui.loader:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
 
-.ui.inline.loader {
-  position: relative;
-  vertical-align: $loader-inline-vertical-align;
-  margin: $loader-inline-margin;
-  left: 0;
-  top: 0;
-  transform: none;
-}
+    animation: loader $loader-speed infinite linear;
+    border: $loader-line-width solid $loader-shape-border-color;
+    border-radius: $circular-radius;
 
-.ui.inline.loader.active,
-.ui.inline.loader.visible {
-  display: inline-block;
-}
+    box-shadow: 0 0 0 1px transparent;
+  }
 
-/* Centered Inline */
-.ui.centered.inline.loader.active,
-.ui.centered.inline.loader.visible {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  /* Speeds */
 
-.ui.loading.loading.loading.loading.loading.loading:after,
-.ui.loading.loading.loading.loading.loading.loading .input > i.icon:after,
-.ui.loading.loading.loading.loading.loading.loading > i.icon:after,
-.ui.loader.loader.loader.loader.loader:after {
-  border-left-color:transparent;
-  border-right-color:transparent;
-}
-.ui.loading.loading.loading.loading.loading.loading.loading:not(.double):after,
-.ui.loading.loading.loading.loading.loading.loading.loading:not(.double) .input > i.icon:after,
-.ui.loading.loading.loading.loading.loading.loading.loading:not(.double) > i.icon:after,
-.ui.loader.loader.loader.loader.loader.loader:not(.double):after {
-  border-bottom-color: transparent;
-}
-.ui.loading.loading.loading.loading.loading.loading.segment:after,
-.ui.loading.loading.loading.loading.loading.loading.form:after {
-  border-left-color:$loader-fill-color;
-  border-right-color:$loader-fill-color;
-}
-.ui.loading.loading.loading.loading.loading.loading.segment:not(.double):after,
-.ui.loading.loading.loading.loading.loading.loading.form:not(.double):after {
-  border-bottom-color: $loader-fill-color;
-}
+  .ui.fast.loading.loading:after,
+  .ui.fast.loading.loading .input > i.icon:after,
+  .ui.fast.loading.loading > i.icon:after,
+  .ui.fast.loader:after {
+    animation-duration: $loader-speed-fast;
+  }
 
-/*-------------------
-       Elastic
---------------------*/
+  .ui.slow.loading.loading:after,
+  .ui.slow.loading.loading .input > i.icon:after,
+  .ui.slow.loading.loading > i.icon:after,
+  .ui.slow.loader:after {
+    animation-duration: $loader-speed-slow;
+  }
 
-.ui.dimmer > .ui.elastic.loader {
-  color: $inverted-loader-line-color;
-}
-.ui.inverted.dimmer > .ui.elastic.loader {
-  color: $loader-line-color;
-}
-.ui.elastic.loading.loading:not(.form):not(.segment):after,
-.ui.elastic.loading.loading .input > i.icon:after,
-.ui.elastic.loading.loading > i.icon:after,
-.ui.elastic.loader.loader:after {
-  animation: loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
-  animation-delay: 0.3s;
-}
-.ui.elastic.loading.loading.loading:not(.form):not(.segment):before,
-.ui.elastic.loading.loading.loading .input > i.icon:before,
-.ui.elastic.loading.loading.loading > i.icon:before,
-.ui.elastic.loader.loader:before {
-  animation: elastic-loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
-  -moz-animation: currentcolor-elastic-loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
-  border-right-color: transparent;
-}
-.ui.elastic.inline.loader:empty {
-  animation: loader 8s infinite linear;
-}
-.ui.slow.elastic.loading.loading:not(.form):not(.segment):after,
-.ui.slow.elastic.loading.loading .input > i.icon:after,
-.ui.slow.elastic.loading.loading > i.icon:after,
-.ui.slow.elastic.loader.loader:after {
-  animation-duration: 1.5s;
-  animation-delay: 0.45s;
-}
-.ui.slow.elastic.loading.loading.loading:not(.form):not(.segment):before,
-.ui.slow.elastic.loading.loading.loading .input > i.icon:before,
-.ui.slow.elastic.loading.loading.loading > i.icon:before,
-.ui.slow.elastic.loader.loader:before {
-  animation-duration: 1.5s;
-}
-.ui.fast.elastic.loading.loading:not(.form):not(.segment):after,
-.ui.fast.elastic.loading.loading .input > i.icon:after,
-.ui.fast.elastic.loading.loading > i.icon:after,
-.ui.fast.elastic.loader.loader:after {
-  animation-duration: 0.66s;
-  animation-delay: 0.20s;
-}
-.ui.fast.elastic.loading.loading.loading:not(.form):not(.segment):before,
-.ui.fast.elastic.loading.loading.loading .input > i.icon:before,
-.ui.fast.elastic.loading.loading.loading > i.icon:before,
-.ui.fast.elastic.loader.loader:before {
-  animation-duration: 0.66s;
-}
-@keyframes elastic-loader {
-  0%, 1% {
-    border-left-color: transparent;
-    border-bottom-color: transparent
+  /* Active Animation */
+  @keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  1.1%, 50% {
-    border-left-color: inherit;
-  }
-  10%, 35.1%{
-    border-bottom-color: transparent;
-  }
-  10.1%, 35%{
-    border-bottom-color: inherit;
-  }
-  50.1%{
-    border-left-color: transparent;
-  }
-  100% {
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes currentcolor-elastic-loader {
-  0%, 1% {
-    border-left-color: transparent;
-    border-bottom-color: transparent
+  /* Sizes */
+  .ui.mini.loader:before,
+  .ui.mini.loader:after {
+    width: $loader-mini;
+    height: $loader-mini;
+    margin: $loader-mini-offset;
   }
-  1.1%, 50% {
-    border-left-color: currentColor;
+  .ui.tiny.loader:before,
+  .ui.tiny.loader:after {
+    width: $loader-tiny;
+    height: $loader-tiny;
+    margin: $loader-tiny-offset;
   }
-  10%, 35.1%{
-    border-bottom-color: transparent;
+  .ui.small.loader:before,
+  .ui.small.loader:after {
+    width: $loader-small;
+    height: $loader-small;
+    margin: $loader-small-offset;
   }
-  10.1%, 35%{
+  .ui.loader:before,
+  .ui.loader:after {
+    width: $loader-medium;
+    height: $loader-medium;
+    margin: $loader-medium-offset;
+  }
+  .ui.large.loader:before,
+  .ui.large.loader:after {
+    width: $loader-large;
+    height: $loader-large;
+    margin: $loader-large-offset;
+  }
+  .ui.big.loader:before,
+  .ui.big.loader:after {
+    width: $loader-big;
+    height: $loader-big;
+    margin: $loader-big-offset;
+  }
+  .ui.huge.loader:before,
+  .ui.huge.loader:after {
+    width: $loader-huge;
+    height: $loader-huge;
+    margin: $loader-huge-offset;
+  }
+  .ui.massive.loader:before,
+  .ui.massive.loader:after {
+    width: $loader-massive;
+    height: $loader-massive;
+    margin: $loader-massive-offset;
+  }
+
+  /*-------------------
+        Coupling
+  --------------------*/
+
+  /* Show inside active dimmer */
+  .ui.dimmer > .loader {
+    display: block;
+  }
+
+  /* Black Dimmer */
+  .ui.dimmer > .ui.loader {
+    color: $loader-inverted-text-color;
+  }
+  .ui.dimmer > .ui.loader:not(.elastic):before {
+    border-color: $inverted-loader-fill-color;
+  }
+
+  /* White Dimmer (Inverted) */
+  .ui.inverted.dimmer > .ui.loader {
+    color: $loader-text-color;
+  }
+  .ui.inverted.dimmer > .ui.loader:not(.elastic):before {
+    border-color: $loader-fill-color;
+  }
+
+  /*******************************
+              Types
+  *******************************/
+
+  /*-------------------
+          Text
+  --------------------*/
+
+  .ui.ui.ui.ui.text.loader {
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-style: normal;
+  }
+
+
+  /*******************************
+              States
+  *******************************/
+
+  .ui.indeterminate.loader:after {
+    animation-direction: $loader-indeterminate-direction;
+    animation-duration: $loader-indeterminate-speed;
+  }
+
+  .ui.loader.active,
+  .ui.loader.visible {
+    display: block;
+  }
+  .ui.loader.disabled,
+  .ui.loader.hidden {
+    display: none;
+  }
+
+  /*******************************
+              Variations
+  *******************************/
+
+
+  /*-------------------
+          Sizes
+  --------------------*/
+
+
+  /* Loader */
+  .ui.mini.loader {
+    width: $loader-mini;
+    height: $loader-mini;
+    font-size: $loader-mini-font-size;
+  }
+  .ui.tiny.loader {
+    width: $loader-tiny;
+    height: $loader-tiny;
+    font-size: $loader-tiny-font-size;
+  }
+  .ui.small.loader {
+    width: $loader-small;
+    height: $loader-small;
+    font-size: $loader-small-font-size;
+  }
+  .ui.loader {
+    width: $loader-medium;
+    height: $loader-medium;
+    font-size: $loader-medium-font-size;
+  }
+  .ui.large.loader {
+    width: $loader-large;
+    height: $loader-large;
+    font-size: $loader-large-font-size;
+  }
+  .ui.big.loader {
+    width: $loader-big;
+    height: $loader-big;
+    font-size: $loader-big-font-size;
+  }
+  .ui.huge.loader {
+    width: $loader-huge;
+    height: $loader-huge;
+    font-size: $loader-huge-font-size;
+  }
+  .ui.massive.loader {
+    width: $loader-massive;
+    height: $loader-massive;
+    font-size: $loader-massive-font-size;
+  }
+
+  /* Text Loader */
+  .ui.mini.text.loader {
+    min-width: $loader-mini;
+    padding-top: (strip-unit($loader-mini) + $loader-text-distance);
+  }
+  .ui.tiny.text.loader {
+    min-width: $loader-tiny;
+    padding-top: (strip-unit($loader-tiny) + $loader-text-distance);
+  }
+  .ui.small.text.loader {
+    min-width: $loader-small;
+    padding-top: (strip-unit($loader-small) + $loader-text-distance);
+  }
+  .ui.text.loader {
+    min-width: $loader-medium;
+    padding-top: (strip-unit($loader-medium) + $loader-text-distance);
+  }
+  .ui.large.text.loader {
+    min-width: $loader-large;
+    padding-top: (strip-unit($loader-large) + $loader-text-distance);
+  }
+  .ui.big.text.loader {
+    min-width: $loader-big;
+    padding-top: (strip-unit($loader-big) + $loader-text-distance);
+  }
+  .ui.huge.text.loader {
+    min-width: $loader-huge;
+    padding-top: (strip-unit($loader-huge) + $loader-text-distance);
+  }
+  .ui.massive.text.loader {
+    min-width: $loader-massive;
+    padding-top: (strip-unit($loader-massive) + $loader-text-distance);
+  }
+
+
+  /*-------------------
+        Colors
+  --------------------*/
+
+  @each $key, $value in $colors {
+    @if(index(join($main-colors-names, $use-loader-variation-colors), $key+'')) {
+      $color: $key;
+      $c: map-get($value, color);
+      $l: map-get($value, light);
+
+      .ui.#{$key + ""}.elastic.loader.loader:before,
+      .ui.#{$key + ""}.basic.elastic.loading.button:before,
+      .ui.#{$key + ""}.basic.elastic.loading.button:after,
+      .ui.#{$key + ""}.elastic.loading.loading.loading:not(.segment):before,
+      .ui.#{$key + ""}.elastic.loading.loading.loading .input > i.icon:before,
+      .ui.#{$key + ""}.elastic.loading.loading.loading.loading > i.icon:before,
+      .ui.#{$key + ""}.loading.loading.loading.loading:not(.usual):not(.button):after,
+      .ui.#{$key + ""}.loading.loading.loading.loading .input > i.icon:after,
+      .ui.#{$key + ""}.loading.loading.loading.loading > i.icon:after,
+      .ui.#{$key + ""}.loader.loader.loader:after {
+        color: $c;
+      }
+
+      @if($use-list-variation-inverted) {
+        .ui.inverted.#{$key + ""}.elastic.loader:before,
+        .ui.inverted.#{$key + ""}.elastic.loading.loading.loading:not(.segment):before,
+        .ui.inverted.#{$key + ""}.elastic.loading.loading.loading .input > i.icon:before,
+        .ui.inverted.#{$key + ""}.elastic.loading.loading.loading > i.icon:before,
+        .ui.inverted.#{$key + ""}.loading.loading.loading.loading:not(.usual):after,
+        .ui.inverted.#{$key + ""}.loading.loading.loading.loading .input > i.icon:after,
+        .ui.inverted.#{$key + ""}.loading.loading.loading.loading > i.icon:after,
+        .ui.inverted.#{$key + ""}.loader.loader.loader:after {
+          color: $l;
+        }
+      }
+    }
+  }
+
+  .ui.elastic.loader.loader:before,
+  .ui.elastic.loading.loading.loading:before,
+  .ui.elastic.loading.loading.loading .input > i.icon:before,
+  .ui.elastic.loading.loading.loading > i.icon:before,
+  .ui.loading.loading.loading.loading:not(.usual):after,
+  .ui.loading.loading.loading.loading .input > i.icon:after,
+  .ui.loading.loading.loading.loading > i.icon:after,
+  .ui.loader.loader.loader:after {
+    border-color: currentColor;
+  }
+  .ui.elastic.loading.loading.loading.loading.button:not(.inverted):not(.basic):before {
+    color: $inverted-loader-line-color;
+  }
+  .ui.elastic.basic.loading.button:before,
+  .ui.elastic.basic.loading.button:after {
+    color: $loader-line-color;
+  }
+  .ui.double.loading.loading.loading.loading.button:after {
     border-bottom-color: currentColor;
   }
-  50.1%{
-    border-left-color: transparent;
+  /*-------------------
+        Inline
+  --------------------*/
+
+  .ui.inline.loader {
+    position: relative;
+    vertical-align: $loader-inline-vertical-align;
+    margin: $loader-inline-margin;
+    left: 0;
+    top: 0;
+    transform: none;
   }
-  100% {
-    border-left-color: transparent;
+
+  .ui.inline.loader.active,
+  .ui.inline.loader.visible {
+    display: inline-block;
+  }
+
+  /* Centered Inline */
+  .ui.centered.inline.loader.active,
+  .ui.centered.inline.loader.visible {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ui.loading.loading.loading.loading.loading.loading:after,
+  .ui.loading.loading.loading.loading.loading.loading .input > i.icon:after,
+  .ui.loading.loading.loading.loading.loading.loading > i.icon:after,
+  .ui.loader.loader.loader.loader.loader:after {
+    border-left-color:transparent;
+    border-right-color:transparent;
+  }
+  .ui.loading.loading.loading.loading.loading.loading.loading:not(.double):after,
+  .ui.loading.loading.loading.loading.loading.loading.loading:not(.double) .input > i.icon:after,
+  .ui.loading.loading.loading.loading.loading.loading.loading:not(.double) > i.icon:after,
+  .ui.loader.loader.loader.loader.loader.loader:not(.double):after {
     border-bottom-color: transparent;
-    transform: rotate(360deg);
+  }
+  .ui.loading.loading.loading.loading.loading.loading.segment:after,
+  .ui.loading.loading.loading.loading.loading.loading.form:after {
+    border-left-color:$loader-fill-color;
+    border-right-color:$loader-fill-color;
+  }
+  .ui.loading.loading.loading.loading.loading.loading.segment:not(.double):after,
+  .ui.loading.loading.loading.loading.loading.loading.form:not(.double):after {
+    border-bottom-color: $loader-fill-color;
+  }
+
+  /*-------------------
+        Elastic
+  --------------------*/
+
+  .ui.dimmer > .ui.elastic.loader {
+    color: $inverted-loader-line-color;
+  }
+  .ui.inverted.dimmer > .ui.elastic.loader {
+    color: $loader-line-color;
+  }
+  .ui.elastic.loading.loading:not(.form):not(.segment):after,
+  .ui.elastic.loading.loading .input > i.icon:after,
+  .ui.elastic.loading.loading > i.icon:after,
+  .ui.elastic.loader.loader:after {
+    animation: loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
+    animation-delay: 0.3s;
+  }
+  .ui.elastic.loading.loading.loading:not(.form):not(.segment):before,
+  .ui.elastic.loading.loading.loading .input > i.icon:before,
+  .ui.elastic.loading.loading.loading > i.icon:before,
+  .ui.elastic.loader.loader:before {
+    animation: elastic-loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
+    -moz-animation: currentcolor-elastic-loader 1s infinite cubic-bezier(.27, 1.05, .92, .61);
+    border-right-color: transparent;
+  }
+  .ui.elastic.inline.loader:empty {
+    animation: loader 8s infinite linear;
+  }
+  .ui.slow.elastic.loading.loading:not(.form):not(.segment):after,
+  .ui.slow.elastic.loading.loading .input > i.icon:after,
+  .ui.slow.elastic.loading.loading > i.icon:after,
+  .ui.slow.elastic.loader.loader:after {
+    animation-duration: 1.5s;
+    animation-delay: 0.45s;
+  }
+  .ui.slow.elastic.loading.loading.loading:not(.form):not(.segment):before,
+  .ui.slow.elastic.loading.loading.loading .input > i.icon:before,
+  .ui.slow.elastic.loading.loading.loading > i.icon:before,
+  .ui.slow.elastic.loader.loader:before {
+    animation-duration: 1.5s;
+  }
+  .ui.fast.elastic.loading.loading:not(.form):not(.segment):after,
+  .ui.fast.elastic.loading.loading .input > i.icon:after,
+  .ui.fast.elastic.loading.loading > i.icon:after,
+  .ui.fast.elastic.loader.loader:after {
+    animation-duration: 0.66s;
+    animation-delay: 0.20s;
+  }
+  .ui.fast.elastic.loading.loading.loading:not(.form):not(.segment):before,
+  .ui.fast.elastic.loading.loading.loading .input > i.icon:before,
+  .ui.fast.elastic.loading.loading.loading > i.icon:before,
+  .ui.fast.elastic.loader.loader:before {
+    animation-duration: 0.66s;
+  }
+  @keyframes elastic-loader {
+    0%, 1% {
+      border-left-color: transparent;
+      border-bottom-color: transparent
+    }
+    1.1%, 50% {
+      border-left-color: inherit;
+    }
+    10%, 35.1%{
+      border-bottom-color: transparent;
+    }
+    10.1%, 35%{
+      border-bottom-color: inherit;
+    }
+    50.1%{
+      border-left-color: transparent;
+    }
+    100% {
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes currentcolor-elastic-loader {
+    0%, 1% {
+      border-left-color: transparent;
+      border-bottom-color: transparent
+    }
+    1.1%, 50% {
+      border-left-color: currentColor;
+    }
+    10%, 35.1%{
+      border-bottom-color: transparent;
+    }
+    10.1%, 35%{
+      border-bottom-color: currentColor;
+    }
+    50.1%{
+      border-left-color: transparent;
+    }
+    100% {
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      transform: rotate(360deg);
+    }
   }
 }
-
 
 @import '../../themes/default/elements/loader.style';

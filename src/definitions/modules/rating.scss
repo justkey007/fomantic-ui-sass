@@ -1,149 +1,151 @@
 @import '../../themes/default/modules/rating.variables';
 
-/*******************************
-//@-       Rating
-*******************************/
+@if $use-rating {
+  /*******************************
+  //@-       Rating
+  *******************************/
 
-.ui.rating {
-  display: inline-flex;
-  white-space: $rating-white-space;
-  vertical-align: $rating-vertical-align;
-}
-.ui.rating:last-child {
-  margin-right: 0;
-}
-
-/* Icon */
-.ui.rating .icon {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  font-weight: $normal;
-  font-style: normal;
-  flex: 1 0 auto;
-  cursor: $rating-icon-cursor;
-  width: $rating-icon-width;
-  height: $rating-icon-height;
-  transition: $rating-icon-transition;
-  line-height: 1;
-  backface-visibility: hidden;
-}
-
-
-/*******************************
-             Types
-*******************************/
-
-
-/*-------------------
-      Standard
---------------------*/
-
-/* Inactive Icon */
-.ui.rating .icon {
-  background: $rating-inactive-background;
-  color: $rating-inactive-color;
-}
-
-/* Active Icon */
-.ui.rating .active.icon {
-  background: $rating-active-background;
-  color: $rating-active-color;
-}
-
-/* Selected Icon */
-.ui.rating .icon.selected,
-.ui.rating .icon.selected.active {
-  background: $rating-selected-background;
-  color: $rating-selected-color;
-}
-
-
-/*--------------
-     Colors
--------------- */
-
-@each $key, $value in $colors {
-  $color: $key;
-  $c: map-get($value, color);
-  $l: map-get($value, light);
-  $h: map-get($value, hover);
-  $lh: map-get($value, lightHover);
-
-  .ui.#{$key + ""}.rating .active.icon {
-    color: $l;
-    text-shadow: 0px (-$rating-shadow-width) 0px $c,
-                 (-$rating-shadow-width) 0px 0px $c,
-                 0px $rating-shadow-width 0px $c,
-                 $rating-shadow-width 0px 0px $c;
+  .ui.rating {
+    display: inline-flex;
+    white-space: $rating-white-space;
+    vertical-align: $rating-vertical-align;
   }
-  .ui.#{$key + ""}.rating .icon.selected,
-  .ui.#{$key + ""}.rating .icon.selected.active {
-    color: $lh;
-    text-shadow: 0px (-$rating-shadow-width) 0px $h,
-                 (-$rating-shadow-width) 0px 0px $h,
-                 0px $rating-shadow-width 0px $h,
-                 $rating-shadow-width 0px 0px $h;
+  .ui.rating:last-child {
+    margin-right: 0;
+  }
+
+  /* Icon */
+  .ui.rating .icon {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-weight: $normal;
+    font-style: normal;
+    flex: 1 0 auto;
+    cursor: $rating-icon-cursor;
+    width: $rating-icon-width;
+    height: $rating-icon-height;
+    transition: $rating-icon-transition;
+    line-height: 1;
+    backface-visibility: hidden;
+  }
+
+
+  /*******************************
+              Types
+  *******************************/
+
+
+  /*-------------------
+        Standard
+  --------------------*/
+
+  /* Inactive Icon */
+  .ui.rating .icon {
+    background: $rating-inactive-background;
+    color: $rating-inactive-color;
+  }
+
+  /* Active Icon */
+  .ui.rating .active.icon {
+    background: $rating-active-background;
+    color: $rating-active-color;
+  }
+
+  /* Selected Icon */
+  .ui.rating .icon.selected,
+  .ui.rating .icon.selected.active {
+    background: $rating-selected-background;
+    color: $rating-selected-color;
+  }
+
+
+  /*--------------
+      Colors
+  -------------- */
+
+  @each $key, $value in $colors {
+    @if(index(join($main-colors-names, $use-rating-variation-colors), $key+'')) {
+      $color: $key;
+      $c: map-get($value, color);
+      $l: map-get($value, light);
+      $h: map-get($value, hover);
+      $lh: map-get($value, lightHover);
+
+      .ui.#{$key + ""}.rating .active.icon {
+        color: $l;
+        text-shadow: 0px (-$rating-shadow-width) 0px $c,
+                    (-$rating-shadow-width) 0px 0px $c,
+                    0px $rating-shadow-width 0px $c,
+                    $rating-shadow-width 0px 0px $c;
+      }
+      .ui.#{$key + ""}.rating .icon.selected,
+      .ui.#{$key + ""}.rating .icon.selected.active {
+        color: $lh;
+        text-shadow: 0px (-$rating-shadow-width) 0px $h,
+                    (-$rating-shadow-width) 0px 0px $h,
+                    0px $rating-shadow-width 0px $h,
+                    $rating-shadow-width 0px 0px $h;
+      }
+    }
+  }
+
+
+
+  /*******************************
+              States
+  *******************************/
+
+  /*-------------------
+        Disabled
+  --------------------*/
+
+  /* disabled rating */
+  .ui.disabled.rating .icon {
+    cursor: default;
+  }
+
+
+  /*-------------------
+    User Interactive
+  --------------------*/
+
+  /* Selected Rating */
+  .ui.rating.selected .active.icon {
+    opacity: $rating-interactive-active-icon-opacity;
+  }
+  .ui.rating.selected .icon.selected,
+  .ui.rating .icon.selected {
+    opacity: $rating-interactive-selected-icon-opacity;
+  }
+
+
+
+  /*******************************
+            Variations
+  *******************************/
+
+  .ui.mini.rating {
+    font-size: $mini;
+  }
+  .ui.tiny.rating {
+    font-size: $tiny;
+  }
+  .ui.small.rating {
+    font-size: $small;
+  }
+  .ui.rating {
+    font-size: $medium;
+  }
+  .ui.large.rating {
+    font-size: $large;
+  }
+  .ui.huge.rating {
+    font-size: $huge;
+  }
+  .ui.massive.rating {
+    font-size: $rating-massive;
   }
 }
-
-
-
-/*******************************
-             States
-*******************************/
-
-/*-------------------
-       Disabled
---------------------*/
-
-/* disabled rating */
-.ui.disabled.rating .icon {
-  cursor: default;
-}
-
-
-/*-------------------
-   User Interactive
---------------------*/
-
-/* Selected Rating */
-.ui.rating.selected .active.icon {
-  opacity: $rating-interactive-active-icon-opacity;
-}
-.ui.rating.selected .icon.selected,
-.ui.rating .icon.selected {
-  opacity: $rating-interactive-selected-icon-opacity;
-}
-
-
-
-/*******************************
-          Variations
-*******************************/
-
-.ui.mini.rating {
-  font-size: $mini;
-}
-.ui.tiny.rating {
-  font-size: $tiny;
-}
-.ui.small.rating {
-  font-size: $small;
-}
-.ui.rating {
-  font-size: $medium;
-}
-.ui.large.rating {
-  font-size: $large;
-}
-.ui.huge.rating {
-  font-size: $huge;
-}
-.ui.massive.rating {
-  font-size: $rating-massive;
-}
-
-
 
 @import '../../themes/default/modules/rating.style';

@@ -1,438 +1,450 @@
 @import '../../themes/default/modules/slider.variables'; 
 
-//@-
+@if $use-slider {
+  //@-
 
-.ui.slider:not(.vertical):not(.checkbox) {
-  width: 100%;
-  padding: $slider-padding;
-}
+  .ui.slider:not(.vertical):not(.checkbox) {
+    width: 100%;
+    padding: $slider-padding;
+  }
 
-.ui.slider:not(.checkbox) {
-  position: relative;
-}
+  .ui.slider:not(.checkbox) {
+    position: relative;
+  }
 
-.ui.slider:not(.checkbox):focus {
-  outline: 0;
-}
+  .ui.slider:not(.checkbox):focus {
+    outline: 0;
+  }
 
-.ui.slider .inner {
-  position: relative;
-  z-index: 2;
-}
+  .ui.slider .inner {
+    position: relative;
+    z-index: 2;
+  }
 
-.ui.slider:not(.vertical) .inner {
-  height: $slider-height;
-}
+  .ui.slider:not(.vertical) .inner {
+    height: $slider-height;
+  }
 
-.ui.slider .inner:hover {
-  cursor: $slider-hover-pointer;
-}
+  .ui.slider .inner:hover {
+    cursor: $slider-hover-pointer;
+  }
 
-.ui.slider .inner .track {
-  position: absolute;
-  border-radius: $slider-track-border-radius;
-  background-color: $slider-track-color;
-}
+  .ui.slider .inner .track {
+    position: absolute;
+    border-radius: $slider-track-border-radius;
+    background-color: $slider-track-color;
+  }
 
-.ui.slider:not(.vertical) .inner .track {
-  width: 100%;
-  height: $slider-track-height;
-  top: $slider-track-position-top;
-  left: 0;
-}
+  .ui.slider:not(.vertical) .inner .track {
+    width: 100%;
+    height: $slider-track-height;
+    top: $slider-track-position-top;
+    left: 0;
+  }
 
-.ui.slider .inner .track-fill {
-  position: absolute;
-  border-radius: $slider-track-fill-border-radius;
-  background-color: $slider-track-fill-color;
-}
+  .ui.slider .inner .track-fill {
+    position: absolute;
+    border-radius: $slider-track-fill-border-radius;
+    background-color: $slider-track-fill-color;
+  }
 
-.ui.slider:not(.vertical) .inner .track-fill {
-  height: $slider-track-fill-height;
-  top: $slider-track-position-top;
-  left: 0;
-}
+  .ui.slider:not(.vertical) .inner .track-fill {
+    height: $slider-track-fill-height;
+    top: $slider-track-position-top;
+    left: 0;
+  }
 
-.ui.slider .inner .thumb {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: $slider-thumb-height;
-  width: $slider-thumb-height;
-  background: $slider-thumb-background;
-  border-radius: $slider-thumb-border-radius;
-  box-shadow: $slider-thumb-shadow;
-  transition: $slider-thumb-transition;
-}
+  .ui.slider .inner .thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: $slider-thumb-height;
+    width: $slider-thumb-height;
+    background: $slider-thumb-background;
+    border-radius: $slider-thumb-border-radius;
+    box-shadow: $slider-thumb-shadow;
+    transition: $slider-thumb-transition;
+  }
 
-.ui.slider:not(.disabled) .inner .thumb:hover {
-  cursor: $slider-thumb-hover-pointer;
-  background: $slider-thumb-hover-background;
-}
+  .ui.slider:not(.disabled) .inner .thumb:hover {
+    cursor: $slider-thumb-hover-pointer;
+    background: $slider-thumb-hover-background;
+  }
 
-.ui.slider:not(.disabled):focus .inner .thumb {
-  background: $slider-thumb-hover-background;
-}
-
-
-/*******************************
-            States
-*******************************/
+  .ui.slider:not(.disabled):focus .inner .thumb {
+    background: $slider-thumb-hover-background;
+  }
 
 
-/*--------------
-     Disabled
----------------*/
-
-.ui.disabled.slider:not(.checkbox) {
-  opacity: $slider-disabled-opactiy;
-}
-
-.ui.disabled.slider .inner:hover {
-  cursor: auto;
-}
-
-.ui.disabled.slider .inner .track-fill {
-  background: $slider-disabled-track-fill-color;
-}
-
-/*--------------
-    Reversed
----------------*/
-
-.ui.reversed.slider .inner .track-fill {
-  left: auto;
-  right: 0;
-}
-
-.ui.reversed.slider .inner .thumb {
-  left: auto;
-  right: 0;
-}
-
-.ui.labeled.reversed.slider > .labels .label {
-  transform: translate(-100%, -100%);
-}
-
-/*******************************
-           Variations
-*******************************/
-
-/*--------------
-    Vertical
----------------*/
-
-.ui.vertical.slider {
-  height: 100%;
-  width: $slider-height;
-  padding: $slider-vertical-padding;
-}
-
-.ui.vertical.slider .inner {
-  height: 100%;
-}
-
-.ui.vertical.slider .inner .track {
-  height: 100%;
-  width: $slider-track-height;
-  left: $slider-track-position-top;
-  top: 0;
-}
-
-.ui.vertical.slider .inner .track-fill {
-  width: $slider-track-fill-height;
-  left: $slider-track-position-top;
-  top: 0;
-}
-
-/* Vertical Reversed */
-.ui.vertical.reversed.slider .inner .thumb {
-  top: auto;
-  bottom: 0;
-}
-
-.ui.vertical.reversed.slider .inner .track-fill {
-  top: auto;
-  bottom: 0;
-}
-
-/*--------------
-    Labeled
----------------*/
-
-.ui.labeled.slider > .labels {
-  height: $slider-label-height;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-}
-
-.ui.labeled.slider:not(.vertical) > .labels {
-  transform: translateY(-50%);
-}
-
-.ui.labeled.slider > .labels .label {
-  display: inline-flex;
-  position: absolute;
-  transform: translate(-50%, -100%);
-}
-
-.ui.labeled.ticked.slider > .labels .label:after {
-  content: ' ';
-  height: $slider-label-height;
-  width: $slider-label-width;
-  background: $slider-label-color;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-}
-.ui.labeled.ticked.slider > .labels .halftick.label:after {
-  height: $slider-label-height / 2;
-}
-
-/* Vertical Labels */
-
-.ui.labeled.vertical.slider > .labels {
-  width: $slider-label-height;
-  height: auto;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  transform: translateX(-50%);
-}
-
-.ui.labeled.vertical.slider > .labels .label {
-  transform: translate(-100%, -50%);
-}
-
-.ui.labeled.vertical.slider > .labels .label:after {
-  width: $slider-label-height;
-  height: $slider-label-width;
-  left: 100%;
-  top: 50%;
-}
-.ui.labeled.vertical.slider > .labels .halftick.label:after {
-  width: $slider-label-height / 2;
-  height: $slider-label-width;
-}
-
-/* Vertical Reversed Labels */
-.ui.labeled.vertical.reversed.slider > .labels .label {
-  transform: translate(-100%, 50%);
-}
-
-/*--------------
-    Hover
----------------*/
-
-.ui.hover.slider .inner .thumb {
-  opacity: $slider-hover-var-opacity;
-  transition: $slider-hover-opacity-transition;
-}
-
-.ui.hover.slider:not(.disabled):hover .inner .thumb, .ui.hover.slider:not(.disabled):focus .inner .thumb {
-  opacity: $slider-hover-var-hover-opacity;
-}
+  /*******************************
+              States
+  *******************************/
 
 
+  /*--------------
+      Disabled
+  ---------------*/
 
-/*--------------
-    Inverted
----------------*/
+  .ui.disabled.slider:not(.checkbox) {
+    opacity: $slider-disabled-opactiy;
+  }
 
-.ui.inverted.slider .inner .track-fill {
-  background-color: $slider-inverted-track-fill-color;
-}
+  .ui.disabled.slider .inner:hover {
+    cursor: auto;
+  }
 
-.ui.inverted.slider .inner .track {
-  background-color: $transparent-white;
-}
+  .ui.disabled.slider .inner .track-fill {
+    background: $slider-disabled-track-fill-color;
+  }
 
-/*--------------
-     Colors
----------------*/
+  @if($use-slider-variation-reversed) {
+    /*--------------
+        Reversed
+    ---------------*/
 
-@each $key, $value in $colors {
-  $color: $key;
-  $c: map-get($value, color);
-  $l: map-get($value, light);
-  $h: map-get($value, hover);
-  $lh: map-get($value, lightHover);
+    .ui.reversed.slider .inner .track-fill {
+      left: auto;
+      right: 0;
+    }
+
+    .ui.reversed.slider .inner .thumb {
+      left: auto;
+      right: 0;
+    }
+
+    .ui.labeled.reversed.slider > .labels .label {
+      transform: translate(-100%, -100%);
+    }
+  }
+
+  /*******************************
+            Variations
+  *******************************/
+
+  @if($use-slider-variation-vertical) {
+    /*--------------
+        Vertical
+    ---------------*/
+
+    .ui.vertical.slider {
+      height: 100%;
+      width: $slider-height;
+      padding: $slider-vertical-padding;
+    }
+
+    .ui.vertical.slider .inner {
+      height: 100%;
+    }
+
+    .ui.vertical.slider .inner .track {
+      height: 100%;
+      width: $slider-track-height;
+      left: $slider-track-position-top;
+      top: 0;
+    }
+
+    .ui.vertical.slider .inner .track-fill {
+      width: $slider-track-fill-height;
+      left: $slider-track-position-top;
+      top: 0;
+    }
+
+    @if($use-slider-variation-reversed) {
+      /* Vertical Reversed */
+      .ui.vertical.reversed.slider .inner .thumb {
+        top: auto;
+        bottom: 0;
+      }
+    
+      .ui.vertical.reversed.slider .inner .track-fill {
+        top: auto;
+        bottom: 0;
+      }
+
+      /* Vertical Reversed Labels */
+      .ui.labeled.vertical.reversed.slider > .labels .label {
+        transform: translate(-100%, 50%);
+      }
+    }
+
+    /* Vertical Labels */
+
+    .ui.labeled.vertical.slider > .labels {
+      width: $slider-label-height;
+      height: auto;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    .ui.labeled.vertical.slider > .labels .label {
+      transform: translate(-100%, -50%);
+    }
+
+    .ui.labeled.vertical.slider > .labels .label:after {
+      width: $slider-label-height;
+      height: $slider-label-width;
+      left: 100%;
+      top: 50%;
+    }
+    .ui.labeled.vertical.slider > .labels .halftick.label:after {
+      width: $slider-label-height / 2;
+      height: $slider-label-width;
+    }
+
+    /* Small Vertical */
+    .ui.slider.small.vertical .inner {
+      width: $slider-small-height;
+    }
+    .ui.slider.small.vertical .inner .track,
+    .ui.slider.small.vertical .inner .track-fill {
+      width: $slider-small-track-height;
+      left: $slider-track-position-top-small;
+    }
+    .ui.small.labeled.vertical.slider> .labels,
+    .ui.small.labeled.vertical.slider> .labels .label:after {
+      width: $slider-small-label-height;
+    }
+    .ui.small.labeled.vertical.slider> .labels .halftick.label:after {
+      width: $slider-small-label-height / 2;
+    }
+    /* Large Vertical */
+    .ui.slider.large.vertical .inner {
+      width: $slider-large-height;
+    }
+    .ui.slider.large.vertical .inner .track,
+    .ui.slider.large.vertical .inner .track-fill {
+      width: $slider-large-track-height;
+      left: $slider-track-position-top-large;
+    }
+    .ui.large.labeled.vertical.slider> .labels,
+    .ui.large.labeled.vertical.slider> .labels .label:after {
+      width: $slider-large-label-height;
+    }
+    .ui.large.labeled.vertical.slider> .labels .halftick.label:after {
+      width: $slider-large-label-height / 2;
+    }
+
+    /* Big Vertical */
+    .ui.slider.big.vertical .inner {
+      width: $slider-big-height;
+    }
+    .ui.slider.big.vertical .inner .track,
+    .ui.slider.big.vertical .inner .track-fill {
+      width: $slider-big-track-height;
+      left: $slider-track-position-top-big;
+    }
+    .ui.big.labeled.vertical.slider> .labels,
+    .ui.big.labeled.vertical.slider> .labels .label:after {
+      width: $slider-big-label-height;
+    }
+    .ui.big.labeled.vertical.slider> .labels .halftick.label:after {
+      width: $slider-big-label-height / 2;
+    }
+  }
+
+  /*--------------
+      Labeled
+  ---------------*/
+
+  .ui.labeled.slider > .labels {
+    height: $slider-label-height;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+
+  .ui.labeled.slider:not(.vertical) > .labels {
+    transform: translateY(-50%);
+  }
+
+  .ui.labeled.slider > .labels .label {
+    display: inline-flex;
+    position: absolute;
+    transform: translate(-50%, -100%);
+  }
+
+  .ui.labeled.ticked.slider > .labels .label:after {
+    content: ' ';
+    height: $slider-label-height;
+    width: $slider-label-width;
+    background: $slider-label-color;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+  }
+  .ui.labeled.ticked.slider > .labels .halftick.label:after {
+    height: $slider-label-height / 2;
+  }
+
+  /*--------------
+      Hover
+  ---------------*/
+
+  .ui.hover.slider .inner .thumb {
+    opacity: $slider-hover-var-opacity;
+    transition: $slider-hover-opacity-transition;
+  }
+
+  .ui.hover.slider:not(.disabled):hover .inner .thumb, .ui.hover.slider:not(.disabled):focus .inner .thumb {
+    opacity: $slider-hover-var-hover-opacity;
+  }
+
+
+  @if($use-slider-variation-inverted) {
+    /*--------------
+        Inverted
+    ---------------*/
+    .ui.inverted.slider .inner .track-fill {
+      background-color: $slider-inverted-track-fill-color;
+    }
+
+    .ui.inverted.slider .inner .track {
+      background-color: $transparent-white;
+    }
+  }
+
+
+  /*--------------
+      Colors
+  ---------------*/
+
+  @each $key, $value in $colors {
+    @if(index(join($main-colors-names, $use-slider-variation-colors), $key+'')) {
+      $color: $key;
+      $c: map-get($value, color);
+      $l: map-get($value, light);
+      $h: map-get($value, hover);
+      $lh: map-get($value, lightHover);
+
+      /* Standard */
+      .ui.#{$key + ""}.slider .inner .track-fill {
+        background-color: $c;
+      }
+
+      /* Basic */
+      .ui.#{$key + ""}.slider.basic .inner .thumb {
+        background-color: $c;
+      }
+      .ui.#{$key + ""}.slider.basic .inner .thumb:hover,
+      .ui.#{$key + ""}.slider.basic:focus .inner .thumb {
+        background-color: $h;
+      }
+      @if($use-slider-variation-inverted) {
+        /* Basic Inverted */
+        .ui.#{$key + ""}.inverted.slider.basic .inner .thumb {
+          background-color: $l;
+        }
+        .ui.#{$key + ""}.inverted.slider .inner .track-fill {
+          background-color: $l;
+        }
+        .ui.#{$key + ""}.inverted.slider.basic .inner .thumb:hover,
+        .ui.#{$key + ""}.inverted.slider.basic:focus .inner .thumb {
+          background-color: $lh;
+        }
+      }
+    }
+  }
+
+  /*--------------
+      Basic
+  ---------------*/
 
   /* Standard */
-  .ui.#{$key + ""}.slider .inner .track-fill {
-    background-color: $c;
+  .ui.slider.basic .inner .thumb {
+    background-color: $slider-track-fill-color;
   }
-  .ui.#{$key + ""}.inverted.slider .inner .track-fill {
-    background-color: $l;
-  }
-
-  /* Basic */
-  .ui.#{$key + ""}.slider.basic .inner .thumb {
-    background-color: $c;
-  }
-  .ui.#{$key + ""}.slider.basic .inner .thumb:hover,
-  .ui.#{$key + ""}.slider.basic:focus .inner .thumb {
-    background-color: $h;
+  .ui.slider.basic .inner .thumb:hover, .ui.slider.basic:focus .inner .thumb {
+    background-color: $slider-track-fill-color-focus;
   }
 
-  /* Basic Inverted */
-  .ui.#{$key + ""}.inverted.slider.basic .inner .thumb {
-    background-color: $l;
+  @if($use-slider-variation-inverted) {
+    /*--------------
+      Basic Inverted
+    ---------------*/
+
+    /* Standard */
+    .ui.inverted.slider.basic .inner .thumb {
+      background-color: $slider-inverted-track-fill-color;
+    }
+    .ui.inverted.slider.basic .inner .thumb:hover, .ui.inverted.slider.basic:focus .inner .thumb {
+      background-color: $slider-inverted-track-fill-color-focus;
+    }
   }
-  .ui.#{$key + ""}.inverted.slider.basic .inner .thumb:hover,
-  .ui.#{$key + ""}.inverted.slider.basic:focus .inner .thumb {
-    background-color: $lh;
+
+  /*--------------
+      Sizing
+  ---------------*/
+
+  /* Small */
+  .ui.slider.small .inner .thumb {
+    height: $slider-small-height;
+    width: $slider-small-height;
+  }
+  .ui.slider.small:not(.vertical) .inner {
+    height: $slider-small-height;
+  }
+  .ui.slider.small:not(.vertical) .inner .track,
+  .ui.slider.small:not(.vertical) .inner .track-fill {
+    height: $slider-small-track-height;
+    top: $slider-track-position-top-small;
+  }
+  .ui.small.labeled.slider:not(.vertical) > .labels,
+  .ui.small.labeled.slider:not(.vertical) > .labels .label:after {
+    height: $slider-small-label-height;
+  }
+  .ui.small.labeled.slider:not(.vertical) > .labels .halftick.label:after {
+    height: $slider-small-label-height / 2;
   }
 
-}
 
-/*--------------
-     Basic
----------------*/
-
-/* Standard */
-.ui.slider.basic .inner .thumb {
-  background-color: $slider-track-fill-color;
-}
-.ui.slider.basic .inner .thumb:hover, .ui.slider.basic:focus .inner .thumb {
-  background-color: $slider-track-fill-color-focus;
-}
-
-/*--------------
-  Basic Inverted
----------------*/
-
-/* Standard */
-.ui.inverted.slider.basic .inner .thumb {
-  background-color: $slider-inverted-track-fill-color;
-}
-.ui.inverted.slider.basic .inner .thumb:hover, .ui.inverted.slider.basic:focus .inner .thumb {
-  background-color: $slider-inverted-track-fill-color-focus;
-}
+  /* Large */
+  .ui.slider.large .inner .thumb {
+    height: $slider-large-height;
+    width: $slider-large-height;
+  }
+  .ui.slider.large:not(.vertical) .inner {
+    height: $slider-large-height;
+  }
+  .ui.slider.large:not(.vertical) .inner .track,
+  .ui.slider.large:not(.vertical) .inner .track-fill {
+    height: $slider-large-track-height;
+    top: $slider-track-position-top-large;
+  }
+  .ui.large.labeled.slider:not(.vertical) > .labels,
+  .ui.large.labeled.slider:not(.vertical) > .labels .label:after {
+    height: $slider-large-label-height;
+  }
+  .ui.large.labeled.slider:not(.vertical) > .labels .halftick.label:after {
+    height: $slider-large-label-height / 2;
+  }
 
 
-/*--------------
-     Sizing
----------------*/
-
-/* Small */
-.ui.slider.small .inner .thumb {
-  height: $slider-small-height;
-  width: $slider-small-height;
+  /* Big */
+  .ui.slider.big .inner .thumb {
+    height: $slider-big-height;
+    width: $slider-big-height;
+  }
+  .ui.slider.big:not(.vertical) .inner {
+    height: $slider-big-height;
+  }
+  .ui.slider.big:not(.vertical) .inner .track,
+  .ui.slider.big:not(.vertical) .inner .track-fill {
+    height: $slider-big-track-height;
+    top: $slider-track-position-top-big;
+  }
+  .ui.big.labeled.slider:not(.vertical) > .labels,
+  .ui.big.labeled.slider:not(.vertical) > .labels .label:after {
+    height: $slider-big-label-height;
+  }
+  .ui.big.labeled.slider:not(.vertical) > .labels .halftick.label:after {
+    height: $slider-big-label-height / 2;
+  }
 }
-.ui.slider.small:not(.vertical) .inner {
-  height: $slider-small-height;
-}
-.ui.slider.small:not(.vertical) .inner .track,
-.ui.slider.small:not(.vertical) .inner .track-fill {
-  height: $slider-small-track-height;
-  top: $slider-track-position-top-small;
-}
-.ui.small.labeled.slider:not(.vertical) > .labels,
-.ui.small.labeled.slider:not(.vertical) > .labels .label:after {
-  height: $slider-small-label-height;
-}
-.ui.small.labeled.slider:not(.vertical) > .labels .halftick.label:after {
-  height: $slider-small-label-height / 2;
-}
-
-/* Small Vertical */
-.ui.slider.small.vertical .inner {
-  width: $slider-small-height;
-}
-.ui.slider.small.vertical .inner .track,
-.ui.slider.small.vertical .inner .track-fill {
-  width: $slider-small-track-height;
-  left: $slider-track-position-top-small;
-}
-.ui.small.labeled.vertical.slider> .labels,
-.ui.small.labeled.vertical.slider> .labels .label:after {
-  width: $slider-small-label-height;
-}
-.ui.small.labeled.vertical.slider> .labels .halftick.label:after {
-  width: $slider-small-label-height / 2;
-}
-
-/* Large */
-.ui.slider.large .inner .thumb {
-  height: $slider-large-height;
-  width: $slider-large-height;
-}
-.ui.slider.large:not(.vertical) .inner {
-  height: $slider-large-height;
-}
-.ui.slider.large:not(.vertical) .inner .track,
-.ui.slider.large:not(.vertical) .inner .track-fill {
-  height: $slider-large-track-height;
-  top: $slider-track-position-top-large;
-}
-.ui.large.labeled.slider:not(.vertical) > .labels,
-.ui.large.labeled.slider:not(.vertical) > .labels .label:after {
-  height: $slider-large-label-height;
-}
-.ui.large.labeled.slider:not(.vertical) > .labels .halftick.label:after {
-  height: $slider-large-label-height / 2;
-}
-
-/* Large Vertical */
-.ui.slider.large.vertical .inner {
-  width: $slider-large-height;
-}
-.ui.slider.large.vertical .inner .track,
-.ui.slider.large.vertical .inner .track-fill {
-  width: $slider-large-track-height;
-  left: $slider-track-position-top-large;
-}
-.ui.large.labeled.vertical.slider> .labels,
-.ui.large.labeled.vertical.slider> .labels .label:after {
-  width: $slider-large-label-height;
-}
-.ui.large.labeled.vertical.slider> .labels .halftick.label:after {
-  width: $slider-large-label-height / 2;
-}
-
-/* Big */
-.ui.slider.big .inner .thumb {
-  height: $slider-big-height;
-  width: $slider-big-height;
-}
-.ui.slider.big:not(.vertical) .inner {
-  height: $slider-big-height;
-}
-.ui.slider.big:not(.vertical) .inner .track,
-.ui.slider.big:not(.vertical) .inner .track-fill {
-  height: $slider-big-track-height;
-  top: $slider-track-position-top-big;
-}
-.ui.big.labeled.slider:not(.vertical) > .labels,
-.ui.big.labeled.slider:not(.vertical) > .labels .label:after {
-  height: $slider-big-label-height;
-}
-.ui.big.labeled.slider:not(.vertical) > .labels .halftick.label:after {
-  height: $slider-big-label-height / 2;
-}
-
-/* Big Vertical */
-.ui.slider.big.vertical .inner {
-  width: $slider-big-height;
-}
-.ui.slider.big.vertical .inner .track,
-.ui.slider.big.vertical .inner .track-fill {
-  width: $slider-big-track-height;
-  left: $slider-track-position-top-big;
-}
-.ui.big.labeled.vertical.slider> .labels,
-.ui.big.labeled.vertical.slider> .labels .label:after {
-  width: $slider-big-label-height;
-}
-.ui.big.labeled.vertical.slider> .labels .halftick.label:after {
-  width: $slider-big-label-height / 2;
-}
-
 
 @import '../../themes/default/modules/slider.style';

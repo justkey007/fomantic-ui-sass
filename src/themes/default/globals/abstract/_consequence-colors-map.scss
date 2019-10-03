@@ -1,0 +1,16 @@
+$consequence-colors-map: (
+   positive: (
+      color: $positive-color,
+      hover: $positive-color-hover,
+      active: $positive-color-active,
+      down: $positive-color-down,
+      focus: $positive-color-focus,
+   ),
+   negative: (
+      color: $negative-color,
+      hover: $negative-color-hover,
+      active: $negative-color-active,
+      down: $negative-color-down,
+      focus: $negative-color-focus,
+   )
+);

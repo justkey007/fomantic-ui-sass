@@ -1,0 +1,321 @@
+//------------------- Selection of components and their variants --------------------*/
+
+//-------------- Button ------------------*/
+$use-button: true !default;
+//Types
+$use-button-type-animated: true !default;
+$use-button-type-labeled: true !default;
+$use-button-type-basic: true !default;
+$use-button-type-inverted: true !default;
+$use-button-type-tertiary: true !default;
+//Variations
+$use-button-variation-social: "facebook", "twitter", "google", "google plus", "linkedin", "youtube", "instagram", "pinterest", "vk", "whatsapp", "telegram" !default;
+$use-button-variation-colors: $colors-variations-names !default;
+$use-button-variation-consequences: $consequences-names !default;
+
+
+//-------------- Container ------------------*/
+$use-container: true !default;
+
+//-------------- Divider ------------------*/
+$use-divider: true !default;
+
+//-------------- Flag ------------------*/
+$use-flag: true !default;
+
+//-------------- Icon ------------------*/
+$use-icon: true !default;
+
+//-------------- Image ------------------*/
+$use-image: true !default;
+
+//-------------- Header ------------------*/
+$use-header: true !default;
+$use-header-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Input ------------------*/
+$use-input: true !default;
+//Variations
+$use-input-variation-icon: true !default;
+$use-input-variation-labeled: true !default;
+$use-input-variation-action: true !default;
+$use-input-variation-transparent: true !default;
+$use-input-variation-inverted: true !default;
+
+
+//-------------- Label ------------------*/
+$use-label: true !default;
+//Types
+$use-label-type-image: true !default;
+$use-label-type-pointing: true !default;
+$use-label-type-corner: true !default;
+$use-label-type-tag: true !default;
+$use-label-type-ribbon: true !default;
+$use-label-type-horizontal: true !default;
+$use-label-type-attached: true !default;
+$use-label-type-floating: true !default;
+//Variations
+$use-label-variation-circular: true !default;
+$use-label-variation-basic: true !default;
+$use-label-variation-inverted: true !default;
+$use-label-variation-basic-pointing: true !default;
+$use-label-variation-basic-tag: true !default;
+$use-label-variation-colors: $colors-variations-names !default;
+
+
+//-------------- List ------------------*/
+$use-list: true !default;
+//Types
+$use-list-type-bulleted: true !default;
+$use-list-type-link: true !default;
+$use-list-type-ordered: true !default;
+//Variations
+$use-list-variation-horizontal: true !default;
+$use-list-variation-inverted: true !default;
+$use-list-variation-selection: true !default;
+$use-list-variation-divided: true !default;
+$use-list-variation-celled: true !default;
+$use-list-variation-relaxed: true !default;
+
+
+//-------------- Loader ------------------*/
+$use-loader: true !default;
+//Variations
+$use-loader-variation-inverted: true !default;
+$use-loader-variation-colors: $colors-variations-names !default;
+
+//-------------- Placeholder ------------------*/
+$use-placeholder: true !default;
+
+//-------------- Rail ------------------*/
+$use-rail: true !default;
+
+//-------------- Reveal ------------------*/
+$use-reveal: true !default;
+//Types
+$use-reveal-type-fade: true !default;
+$use-reveal-type-slide: true !default;
+$use-reveal-type-move: true !default;
+$use-reveal-type-rotate: true !default;
+
+
+//-------------- Segment ------------------*/
+$use-segment: true !default;
+//Types
+$use-segment-type-placeholder: true !default;
+$use-segment-type-piled: true !default;
+$use-segment-type-stacked: true !default;
+//Variations
+$use-segment-variation-inverted: true !default;
+$use-segment-variation-attached: true !default;
+$use-segment-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Step ------------------*/
+$use-step: true !default;
+//Types
+$use-step-type-ordered: true !default;
+$use-step-type-vertical: true !default;
+//Variations
+$use-step-variation-inverted: true !default;
+$use-step-variation-attached: true !default;
+
+//-------------- Text ------------------*/
+$use-text: true !default;
+
+
+//-------------- Breadcrumb ------------------*/
+$use-breadcrumb: true !default;
+//Variations
+$use-breadcrumb-variation-inverted: true !default;
+
+//-------------- Form ------------------*/
+$use-form: true !default;
+
+//-------------- Grid ------------------*/
+$use-grid: true !default;
+
+//-------------- Menu ------------------*/
+$use-menu: true !default;
+//Types
+$use-menu-type-secondary: true !default;
+$use-menu-type-pointing: true !default;
+$use-menu-type-tabular: true !default;
+$use-menu-type-text: true !default;
+$use-menu-type-vertical: true !default;
+$use-menu-type-pagination: true !default;
+//Variations
+$use-menu-variation-inverted: true !default;
+$use-menu-variation-attached: true !default;
+$use-menu-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Message ------------------*/
+$use-message: true !default;
+//Variations
+$use-message-variation-colors: $colors-variations-names !default;
+$use-message-variation-consequences: $consequences-names !default;
+
+
+//-------------- Table ------------------*/
+$use-table: true !default;
+//Types
+$use-table-type-definition: true !default;
+$use-table-type-structured: true !default;
+//Variations
+$use-table-variation-basic: true !default;
+$use-table-variation-celled: true !default;
+$use-table-variation-padded: true !default;
+$use-table-variation-compact: true !default;
+$use-table-variation-inverted: true !default;
+$use-table-variation-sortable: true !default;
+$use-table-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Ad ------------------*/
+$use-ad: true !default;
+
+//-------------- Card ------------------*/
+$use-card: true !default;
+//Variations
+$use-card-variation-inverted: true !default;
+$use-card-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Comment ------------------*/
+$use-comment: true !default;
+//Variations
+$use-comment-variation-inverted: true !default;
+
+
+//-------------- Feed ------------------*/
+$use-feed: true !default;
+//Variations
+$use-feed-variation-inverted: true !default;
+
+
+//-------------- Item ------------------*/
+$use-item: true !default;
+//Variations
+$use-item-variation-inverted: true !default;
+
+
+//-------------- Statistic ------------------*/
+$use-statistic: true !default;
+//Variations
+$use-statistic-variation-inverted: true !default;
+$use-statistic-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Accordion ------------------*/
+$use-accordion: true !default;
+//Variations
+$use-accordion-variation-inverted: true !default;
+
+
+//-------------- Calendar ------------------*/
+$use-calendar: true !default;
+
+
+//-------------- Checkbox ------------------*/
+$use-checkbox: true !default;
+//Types
+$use-checkbox-type-slider: true !default;
+$use-checkbox-type-toggle: true !default;
+//Variations
+$use-checkbox-variation-fitted: true !default;
+$use-checkbox-variation-inverted: true !default;
+$use-checkbox-variation-size: $sizes-names !default;
+
+
+//-------------- Dimmer ------------------*/
+$use-dimmer: true !default;
+//Variations
+$use-dimmer-variation-inverted: true !default;
+$use-dimmer-variation-blurring: true !default;
+$use-dimmer-variation-partially: true !default;
+$use-dimmer-variation-shades: true !default;
+
+
+//-------------- Dropdown ------------------*/
+$use-dropdown: true !default;
+//Types
+$use-dropdown-type-selection: true !default;
+$use-dropdown-type-multiple: true !default;
+$use-dropdown-type-search: true !default;
+$use-dropdown-type-clearable: true !default;
+$use-dropdown-type-inline: true !default;
+$use-dropdown-type-simple: true !default;
+$use-dropdown-type-pointing: true !default;
+//Variations
+$use-dropdown-variation-inverted: true !default;
+$use-dropdown-variation-columnar: true !default;
+
+//-------------- Embed ------------------*/
+$use-embed: true !default;
+
+//-------------- Modal ------------------*/
+$use-modal: true !default;
+//Types
+$use-modal-type-inverted: true !default;
+$use-modal-type-basic: true !default;
+$use-modal-type-fullscreen: true !default;
+
+//-------------- Nag ------------------*/
+$use-nag: true !default;
+
+
+//-------------- Popup ------------------*/
+$use-popup: true !default;
+//Variations
+$use-popup-variation-inverted: true !default;
+
+
+//-------------- Progress ------------------*/
+$use-progress: true !default;
+//Variations
+$use-progress-variation-inverted: true !default;
+$use-progress-variation-attached: true !default;
+$use-progress-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Rating ------------------*/
+$use-rating: true !default;
+//Variations
+$use-rating-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Search ------------------*/
+$use-search: true !default;
+
+//-------------- Shape ------------------*/
+$use-shape: true !default;
+
+//-------------- Sidebar ------------------*/
+$use-sidebar: true !default;
+
+
+//-------------- Slider ------------------*/
+$use-slider: true !default;
+//Variations
+$use-slider-variation-inverted: true !default;
+$use-slider-variation-vertical: true !default;
+$use-slider-variation-reversed: true !default;
+$use-slider-variation-colors: $colors-variations-names !default;
+
+//-------------- Sticky ------------------*/
+$use-sticky: true !default;
+
+//-------------- Tab ------------------*/
+$use-tab: true !default;
+
+//-------------- Toast ------------------*/
+$use-toast: true !default;
+//Variations
+$use-toast-variation-inverted: true !default;
+$use-toast-variation-colors: $colors-variations-names !default;
+
+
+//-------------- Transition ------------------*/
+$use-transition: true !default;

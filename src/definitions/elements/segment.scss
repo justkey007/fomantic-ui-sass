@@ -1,722 +1,739 @@
 @import '../../themes/default/elements/segment.variables';
 
-/*******************************
-//@-        Segment
-*******************************/
-
-.ui.segment {
-  position: relative;
-  background: $segment-background;
-  box-shadow: $segment-box-shadow;
-  margin: $segment-margin;
-  padding: $segment-padding;
-  border-radius: $segment-border-radius;
-  border: $segment-border;
-}
-
-.ui.segment:first-child {
-  margin-top: 0;
-}
-.ui.segment:last-child {
-  margin-bottom: 0;
-}
-
-
-/* Vertical */
-.ui.vertical.segment {
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-
-  background: none transparent;
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
-  border-bottom: $segment-border-width solid $border-color;
-}
-.ui.vertical.segment:last-child {
-  border-bottom: none;
-}
-
-
-/*-------------------
-    Loose Coupling
---------------------*/
-
-/* Header */
-.ui.inverted.segment > .ui.header > .sub.header,
-.ui.inverted.segment > .ui.header {
-  color: $white;
-}
-
-/* Label */
-.ui[class*="bottom attached"].segment > [class*="top attached"].label {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.ui[class*="top attached"].segment > [class*="bottom attached"].label {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.ui.attached.segment:not(.top):not(.bottom) > [class*="top attached"].label {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.ui.attached.segment:not(.top):not(.bottom) > [class*="bottom attached"].label {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-/* Grid */
-.ui.page.grid.segment,
-.ui.grid > .row > .ui.segment.column,
-.ui.grid > .ui.segment.column {
-  padding-top: $segment-page-grid-margin;
-  padding-bottom: $segment-page-grid-margin;
-}
-.ui.grid.segment {
-  margin: $segment-margin;
-  border-radius: $segment-border-radius;
-}
-
-/* Table */
-.ui.basic.table.segment {
-  background: $segment-background;
-  border: $segment-border;
-  box-shadow: $segment-box-shadow;
-}
-.ui[class*="very basic"].table.segment {
-  padding: $segment-padding;
-}
-
-/* Tab */
-.ui.segment.tab:last-child {
-  margin-bottom: $segment-vertical-margin;
-}
-
-/*******************************
-             Types
-*******************************/
-
-
-/*-------------------
-     Placeholder
---------------------*/
-
-.ui.placeholder.segment {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  max-width: initial;
-  animation: none;
-  overflow: visible;
-  padding: $segment-placeholder-padding;
-  min-height: $segment-placeholder-min-height;
-  background: $segment-placeholder-background;
-  border-color: $segment-placeholder-border-color;
-  box-shadow: $segment-placeholder-box-shadow;
-}
-
-.ui.placeholder.segment .button,
-.ui.placeholder.segment textarea {
-  display: block;
-}
-.ui.placeholder.segment .field,
-.ui.placeholder.segment textarea,
-.ui.placeholder.segment > .ui.input,
-.ui.placeholder.segment .button {
-  max-width: $segment-placeholder-content-max-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-.ui.placeholder.segment .column .button,
-.ui.placeholder.segment .column .field,
-.ui.placeholder.segment .column textarea,
-.ui.placeholder.segment .column > .ui.input {
-  max-width: $segment-placeholder-content-max-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ui.placeholder.segment > .inline  {
-  align-self: center;
-}
-.ui.placeholder.segment > .inline > .button {
-  display: inline-block;
-  width: auto;
-  margin: $segment-placeholder-content-inline-button-margin;
-}
-.ui.placeholder.segment > .inline > .button:last-child {
-  margin-right: 0;
-}
-
-
-/*-------------------
-        Piled
---------------------*/
-
-.ui.piled.segments,
-.ui.piled.segment {
-  margin: $segment-piled-margin 0;
-  box-shadow: $segment-piled-box-shadow;
-  z-index: $segment-piled-z-index;
-}
-.ui.piled.segment:first-child {
-  margin-top: 0;
-}
-.ui.piled.segment:last-child {
-  margin-bottom: 0;
-}
-.ui.piled.segments:after,
-.ui.piled.segments:before,
-.ui.piled.segment:after,
-.ui.piled.segment:before {
-  background-color: $white;
-  visibility: visible;
-  content: '';
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  border: $segment-piled-border;
-  box-shadow: $segment-piled-box-shadow;
-}
-.ui.piled.segments:before,
-.ui.piled.segment:before {
-  transform: rotate(-$segment-piled-degrees);
-  top: 0;
-  z-index: -2;
-}
-.ui.piled.segments:after,
-.ui.piled.segment:after {
-  transform: rotate($segment-piled-degrees);
-  top: 0;
-  z-index: -1;
-}
-
-/* Piled Attached */
-.ui[class*="top attached"].piled.segment {
-  margin-top: $segment-piled-margin;
-  margin-bottom: 0;
-}
-.ui.piled.segment[class*="top attached"]:first-child {
-  margin-top: 0;
-}
-.ui.piled.segment[class*="bottom attached"] {
-  margin-top: 0;
-  margin-bottom: $segment-piled-margin;
-}
-.ui.piled.segment[class*="bottom attached"]:last-child {
-  margin-bottom: 0;
-}
-
-/*-------------------
-       Stacked
---------------------*/
-
-.ui.stacked.segment {
-  padding-bottom: $segment-stacked-padding;
-}
-.ui.stacked.segments:before,
-.ui.stacked.segments:after,
-.ui.stacked.segment:before,
-.ui.stacked.segment:after {
-  content: '';
-  position: absolute;
-  bottom: -($segment-stacked-height / 2);
-  left: 0;
-
-  border-top: 1px solid $border-color;
-  background: $segment-stacked-page-background;
-
-  width: 100%;
-  height: $segment-stacked-height;
-  visibility: visible;
-}
-.ui.stacked.segments:before,
-.ui.stacked.segment:before {
-  display: none;
-}
-
-/* Add additional page */
-.ui.tall.stacked.segments:before,
-.ui.tall.stacked.segment:before {
-  display: block;
-  bottom: 0;
-}
-
-/* Inverted */
-.ui.stacked.inverted.segments:before,
-.ui.stacked.inverted.segments:after,
-.ui.stacked.inverted.segment:before,
-.ui.stacked.inverted.segment:after {
-  background-color: $subtle-transparent-black;
-  border-top: 1px solid $selected-border-color;
-}
-
-/*-------------------
-       Padded
---------------------*/
-
-.ui.padded.segment {
-  padding: $segment-padded-padding;
-}
-
-.ui[class*="very padded"].segment {
-  padding: $segment-very-padded-padding;
-}
-
-/* Padded vertical */
-.ui.padded.segment.vertical.segment,
-.ui[class*="very padded"].vertical.segment {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/*-------------------
-       Compact
---------------------*/
-
-.ui.compact.segment {
-  display: table;
-}
-
-/* Compact Group */
-.ui.compact.segments {
-  display: inline-flex;
-}
-.ui.compact.segments .segment,
-.ui.segments .compact.segment {
-  display: block;
-  flex: 0 1 auto;
-}
-
-/*-------------------
-       Circular
---------------------*/
-
-.ui.circular.segment {
-  display: table-cell;
-  padding: $segment-circular-padding;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 500em;
-}
-
-/*-------------------
-       Raised
---------------------*/
-
-.ui.raised.raised.segments,
-.ui.raised.raised.segment {
-  box-shadow: $segment-raised-box-shadow;
-}
-
-
-/*******************************
-            Groups
-*******************************/
-
-/* Group */
-.ui.segments {
-  flex-direction: column;
-  position: relative;
-  margin: $segment-grouped-super-margin;
-  border: $segment-grouped-super-border;
-  box-shadow: $segment-grouped-super-box-shadow;
-  border-radius: $segment-grouped-border-radius;
-}
-.ui.segments:first-child {
-  margin-top: 0;
-}
-.ui.segments:last-child {
-  margin-bottom: 0;
-}
-
-
-/* Nested Segment */
-.ui.segments > .segment {
-  top: 0;
-  bottom: 0;
-  border-radius: 0;
-  margin: $segment-grouped-margin;
-  width: $segment-grouped-width;
-  box-shadow: $segment-grouped-box-shadow;
-  border: $segment-grouped-border;
-  border-top: $segment-grouped-divider;
-}
-
-.ui.segments:not(.horizontal) > .segment:first-child {
-  top: $segment-attached-top-offset;
-  bottom: 0;
-  border-top: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: $segment-border-radius $segment-border-radius 0 0;
-}
-
-/* Bottom */
-.ui.segments:not(.horizontal) > .segment:last-child {
-  top: $segment-attached-bottom-offset;
-  bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  box-shadow: $segment-attached-bottom-box-shadow;
-  border-radius: 0 0 $segment-border-radius $segment-border-radius;
-}
-
-/* Only */
-.ui.segments:not(.horizontal) > .segment:only-child {
-  border-radius: $segment-border-radius;
-}
-
-
-/* Nested Group */
-.ui.segments > .ui.segments {
-  border-top: $segment-grouped-divider;
-  margin: $segment-nested-group-margin;
-}
-.ui.segments > .segments:first-child {
-  border-top: none;
-}
-.ui.segments > .segment + .segments:not(.horizontal) {
-  margin-top: 0;
-}
-
-/* Horizontal Group */
-.ui.horizontal.segments {
-  display: flex;
-  flex-direction: row;
-  background-color: transparent;
-  padding: 0;
-  box-shadow: $segment-box-shadow;
-  margin: $segment-margin;
-  border-radius: $segment-border-radius;
-  border: $segment-border;
-}
-.ui.stackable.horizontal.segments {
-  flex-wrap: wrap;
-}
-
-/* Nested Horizontal Group */
-.ui.segments > .horizontal.segments {
-  margin: 0;
-  background-color: transparent;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-  border-top: $segment-grouped-divider;
-}
-
-/* Horizontal Segment */
-.ui.horizontal.segments:not(.compact) > .segment:not(.compact) {
-  flex: 1 1 auto;
-  -ms-flex: 1 1 0; /* Solves #2550 MS Flex */
-}
-.ui.horizontal.segments > .segment {
-  margin: 0;
-  min-width: 0;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-  border-left: $segment-border-width solid $border-color;
-}
-
-/* Border Fixes */
-.ui.segments > .horizontal.segments:first-child {
-  border-top: none;
-}
-.ui.horizontal.segments:not(.stackable) > .segment:first-child {
-  border-left: none;
-}
-
-
-/*******************************
-            States
-*******************************/
-
-/*--------------
-    Disabled
----------------*/
-
-.ui.disabled.segment {
-  opacity: $disabled-opacity;
-  color: $disabled-text-color;
-}
-
-/*--------------
-    Loading
----------------*/
-
-.ui.loading.segment {
-  position: relative;
-  cursor: default;
-  pointer-events: none;
-  text-shadow: none !important;
-  transition: all 0s linear;
-}
-.ui.loading.segment:before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  background: $segment-loader-dimmer-color;
-  width: 100%;
-  height: 100%;
-  border-radius: $segment-border-radius;
-  z-index: $segment-loader-dimmer-z-index;
-}
-.ui.loading.segment:after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-
-  margin: $loader-margin;
-  width: $segment-loader-size;
-  height: $segment-loader-size;
-
-  animation: loader $loader-speed infinite linear;
-  border: $loader-line-width solid $loader-line-color;
-  border-radius: $circular-radius;
-
-  box-shadow: 0 0 0 1px transparent;
-  visibility: visible;
-  z-index: $segment-loader-line-z-index;
-}
-
-
-
-/*******************************
-           Variations
-*******************************/
-
-
-/*-------------------
-       Basic
---------------------*/
-
-.ui.basic.segment,
-.ui.segments .ui.basic.segment,
-.ui.basic.segments {
-  background: $segment-basic-background;
-  box-shadow: $segment-basic-box-shadow;
-  border: $segment-basic-border;
-  border-radius: $segment-basic-border-radius;
-}
-
-/*-------------------
-       Clearing
---------------------*/
-
-.ui.clearing.segment:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/*-------------------
-       Colors
---------------------*/
-
-@each $key, $value in $colors {
-  $color: $key;
-  $c: map-get($value, color);
-  @if not ($color==primary) and not ($color==secondary) {
-    .ui.#{$key + ""}.segment.segment.segment.segment.segment:not(.inverted) {
-      border-top: $segment-colored-border-size solid $c;
+@if $use-segment {
+  /*******************************
+  //@-        Segment
+  *******************************/
+
+  .ui.segment {
+    position: relative;
+    background: $segment-background;
+    box-shadow: $segment-box-shadow;
+    margin: $segment-margin;
+    padding: $segment-padding;
+    border-radius: $segment-border-radius;
+    border: $segment-border;
+  }
+
+  .ui.segment:first-child {
+    margin-top: 0;
+  }
+  .ui.segment:last-child {
+    margin-bottom: 0;
+  }
+
+
+  /* Vertical */
+  .ui.vertical.segment {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    background: none transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    border-bottom: $segment-border-width solid $border-color;
+  }
+  .ui.vertical.segment:last-child {
+    border-bottom: none;
+  }
+
+
+  /*-------------------
+      Loose Coupling
+  --------------------*/
+
+  /* Header */
+  .ui.inverted.segment > .ui.header > .sub.header,
+  .ui.inverted.segment > .ui.header {
+    color: $white;
+  }
+
+  /* Label */
+  .ui[class*="bottom attached"].segment > [class*="top attached"].label {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .ui[class*="top attached"].segment > [class*="bottom attached"].label {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .ui.attached.segment:not(.top):not(.bottom) > [class*="top attached"].label {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .ui.attached.segment:not(.top):not(.bottom) > [class*="bottom attached"].label {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  /* Grid */
+  .ui.page.grid.segment,
+  .ui.grid > .row > .ui.segment.column,
+  .ui.grid > .ui.segment.column {
+    padding-top: $segment-page-grid-margin;
+    padding-bottom: $segment-page-grid-margin;
+  }
+  .ui.grid.segment {
+    margin: $segment-margin;
+    border-radius: $segment-border-radius;
+  }
+
+  /* Table */
+  .ui.basic.table.segment {
+    background: $segment-background;
+    border: $segment-border;
+    box-shadow: $segment-box-shadow;
+  }
+  .ui[class*="very basic"].table.segment {
+    padding: $segment-padding;
+  }
+
+  /* Tab */
+  .ui.segment.tab:last-child {
+    margin-bottom: $segment-vertical-margin;
+  }
+
+  /*******************************
+              Types
+  *******************************/
+
+  @if($use-segment-type-placeholder) {
+    /*-------------------
+        Placeholder
+    --------------------*/
+
+    .ui.placeholder.segment {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      max-width: initial;
+      animation: none;
+      overflow: visible;
+      padding: $segment-placeholder-padding;
+      min-height: $segment-placeholder-min-height;
+      background: $segment-placeholder-background;
+      border-color: $segment-placeholder-border-color;
+      box-shadow: $segment-placeholder-box-shadow;
     }
-    .ui.inverted.#{$key + ""}.segment.segment.segment.segment.segment {
-      background-color: $c;
-      color: $white;
+
+    .ui.placeholder.segment .button,
+    .ui.placeholder.segment textarea {
+      display: block;
+    }
+    .ui.placeholder.segment .field,
+    .ui.placeholder.segment textarea,
+    .ui.placeholder.segment > .ui.input,
+    .ui.placeholder.segment .button {
+      max-width: $segment-placeholder-content-max-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ui.placeholder.segment .column .button,
+    .ui.placeholder.segment .column .field,
+    .ui.placeholder.segment .column textarea,
+    .ui.placeholder.segment .column > .ui.input {
+      max-width: $segment-placeholder-content-max-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ui.placeholder.segment > .inline  {
+      align-self: center;
+    }
+    .ui.placeholder.segment > .inline > .button {
+      display: inline-block;
+      width: auto;
+      margin: $segment-placeholder-content-inline-button-margin;
+    }
+    .ui.placeholder.segment > .inline > .button:last-child {
+      margin-right: 0;
     }
   }
-}
 
-/*-------------------
-       Aligned
---------------------*/
+  @if($use-segment-type-piled) {
+    /*-------------------
+            Piled
+    --------------------*/
 
-.ui[class*="left aligned"].segment {
-  text-align: left;
-}
-.ui[class*="right aligned"].segment {
-  text-align: right;
-}
-.ui[class*="center aligned"].segment {
-  text-align: center;
-}
+    .ui.piled.segments,
+    .ui.piled.segment {
+      margin: $segment-piled-margin 0;
+      box-shadow: $segment-piled-box-shadow;
+      z-index: $segment-piled-z-index;
+    }
+    .ui.piled.segment:first-child {
+      margin-top: 0;
+    }
+    .ui.piled.segment:last-child {
+      margin-bottom: 0;
+    }
+    .ui.piled.segments:after,
+    .ui.piled.segments:before,
+    .ui.piled.segment:after,
+    .ui.piled.segment:before {
+      background-color: $white;
+      visibility: visible;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      border: $segment-piled-border;
+      box-shadow: $segment-piled-box-shadow;
+    }
+    .ui.piled.segments:before,
+    .ui.piled.segment:before {
+      transform: rotate(-$segment-piled-degrees);
+      top: 0;
+      z-index: -2;
+    }
+    .ui.piled.segments:after,
+    .ui.piled.segment:after {
+      transform: rotate($segment-piled-degrees);
+      top: 0;
+      z-index: -1;
+    }
 
-/*-------------------
-       Floated
---------------------*/
-
-.ui.floated.segment,
-.ui[class*="left floated"].segment {
-  float: left;
-  margin-right: $segment-floated-distance;
-}
-.ui[class*="right floated"].segment {
-  float: right;
-  margin-left: $segment-floated-distance;
-}
-
-
-/*-------------------
-      Inverted
---------------------*/
-
-.ui.inverted.segment {
-  border: none;
-  box-shadow: none;
-}
-.ui.inverted.segment,
-.ui.primary.inverted.segment {
-  background: $segment-inverted-background;
-  color: $inverted-text-color;
-}
-
-/* Nested */
-.ui.inverted.segment .segment {
-  color: $text-color;
-}
-.ui.inverted.segment .inverted.segment {
-  color: $inverted-text-color;
-}
-
-/* Attached */
-.ui.inverted.attached.segment {
-  border-color: $solid-white-border-color;
-}
-
-/* Loading */
-.ui.inverted.loading.segment {
-  color: $inverted-loader-line-color;
-}
-.ui.inverted.loading.segment:before {
-  background: $segment-loader-inverted-dimmer-color;
-}
-
-/*-------------------
-     Emphasis
---------------------*/
-
-/* Secondary */
-.ui.secondary.segment {
-  background: $segment-secondary-background;
-  color: $segment-secondary-color;
-}
-.ui.secondary.inverted.segment {
-  background: $segment-secondary-inverted-background;
-  color: $segment-secondary-inverted-color;
-}
-
-/* Tertiary */
-.ui.tertiary.segment {
-  background: $segment-tertiary-background;
-  color: $segment-tertiary-color;
-}
-.ui.tertiary.inverted.segment {
-  background: $segment-tertiary-inverted-background;
-  color: $segment-tertiary-inverted-color;
-}
+    /* Piled Attached */
+    .ui[class*="top attached"].piled.segment {
+      margin-top: $segment-piled-margin;
+      margin-bottom: 0;
+    }
+    .ui.piled.segment[class*="top attached"]:first-child {
+      margin-top: 0;
+    }
+    .ui.piled.segment[class*="bottom attached"] {
+      margin-top: 0;
+      margin-bottom: $segment-piled-margin;
+    }
+    .ui.piled.segment[class*="bottom attached"]:last-child {
+      margin-bottom: 0;
+    }
+  }
 
 
-/*-------------------
-      Attached
---------------------*/
+  @if($use-segment-type-stacked) {
+    /*-------------------
+          Stacked
+    --------------------*/
 
-/* Middle */
-.ui.attached.segment {
-  top: 0;
-  bottom: 0;
-  border-radius: 0;
-  margin: 0 $segment-attached-horizontal-offset;
-  width: $segment-attached-width;
-  max-width: $segment-attached-width;
-  box-shadow: $segment-attached-box-shadow;
-  border: $segment-attached-border;
-}
-.ui.attached:not(.message) + .ui.attached.segment:not(.top) {
-  border-top: none;
-}
+    .ui.stacked.segment {
+      padding-bottom: $segment-stacked-padding;
+    }
+    .ui.stacked.segments:before,
+    .ui.stacked.segments:after,
+    .ui.stacked.segment:before,
+    .ui.stacked.segment:after {
+      content: '';
+      position: absolute;
+      bottom: -($segment-stacked-height / 2);
+      left: 0;
 
-/* Top */
-.ui[class*="top attached"].segment {
-  bottom: 0;
-  margin-bottom: 0;
-  top: $segment-attached-top-offset;
-  margin-top: $segment-vertical-margin;
-  border-radius: $segment-border-radius $segment-border-radius 0 0;
-}
-.ui.segment[class*="top attached"]:first-child {
-  margin-top: 0;
-}
+      border-top: 1px solid $border-color;
+      background: $segment-stacked-page-background;
 
-/* Bottom */
-.ui.segment[class*="bottom attached"] {
-  bottom: 0;
-  margin-top: 0;
-  top: $segment-attached-bottom-offset;
-  margin-bottom: $segment-vertical-margin;
-  box-shadow: $segment-attached-bottom-box-shadow;
-  border-radius: 0 0 $segment-border-radius $segment-border-radius;
-}
-.ui.segment[class*="bottom attached"]:last-child {
-  margin-bottom: $segment-vertical-margin;
-}
+      width: 100%;
+      height: $segment-stacked-height;
+      visibility: visible;
+    }
+    .ui.stacked.segments:before,
+    .ui.stacked.segment:before {
+      display: none;
+    }
 
-/*--------------
-     Fitted
----------------*/
+    /* Add additional page */
+    .ui.tall.stacked.segments:before,
+    .ui.tall.stacked.segment:before {
+      display: block;
+      bottom: 0;
+    }
 
-.ui.fitted.segment:not(.horizontally) {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.ui.fitted.segment:not(.vertically) {
-  padding-left: 0;
-  padding-right: 0;
-}
+    @if($use-segment-variation-inverted) {
+      /* Inverted */
+      .ui.stacked.inverted.segments:before,
+      .ui.stacked.inverted.segments:after,
+      .ui.stacked.inverted.segment:before,
+      .ui.stacked.inverted.segment:after {
+        background-color: $subtle-transparent-black;
+        border-top: 1px solid $selected-border-color;
+      }
+    }
+  }
 
-/*-------------------
-        Size
---------------------*/
+  /*-------------------
+        Padded
+  --------------------*/
 
-.ui.mini.segments .segment,
-.ui.mini.segment {
-  font-size: $mini;
-}
-.ui.tiny.segments .segment,
-.ui.tiny.segment {
-  font-size: $tiny;
-}
-.ui.small.segments .segment,
-.ui.small.segment {
-  font-size: $small;
-}
-.ui.segments .segment,
-.ui.segment {
-  font-size: $medium;
-}
-.ui.large.segments .segment,
-.ui.large.segment {
-  font-size: $large;
-}
-.ui.big.segments .segment,
-.ui.big.segment {
-  font-size: $big;
-}
-.ui.huge.segments .segment,
-.ui.huge.segment {
-  font-size: $huge;
-}
-.ui.massive.segments .segment,
-.ui.massive.segment {
-  font-size: $massive;
-}
+  .ui.padded.segment {
+    padding: $segment-padded-padding;
+  }
 
+  .ui[class*="very padded"].segment {
+    padding: $segment-very-padded-padding;
+  }
+
+  /* Padded vertical */
+  .ui.padded.segment.vertical.segment,
+  .ui[class*="very padded"].vertical.segment {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /*-------------------
+        Compact
+  --------------------*/
+
+  .ui.compact.segment {
+    display: table;
+  }
+
+  /* Compact Group */
+  .ui.compact.segments {
+    display: inline-flex;
+  }
+  .ui.compact.segments .segment,
+  .ui.segments .compact.segment {
+    display: block;
+    flex: 0 1 auto;
+  }
+
+  /*-------------------
+        Circular
+  --------------------*/
+
+  .ui.circular.segment {
+    display: table-cell;
+    padding: $segment-circular-padding;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 500em;
+  }
+
+  /*-------------------
+        Raised
+  --------------------*/
+
+  .ui.raised.raised.segments,
+  .ui.raised.raised.segment {
+    box-shadow: $segment-raised-box-shadow;
+  }
+
+
+  /*******************************
+              Groups
+  *******************************/
+
+  /* Group */
+  .ui.segments {
+    flex-direction: column;
+    position: relative;
+    margin: $segment-grouped-super-margin;
+    border: $segment-grouped-super-border;
+    box-shadow: $segment-grouped-super-box-shadow;
+    border-radius: $segment-grouped-border-radius;
+  }
+  .ui.segments:first-child {
+    margin-top: 0;
+  }
+  .ui.segments:last-child {
+    margin-bottom: 0;
+  }
+
+
+  /* Nested Segment */
+  .ui.segments > .segment {
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    margin: $segment-grouped-margin;
+    width: $segment-grouped-width;
+    box-shadow: $segment-grouped-box-shadow;
+    border: $segment-grouped-border;
+    border-top: $segment-grouped-divider;
+  }
+
+  .ui.segments:not(.horizontal) > .segment:first-child {
+    top: $segment-attached-top-offset;
+    bottom: 0;
+    border-top: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: $segment-border-radius $segment-border-radius 0 0;
+  }
+
+  /* Bottom */
+  .ui.segments:not(.horizontal) > .segment:last-child {
+    top: $segment-attached-bottom-offset;
+    bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: $segment-attached-bottom-box-shadow;
+    border-radius: 0 0 $segment-border-radius $segment-border-radius;
+  }
+
+  /* Only */
+  .ui.segments:not(.horizontal) > .segment:only-child {
+    border-radius: $segment-border-radius;
+  }
+
+
+  /* Nested Group */
+  .ui.segments > .ui.segments {
+    border-top: $segment-grouped-divider;
+    margin: $segment-nested-group-margin;
+  }
+  .ui.segments > .segments:first-child {
+    border-top: none;
+  }
+  .ui.segments > .segment + .segments:not(.horizontal) {
+    margin-top: 0;
+  }
+
+  /* Horizontal Group */
+  .ui.horizontal.segments {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: $segment-box-shadow;
+    margin: $segment-margin;
+    border-radius: $segment-border-radius;
+    border: $segment-border;
+  }
+  .ui.stackable.horizontal.segments {
+    flex-wrap: wrap;
+  }
+
+  /* Nested Horizontal Group */
+  .ui.segments > .horizontal.segments {
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    border-top: $segment-grouped-divider;
+  }
+
+  /* Horizontal Segment */
+  .ui.horizontal.segments:not(.compact) > .segment:not(.compact) {
+    flex: 1 1 auto;
+    -ms-flex: 1 1 0; /* Solves #2550 MS Flex */
+  }
+  .ui.horizontal.segments > .segment {
+    margin: 0;
+    min-width: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    border-left: $segment-border-width solid $border-color;
+  }
+
+  /* Border Fixes */
+  .ui.segments > .horizontal.segments:first-child {
+    border-top: none;
+  }
+  .ui.horizontal.segments:not(.stackable) > .segment:first-child {
+    border-left: none;
+  }
+
+
+  /*******************************
+              States
+  *******************************/
+
+  /*--------------
+      Disabled
+  ---------------*/
+
+  .ui.disabled.segment {
+    opacity: $disabled-opacity;
+    color: $disabled-text-color;
+  }
+
+  /*--------------
+      Loading
+  ---------------*/
+
+  .ui.loading.segment {
+    position: relative;
+    cursor: default;
+    pointer-events: none;
+    text-shadow: none !important;
+    transition: all 0s linear;
+  }
+  .ui.loading.segment:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: $segment-loader-dimmer-color;
+    width: 100%;
+    height: 100%;
+    border-radius: $segment-border-radius;
+    z-index: $segment-loader-dimmer-z-index;
+  }
+  .ui.loading.segment:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+
+    margin: $loader-margin;
+    width: $segment-loader-size;
+    height: $segment-loader-size;
+
+    animation: loader $loader-speed infinite linear;
+    border: $loader-line-width solid $loader-line-color;
+    border-radius: $circular-radius;
+
+    box-shadow: 0 0 0 1px transparent;
+    visibility: visible;
+    z-index: $segment-loader-line-z-index;
+  }
+
+
+
+  /*******************************
+            Variations
+  *******************************/
+
+
+  /*-------------------
+        Basic
+  --------------------*/
+
+  .ui.basic.segment,
+  .ui.segments .ui.basic.segment,
+  .ui.basic.segments {
+    background: $segment-basic-background;
+    box-shadow: $segment-basic-box-shadow;
+    border: $segment-basic-border;
+    border-radius: $segment-basic-border-radius;
+  }
+
+  /*-------------------
+        Clearing
+  --------------------*/
+
+  .ui.clearing.segment:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /*-------------------
+        Colors
+  --------------------*/
+
+  @each $key, $value in $colors {
+    @if(index(join($main-colors-names, $use-segment-variation-colors), $key+'')) {
+      $color: $key;
+      $c: map-get($value, color);
+      @if not ($color==primary) and not ($color==secondary) {
+        .ui.#{$key + ""}.segment.segment.segment.segment.segment:not(.inverted) {
+          border-top: $segment-colored-border-size solid $c;
+        }
+        .ui.inverted.#{$key + ""}.segment.segment.segment.segment.segment {
+          background-color: $c;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  /*-------------------
+        Aligned
+  --------------------*/
+
+  .ui[class*="left aligned"].segment {
+    text-align: left;
+  }
+  .ui[class*="right aligned"].segment {
+    text-align: right;
+  }
+  .ui[class*="center aligned"].segment {
+    text-align: center;
+  }
+
+  /*-------------------
+        Floated
+  --------------------*/
+
+  .ui.floated.segment,
+  .ui[class*="left floated"].segment {
+    float: left;
+    margin-right: $segment-floated-distance;
+  }
+  .ui[class*="right floated"].segment {
+    float: right;
+    margin-left: $segment-floated-distance;
+  }
+
+
+  @if($use-segment-variation-inverted) {
+    /*-------------------
+          Inverted
+    --------------------*/
+
+    .ui.inverted.segment {
+      border: none;
+      box-shadow: none;
+    }
+    .ui.inverted.segment,
+    .ui.primary.inverted.segment {
+      background: $segment-inverted-background;
+      color: $inverted-text-color;
+    }
+
+    /* Nested */
+    .ui.inverted.segment .segment {
+      color: $text-color;
+    }
+    .ui.inverted.segment .inverted.segment {
+      color: $inverted-text-color;
+    }
+
+    /* Attached */
+    .ui.inverted.attached.segment {
+      border-color: $solid-white-border-color;
+    }
+
+    /* Loading */
+    .ui.inverted.loading.segment {
+      color: $inverted-loader-line-color;
+    }
+    .ui.inverted.loading.segment:before {
+      background: $segment-loader-inverted-dimmer-color;
+    }
+
+    .ui.secondary.inverted.segment {
+      background: $segment-secondary-inverted-background;
+      color: $segment-secondary-inverted-color;
+    }
+    
+    .ui.tertiary.inverted.segment {
+      background: $segment-tertiary-inverted-background;
+      color: $segment-tertiary-inverted-color;
+    }
+  }
+
+  /*-------------------
+      Emphasis
+  --------------------*/
+
+  /* Secondary */
+  .ui.secondary.segment {
+    background: $segment-secondary-background;
+    color: $segment-secondary-color;
+  }
+
+  /* Tertiary */
+  .ui.tertiary.segment {
+    background: $segment-tertiary-background;
+    color: $segment-tertiary-color;
+  }
+
+
+  @if($use-segment-variation-attached) {
+    /*-------------------
+          Attached
+    --------------------*/
+
+    /* Middle */
+    .ui.attached.segment {
+      top: 0;
+      bottom: 0;
+      border-radius: 0;
+      margin: 0 $segment-attached-horizontal-offset;
+      width: $segment-attached-width;
+      max-width: $segment-attached-width;
+      box-shadow: $segment-attached-box-shadow;
+      border: $segment-attached-border;
+    }
+    .ui.attached:not(.message) + .ui.attached.segment:not(.top) {
+      border-top: none;
+    }
+
+    /* Top */
+    .ui[class*="top attached"].segment {
+      bottom: 0;
+      margin-bottom: 0;
+      top: $segment-attached-top-offset;
+      margin-top: $segment-vertical-margin;
+      border-radius: $segment-border-radius $segment-border-radius 0 0;
+    }
+    .ui.segment[class*="top attached"]:first-child {
+      margin-top: 0;
+    }
+
+    /* Bottom */
+    .ui.segment[class*="bottom attached"] {
+      bottom: 0;
+      margin-top: 0;
+      top: $segment-attached-bottom-offset;
+      margin-bottom: $segment-vertical-margin;
+      box-shadow: $segment-attached-bottom-box-shadow;
+      border-radius: 0 0 $segment-border-radius $segment-border-radius;
+    }
+    .ui.segment[class*="bottom attached"]:last-child {
+      margin-bottom: $segment-vertical-margin;
+    }
+  }
+
+
+  /*--------------
+      Fitted
+  ---------------*/
+
+  .ui.fitted.segment:not(.horizontally) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .ui.fitted.segment:not(.vertically) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /*-------------------
+          Size
+  --------------------*/
+
+  .ui.mini.segments .segment,
+  .ui.mini.segment {
+    font-size: $mini;
+  }
+  .ui.tiny.segments .segment,
+  .ui.tiny.segment {
+    font-size: $tiny;
+  }
+  .ui.small.segments .segment,
+  .ui.small.segment {
+    font-size: $small;
+  }
+  .ui.segments .segment,
+  .ui.segment {
+    font-size: $medium;
+  }
+  .ui.large.segments .segment,
+  .ui.large.segment {
+    font-size: $large;
+  }
+  .ui.big.segments .segment,
+  .ui.big.segment {
+    font-size: $big;
+  }
+  .ui.huge.segments .segment,
+  .ui.huge.segment {
+    font-size: $huge;
+  }
+  .ui.massive.segments .segment,
+  .ui.massive.segment {
+    font-size: $massive;
+  }
+}
 
 @import '../../themes/default/elements/segment.style';

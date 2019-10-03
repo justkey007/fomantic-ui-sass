@@ -1,145 +1,144 @@
 @import '../../themes/default/modules/embed.variables';
 
-/*******************************
-//@-        Types
-*******************************/
+@if $use-embed {
+  /*******************************
+  //@-        Types
+  *******************************/
 
-.ui.embed {
-  position: relative;
-  max-width: 100%;
-  height: 0;
-  overflow: hidden;
-  background: $embed-background;
-  padding-bottom: $embed-widescreen-ratio;
+  .ui.embed {
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: $embed-background;
+    padding-bottom: $embed-widescreen-ratio;
+  }
+
+  /*-----------------
+    Embedded Content
+  ------------------*/
+
+  .ui.embed iframe,
+  .ui.embed embed,
+  .ui.embed object {
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /*-----------------
+        Embed
+  ------------------*/
+
+  .ui.embed > .embed {
+    display: none;
+  }
+
+  /*--------------
+    Placeholder
+  ---------------*/
+
+  .ui.embed > .placeholder {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $embed-placeholder-background;
+  }
+
+  /*--------------
+        Icon
+  ---------------*/
+
+  .ui.embed > .icon {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .ui.embed > .icon:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    content: '';
+    background: $embed-placeholder-background;
+    opacity: $embed-placeholder-background-opacity;
+    transition: $embed-placeholder-background-transition;
+  }
+  .ui.embed > .icon:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    color: $embed-icon-color;
+    font-size: $embed-icon-size;
+    text-shadow: $embed-icon-shadow;
+    transition: $embed-icon-transition;
+    z-index: $embed-icon-z-index;
+  }
+
+  /*******************************
+              States
+  *******************************/
+
+  /*--------------
+      Hover
+  ---------------*/
+
+  .ui.embed .icon:hover:after {
+    background: $embed-hover-placeholder-background;
+    opacity: $embed-hover-placeholder-background-opacity;
+  }
+  .ui.embed .icon:hover:before {
+    color: $embed-hover-icon-color;
+  }
+
+  /*--------------
+      Active
+  ---------------*/
+
+  .ui.active.embed > .icon,
+  .ui.active.embed > .placeholder {
+    display: none;
+  }
+  .ui.active.embed > .embed {
+    display: block;
+  }
+
+
+  /*******************************
+            Variations
+  *******************************/
+
+  .ui.square.embed {
+    padding-bottom: $embed-square-ratio;
+  }
+  .ui[class*="4:3"].embed {
+    padding-bottom: $embed-standard-ratio;
+  }
+  .ui[class*="16:9"].embed {
+    padding-bottom: $embed-widescreen-ratio;
+  }
+  .ui[class*="21:9"].embed {
+    padding-bottom: $embed-ultra-widescreen-ratio;
+  }
+
 }
-
-/*-----------------
-  Embedded Content
-------------------*/
-
-.ui.embed iframe,
-.ui.embed embed,
-.ui.embed object {
-  position: absolute;
-  border: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-/*-----------------
-      Embed
-------------------*/
-
-.ui.embed > .embed {
-  display: none;
-}
-
-/*--------------
-   Placeholder
----------------*/
-
-.ui.embed > .placeholder {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: $embed-placeholder-background;
-}
-
-/*--------------
-      Icon
----------------*/
-
-.ui.embed > .icon {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-.ui.embed > .icon:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  content: '';
-  background: $embed-placeholder-background;
-  opacity: $embed-placeholder-background-opacity;
-  transition: $embed-placeholder-background-transition;
-}
-.ui.embed > .icon:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-
-  color: $embed-icon-color;
-  font-size: $embed-icon-size;
-  text-shadow: $embed-icon-shadow;
-  transition: $embed-icon-transition;
-  z-index: $embed-icon-z-index;
-}
-
-/*******************************
-            States
-*******************************/
-
-/*--------------
-     Hover
----------------*/
-
-.ui.embed .icon:hover:after {
-  background: $embed-hover-placeholder-background;
-  opacity: $embed-hover-placeholder-background-opacity;
-}
-.ui.embed .icon:hover:before {
-  color: $embed-hover-icon-color;
-}
-
-/*--------------
-     Active
----------------*/
-
-.ui.active.embed > .icon,
-.ui.active.embed > .placeholder {
-  display: none;
-}
-.ui.active.embed > .embed {
-  display: block;
-}
-
-
-/*******************************
-          Variations
-*******************************/
-
-.ui.square.embed {
-  padding-bottom: $embed-square-ratio;
-}
-.ui[class*="4:3"].embed {
-  padding-bottom: $embed-standard-ratio;
-}
-.ui[class*="16:9"].embed {
-  padding-bottom: $embed-widescreen-ratio;
-}
-.ui[class*="21:9"].embed {
-  padding-bottom: $embed-ultra-widescreen-ratio;
-}
-
-
-
-
 
 @import '../../themes/default/modules/embed.style';

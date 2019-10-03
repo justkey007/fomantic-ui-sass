@@ -1,124 +1,124 @@
 @import '../../themes/default/elements/container.variables';
 
-/*******************************
-//@-        Container
-*******************************/
-
-/* All Sizes */
-.ui.container {
-  display: block;
-  max-width: $container-max-width;
+@if $use-container {
+  /*******************************
+  //@-        Container
+  *******************************/
+  
+  /* All Sizes */
+  .ui.container {
+    display: block;
+    max-width: $container-max-width;
+  }
+  
+  /* Mobile */
+  @media only screen and (max-width: $largest-mobile-screen) {
+    .ui.ui.ui.container:not(.fluid) {
+      width: $container-mobile-width;
+      margin-left: $container-mobile-gutter;
+      margin-right: $container-mobile-gutter;
+    }
+    .ui.ui.grid.container {
+      width: $container-mobile-grid-width;
+    }
+    .ui.ui.relaxed.grid.container {
+      width: $container-mobile-relaxed-grid-width;
+    }
+    .ui.ui.very.relaxed.grid.container {
+      width: $container-mobile-very-relaxed-grid-width;
+    }
+  }
+  
+  /* Tablet */
+  @media only screen and (min-width: $tablet-breakpoint) and (max-width: $largest-tablet-screen) {
+    .ui.ui.ui.container:not(.fluid) {
+      width: $container-tablet-width;
+      margin-left: $container-tablet-gutter;
+      margin-right: $container-tablet-gutter;
+    }
+    .ui.ui.grid.container {
+      width: $container-tablet-grid-width;
+    }
+    .ui.ui.relaxed.grid.container {
+      width: $container-tablet-relaxed-grid-width;
+    }
+    .ui.ui.very.relaxed.grid.container {
+      width: $container-tablet-very-relaxed-grid-width;
+    }
+  }
+  
+  /* Small Monitor */
+  @media only screen and (min-width: $computer-breakpoint) and (max-width: $largest-small-monitor) {
+    .ui.ui.ui.container:not(.fluid) {
+      width: $container-computer-width;
+      margin-left: $container-computer-gutter;
+      margin-right: $container-computer-gutter;
+    }
+    .ui.ui.grid.container {
+      width: $container-computer-grid-width;
+    }
+    .ui.ui.relaxed.grid.container {
+      width: $container-computer-relaxed-grid-width;
+    }
+    .ui.ui.very.relaxed.grid.container {
+      width: $container-computer-very-relaxed-grid-width;
+    }
+  }
+  
+  /* Large Monitor */
+  @media only screen and (min-width: $large-monitor-breakpoint) {
+    .ui.ui.ui.container:not(.fluid) {
+      width: $container-large-monitor-width;
+      margin-left: $container-large-monitor-gutter;
+      margin-right: $container-large-monitor-gutter;
+    }
+    .ui.ui.grid.container {
+      width: $container-large-monitor-grid-width;
+    }
+    .ui.ui.relaxed.grid.container {
+      width: $container-large-monitor-relaxed-grid-width;
+    }
+    .ui.ui.very.relaxed.grid.container {
+      width: $container-large-monitor-very-relaxed-grid-width;
+    }
+  }
+  
+  /*******************************
+               Types
+  *******************************/
+  
+  
+  /* Text Container */
+  .ui.text.container {
+    font-family: $container-text-font-family;
+    max-width: $container-text-width;
+    line-height: $container-text-line-height;
+    font-size: $container-text-size;
+  }
+  
+  /* Fluid */
+  .ui.fluid.container {
+    width: 100%;
+  }
+  
+  
+  /*******************************
+             Variations
+  *******************************/
+  
+  .ui[class*="left aligned"].container {
+    text-align: left;
+  }
+  .ui[class*="center aligned"].container {
+    text-align: center;
+  }
+  .ui[class*="right aligned"].container {
+    text-align: right;
+  }
+  .ui.justified.container {
+    text-align: justify;
+    hyphens: auto;
+  }
 }
-
-/* Mobile */
-@media only screen and (max-width: $largest-mobile-screen) {
-  .ui.ui.ui.container:not(.fluid) {
-    width: $container-mobile-width;
-    margin-left: $container-mobile-gutter;
-    margin-right: $container-mobile-gutter;
-  }
-  .ui.ui.grid.container {
-    width: $container-mobile-grid-width;
-  }
-  .ui.ui.relaxed.grid.container {
-    width: $container-mobile-relaxed-grid-width;
-  }
-  .ui.ui.very.relaxed.grid.container {
-    width: $container-mobile-very-relaxed-grid-width;
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: $tablet-breakpoint) and (max-width: $largest-tablet-screen) {
-  .ui.ui.ui.container:not(.fluid) {
-    width: $container-tablet-width;
-    margin-left: $container-tablet-gutter;
-    margin-right: $container-tablet-gutter;
-  }
-  .ui.ui.grid.container {
-    width: $container-tablet-grid-width;
-  }
-  .ui.ui.relaxed.grid.container {
-    width: $container-tablet-relaxed-grid-width;
-  }
-  .ui.ui.very.relaxed.grid.container {
-    width: $container-tablet-very-relaxed-grid-width;
-  }
-}
-
-/* Small Monitor */
-@media only screen and (min-width: $computer-breakpoint) and (max-width: $largest-small-monitor) {
-  .ui.ui.ui.container:not(.fluid) {
-    width: $container-computer-width;
-    margin-left: $container-computer-gutter;
-    margin-right: $container-computer-gutter;
-  }
-  .ui.ui.grid.container {
-    width: $container-computer-grid-width;
-  }
-  .ui.ui.relaxed.grid.container {
-    width: $container-computer-relaxed-grid-width;
-  }
-  .ui.ui.very.relaxed.grid.container {
-    width: $container-computer-very-relaxed-grid-width;
-  }
-}
-
-/* Large Monitor */
-@media only screen and (min-width: $large-monitor-breakpoint) {
-  .ui.ui.ui.container:not(.fluid) {
-    width: $container-large-monitor-width;
-    margin-left: $container-large-monitor-gutter;
-    margin-right: $container-large-monitor-gutter;
-  }
-  .ui.ui.grid.container {
-    width: $container-large-monitor-grid-width;
-  }
-  .ui.ui.relaxed.grid.container {
-    width: $container-large-monitor-relaxed-grid-width;
-  }
-  .ui.ui.very.relaxed.grid.container {
-    width: $container-large-monitor-very-relaxed-grid-width;
-  }
-}
-
-/*******************************
-             Types
-*******************************/
-
-
-/* Text Container */
-.ui.text.container {
-  font-family: $container-text-font-family;
-  max-width: $container-text-width;
-  line-height: $container-text-line-height;
-  font-size: $container-text-size;
-}
-
-/* Fluid */
-.ui.fluid.container {
-  width: 100%;
-}
-
-
-/*******************************
-           Variations
-*******************************/
-
-.ui[class*="left aligned"].container {
-  text-align: left;
-}
-.ui[class*="center aligned"].container {
-  text-align: center;
-}
-.ui[class*="right aligned"].container {
-  text-align: right;
-}
-.ui.justified.container {
-  text-align: justify;
-  hyphens: auto;
-}
-
-
 
 @import '../../themes/default/elements/container.style';

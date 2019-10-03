@@ -1,61 +1,61 @@
 @import '../../themes/default/modules/transition.variables';
 
-/*******************************
-//@-      Transitions
-*******************************/
+@if $use-transition {
+  /*******************************
+  //@-      Transitions
+  *******************************/
 
-.transition {
-  animation-iteration-count: 1;
-  animation-duration: $transition-default-duration;
-  animation-timing-function: $transition-default-easing;
-  animation-fill-mode: $transition-default-fill;
+  .transition {
+    animation-iteration-count: 1;
+    animation-duration: $transition-default-duration;
+    animation-timing-function: $transition-default-easing;
+    animation-fill-mode: $transition-default-fill;
+  }
+
+  /*******************************
+              States
+  *******************************/
+
+
+  /* Animating */
+  .animating.transition {
+    backface-visibility: $transition-backface-visibility;
+    visibility: visible !important;
+  }
+
+  /* Loading */
+  .loading.transition {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+  }
+
+  /* Hidden */
+  .hidden.transition {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* Visible */
+  .visible.transition {
+    display: block !important;
+    visibility: visible !important;
+  /*  backface-visibility: $transition-backface-visibility;
+    transform: $transition-use3-d-acceleration;*/
+  }
+
+  /* Disabled */
+  .disabled.transition {
+    animation-play-state: paused;
+  }
+
+  /*******************************
+            Variations
+  *******************************/
+
+  .looping.transition {
+    animation-iteration-count: infinite;
+  }
 }
-
-/*******************************
-            States
-*******************************/
-
-
-/* Animating */
-.animating.transition {
-  backface-visibility: $transition-backface-visibility;
-  visibility: visible !important;
-}
-
-/* Loading */
-.loading.transition {
-  position: absolute;
-  top: -99999px;
-  left: -99999px;
-}
-
-/* Hidden */
-.hidden.transition {
-  display: none;
-  visibility: hidden;
-}
-
-/* Visible */
-.visible.transition {
-  display: block !important;
-  visibility: visible !important;
-/*  backface-visibility: $transition-backface-visibility;
-  transform: $transition-use3-d-acceleration;*/
-}
-
-/* Disabled */
-.disabled.transition {
-  animation-play-state: paused;
-}
-
-/*******************************
-          Variations
-*******************************/
-
-.looping.transition {
-  animation-iteration-count: infinite;
-}
-
-
 
 @import '../../themes/default/modules/transition.style';

@@ -1,492 +1,494 @@
 @import '../../themes/default/elements/header.variables';
 
-
-/*******************************
-//@-        Header
-*******************************/
-
-/* Standard */
-.ui.header {
-  border: none;
-  margin: $header-margin;
-  padding: $header-vertical-padding $header-horizontal-padding;
-  font-family: $header-font-family;
-  font-weight: $header-font-weight;
-  line-height: $header-line-height;
-  text-transform: $header-text-transform;
-  color: $text-color;
-}
-
-.ui.header:first-child {
-  margin-top: $header-first-margin;
-}
-.ui.header:last-child {
-  margin-bottom: $header-last-margin;
-}
-
-/*--------------
-   Sub Header
----------------*/
-
-.ui.header .sub.header {
-  display: block;
-  font-weight: $normal;
-  padding: 0;
-  margin: $header-sub-margin;
-  font-size: $header-sub-font-size;
-  line-height: $header-sub-line-height;
-  color: $header-sub-color;
-}
-
-/*--------------
-      Icon
----------------*/
-
-.ui.header > .icon {
-  display: table-cell;
-  opacity: $header-icon-opacity;
-  font-size: $header-icon-size;
-  padding-top: $header-icon-offset;
-  vertical-align: $header-icon-alignment;
-}
-
-/* With Text Node */
-.ui.header .icon:only-child {
-  display: inline-block;
-  padding: 0;
-  margin-right: $header-icon-margin;
-}
-
-/*-------------------
-        Image
---------------------*/
-
-.ui.header > .image:not(.icon),
-.ui.header > img {
-  display: inline-block;
-  margin-top: $header-image-offset;
-  width: $header-image-width;
-  height: $header-image-height;
-  vertical-align: $header-image-alignment;
-}
-.ui.header > .image:not(.icon):only-child,
-.ui.header > img:only-child {
-  margin-right: $header-image-margin;
-}
-
-/*--------------
-     Content
----------------*/
-
-.ui.header .content {
-  display: inline-block;
-  vertical-align: $header-content-alignment;
-}
-
-/* After Image */
-.ui.header > img + .content,
-.ui.header > .image + .content {
-  padding-left: $header-image-margin;
-  vertical-align: $header-content-image-alignment;
-}
-
-/* After Icon */
-.ui.header > .icon + .content {
-  padding-left: $header-icon-margin;
-  display: table-cell;
-  vertical-align: $header-content-icon-alignment;
-}
-
-
-/*--------------
- Loose Coupling
----------------*/
-
-.ui.header .ui.label {
-  font-size: $header-label-size;
-  margin-left: $header-label-distance;
-  vertical-align: $header-label-vertical-align;
-}
-
-/* Positioning */
-.ui.header + p {
-  margin-top: $header-next-paragraph-distance;
-}
-
-
-
-/*******************************
-            Types
-*******************************/
-
-
-/*--------------
-     Page
----------------*/
-
-h1.ui.header {
-  font-size: $h1;
-}
-h2.ui.header {
-  font-size: $h2;
-}
-h3.ui.header {
-  font-size: $h3;
-}
-h4.ui.header {
-  font-size: $h4;
-}
-h5.ui.header {
-  font-size: $h5;
-}
-
-
-/* Sub Header */
-h1.ui.header .sub.header {
-  font-size: $header-h1-sub-font-size;
-}
-h2.ui.header .sub.header {
-  font-size: $header-h2-sub-font-size;
-}
-h3.ui.header .sub.header {
-  font-size: $header-h3-sub-font-size;
-}
-h4.ui.header .sub.header {
-  font-size: $header-h4-sub-font-size;
-}
-h5.ui.header .sub.header {
-  font-size: $header-h5-sub-font-size;
-}
-
-
-/*--------------
- Content Heading
----------------*/
-
-.ui.huge.header {
-  min-height: 1em;
-  font-size: $header-huge-font-size;
-}
-.ui.large.header {
-  font-size: $header-large-font-size;
-}
-.ui.medium.header {
-  font-size: $header-medium-font-size;
-}
-.ui.small.header {
-  font-size: $header-small-font-size;
-}
-.ui.tiny.header {
-  font-size: $header-tiny-font-size;
-}
-
-/* Sub Header */
-.ui.huge.header .sub.header {
-  font-size: $header-huge-sub-font-size;
-}
-.ui.large.header .sub.header {
-  font-size: $header-huge-sub-font-size;
-}
-.ui.header .sub.header {
-  font-size: $header-sub-font-size;
-}
-.ui.small.header .sub.header {
-  font-size: $header-small-sub-font-size;
-}
-.ui.tiny.header .sub.header {
-  font-size: $header-tiny-sub-font-size;
-}
-
-/*--------------
-   Sub Heading
----------------*/
-
-.ui.sub.header {
-  padding: 0;
-  margin-bottom: $header-sub-heading-distance;
-  font-weight: $header-sub-heading-font-weight;
-  font-size: $header-sub-heading-font-size;
-  text-transform: $header-sub-heading-text-transform;
-  color: $header-sub-heading-color;
-}
-
-.ui.small.sub.header {
-  font-size: $header-small-sub-heading-size;
-}
-.ui.large.sub.header {
-  font-size: $header-large-sub-heading-size;
-}
-.ui.huge.sub.header {
-  font-size: $header-huge-sub-heading-size;
-}
-
-
-
-/*-------------------
+@if $use-header {
+  /*******************************
+  //@-        Header
+  *******************************/
+  
+  /* Standard */
+  .ui.header {
+    border: none;
+    margin: $header-margin;
+    padding: $header-vertical-padding $header-horizontal-padding;
+    font-family: $header-font-family;
+    font-weight: $header-font-weight;
+    line-height: $header-line-height;
+    text-transform: $header-text-transform;
+    color: $text-color;
+  }
+  
+  .ui.header:first-child {
+    margin-top: $header-first-margin;
+  }
+  .ui.header:last-child {
+    margin-bottom: $header-last-margin;
+  }
+  
+  /*--------------
+     Sub Header
+  ---------------*/
+  
+  .ui.header .sub.header {
+    display: block;
+    font-weight: $normal;
+    padding: 0;
+    margin: $header-sub-margin;
+    font-size: $header-sub-font-size;
+    line-height: $header-sub-line-height;
+    color: $header-sub-color;
+  }
+  
+  /*--------------
         Icon
---------------------*/
-
-.ui.icon.header {
-  display: inline-block;
-  text-align: center;
-  margin: $header-icon-top-margin 0 $header-icon-bottom-margin;
-}
-.ui.icon.header:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-.ui.icon.header:first-child {
-  margin-top: $header-icon-first-margin;
-}
-.ui.icon.header .icon {
-  float: none;
-  display: block;
-  width: auto;
-  height: auto;
-  line-height: 1;
-  padding: 0;
-  font-size: $header-iconed-icon-size;
-  margin: 0 auto $header-iconed-icon-margin;
-  opacity: $header-iconed-icon-opacity;
-}
-.ui.icon.header .corner.icon {
-  font-size: $header-corner-icon-size;
-}
-.ui.icon.header .content {
-  display: block;
-  padding: 0;
-}
-.ui.icon.header .circular.icon {
-  font-size: $header-circular-icon-size;
-}
-.ui.icon.header .square.icon {
-  font-size: $header-square-icon-size;
-}
-.ui.block.icon.header .icon {
-  margin-bottom: 0;
-}
-.ui.icon.header.aligned {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-/*******************************
-            States
-*******************************/
-
-.ui.disabled.header {
-  opacity: $disabled-opacity;
-}
-
-
-/*******************************
-           Variations
-*******************************/
-
-/*-------------------
-      Inverted
---------------------*/
-
-.ui.inverted.header {
-  color: $header-inverted-color;
-}
-.ui.inverted.header .sub.header {
-  color: $header-inverted-sub-color;
-}
-.ui.inverted.attached.header {
-  background: $header-inverted-attached-background;
-  box-shadow: none;
-  border-color: transparent;
-}
-.ui.inverted.block.header {
-  background: $header-inverted-block-background;
-  box-shadow: none;
-  border-bottom: none;
-}
-
-
-/*-------------------
-       Colors
---------------------*/
-
-@each $key, $value in $colors {
-  $color: $key;
-  $c: map-get($value, color);
-  $l: map-get($value, light);
-  $h: map-get($value, hover);
-  $lh: map-get($value, lightHover);
-
-  .ui.#{$key + ""}.header {
-    color: $c;
+  ---------------*/
+  
+  .ui.header > .icon {
+    display: table-cell;
+    opacity: $header-icon-opacity;
+    font-size: $header-icon-size;
+    padding-top: $header-icon-offset;
+    vertical-align: $header-icon-alignment;
   }
-  a.ui.#{$key + ""}.header:hover {
-    color: $h;
+  
+  /* With Text Node */
+  .ui.header .icon:only-child {
+    display: inline-block;
+    padding: 0;
+    margin-right: $header-icon-margin;
   }
-  .ui.#{$key + ""}.dividing.header {
-    border-bottom: $header-divided-colored-border-width solid $c;
+  
+  /*-------------------
+          Image
+  --------------------*/
+  
+  .ui.header > .image:not(.icon),
+  .ui.header > img {
+    display: inline-block;
+    margin-top: $header-image-offset;
+    width: $header-image-width;
+    height: $header-image-height;
+    vertical-align: $header-image-alignment;
   }
-  .ui.inverted.#{$key + ""}.header.header.header {
-    color: $l;
+  .ui.header > .image:not(.icon):only-child,
+  .ui.header > img:only-child {
+    margin-right: $header-image-margin;
   }
-  a.ui.inverted.#{$key + ""}.header.header.header:hover {
-    color: $lh;
+  
+  /*--------------
+       Content
+  ---------------*/
+  
+  .ui.header .content {
+    display: inline-block;
+    vertical-align: $header-content-alignment;
   }
-  .ui.inverted.#{$key + ""}.dividing.header {
-    border-bottom: $header-divided-colored-border-width solid $l;
+  
+  /* After Image */
+  .ui.header > img + .content,
+  .ui.header > .image + .content {
+    padding-left: $header-image-margin;
+    vertical-align: $header-content-image-alignment;
+  }
+  
+  /* After Icon */
+  .ui.header > .icon + .content {
+    padding-left: $header-icon-margin;
+    display: table-cell;
+    vertical-align: $header-content-icon-alignment;
+  }
+  
+  
+  /*--------------
+   Loose Coupling
+  ---------------*/
+  
+  .ui.header .ui.label {
+    font-size: $header-label-size;
+    margin-left: $header-label-distance;
+    vertical-align: $header-label-vertical-align;
+  }
+  
+  /* Positioning */
+  .ui.header + p {
+    margin-top: $header-next-paragraph-distance;
+  }
+  
+  
+  
+  /*******************************
+              Types
+  *******************************/
+  
+  
+  /*--------------
+       Page
+  ---------------*/
+  
+  h1.ui.header {
+    font-size: $h1;
+  }
+  h2.ui.header {
+    font-size: $h2;
+  }
+  h3.ui.header {
+    font-size: $h3;
+  }
+  h4.ui.header {
+    font-size: $h4;
+  }
+  h5.ui.header {
+    font-size: $h5;
+  }
+  
+  
+  /* Sub Header */
+  h1.ui.header .sub.header {
+    font-size: $header-h1-sub-font-size;
+  }
+  h2.ui.header .sub.header {
+    font-size: $header-h2-sub-font-size;
+  }
+  h3.ui.header .sub.header {
+    font-size: $header-h3-sub-font-size;
+  }
+  h4.ui.header .sub.header {
+    font-size: $header-h4-sub-font-size;
+  }
+  h5.ui.header .sub.header {
+    font-size: $header-h5-sub-font-size;
+  }
+  
+  
+  /*--------------
+   Content Heading
+  ---------------*/
+  
+  .ui.huge.header {
+    min-height: 1em;
+    font-size: $header-huge-font-size;
+  }
+  .ui.large.header {
+    font-size: $header-large-font-size;
+  }
+  .ui.medium.header {
+    font-size: $header-medium-font-size;
+  }
+  .ui.small.header {
+    font-size: $header-small-font-size;
+  }
+  .ui.tiny.header {
+    font-size: $header-tiny-font-size;
+  }
+  
+  /* Sub Header */
+  .ui.huge.header .sub.header {
+    font-size: $header-huge-sub-font-size;
+  }
+  .ui.large.header .sub.header {
+    font-size: $header-huge-sub-font-size;
+  }
+  .ui.header .sub.header {
+    font-size: $header-sub-font-size;
+  }
+  .ui.small.header .sub.header {
+    font-size: $header-small-sub-font-size;
+  }
+  .ui.tiny.header .sub.header {
+    font-size: $header-tiny-sub-font-size;
+  }
+  
+  /*--------------
+     Sub Heading
+  ---------------*/
+  
+  .ui.sub.header {
+    padding: 0;
+    margin-bottom: $header-sub-heading-distance;
+    font-weight: $header-sub-heading-font-weight;
+    font-size: $header-sub-heading-font-size;
+    text-transform: $header-sub-heading-text-transform;
+    color: $header-sub-heading-color;
+  }
+  
+  .ui.small.sub.header {
+    font-size: $header-small-sub-heading-size;
+  }
+  .ui.large.sub.header {
+    font-size: $header-large-sub-heading-size;
+  }
+  .ui.huge.sub.header {
+    font-size: $header-huge-sub-heading-size;
+  }
+  
+  
+  
+  /*-------------------
+          Icon
+  --------------------*/
+  
+  .ui.icon.header {
+    display: inline-block;
+    text-align: center;
+    margin: $header-icon-top-margin 0 $header-icon-bottom-margin;
+  }
+  .ui.icon.header:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  
+  .ui.icon.header:first-child {
+    margin-top: $header-icon-first-margin;
+  }
+  .ui.icon.header .icon {
+    float: none;
+    display: block;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    padding: 0;
+    font-size: $header-iconed-icon-size;
+    margin: 0 auto $header-iconed-icon-margin;
+    opacity: $header-iconed-icon-opacity;
+  }
+  .ui.icon.header .corner.icon {
+    font-size: $header-corner-icon-size;
+  }
+  .ui.icon.header .content {
+    display: block;
+    padding: 0;
+  }
+  .ui.icon.header .circular.icon {
+    font-size: $header-circular-icon-size;
+  }
+  .ui.icon.header .square.icon {
+    font-size: $header-square-icon-size;
+  }
+  .ui.block.icon.header .icon {
+    margin-bottom: 0;
+  }
+  .ui.icon.header.aligned {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  /*******************************
+              States
+  *******************************/
+  
+  .ui.disabled.header {
+    opacity: $disabled-opacity;
+  }
+  
+  
+  /*******************************
+             Variations
+  *******************************/
+  
+  /*-------------------
+        Inverted
+  --------------------*/
+  
+  .ui.inverted.header {
+    color: $header-inverted-color;
+  }
+  .ui.inverted.header .sub.header {
+    color: $header-inverted-sub-color;
+  }
+  .ui.inverted.attached.header {
+    background: $header-inverted-attached-background;
+    box-shadow: none;
+    border-color: transparent;
+  }
+  .ui.inverted.block.header {
+    background: $header-inverted-block-background;
+    box-shadow: none;
+    border-bottom: none;
+  }
+  
+  
+  /*-------------------
+         Colors
+  --------------------*/
+  
+  @each $key, $value in $colors {
+    @if(index(join($main-colors-names, $use-header-variation-colors), $key+'')) {
+      $color: $key;
+      $c: map-get($value, color);
+      $l: map-get($value, light);
+      $h: map-get($value, hover);
+      $lh: map-get($value, lightHover);
+    
+      .ui.#{$key + ""}.header {
+        color: $c;
+      }
+      a.ui.#{$key + ""}.header:hover {
+        color: $h;
+      }
+      .ui.#{$key + ""}.dividing.header {
+        border-bottom: $header-divided-colored-border-width solid $c;
+      }
+      .ui.inverted.#{$key + ""}.header.header.header {
+        color: $l;
+      }
+      a.ui.inverted.#{$key + ""}.header.header.header:hover {
+        color: $lh;
+      }
+      .ui.inverted.#{$key + ""}.dividing.header {
+        border-bottom: $header-divided-colored-border-width solid $l;
+      }
+    }
+  }
+  
+  
+  /*-------------------
+         Aligned
+  --------------------*/
+  
+  .ui.left.aligned.header {
+    text-align: left;
+  }
+  .ui.right.aligned.header {
+    text-align: right;
+  }
+  .ui.centered.header,
+  .ui.center.aligned.header {
+    text-align: center;
+  }
+  .ui.justified.header {
+    text-align: justify;
+  }
+  .ui.justified.header:after {
+    display: inline-block;
+    content: '';
+    width: 100%;
+  }
+  
+  /*-------------------
+         Floated
+  --------------------*/
+  
+  .ui.floated.header,
+  .ui[class*="left floated"].header {
+    float: left;
+    margin-top: 0;
+    margin-right: $header-floated-margin;
+  }
+  .ui[class*="right floated"].header {
+    float: right;
+    margin-top: 0;
+    margin-left: $header-floated-margin;
+  }
+  
+  /*-------------------
+         Fitted
+  --------------------*/
+  
+  .ui.fitted.header {
+    padding: 0;
+  }
+  
+  
+  /*-------------------
+        Dividing
+  --------------------*/
+  
+  .ui.dividing.header {
+    padding-bottom: $header-divided-border-padding;
+    border-bottom: $header-divided-border;
+  }
+  .ui.dividing.header .sub.header {
+    padding-bottom: $header-divided-sub-padding;
+  }
+  .ui.dividing.header .icon {
+    margin-bottom: $header-divided-icon-padding;
+  }
+  
+  .ui.inverted.dividing.header {
+    border-bottom-color: $header-inverted-divided-border-color;
+  }
+  
+  
+  /*-------------------
+          Block
+  --------------------*/
+  
+  .ui.block.header {
+    background: $header-block-background;
+    padding: $header-block-vertical-padding $header-block-horizontal-padding;
+    box-shadow: $header-block-box-shadow;
+    border: $header-block-border;
+    border-radius: $header-block-border-radius;
+  }
+  
+  .ui.tiny.block.header {
+    font-size: $header-tiny-block;
+  }
+  .ui.small.block.header {
+    font-size: $header-small-block;
+  }
+  .ui.block.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: $header-medium-block;
+  }
+  .ui.large.block.header {
+    font-size: $header-large-block;
+  }
+  .ui.huge.block.header {
+    font-size: $header-huge-block;
+  }
+  
+  /*-------------------
+         Attached
+  --------------------*/
+  
+  .ui.attached.header {
+    background: $header-attached-background;
+    padding: $header-attached-vertical-padding $header-attached-horizontal-padding;
+    margin: 0 $header-attached-offset 0 $header-attached-offset;
+    box-shadow: $header-attached-box-shadow;
+    border: $header-attached-border;
+    border-radius: 0;
+  }
+  .ui.attached.block.header {
+    background: $header-block-background;
+  }
+  .ui.attached:not(.top).header {
+    border-top: none;
+  }
+  .ui.top.attached.header {
+    border-radius: $header-attached-border-radius $header-attached-border-radius 0 0;
+  }
+  .ui.bottom.attached.header {
+    border-radius: 0 0 $header-attached-border-radius $header-attached-border-radius;
+  }
+  
+  /* Attached Sizes */
+  .ui.tiny.attached.header {
+    font-size: $header-tiny-attached-size;
+  }
+  .ui.small.attached.header {
+    font-size: $header-small-attached-size;
+  }
+  .ui.attached.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: $header-medium-attached-size;
+  }
+  .ui.large.attached.header {
+    font-size: $header-large-attached-size;
+  }
+  .ui.huge.attached.header {
+    font-size: $header-huge-attached-size;
+  }
+  
+  /*-------------------
+          Sizing
+  --------------------*/
+  
+  .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: $header-medium-font-size;
   }
 }
-
-
-/*-------------------
-       Aligned
---------------------*/
-
-.ui.left.aligned.header {
-  text-align: left;
-}
-.ui.right.aligned.header {
-  text-align: right;
-}
-.ui.centered.header,
-.ui.center.aligned.header {
-  text-align: center;
-}
-.ui.justified.header {
-  text-align: justify;
-}
-.ui.justified.header:after {
-  display: inline-block;
-  content: '';
-  width: 100%;
-}
-
-/*-------------------
-       Floated
---------------------*/
-
-.ui.floated.header,
-.ui[class*="left floated"].header {
-  float: left;
-  margin-top: 0;
-  margin-right: $header-floated-margin;
-}
-.ui[class*="right floated"].header {
-  float: right;
-  margin-top: 0;
-  margin-left: $header-floated-margin;
-}
-
-/*-------------------
-       Fitted
---------------------*/
-
-.ui.fitted.header {
-  padding: 0;
-}
-
-
-/*-------------------
-      Dividing
---------------------*/
-
-.ui.dividing.header {
-  padding-bottom: $header-divided-border-padding;
-  border-bottom: $header-divided-border;
-}
-.ui.dividing.header .sub.header {
-  padding-bottom: $header-divided-sub-padding;
-}
-.ui.dividing.header .icon {
-  margin-bottom: $header-divided-icon-padding;
-}
-
-.ui.inverted.dividing.header {
-  border-bottom-color: $header-inverted-divided-border-color;
-}
-
-
-/*-------------------
-        Block
---------------------*/
-
-.ui.block.header {
-  background: $header-block-background;
-  padding: $header-block-vertical-padding $header-block-horizontal-padding;
-  box-shadow: $header-block-box-shadow;
-  border: $header-block-border;
-  border-radius: $header-block-border-radius;
-}
-
-.ui.tiny.block.header {
-  font-size: $header-tiny-block;
-}
-.ui.small.block.header {
-  font-size: $header-small-block;
-}
-.ui.block.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: $header-medium-block;
-}
-.ui.large.block.header {
-  font-size: $header-large-block;
-}
-.ui.huge.block.header {
-  font-size: $header-huge-block;
-}
-
-/*-------------------
-       Attached
---------------------*/
-
-.ui.attached.header {
-  background: $header-attached-background;
-  padding: $header-attached-vertical-padding $header-attached-horizontal-padding;
-  margin: 0 $header-attached-offset 0 $header-attached-offset;
-  box-shadow: $header-attached-box-shadow;
-  border: $header-attached-border;
-  border-radius: 0;
-}
-.ui.attached.block.header {
-  background: $header-block-background;
-}
-.ui.attached:not(.top).header {
-  border-top: none;
-}
-.ui.top.attached.header {
-  border-radius: $header-attached-border-radius $header-attached-border-radius 0 0;
-}
-.ui.bottom.attached.header {
-  border-radius: 0 0 $header-attached-border-radius $header-attached-border-radius;
-}
-
-/* Attached Sizes */
-.ui.tiny.attached.header {
-  font-size: $header-tiny-attached-size;
-}
-.ui.small.attached.header {
-  font-size: $header-small-attached-size;
-}
-.ui.attached.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: $header-medium-attached-size;
-}
-.ui.large.attached.header {
-  font-size: $header-large-attached-size;
-}
-.ui.huge.attached.header {
-  font-size: $header-huge-attached-size;
-}
-
-/*-------------------
-        Sizing
---------------------*/
-
-.ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: $header-medium-font-size;
-}
-
 
 @import '../../themes/default/elements/header.style';

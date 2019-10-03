@@ -1,722 +1,741 @@
 @import '../../themes/default/modules/checkbox.variables';
 
-/*******************************
-//@-       Checkbox
-*******************************/
-
-
-/*--------------
-    Content
----------------*/
-
-.ui.checkbox {
-  position: relative;
-  display: inline-block;
-  backface-visibility: hidden;
-  outline: none;
-  vertical-align: baseline;
-  font-style: normal;
-
-  min-height: $checkbox-size;
-  font-size: $relative-medium;
-  line-height: $checkbox-line-height;
-  min-width: $checkbox-size;
-}
-
-/* HTML Checkbox */
-.ui.checkbox input[type="checkbox"],
-.ui.checkbox input[type="radio"] {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0 !important;
-  outline: none;
-  z-index: 3;
-  width: $checkbox-size;
-  height: $checkbox-size;
-}
-
-
-/*--------------
-      Box
----------------*/
-
-
-.ui.checkbox .box,
-.ui.checkbox label {
-  cursor: auto;
-  position: relative;
-  display: block;
-  padding-left: $checkbox-label-distance;
-  outline: none;
-  font-size: $checkbox-label-font-size;
-}
-
-.ui.checkbox .box:before,
-.ui.checkbox label:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: $checkbox-size;
-  height: $checkbox-size;
-  content: '';
-
-  background: $checkbox-background;
-  border-radius: $checkbox-border-radius;
-
-  transition: $checkbox-transition;
-  border: $checkbox-border;
-}
-
-/*--------------
-    Checkmark
----------------*/
-
-.ui.checkbox .box:after,
-.ui.checkbox label:after {
-  position: absolute;
-  font-size: $checkbox-check-font-size;
-  top: $checkbox-check-top;
-  left: $checkbox-check-left;
-  width: $checkbox-check-size;
-  height: $checkbox-check-size;
-  text-align: center;
-
-  opacity: 0;
-  color: $checkbox-color;
-  transition: $checkbox-transition;
-}
-
-/*--------------
-      Label
----------------*/
-
-/* Inside */
-.ui.checkbox label,
-.ui.checkbox + label {
-  color: $checkbox-label-color;
-  transition: $checkbox-label-transition;
-}
-
-/* Outside */
-.ui.checkbox + label {
-  vertical-align: middle;
-}
-
-
-/*******************************
-           States
-*******************************/
-
-
-/*--------------
-      Hover
----------------*/
-
-.ui.checkbox .box:hover::before,
-.ui.checkbox label:hover::before {
-  background: $checkbox-hover-background;
-  border-color: $checkbox-hover-border-color;
-}
-.ui.checkbox label:hover,
-.ui.checkbox + label:hover {
-  color: $checkbox-label-hover-color;
-}
-
-/*--------------
-      Down
----------------*/
-
-.ui.checkbox .box:active::before,
-.ui.checkbox label:active::before {
-  background: $checkbox-pressed-background;
-  border-color: $checkbox-pressed-border-color;
-}
-.ui.checkbox .box:active::after,
-.ui.checkbox label:active::after {
-  color: $checkbox-pressed-color;
-}
-.ui.checkbox input:active ~ label {
-  color: $checkbox-label-pressed-color;
-}
-
-/*--------------
-     Focus
----------------*/
-
-.ui.checkbox input:focus ~ .box:before,
-.ui.checkbox input:focus ~ label:before {
-  background: $checkbox-focus-background;
-  border-color: $checkbox-focus-border-color;
-}
-.ui.checkbox input:focus ~ .box:after,
-.ui.checkbox input:focus ~ label:after {
-  color: $checkbox-focus-check-color;
-}
-.ui.checkbox input:focus ~ label {
-  color: $checkbox-label-focus-color;
-}
-
-/*--------------
-     Active
----------------*/
-
-.ui.checkbox input:checked ~ .box:before,
-.ui.checkbox input:checked ~ label:before {
-  background: $checkbox-active-background;
-  border-color: $checkbox-active-border-color;
-}
-.ui.checkbox input:checked ~ .box:after,
-.ui.checkbox input:checked ~ label:after {
-  opacity: $checkbox-active-check-opacity;
-  color: $checkbox-active-check-color;
-}
-
-/*--------------
-  Indeterminate
----------------*/
-
-.ui.checkbox input:not([type=radio]):indeterminate ~ .box:before,
-.ui.checkbox input:not([type=radio]):indeterminate ~ label:before {
-  background: $checkbox-indeterminate-background;
-  border-color: $checkbox-indeterminate-border-color;
-}
-.ui.checkbox input:not([type=radio]):indeterminate ~ .box:after,
-.ui.checkbox input:not([type=radio]):indeterminate ~ label:after {
-  opacity: $checkbox-indeterminate-check-opacity;
-  color: $checkbox-indeterminate-check-color;
-}
-.ui.indeterminate.toggle.checkbox {
-  & input:not([type=radio]):indeterminate ~ label:before {
-    background: $checkbox-toggle-center-lane-background;
-  }
-  & input:not([type=radio]) ~ label:after {
-    left: $checkbox-toggle-center-offset;
-  }
-}
-
-/*--------------
-  Active Focus
----------------*/
-
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before,
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before,
-.ui.checkbox input:checked:focus ~ .box:before,
-.ui.checkbox input:checked:focus ~ label:before  {
-  background: $checkbox-active-focus-background;
-  border-color: $checkbox-active-focus-border-color;
-}
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:after,
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:after,
-.ui.checkbox input:checked:focus ~ .box:after,
-.ui.checkbox input:checked:focus ~ label:after {
-  color: $checkbox-active-focus-check-color;
-}
-
-
-/*--------------
-    Read-Only
----------------*/
-
-.ui.read-only.checkbox,
-.ui.read-only.checkbox label {
-  cursor: default;
-}
-
-
-/*--------------
-     Disabled
----------------*/
-
-.ui.disabled.checkbox .box:after,
-.ui.disabled.checkbox label,
-.ui.checkbox input[disabled] ~ .box:after,
-.ui.checkbox input[disabled] ~ label {
-  cursor: default !important;
-  opacity: $checkbox-disabled-opacity;
-  color: $checkbox-disabled-label-color;
-}
-
-/*--------------
-     Hidden
----------------*/
-
-/* Initialized checkbox moves input below element
- to prevent manually triggering */
-.ui.checkbox input.hidden {
-  z-index: -1;
-}
-
-/* Selectable Label */
-.ui.checkbox input.hidden + label {
-  cursor: pointer;
-  user-select: none;
-}
-
-
-/*******************************
-             Types
-*******************************/
-
-
-/*--------------
-     Radio
----------------*/
-
-.ui.radio.checkbox {
-  min-height: $checkbox-radio-size;
-}
-
-.ui.radio.checkbox .box,
-.ui.radio.checkbox label {
-  padding-left: $checkbox-radio-label-distance;
-}
-
-/* Box */
-.ui.radio.checkbox .box:before,
-.ui.radio.checkbox label:before {
-  content: '';
-  transform: none;
-
-  width: $checkbox-radio-size;
-  height: $checkbox-radio-size;
-  border-radius: $circular-radius;
-  top: $checkbox-radio-top;
-  left: $checkbox-radio-left;
-}
-
-/* Bullet */
-.ui.radio.checkbox .box:after,
-.ui.radio.checkbox label:after {
-  border: none;
-  content: '' !important;
-  width: $checkbox-radio-size;
-  height: $checkbox-radio-size;
-  line-height: $checkbox-radio-size;
-}
-
-/* Radio Checkbox */
-.ui.radio.checkbox .box:after,
-.ui.radio.checkbox label:after {
-  top: $checkbox-bullet-top;
-  left: $checkbox-bullet-left;
-  width: $checkbox-radio-size;
-  height: $checkbox-radio-size;
-  border-radius: $checkbox-bullet-radius;
-  transform: scale($checkbox-bullet-scale);
-  background-color: $checkbox-bullet-color;
-}
-
-/* Focus */
-.ui.radio.checkbox input:focus ~ .box:before,
-.ui.radio.checkbox input:focus ~ label:before {
-  background-color: $checkbox-radio-focus-background;
-}
-.ui.radio.checkbox input:focus ~ .box:after,
-.ui.radio.checkbox input:focus ~ label:after {
-  background-color: $checkbox-radio-focus-bullet-color;
-}
-
-/* Indeterminate */
-.ui.radio.checkbox input:indeterminate ~ .box:after,
-.ui.radio.checkbox input:indeterminate ~ label:after {
-  opacity: 0;
-}
-
-/* Active */
-.ui.radio.checkbox input:checked ~ .box:before,
-.ui.radio.checkbox input:checked ~ label:before {
-  background-color: $checkbox-radio-active-background;
-}
-.ui.radio.checkbox input:checked ~ .box:after,
-.ui.radio.checkbox input:checked ~ label:after {
-  background-color: $checkbox-radio-active-bullet-color;
-}
-
-/* Active Focus */
-.ui.radio.checkbox input:focus:checked ~ .box:before,
-.ui.radio.checkbox input:focus:checked ~ label:before {
-  background-color: $checkbox-radio-active-focus-background;
-}
-.ui.radio.checkbox input:focus:checked ~ .box:after,
-.ui.radio.checkbox input:focus:checked ~ label:after {
-  background-color: $checkbox-radio-active-focus-bullet-color;
-}
-
-/*--------------
-     Slider
----------------*/
-
-.ui.slider.checkbox {
-  min-height: $checkbox-slider-height;
-}
-
-/* Input */
-.ui.slider.checkbox input {
-  width: $checkbox-slider-width;
-  height: $checkbox-slider-height;
-}
-
-/* Label */
-.ui.slider.checkbox .box,
-.ui.slider.checkbox label {
-  padding-left: $checkbox-slider-label-distance;
-  line-height: $checkbox-slider-label-line-height;
-  color: $checkbox-slider-off-label-color;
-}
-
-/* Line */
-.ui.slider.checkbox .box:before,
-.ui.slider.checkbox label:before {
-  display: block;
-  position: absolute;
-  content: '';
-  transform: none;
-  border: none !important;
-  left: 0;
-  z-index: 1;
-
-  top: $checkbox-slider-line-vertical-offset;
-
-  background-color: $checkbox-slider-line-color;
-  width: $checkbox-slider-line-width;
-  height: $checkbox-slider-line-height;
-
-  border-radius: $checkbox-slider-line-radius;
-  transition: $checkbox-slider-line-transition;
-
-}
-
-/* Handle */
-.ui.slider.checkbox .box:after,
-.ui.slider.checkbox label:after {
-  background: $checkbox-handle-background;
-  position: absolute;
-  content: '' !important;
-  opacity: 1;
-  z-index: 2;
-
-  border: none;
-  box-shadow: $checkbox-handle-box-shadow;
-  width: $checkbox-slider-handle-size;
-  height: $checkbox-slider-handle-size;
-  top: $checkbox-slider-handle-offset;
-  left: 0;
-  transform: none;
-
-  border-radius: $circular-radius;
-  transition: $checkbox-slider-handle-transition;
-}
-
-/* Focus */
-.ui.slider.checkbox input:focus ~ .box:before,
-.ui.slider.checkbox input:focus ~ label:before {
-  background-color: $checkbox-toggle-focus-color;
-  border: none;
-}
-
-/* Hover */
-.ui.slider.checkbox .box:hover,
-.ui.slider.checkbox label:hover {
-  color: $checkbox-slider-hover-label-color;
-}
-.ui.slider.checkbox .box:hover::before,
-.ui.slider.checkbox label:hover::before {
-  background: $checkbox-slider-hover-lane-background;
-}
-
-/* Active */
-.ui.slider.checkbox input:checked ~ .box,
-.ui.slider.checkbox input:checked ~ label {
-  color: $checkbox-slider-on-label-color !important;
-}
-.ui.slider.checkbox input:checked ~ .box:before,
-.ui.slider.checkbox input:checked ~ label:before {
-  background-color: $checkbox-slider-on-line-color !important;
-}
-.ui.slider.checkbox input:checked ~ .box:after,
-.ui.slider.checkbox input:checked ~ label:after {
-  left: $checkbox-slider-travel-distance;
-}
-
-/* Active Focus */
-.ui.slider.checkbox input:focus:checked ~ .box,
-.ui.slider.checkbox input:focus:checked ~ label {
-  color: $checkbox-slider-on-focus-label-color !important;
-}
-.ui.slider.checkbox input:focus:checked ~ .box:before,
-.ui.slider.checkbox input:focus:checked ~ label:before {
-  background-color: $checkbox-slider-on-focus-line-color !important;
-}
-
-
-/*--------------
-     Toggle
----------------*/
-
-.ui.toggle.checkbox {
-  min-height: $checkbox-toggle-height;
-}
-
-/* Input */
-.ui.toggle.checkbox input {
-  width: $checkbox-toggle-width;
-  height: $checkbox-toggle-height;
-}
-
-/* Label */
-.ui.toggle.checkbox .box,
-.ui.toggle.checkbox label {
-  min-height: $checkbox-toggle-handle-size;
-  padding-left: $checkbox-toggle-label-distance;
-  color: $checkbox-toggle-off-label-color;
-}
-.ui.toggle.checkbox label {
-  padding-top: $checkbox-toggle-label-offset;
-}
-
-/* Switch */
-.ui.toggle.checkbox .box:before,
-.ui.toggle.checkbox label:before {
-  display: block;
-  position: absolute;
-  content: '';
-  z-index: 1;
-  transform: none;
-  border: none;
-
-  top: $checkbox-toggle-lane-vertical-offset;
-
-  background: $checkbox-toggle-lane-background;
-  box-shadow: $checkbox-toggle-lane-box-shadow;
-  width: $checkbox-toggle-lane-width;
-  height: $checkbox-toggle-lane-height;
-  border-radius: $checkbox-toggle-handle-radius;
-}
-
-/* Handle */
-.ui.toggle.checkbox .box:after,
-.ui.toggle.checkbox label:after {
-  background: $checkbox-handle-background;
-  position: absolute;
-  content: '' !important;
-  opacity: 1;
-  z-index: 2;
-
-  border: none;
-  box-shadow: $checkbox-handle-box-shadow;
-  width: $checkbox-toggle-handle-size;
-  height: $checkbox-toggle-handle-size;
-  top: $checkbox-toggle-handle-offset;
-  left: 0;
-
-  border-radius: $circular-radius;
-  transition: $checkbox-toggle-handle-transition;
-}
-
-.ui.toggle.checkbox input ~ .box:after,
-.ui.toggle.checkbox input ~ label:after {
-  left: $checkbox-toggle-off-offset;
-  box-shadow: $checkbox-toggle-off-handle-box-shadow;
-}
-
-/* Focus */
-.ui.toggle.checkbox input:focus ~ .box:before,
-.ui.toggle.checkbox input:focus ~ label:before {
-  background-color: $checkbox-toggle-focus-color;
-  border: none;
-}
-
-/* Hover */
-.ui.toggle.checkbox .box:hover::before,
-.ui.toggle.checkbox label:hover::before {
-  background-color: $checkbox-toggle-hover-color;
-  border: none;
-}
-
-/* Active */
-.ui.toggle.checkbox input:checked ~ .box,
-.ui.toggle.checkbox input:checked ~ label {
-  color: $checkbox-toggle-on-label-color !important;
-}
-.ui.toggle.checkbox input:checked ~ .box:before,
-.ui.toggle.checkbox input:checked ~ label:before {
-  background-color: $checkbox-toggle-on-lane-color !important;
-}
-.ui.toggle.checkbox input:checked ~ .box:after,
-.ui.toggle.checkbox input:checked ~ label:after {
-  left: $checkbox-toggle-on-offset;
-  box-shadow: $checkbox-toggle-on-handle-box-shadow;
-}
-
-
-/* Active Focus */
-.ui.toggle.checkbox input:focus:checked ~ .box,
-.ui.toggle.checkbox input:focus:checked ~ label {
-  color: $checkbox-toggle-on-focus-label-color !important;
-}
-.ui.toggle.checkbox input:focus:checked ~ .box:before,
-.ui.toggle.checkbox input:focus:checked ~ label:before {
-  background-color: $checkbox-toggle-on-focus-lane-color !important;
-}
-
-/*******************************
-            Variations
-*******************************/
-
-/*--------------
-     Fitted
----------------*/
-
-.ui.fitted.checkbox .box,
-.ui.fitted.checkbox label {
-  padding-left: 0 !important;
-}
-
-.ui.fitted.toggle.checkbox {
-  width: $checkbox-toggle-width;
-}
-
-.ui.fitted.slider.checkbox {
-  width: $checkbox-slider-width;
-}
-
-/*--------------
-     Inverted
----------------*/
-.ui.inverted.checkbox label,
-.ui.inverted.checkbox + label {
-  color: $inverted-text-color !important;
-}
-
-/* Hover */
-.ui.inverted.checkbox .box:hover,
-.ui.inverted.checkbox label:hover {
-  color: $inverted-hovered-text-color !important;
-}
-.ui.inverted.checkbox .box:hover::before,
-.ui.inverted.checkbox label:hover::before {
-  border-color: $strong-selected-border-color;
-}
-
-/*Slider Label */
-.ui.inverted.slider.checkbox .box,
-.ui.inverted.slider.checkbox label {
-  color: $inverted-unselected-text-color;
-}
-
-/* Slider Line */
-.ui.inverted.slider.checkbox .box:before,
-.ui.inverted.slider.checkbox label:before {
-  background-color: $inverted-unselected-text-color !important;
-}
-
-/* Slider Hover */
-.ui.inverted.slider.checkbox .box:hover::before,
-.ui.inverted.slider.checkbox label:hover::before {
-  background: $inverted-light-text-color !important;
-}
-
-/* Slider Active */
-.ui.inverted.slider.checkbox input:checked ~ .box,
-.ui.inverted.slider.checkbox input:checked ~ label {
-  color: $inverted-selected-text-color !important;
-}
-.ui.inverted.slider.checkbox input:checked ~ .box:before,
-.ui.inverted.slider.checkbox input:checked ~ label:before {
-  background-color: $selected-white-border-color !important;
-}
-
-/* Slider Active Focus */
-.ui.inverted.slider.checkbox input:focus:checked ~ .box,
-.ui.inverted.slider.checkbox input:focus:checked ~ label {
-  color: $inverted-selected-text-color !important;
-}
-.ui.inverted.slider.checkbox input:focus:checked ~ .box:before,
-.ui.inverted.slider.checkbox input:focus:checked ~ label:before {
-  background-color: $selected-white-border-color !important;
-}
-
-/* Toggle Switch */
-.ui.inverted.toggle.checkbox .box:before,
-.ui.inverted.toggle.checkbox label:before {
-  background-color: $inverted-text-color !important;
-}
-
-/* Toggle Hover */
-.ui.inverted.toggle.checkbox .box:hover::before,
-.ui.inverted.toggle.checkbox label:hover::before {
-  background: $inverted-hovered-text-color !important;
-}
-
-/* Toggle Active */
-.ui.inverted.toggle.checkbox input:checked ~ .box,
-.ui.inverted.toggle.checkbox input:checked ~ label {
-  color: $inverted-selected-text-color !important;
-}
-.ui.inverted.toggle.checkbox input:checked ~ .box:before,
-.ui.inverted.toggle.checkbox input:checked ~ label:before {
-  background-color: $checkbox-toggle-on-lane-color !important;
-}
-
-/* Toggle Active Focus */
-.ui.inverted.toggle.checkbox input:focus:checked ~ .box,
-.ui.inverted.toggle.checkbox input:focus:checked ~ label {
-  color: $inverted-selected-text-color !important;
-}
-.ui.inverted.toggle.checkbox input:focus:checked ~ .box:before,
-.ui.inverted.toggle.checkbox input:focus:checked ~ label:before {
-  background-color: $checkbox-toggle-on-focus-lane-color !important;
-}
-
-/*--------------------
-        Size
----------------------*/
-
-@each $key, $value in $checkbox-variation-sizes {
-  
-  $raw: map-get($value, raw);
-  $size: map-get($value, size);
-  $circleScale: map-get($value, circleScale);
-  $circleLeft: map-get($value, circleLeft);
-  
-  .ui.#{$key}.checkbox {
-    font-size: $size;
+@if $use-checkbox {
+  /*******************************
+  //@-       Checkbox
+  *******************************/
+
+
+  /*--------------
+      Content
+  ---------------*/
+
+  .ui.checkbox {
+    position: relative;
+    display: inline-block;
+    backface-visibility: hidden;
+    outline: none;
+    vertical-align: baseline;
+    font-style: normal;
+
+    min-height: $checkbox-size;
+    font-size: $relative-medium;
+    line-height: $checkbox-line-height;
+    min-width: $checkbox-size;
   }
 
-  @if ($raw > 1) {
-    .ui.#{$key}.form .checkbox,
-    .ui.#{$key}.checkbox {
-      &:not(.slider):not(.toggle):not(.radio) {
-        &
-        .box:after,
-        .box:before,
-        label:after,
-        label:before {
-          transform: scale($raw);
-          transform-origin:left;
-        }
+  /* HTML Checkbox */
+  .ui.checkbox input[type="checkbox"],
+  .ui.checkbox input[type="radio"] {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
+    outline: none;
+    z-index: 3;
+    width: $checkbox-size;
+    height: $checkbox-size;
+  }
+
+
+  /*--------------
+        Box
+  ---------------*/
+
+
+  .ui.checkbox .box,
+  .ui.checkbox label {
+    cursor: auto;
+    position: relative;
+    display: block;
+    padding-left: $checkbox-label-distance;
+    outline: none;
+    font-size: $checkbox-label-font-size;
+  }
+
+  .ui.checkbox .box:before,
+  .ui.checkbox label:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: $checkbox-size;
+    height: $checkbox-size;
+    content: '';
+
+    background: $checkbox-background;
+    border-radius: $checkbox-border-radius;
+
+    transition: $checkbox-transition;
+    border: $checkbox-border;
+  }
+
+  /*--------------
+      Checkmark
+  ---------------*/
+
+  .ui.checkbox .box:after,
+  .ui.checkbox label:after {
+    position: absolute;
+    font-size: $checkbox-check-font-size;
+    top: $checkbox-check-top;
+    left: $checkbox-check-left;
+    width: $checkbox-check-size;
+    height: $checkbox-check-size;
+    text-align: center;
+
+    opacity: 0;
+    color: $checkbox-color;
+    transition: $checkbox-transition;
+  }
+
+  /*--------------
+        Label
+  ---------------*/
+
+  /* Inside */
+  .ui.checkbox label,
+  .ui.checkbox + label {
+    color: $checkbox-label-color;
+    transition: $checkbox-label-transition;
+  }
+
+  /* Outside */
+  .ui.checkbox + label {
+    vertical-align: middle;
+  }
+
+
+  /*******************************
+            States
+  *******************************/
+
+
+  /*--------------
+        Hover
+  ---------------*/
+
+  .ui.checkbox .box:hover::before,
+  .ui.checkbox label:hover::before {
+    background: $checkbox-hover-background;
+    border-color: $checkbox-hover-border-color;
+  }
+  .ui.checkbox label:hover,
+  .ui.checkbox + label:hover {
+    color: $checkbox-label-hover-color;
+  }
+
+  /*--------------
+        Down
+  ---------------*/
+
+  .ui.checkbox .box:active::before,
+  .ui.checkbox label:active::before {
+    background: $checkbox-pressed-background;
+    border-color: $checkbox-pressed-border-color;
+  }
+  .ui.checkbox .box:active::after,
+  .ui.checkbox label:active::after {
+    color: $checkbox-pressed-color;
+  }
+  .ui.checkbox input:active ~ label {
+    color: $checkbox-label-pressed-color;
+  }
+
+  /*--------------
+      Focus
+  ---------------*/
+
+  .ui.checkbox input:focus ~ .box:before,
+  .ui.checkbox input:focus ~ label:before {
+    background: $checkbox-focus-background;
+    border-color: $checkbox-focus-border-color;
+  }
+  .ui.checkbox input:focus ~ .box:after,
+  .ui.checkbox input:focus ~ label:after {
+    color: $checkbox-focus-check-color;
+  }
+  .ui.checkbox input:focus ~ label {
+    color: $checkbox-label-focus-color;
+  }
+
+  /*--------------
+      Active
+  ---------------*/
+
+  .ui.checkbox input:checked ~ .box:before,
+  .ui.checkbox input:checked ~ label:before {
+    background: $checkbox-active-background;
+    border-color: $checkbox-active-border-color;
+  }
+  .ui.checkbox input:checked ~ .box:after,
+  .ui.checkbox input:checked ~ label:after {
+    opacity: $checkbox-active-check-opacity;
+    color: $checkbox-active-check-color;
+  }
+
+  /*--------------
+    Indeterminate
+  ---------------*/
+
+  .ui.checkbox input:not([type=radio]):indeterminate ~ .box:before,
+  .ui.checkbox input:not([type=radio]):indeterminate ~ label:before {
+    background: $checkbox-indeterminate-background;
+    border-color: $checkbox-indeterminate-border-color;
+  }
+  .ui.checkbox input:not([type=radio]):indeterminate ~ .box:after,
+  .ui.checkbox input:not([type=radio]):indeterminate ~ label:after {
+    opacity: $checkbox-indeterminate-check-opacity;
+    color: $checkbox-indeterminate-check-color;
+  }
+  .ui.indeterminate.toggle.checkbox {
+    & input:not([type=radio]):indeterminate ~ label:before {
+      background: $checkbox-toggle-center-lane-background;
+    }
+    & input:not([type=radio]) ~ label:after {
+      left: $checkbox-toggle-center-offset;
+    }
+  }
+
+  /*--------------
+    Active Focus
+  ---------------*/
+
+  .ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before,
+  .ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before,
+  .ui.checkbox input:checked:focus ~ .box:before,
+  .ui.checkbox input:checked:focus ~ label:before  {
+    background: $checkbox-active-focus-background;
+    border-color: $checkbox-active-focus-border-color;
+  }
+  .ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:after,
+  .ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:after,
+  .ui.checkbox input:checked:focus ~ .box:after,
+  .ui.checkbox input:checked:focus ~ label:after {
+    color: $checkbox-active-focus-check-color;
+  }
+
+
+  /*--------------
+      Read-Only
+  ---------------*/
+
+  .ui.read-only.checkbox,
+  .ui.read-only.checkbox label {
+    cursor: default;
+  }
+
+
+  /*--------------
+      Disabled
+  ---------------*/
+
+  .ui.disabled.checkbox .box:after,
+  .ui.disabled.checkbox label,
+  .ui.checkbox input[disabled] ~ .box:after,
+  .ui.checkbox input[disabled] ~ label {
+    cursor: default !important;
+    opacity: $checkbox-disabled-opacity;
+    color: $checkbox-disabled-label-color;
+  }
+
+  /*--------------
+      Hidden
+  ---------------*/
+
+  /* Initialized checkbox moves input below element
+  to prevent manually triggering */
+  .ui.checkbox input.hidden {
+    z-index: -1;
+  }
+
+  /* Selectable Label */
+  .ui.checkbox input.hidden + label {
+    cursor: pointer;
+    user-select: none;
+  }
+
+
+  /*******************************
+              Types
+  *******************************/
+
+
+  /*--------------
+      Radio
+  ---------------*/
+
+  .ui.radio.checkbox {
+    min-height: $checkbox-radio-size;
+  }
+
+  .ui.radio.checkbox .box,
+  .ui.radio.checkbox label {
+    padding-left: $checkbox-radio-label-distance;
+  }
+
+  /* Box */
+  .ui.radio.checkbox .box:before,
+  .ui.radio.checkbox label:before {
+    content: '';
+    transform: none;
+
+    width: $checkbox-radio-size;
+    height: $checkbox-radio-size;
+    border-radius: $circular-radius;
+    top: $checkbox-radio-top;
+    left: $checkbox-radio-left;
+  }
+
+  /* Bullet */
+  .ui.radio.checkbox .box:after,
+  .ui.radio.checkbox label:after {
+    border: none;
+    content: '' !important;
+    width: $checkbox-radio-size;
+    height: $checkbox-radio-size;
+    line-height: $checkbox-radio-size;
+  }
+
+  /* Radio Checkbox */
+  .ui.radio.checkbox .box:after,
+  .ui.radio.checkbox label:after {
+    top: $checkbox-bullet-top;
+    left: $checkbox-bullet-left;
+    width: $checkbox-radio-size;
+    height: $checkbox-radio-size;
+    border-radius: $checkbox-bullet-radius;
+    transform: scale($checkbox-bullet-scale);
+    background-color: $checkbox-bullet-color;
+  }
+
+  /* Focus */
+  .ui.radio.checkbox input:focus ~ .box:before,
+  .ui.radio.checkbox input:focus ~ label:before {
+    background-color: $checkbox-radio-focus-background;
+  }
+  .ui.radio.checkbox input:focus ~ .box:after,
+  .ui.radio.checkbox input:focus ~ label:after {
+    background-color: $checkbox-radio-focus-bullet-color;
+  }
+
+  /* Indeterminate */
+  .ui.radio.checkbox input:indeterminate ~ .box:after,
+  .ui.radio.checkbox input:indeterminate ~ label:after {
+    opacity: 0;
+  }
+
+  /* Active */
+  .ui.radio.checkbox input:checked ~ .box:before,
+  .ui.radio.checkbox input:checked ~ label:before {
+    background-color: $checkbox-radio-active-background;
+  }
+  .ui.radio.checkbox input:checked ~ .box:after,
+  .ui.radio.checkbox input:checked ~ label:after {
+    background-color: $checkbox-radio-active-bullet-color;
+  }
+
+  /* Active Focus */
+  .ui.radio.checkbox input:focus:checked ~ .box:before,
+  .ui.radio.checkbox input:focus:checked ~ label:before {
+    background-color: $checkbox-radio-active-focus-background;
+  }
+  .ui.radio.checkbox input:focus:checked ~ .box:after,
+  .ui.radio.checkbox input:focus:checked ~ label:after {
+    background-color: $checkbox-radio-active-focus-bullet-color;
+  }
+
+  @if($use-checkbox-type-slider) {
+    /*--------------
+        Slider
+    ---------------*/
+
+    .ui.slider.checkbox {
+      min-height: $checkbox-slider-height;
+    }
+
+    /* Input */
+    .ui.slider.checkbox input {
+      width: $checkbox-slider-width;
+      height: $checkbox-slider-height;
+    }
+
+    /* Label */
+    .ui.slider.checkbox .box,
+    .ui.slider.checkbox label {
+      padding-left: $checkbox-slider-label-distance;
+      line-height: $checkbox-slider-label-line-height;
+      color: $checkbox-slider-off-label-color;
+    }
+
+    /* Line */
+    .ui.slider.checkbox .box:before,
+    .ui.slider.checkbox label:before {
+      display: block;
+      position: absolute;
+      content: '';
+      transform: none;
+      border: none !important;
+      left: 0;
+      z-index: 1;
+
+      top: $checkbox-slider-line-vertical-offset;
+
+      background-color: $checkbox-slider-line-color;
+      width: $checkbox-slider-line-width;
+      height: $checkbox-slider-line-height;
+
+      border-radius: $checkbox-slider-line-radius;
+      transition: $checkbox-slider-line-transition;
+
+    }
+
+    /* Handle */
+    .ui.slider.checkbox .box:after,
+    .ui.slider.checkbox label:after {
+      background: $checkbox-handle-background;
+      position: absolute;
+      content: '' !important;
+      opacity: 1;
+      z-index: 2;
+
+      border: none;
+      box-shadow: $checkbox-handle-box-shadow;
+      width: $checkbox-slider-handle-size;
+      height: $checkbox-slider-handle-size;
+      top: $checkbox-slider-handle-offset;
+      left: 0;
+      transform: none;
+
+      border-radius: $circular-radius;
+      transition: $checkbox-slider-handle-transition;
+    }
+
+    /* Focus */
+    .ui.slider.checkbox input:focus ~ .box:before,
+    .ui.slider.checkbox input:focus ~ label:before {
+      background-color: $checkbox-toggle-focus-color;
+      border: none;
+    }
+
+    /* Hover */
+    .ui.slider.checkbox .box:hover,
+    .ui.slider.checkbox label:hover {
+      color: $checkbox-slider-hover-label-color;
+    }
+    .ui.slider.checkbox .box:hover::before,
+    .ui.slider.checkbox label:hover::before {
+      background: $checkbox-slider-hover-lane-background;
+    }
+
+    /* Active */
+    .ui.slider.checkbox input:checked ~ .box,
+    .ui.slider.checkbox input:checked ~ label {
+      color: $checkbox-slider-on-label-color !important;
+    }
+    .ui.slider.checkbox input:checked ~ .box:before,
+    .ui.slider.checkbox input:checked ~ label:before {
+      background-color: $checkbox-slider-on-line-color !important;
+    }
+    .ui.slider.checkbox input:checked ~ .box:after,
+    .ui.slider.checkbox input:checked ~ label:after {
+      left: $checkbox-slider-travel-distance;
+    }
+
+    /* Active Focus */
+    .ui.slider.checkbox input:focus:checked ~ .box,
+    .ui.slider.checkbox input:focus:checked ~ label {
+      color: $checkbox-slider-on-focus-label-color !important;
+    }
+    .ui.slider.checkbox input:focus:checked ~ .box:before,
+    .ui.slider.checkbox input:focus:checked ~ label:before {
+      background-color: $checkbox-slider-on-focus-line-color !important;
+    }
+  }
+
+
+  @if($use-checkbox-type-toggle) {
+    /*--------------
+        Toggle
+    ---------------*/
+
+    .ui.toggle.checkbox {
+      min-height: $checkbox-toggle-height;
+    }
+
+    /* Input */
+    .ui.toggle.checkbox input {
+      width: $checkbox-toggle-width;
+      height: $checkbox-toggle-height;
+    }
+
+    /* Label */
+    .ui.toggle.checkbox .box,
+    .ui.toggle.checkbox label {
+      min-height: $checkbox-toggle-handle-size;
+      padding-left: $checkbox-toggle-label-distance;
+      color: $checkbox-toggle-off-label-color;
+    }
+    .ui.toggle.checkbox label {
+      padding-top: $checkbox-toggle-label-offset;
+    }
+
+    /* Switch */
+    .ui.toggle.checkbox .box:before,
+    .ui.toggle.checkbox label:before {
+      display: block;
+      position: absolute;
+      content: '';
+      z-index: 1;
+      transform: none;
+      border: none;
+
+      top: $checkbox-toggle-lane-vertical-offset;
+
+      background: $checkbox-toggle-lane-background;
+      box-shadow: $checkbox-toggle-lane-box-shadow;
+      width: $checkbox-toggle-lane-width;
+      height: $checkbox-toggle-lane-height;
+      border-radius: $checkbox-toggle-handle-radius;
+    }
+
+    /* Handle */
+    .ui.toggle.checkbox .box:after,
+    .ui.toggle.checkbox label:after {
+      background: $checkbox-handle-background;
+      position: absolute;
+      content: '' !important;
+      opacity: 1;
+      z-index: 2;
+
+      border: none;
+      box-shadow: $checkbox-handle-box-shadow;
+      width: $checkbox-toggle-handle-size;
+      height: $checkbox-toggle-handle-size;
+      top: $checkbox-toggle-handle-offset;
+      left: 0;
+
+      border-radius: $circular-radius;
+      transition: $checkbox-toggle-handle-transition;
+    }
+
+    .ui.toggle.checkbox input ~ .box:after,
+    .ui.toggle.checkbox input ~ label:after {
+      left: $checkbox-toggle-off-offset;
+      box-shadow: $checkbox-toggle-off-handle-box-shadow;
+    }
+
+    /* Focus */
+    .ui.toggle.checkbox input:focus ~ .box:before,
+    .ui.toggle.checkbox input:focus ~ label:before {
+      background-color: $checkbox-toggle-focus-color;
+      border: none;
+    }
+
+    /* Hover */
+    .ui.toggle.checkbox .box:hover::before,
+    .ui.toggle.checkbox label:hover::before {
+      background-color: $checkbox-toggle-hover-color;
+      border: none;
+    }
+
+    /* Active */
+    .ui.toggle.checkbox input:checked ~ .box,
+    .ui.toggle.checkbox input:checked ~ label {
+      color: $checkbox-toggle-on-label-color !important;
+    }
+    .ui.toggle.checkbox input:checked ~ .box:before,
+    .ui.toggle.checkbox input:checked ~ label:before {
+      background-color: $checkbox-toggle-on-lane-color !important;
+    }
+    .ui.toggle.checkbox input:checked ~ .box:after,
+    .ui.toggle.checkbox input:checked ~ label:after {
+      left: $checkbox-toggle-on-offset;
+      box-shadow: $checkbox-toggle-on-handle-box-shadow;
+    }
+
+
+    /* Active Focus */
+    .ui.toggle.checkbox input:focus:checked ~ .box,
+    .ui.toggle.checkbox input:focus:checked ~ label {
+      color: $checkbox-toggle-on-focus-label-color !important;
+    }
+    .ui.toggle.checkbox input:focus:checked ~ .box:before,
+    .ui.toggle.checkbox input:focus:checked ~ label:before {
+      background-color: $checkbox-toggle-on-focus-lane-color !important;
+    }
+  }
+
+
+  /*******************************
+              Variations
+  *******************************/
+
+  @if($use-checkbox-variation-fitted) {
+    /*--------------
+        Fitted
+    ---------------*/
+
+    .ui.fitted.checkbox .box,
+    .ui.fitted.checkbox label {
+      padding-left: 0 !important;
+    }
+
+    @if($use-checkbox-type-toggle) {
+      .ui.fitted.toggle.checkbox {
+        width: $checkbox-toggle-width;
       }
-      &.radio {
-        &
-        .box:before,
-        label:before {
-          transform: scale($raw);
-          transform-origin:left;
-        }
-        &
-        .box:after,
-        label:after {
-          transform:scale($circleScale);
-          transform-origin:left;
-          left: $circleLeft;
+    }
+
+    @if($use-checkbox-type-slider) {
+      .ui.fitted.slider.checkbox {
+        width: $checkbox-slider-width;
+      }
+    }
+  }
+
+  @if($use-checkbox-variation-inverted) {
+    /*--------------
+        Inverted
+    ---------------*/
+    .ui.inverted.checkbox label,
+    .ui.inverted.checkbox + label {
+      color: $inverted-text-color !important;
+    }
+
+    /* Hover */
+    .ui.inverted.checkbox .box:hover,
+    .ui.inverted.checkbox label:hover {
+      color: $inverted-hovered-text-color !important;
+    }
+    .ui.inverted.checkbox .box:hover::before,
+    .ui.inverted.checkbox label:hover::before {
+      border-color: $strong-selected-border-color;
+    }
+
+    @if($use-checkbox-type-slider) {
+      /*Slider Label */
+      .ui.inverted.slider.checkbox .box,
+      .ui.inverted.slider.checkbox label {
+        color: $inverted-unselected-text-color;
+      }
+
+      /* Slider Line */
+      .ui.inverted.slider.checkbox .box:before,
+      .ui.inverted.slider.checkbox label:before {
+        background-color: $inverted-unselected-text-color !important;
+      }
+
+      /* Slider Hover */
+      .ui.inverted.slider.checkbox .box:hover::before,
+      .ui.inverted.slider.checkbox label:hover::before {
+        background: $inverted-light-text-color !important;
+      }
+
+      /* Slider Active */
+      .ui.inverted.slider.checkbox input:checked ~ .box,
+      .ui.inverted.slider.checkbox input:checked ~ label {
+        color: $inverted-selected-text-color !important;
+      }
+      .ui.inverted.slider.checkbox input:checked ~ .box:before,
+      .ui.inverted.slider.checkbox input:checked ~ label:before {
+        background-color: $selected-white-border-color !important;
+      }
+
+      /* Slider Active Focus */
+      .ui.inverted.slider.checkbox input:focus:checked ~ .box,
+      .ui.inverted.slider.checkbox input:focus:checked ~ label {
+        color: $inverted-selected-text-color !important;
+      }
+      .ui.inverted.slider.checkbox input:focus:checked ~ .box:before,
+      .ui.inverted.slider.checkbox input:focus:checked ~ label:before {
+        background-color: $selected-white-border-color !important;
+      }
+    }
+
+    @if($use-checkbox-type-toggle) {
+      /* Toggle Switch */
+      .ui.inverted.toggle.checkbox .box:before,
+      .ui.inverted.toggle.checkbox label:before {
+        background-color: $inverted-text-color !important;
+      }
+
+      /* Toggle Hover */
+      .ui.inverted.toggle.checkbox .box:hover::before,
+      .ui.inverted.toggle.checkbox label:hover::before {
+        background: $inverted-hovered-text-color !important;
+      }
+
+      /* Toggle Active */
+      .ui.inverted.toggle.checkbox input:checked ~ .box,
+      .ui.inverted.toggle.checkbox input:checked ~ label {
+        color: $inverted-selected-text-color !important;
+      }
+      .ui.inverted.toggle.checkbox input:checked ~ .box:before,
+      .ui.inverted.toggle.checkbox input:checked ~ label:before {
+        background-color: $checkbox-toggle-on-lane-color !important;
+      }
+
+      /* Toggle Active Focus */
+      .ui.inverted.toggle.checkbox input:focus:checked ~ .box,
+      .ui.inverted.toggle.checkbox input:focus:checked ~ label {
+        color: $inverted-selected-text-color !important;
+      }
+      .ui.inverted.toggle.checkbox input:focus:checked ~ .box:before,
+      .ui.inverted.toggle.checkbox input:focus:checked ~ label:before {
+        background-color: $checkbox-toggle-on-focus-lane-color !important;
+      }
+    }
+  }
+
+  /*--------------------
+          Size
+  ---------------------*/
+
+  @each $key, $value in $checkbox-variation-sizes {
+    @if(index($use-checkbox-variation-size, $key+'')) {
+      $raw: map-get($value, raw);
+      $size: map-get($value, size);
+      $circleScale: map-get($value, circleScale);
+      $circleLeft: map-get($value, circleLeft);
+      
+      .ui.#{$key}.checkbox {
+        font-size: $size;
+      }
+
+      @if ($raw > 1) {
+        .ui.#{$key}.form .checkbox,
+        .ui.#{$key}.checkbox {
+          &:not(.slider):not(.toggle):not(.radio) {
+            &
+            .box:after,
+            .box:before,
+            label:after,
+            label:before {
+              transform: scale($raw);
+              transform-origin:left;
+            }
+          }
+          &.radio {
+            &
+            .box:before,
+            label:before {
+              transform: scale($raw);
+              transform-origin:left;
+            }
+            &
+            .box:after,
+            label:after {
+              transform:scale($circleScale);
+              transform-origin:left;
+              left: $circleLeft;
+            }
+          }
         }
       }
     }
   }
 }
-
 
 @import '../../themes/default/modules/checkbox.style';

@@ -1,426 +1,427 @@
 @import '../../themes/default/modules/search.variables';
 
-/*******************************
-//@-         Search
-*******************************/
-
-.ui.search {
-  position: relative;
-}
-
-.ui.search > .prompt {
-  margin: 0;
-  outline: none;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
-
-  text-shadow: none;
-  font-style: normal;
-  font-weight: $normal;
-
-  line-height: $search-prompt-line-height;
-  padding: $search-prompt-padding;
-  font-size: $search-prompt-font-size;
-
-  background: $search-prompt-background;
-  border: $search-prompt-border;
-  color: $search-prompt-color;
-  box-shadow: $search-prompt-box-shadow;
-  transition: $search-prompt-transition;
-}
-
-.ui.search .prompt {
-  border-radius: $search-prompt-border-radius;
-}
-
-
-/*--------------
-     Icon
----------------*/
-
-.ui.search .prompt ~ .search.icon {
-  cursor: pointer;
-}
-
-/*--------------
-    Results
----------------*/
-
-.ui.search > .results {
-  display: none;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-  transform-origin: center top;
-  white-space: normal;
-  text-align: left;
-  text-transform: none;
-
-  background: $search-results-background;
-
-  margin-top: $search-results-distance;
-  width: $search-results-width;
-
-  border-radius: $search-results-border-radius;
-  box-shadow: $search-results-box-shadow;
-  border: $search-results-border;
-  z-index: $search-results-z-index;
-}
-.ui.search > .results > :first-child {
-  border-radius: $search-results-border-radius $search-results-border-radius 0 0;
-}
-.ui.search > .results > :last-child {
-  border-radius: 0 0 $search-results-border-radius $search-results-border-radius;
-}
-
-/*--------------
-    Result
----------------*/
-
-.ui.search > .results .result {
-  cursor: pointer;
-  display: block;
-  overflow: hidden;
-  font-size: $search-result-font-size;
-  padding: $search-result-padding;
-  color: $search-result-text-color;
-  line-height: $search-result-line-height;
-  border-bottom: $search-result-divider;
-}
-.ui.search > .results .result:last-child {
-  border-bottom: $search-result-last-divider !important;
-}
-
-/* Image */
-.ui.search > .results .result .image {
-  float: $search-result-image-float;
-  overflow: hidden;
-  background: $search-result-image-background;
-  width: $search-result-image-width;
-  height: $search-result-image-height;
-  border-radius: $search-result-image-border-radius;
-}
-.ui.search > .results .result .image img {
-  display: block;
-  width: auto;
-  height: 100%;
-}
-
-/*--------------
-      Info
----------------*/
-
-.ui.search > .results .result .image + .content {
-  margin: $search-result-image-margin;
-}
-
-.ui.search > .results .result .title {
-  margin: $search-result-title-margin;
-  font-family: $search-result-title-font;
-  font-weight: $search-result-title-font-weight;
-  font-size: $search-result-title-font-size;
-  color: $search-result-title-color;
-}
-.ui.search > .results .result .description {
-  margin-top: $search-result-description-distance;
-  font-size: $search-result-description-font-size;
-  color: $search-result-description-color;
-}
-.ui.search > .results .result .price {
-  float: $search-result-price-float;
-  color: $search-result-price-color;
-}
-
-/*--------------
-    Message
----------------*/
-
-.ui.search > .results > .message {
-  padding: $search-message-vertical-padding $search-message-horizontal-padding;
-}
-.ui.search > .results > .message .header {
-  font-family: $header-font;
-  font-size: $search-message-header-font-size;
-  font-weight: $search-message-header-font-weight;
-  color: $search-message-header-color;
-}
-.ui.search > .results > .message .description {
-  margin-top: $search-message-description-distance;
-  font-size: $search-message-description-font-size;
-  color: $search-message-description-color;
-}
-
-/* View All Results */
-.ui.search > .results > .action {
-  display: block;
-  border-top: $search-action-border;
-  background: $search-action-background;
-  padding: $search-action-padding;
-  color: $search-action-color;
-  font-weight: $search-action-font-weight;
-  text-align: $search-action-align;
-}
-
-
-/*******************************
-            States
-*******************************/
-
-/*--------------------
-       Focus
----------------------*/
-
-.ui.search > .prompt:focus {
-  border-color: $search-prompt-focus-border-color;
-  background: $search-prompt-focus-background;
-  color: $search-prompt-focus-color;
-}
-
-/*--------------------
-       Loading
----------------------*/
-
-.ui.loading.search .input > i.icon:before {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-
-  margin: $loader-margin;
-  width: $loader-size;
-  height: $loader-size;
-
-  border-radius: $circular-radius;
-  border: $loader-line-width solid $loader-fill-color;
-}
-.ui.loading.search .input > i.icon:after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-
-  margin: $loader-margin;
-  width: $loader-size;
-  height: $loader-size;
-
-  animation: loader $loader-speed infinite linear;
-  border: $loader-line-width solid $loader-line-color;
-  border-radius: $circular-radius;
-
-  box-shadow: 0 0 0 1px transparent;
-}
-
-
-/*--------------
-      Hover
----------------*/
-
-.ui.search > .results .result:hover,
-.ui.category.search > .results .category .result:hover {
-  background: $search-result-hover-background;
-}
-.ui.search .action:hover:not(div) {
-  background: $search-action-hover-background;
-}
-
-/*--------------
-      Active
----------------*/
-
-.ui.category.search > .results .category.active {
-  background: $search-category-active-background;
-}
-.ui.category.search > .results .category.active > .name {
-  color: $search-category-name-active-color;
-}
-
-.ui.search > .results .result.active,
-.ui.category.search > .results .category .result.active {
-  position: relative;
-  border-left-color: $search-result-active-border-left;
-  background: $search-result-active-background;
-  box-shadow: $search-result-active-box-shadow;
-}
-.ui.search > .results .result.active .title {
-  color: $search-result-active-title-color;
-}
-.ui.search > .results .result.active .description {
-  color: $search-result-active-description-color;
-}
-
-/*--------------------
-        Disabled
-----------------------*/
-
-/* Disabled */
-.ui.disabled.search {
-  cursor: default;
-  pointer-events: none;
-  opacity: $disabled-opacity;
-}
-
-
-/*******************************
-           Types
-*******************************/
-
-/*--------------
-    Selection
----------------*/
-
-.ui.search.selection .prompt {
-  border-radius: $search-selection-prompt-border-radius;
-}
-
-/* Remove input */
-.ui.search.selection > .icon.input > .remove.icon {
-  pointer-events: none;
-  position: absolute;
-  left: auto;
-  opacity: 0;
-  color: $search-selection-close-icon-color;
-  top: $search-selection-close-top;
-  right: $search-selection-close-right;
-  transition: $search-selection-close-transition;
-}
-.ui.search.selection > .icon.input > .active.remove.icon {
-  cursor: pointer;
-  opacity: $search-selection-close-icon-opacity;
-  pointer-events: auto;
-}
-.ui.search.selection > .icon.input:not([class*="left icon"]) > .icon ~ .remove.icon {
-  right: $search-selection-close-icon-input-right;
-}
-.ui.search.selection > .icon.input > .remove.icon:hover {
-  opacity: $search-selection-close-icon-hover-opacity;
-  color: $search-selection-close-icon-hover-color;
-}
-
-
-/*--------------
-    Category
----------------*/
-
-.ui.category.search .results {
-  width: $search-category-results-width;
-}
-
-.ui.category.search .results.animating,
-.ui.category.search .results.visible {
-  display: table;
-}
-
-/* Category */
-.ui.category.search > .results .category {
-  display: table-row;
-  background: $search-category-background;
-  box-shadow: $search-category-box-shadow;
-  transition: $search-category-transition;
-}
-
-/* Last Category */
-.ui.category.search > .results .category:last-child {
-  border-bottom: none;
-}
-
-/* First / Last */
-.ui.category.search > .results .category:first-child .name + .result {
-  border-radius: 0 $search-results-border-radius 0 0;
-}
-.ui.category.search > .results .category:last-child .result:last-child {
-  border-radius: 0 0 $search-results-border-radius 0;
-}
-
-/* Category Result Name */
-.ui.category.search > .results .category > .name {
-  display: table-cell;
-  text-overflow: ellipsis;
-  width: $search-category-name-width;
-  white-space: $search-category-name-whitespace;
-  background: $search-category-name-background;
-  font-family: $search-category-name-font;
-  font-size: $search-category-name-font-size;
-  padding: $search-category-name-padding;
-  font-weight: $search-category-name-font-weight;
-  color: $search-category-name-color;
-  border-bottom: $search-category-divider;
-}
-
-/* Category Result */
-.ui.category.search > .results .category .results {
-  display: table-cell;
-  background: $search-category-result-background;
-  border-left: $search-category-result-left-border;
-  border-bottom: $search-category-divider;
-}
-.ui.category.search > .results .category .result {
-  border-bottom: $search-category-result-divider;
-  transition: $search-category-result-transition;
-  padding: $search-category-result-padding;
-}
-
-/*******************************
-           Variations
-*******************************/
-
-/*-------------------
-     Left / Right
---------------------*/
-
-.ui[class*="left aligned"].search > .results {
-  right: auto;
-  left: 0;
-}
-.ui[class*="right aligned"].search > .results {
-  right: 0;
-  left: auto;
-}
-
-/*--------------
-    Fluid
----------------*/
-
-.ui.fluid.search .results {
-  width: 100%;
-}
-
-
-/*--------------
-      Sizes
----------------*/
-
-.ui.mini.search {
-  font-size: $relative-mini;
-}
-.ui.small.search {
-  font-size: $relative-small;
-}
-.ui.search {
-  font-size: $relative-medium;
-}
-.ui.large.search {
-  font-size: $relative-large;
-}
-.ui.big.search {
-  font-size: $relative-big;
-}
-.ui.huge.search {
-  font-size: $relative-huge;
-}
-.ui.massive.search {
-  font-size: $relative-massive;
-}
-
-/*--------------
-      Mobile
----------------*/
-
-@media only screen and (max-width: $largest-mobile-screen) {
-  .ui.search .results {
-    max-width: $search-mobile-max-width;
+@if $use-search {
+  /*******************************
+  //@-         Search
+  *******************************/
+
+  .ui.search {
+    position: relative;
+  }
+
+  .ui.search > .prompt {
+    margin: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+
+    text-shadow: none;
+    font-style: normal;
+    font-weight: $normal;
+
+    line-height: $search-prompt-line-height;
+    padding: $search-prompt-padding;
+    font-size: $search-prompt-font-size;
+
+    background: $search-prompt-background;
+    border: $search-prompt-border;
+    color: $search-prompt-color;
+    box-shadow: $search-prompt-box-shadow;
+    transition: $search-prompt-transition;
+  }
+
+  .ui.search .prompt {
+    border-radius: $search-prompt-border-radius;
+  }
+
+
+  /*--------------
+      Icon
+  ---------------*/
+
+  .ui.search .prompt ~ .search.icon {
+    cursor: pointer;
+  }
+
+  /*--------------
+      Results
+  ---------------*/
+
+  .ui.search > .results {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform-origin: center top;
+    white-space: normal;
+    text-align: left;
+    text-transform: none;
+
+    background: $search-results-background;
+
+    margin-top: $search-results-distance;
+    width: $search-results-width;
+
+    border-radius: $search-results-border-radius;
+    box-shadow: $search-results-box-shadow;
+    border: $search-results-border;
+    z-index: $search-results-z-index;
+  }
+  .ui.search > .results > :first-child {
+    border-radius: $search-results-border-radius $search-results-border-radius 0 0;
+  }
+  .ui.search > .results > :last-child {
+    border-radius: 0 0 $search-results-border-radius $search-results-border-radius;
+  }
+
+  /*--------------
+      Result
+  ---------------*/
+
+  .ui.search > .results .result {
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    font-size: $search-result-font-size;
+    padding: $search-result-padding;
+    color: $search-result-text-color;
+    line-height: $search-result-line-height;
+    border-bottom: $search-result-divider;
+  }
+  .ui.search > .results .result:last-child {
+    border-bottom: $search-result-last-divider !important;
+  }
+
+  /* Image */
+  .ui.search > .results .result .image {
+    float: $search-result-image-float;
+    overflow: hidden;
+    background: $search-result-image-background;
+    width: $search-result-image-width;
+    height: $search-result-image-height;
+    border-radius: $search-result-image-border-radius;
+  }
+  .ui.search > .results .result .image img {
+    display: block;
+    width: auto;
+    height: 100%;
+  }
+
+  /*--------------
+        Info
+  ---------------*/
+
+  .ui.search > .results .result .image + .content {
+    margin: $search-result-image-margin;
+  }
+
+  .ui.search > .results .result .title {
+    margin: $search-result-title-margin;
+    font-family: $search-result-title-font;
+    font-weight: $search-result-title-font-weight;
+    font-size: $search-result-title-font-size;
+    color: $search-result-title-color;
+  }
+  .ui.search > .results .result .description {
+    margin-top: $search-result-description-distance;
+    font-size: $search-result-description-font-size;
+    color: $search-result-description-color;
+  }
+  .ui.search > .results .result .price {
+    float: $search-result-price-float;
+    color: $search-result-price-color;
+  }
+
+  /*--------------
+      Message
+  ---------------*/
+
+  .ui.search > .results > .message {
+    padding: $search-message-vertical-padding $search-message-horizontal-padding;
+  }
+  .ui.search > .results > .message .header {
+    font-family: $header-font;
+    font-size: $search-message-header-font-size;
+    font-weight: $search-message-header-font-weight;
+    color: $search-message-header-color;
+  }
+  .ui.search > .results > .message .description {
+    margin-top: $search-message-description-distance;
+    font-size: $search-message-description-font-size;
+    color: $search-message-description-color;
+  }
+
+  /* View All Results */
+  .ui.search > .results > .action {
+    display: block;
+    border-top: $search-action-border;
+    background: $search-action-background;
+    padding: $search-action-padding;
+    color: $search-action-color;
+    font-weight: $search-action-font-weight;
+    text-align: $search-action-align;
+  }
+
+
+  /*******************************
+              States
+  *******************************/
+
+  /*--------------------
+        Focus
+  ---------------------*/
+
+  .ui.search > .prompt:focus {
+    border-color: $search-prompt-focus-border-color;
+    background: $search-prompt-focus-background;
+    color: $search-prompt-focus-color;
+  }
+
+  /*--------------------
+        Loading
+  ---------------------*/
+
+  .ui.loading.search .input > i.icon:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+
+    margin: $loader-margin;
+    width: $loader-size;
+    height: $loader-size;
+
+    border-radius: $circular-radius;
+    border: $loader-line-width solid $loader-fill-color;
+  }
+  .ui.loading.search .input > i.icon:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+
+    margin: $loader-margin;
+    width: $loader-size;
+    height: $loader-size;
+
+    animation: loader $loader-speed infinite linear;
+    border: $loader-line-width solid $loader-line-color;
+    border-radius: $circular-radius;
+
+    box-shadow: 0 0 0 1px transparent;
+  }
+
+
+  /*--------------
+        Hover
+  ---------------*/
+
+  .ui.search > .results .result:hover,
+  .ui.category.search > .results .category .result:hover {
+    background: $search-result-hover-background;
+  }
+  .ui.search .action:hover:not(div) {
+    background: $search-action-hover-background;
+  }
+
+  /*--------------
+        Active
+  ---------------*/
+
+  .ui.category.search > .results .category.active {
+    background: $search-category-active-background;
+  }
+  .ui.category.search > .results .category.active > .name {
+    color: $search-category-name-active-color;
+  }
+
+  .ui.search > .results .result.active,
+  .ui.category.search > .results .category .result.active {
+    position: relative;
+    border-left-color: $search-result-active-border-left;
+    background: $search-result-active-background;
+    box-shadow: $search-result-active-box-shadow;
+  }
+  .ui.search > .results .result.active .title {
+    color: $search-result-active-title-color;
+  }
+  .ui.search > .results .result.active .description {
+    color: $search-result-active-description-color;
+  }
+
+  /*--------------------
+          Disabled
+  ----------------------*/
+
+  /* Disabled */
+  .ui.disabled.search {
+    cursor: default;
+    pointer-events: none;
+    opacity: $disabled-opacity;
+  }
+
+
+  /*******************************
+            Types
+  *******************************/
+
+  /*--------------
+      Selection
+  ---------------*/
+
+  .ui.search.selection .prompt {
+    border-radius: $search-selection-prompt-border-radius;
+  }
+
+  /* Remove input */
+  .ui.search.selection > .icon.input > .remove.icon {
+    pointer-events: none;
+    position: absolute;
+    left: auto;
+    opacity: 0;
+    color: $search-selection-close-icon-color;
+    top: $search-selection-close-top;
+    right: $search-selection-close-right;
+    transition: $search-selection-close-transition;
+  }
+  .ui.search.selection > .icon.input > .active.remove.icon {
+    cursor: pointer;
+    opacity: $search-selection-close-icon-opacity;
+    pointer-events: auto;
+  }
+  .ui.search.selection > .icon.input:not([class*="left icon"]) > .icon ~ .remove.icon {
+    right: $search-selection-close-icon-input-right;
+  }
+  .ui.search.selection > .icon.input > .remove.icon:hover {
+    opacity: $search-selection-close-icon-hover-opacity;
+    color: $search-selection-close-icon-hover-color;
+  }
+
+
+  /*--------------
+      Category
+  ---------------*/
+
+  .ui.category.search .results {
+    width: $search-category-results-width;
+  }
+
+  .ui.category.search .results.animating,
+  .ui.category.search .results.visible {
+    display: table;
+  }
+
+  /* Category */
+  .ui.category.search > .results .category {
+    display: table-row;
+    background: $search-category-background;
+    box-shadow: $search-category-box-shadow;
+    transition: $search-category-transition;
+  }
+
+  /* Last Category */
+  .ui.category.search > .results .category:last-child {
+    border-bottom: none;
+  }
+
+  /* First / Last */
+  .ui.category.search > .results .category:first-child .name + .result {
+    border-radius: 0 $search-results-border-radius 0 0;
+  }
+  .ui.category.search > .results .category:last-child .result:last-child {
+    border-radius: 0 0 $search-results-border-radius 0;
+  }
+
+  /* Category Result Name */
+  .ui.category.search > .results .category > .name {
+    display: table-cell;
+    text-overflow: ellipsis;
+    width: $search-category-name-width;
+    white-space: $search-category-name-whitespace;
+    background: $search-category-name-background;
+    font-family: $search-category-name-font;
+    font-size: $search-category-name-font-size;
+    padding: $search-category-name-padding;
+    font-weight: $search-category-name-font-weight;
+    color: $search-category-name-color;
+    border-bottom: $search-category-divider;
+  }
+
+  /* Category Result */
+  .ui.category.search > .results .category .results {
+    display: table-cell;
+    background: $search-category-result-background;
+    border-left: $search-category-result-left-border;
+    border-bottom: $search-category-divider;
+  }
+  .ui.category.search > .results .category .result {
+    border-bottom: $search-category-result-divider;
+    transition: $search-category-result-transition;
+    padding: $search-category-result-padding;
+  }
+
+  /*******************************
+            Variations
+  *******************************/
+
+  /*-------------------
+      Left / Right
+  --------------------*/
+
+  .ui[class*="left aligned"].search > .results {
+    right: auto;
+    left: 0;
+  }
+  .ui[class*="right aligned"].search > .results {
+    right: 0;
+    left: auto;
+  }
+
+  /*--------------
+      Fluid
+  ---------------*/
+
+  .ui.fluid.search .results {
+    width: 100%;
+  }
+
+
+  /*--------------
+        Sizes
+  ---------------*/
+
+  .ui.mini.search {
+    font-size: $relative-mini;
+  }
+  .ui.small.search {
+    font-size: $relative-small;
+  }
+  .ui.search {
+    font-size: $relative-medium;
+  }
+  .ui.large.search {
+    font-size: $relative-large;
+  }
+  .ui.big.search {
+    font-size: $relative-big;
+  }
+  .ui.huge.search {
+    font-size: $relative-huge;
+  }
+  .ui.massive.search {
+    font-size: $relative-massive;
+  }
+
+  /*--------------
+        Mobile
+  ---------------*/
+
+  @media only screen and (max-width: $largest-mobile-screen) {
+    .ui.search .results {
+      max-width: $search-mobile-max-width;
+    }
   }
 }
-
 
 @import '../../themes/default/modules/search.style';

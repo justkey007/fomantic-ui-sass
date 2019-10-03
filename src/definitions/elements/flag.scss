@@ -1,35 +1,35 @@
 @import '../../themes/default/elements/flag.variables';
 
-
-/*******************************
-//@-         Flag
-*******************************/
-
-i.flag:not(.icon) {
-  display: inline-block;
-
-  width: $flag-width;
-  height: $flag-height;
-
-  line-height: $flag-height;
-  vertical-align: $flag-vertical-align;
-  margin: 0 $flag-margin 0 0;
-
-  text-decoration: inherit;
-
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-  backface-visibility: hidden;
+@if $use-flag {
+  /*******************************
+  //@-         Flag
+  *******************************/
+  
+  i.flag:not(.icon) {
+    display: inline-block;
+  
+    width: $flag-width;
+    height: $flag-height;
+  
+    line-height: $flag-height;
+    vertical-align: $flag-vertical-align;
+    margin: 0 $flag-margin 0 0;
+  
+    text-decoration: inherit;
+  
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
+  }
+  
+  /* Sprite */
+  i.flag:not(.icon):before {
+    display: inline-block;
+    content: '';
+    background: url($flag-sprite-path) no-repeat -108px -1976px;
+    width: $flag-width;
+    height: $flag-height;
+  }
 }
-
-/* Sprite */
-i.flag:not(.icon):before {
-  display: inline-block;
-  content: '';
-  background: url($flag-sprite-path) no-repeat -108px -1976px;
-  width: $flag-width;
-  height: $flag-height;
-}
-
 
 @import '../../themes/default/elements/flag.style';

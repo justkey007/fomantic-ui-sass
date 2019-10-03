@@ -1,72 +1,73 @@
 @import '../../themes/default/modules/tab.variables';
 
-/*******************************
-//@-       UI Tabs
-*******************************/
+@if $use-tab {
+  /*******************************
+  //@-       UI Tabs
+  *******************************/
 
-.ui.tab {
-  display: none;
+  .ui.tab {
+    display: none;
+  }
+
+  /*******************************
+              States
+  *******************************/
+
+  /*--------------------
+        Active
+  ---------------------*/
+
+  .ui.tab.active,
+  .ui.tab.open {
+    display: block;
+  }
+
+  /*--------------------
+        Loading
+  ---------------------*/
+
+  .ui.tab.loading {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    min-height: $tab-loading-min-height;
+  }
+  .ui.tab.loading * {
+    position: $tab-loading-content-position !important;
+    left: $tab-loading-content-offset !important;
+  }
+
+  .ui.tab.loading:before,
+  .ui.tab.loading.segment:before {
+    position: absolute;
+    content: '';
+    top: $tab-loader-distance-from-top;
+    left: 50%;
+
+    margin: $loader-margin;
+    width: $tab-loader-size;
+    height: $tab-loader-size;
+
+    border-radius: $circular-radius;
+    border: $loader-line-width solid $loader-fill-color;
+  }
+  .ui.tab.loading:after,
+  .ui.tab.loading.segment:after {
+    position: absolute;
+    content: '';
+    top: $tab-loader-distance-from-top;
+    left: 50%;
+
+    margin: $loader-margin;
+    width: $tab-loader-size;
+    height: $tab-loader-size;
+
+    animation: loader $loader-speed infinite linear;
+    border: $loader-line-width solid $loader-line-color;
+    border-radius: $circular-radius;
+
+    box-shadow: 0 0 0 1px transparent;
+  }
 }
-
-/*******************************
-             States
-*******************************/
-
-/*--------------------
-       Active
----------------------*/
-
-.ui.tab.active,
-.ui.tab.open {
-  display: block;
-}
-
-/*--------------------
-       Loading
----------------------*/
-
-.ui.tab.loading {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  min-height: $tab-loading-min-height;
-}
-.ui.tab.loading * {
-  position: $tab-loading-content-position !important;
-  left: $tab-loading-content-offset !important;
-}
-
-.ui.tab.loading:before,
-.ui.tab.loading.segment:before {
-  position: absolute;
-  content: '';
-  top: $tab-loader-distance-from-top;
-  left: 50%;
-
-  margin: $loader-margin;
-  width: $tab-loader-size;
-  height: $tab-loader-size;
-
-  border-radius: $circular-radius;
-  border: $loader-line-width solid $loader-fill-color;
-}
-.ui.tab.loading:after,
-.ui.tab.loading.segment:after {
-  position: absolute;
-  content: '';
-  top: $tab-loader-distance-from-top;
-  left: 50%;
-
-  margin: $loader-margin;
-  width: $tab-loader-size;
-  height: $tab-loader-size;
-
-  animation: loader $loader-speed infinite linear;
-  border: $loader-line-width solid $loader-line-color;
-  border-radius: $circular-radius;
-
-  box-shadow: 0 0 0 1px transparent;
-}
-
 
 @import '../../themes/default/modules/tab.style';

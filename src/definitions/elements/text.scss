@@ -1,52 +1,52 @@
 @import '../../themes/default/elements/text.variables';
 
+@if $use-text {
+  /*******************************
+  //@-         Text
+  *******************************/
 
-/*******************************
-//@-         Text
-*******************************/
+  @each $key, $value in $colors {
+    $color: $key;
+    $c: map-get($value, color);
+    $l: map-get($value, light);
 
-@each $key, $value in $colors {
-  $color: $key;
-  $c: map-get($value, color);
-  $l: map-get($value, light);
-
-  span.ui.#{$key + ""}.text {
-    color: $c;
+    span.ui.#{$key + ""}.text {
+      color: $c;
+    }
+    span.ui.inverted.#{$key + ""}.text {
+      color: $l;
+    }
   }
-  span.ui.inverted.#{$key + ""}.text {
-    color: $l;
+
+  span.ui.disabled.text {
+    opacity: $disabled-opacity;
+  }
+
+  /* Sizes */
+  span.ui.mini.text {
+    font-size: $text-mini;
+  }
+  span.ui.tiny.text {
+    font-size: $text-tiny;
+  }
+  span.ui.small.text {
+    font-size: $text-small;
+  }
+  span.ui.medium.text {
+    font-size: $text-medium;
+  }
+  span.ui.large.text {
+    font-size: $text-large;
+  }
+  span.ui.big.text {
+    font-size: $text-big;
+  }
+  span.ui.huge.text {
+    font-size: $text-huge;
+  }
+  span.ui.massive.text {
+    font-size: $text-massive;
   }
 }
-
-span.ui.disabled.text {
-  opacity: $disabled-opacity;
-}
-
-/* Sizes */
-span.ui.mini.text {
-  font-size: $text-mini;
-}
-span.ui.tiny.text {
-  font-size: $text-tiny;
-}
-span.ui.small.text {
-  font-size: $text-small;
-}
-span.ui.medium.text {
-  font-size: $text-medium;
-}
-span.ui.large.text {
-  font-size: $text-large;
-}
-span.ui.big.text {
-  font-size: $text-big;
-}
-span.ui.huge.text {
-  font-size: $text-huge;
-}
-span.ui.massive.text {
-  font-size: $text-massive;
-}
-
 
 @import '../../themes/default/elements/text.style';

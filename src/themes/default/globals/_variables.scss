@@ -19,9 +19,10 @@
 @import "./input/all";
 @import "./loader/all";
 
-@import "./abstract/colors-map";
+@import "./abstract/all";
+@import "./components-config";
 
 //------------------- Paths --------------------*/
-$theme-folder: './' !default;
+$theme-folder: '.' !default;
 $image-path: "#{$theme-folder}/themes/default/assets/images" !default;
 $font-path: "#{$theme-folder}/themes/default/assets/fonts" !default;
