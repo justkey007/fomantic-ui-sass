@@ -27,20 +27,44 @@ npm i -D fomantic-ui-sass
 
 ## SCSS Usage
 
+Copy the `custom` directory into your project. It contains your custom
+theme templates which you can customize. In the below example, the
+directory is copied and renamed `fomantic-custom-theme`.
+
+It is also helpful to copy the default theme assets (fonts and images) to
+your project. In this example, the assets have been moved into 
+`fomantic-custom-theme/assets`, but you can put them anywhere and set the
+path variables (keep reading).
+
+It's helpful to create an SASS file as an entrypoint. In this file, 
+you can set up some directory variables, import your custom theme,
+and pull in the variables and styles in the correct order.
+
+For example, you can have a file named `fomantic.scss`:
+
 ```scss
-@import 'node-modules/fomantic-ui-sass/src/variables.scss';
-@import '???/custom.scss';
-@import 'node-modules/fomantic-ui-sass/src/semantic-ui.scss';
-```
+// The following path vars are for relative `url()` statements in the SCSS.
+// They will be relative to the compiled entrypoint CSS file, which in our
+// case is /fomantic.scss.
+$theme-folder: 'fomantic-scss-custom' !default;
+$image-path: "#{$theme-folder}/assets/images" !default;
+$font-path: "#{$theme-folder}/assets/fonts" !default;
 
-### Attention!
+// Generally, we import our custom theme first, then apply any unset variables
+// from the default theme over them (variables in the default theme are defined
+// with CSS `!default` so they are only used if they aren't already set.
+//
+// Sometimes, though, we want to use a variable from the default theme in our
+// custom rules, in which case we need to either set it or pull in the file here
+// before we can use them in our custom theme.
+@import '../../node_modules/fomantic-ui-sass/src/utils/all';
+@import '../../node_modules/fomantic-ui-sass/src/themes/default/globals/fonts/all';
+@import '../../node_modules/fomantic-ui-sass/src/themes/default/globals/colors/all';
 
-If you want to modify in your personalized file a variable which can generate derivatives like the colors and their variants please do it and put in front your personalized file in order to have conforming derivatives.
-
-## CSS Usage
-
-```css
-@import 'node-modules/fomantic-ui-sass/dist/semantic-ui.css';
+// Then, we load up the whole shebang...
+@import 'fomantic-custom-theme';                                 // custom theme variables
+@import '../../node_modules/fomantic-ui-sass/src/variables';     // default theme variables
+@import '../../node_modules/fomantic-ui-sass/src/semantic.scss'; // Semantic-UI SCSS
 ```
 
 # Customization and choice of components and their variants
