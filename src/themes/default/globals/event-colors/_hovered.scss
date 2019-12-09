@@ -1,4 +1,4 @@
-@import "../colors/all";
+//@import "../colors/all";
 
 $primary-color-hover: saturate(darken($primary-color, 5), 10) !default;
 $secondary-color-hover: saturate(lighten($secondary-color, 5), 10) !default;
