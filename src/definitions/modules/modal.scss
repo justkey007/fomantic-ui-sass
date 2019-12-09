@@ -168,13 +168,13 @@
   /* Modal Width */
   @media only screen and (max-width : $largest-mobile-screen) {
     .ui.modal:not(.fullscreen) {
-      width: $modal-mobile-width;
+      width: calc($modal-mobile-width - 1px);
       margin: $modal-mobile-margin;
     }
   }
   @media only screen and (min-width : $tablet-breakpoint) {
     .ui.modal:not(.fullscreen) {
-      width: $modal-tablet-width;
+      width: calc($modal-tablet-width - 1px);
       margin: $modal-tablet-margin;
     }
   }
