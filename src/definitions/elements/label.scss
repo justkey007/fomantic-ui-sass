@@ -650,7 +650,7 @@
   --------------------*/
   
   @each $key, $value in $label-colors-map {
-    @if(index(join($main-colors-names, $use-label-variation-colors), $key+'')) {
+    @if(index(join($main-colors-names, $colors-variations-names), $key+'')) {
       $isDark: map-get($value, isDark);
       $_labelColor: map-get($value, color);
       $_labelInvertedColor: map-get($value, light);
