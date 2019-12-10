@@ -89,7 +89,7 @@ $header-iconed-icon-opacity: 1 !default;
 $header-iconed-icon-margin: 0.5rem !default;
 $header-circular-icon-size: 2em !default;
 $header-square-icon-size: 2em !default;
-$header-corner-icon-size: calc($header-iconed-icon-size * 0.45) !default;
+$header-corner-icon-size: calc(#{$header-iconed-icon-size} * 0.45) !default;
 
 //- No Line Height Offset */
 $header-icon-top-margin: 2rem !default;
