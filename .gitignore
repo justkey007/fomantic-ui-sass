@@ -2,6 +2,7 @@ node_modules
 tasks
 *.map
 *temp*
+*test*
 examples
 *pnpm*
 utilities

@@ -1126,7 +1126,6 @@ input::selection {
 /*-------------------
        Tertiary
 --------------------*/
-/* Overline Mixin */
 .ui.tertiary.button {
   transition: color 0.1s ease !important;
   border-radius: 0;
@@ -4464,9 +4463,9 @@ input::selection {
 /* Standard */
 .ui.positive.buttons .button,
 .ui.positive.button {
-  background-color: "positiveColor";
-  color: "positiveTextColor";
-  text-shadow: "positiveTextShadow";
+  background-color: #21ba45;
+  color: #ffffff;
+  text-shadow: none;
   background-image: none;
 }
 
@@ -4476,67 +4475,67 @@ input::selection {
 
 .ui.positive.buttons .button:hover,
 .ui.positive.button:hover {
-  background-color: "positiveColorHover";
-  color: "positiveTextColor";
-  text-shadow: "positiveTextShadow";
+  background-color: #13ae38;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 .ui.positive.buttons .button:focus,
 .ui.positive.button:focus {
-  background-color: "positiveColorFocus";
-  color: "positiveTextColor";
-  text-shadow: "positiveTextShadow";
+  background-color: #09a92f;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 .ui.positive.buttons .button:active,
 .ui.positive.button:active {
-  background-color: "positiveColorDown";
-  color: "positiveTextColor";
-  text-shadow: "positiveTextShadow";
+  background-color: #198f35;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 .ui.positive.buttons .active.button,
 .ui.positive.buttons .active.button:active,
 .ui.positive.active.button,
 .ui.positive.button .active.button:active {
-  background-color: "positiveColorActive";
-  color: "positiveTextColor";
-  text-shadow: "positiveTextShadow";
+  background-color: #0fb335;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 /* Basic */
 .ui.basic.positive.buttons .button,
 .ui.basic.positive.button {
   background: transparent;
-  box-shadow: 0 0 0 1px "positiveColor" inset;
-  color: "positiveColor";
+  box-shadow: 0 0 0 1px #21ba45 inset;
+  color: #21ba45;
 }
 
 .ui.basic.positive.buttons .button:hover,
 .ui.basic.positive.button:hover {
   background: transparent;
-  box-shadow: 0 0 0 1px "positiveColorHover" inset;
-  color: "positiveColorHover";
+  box-shadow: 0 0 0 1px #13ae38 inset;
+  color: #13ae38;
 }
 
 .ui.basic.positive.buttons .button:focus,
 .ui.basic.positive.button:focus {
   background: transparent;
-  box-shadow: 0 0 0 1px "positiveColorFocus" inset;
-  color: "positiveColorHover";
+  box-shadow: 0 0 0 1px #09a92f inset;
+  color: #13ae38;
 }
 
 .ui.basic.positive.buttons .active.button,
 .ui.basic.positive.active.button {
   background: transparent;
-  box-shadow: 0 0 0 1px "positiveColorActive" inset;
-  color: "positiveColorDown";
+  box-shadow: 0 0 0 1px #0fb335 inset;
+  color: #198f35;
 }
 
 .ui.basic.positive.buttons .button:active,
 .ui.basic.positive.button:active {
-  box-shadow: 0 0 0 1px "positiveColorDown" inset;
-  color: "positiveColorDown";
+  box-shadow: 0 0 0 1px #198f35 inset;
+  color: #198f35;
 }
 
 .ui.buttons:not(.vertical) > .basic.positive.button:not(:first-child) {
@@ -4544,14 +4543,14 @@ input::selection {
 }
 
 /*---------------
-     Negative
+    Negative
 ----------------*/
 /* Standard */
 .ui.negative.buttons .button,
 .ui.negative.button {
-  background-color: "negativeColor";
-  color: "negativeTextColor";
-  text-shadow: "negativeTextShadow";
+  background-color: #db2828;
+  color: #ffffff;
+  text-shadow: none;
   background-image: none;
 }
 
@@ -4561,67 +4560,67 @@ input::selection {
 
 .ui.negative.buttons .button:hover,
 .ui.negative.button:hover {
-  background-color: "negativeColorHover";
-  color: "negativeTextColor";
-  text-shadow: "negativeTextShadow";
+  background-color: #d41616;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 .ui.negative.buttons .button:focus,
 .ui.negative.button:focus {
-  background-color: "negativeColorFocus";
-  color: "negativeTextColor";
-  text-shadow: "negativeTextShadow";
+  background-color: #d10909;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 .ui.negative.buttons .button:active,
 .ui.negative.button:active {
-  background-color: "negativeColorDown";
-  color: "negativeTextColor";
-  text-shadow: "negativeTextShadow";
+  background-color: #b21e1e;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 .ui.negative.buttons .active.button,
 .ui.negative.buttons .active.button:active,
 .ui.negative.active.button,
 .ui.negative.button .active.button:active {
-  background-color: "negativeColorActive";
-  color: "negativeTextColor";
-  text-shadow: "negativeTextShadow";
+  background-color: #da1010;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 /* Basic */
 .ui.basic.negative.buttons .button,
 .ui.basic.negative.button {
   background: transparent;
-  box-shadow: 0 0 0 1px "negativeColor" inset;
-  color: "negativeColor";
+  box-shadow: 0 0 0 1px #db2828 inset;
+  color: #db2828;
 }
 
 .ui.basic.negative.buttons .button:hover,
 .ui.basic.negative.button:hover {
   background: transparent;
-  box-shadow: 0 0 0 1px "negativeColorHover" inset;
-  color: "negativeColorHover";
+  box-shadow: 0 0 0 1px #d41616 inset;
+  color: #d41616;
 }
 
 .ui.basic.negative.buttons .button:focus,
 .ui.basic.negative.button:focus {
   background: transparent;
-  box-shadow: 0 0 0 1px "negativeColorFocus" inset;
-  color: "negativeColorHover";
+  box-shadow: 0 0 0 1px #d10909 inset;
+  color: #d41616;
 }
 
 .ui.basic.negative.buttons .active.button,
 .ui.basic.negative.active.button {
   background: transparent;
-  box-shadow: 0 0 0 1px "negativeColorActive" inset;
-  color: "negativeColorDown";
+  box-shadow: 0 0 0 1px #da1010 inset;
+  color: #b21e1e;
 }
 
 .ui.basic.negative.buttons .button:active,
 .ui.basic.negative.button:active {
-  box-shadow: 0 0 0 1px "negativeColorDown" inset;
-  color: "negativeColorDown";
+  box-shadow: 0 0 0 1px #b21e1e inset;
+  color: #b21e1e;
 }
 
 .ui.buttons:not(.vertical) > .basic.negative.button:not(:first-child) {
@@ -5094,7 +5093,7 @@ i.flag:not(.icon) {
 i.flag:not(.icon):before {
   display: inline-block;
   content: "";
-  background: url(".//themes/default/assets/images/flags.png") no-repeat -108px -1976px;
+  background: url("./themes/default/assets/images/flags.png") no-repeat -108px -1976px;
   width: 16px;
   height: 11px;
 }
@@ -7172,8 +7171,8 @@ a.ui.inverted.black.header.header.header:hover {
 *******************************/
 @font-face {
   font-family: "Icons";
-  src: url(".//themes/default/assets/fonts/icons.eot");
-  src: url(".//themes/default/assets/fonts/icons.eot?#iefix") format("embedded-opentype"), url(".//themes/default/assets/fonts/icons.woff2") format("woff2"), url(".//themes/default/assets/fonts/icons.woff") format("woff"), url(".//themes/default/assets/fonts/icons.ttf") format("truetype"), url(".//themes/default/assets/fonts/icons.svg#icons") format("svg");
+  src: url("./themes/default/assets/fonts/icons.eot");
+  src: url("./themes/default/assets/fonts/icons.eot?#iefix") format("embedded-opentype"), url("./themes/default/assets/fonts/icons.woff2") format("woff2"), url("./themes/default/assets/fonts/icons.woff") format("woff"), url("./themes/default/assets/fonts/icons.ttf") format("truetype"), url("./themes/default/assets/fonts/icons.svg#icons") format("svg");
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -7726,7 +7725,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 
 *******************************/
 /*******************************
-             Icons
+            Icons
 *******************************/
 /* Deprecated *In/Out Naming Conflict) */
 i.icon.linkedin.in:before {
@@ -12743,14 +12742,14 @@ i.icon.zoom.out:before {
 }
 
 /*******************************
-         Outline Icons
+        Outline Icons
 *******************************/
 /* Outline Icon */
 /* Load & Define Icon Font */
 @font-face {
   font-family: "outline-icons";
-  src: url(".//themes/default/assets/fonts/outline-icons.eot");
-  src: url(".//themes/default/assets/fonts/outline-icons.eot?#iefix") format("embedded-opentype"), url(".//themes/default/assets/fonts/outline-icons.woff2") format("woff2"), url(".//themes/default/assets/fonts/outline-icons.woff") format("woff"), url(".//themes/default/assets/fonts/outline-icons.ttf") format("truetype"), url(".//themes/default/assets/fonts/outline-icons.svg#icons") format("svg");
+  src: url("./themes/default/assets/fonts/outline-icons.eot");
+  src: url("./themes/default/assets/fonts/outline-icons.eot?#iefix") format("embedded-opentype"), url("./themes/default/assets/fonts/outline-icons.woff2") format("woff2"), url("./themes/default/assets/fonts/outline-icons.woff") format("woff"), url("./themes/default/assets/fonts/outline-icons.ttf") format("truetype"), url("./themes/default/assets/fonts/outline-icons.svg#icons") format("svg");
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -13372,8 +13371,8 @@ i.icon.window.restore.outline:before {
 /* Load & Define Brand Font */
 @font-face {
   font-family: "brand-icons";
-  src: url(".//themes/default/assets/fonts/brand-icons.eot");
-  src: url(".//themes/default/assets/fonts/brand-icons.eot?#iefix") format("embedded-opentype"), url(".//themes/default/assets/fonts/brand-icons.woff2") format("woff2"), url(".//themes/default/assets/fonts/brand-icons.woff") format("woff"), url(".//themes/default/assets/fonts/brand-icons.ttf") format("truetype"), url(".//themes/default/assets/fonts/brand-icons.svg#icons") format("svg");
+  src: url("./themes/default/assets/fonts/brand-icons.eot");
+  src: url("./themes/default/assets/fonts/brand-icons.eot?#iefix") format("embedded-opentype"), url("./themes/default/assets/fonts/brand-icons.woff2") format("woff2"), url("./themes/default/assets/fonts/brand-icons.woff") format("woff"), url("./themes/default/assets/fonts/brand-icons.ttf") format("truetype"), url("./themes/default/assets/fonts/brand-icons.svg#icons") format("svg");
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -16295,7 +16294,7 @@ img.ui.bordered.image {
 }
 
 /*--------------------
-         Icon
+        Icon
 ---------------------*/
 .ui.icon.input > i.icon {
   cursor: default;
@@ -16797,7 +16796,7 @@ a.ui.label {
 }
 
 /*-------------------
-         Tag
+        Tag
 --------------------*/
 .ui.tag.labels .label,
 .ui.tag.label {
@@ -16931,7 +16930,7 @@ a.ui.label {
 }
 
 /*-------------------
-       Ribbon
+      Ribbon
 --------------------*/
 .ui.ribbon.label {
   position: relative;
@@ -17188,11 +17187,6 @@ a.ui.basic.label:hover {
   box-shadow: none;
 }
 
-/* Pointing */
-.ui.basic.pointing.label:before {
-  border-color: inherit;
-}
-
 /*-------------------
        Fluid
 --------------------*/
@@ -17203,7 +17197,7 @@ a.ui.basic.label:hover {
 }
 
 /*-------------------
-       Inverted
+      Inverted
 --------------------*/
 .ui.inverted.labels .label,
 .ui.inverted.label {
@@ -18523,7 +18517,7 @@ a.ui.ui.ui.inverted.basic.black.label:hover {
 }
 
 /*-------------------
-     Horizontal
+    Horizontal
 --------------------*/
 .ui.horizontal.labels .label,
 .ui.horizontal.label {
@@ -18534,7 +18528,7 @@ a.ui.ui.ui.inverted.basic.black.label:hover {
 }
 
 /*-------------------
-       Circular
+      Circular
 --------------------*/
 .ui.circular.labels .label,
 .ui.circular.label {
@@ -18557,7 +18551,7 @@ a.ui.ui.ui.inverted.basic.black.label:hover {
 }
 
 /*-------------------
-       Pointing
+      Pointing
 --------------------*/
 .ui.pointing.label {
   position: relative;
@@ -18649,6 +18643,11 @@ a.ui.ui.ui.inverted.basic.black.label:hover {
 }
 
 /* Basic Pointing */
+/* Pointing */
+.ui.basic.pointing.label:before {
+  border-color: inherit;
+}
+
 /*--- Above ---*/
 .ui.basic.pointing.label:before,
 .ui.basic[class*="pointing above"].label:before {
@@ -18676,7 +18675,7 @@ a.ui.ui.ui.inverted.basic.black.label:hover {
 }
 
 /*------------------
-   Floating Label
+  Floating Label
 -------------------*/
 .ui.floating.label {
   position: absolute;
@@ -19080,10 +19079,10 @@ ol.ui.list ol li,
 }
 
 /*******************************
-             States
+            States
 *******************************/
 /*-------------------
-       Disabled
+      Disabled
 --------------------*/
 .ui.list .list > .disabled.item,
 .ui.list > .disabled.item {
@@ -19105,10 +19104,10 @@ ol.ui.list ol li,
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*-------------------
-       Inverted
+      Inverted
 --------------------*/
 .ui.inverted.list .list > a.item > .icon,
 .ui.inverted.list > a.item > .icon {
@@ -19152,7 +19151,7 @@ ol.ui.list ol li,
 }
 
 /*-------------------
-       Aligned
+      Aligned
 --------------------*/
 .ui.list[class*="top aligned"] .image,
 .ui.list[class*="top aligned"] .content,
@@ -19173,7 +19172,7 @@ ol.ui.list ol li,
 }
 
 /*-------------------
-       Link
+      Link
 --------------------*/
 .ui.link.list .item,
 .ui.link.list a.item,
@@ -19286,7 +19285,7 @@ ol.ui.list ol li,
 }
 
 /*-------------------
-       Animated
+      Animated
 --------------------*/
 .ui.animated.list > .item {
   transition: 0.25s color ease 0.1s, 0.25s padding-left ease 0.1s, 0.25s background-color ease 0.1s;
@@ -19297,7 +19296,7 @@ ol.ui.list ol li,
 }
 
 /*-------------------
-       Fitted
+      Fitted
 --------------------*/
 .ui.fitted.list:not(.selection) .list > .item,
 .ui.fitted.list:not(.selection) > .item {
@@ -19379,7 +19378,7 @@ ul.ui.horizontal.bulleted.list li:first-child::before,
 }
 
 /*-------------------
-       Ordered
+      Ordered
 --------------------*/
 ol.ui.list,
 .ui.ordered.list,
@@ -19462,7 +19461,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Divided
+      Divided
 --------------------*/
 .ui.divided.list > .item {
   border-top: 1px solid rgba(34, 36, 38, 0.15);
@@ -19654,7 +19653,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Relaxed
+      Relaxed
 --------------------*/
 .ui.relaxed.list:not(.horizontal) > .item:not(:first-child) {
   padding-top: 0.4285714286em;
@@ -19914,7 +19913,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 /*-------------------
         Text
@@ -20041,7 +20040,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Colors
+      Colors
 --------------------*/
 .ui.primary.elastic.loader.loader:before,
 .ui.primary.basic.elastic.loading.button:before,
@@ -20428,7 +20427,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Inline
+      Inline
 --------------------*/
 .ui.inline.loader {
   position: relative;
@@ -20479,7 +20478,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Elastic
+      Elastic
 --------------------*/
 .ui.dimmer > .ui.elastic.loader {
   color: #ffffff;
@@ -20850,10 +20849,10 @@ ol.ui.suffixed.list li:before,
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
-     Internal
+    Internal
 ---------------*/
 .ui.left.internal.rail {
   left: 0;
@@ -20929,7 +20928,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*--------------
-     Sizing
+    Sizing
 ---------------*/
 .ui.mini.rail {
   font-size: 0.7857142857rem;
@@ -21139,7 +21138,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*--------------
-     Rotate
+    Rotate
 ---------------*/
 .ui.rotate.reveal > .visible.content {
   transition-duration: 0.5s;
@@ -21186,31 +21185,31 @@ ol.ui.suffixed.list li:before,
 }
 
 /*******************************
-           Coupling
+          Coupling
 *******************************/
 .ui.reveal > .ui.ribbon.label {
   z-index: 5;
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
-     Visible
+    Visible
 ---------------*/
 .ui.visible.reveal {
   overflow: visible;
 }
 
 /*--------------
-     Instant
+    Instant
 ---------------*/
 .ui.instant.reveal > .content {
   transition-delay: 0s !important;
 }
 
 /*--------------
-     Sizing
+    Sizing
 ---------------*/
 .ui.reveal > .content {
   font-size: 1rem !important;
@@ -21313,10 +21312,10 @@ ol.ui.suffixed.list li:before,
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 /*-------------------
-     Placeholder
+    Placeholder
 --------------------*/
 .ui.placeholder.segment {
   display: flex;
@@ -21438,7 +21437,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Stacked
+      Stacked
 --------------------*/
 .ui.stacked.segment {
   padding-bottom: 1.4em;
@@ -21481,7 +21480,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Padded
+      Padded
 --------------------*/
 .ui.padded.segment {
   padding: 1.5em;
@@ -21499,7 +21498,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Compact
+      Compact
 --------------------*/
 .ui.compact.segment {
   display: table;
@@ -21517,7 +21516,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Circular
+      Circular
 --------------------*/
 .ui.circular.segment {
   display: table-cell;
@@ -21528,7 +21527,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Raised
+      Raised
 --------------------*/
 .ui.raised.raised.segments,
 .ui.raised.raised.segment {
@@ -21708,10 +21707,10 @@ ol.ui.suffixed.list li:before,
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*-------------------
-       Basic
+      Basic
 --------------------*/
 .ui.basic.segment,
 .ui.segments .ui.basic.segment,
@@ -21723,7 +21722,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Clearing
+      Clearing
 --------------------*/
 .ui.clearing.segment:after {
   content: "";
@@ -21732,7 +21731,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Colors
+      Colors
 --------------------*/
 .ui.red.segment.segment.segment.segment.segment:not(.inverted) {
   border-top: 2px solid #db2828;
@@ -21852,7 +21851,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Aligned
+      Aligned
 --------------------*/
 .ui[class*="left aligned"].segment {
   text-align: left;
@@ -21867,7 +21866,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Floated
+      Floated
 --------------------*/
 .ui.floated.segment,
 .ui[class*="left floated"].segment {
@@ -21917,8 +21916,18 @@ ol.ui.suffixed.list li:before,
   background: rgba(0, 0, 0, 0.85);
 }
 
+.ui.secondary.inverted.segment {
+  background: #4c4f52 linear-gradient(rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.2) 100%);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ui.tertiary.inverted.segment {
+  background: #717579 linear-gradient(rgba(255, 255, 255, 0.35) 0, rgba(255, 255, 255, 0.35) 100%);
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /*-------------------
-     Emphasis
+    Emphasis
 --------------------*/
 /* Secondary */
 .ui.secondary.segment {
@@ -21926,20 +21935,10 @@ ol.ui.suffixed.list li:before,
   color: rgba(0, 0, 0, 0.6);
 }
 
-.ui.secondary.inverted.segment {
-  background: #4c4f52 linear-gradient(rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.2) 100%);
-  color: rgba(255, 255, 255, 0.8);
-}
-
 /* Tertiary */
 .ui.tertiary.segment {
   background: #dcddde;
   color: rgba(0, 0, 0, 0.6);
-}
-
-.ui.tertiary.inverted.segment {
-  background: #717579 linear-gradient(rgba(255, 255, 255, 0.35) 0, rgba(255, 255, 255, 0.35) 100%);
-  color: rgba(255, 255, 255, 0.8);
 }
 
 /*-------------------
@@ -21989,7 +21988,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*--------------
-     Fitted
+    Fitted
 ---------------*/
 .ui.fitted.segment:not(.horizontally) {
   padding-top: 0;
@@ -22074,7 +22073,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*******************************
-           Singular
+          Singular
 *******************************/
 .ui.steps .step {
   position: relative;
@@ -22191,7 +22190,7 @@ ol.ui.suffixed.list li:before,
             Types
 *******************************/
 /*--------------
-     Ordered
+    Ordered
 ---------------*/
 .ui.ordered.steps {
   counter-reset: ordered;
@@ -22320,7 +22319,7 @@ ol.ui.suffixed.list li:before,
   }
 }
 /*******************************
-             States
+            States
 *******************************/
 /* Link Hover */
 .ui.steps .link.step:hover::after,
@@ -22410,10 +22409,10 @@ ol.ui.suffixed.list li:before,
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
-   Stackable
+  Stackable
 ---------------*/
 /* Tablet Or Below */
 @media only screen and (max-width: 991.98px) {
@@ -22561,7 +22560,7 @@ ol.ui.suffixed.list li:before,
 }
 
 /*-------------------
-       Sizes
+      Sizes
 --------------------*/
 .ui.mini.steps .step,
 .ui.mini.step {
@@ -22921,7 +22920,7 @@ span.ui.massive.text {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 .ui.mini.breadcrumb {
   font-size: 0.7857142857rem;
@@ -23148,7 +23147,7 @@ span.ui.massive.text {
 }
 
 /*--------------------
-     Basic Select
+    Basic Select
 ---------------------*/
 .ui.form select {
   display: block;
@@ -23164,7 +23163,7 @@ span.ui.massive.text {
 }
 
 /*--------------------
-       Dropdown
+      Dropdown
 ---------------------*/
 /* Block */
 .ui.form .field > .selection.dropdown {
@@ -23188,7 +23187,7 @@ span.ui.massive.text {
 }
 
 /*--------------------
-       UI Input
+      UI Input
 ---------------------*/
 /* Block */
 .ui.form .field .ui.input,
@@ -23226,7 +23225,7 @@ span.ui.massive.text {
 }
 
 /*--------------------
-   Types of Messages
+  Types of Messages
 ---------------------*/
 .ui.form .success.message,
 .ui.form .warning.message,
@@ -23241,7 +23240,7 @@ span.ui.massive.text {
 }
 
 /*--------------------
-   Validation Prompt
+  Validation Prompt
 ---------------------*/
 .ui.form .field .prompt.label {
   white-space: normal;
@@ -23571,7 +23570,7 @@ span.ui.massive.text {
 }
 
 /*--------------------
-       Disabled
+      Disabled
 ---------------------*/
 .ui.form .disabled.fields .field,
 .ui.form .disabled.field,
@@ -23630,10 +23629,10 @@ span.ui.massive.text {
 }
 
 /*******************************
-         Element Types
+        Element Types
 *******************************/
 /*--------------------
-     Required Field
+    Required Field
 ---------------------*/
 .ui.form .required.fields:not(.grouped) > .field > label:after,
 .ui.form .required.fields.grouped > label:after,
@@ -23662,7 +23661,7 @@ span.ui.massive.text {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------------
     Inverted Colors
@@ -23709,7 +23708,7 @@ span.ui.massive.text {
 }
 
 /*--------------------
-     Field Groups
+    Field Groups
 ---------------------*/
 /* Grouped Vertically */
 .ui.form .grouped.fields {
@@ -23937,7 +23936,7 @@ span.ui.massive.text {
   }
 }
 /*--------------------
-     Equal Width
+    Equal Width
 ---------------------*/
 .ui[class*="equal width"].form .fields > .field,
 .ui.form [class*="equal width"].fields > .field {
@@ -24153,7 +24152,7 @@ span.ui.massive.text {
 }
 
 /*-------------------
-       Columns
+      Columns
 --------------------*/
 /* Standard 16 column */
 .ui.grid > .column:not(.row),
@@ -24188,7 +24187,7 @@ span.ui.massive.text {
 }
 
 /*-------------------
-       Columns
+      Columns
 --------------------*/
 /* Vertical padding when no rows */
 .ui.grid > .column:not(.row) {
@@ -24244,10 +24243,10 @@ span.ui.massive.text {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*-----------------------
-       Page Grid
+      Page Grid
 -------------------------*/
 @media only screen and (max-width: 767.98px) {
   .ui.page.grid {
@@ -24295,7 +24294,7 @@ span.ui.massive.text {
   }
 }
 /*-------------------
-     Column Count
+    Column Count
 --------------------*/
 /* Assume full width with one column */
 .ui.grid > .column:only-child,
@@ -25214,7 +25213,7 @@ span.ui.massive.text {
 }
 
 /*----------------------
-       "Floated"
+      "Floated"
 -----------------------*/
 .ui.grid [class*="left floated"].column {
   margin-right: auto;
@@ -25322,7 +25321,7 @@ span.ui.massive.text {
 }
 
 /*----------------------
-         Celled
+        Celled
 -----------------------*/
 .ui.celled.grid {
   width: 100%;
@@ -25377,7 +25376,7 @@ span.ui.massive.text {
 }
 
 /*----------------------
-   Vertically Aligned
+  Vertically Aligned
 -----------------------*/
 /* Top Aligned */
 .ui[class*="top aligned"].grid > .column:not(.row),
@@ -25479,7 +25478,7 @@ span.ui.massive.text {
 }
 
 /*----------------------
-         Colored
+        Colored
 -----------------------*/
 .ui.grid > .primary.row,
 .ui.grid > .primary.column,
@@ -26027,7 +26026,7 @@ span.ui.massive.text {
   }
 }
 /*----------------------
-     Only (Device)
+    Only (Device)
 -----------------------*/
 /* These include arbitrary class repetitions for forced specificity */
 /* Mobile Only Hide */
@@ -26342,7 +26341,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Button
+    Button
 ---------------*/
 .ui.menu:not(.vertical) .item > .button {
   position: relative;
@@ -26354,7 +26353,7 @@ span.ui.massive.text {
 }
 
 /*----------------
- Grid / Container
+Grid / Container
 -----------------*/
 .ui.menu > .grid,
 .ui.menu > .container {
@@ -26364,7 +26363,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Inputs
+    Inputs
 ---------------*/
 .ui.menu .item > .input {
   width: 100%;
@@ -26383,7 +26382,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Header
+    Header
 ---------------*/
 .ui.menu .header.item,
 .ui.vertical.menu .header.item {
@@ -26518,7 +26517,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Labels
+    Labels
 ---------------*/
 .ui.menu .item > .label:not(.floating) {
   margin-left: 1em;
@@ -26546,7 +26545,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Images
+    Images
 ---------------*/
 .ui.menu .item > img:not(.ui) {
   display: inline-block;
@@ -26565,7 +26564,7 @@ span.ui.massive.text {
           Coupling
 *******************************/
 /*--------------
-     List
+    List
 ---------------*/
 /* Menu divider shouldnt apply */
 .ui.menu .list .item:before {
@@ -26573,7 +26572,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Sidebar
+    Sidebar
 ---------------*/
 /* Show vertical dividers below last */
 .ui.vertical.sidebar.menu > .item:first-child:before {
@@ -26606,7 +26605,7 @@ span.ui.massive.text {
   }
 }
 /*******************************
-             States
+            States
 *******************************/
 /*--------------
       Hover
@@ -26621,7 +26620,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Pressed
+    Pressed
 ---------------*/
 .ui.link.menu .item:active,
 .ui.menu .link.item:active,
@@ -26631,7 +26630,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Active
+    Active
 ---------------*/
 .ui.menu .active.item {
   background: rgba(0, 0, 0, 0.05);
@@ -26654,7 +26653,7 @@ span.ui.massive.text {
 }
 
 /*--------------
-     Disabled
+    Disabled
 ---------------*/
 .ui.ui.menu .item.disabled {
   cursor: default;
@@ -26664,7 +26663,7 @@ span.ui.massive.text {
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 /*------------------
 Floated Menu / Item
@@ -26820,7 +26819,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Tabular
+    Tabular
 ---------------*/
 .ui.tabular.menu {
   border-radius: 0;
@@ -26882,7 +26881,6 @@ Floated Menu / Item
   left: -1px;
 }
 
-/* Bottom Vertical Tabular */
 .ui.bottom.tabular.menu {
   background: none transparent;
   border-radius: 0;
@@ -26968,7 +26966,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Pagination
+  Pagination
 ---------------*/
 .ui.pagination.menu {
   margin: 0;
@@ -27007,7 +27005,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Secondary
+  Secondary
 ---------------*/
 .ui.secondary.menu {
   background: none;
@@ -27102,6 +27100,9 @@ Floated Menu / Item
   box-shadow: none;
 }
 
+/*---------------------
+Secondary Vertical
+-----------------------*/
 /* Sub Menu */
 .ui.vertical.secondary.menu .item:not(.dropdown) > .menu {
   margin: 0 -0.9285714286em;
@@ -27112,9 +27113,6 @@ Floated Menu / Item
   padding: 0.5em 1.3333333333em;
 }
 
-/*---------------------
-   Secondary Vertical
------------------------*/
 .ui.secondary.vertical.menu > .item {
   border: none;
   margin: 0 0 0.3571428571em;
@@ -27136,7 +27134,7 @@ Floated Menu / Item
 }
 
 /*---------------------
-   Secondary Pointing
+  Secondary Pointing
 -----------------------*/
 .ui.secondary.pointing.menu {
   margin-left: 0;
@@ -27389,6 +27387,10 @@ Floated Menu / Item
   background-color: transparent;
 }
 
+.ui.inverted.icon.menu .item {
+  color: #ffffff;
+}
+
 /* Fluid */
 .ui.fluid.text.menu {
   margin-left: 0;
@@ -27436,13 +27438,8 @@ Floated Menu / Item
   float: none;
 }
 
-/* Inverted */
-.ui.inverted.icon.menu .item {
-  color: #ffffff;
-}
-
 /*--------------
-   Labeled Icon
+  Labeled Icon
 ---------------*/
 /* Menu */
 .ui.labeled.icon.menu {
@@ -27469,7 +27466,7 @@ Floated Menu / Item
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
     Stackable
@@ -27517,89 +27514,89 @@ Floated Menu / Item
   }
 }
 /*--------------
-     Colors
+    Colors
 ---------------*/
-.ui.ui.menu .primary.active.item,
-.ui.ui.primary.menu .active.item:hover,
-.ui.ui.primary.menu .active.item {
+.ui.ui.menu .primary.active.active.active.item,
+.ui.ui.primary.menu .active.active.active.item:hover,
+.ui.ui.primary.menu .active.active.active.item {
   color: #2185d0;
 }
 
-.ui.ui.menu .red.active.item,
-.ui.ui.red.menu .active.item:hover,
-.ui.ui.red.menu .active.item {
+.ui.ui.menu .red.active.active.active.item,
+.ui.ui.red.menu .active.active.active.item:hover,
+.ui.ui.red.menu .active.active.active.item {
   color: #db2828;
 }
 
-.ui.ui.menu .orange.active.item,
-.ui.ui.orange.menu .active.item:hover,
-.ui.ui.orange.menu .active.item {
+.ui.ui.menu .orange.active.active.active.item,
+.ui.ui.orange.menu .active.active.active.item:hover,
+.ui.ui.orange.menu .active.active.active.item {
   color: #f2711c;
 }
 
-.ui.ui.menu .yellow.active.item,
-.ui.ui.yellow.menu .active.item:hover,
-.ui.ui.yellow.menu .active.item {
+.ui.ui.menu .yellow.active.active.active.item,
+.ui.ui.yellow.menu .active.active.active.item:hover,
+.ui.ui.yellow.menu .active.active.active.item {
   color: #fbbd08;
 }
 
-.ui.ui.menu .olive.active.item,
-.ui.ui.olive.menu .active.item:hover,
-.ui.ui.olive.menu .active.item {
+.ui.ui.menu .olive.active.active.active.item,
+.ui.ui.olive.menu .active.active.active.item:hover,
+.ui.ui.olive.menu .active.active.active.item {
   color: #b5cc18;
 }
 
-.ui.ui.menu .green.active.item,
-.ui.ui.green.menu .active.item:hover,
-.ui.ui.green.menu .active.item {
+.ui.ui.menu .green.active.active.active.item,
+.ui.ui.green.menu .active.active.active.item:hover,
+.ui.ui.green.menu .active.active.active.item {
   color: #21ba45;
 }
 
-.ui.ui.menu .teal.active.item,
-.ui.ui.teal.menu .active.item:hover,
-.ui.ui.teal.menu .active.item {
+.ui.ui.menu .teal.active.active.active.item,
+.ui.ui.teal.menu .active.active.active.item:hover,
+.ui.ui.teal.menu .active.active.active.item {
   color: #00b5ad;
 }
 
-.ui.ui.menu .blue.active.item,
-.ui.ui.blue.menu .active.item:hover,
-.ui.ui.blue.menu .active.item {
+.ui.ui.menu .blue.active.active.active.item,
+.ui.ui.blue.menu .active.active.active.item:hover,
+.ui.ui.blue.menu .active.active.active.item {
   color: #2185d0;
 }
 
-.ui.ui.menu .violet.active.item,
-.ui.ui.violet.menu .active.item:hover,
-.ui.ui.violet.menu .active.item {
+.ui.ui.menu .violet.active.active.active.item,
+.ui.ui.violet.menu .active.active.active.item:hover,
+.ui.ui.violet.menu .active.active.active.item {
   color: #6435c9;
 }
 
-.ui.ui.menu .purple.active.item,
-.ui.ui.purple.menu .active.item:hover,
-.ui.ui.purple.menu .active.item {
+.ui.ui.menu .purple.active.active.active.item,
+.ui.ui.purple.menu .active.active.active.item:hover,
+.ui.ui.purple.menu .active.active.active.item {
   color: #a333c8;
 }
 
-.ui.ui.menu .pink.active.item,
-.ui.ui.pink.menu .active.item:hover,
-.ui.ui.pink.menu .active.item {
+.ui.ui.menu .pink.active.active.active.item,
+.ui.ui.pink.menu .active.active.active.item:hover,
+.ui.ui.pink.menu .active.active.active.item {
   color: #e03997;
 }
 
-.ui.ui.menu .brown.active.item,
-.ui.ui.brown.menu .active.item:hover,
-.ui.ui.brown.menu .active.item {
+.ui.ui.menu .brown.active.active.active.item,
+.ui.ui.brown.menu .active.active.active.item:hover,
+.ui.ui.brown.menu .active.active.active.item {
   color: #a5673f;
 }
 
-.ui.ui.menu .grey.active.item,
-.ui.ui.grey.menu .active.item:hover,
-.ui.ui.grey.menu .active.item {
+.ui.ui.menu .grey.active.active.active.item,
+.ui.ui.grey.menu .active.active.active.item:hover,
+.ui.ui.grey.menu .active.active.active.item {
   color: #767676;
 }
 
-.ui.ui.menu .black.active.item,
-.ui.ui.black.menu .active.item:hover,
-.ui.ui.black.menu .active.item {
+.ui.ui.menu .black.active.active.active.item,
+.ui.ui.black.menu .active.active.active.item:hover,
+.ui.ui.black.menu .active.active.active.item {
   color: #1b1c1d;
 }
 
@@ -27700,8 +27697,12 @@ Floated Menu / Item
   background: #3D3E3F;
 }
 
+.ui.ui.ui.inverted.pointing.menu .active.item:after {
+  background-color: inherit;
+}
+
 /*--------------
-     Floated
+    Floated
 ---------------*/
 .ui.floated.menu {
   float: left;
@@ -27958,12 +27959,8 @@ Floated Menu / Item
   background-color: #0d0f11;
 }
 
-.ui.ui.ui.inverted.pointing.menu .active.item:after {
-  background-color: inherit;
-}
-
 /*--------------
-     Fitted
+    Fitted
 ---------------*/
 .ui.fitted.menu .item,
 .ui.fitted.menu .item .menu .item,
@@ -27986,7 +27983,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Borderless
+  Borderless
 ---------------*/
 .ui.borderless.menu .item:before,
 .ui.borderless.menu .item .menu .item:before,
@@ -27995,7 +27992,7 @@ Floated Menu / Item
 }
 
 /*-------------------
-       Compact
+      Compact
 --------------------*/
 .ui.compact.menu {
   display: inline-flex;
@@ -28100,7 +28097,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Fixed
+    Fixed
 ---------------*/
 .ui.menu.fixed {
   position: fixed;
@@ -28169,7 +28166,7 @@ Floated Menu / Item
 }
 
 /*-------------------
-       Pointing
+      Pointing
 --------------------*/
 .ui.pointing.menu .item:after {
   visibility: hidden;
@@ -28377,7 +28374,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Sizes
+    Sizes
 ---------------*/
 /* Mini */
 .ui.mini.menu {
@@ -28564,7 +28561,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Content
+    Content
 ---------------*/
 /* Header */
 .ui.message .header {
@@ -28684,7 +28681,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Hidden
+    Hidden
 ---------------*/
 .ui.hidden.hidden.hidden.hidden.message {
   display: none;
@@ -28776,7 +28773,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Colors
+    Colors
 ---------------*/
 .ui.positive.message {
   background-color: #fcfff5;
@@ -28812,78 +28809,6 @@ Floated Menu / Item
 
 .ui.negative.message .header {
   color: #912d2b;
-}
-
-.ui.info.message {
-  background-color: #f8ffff;
-  color: #276f86;
-}
-
-.ui.info.message,
-.ui.attached.info.message {
-  box-shadow: 0 0 0 1px #a9d5de inset, 0 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.ui.floating.info.message {
-  box-shadow: 0 0 0 1px #a9d5de inset, 0 0px 0px 0 rgba(34, 36, 38, 0.12), 0 0px 4px 0 rgba(34, 36, 38, 0.15);
-}
-
-.ui.info.message .header {
-  color: #0e566c;
-}
-
-.ui.warning.message {
-  background-color: #fffaf3;
-  color: #573a08;
-}
-
-.ui.warning.message,
-.ui.attached.warning.message {
-  box-shadow: 0 0 0 1px #c9ba9b inset, 0 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.ui.floating.warning.message {
-  box-shadow: 0 0 0 1px #c9ba9b inset, 0 0px 0px 0 rgba(34, 36, 38, 0.12), 0 0px 4px 0 rgba(34, 36, 38, 0.15);
-}
-
-.ui.warning.message .header {
-  color: #794b02;
-}
-
-.ui.error.message {
-  background-color: #fff6f6;
-  color: #9f3a38;
-}
-
-.ui.error.message,
-.ui.attached.error.message {
-  box-shadow: 0 0 0 1px #e0b4b4 inset, 0 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.ui.floating.error.message {
-  box-shadow: 0 0 0 1px #e0b4b4 inset, 0 0px 0px 0 rgba(34, 36, 38, 0.12), 0 0px 4px 0 rgba(34, 36, 38, 0.15);
-}
-
-.ui.error.message .header {
-  color: #912d2b;
-}
-
-.ui.success.message {
-  background-color: #fcfff5;
-  color: #2c662d;
-}
-
-.ui.success.message,
-.ui.attached.success.message {
-  box-shadow: 0 0 0 1px #a3c293 inset, 0 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.ui.floating.success.message {
-  box-shadow: 0 0 0 1px #a3c293 inset, 0 0px 0px 0 rgba(34, 36, 38, 0.12), 0 0px 4px 0 rgba(34, 36, 38, 0.15);
-}
-
-.ui.success.message .header {
-  color: #1a531b;
 }
 
 .ui.primary.message {
@@ -29153,7 +29078,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Sizes
+    Sizes
 ---------------*/
 .ui.mini.message {
   font-size: 0.7857142857em;
@@ -29220,7 +29145,7 @@ Floated Menu / Item
 }
 
 /*******************************
-             Parts
+            Parts
 *******************************/
 /* Table Content */
 .ui.table th,
@@ -29419,7 +29344,7 @@ Floated Menu / Item
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 /*--------------
     Complex
@@ -29457,7 +29382,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Definition
+  Definition
 ---------------*/
 .ui.definition.table > thead:not(.full-width) > tr > th:first-child {
   pointer-events: none;
@@ -29507,7 +29432,7 @@ Floated Menu / Item
 }
 
 /*******************************
-             States
+            States
 *******************************/
 /*--------------
     Positive
@@ -29520,7 +29445,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Negative
+    Negative
 ---------------*/
 .ui.ui.ui.ui.table tr.negative,
 .ui.ui.table td.negative {
@@ -29540,7 +29465,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Warning
+    Warning
 ---------------*/
 .ui.ui.ui.ui.table tr.warning,
 .ui.ui.table td.warning {
@@ -29550,7 +29475,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Active
+    Active
 ---------------*/
 .ui.ui.ui.ui.table tr.active,
 .ui.ui.table td.active {
@@ -29560,7 +29485,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Disabled
+    Disabled
 ---------------*/
 .ui.table tr.disabled td,
 .ui.table tr td.disabled,
@@ -29634,7 +29559,7 @@ Floated Menu / Item
   }
 }
 /*--------------
- Text Alignment
+Text Alignment
 ---------------*/
 .ui.table[class*="left aligned"],
 .ui.table [class*="left aligned"] {
@@ -29652,7 +29577,7 @@ Floated Menu / Item
 }
 
 /*------------------
- Vertical Alignment
+Vertical Alignment
 ------------------*/
 .ui.table[class*="top aligned"],
 .ui.table [class*="top aligned"] {
@@ -29679,7 +29604,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Fixed
+    Fixed
 ---------------*/
 .ui.fixed.table {
   table-layout: fixed;
@@ -29692,7 +29617,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Selectable
+  Selectable
 ---------------*/
 .ui.ui.selectable.table > tbody > tr:hover,
 .ui.table tbody tr td.selectable:hover {
@@ -29807,7 +29732,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Striped
+    Striped
 ---------------*/
 /* Table Striping */
 .ui.striped.table > tr:nth-child(2n),
@@ -29828,7 +29753,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Single Line
+  Single Line
 ---------------*/
 .ui.table[class*="single line"],
 .ui.table [class*="single line"] {
@@ -29836,7 +29761,7 @@ Floated Menu / Item
 }
 
 /*-------------------
-       Colors
+      Colors
 --------------------*/
 .ui.primary.table {
   border-top: 0.2em solid #2185d0;
@@ -30467,7 +30392,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Collapsing
+  Collapsing
 ---------------*/
 .ui.collapsing.table {
   width: auto;
@@ -30544,7 +30469,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Celled
+    Celled
 ---------------*/
 .ui.celled.table > tr > th,
 .ui.celled.table > thead > tr > th,
@@ -30570,7 +30495,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Padded
+    Padded
 ---------------*/
 .ui.padded.table > tr > th,
 .ui.padded.table > thead > tr > th,
@@ -30604,7 +30529,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Compact
+    Compact
 ---------------*/
 .ui.compact.table > tr > th,
 .ui.compact.table > thead > tr > th,
@@ -30676,7 +30601,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Common
+    Common
 ---------------*/
 /* Leaderboard */
 .ui.leaderboard.ad {
@@ -30703,7 +30628,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Square
+    Square
 ---------------*/
 /* Square */
 .ui.square.ad {
@@ -30733,7 +30658,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Button
+    Button
 ---------------*/
 .ui.button.ad {
   width: 120px;
@@ -30751,7 +30676,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Skyscrapers
+  Skyscrapers
 ---------------*/
 /* Skyscraper */
 .ui.skyscraper.ad {
@@ -30765,7 +30690,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Banners
+    Banners
 ---------------*/
 /* Banner */
 .ui.banner.ad {
@@ -30816,7 +30741,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Netboard
+    Netboard
 ---------------*/
 /* Netboard */
 .ui.netboard.ad {
@@ -30825,7 +30750,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Mobile
+    Mobile
 ---------------*/
 /* Large Mobile Banner */
 .ui[class*="large mobile banner"].ad {
@@ -30840,7 +30765,7 @@ Floated Menu / Item
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 /* Mobile Sizes */
 .ui.mobile.ad {
@@ -30853,7 +30778,7 @@ Floated Menu / Item
   }
 }
 /*******************************
-           Variations
+          Variations
 *******************************/
 .ui.centered.ad {
   margin-left: auto;
@@ -30978,7 +30903,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Images
+    Images
 ---------------*/
 .ui.cards > .card > .image,
 .ui.card > .image {
@@ -31003,7 +30928,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Content
+    Content
 ---------------*/
 .ui.cards > .card > .content,
 .ui.card > .content {
@@ -31053,7 +30978,7 @@ Floated Menu / Item
 }
 
 /*----------------
- Floated Content
+Floated Content
 -----------------*/
 .ui.cards > .card [class*="left floated"],
 .ui.card [class*="left floated"] {
@@ -31066,7 +30991,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Aligned
+    Aligned
 ---------------*/
 .ui.cards > .card [class*="left aligned"],
 .ui.card [class*="left aligned"] {
@@ -31103,7 +31028,7 @@ Floated Menu / Item
 }
 
 /*--------------
-   Description
+  Description
 ---------------*/
 .ui.cards > .card > .content > .description,
 .ui.card > .content > .description {
@@ -31187,7 +31112,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Buttons
+    Buttons
 ---------------*/
 .ui.cards > .card > .buttons,
 .ui.card > .buttons,
@@ -31213,7 +31138,7 @@ Floated Menu / Item
 }
 
 /*--------------
-     Labels
+    Labels
 ---------------*/
 /*-----Star----- */
 /* Icon */
@@ -31287,7 +31212,7 @@ Floated Menu / Item
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*-------------------
       Horizontal
@@ -31333,7 +31258,7 @@ Floated Menu / Item
 }
 
 /*-------------------
-       Raised
+      Raised
 --------------------*/
 .ui.raised.cards > .card,
 .ui.raised.card {
@@ -31348,7 +31273,7 @@ a.ui.raised.card:hover,
 }
 
 /*-------------------
-       Centered
+      Centered
 --------------------*/
 .ui.centered.cards {
   justify-content: center;
@@ -31390,7 +31315,7 @@ a.ui.card:hover,
 }
 
 /*-------------------
-       Colors
+      Colors
 --------------------*/
 .ui.primary.cards > .card,
 .ui.cards > .primary.card,
@@ -31723,7 +31648,7 @@ a.ui.card:hover,
 }
 
 /*--------------
-   Card Count
+  Card Count
 ---------------*/
 .ui.one.cards {
   margin-left: 0;
@@ -32155,7 +32080,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Comment
+    Comment
 ---------------*/
 .ui.comments .comment {
   position: relative;
@@ -32193,7 +32118,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Avatar
+    Avatar
 ---------------*/
 .ui.comments .comment .avatar {
   display: block;
@@ -32213,7 +32138,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Content
+    Content
 ---------------*/
 .ui.comments .comment > .content {
   display: block;
@@ -32225,7 +32150,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Author
+    Author
 ---------------*/
 .ui.comments .comment .author {
   font-size: 1em;
@@ -32242,7 +32167,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Metadata
+    Metadata
 ---------------*/
 .ui.comments .comment .metadata {
   display: inline-block;
@@ -32261,7 +32186,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------------
-     Comment Text
+    Comment Text
 ---------------------*/
 .ui.comments .comment .text {
   margin: 0.25em 0 0.5em;
@@ -32272,7 +32197,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------------
-     User Actions
+    User Actions
 ---------------------*/
 .ui.comments .comment .actions {
   font-size: 0.875em;
@@ -32321,7 +32246,7 @@ a.inverted.ui.card:hover,
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------------
         Threaded
@@ -32481,7 +32406,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Content
+    Content
 ---------------*/
 /* Content */
 .ui.feed > .event > .content {
@@ -32514,7 +32439,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Summary
+    Summary
 ---------------*/
 .ui.feed > .event > .content .summary {
   margin: 0;
@@ -32551,7 +32476,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-   Inline Date
+  Inline Date
 ---------------*/
 /* Date inside Summary */
 .ui.feed > .event > .content .summary > .date {
@@ -32754,7 +32679,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Images
+    Images
 ---------------*/
 .ui.items > .item > .image {
   position: relative;
@@ -32780,7 +32705,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Content
+    Content
 ---------------*/
 .ui.items > .item > .content {
   display: block;
@@ -32827,7 +32752,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Floated
+    Floated
 ---------------*/
 .ui.items > .item [class*="left floated"] {
   float: left;
@@ -32853,7 +32778,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-   Description
+  Description
 ---------------*/
 .ui.items > .item > .content > .description {
   margin-top: 0.6em;
@@ -32929,7 +32854,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Labels
+    Labels
 ---------------*/
 /*-----Star----- */
 /* Icon */
@@ -33049,10 +32974,10 @@ a.inverted.ui.card:hover,
   }
 }
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*-------------------
-       Aligned
+      Aligned
 --------------------*/
 .ui.items > .item > .image + [class*="top aligned"].content {
   align-self: flex-start;
@@ -33067,7 +32992,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Relaxed
+    Relaxed
 ---------------*/
 .ui.relaxed.items > .item {
   margin: 1.5em 0;
@@ -33129,7 +33054,7 @@ a.inverted.ui.card:hover,
 }
 
 /*---------------
-   Unstackable
+  Unstackable
 ----------------*/
 @media only screen and (max-width: 767.98px) {
   .ui.unstackable.items > .item > .image,
@@ -33138,7 +33063,7 @@ a.inverted.ui.card:hover,
   }
 }
 /*--------------
-     Inverted
+    Inverted
 ---------------*/
 .ui.inverted.items > .item {
   background: transparent;
@@ -33300,7 +33225,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Label
+    Label
 ---------------*/
 .ui.statistics .statistic > .label,
 .ui.statistic > .label {
@@ -33325,10 +33250,10 @@ a.inverted.ui.card:hover,
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 /*--------------
-   Icon Value
+  Icon Value
 ---------------*/
 .ui.statistics .statistic > .value .icon,
 .ui.statistic > .value .icon {
@@ -33338,7 +33263,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-   Text Value
+  Text Value
 ---------------*/
 .ui.statistics .statistic > .text.value,
 .ui.statistic > .text.value {
@@ -33354,7 +33279,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-   Image Value
+  Image Value
 ---------------*/
 .ui.statistics .statistic > .value img,
 .ui.statistic > .value img {
@@ -33459,7 +33384,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-   Horizontal
+  Horizontal
 ---------------*/
 .ui.horizontal.statistic {
   flex-direction: row;
@@ -33516,7 +33441,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Colors
+    Colors
 ---------------*/
 .ui.primary.statistics .statistic > .value,
 .ui.statistics .primary.statistic > .value,
@@ -33732,7 +33657,7 @@ a.inverted.ui.card:hover,
   }
 }
 /*--------------
-     Sizes
+    Sizes
 ---------------*/
 /* Mini */
 .ui.mini.statistics .statistic > .value,
@@ -33921,7 +33846,7 @@ a.inverted.ui.card:hover,
             Types
 *******************************/
 /*--------------
-     Styled
+    Styled
 ---------------*/
 .ui.styled.accordion {
   width: 600px;
@@ -33991,7 +33916,7 @@ a.inverted.ui.card:hover,
             States
 *******************************/
 /*--------------
-   Not Active
+  Not Active
 ---------------*/
 .ui.accordion .title ~ .content:not(.active),
 .ui.accordion .accordion .title ~ .content:not(.active) {
@@ -33999,10 +33924,10 @@ a.inverted.ui.card:hover,
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
-     Fluid
+    Fluid
 ---------------*/
 .ui.fluid.accordion,
 .ui.fluid.accordion .accordion {
@@ -34010,7 +33935,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Inverted
+    Inverted
 ---------------*/
 .ui.inverted.accordion .title:not(.ui) {
   color: rgba(255, 255, 255, 0.9);
@@ -34150,7 +34075,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     States
+    States
 ---------------*/
 .ui.calendar .ui.table tr td.today {
   font-weight: bold;
@@ -34286,7 +34211,7 @@ a.inverted.ui.card:hover,
 }
 
 /*******************************
-           States
+          States
 *******************************/
 /*--------------
       Hover
@@ -34321,7 +34246,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Focus
+    Focus
 ---------------*/
 .ui.checkbox input:focus ~ .box:before,
 .ui.checkbox input:focus ~ label:before {
@@ -34339,7 +34264,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Active
+    Active
 ---------------*/
 .ui.checkbox input:checked ~ .box:before,
 .ui.checkbox input:checked ~ label:before {
@@ -34402,7 +34327,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Disabled
+    Disabled
 ---------------*/
 .ui.disabled.checkbox .box:after,
 .ui.disabled.checkbox label,
@@ -34414,10 +34339,10 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Hidden
+    Hidden
 ---------------*/
 /* Initialized checkbox moves input below element
- to prevent manually triggering */
+to prevent manually triggering */
 .ui.checkbox input.hidden {
   z-index: -1;
 }
@@ -34429,10 +34354,10 @@ a.inverted.ui.card:hover,
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 /*--------------
-     Radio
+    Radio
 ---------------*/
 .ui.radio.checkbox {
   min-height: 15px;
@@ -34517,7 +34442,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Slider
+    Slider
 ---------------*/
 .ui.slider.checkbox {
   min-height: 1.25rem;
@@ -34620,7 +34545,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Toggle
+    Toggle
 ---------------*/
 .ui.toggle.checkbox {
   min-height: 1.5rem;
@@ -34731,7 +34656,7 @@ a.inverted.ui.card:hover,
             Variations
 *******************************/
 /*--------------
-     Fitted
+    Fitted
 ---------------*/
 .ui.fitted.checkbox .box,
 .ui.fitted.checkbox label {
@@ -34747,7 +34672,7 @@ a.inverted.ui.card:hover,
 }
 
 /*--------------
-     Inverted
+    Inverted
 ---------------*/
 .ui.inverted.checkbox label,
 .ui.inverted.checkbox + label {
@@ -35044,7 +34969,7 @@ a.inverted.ui.card:hover,
 }
 
 /* Loose Coupling */
-.ui.segment > .ui.dimmer {
+.ui.segment > .ui.dimmer:not(.page) {
   border-radius: inherit !important;
 }
 
@@ -35089,7 +35014,7 @@ a.inverted.ui.card:hover,
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
     Legacy
@@ -35191,7 +35116,7 @@ body.dimmable > .dimmer {
 }
 
 /*--------------
- Inverted Shades
+Inverted Shades
 ---------------*/
 .medium.medium.medium.medium.medium.inverted.dimmer {
   background-color: rgba(255, 255, 255, 0.65);
@@ -35206,7 +35131,7 @@ body.dimmable > .dimmer {
 }
 
 /*--------------
-     Simple
+    Simple
 ---------------*/
 /* Displays without javascript */
 .ui.simple.dimmer {
@@ -35237,7 +35162,7 @@ body.dimmable > .dimmer {
 }
 
 /*--------------
-     Partially
+    Partially
 ----------------*/
 .ui[class*="top dimmer"],
 .ui[class*="center dimmer"],
@@ -35404,7 +35329,7 @@ body.dimmable > .dimmer {
 }
 
 /*--------------
- Dropdown Icon
+Dropdown Icon
 ---------------*/
 .ui.dropdown > .dropdown.icon.icon {
   position: relative;
@@ -35538,7 +35463,7 @@ body.dimmable > .dimmer {
 }
 
 /*-----------------
-       Message
+      Message
 -------------------*/
 .ui.dropdown .menu > .message {
   padding: 0.7857142857rem 1.1428571429rem;
@@ -35567,7 +35492,7 @@ body.dimmable > .dimmer {
 }
 
 /*--------------
-   Sub Elements
+  Sub Elements
 ---------------*/
 /* Icons / Flags / Labels / Image */
 .ui.dropdown > .text > .icon,
@@ -35602,7 +35527,7 @@ body.dimmable > .dimmer {
 }
 
 /*--------------
-     Image
+    Image
 ---------------*/
 .ui.dropdown > .text > img,
 .ui.dropdown > .text > .image:not(.icon),
@@ -35650,7 +35575,7 @@ body.dimmable > .dimmer {
 }
 
 /*--------------
-     Button
+    Button
 ---------------*/
 /* No Margin On Icon Button */
 .ui.dropdown.icon.button > .dropdown.icon {
@@ -35917,7 +35842,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-   Searchable
+  Searchable
 ---------------*/
 /* Search Selection */
 .ui.search.dropdown {
@@ -36132,7 +36057,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Inline
+    Inline
 ---------------*/
 .ui.inline.dropdown {
   cursor: pointer;
@@ -36181,7 +36106,7 @@ select.ui.dropdown {
 }
 
 /*--------------------
-       Loading
+      Loading
 ---------------------*/
 .ui.loading.dropdown > i.icon {
   height: 1em !important;
@@ -36224,7 +36149,7 @@ select.ui.dropdown {
 }
 
 /*--------------------
-     Default Text
+    Default Text
 ----------------------*/
 .ui.dropdown:not(.button) > .default.text,
 .ui.default.dropdown:not(.button) > .text {
@@ -36347,7 +36272,7 @@ select.ui.dropdown {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
     Direction
@@ -36400,7 +36325,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Upward
+    Upward
 ---------------*/
 /* Upward Main Menu */
 .ui.upward.dropdown > .menu {
@@ -36458,7 +36383,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Scrolling
+    Scrolling
 ---------------*/
 /*  Selection Menu */
 .ui.scrolling.dropdown .menu,
@@ -36535,7 +36460,7 @@ select.ui.dropdown {
   }
 }
 /*--------------
-     Columnar
+    Columnar
 ---------------*/
 .ui.dropdown[class*="two column"] > .menu > .item {
   display: inline-block;
@@ -36558,7 +36483,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Simple
+    Simple
 ---------------*/
 /* Displays without javascript */
 .ui.simple.dropdown .menu:before,
@@ -36660,7 +36585,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Pointing
+    Pointing
 ---------------*/
 .ui.pointing.dropdown > .menu {
   top: 100%;
@@ -36981,22 +36906,6 @@ select.ui.dropdown {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Selection */
-.ui.inverted.selection.dropdown {
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: #1b1c1d;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.ui.inverted.selection.dropdown:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: none;
-}
-
-.ui.inverted.selection.dropdown input {
-  color: #ffffff;
-}
-
 .ui.inverted.dropdown:not(.button) > .default.text,
 .ui.inverted.default.dropdown:not(.button) > .text {
   color: rgba(255, 255, 255, 0.5);
@@ -37005,10 +36914,6 @@ select.ui.dropdown {
 .ui.inverted.dropdown:not(.button) > input:focus ~ .default.text,
 .ui.inverted.default.dropdown:not(.button) > input:focus ~ .text {
   color: rgba(255, 255, 255, 0.7);
-}
-
-.ui.inverted.selection.visible.dropdown > .text:not(.default) {
-  color: rgba(255, 255, 255, 0.9);
 }
 
 .ui.inverted.active.search.dropdown input.search:focus + .text .icon,
@@ -37020,6 +36925,22 @@ select.ui.dropdown {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
+/* Selection */
+.ui.inverted.selection.dropdown {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #1b1c1d;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ui.inverted.selection.dropdown input {
+  color: #ffffff;
+}
+
+.ui.inverted.selection.dropdown:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+}
+
 .ui.inverted.selection.active.dropdown .menu,
 .ui.inverted.selection.active.dropdown:hover {
   border-color: rgba(255, 255, 255, 0.15);
@@ -37027,6 +36948,10 @@ select.ui.dropdown {
 
 .ui.inverted.selection.dropdown .menu > .item {
   border-top: 1px solid #242526;
+}
+
+.ui.inverted.selection.visible.dropdown > .text:not(.default) {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .ui.inverted.dropdown .menu > .message:not(.ui) {
@@ -37196,7 +37121,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-   Placeholder
+  Placeholder
 ---------------*/
 .ui.embed > .placeholder {
   position: absolute;
@@ -37251,7 +37176,7 @@ select.ui.dropdown {
             States
 *******************************/
 /*--------------
-     Hover
+    Hover
 ---------------*/
 .ui.embed .icon:hover:after {
   background: radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3));
@@ -37263,7 +37188,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Active
+    Active
 ---------------*/
 .ui.active.embed > .icon,
 .ui.active.embed > .placeholder {
@@ -37293,9 +37218,6 @@ select.ui.dropdown {
   padding-bottom: 42.8571428571%;
 }
 
-/*******************************
-        Video Overrides
-*******************************/
 /*******************************
 //@-         Modal
 *******************************/
@@ -37331,7 +37253,7 @@ select.ui.dropdown {
             Content
 *******************************/
 /*--------------
-     Close
+    Close
 ---------------*/
 .ui.modal > .close {
   cursor: pointer;
@@ -37352,7 +37274,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Header
+    Header
 ---------------*/
 .ui.modal > .header {
   display: block;
@@ -37372,7 +37294,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Content
+    Content
 ---------------*/
 .ui.modal > .content {
   display: block;
@@ -37435,7 +37357,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-     Actions
+    Actions
 ---------------*/
 .ui.modal > .actions {
   background: #f9fafb;
@@ -37453,18 +37375,18 @@ select.ui.dropdown {
 }
 
 /*-------------------
-       Responsive
+      Responsive
 --------------------*/
 /* Modal Width */
 @media only screen and (max-width: 767.98px) {
   .ui.modal:not(.fullscreen) {
-    width: 95%;
+    width: calc($modal-mobile-width - 1px);
     margin: 0 0 0 0;
   }
 }
 @media only screen and (min-width: 768px) {
   .ui.modal:not(.fullscreen) {
-    width: 88%;
+    width: calc($modal-tablet-width - 1px);
     margin: 0 0 0 0;
   }
 }
@@ -37568,7 +37490,7 @@ select.ui.dropdown {
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 .ui.basic.modal {
   background-color: transparent;
@@ -37625,7 +37547,7 @@ select.ui.dropdown {
 }
 
 /*******************************
-             States
+            States
 *******************************/
 .ui.loading.modal {
   display: block;
@@ -37638,10 +37560,10 @@ select.ui.dropdown {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
-   Aligned
+  Aligned
 ---------------*/
 .ui.top.aligned.modal {
   top: 5vh;
@@ -37713,7 +37635,7 @@ select.ui.dropdown {
 }
 
 /*--------------
-   Full Screen
+  Full Screen
 ---------------*/
 .ui.fullscreen.modal {
   width: 95%;
@@ -37971,7 +37893,7 @@ a.ui.nag {
 }
 
 /*******************************
-             States
+            States
 *******************************/
 /* Hover */
 .ui.nag:hover {
@@ -37984,10 +37906,10 @@ a.ui.nag {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
-     Static
+    Static
 ---------------*/
 .ui.overlay.nag {
   position: absolute;
@@ -37995,14 +37917,14 @@ a.ui.nag {
 }
 
 /*--------------
-     Fixed
+    Fixed
 ---------------*/
 .ui.fixed.nag {
   position: fixed;
 }
 
 /*--------------
-     Bottom
+    Bottom
 ---------------*/
 .ui.bottom.nags,
 .ui.bottom.nag {
@@ -38012,7 +37934,7 @@ a.ui.nag {
 }
 
 /*--------------
-     White
+    White
 ---------------*/
 .ui.inverted.nags .nag,
 .ui.inverted.nag {
@@ -38028,7 +37950,7 @@ a.ui.nag {
 }
 
 /*******************************
-           Groups
+          Groups
 *******************************/
 .ui.nags .nag {
   border-radius: 0 !important;
@@ -38491,7 +38413,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Spacing
+    Spacing
 ---------------*/
 .ui.popup {
   margin: 0;
@@ -38543,7 +38465,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Pointer
+    Pointer
 ---------------*/
 /*--- Below ---*/
 .ui.bottom.center.popup:before {
@@ -38700,14 +38622,14 @@ a.ui.nag {
             Variations
 *******************************/
 /*--------------
-     Basic
+    Basic
 ---------------*/
 .ui.basic.popup:before {
   display: none;
 }
 
 /*--------------
-     Wide
+    Wide
 ---------------*/
 .ui.wide.popup {
   max-width: 350px;
@@ -38724,7 +38646,7 @@ a.ui.nag {
   }
 }
 /*--------------
-     Fluid
+    Fluid
 ---------------*/
 .ui.fluid.popup {
   width: 100%;
@@ -38732,7 +38654,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Colors
+    Colors
 ---------------*/
 /* Inverted colors  */
 .ui.inverted.popup {
@@ -38753,14 +38675,14 @@ a.ui.nag {
 }
 
 /*--------------
-     Flowing
+    Flowing
 ---------------*/
 .ui.flowing.popup {
   max-width: none;
 }
 
 /*--------------
-     Sizes
+    Sizes
 ---------------*/
 .ui.mini.popup {
   font-size: 0.7857142857rem;
@@ -39012,10 +38934,10 @@ a.ui.nag {
 }
 
 /*******************************
-             States
+            States
 *******************************/
 /*--------------
-     Success
+    Success
 ---------------*/
 .ui.ui.progress.success .bar {
   background-color: #21ba45;
@@ -39031,7 +38953,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Warning
+    Warning
 ---------------*/
 .ui.ui.progress.warning .bar {
   background-color: #f2c037;
@@ -39047,7 +38969,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Error
+    Error
 ---------------*/
 .ui.ui.progress.error .bar {
   background-color: #db2828;
@@ -39063,7 +38985,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Active
+    Active
 ---------------*/
 .ui.active.progress .bar {
   position: relative;
@@ -39107,7 +39029,7 @@ a.ui.nag {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
     Inverted
@@ -39193,7 +39115,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Colors
+    Colors
 ---------------*/
 .ui.indeterminate.primary.progress .bar::before,
 .ui.primary.progress .bar,
@@ -39376,7 +39298,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Sizes
+    Sizes
 ---------------*/
 .ui.tiny.progress {
   font-size: 0.8571428571rem;
@@ -39539,9 +39461,6 @@ a.ui.nag {
   }
 }
 /*******************************
-            Progress
-*******************************/
-/*******************************
 //@-       Rating
 *******************************/
 .ui.rating {
@@ -39571,7 +39490,7 @@ a.ui.nag {
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 /*-------------------
       Standard
@@ -39596,7 +39515,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Colors
+    Colors
 -------------- */
 .ui.primary.rating .active.icon {
   color: #54c8ff;
@@ -39764,10 +39683,10 @@ a.ui.nag {
 }
 
 /*******************************
-             States
+            States
 *******************************/
 /*-------------------
-       Disabled
+      Disabled
 --------------------*/
 /* disabled rating */
 .ui.disabled.rating .icon {
@@ -39775,7 +39694,7 @@ a.ui.nag {
 }
 
 /*-------------------
-   User Interactive
+  User Interactive
 --------------------*/
 /* Selected Rating */
 .ui.rating.selected .active.icon {
@@ -39848,7 +39767,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Icon
+    Icon
 ---------------*/
 .ui.search .prompt ~ .search.icon {
   cursor: pointer;
@@ -39978,7 +39897,7 @@ a.ui.nag {
             States
 *******************************/
 /*--------------------
-       Focus
+      Focus
 ---------------------*/
 .ui.search > .prompt:focus {
   border-color: rgba(34, 36, 38, 0.35);
@@ -39987,7 +39906,7 @@ a.ui.nag {
 }
 
 /*--------------------
-       Loading
+      Loading
 ---------------------*/
 .ui.loading.search .input > i.icon:before {
   position: absolute;
@@ -40065,7 +39984,7 @@ a.ui.nag {
 }
 
 /*******************************
-           Types
+          Types
 *******************************/
 /*--------------
     Selection
@@ -40165,10 +40084,10 @@ a.ui.nag {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*-------------------
-     Left / Right
+    Left / Right
 --------------------*/
 .ui[class*="left aligned"].search > .results {
   right: auto;
@@ -40254,7 +40173,7 @@ a.ui.nag {
 }
 
 /*******************************
-             Types
+            Types
 *******************************/
 .ui.cube.shape .side {
   min-width: 15em;
@@ -40295,7 +40214,7 @@ a.ui.nag {
 }
 
 /*******************************
-             States
+            States
 *******************************/
 /*--------------
     Loading
@@ -40339,7 +40258,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Active
+    Active
 ---------------*/
 .ui.shape .active.side {
   display: block;
@@ -40373,7 +40292,7 @@ a.ui.nag {
 }
 
 /*--------------
-   Direction
+  Direction
 ---------------*/
 .ui.left.sidebar {
   right: auto;
@@ -40406,7 +40325,7 @@ a.ui.nag {
 }
 
 /*--------------
-     Pushable
+    Pushable
 ---------------*/
 .pushable {
   height: 100%;
@@ -40434,7 +40353,7 @@ body.pushable.dimmed {
 }
 
 /*--------------
-     Fixed
+    Fixed
 ---------------*/
 .pushable > .fixed {
   position: fixed;
@@ -40445,7 +40364,7 @@ body.pushable.dimmed {
 }
 
 /*--------------
-     Page
+    Page
 ---------------*/
 .pushable > .pusher {
   position: relative;
@@ -40463,7 +40382,7 @@ body.pushable > .pusher {
 }
 
 /*--------------
-     Dimmer
+    Dimmer
 ---------------*/
 .pushable > .pusher:after {
   position: fixed;
@@ -40489,7 +40408,7 @@ body.pushable > .pusher {
             States
 *******************************/
 /*--------------
-     Dimmed
+    Dimmed
 ---------------*/
 .pushable > .pusher.dimmed:after {
   width: 100% !important;
@@ -40505,7 +40424,7 @@ body.pushable > .pusher {
 }
 
 /*--------------
-     Visible
+    Visible
 ---------------*/
 .ui.visible.sidebar {
   visibility: visible;
@@ -40553,13 +40472,13 @@ body.pushable > .pusher {
 }
 
 /*--------------
-       iOS
+      iOS
 ---------------*/
 /*******************************
           Variations
 *******************************/
 /*--------------
-     Width
+    Width
 ---------------*/
 /* Left / Right */
 .ui.thin.left.sidebar,
@@ -40733,7 +40652,7 @@ body.pushable > .pusher {
 }
 
 /*--------------
-   Slide Along
+  Slide Along
 ---------------*/
 /* Initial */
 .ui.slide.along.sidebar {
@@ -40768,7 +40687,7 @@ body.pushable > .pusher {
 }
 
 /*--------------
-   Slide Out
+  Slide Out
 ---------------*/
 /* Initial */
 .ui.slide.out.sidebar {
@@ -40803,7 +40722,7 @@ body.pushable > .pusher {
 }
 
 /*--------------
-   Scale Down
+  Scale Down
 ---------------*/
 /* Initial */
 .ui.scale.down.sidebar {
@@ -40943,7 +40862,7 @@ body.pushable > .pusher {
             States
 *******************************/
 /*--------------
-     Disabled
+    Disabled
 ---------------*/
 .ui.disabled.slider:not(.checkbox) {
   opacity: 0.5;
@@ -40975,7 +40894,7 @@ body.pushable > .pusher {
 }
 
 /*******************************
-           Variations
+          Variations
 *******************************/
 /*--------------
     Vertical
@@ -41012,6 +40931,97 @@ body.pushable > .pusher {
 .ui.vertical.reversed.slider .inner .track-fill {
   top: auto;
   bottom: 0;
+}
+
+/* Vertical Reversed Labels */
+.ui.labeled.vertical.reversed.slider > .labels .label {
+  transform: translate(-100%, 50%);
+}
+
+/* Vertical Labels */
+.ui.labeled.vertical.slider > .labels {
+  width: 1.5em;
+  height: auto;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.ui.labeled.vertical.slider > .labels .label {
+  transform: translate(-100%, -50%);
+}
+
+.ui.labeled.vertical.slider > .labels .label:after {
+  width: 1.5em;
+  height: 1px;
+  left: 100%;
+  top: 50%;
+}
+
+.ui.labeled.vertical.slider > .labels .halftick.label:after {
+  width: 0.75em;
+  height: 1px;
+}
+
+/* Small Vertical */
+.ui.slider.small.vertical .inner {
+  width: 1em;
+}
+
+.ui.slider.small.vertical .inner .track,
+.ui.slider.small.vertical .inner .track-fill {
+  width: 0.3em;
+  left: 0.35em;
+}
+
+.ui.small.labeled.vertical.slider > .labels,
+.ui.small.labeled.vertical.slider > .labels .label:after {
+  width: 1em;
+}
+
+.ui.small.labeled.vertical.slider > .labels .halftick.label:after {
+  width: 0.5em;
+}
+
+/* Large Vertical */
+.ui.slider.large.vertical .inner {
+  width: 2em;
+}
+
+.ui.slider.large.vertical .inner .track,
+.ui.slider.large.vertical .inner .track-fill {
+  width: 0.5em;
+  left: 0.75em;
+}
+
+.ui.large.labeled.vertical.slider > .labels,
+.ui.large.labeled.vertical.slider > .labels .label:after {
+  width: 2em;
+}
+
+.ui.large.labeled.vertical.slider > .labels .halftick.label:after {
+  width: 1em;
+}
+
+/* Big Vertical */
+.ui.slider.big.vertical .inner {
+  width: 2.5em;
+}
+
+.ui.slider.big.vertical .inner .track,
+.ui.slider.big.vertical .inner .track-fill {
+  width: 0.6em;
+  left: 0.95em;
+}
+
+.ui.big.labeled.vertical.slider > .labels,
+.ui.big.labeled.vertical.slider > .labels .label:after {
+  width: 2.5em;
+}
+
+.ui.big.labeled.vertical.slider > .labels .halftick.label:after {
+  width: 1.25em;
 }
 
 /*--------------
@@ -41052,37 +41062,6 @@ body.pushable > .pusher {
   height: 0.75em;
 }
 
-/* Vertical Labels */
-.ui.labeled.vertical.slider > .labels {
-  width: 1.5em;
-  height: auto;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  transform: translateX(-50%);
-}
-
-.ui.labeled.vertical.slider > .labels .label {
-  transform: translate(-100%, -50%);
-}
-
-.ui.labeled.vertical.slider > .labels .label:after {
-  width: 1.5em;
-  height: 1px;
-  left: 100%;
-  top: 50%;
-}
-
-.ui.labeled.vertical.slider > .labels .halftick.label:after {
-  width: 0.75em;
-  height: 1px;
-}
-
-/* Vertical Reversed Labels */
-.ui.labeled.vertical.reversed.slider > .labels .label {
-  transform: translate(-100%, 50%);
-}
-
 /*--------------
     Hover
 ---------------*/
@@ -41107,15 +41086,11 @@ body.pushable > .pusher {
 }
 
 /*--------------
-     Colors
+    Colors
 ---------------*/
 /* Standard */
 .ui.primary.slider .inner .track-fill {
   background-color: #2185d0;
-}
-
-.ui.primary.inverted.slider .inner .track-fill {
-  background-color: #54c8ff;
 }
 
 /* Basic */
@@ -41133,6 +41108,10 @@ body.pushable > .pusher {
   background-color: #54c8ff;
 }
 
+.ui.primary.inverted.slider .inner .track-fill {
+  background-color: #54c8ff;
+}
+
 .ui.primary.inverted.slider.basic .inner .thumb:hover,
 .ui.primary.inverted.slider.basic:focus .inner .thumb {
   background-color: #21b8ff;
@@ -41141,10 +41120,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.secondary.slider .inner .track-fill {
   background-color: #1b1c1d;
-}
-
-.ui.secondary.inverted.slider .inner .track-fill {
-  background-color: #545454;
 }
 
 /* Basic */
@@ -41162,6 +41137,10 @@ body.pushable > .pusher {
   background-color: #545454;
 }
 
+.ui.secondary.inverted.slider .inner .track-fill {
+  background-color: #545454;
+}
+
 .ui.secondary.inverted.slider.basic .inner .thumb:hover,
 .ui.secondary.inverted.slider.basic:focus .inner .thumb {
   background-color: #786363;
@@ -41170,10 +41149,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.red.slider .inner .track-fill {
   background-color: #db2828;
-}
-
-.ui.red.inverted.slider .inner .track-fill {
-  background-color: #ff695e;
 }
 
 /* Basic */
@@ -41191,6 +41166,10 @@ body.pushable > .pusher {
   background-color: #ff695e;
 }
 
+.ui.red.inverted.slider .inner .track-fill {
+  background-color: #ff695e;
+}
+
 .ui.red.inverted.slider.basic .inner .thumb:hover,
 .ui.red.inverted.slider.basic:focus .inner .thumb {
   background-color: #ff392b;
@@ -41199,10 +41178,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.orange.slider .inner .track-fill {
   background-color: #f2711c;
-}
-
-.ui.orange.inverted.slider .inner .track-fill {
-  background-color: #ff851b;
 }
 
 /* Basic */
@@ -41220,6 +41195,10 @@ body.pushable > .pusher {
   background-color: #ff851b;
 }
 
+.ui.orange.inverted.slider .inner .track-fill {
+  background-color: #ff851b;
+}
+
 .ui.orange.inverted.slider.basic .inner .thumb:hover,
 .ui.orange.inverted.slider.basic:focus .inner .thumb {
   background-color: #e76b00;
@@ -41228,10 +41207,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.yellow.slider .inner .track-fill {
   background-color: #fbbd08;
-}
-
-.ui.yellow.inverted.slider .inner .track-fill {
-  background-color: #ffe21f;
 }
 
 /* Basic */
@@ -41249,6 +41224,10 @@ body.pushable > .pusher {
   background-color: #ffe21f;
 }
 
+.ui.yellow.inverted.slider .inner .track-fill {
+  background-color: #ffe21f;
+}
+
 .ui.yellow.inverted.slider.basic .inner .thumb:hover,
 .ui.yellow.inverted.slider.basic:focus .inner .thumb {
   background-color: #ebcd00;
@@ -41257,10 +41236,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.olive.slider .inner .track-fill {
   background-color: #b5cc18;
-}
-
-.ui.olive.inverted.slider .inner .track-fill {
-  background-color: #d9e778;
 }
 
 /* Basic */
@@ -41278,6 +41253,10 @@ body.pushable > .pusher {
   background-color: #d9e778;
 }
 
+.ui.olive.inverted.slider .inner .track-fill {
+  background-color: #d9e778;
+}
+
 .ui.olive.inverted.slider.basic .inner .thumb:hover,
 .ui.olive.inverted.slider.basic:focus .inner .thumb {
   background-color: #d5ea42;
@@ -41286,10 +41265,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.green.slider .inner .track-fill {
   background-color: #21ba45;
-}
-
-.ui.green.inverted.slider .inner .track-fill {
-  background-color: #2ecc40;
 }
 
 /* Basic */
@@ -41307,6 +41282,10 @@ body.pushable > .pusher {
   background-color: #2ecc40;
 }
 
+.ui.green.inverted.slider .inner .track-fill {
+  background-color: #2ecc40;
+}
+
 .ui.green.inverted.slider.basic .inner .thumb:hover,
 .ui.green.inverted.slider.basic:focus .inner .thumb {
   background-color: #1bac2b;
@@ -41315,10 +41294,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.teal.slider .inner .track-fill {
   background-color: #00b5ad;
-}
-
-.ui.teal.inverted.slider .inner .track-fill {
-  background-color: #6dffff;
 }
 
 /* Basic */
@@ -41336,6 +41311,10 @@ body.pushable > .pusher {
   background-color: #6dffff;
 }
 
+.ui.teal.inverted.slider .inner .track-fill {
+  background-color: #6dffff;
+}
+
 .ui.teal.inverted.slider.basic .inner .thumb:hover,
 .ui.teal.inverted.slider.basic:focus .inner .thumb {
   background-color: #3affff;
@@ -41344,10 +41323,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.blue.slider .inner .track-fill {
   background-color: #2185d0;
-}
-
-.ui.blue.inverted.slider .inner .track-fill {
-  background-color: #54c8ff;
 }
 
 /* Basic */
@@ -41365,6 +41340,10 @@ body.pushable > .pusher {
   background-color: #54c8ff;
 }
 
+.ui.blue.inverted.slider .inner .track-fill {
+  background-color: #54c8ff;
+}
+
 .ui.blue.inverted.slider.basic .inner .thumb:hover,
 .ui.blue.inverted.slider.basic:focus .inner .thumb {
   background-color: #21b8ff;
@@ -41373,10 +41352,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.violet.slider .inner .track-fill {
   background-color: #6435c9;
-}
-
-.ui.violet.inverted.slider .inner .track-fill {
-  background-color: #a291fb;
 }
 
 /* Basic */
@@ -41394,6 +41369,10 @@ body.pushable > .pusher {
   background-color: #a291fb;
 }
 
+.ui.violet.inverted.slider .inner .track-fill {
+  background-color: #a291fb;
+}
+
 .ui.violet.inverted.slider.basic .inner .thumb:hover,
 .ui.violet.inverted.slider.basic:focus .inner .thumb {
   background-color: #745aff;
@@ -41402,10 +41381,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.purple.slider .inner .track-fill {
   background-color: #a333c8;
-}
-
-.ui.purple.inverted.slider .inner .track-fill {
-  background-color: #dc73ff;
 }
 
 /* Basic */
@@ -41423,6 +41398,10 @@ body.pushable > .pusher {
   background-color: #dc73ff;
 }
 
+.ui.purple.inverted.slider .inner .track-fill {
+  background-color: #dc73ff;
+}
+
 .ui.purple.inverted.slider.basic .inner .thumb:hover,
 .ui.purple.inverted.slider.basic:focus .inner .thumb {
   background-color: #cf40ff;
@@ -41431,10 +41410,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.pink.slider .inner .track-fill {
   background-color: #e03997;
-}
-
-.ui.pink.inverted.slider .inner .track-fill {
-  background-color: #ff8edf;
 }
 
 /* Basic */
@@ -41452,6 +41427,10 @@ body.pushable > .pusher {
   background-color: #ff8edf;
 }
 
+.ui.pink.inverted.slider .inner .track-fill {
+  background-color: #ff8edf;
+}
+
 .ui.pink.inverted.slider.basic .inner .thumb:hover,
 .ui.pink.inverted.slider.basic:focus .inner .thumb {
   background-color: #ff5bd1;
@@ -41460,10 +41439,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.brown.slider .inner .track-fill {
   background-color: #a5673f;
-}
-
-.ui.brown.inverted.slider .inner .track-fill {
-  background-color: #d67c1c;
 }
 
 /* Basic */
@@ -41481,6 +41456,10 @@ body.pushable > .pusher {
   background-color: #d67c1c;
 }
 
+.ui.brown.inverted.slider .inner .track-fill {
+  background-color: #d67c1c;
+}
+
 .ui.brown.inverted.slider.basic .inner .thumb:hover,
 .ui.brown.inverted.slider.basic:focus .inner .thumb {
   background-color: #b2620d;
@@ -41489,10 +41468,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.grey.slider .inner .track-fill {
   background-color: #767676;
-}
-
-.ui.grey.inverted.slider .inner .track-fill {
-  background-color: #dcddde;
 }
 
 /* Basic */
@@ -41510,6 +41485,10 @@ body.pushable > .pusher {
   background-color: #dcddde;
 }
 
+.ui.grey.inverted.slider .inner .track-fill {
+  background-color: #dcddde;
+}
+
 .ui.grey.inverted.slider.basic .inner .thumb:hover,
 .ui.grey.inverted.slider.basic:focus .inner .thumb {
   background-color: #bcc4cb;
@@ -41518,10 +41497,6 @@ body.pushable > .pusher {
 /* Standard */
 .ui.black.slider .inner .track-fill {
   background-color: #1b1c1d;
-}
-
-.ui.black.inverted.slider .inner .track-fill {
-  background-color: #545454;
 }
 
 /* Basic */
@@ -41539,13 +41514,17 @@ body.pushable > .pusher {
   background-color: #545454;
 }
 
+.ui.black.inverted.slider .inner .track-fill {
+  background-color: #545454;
+}
+
 .ui.black.inverted.slider.basic .inner .thumb:hover,
 .ui.black.inverted.slider.basic:focus .inner .thumb {
   background-color: black;
 }
 
 /*--------------
-     Basic
+    Basic
 ---------------*/
 /* Standard */
 .ui.slider.basic .inner .thumb {
@@ -41569,7 +41548,7 @@ body.pushable > .pusher {
 }
 
 /*--------------
-     Sizing
+    Sizing
 ---------------*/
 /* Small */
 .ui.slider.small .inner .thumb {
@@ -41594,26 +41573,6 @@ body.pushable > .pusher {
 
 .ui.small.labeled.slider:not(.vertical) > .labels .halftick.label:after {
   height: 0.5em;
-}
-
-/* Small Vertical */
-.ui.slider.small.vertical .inner {
-  width: 1em;
-}
-
-.ui.slider.small.vertical .inner .track,
-.ui.slider.small.vertical .inner .track-fill {
-  width: 0.3em;
-  left: 0.35em;
-}
-
-.ui.small.labeled.vertical.slider > .labels,
-.ui.small.labeled.vertical.slider > .labels .label:after {
-  width: 1em;
-}
-
-.ui.small.labeled.vertical.slider > .labels .halftick.label:after {
-  width: 0.5em;
 }
 
 /* Large */
@@ -41641,26 +41600,6 @@ body.pushable > .pusher {
   height: 1em;
 }
 
-/* Large Vertical */
-.ui.slider.large.vertical .inner {
-  width: 2em;
-}
-
-.ui.slider.large.vertical .inner .track,
-.ui.slider.large.vertical .inner .track-fill {
-  width: 0.5em;
-  left: 0.75em;
-}
-
-.ui.large.labeled.vertical.slider > .labels,
-.ui.large.labeled.vertical.slider > .labels .label:after {
-  width: 2em;
-}
-
-.ui.large.labeled.vertical.slider > .labels .halftick.label:after {
-  width: 1em;
-}
-
 /* Big */
 .ui.slider.big .inner .thumb {
   height: 2.5em;
@@ -41686,29 +41625,6 @@ body.pushable > .pusher {
   height: 1.25em;
 }
 
-/* Big Vertical */
-.ui.slider.big.vertical .inner {
-  width: 2.5em;
-}
-
-.ui.slider.big.vertical .inner .track,
-.ui.slider.big.vertical .inner .track-fill {
-  width: 0.6em;
-  left: 0.95em;
-}
-
-.ui.big.labeled.vertical.slider > .labels,
-.ui.big.labeled.vertical.slider > .labels .label:after {
-  width: 2.5em;
-}
-
-.ui.big.labeled.vertical.slider > .labels .halftick.label:after {
-  width: 1.25em;
-}
-
-/*******************************
-        Slider Overrides
-*******************************/
 /*******************************
 //@-        Sticky
 *******************************/
@@ -41767,10 +41683,10 @@ body.pushable > .pusher {
 }
 
 /*******************************
-             States
+            States
 *******************************/
 /*--------------------
-       Active
+      Active
 ---------------------*/
 .ui.tab.active,
 .ui.tab.open {
@@ -41778,7 +41694,7 @@ body.pushable > .pusher {
 }
 
 /*--------------------
-       Loading
+      Loading
 ---------------------*/
 .ui.tab.loading {
   position: relative;
@@ -41820,9 +41736,6 @@ body.pushable > .pusher {
   box-shadow: 0 0 0 1px transparent;
 }
 
-/*******************************
-         Tab Overrides
-*******************************/
 /*******************************
 //@-    Toast container
 *******************************/
@@ -41954,7 +41867,7 @@ body.pushable > .pusher {
 }
 
 /*--------------
-     Colors
+    Colors
 -------------- */
 .primary.toast {
   background-color: #2185d0;
@@ -42111,8 +42024,8 @@ body.pushable > .pusher {
 }
 
 /*---------------
-   Progress Bar
- ----------------*/
+  Progress Bar
+----------------*/
 .toast-box .attached.progress .bar {
   min-width: 0;
 }
@@ -42145,8 +42058,8 @@ body.pushable > .pusher {
 }
 
 /* --------
- Close Icon
- -----------*/
+Close Icon
+-----------*/
 .toast-box .message > .close.icon {
   top: 0.3em;
   right: 0.3em;
@@ -42229,7 +42142,7 @@ body.pushable > .pusher {
   by Nick Pettit - https://github.com/nickpettit/glide
 */
 /*--------------
-     Browse
+    Browse
 ---------------*/
 .transition.browse {
   animation-duration: 500ms;
@@ -42307,7 +42220,7 @@ body.pushable > .pusher {
   }
 }
 /*--------------
-     Drop
+    Drop
 ---------------*/
 .drop.transition {
   transform-origin: top center;
@@ -42486,7 +42399,7 @@ body.pushable > .pusher {
   }
 }
 /*--------------
-     Flips
+    Flips
 ---------------*/
 .flip.transition.in,
 .flip.transition.out {
@@ -42794,7 +42707,7 @@ body.pushable > .pusher {
   }
 }
 /*--------------
-     Slide
+    Slide
 ---------------*/
 .transition.slide.in,
 .transition[class*="slide down"].in {
@@ -42881,7 +42794,7 @@ body.pushable > .pusher {
   }
 }
 /*--------------
-     Swing
+    Swing
 ---------------*/
 .transition.swing {
   animation-duration: 800ms;
@@ -43038,7 +42951,7 @@ body.pushable > .pusher {
   }
 }
 /*******************************
-       Static Animations
+      Static Animations
 *******************************/
 /*--------------
     Emphasis
