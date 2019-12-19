@@ -2,7 +2,9 @@
              Page
 *******************************/
 
-@import url("#{$google-protocol}fonts.googleapis.com/css?family=#{$google-font-request}");
+@if $import-google-fonts != false {
+    @import url("#{$google-protocol}fonts.googleapis.com/css?family=#{$google-font-request}");
+}
 
 html,
 body {
